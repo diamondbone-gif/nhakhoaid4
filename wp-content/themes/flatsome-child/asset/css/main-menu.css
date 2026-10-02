@@ -1,0 +1,295 @@
+/*
+=========================================================
+iD-4 HEADER - FLATSOME
+Căn chỉnh theo mẫu header người dùng cung cấp
+=========================================================
+Lưu ý:
+1) Menu desktop nên có thứ tự:
+   iD4 IMPLANT SOLUTION
+   DỊCH VỤ
+   CÂU CHUYỆN KHÁCH HÀNG
+   VỀ ID-4
+   Ngôn ngữ
+   ĐẶT LỊCH TƯ VẤN
+
+2) Mục Ngôn ngữ có CSS class:
+   id4-language-switcher
+
+3) Khuyến nghị mục ĐẶT LỊCH TƯ VẤN có CSS class:
+   id4-booking-button
+   (Nếu chưa gắn class, CSS bên dưới vẫn áp dụng cho menu cuối cùng.)
+=========================================================
+*/
+
+@media (min-width: 850px) {
+
+    /* =====================================================
+       01. KHUNG HEADER
+    ===================================================== */
+
+    #top-bar {
+        display: none !important;
+    }
+
+    #masthead,
+    .header-main {
+        height: 44px !important;
+        min-height: 44px !important;
+        background: #11110f !important;
+        border: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .header-main .header-inner {
+        width: 100% !important;
+        max-width: 955px !important;
+        height: 44px !important;
+        min-height: 44px !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+    }
+
+
+    /* =====================================================
+       02. LOGO
+    ===================================================== */
+
+    #logo {
+        width: 66px !important;
+        min-width: 66px !important;
+        max-width: 66px !important;
+
+        margin-right: 44px !important;
+        padding: 0 !important;
+    }
+
+    #logo a {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        height: 44px !important;
+        padding: 0 !important;
+    }
+
+    #logo img {
+        width: 66px !important;
+        max-width: 66px !important;
+        max-height: 39px !important;
+
+        object-fit: contain !important;
+    }
+
+
+    /* =====================================================
+       03. KHUNG MENU CHÍNH
+    ===================================================== */
+
+    .header-inner .hide-for-medium.flex-left.flex-grow {
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+    }
+
+    .header-nav-main {
+        width: 100% !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        gap: 32px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .header-nav-main>li {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    /* =====================================================
+       04. CHỮ MENU
+    ===================================================== */
+
+    .header-nav-main>li>a {
+        min-height: 44px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        color: #ffffff !important;
+        background: transparent !important;
+
+        font-family: "Open Sans", Arial, sans-serif !important;
+        font-size: 12px !important;
+        font-weight: 600 !important;
+        line-height: 1 !important;
+        letter-spacing: 0.45px !important;
+
+        text-transform: none !important;
+        white-space: nowrap !important;
+
+        transition: color 0.2s ease !important;
+    }
+
+    .header-nav-main>li>a:hover {
+        color: #d7aa3d !important;
+    }
+
+    .header-nav-main>li.current-menu-item>a,
+    .header-nav-main>li.current-menu-ancestor>a {
+        color: #ffffff !important;
+    }
+
+
+    /* =====================================================
+       05. NÚT NGÔN NGỮ
+    ===================================================== */
+
+    .header-nav-main>li.id4-language-switcher {
+        margin-left: 17px !important;
+        margin-right: -16px !important;
+        position: relative !important;
+    }
+
+    .header-nav-main>li.id4-language-switcher>a {
+        min-height: 24px !important;
+        height: 24px !important;
+
+        padding: 0 8px !important;
+
+        border: 1px solid #d7aa3d !important;
+        border-radius: 6px !important;
+
+        background: transparent !important;
+        color: #d7aa3d !important;
+
+        font-size: 9px !important;
+        font-weight: 700 !important;
+        letter-spacing: 0 !important;
+
+        gap: 4px !important;
+    }
+
+    .header-nav-main>li.id4-language-switcher>a:hover {
+        background: #d7aa3d !important;
+        color: #11110f !important;
+    }
+
+    .header-nav-main>li.id4-language-switcher>a img {
+        width: 13px !important;
+        height: auto !important;
+
+        margin: 0 !important;
+    }
+
+    .header-nav-main>li.id4-language-switcher>a i,
+    .header-nav-main>li.id4-language-switcher>a .icon-angle-down {
+        margin-left: 2px !important;
+        font-size: 8px !important;
+    }
+
+
+    /* =====================================================
+       06. DROPDOWN NGÔN NGỮ
+    ===================================================== */
+
+    .header-nav-main>li.id4-language-switcher>.nav-dropdown,
+    .header-nav-main>li.id4-language-switcher>.sub-menu {
+        min-width: 120px !important;
+
+        padding: 5px !important;
+
+        background: #11110f !important;
+
+        border: 1px solid rgba(215, 170, 61, 0.45) !important;
+        border-radius: 6px !important;
+
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18) !important;
+    }
+
+    .header-nav-main>li.id4-language-switcher>.nav-dropdown a,
+    .header-nav-main>li.id4-language-switcher>.sub-menu a {
+        display: flex !important;
+        align-items: center !important;
+
+        padding: 7px 8px !important;
+
+        color: #ffffff !important;
+
+        font-size: 10px !important;
+        font-weight: 500 !important;
+        text-transform: none !important;
+        white-space: nowrap !important;
+    }
+
+    .header-nav-main>li.id4-language-switcher>.nav-dropdown a:hover,
+    .header-nav-main>li.id4-language-switcher>.sub-menu a:hover {
+        background: rgba(215, 170, 61, 0.12) !important;
+        color: #d7aa3d !important;
+    }
+
+
+    /* =====================================================
+       07. NÚT ĐẶT LỊCH TƯ VẤN
+       Có thể gắn class id4-booking-button.
+       Selector :last-child là phương án dự phòng.
+    ===================================================== */
+
+    .header-nav-main>li.id4-booking-button>a,
+    .header-nav-main>li:last-child:not(.id4-language-switcher)>a {
+        min-height: 24px !important;
+        height: 24px !important;
+
+        padding: 0 12px !important;
+
+        border: 1px solid #e2b54c !important;
+        border-radius: 6px !important;
+
+        background: #e2b54c !important;
+        color: #ffffff !important;
+
+        font-size: 9.5px !important;
+        font-weight: 700 !important;
+        line-height: 1 !important;
+        letter-spacing: 0.4px !important;
+
+        white-space: nowrap !important;
+    }
+
+    .header-nav-main>li.id4-booking-button>a:hover,
+    .header-nav-main>li:last-child:not(.id4-language-switcher)>a:hover {
+        background: #d7a83d !important;
+        border-color: #d7a83d !important;
+        color: #ffffff !important;
+    }
+
+
+    /* =====================================================
+       08. STICKY HEADER
+       Giữ cùng kích thước khi header chuyển sang sticky
+    ===================================================== */
+
+    .stuck #masthead,
+    .stuck .header-main {
+        height: 44px !important;
+        min-height: 44px !important;
+    }
+
+    .stuck .header-main .header-inner {
+        height: 44px !important;
+        min-height: 44px !important;
+    }
+}
