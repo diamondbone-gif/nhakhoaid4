@@ -276,8 +276,6 @@
 
     /* =====================================================
        06. NGÔN NGỮ — DESKTOP / TABLET
-       Hỗ trợ class tùy chỉnh id4-language-switcher
-       và class thực tế do Polylang tạo: pll-parent-menu-item
     ===================================================== */
     .header-nav-main>li.id4-language-switcher,
     .header-nav-main>li.pll-parent-menu-item {
@@ -287,7 +285,6 @@
         flex: 0 0 auto !important;
     }
 
-    /* Nút ngôn ngữ chính: viền vàng + bo góc + nền đen */
     .header-nav-main>li.id4-language-switcher>a,
     .header-nav-main>li.pll-parent-menu-item>a[href="#pll_switcher"] {
         min-height: 42px !important;
@@ -312,7 +309,6 @@
         text-decoration: none !important;
     }
 
-    /* Giữ màu vàng cho chữ ngôn ngữ */
     .header-nav-main>li.id4-language-switcher>a,
     .header-nav-main>li.id4-language-switcher>a span,
     .header-nav-main>li.pll-parent-menu-item>a[href="#pll_switcher"],
@@ -320,7 +316,6 @@
         color: #d7aa3d !important;
     }
 
-    /* Hover / active / đang mở dropdown vẫn giữ đúng giao diện */
     .header-nav-main>li.id4-language-switcher>a:hover,
     .header-nav-main>li.id4-language-switcher:hover>a,
     .header-nav-main>li.id4-language-switcher.current-dropdown>a,
@@ -332,7 +327,6 @@
         border-color: #d7aa3d !important;
     }
 
-    /* Kích thước lá cờ của ngôn ngữ hiện tại */
     .header-nav-main>li.id4-language-switcher>a img,
     .header-nav-main>li.pll-parent-menu-item>a[href="#pll_switcher"] img {
         width: 20px !important;
@@ -342,7 +336,6 @@
         border-radius: 0 !important;
     }
 
-    /* Bỏ hoàn toàn icon mũi tên xổ xuống nằm trong thẻ a */
     .header-nav-main>li.id4-language-switcher>a i,
     .header-nav-main>li.id4-language-switcher>a .icon-angle-down,
     .header-nav-main>li.pll-parent-menu-item>a[href="#pll_switcher"] i,
@@ -363,8 +356,6 @@
 
     /* =====================================================
        07. MŨI NHỌN NỐI NÚT VỚI DROPDOWN
-       Ghi đè mũi tên trắng mặc định của Flatsome
-       Tạo 1 tam giác đen có viền vàng đồng bộ giao diện
     ===================================================== */
     .header-nav-main>li.id4-language-switcher::before,
     .header-nav-main>li.pll-parent-menu-item::before {
@@ -422,7 +413,6 @@
 
     /* =====================================================
        08. DROPDOWN NGÔN NGỮ — DESKTOP / TABLET
-       Nền đen + chữ vàng
     ===================================================== */
     .header-nav-main>li.id4-language-switcher>.nav-dropdown,
     .header-nav-main>li.id4-language-switcher>.sub-menu,
@@ -442,8 +432,6 @@
         overflow: visible !important;
     }
 
-    /* Tắt pseudo-element mặc định trên chính dropdown
-       để không tạo thêm hình thoi / tam giác trắng */
     .header-nav-main>li.id4-language-switcher>.nav-dropdown::before,
     .header-nav-main>li.id4-language-switcher>.nav-dropdown::after,
     .header-nav-main>li.id4-language-switcher>.sub-menu::before,
@@ -456,7 +444,6 @@
         display: none !important;
     }
 
-    /* Từng dòng ngôn ngữ */
     .header-nav-main>li.id4-language-switcher>.nav-dropdown li,
     .header-nav-main>li.id4-language-switcher>.sub-menu li,
     .header-nav-main>li.pll-parent-menu-item>.nav-dropdown li,
@@ -469,7 +456,6 @@
         box-shadow: none !important;
     }
 
-    /* Đường phân cách giữa các ngôn ngữ */
     .header-nav-main>li.id4-language-switcher>.nav-dropdown li+li,
     .header-nav-main>li.id4-language-switcher>.sub-menu li+li,
     .header-nav-main>li.pll-parent-menu-item>.nav-dropdown li+li,
@@ -479,8 +465,6 @@
         border-top: 1px solid rgba(215, 170, 61, 0.28) !important;
     }
 
-    /* Link ngôn ngữ
-       Tiếng Việt và English dùng cùng 1 giao diện */
     .header-nav-main>li.id4-language-switcher>.nav-dropdown a,
     .header-nav-main>li.id4-language-switcher>.sub-menu a,
     .header-nav-main>li.pll-parent-menu-item>.nav-dropdown a,
@@ -506,7 +490,6 @@
         text-decoration: none !important;
     }
 
-    /* Ép toàn bộ text con của Polylang về màu vàng */
     .header-nav-main>li.id4-language-switcher>.nav-dropdown a span,
     .header-nav-main>li.id4-language-switcher>.sub-menu a span,
     .header-nav-main>li.pll-parent-menu-item>.nav-dropdown a span,
@@ -515,9 +498,6 @@
         background: transparent !important;
     }
 
-    /* QUAN TRỌNG:
-       Xóa style riêng của ngôn ngữ hiện tại.
-       Nhờ vậy Tiếng Việt hiển thị giống hệt English. */
     .header-nav-main>li.id4-language-switcher>.nav-dropdown .current-lang>a,
     .header-nav-main>li.id4-language-switcher>.sub-menu .current-lang>a,
     .header-nav-main>li.id4-language-switcher>.nav-dropdown .lang-item-current>a,
@@ -535,7 +515,6 @@
         box-shadow: none !important;
     }
 
-    /* Hover cho cả Tiếng Việt và English giống nhau */
     .header-nav-main>li.id4-language-switcher>.nav-dropdown a:hover,
     .header-nav-main>li.id4-language-switcher>.sub-menu a:hover,
     .header-nav-main>li.pll-parent-menu-item>.nav-dropdown a:hover,
@@ -550,7 +529,6 @@
         box-shadow: none !important;
     }
 
-    /* Kích thước cờ trong dropdown */
     .header-nav-main>li.id4-language-switcher>.nav-dropdown a img,
     .header-nav-main>li.id4-language-switcher>.sub-menu a img,
     .header-nav-main>li.pll-parent-menu-item>.nav-dropdown a img,
@@ -625,5 +603,196 @@
         min-height: 70px !important;
         margin: 0 !important;
         padding: 0 !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE MENU — ĐỒNG BỘ MÀU DESKTOP / TABLET
+========================================================= */
+
+@media (max-width: 849px) {
+
+    /* =====================================================
+       11. NỀN MENU MOBILE
+    ===================================================== */
+    .off-canvas .mfp-content,
+    #main-menu,
+    #main-menu .sidebar-menu,
+    #main-menu .nav-sidebar {
+        background: #11110f !important;
+        background-color: #11110f !important;
+    }
+
+    /* =====================================================
+       12. MÀU CHỮ MENU MOBILE
+       BỎ TOÀN BỘ ĐƯỜNG GẠCH / ĐƯỜNG PHÂN CÁCH
+    ===================================================== */
+    #main-menu .nav-sidebar>li {
+        background: transparent !important;
+        border: 0 !important;
+        border-bottom: 0 !important;
+        box-shadow: none !important;
+    }
+
+    #main-menu .nav-sidebar>li>a {
+        color: #ffffff !important;
+        background: transparent !important;
+        border: 0 !important;
+        border-bottom: 0 !important;
+        box-shadow: none !important;
+        font-family: "Open Sans", Arial, sans-serif !important;
+        font-weight: 600 !important;
+        text-decoration: none !important;
+        transition: color 0.25s ease, background-color 0.25s ease !important;
+    }
+
+    #main-menu .nav-sidebar>li>a:hover,
+    #main-menu .nav-sidebar>li>a:focus {
+        color: #d7aa3d !important;
+        background: rgba(215, 170, 61, 0.08) !important;
+        border: 0 !important;
+        box-shadow: none !important;
+    }
+
+    #main-menu .nav-sidebar>li.current-menu-item>a,
+    #main-menu .nav-sidebar>li.current-menu-ancestor>a {
+        color: #ffffff !important;
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+    }
+
+    /* =====================================================
+       13. ICON / MŨI TÊN MENU MOBILE
+    ===================================================== */
+    #main-menu .nav-sidebar>li>.toggle,
+    #main-menu .nav-sidebar>li>button.toggle,
+    #main-menu .nav-sidebar>li>.toggle i,
+    #main-menu .nav-sidebar>li>button.toggle i,
+    #main-menu .nav-sidebar>li>a i {
+        color: #ffffff !important;
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+    }
+
+    /* =====================================================
+       14. NGÔN NGỮ MOBILE
+    ===================================================== */
+    #main-menu .nav-sidebar>li.id4-language-switcher>a,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>a,
+    #main-menu .nav-sidebar>li.id4-language-switcher>a span,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>a span {
+        color: #d7aa3d !important;
+    }
+
+    #main-menu .nav-sidebar>li.id4-language-switcher>.toggle,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.toggle,
+    #main-menu .nav-sidebar>li.id4-language-switcher>button.toggle,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>button.toggle,
+    #main-menu .nav-sidebar>li.id4-language-switcher>.toggle i,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.toggle i,
+    #main-menu .nav-sidebar>li.id4-language-switcher>button.toggle i,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>button.toggle i {
+        color: #d7aa3d !important;
+        background: transparent !important;
+    }
+
+    /* =====================================================
+       15. SUBMENU NGÔN NGỮ MOBILE
+       BỎ LUÔN ĐƯỜNG GẠCH
+    ===================================================== */
+    #main-menu .nav-sidebar>li.id4-language-switcher>.sub-menu,
+    #main-menu .nav-sidebar>li.id4-language-switcher>.children,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.sub-menu,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.children {
+        background: #11110f !important;
+        background-color: #11110f !important;
+        border: 0 !important;
+        border-top: 0 !important;
+        box-shadow: none !important;
+    }
+
+    #main-menu .nav-sidebar>li.id4-language-switcher>.sub-menu li,
+    #main-menu .nav-sidebar>li.id4-language-switcher>.children li,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.sub-menu li,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.children li {
+        background: transparent !important;
+        border: 0 !important;
+        border-bottom: 0 !important;
+        box-shadow: none !important;
+    }
+
+    #main-menu .nav-sidebar>li.id4-language-switcher>.sub-menu a,
+    #main-menu .nav-sidebar>li.id4-language-switcher>.children a,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.sub-menu a,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.children a,
+    #main-menu .nav-sidebar>li.id4-language-switcher>.sub-menu a span,
+    #main-menu .nav-sidebar>li.id4-language-switcher>.children a span,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.sub-menu a span,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.children a span {
+        color: #d7aa3d !important;
+        background: transparent !important;
+        border: 0 !important;
+        border-bottom: 0 !important;
+        box-shadow: none !important;
+        font-family: "Open Sans", Arial, sans-serif !important;
+        font-weight: 600 !important;
+    }
+
+    #main-menu .nav-sidebar>li.id4-language-switcher>.sub-menu a:hover,
+    #main-menu .nav-sidebar>li.id4-language-switcher>.children a:hover,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.sub-menu a:hover,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.children a:hover {
+        color: #d7aa3d !important;
+        background: rgba(215, 170, 61, 0.10) !important;
+        border: 0 !important;
+        box-shadow: none !important;
+    }
+
+    /* =====================================================
+       16. NÚT ĐẶT LỊCH MOBILE
+    ===================================================== */
+    #main-menu .nav-sidebar>li.id4-booking-button,
+    #main-menu .nav-sidebar>li:last-child {
+        border: 0 !important;
+        border-bottom: 0 !important;
+        box-shadow: none !important;
+    }
+
+    #main-menu .nav-sidebar>li.id4-booking-button>a,
+    #main-menu .nav-sidebar>li:last-child>a {
+        margin: 14px 20px !important;
+        min-height: 46px !important;
+        padding: 0 20px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border: 1px solid #e2b54c !important;
+        border-radius: 10px !important;
+        background: #e2b54c !important;
+        color: #ffffff !important;
+        box-shadow: none !important;
+        font-family: "Open Sans", Arial, sans-serif !important;
+        font-weight: 700 !important;
+        text-align: center !important;
+    }
+
+    #main-menu .nav-sidebar>li.id4-booking-button>a:hover,
+    #main-menu .nav-sidebar>li:last-child>a:hover {
+        background: #d7a83d !important;
+        border-color: #d7a83d !important;
+        color: #ffffff !important;
+    }
+
+    /* =====================================================
+       17. NÚT ĐÓNG OFF-CANVAS
+    ===================================================== */
+    .off-canvas .mfp-close,
+    #main-menu .mfp-close {
+        color: #d7aa3d !important;
+        background: transparent !important;
+        opacity: 1 !important;
     }
 }
