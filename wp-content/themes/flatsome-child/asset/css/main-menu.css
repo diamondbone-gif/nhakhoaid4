@@ -247,6 +247,33 @@
         color: #ffffff !important;
     }
 
+    /* Hiệu ứng gạch chân dày xuất hiện từ từ khi hover tên menu
+       Không áp dụng cho Ngôn ngữ và nút Đặt lịch */
+    .header-nav-main>li:not(.id4-language-switcher):not(.pll-parent-menu-item):not(.id4-booking-button):not(:last-child)>a {
+        position: relative !important;
+    }
+
+    .header-nav-main>li:not(.id4-language-switcher):not(.pll-parent-menu-item):not(.id4-booking-button):not(:last-child)>a::after {
+        content: "" !important;
+        position: absolute !important;
+        left: 0 !important;
+        bottom: 5px !important;
+        width: 100% !important;
+        height: 4px !important;
+        background: #d7aa3d !important;
+        border-radius: 999px !important;
+        transform: scaleX(0) !important;
+        transform-origin: left center !important;
+        opacity: 0 !important;
+        transition: transform 0.30s ease, opacity 0.30s ease !important;
+        pointer-events: none !important;
+    }
+
+    .header-nav-main>li:not(.id4-language-switcher):not(.pll-parent-menu-item):not(.id4-booking-button):not(:last-child)>a:hover::after {
+        transform: scaleX(1) !important;
+        opacity: 1 !important;
+    }
+
     /* =====================================================
        06. NGÔN NGỮ — DESKTOP / TABLET
        Hỗ trợ class tùy chỉnh id4-language-switcher
