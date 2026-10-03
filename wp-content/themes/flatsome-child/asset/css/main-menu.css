@@ -276,6 +276,8 @@
 
     /* =====================================================
        06. NGÔN NGỮ — DESKTOP / TABLET
+       Hỗ trợ class tùy chỉnh id4-language-switcher
+       và class thực tế do Polylang tạo: pll-parent-menu-item
     ===================================================== */
     .header-nav-main>li.id4-language-switcher,
     .header-nav-main>li.pll-parent-menu-item {
@@ -285,6 +287,7 @@
         flex: 0 0 auto !important;
     }
 
+    /* Nút ngôn ngữ chính: viền vàng + bo góc + nền đen */
     .header-nav-main>li.id4-language-switcher>a,
     .header-nav-main>li.pll-parent-menu-item>a[href="#pll_switcher"] {
         min-height: 42px !important;
@@ -309,6 +312,7 @@
         text-decoration: none !important;
     }
 
+    /* Giữ màu vàng cho chữ ngôn ngữ */
     .header-nav-main>li.id4-language-switcher>a,
     .header-nav-main>li.id4-language-switcher>a span,
     .header-nav-main>li.pll-parent-menu-item>a[href="#pll_switcher"],
@@ -316,6 +320,7 @@
         color: #d7aa3d !important;
     }
 
+    /* Hover / active / đang mở dropdown vẫn giữ đúng giao diện */
     .header-nav-main>li.id4-language-switcher>a:hover,
     .header-nav-main>li.id4-language-switcher:hover>a,
     .header-nav-main>li.id4-language-switcher.current-dropdown>a,
@@ -327,6 +332,7 @@
         border-color: #d7aa3d !important;
     }
 
+    /* Kích thước lá cờ của ngôn ngữ hiện tại */
     .header-nav-main>li.id4-language-switcher>a img,
     .header-nav-main>li.pll-parent-menu-item>a[href="#pll_switcher"] img {
         width: 20px !important;
@@ -336,6 +342,7 @@
         border-radius: 0 !important;
     }
 
+    /* Bỏ hoàn toàn icon mũi tên xổ xuống nằm trong thẻ a */
     .header-nav-main>li.id4-language-switcher>a i,
     .header-nav-main>li.id4-language-switcher>a .icon-angle-down,
     .header-nav-main>li.pll-parent-menu-item>a[href="#pll_switcher"] i,
@@ -356,6 +363,8 @@
 
     /* =====================================================
        07. MŨI NHỌN NỐI NÚT VỚI DROPDOWN
+       Ghi đè mũi tên trắng mặc định của Flatsome
+       Tạo 1 tam giác đen có viền vàng đồng bộ giao diện
     ===================================================== */
     .header-nav-main>li.id4-language-switcher::before,
     .header-nav-main>li.pll-parent-menu-item::before {
@@ -413,6 +422,7 @@
 
     /* =====================================================
        08. DROPDOWN NGÔN NGỮ — DESKTOP / TABLET
+       Nền đen + chữ vàng
     ===================================================== */
     .header-nav-main>li.id4-language-switcher>.nav-dropdown,
     .header-nav-main>li.id4-language-switcher>.sub-menu,
@@ -432,6 +442,8 @@
         overflow: visible !important;
     }
 
+    /* Tắt pseudo-element mặc định trên chính dropdown
+       để không tạo thêm hình thoi / tam giác trắng */
     .header-nav-main>li.id4-language-switcher>.nav-dropdown::before,
     .header-nav-main>li.id4-language-switcher>.nav-dropdown::after,
     .header-nav-main>li.id4-language-switcher>.sub-menu::before,
@@ -444,6 +456,7 @@
         display: none !important;
     }
 
+    /* Từng dòng ngôn ngữ */
     .header-nav-main>li.id4-language-switcher>.nav-dropdown li,
     .header-nav-main>li.id4-language-switcher>.sub-menu li,
     .header-nav-main>li.pll-parent-menu-item>.nav-dropdown li,
@@ -456,6 +469,7 @@
         box-shadow: none !important;
     }
 
+    /* Đường phân cách giữa các ngôn ngữ */
     .header-nav-main>li.id4-language-switcher>.nav-dropdown li+li,
     .header-nav-main>li.id4-language-switcher>.sub-menu li+li,
     .header-nav-main>li.pll-parent-menu-item>.nav-dropdown li+li,
@@ -465,6 +479,8 @@
         border-top: 1px solid rgba(215, 170, 61, 0.28) !important;
     }
 
+    /* Link ngôn ngữ
+       Tiếng Việt và English dùng cùng 1 giao diện */
     .header-nav-main>li.id4-language-switcher>.nav-dropdown a,
     .header-nav-main>li.id4-language-switcher>.sub-menu a,
     .header-nav-main>li.pll-parent-menu-item>.nav-dropdown a,
@@ -490,6 +506,7 @@
         text-decoration: none !important;
     }
 
+    /* Ép toàn bộ text con của Polylang về màu vàng */
     .header-nav-main>li.id4-language-switcher>.nav-dropdown a span,
     .header-nav-main>li.id4-language-switcher>.sub-menu a span,
     .header-nav-main>li.pll-parent-menu-item>.nav-dropdown a span,
@@ -498,6 +515,9 @@
         background: transparent !important;
     }
 
+    /* QUAN TRỌNG:
+       Xóa style riêng của ngôn ngữ hiện tại.
+       Nhờ vậy Tiếng Việt hiển thị giống hệt English. */
     .header-nav-main>li.id4-language-switcher>.nav-dropdown .current-lang>a,
     .header-nav-main>li.id4-language-switcher>.sub-menu .current-lang>a,
     .header-nav-main>li.id4-language-switcher>.nav-dropdown .lang-item-current>a,
@@ -515,6 +535,7 @@
         box-shadow: none !important;
     }
 
+    /* Hover cho cả Tiếng Việt và English giống nhau */
     .header-nav-main>li.id4-language-switcher>.nav-dropdown a:hover,
     .header-nav-main>li.id4-language-switcher>.sub-menu a:hover,
     .header-nav-main>li.pll-parent-menu-item>.nav-dropdown a:hover,
@@ -529,6 +550,7 @@
         box-shadow: none !important;
     }
 
+    /* Kích thước cờ trong dropdown */
     .header-nav-main>li.id4-language-switcher>.nav-dropdown a img,
     .header-nav-main>li.id4-language-switcher>.sub-menu a img,
     .header-nav-main>li.pll-parent-menu-item>.nav-dropdown a img,
@@ -609,12 +631,14 @@
 
 /* =========================================================
    MOBILE MENU — ĐỒNG BỘ MÀU DESKTOP / TABLET
+   Giữ nguyên cấu trúc Off-Canvas mặc định của Flatsome
 ========================================================= */
 
 @media (max-width: 849px) {
 
     /* =====================================================
        11. NỀN MENU MOBILE
+       Đồng bộ nền đen với header Desktop / Tablet
     ===================================================== */
     .off-canvas .mfp-content,
     #main-menu,
@@ -626,21 +650,16 @@
 
     /* =====================================================
        12. MÀU CHỮ MENU MOBILE
-       BỎ TOÀN BỘ ĐƯỜNG GẠCH / ĐƯỜNG PHÂN CÁCH
+       Menu chính màu trắng, hover chuyển vàng
     ===================================================== */
     #main-menu .nav-sidebar>li {
         background: transparent !important;
-        border: 0 !important;
         border-bottom: 0 !important;
-        box-shadow: none !important;
     }
 
     #main-menu .nav-sidebar>li>a {
         color: #ffffff !important;
         background: transparent !important;
-        border: 0 !important;
-        border-bottom: 0 !important;
-        box-shadow: none !important;
         font-family: "Open Sans", Arial, sans-serif !important;
         font-weight: 600 !important;
         text-decoration: none !important;
@@ -651,20 +670,17 @@
     #main-menu .nav-sidebar>li>a:focus {
         color: #d7aa3d !important;
         background: rgba(215, 170, 61, 0.08) !important;
-        border: 0 !important;
-        box-shadow: none !important;
     }
 
     #main-menu .nav-sidebar>li.current-menu-item>a,
     #main-menu .nav-sidebar>li.current-menu-ancestor>a {
         color: #ffffff !important;
         background: transparent !important;
-        border: 0 !important;
-        box-shadow: none !important;
     }
 
     /* =====================================================
        13. ICON / MŨI TÊN MENU MOBILE
+       Bỏ màu xám mặc định của Flatsome
     ===================================================== */
     #main-menu .nav-sidebar>li>.toggle,
     #main-menu .nav-sidebar>li>button.toggle,
@@ -673,12 +689,11 @@
     #main-menu .nav-sidebar>li>a i {
         color: #ffffff !important;
         background: transparent !important;
-        border: 0 !important;
-        box-shadow: none !important;
     }
 
     /* =====================================================
        14. NGÔN NGỮ MOBILE
+       Đồng bộ màu vàng với nút ngôn ngữ Desktop / Tablet
     ===================================================== */
     #main-menu .nav-sidebar>li.id4-language-switcher>a,
     #main-menu .nav-sidebar>li.pll-parent-menu-item>a,
@@ -701,7 +716,7 @@
 
     /* =====================================================
        15. SUBMENU NGÔN NGỮ MOBILE
-       BỎ LUÔN ĐƯỜNG GẠCH
+       Nền đen + chữ vàng giống dropdown Desktop / Tablet
     ===================================================== */
     #main-menu .nav-sidebar>li.id4-language-switcher>.sub-menu,
     #main-menu .nav-sidebar>li.id4-language-switcher>.children,
@@ -709,9 +724,7 @@
     #main-menu .nav-sidebar>li.pll-parent-menu-item>.children {
         background: #11110f !important;
         background-color: #11110f !important;
-        border: 0 !important;
-        border-top: 0 !important;
-        box-shadow: none !important;
+        border-top: 1px solid rgba(215, 170, 61, 0.22) !important;
     }
 
     #main-menu .nav-sidebar>li.id4-language-switcher>.sub-menu li,
@@ -720,8 +733,6 @@
     #main-menu .nav-sidebar>li.pll-parent-menu-item>.children li {
         background: transparent !important;
         border: 0 !important;
-        border-bottom: 0 !important;
-        box-shadow: none !important;
     }
 
     #main-menu .nav-sidebar>li.id4-language-switcher>.sub-menu a,
@@ -734,9 +745,6 @@
     #main-menu .nav-sidebar>li.pll-parent-menu-item>.children a span {
         color: #d7aa3d !important;
         background: transparent !important;
-        border: 0 !important;
-        border-bottom: 0 !important;
-        box-shadow: none !important;
         font-family: "Open Sans", Arial, sans-serif !important;
         font-weight: 600 !important;
     }
@@ -747,18 +755,15 @@
     #main-menu .nav-sidebar>li.pll-parent-menu-item>.children a:hover {
         color: #d7aa3d !important;
         background: rgba(215, 170, 61, 0.10) !important;
-        border: 0 !important;
-        box-shadow: none !important;
     }
 
     /* =====================================================
        16. NÚT ĐẶT LỊCH MOBILE
+       Đồng bộ nền vàng + chữ trắng với Desktop / Tablet
     ===================================================== */
     #main-menu .nav-sidebar>li.id4-booking-button,
     #main-menu .nav-sidebar>li:last-child {
-        border: 0 !important;
         border-bottom: 0 !important;
-        box-shadow: none !important;
     }
 
     #main-menu .nav-sidebar>li.id4-booking-button>a,
@@ -773,7 +778,6 @@
         border-radius: 10px !important;
         background: #e2b54c !important;
         color: #ffffff !important;
-        box-shadow: none !important;
         font-family: "Open Sans", Arial, sans-serif !important;
         font-weight: 700 !important;
         text-align: center !important;
@@ -788,11 +792,74 @@
 
     /* =====================================================
        17. NÚT ĐÓNG OFF-CANVAS
+       Đồng bộ icon đóng với tông vàng của giao diện
     ===================================================== */
     .off-canvas .mfp-close,
     #main-menu .mfp-close {
         color: #d7aa3d !important;
         background: transparent !important;
         opacity: 1 !important;
+    }
+}
+
+
+/* =========================================================
+   18. MOBILE — BỎ TOÀN BỘ ĐƯỜNG PHÂN CÁCH
+   Chỉ loại bỏ đường gạch, giữ nguyên giao diện còn lại
+========================================================= */
+
+@media (max-width: 849px) {
+
+    #main-menu .nav-sidebar>li,
+    #main-menu .nav-sidebar>li>a,
+    #main-menu .nav-sidebar .sub-menu,
+    #main-menu .nav-sidebar .sub-menu>li,
+    #main-menu .nav-sidebar .sub-menu>li>a,
+    #main-menu .nav-sidebar .children,
+    #main-menu .nav-sidebar .children>li,
+    #main-menu .nav-sidebar .children>li>a {
+        border-top: 0 !important;
+        border-right: 0 !important;
+        border-bottom: 0 !important;
+        border-left: 0 !important;
+        box-shadow: none !important;
+    }
+}
+
+
+/* =========================================================
+   19. STICKY HEADER — GHIM MENU KHI CUỘN TRANG
+   Áp dụng cho Desktop / Tablet / Mobile
+   Không cần JavaScript, không thay đổi cấu trúc Flatsome
+========================================================= */
+
+#header {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+}
+
+
+/* Giữ nền header kín khi đang ghim */
+
+#header .header-wrapper,
+#header #masthead,
+#header .header-main {
+    background-color: #11110f !important;
+}
+
+
+/* Tương thích khi đang đăng nhập WordPress và có Admin Bar */
+
+body.admin-bar #header {
+    top: 32px !important;
+}
+
+@media (max-width: 782px) {
+    body.admin-bar #header {
+        top: 46px !important;
     }
 }
