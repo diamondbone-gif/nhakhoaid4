@@ -1,0 +1,4249 @@
+/* CỠ CHỮ TOÀN BỘ NỘI DUNG: chỉ chỉnh hai biến này.
+   rem giữ khả năng phóng chữ; vw co giãn liên tục cho mobile/tablet/PC. */
+#-id4-home-main {
+    --id4-home-text-size: clamp(.9375rem, 1.2vw, 1.375rem);
+    --id4-home-title-size: clamp(1.375rem, 2.86vw, 3.4375rem);
+    font-size: var(--id4-home-text-size);
+}
+
+/* Isolate Flatsome form/button defaults inside page content. */
+
+#-id4-home-main {
+display: block;
+    width: 100%;
+    max-width: var(--id4-home-page-max);
+    margin-inline: auto;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+#-id4-home-main button {
+margin: 0;
+    padding: 0;
+    border: 0;
+    min-height: 0;
+    min-width: 0;
+    box-shadow: none;
+    text-shadow: none;
+    text-transform: none;
+    letter-spacing: normal;
+    vertical-align: baseline;
+    appearance: none;
+}
+
+#-id4-home-main h1, #-id4-home-main h2, #-id4-home-main h3, #-id4-home-main h4 {
+font-family: inherit;
+    color: inherit;
+}
+
+#-id4-home-main p:empty {
+display:none;
+}
+
+#-id4-home-main .-id4-home-slider-track > :not(.-id4-home-slider-slide) {
+display:none;
+}
+
+/* NỘI DUNG TRANG: không có menu/header, banner đầu và footer. Giữ tokens, font, responsive, slider, popup. */
+
+/* Open Sans: Light 300; Regular 400; Semibold 600; Bold 700; Italic 400/600. */
+
+/* Font có sẵn: Myriad Pro Regular và Times Italic chỉ có nét 400.
+   Open Sans có nét thật 300/400/600/700; dùng 600 cho nội dung, 700 cho tiêu đề/nút. */
+
+@font-face {
+font-family: id4HomeMyriadPro;
+    src: url('../font/MyriadPro-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+font-family: id4HomeTimes;
+    src: url('../font/timesi.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+font-family: id4HomeOpenSans;
+    src: url('../font/OpenSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+font-family: id4HomeOpenSans;
+    src: url("../font/OpenSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+font-family: id4HomeOpenSans;
+    src: url("../font/OpenSans-Semibold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+font-family: id4HomeOpenSans;
+    src: url("../font/OpenSans-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+font-family: id4HomeOpenSans;
+    src: url("../font/OpenSans-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+font-family: id4HomeOpenSans;
+    src: url("../font/OpenSans-SemiboldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* CSS thường: thứ tự reset, biến, nền tảng, thành phần, responsive, hỗ trợ truy cập.
+   Selector specificity-guard giữ mức ưu tiên responsive; không cần thêm ID này vào HTML. */
+
+#-id4-home-main * {
+box-sizing: border-box;
+}
+
+#-id4-home-main button,
+#-id4-home-main a {
+-webkit-tap-highlight-color: transparent;
+}
+
+#-id4-home-main button {
+font: inherit;
+    cursor: pointer;
+}
+
+#-id4-home-main button:disabled {
+cursor: default;
+}
+
+#-id4-home-main a {
+color: inherit;
+    text-decoration: none;
+}
+
+#-id4-home-main img {
+display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#-id4-home-main button {
+border: 0px;
+}
+
+#-id4-home-main button:focus-visible,
+#-id4-home-main a:focus-visible {
+outline: rgb(209, 162, 62) solid 3px;
+    outline-offset: 5px;
+}
+
+#-id4-home-main h1,
+#-id4-home-main h2,
+#-id4-home-main h3,
+#-id4-home-main h4,
+#-id4-home-main p,
+#-id4-home-main figure,
+#-id4-home-main dl,
+#-id4-home-main dd {
+margin: 0px;
+}
+
+#-id4-home-main [hidden] {
+display: none !important;
+}
+
+#-id4-home-main {
+--id4-home-u: min(.0520833333vw, 1px);
+    --id4-home-gold: #d1a23e;
+    --id4-home-dark: #211c16;
+    --id4-home-cream: #f7efdd;
+    --id4-home-heading: linear-gradient(110deg, #dcc18a, #ad7813);
+    --id4-home-font-body: 'id4HomeOpenSans', sans-serif;
+    --id4-home-font-ui: 'id4HomeOpenSans', sans-serif;
+    --id4-home-content-max: 1480px;
+    --id4-home-page-max: 1920px;
+    --id4-home-gutter: 22px;
+    --id4-home-space-sm: 12px;
+    --id4-home-space-md: 24px;
+    --id4-home-space-lg: 40px;
+    --id4-home-radius: 14px;
+    --id4-home-motion: .65s;
+    --id4-home-ease: cubic-bezier(.22, .68, .15, 1);
+    --id4-home-doctor-photo-width: 340px;
+    --id4-home-doctor-photo-height: 375px;
+}
+
+@media (max-width: 1199px) {
+#-id4-home-main {
+--id4-home-u: .6px;
+}
+}
+
+/* ĐỘ ĐẬM CHỮ: sửa các số bên dưới khi cần điều chỉnh toàn bộ phần nội dung.
+   600 dùng Semibold; 700 dùng Bold. Mức 800/900 cần font tương ứng để có nét thực. */
+
+#-id4-home-main {
+--id4-home-weight-content: 400;
+    --id4-home-weight-title: 700;
+    --id4-home-weight-button: 700;
+    --id4-home-weight-caption: 600;
+    /* Chữ chú thích và mô tả nhỏ. */
+    --id4-home-weight-italic: 600;
+    /* File OpenSans-SemiboldItalic.ttf có sẵn. */
+}
+
+#-id4-home-main {
+margin: 0px;
+    background: rgb(255, 255, 255);
+    color: rgb(33, 28, 22);
+    font-family: var(--id4-home-font-body);
+    font-size: var(--id4-home-text-size);
+}
+
+#-id4-home-main h2 {
+font: 700 var(--id4-home-title-size)/1.25 var(--id4-home-font-ui);
+    letter-spacing: calc(1.4 * var(--id4-home-u));
+    text-align: center;
+    background-image: var(--id4-home-heading);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#-id4-home-main section {
+position: relative;
+    scroll-margin-top: calc(70 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-site {
+max-width: var(--id4-home-page-max);
+    margin: auto;
+    overflow: hidden;
+}
+
+#-id4-home-main .-id4-home-container {
+width: min(calc(1480 * var(--id4-home-u)), var(--id4-home-content-max));
+    margin-inline: auto;
+}
+
+#-id4-home-main .-id4-home-button {
+display: inline-block;
+    background: var(--id4-home-gold);
+    color: rgb(255, 255, 255);
+    border-radius: calc(11 * var(--id4-home-u));
+    font: 700 var(--id4-home-text-size)/1.2 var(--id4-home-font-ui);
+    letter-spacing: calc(1.1 * var(--id4-home-u));
+    padding: calc(8 * var(--id4-home-u)) calc(22 * var(--id4-home-u));
+    text-align: center;
+    transition: filter 0.2s, transform 0.2s;
+}
+
+#-id4-home-main .-id4-home-button:hover {
+filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+#-id4-home-main .-id4-home-sr-only {
+position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+#-id4-home-main .-id4-home-skip-link {
+position: fixed;
+    left: 16px;
+    top: -100px;
+    background: rgb(255, 255, 255);
+    padding: 12px;
+    z-index: 30;
+    font-size: var(--id4-home-text-size);
+}
+
+#-id4-home-main .-id4-home-skip-link:focus {
+top: 16px;
+}
+
+/* ==================== SECTION 1: Hình ảnh trước / sau ==================== */
+
+#-id4-home-main .-id4-home-comparison {
+height: calc(900 * var(--id4-home-u));
+    padding-top: calc(100 * var(--id4-home-u));
+    text-align: center;
+}
+
+#-id4-home-main .-id4-home-comparison-slider {
+position: relative;
+    width: calc(1140 * var(--id4-home-u));
+    margin: auto;
+}
+
+#-id4-home-main .-id4-home-round-arrow {
+position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(68 * var(--id4-home-u));
+    height: calc(68 * var(--id4-home-u));
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgb(231, 209, 159);
+    color: rgb(33, 28, 22);
+    font-family: var(--id4-home-font-ui);
+    font-size: calc(68 * var(--id4-home-u));
+    font-weight: 400;
+    line-height: 1;
+    padding: 0 0 calc(8 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-round-arrow:hover {
+background: rgb(209, 162, 62);
+}
+
+#-id4-home-main .-id4-home-round-arrow.-id4-home-prev {
+left: 0px;
+}
+
+#-id4-home-main .-id4-home-round-arrow.-id4-home-next {
+right: 0px;
+}
+
+#-id4-home-main .-id4-home-comparison-more {
+position: relative;
+    margin-top: calc(50 * var(--id4-home-u));
+}
+
+/* ==================== SECTION 2: Câu chuyện khách hàng ==================== */
+
+#-id4-home-main .-id4-home-stories {
+height: calc(828 * var(--id4-home-u));
+    padding-top: calc(40 * var(--id4-home-u));
+    background: rgb(255, 255, 255);
+    isolation: isolate;
+}
+
+#-id4-home-main .-id4-home-stories::before {
+content: "";
+    position: absolute;
+    inset: 0px;
+    background: var(--id4-home-stories-background) 50% 35%/calc(335 * var(--id4-home-u)) auto repeat-x;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+#-id4-home-main .-id4-home-story-track {
+display: flex;
+    gap: calc(15 * var(--id4-home-u));
+    width: calc(1990 * var(--id4-home-u));
+    margin-left: calc(-34 * var(--id4-home-u));
+    margin-top: calc(48 * var(--id4-home-u));
+    height: calc(554 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-story-card {
+padding: 0px;
+    flex: 0 0 calc(320 * var(--id4-home-u));
+    background: rgb(17, 17, 17);
+    border-radius: calc(24 * var(--id4-home-u));
+    overflow: hidden;
+    position: relative;
+}
+
+#-id4-home-main .-id4-home-story-card img {
+width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 12%;
+    transition: transform 0.3s;
+}
+
+#-id4-home-main .-id4-home-story-card:nth-child(3) img,
+#-id4-home-main .-id4-home-story-card:nth-child(5) img {
+object-position: 50% 20%;
+}
+
+#-id4-home-main .-id4-home-story-card:nth-child(4) img {
+object-position: 50% 10%;
+}
+
+#-id4-home-main .-id4-home-story-card:hover img {
+transform: scale(1.03);
+}
+
+#-id4-home-main .-id4-home-story-quote {
+font: 600 italic var(--id4-home-text-size)/1.2 var(--id4-home-font-ui);
+    letter-spacing: calc(1.6 * var(--id4-home-u));
+    text-align: center;
+    margin-top: calc(48 * var(--id4-home-u));
+}
+
+/* ==================== SECTION 3: Giới thiệu iD-4 Solution ==================== */
+
+#-id4-home-main .-id4-home-solution {
+height: calc(1080 * var(--id4-home-u));
+    color: white;
+    background: #080603 var(--id4-home-solution-background, none) center bottom/100% 100% no-repeat;
+    overflow: hidden;
+}
+
+#-id4-home-main .-id4-home-solution-copy {
+position: relative;
+    z-index: 1;
+    padding-top: calc(98 * var(--id4-home-u));
+    text-align: center;
+}
+
+#-id4-home-main .-id4-home-solution-subtitle {
+margin: calc(22 * var(--id4-home-u)) 0 calc(22 * var(--id4-home-u));
+    line-height: 1.2;
+}
+
+#-id4-home-main .-id4-home-solution-copy>p:not(.-id4-home-solution-subtitle) {
+line-height: 1.2;
+    margin-bottom: calc(23 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-solution-copy>.-id4-home-button {
+margin-top: calc(5 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-teeth-scene {
+position: absolute;
+    bottom: calc(5 * var(--id4-home-u));
+    left: 0px;
+    width: 100%;
+    height: calc(450 * var(--id4-home-u));
+    object-fit: cover;
+}
+
+/* ==================== SECTION 4: Lợi ích ==================== */
+
+#-id4-home-main .-id4-home-benefits {
+height: calc(1042 * var(--id4-home-u));
+    background: #211c16;
+    color: rgb(255, 255, 255);
+    padding-top: calc(35 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-benefits-subtitle {
+text-align: center;
+    line-height: 1.2;
+    margin-top: calc(20 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-benefits-grid {
+display: grid;
+    grid-template-columns: calc(760 * var(--id4-home-u)) 1fr;
+    gap: calc(48 * var(--id4-home-u));
+    margin-top: calc(28 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-benefits-copy h3 {
+font-size: var(--id4-home-title-size);
+    font-weight: 400;
+    margin-bottom: calc(18 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-benefits-copy dl {
+font-size: var(--id4-home-text-size);
+    line-height: 1.52;
+}
+
+#-id4-home-main .-id4-home-benefits-copy dt {
+font: 700 var(--id4-home-text-size)/1.35 var(--id4-home-font-ui);
+    color: var(--id4-home-gold);
+    letter-spacing: calc(1.1 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-benefits-copy dd {
+padding-left: calc(18 * var(--id4-home-u));
+    position: relative;
+}
+
+#-id4-home-main .-id4-home-benefits-copy dd::before {
+content: "▪";
+    position: absolute;
+    left: 0px;
+}
+
+#-id4-home-main .-id4-home-benefits-copy>.-id4-home-button {
+margin-top: calc(38 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-benefits-art {
+position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#-id4-home-main .-id4-home-benefits-art img {
+position: relative;
+    z-index: 1;
+    width: calc(540 * var(--id4-home-u));
+    height: calc(760 * var(--id4-home-u));
+    object-fit: contain;
+}
+
+/* ==================== SECTION 5: Đội ngũ bác sĩ ==================== */
+
+#-id4-home-main .-id4-home-doctors {
+height: calc(1080 * var(--id4-home-u));
+    background: var(--id4-home-dark);
+    color: rgb(255, 255, 255);
+    padding-top: calc(96 * var(--id4-home-u));
+    overflow: hidden;
+}
+
+#-id4-home-main .-id4-home-doctor-photo {
+position: absolute;
+    left: 0px;
+    top: calc(208 * var(--id4-home-u));
+    width: calc(800 * var(--id4-home-u));
+    max-width: none;
+    height: auto;
+}
+
+#-id4-home-main .-id4-home-doctor-copy {
+position: absolute;
+    top: calc(300 * var(--id4-home-u));
+    left: calc(910 * var(--id4-home-u));
+    width: calc(810 * var(--id4-home-u));
+    font-size: var(--id4-home-text-size);
+    line-height: 1.43;
+}
+
+#-id4-home-main .-id4-home-doctor-degree {
+font-size: var(--id4-home-text-size);
+}
+
+#-id4-home-main .-id4-home-doctor-copy h3 {
+font: 600 italic var(--id4-home-title-size)/1.2 var(--id4-home-font-ui);
+    letter-spacing: calc(2 * var(--id4-home-u));
+    color: rgb(197, 164, 92);
+    margin-bottom: calc(23 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-doctor-copy h4 {
+font: 700 var(--id4-home-title-size)/1.35 var(--id4-home-font-ui);
+    letter-spacing: calc(1 * var(--id4-home-u));
+    color: var(--id4-home-gold);
+    margin-top: calc(35 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-doctor-copy h3+h4 {
+margin-top: 0px;
+}
+
+#-id4-home-main .-id4-home-doctor-copy ul {
+margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+#-id4-home-main .-id4-home-doctor-copy li::before {
+content: "• ";
+}
+
+#-id4-home-main .-id4-home-text-link {
+padding: 0px;
+    background: none;
+    color: rgb(212, 177, 108);
+    text-decoration: underline;
+    font-style: italic;
+    font-size: var(--id4-home-text-size);
+    margin-top: calc(13 * var(--id4-home-u));
+}
+
+/* ==================== SECTION 6: Hành trình / video ==================== */
+
+#-id4-home-main .-id4-home-journey {
+height: calc(1148 * var(--id4-home-u));
+    padding-top: calc(94 * var(--id4-home-u));
+    background: rgb(250, 249, 247);
+}
+
+#-id4-home-main .-id4-home-video-placeholder {
+margin-top: calc(48 * var(--id4-home-u));
+    width: 100%;
+    height: calc(832 * var(--id4-home-u));
+    background: rgb(230, 231, 232);
+    border-radius: calc(30 * var(--id4-home-u));
+    display: grid;
+    place-items: center;
+}
+
+#-id4-home-main .-id4-home-play-circle {
+width: calc(188 * var(--id4-home-u));
+    height: calc(188 * var(--id4-home-u));
+    border-radius: 50%;
+    background: rgb(191, 192, 192);
+    display: grid;
+    place-items: center;
+    transition: background 0.2s;
+}
+
+#-id4-home-main .-id4-home-video-placeholder:hover .-id4-home-play-circle {
+background: rgb(209, 162, 62);
+}
+
+#-id4-home-main .-id4-home-play-circle>span {
+margin-left: calc(17 * var(--id4-home-u));
+    width: 0px;
+    height: 0px;
+    border-top: calc(41 * var(--id4-home-u)) solid transparent;
+    border-bottom: calc(41 * var(--id4-home-u)) solid transparent;
+    border-left: calc(71 * var(--id4-home-u)) solid #e6e7e8;
+    border-radius: calc(8 * var(--id4-home-u));
+}
+
+/* ==================== SECTION 7: Công nghệ kỹ thuật số ==================== */
+
+#-id4-home-main .-id4-home-technology {
+height: calc(1078 * var(--id4-home-u));
+    padding-top: calc(102 * var(--id4-home-u));
+    background: rgb(255, 255, 255);
+}
+
+#-id4-home-main .-id4-home-technology-tabs {
+display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(20 * var(--id4-home-u));
+    margin-top: calc(24 * var(--id4-home-u));
+    padding: calc(20 * var(--id4-home-u));
+    border-radius: calc(30 * var(--id4-home-u));
+    background: rgb(250, 249, 247);
+}
+
+#-id4-home-main .-id4-home-technology-tabs button {
+background: var(--id4-home-cream);
+    border-radius: calc(9 * var(--id4-home-u));
+    font: 600 var(--id4-home-text-size)/1.2 var(--id4-home-font-ui);
+    letter-spacing: calc(1.7 * var(--id4-home-u));
+    padding: calc(12 * var(--id4-home-u)) calc(8 * var(--id4-home-u));
+    white-space: nowrap;
+}
+
+#-id4-home-main .-id4-home-technology-tabs button[aria-selected="true"] {
+color: white;
+    background: var(--id4-home-gold);
+}
+
+#-id4-home-main .-id4-home-equipment-panel {
+display: grid;
+    grid-template-columns: 2.04fr 1fr;
+    gap: calc(20 * var(--id4-home-u));
+    padding: calc(20 * var(--id4-home-u));
+    border-radius: calc(30 * var(--id4-home-u));
+    margin-top: calc(24 * var(--id4-home-u));
+    background: rgb(250, 249, 247);
+    height: calc(668 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-technology-stack {
+display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: calc(20 * var(--id4-home-u));
+    min-height: 0px;
+}
+
+#-id4-home-main .-id4-home-technology-card {
+position: relative;
+    overflow: hidden;
+    border-radius: calc(10 * var(--id4-home-u));
+    background: rgb(126, 128, 129);
+    text-align: left;
+    color: rgb(255, 255, 255);
+    padding: 0px;
+    min-height: 0px;
+}
+
+#-id4-home-main .-id4-home-technology-card img {
+width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+#-id4-home-main .-id4-home-technology-card:hover img {
+transform: scale(1.03);
+}
+
+#-id4-home-main .-id4-home-technology-card::after {
+content: "";
+    position: absolute;
+    inset: 45% 0px 0px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.533));
+}
+
+#-id4-home-main .-id4-home-technology-card span {
+position: absolute;
+    z-index: 1;
+    bottom: calc(20 * var(--id4-home-u));
+    left: calc(24 * var(--id4-home-u));
+    font: 700 var(--id4-home-text-size)/1.22 var(--id4-home-font-ui);
+    letter-spacing: calc(1.5 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-featured span {
+bottom: calc(23 * var(--id4-home-u));
+    left: calc(40 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-cbct img {
+width: 68%;
+    margin-left: auto;
+    object-fit: contain;
+}
+
+#-id4-home-main .-id4-home-facilities-panel,
+#-id4-home-main .-id4-home-process-panel {
+margin-top: calc(24 * var(--id4-home-u));
+    height: calc(668 * var(--id4-home-u));
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    align-items: center;
+    gap: calc(50 * var(--id4-home-u));
+    padding: calc(40 * var(--id4-home-u));
+    background: rgb(250, 249, 247);
+    border-radius: calc(30 * var(--id4-home-u));
+    font-size: var(--id4-home-text-size);
+}
+
+#-id4-home-main .-id4-home-facilities-panel img {
+width: 100%;
+    border-radius: calc(14 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-facilities-panel h3,
+#-id4-home-main .-id4-home-process-panel h3 {
+font: 700 var(--id4-home-title-size)/1.3 var(--id4-home-font-ui);
+    margin-bottom: calc(24 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-facilities-panel p {
+margin-bottom: calc(30 * var(--id4-home-u));
+    line-height: 1.5;
+}
+
+#-id4-home-main .-id4-home-process-panel {
+grid-template-columns: 0.8fr 1.4fr;
+    background: var(--id4-home-dark);
+    color: rgb(255, 255, 255);
+}
+
+#-id4-home-main .-id4-home-process-panel>img {
+height: calc(580 * var(--id4-home-u));
+    width: 100%;
+    object-fit: contain;
+}
+
+#-id4-home-main .-id4-home-process-panel ol {
+margin-bottom: calc(25 * var(--id4-home-u));
+    padding-left: calc(35 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-process-panel li {
+margin-bottom: calc(20 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-process-panel strong {
+color: var(--id4-home-gold);
+}
+
+/* ==================== SECTION 8: Đặt lịch tư vấn ==================== */
+
+#-id4-home-main .-id4-home-consultation {
+background: rgb(255, 255, 255);
+    height: calc(540 * var(--id4-home-u));
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: calc(8 * var(--id4-home-u));
+    gap: calc(28 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-consultation>img {
+width: calc(665 * var(--id4-home-u));
+    height: calc(276 * var(--id4-home-u));
+    object-fit: contain;
+}
+
+#-id4-home-main .-id4-home-consultation-cta {
+font-size: var(--id4-home-text-size);
+    background: linear-gradient(110deg, rgb(197, 142, 48), rgb(216, 180, 88) 85%, rgb(250, 229, 161));
+    box-shadow: 0 calc(5 * var(--id4-home-u)) calc(10 * var(--id4-home-u)) #0005;
+    padding: calc(11 * var(--id4-home-u)) calc(35 * var(--id4-home-u));
+    border-radius: calc(16 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-small-rule {
+display: block;
+    width: calc(45 * var(--id4-home-u));
+    height: calc(2 * var(--id4-home-u));
+    background: var(--id4-home-gold);
+    margin: calc(25 * var(--id4-home-u)) 0;
+}
+
+#-id4-home-main dialog {
+border: 1px solid rgba(209, 162, 62, 0.333);
+    border-radius: 18px;
+    padding: 44px 36px 32px;
+    width: min(540px, 100% - 32px);
+    max-height: calc(100dvh - 40px);
+    overflow: auto;
+    color: rgb(33, 28, 22);
+    background: rgb(255, 255, 255);
+    font: var(--id4-home-text-size) / 1.5 var(--id4-home-font-ui);
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.333) 0px 20px 80px;
+}
+
+#-id4-home-main dialog::backdrop {
+background: rgba(0, 0, 0, 0.733);
+    backdrop-filter: blur(4px);
+}
+
+#-id4-home-main dialog h2 {
+font-size: var(--id4-home-title-size);
+    letter-spacing: 0px;
+    margin-bottom: 20px;
+}
+
+#-id4-home-main dialog p {
+margin-block: 18px;
+}
+
+#-id4-home-main dialog .-id4-home-button {
+font-size: var(--id4-home-text-size);
+    letter-spacing: 0.4px;
+    border-radius: 7px;
+    padding: 12px 20px;
+}
+
+#-id4-home-main .-id4-home-dialog-close {
+position: absolute;
+    right: 10px;
+    top: 6px;
+    width: 38px;
+    height: 38px;
+    font-size: 32px;
+    line-height: 1;
+    background: transparent;
+    color: rgb(33, 28, 22);
+}
+
+#-id4-home-main .-id4-home-gallery-dialog {
+width: min(1000px, 100% - 32px);
+}
+
+#-id4-home-main .-id4-home-gallery-pair {
+display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--id4-home-space-sm);
+}
+
+#-id4-home-main .-id4-home-gallery-pair img {
+width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+}
+
+#-id4-home-main .-id4-home-gallery-pair figcaption {
+font: 700 var(--id4-home-text-size) var(--id4-home-font-ui);
+    color: rgb(165, 123, 34);
+    margin-top: 10px;
+}
+
+#-id4-home-main #-id4-home-detail-image {
+margin: auto;
+    max-height: 55vh;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+body.-id4-home-dialog-open {
+overflow: hidden;
+}
+
+#-id4-home-main .-id4-home-solution {
+background-image: linear-gradient(#000e 0%, #000c 45%, #0005 75%, transparent), var(--id4-home-solution-background, none);
+}
+
+#-id4-home-main .-id4-home-skip-link {
+top: 0px;
+    transform: translateY(-160%);
+}
+
+#-id4-home-main .-id4-home-skip-link:focus {
+transform: translateY(0px);
+}
+
+#-id4-home-main .-id4-home-doctor-nav {
+top: calc(590 * var(--id4-home-u));
+    background: rgb(139, 110, 48);
+}
+
+#-id4-home-main .-id4-home-doctor-nav.-id4-home-prev {
+left: calc(150 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-doctor-nav.-id4-home-next {
+right: calc(150 * var(--id4-home-u));
+}
+
+#-id4-home-main h2 {
+letter-spacing: calc(2.8 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-doctor-copy h3 {
+letter-spacing: calc(4 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-slider-viewport {
+overflow: hidden;
+    touch-action: pan-y;
+    position: relative;
+}
+
+#-id4-home-main .-id4-home-slider-track {
+display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform var(--id4-home-motion) var(--id4-home-ease);
+    will-change: transform;
+}
+
+#-id4-home-main .-id4-home-slider-slide {
+flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    min-width: 0px;
+    position: relative;
+}
+
+#-id4-home-main .-id4-home-comparison-slider {
+outline-offset: 8px;
+}
+
+#-id4-home-main .-id4-home-comparison-viewport {
+width: calc(908.44 * var(--id4-home-u));
+    height: calc(600 * var(--id4-home-u));
+    margin: auto;
+    border-radius: calc(20 * var(--id4-home-u));
+    box-shadow: 0 calc(8 * var(--id4-home-u)) calc(22 * var(--id4-home-u)) #0002;
+    background: rgb(241, 240, 242);
+}
+
+#-id4-home-main .-id4-home-comparison-viewport img {
+width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+}
+
+#-id4-home-main .-id4-home-slider-controls {
+opacity: 0;
+    transition: opacity 0.28s, transform 0.28s;
+    pointer-events: none;
+}
+
+#-id4-home-main .-id4-home-comparison-slider .-id4-home-round-arrow,
+#-id4-home-main .-id4-home-doctor-slider .-id4-home-round-arrow {
+z-index: 3;
+}
+
+#-id4-home-main .-id4-home-comparison-slider:hover .-id4-home-slider-controls,
+#-id4-home-main .-id4-home-comparison-slider:focus-visible .-id4-home-slider-controls,
+#-id4-home-main .-id4-home-comparison-slider:has(:focus-visible) .-id4-home-slider-controls,
+#-id4-home-main .-id4-home-doctor-slider:hover .-id4-home-slider-controls,
+#-id4-home-main .-id4-home-doctor-slider:focus-within .-id4-home-slider-controls {
+opacity: 1;
+    pointer-events: auto;
+}
+
+#-id4-home-main .-id4-home-slider-dots {
+position: absolute;
+    bottom: calc(18 * var(--id4-home-u));
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: calc(12 * var(--id4-home-u));
+    padding: calc(6 * var(--id4-home-u)) calc(12 * var(--id4-home-u));
+    border-radius: 40px;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 3;
+}
+
+#-id4-home-main .-id4-home-slider-dots button {
+width: calc(15 * var(--id4-home-u));
+    height: calc(15 * var(--id4-home-u));
+    padding: 0px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.733);
+    box-shadow: rgba(0, 0, 0, 0.067) 0px 0px 0px 1px;
+}
+
+#-id4-home-main .-id4-home-slider-dots button[aria-current="true"] {
+background: var(--id4-home-gold);
+}
+
+#-id4-home-main [data-single="true"] .-id4-home-slider-controls {
+display: none;
+}
+
+#-id4-home-main .-id4-home-comparison-more {
+min-height: calc(48 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-stories {
+padding-top: calc(40 * var(--id4-home-u));
+    height: calc(828 * var(--id4-home-u));
+    isolation: isolate;
+    overflow: hidden;
+}
+
+#-id4-home-main .-id4-home-stories::before {
+display: none;
+}
+
+#-id4-home-main .-id4-home-stories-backdrop {
+display: flex;
+    gap: calc(15 * var(--id4-home-u));
+    position: absolute;
+    left: calc(-34 * var(--id4-home-u));
+    top: 0px;
+    width: max-content;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.105;
+    pointer-events: none;
+    filter: grayscale(1);
+}
+
+#-id4-home-main .-id4-home-stories-backdrop>div {
+flex: 0 0 calc(320 * var(--id4-home-u));
+    width: calc(320 * var(--id4-home-u));
+    height: 100%;
+    overflow: hidden;
+    border-radius: calc(24 * var(--id4-home-u));
+    background: rgb(17, 17, 17);
+}
+
+#-id4-home-main .-id4-home-stories-backdrop img {
+width: 100%;
+    height: calc(486 * var(--id4-home-u));
+    object-fit: cover;
+    object-position: 50% 12%;
+}
+
+#-id4-home-main .-id4-home-stories-backdrop img+img {
+transform: scaleY(-1);
+}
+
+#-id4-home-main .-id4-home-stories-viewport {
+height: calc(486 * var(--id4-home-u));
+    width: 100%;
+    overflow: hidden;
+    margin-top: calc(48 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-story-track {
+width: max-content;
+    height: 100%;
+    margin: 0 0 0 calc(-34 * var(--id4-home-u));
+    padding: 0px;
+    gap: 0px;
+    overflow: visible;
+    scroll-snap-type: none;
+    animation: 55s linear 0s infinite normal none running id4-home-customer-loop;
+    will-change: transform;
+}
+
+#-id4-home-main .-id4-home-story-group {
+display: flex;
+    gap: calc(15 * var(--id4-home-u));
+    padding-right: calc(15 * var(--id4-home-u));
+    height: 100%;
+    flex-shrink: 0;
+}
+
+#-id4-home-main .-id4-home-story-card {
+width: calc(320 * var(--id4-home-u));
+    height: 100%;
+    flex-basis: calc(320 * var(--id4-home-u));
+    border-radius: calc(24 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-story-card img {
+object-position: 50% 12%;
+}
+
+#-id4-home-main .-id4-home-story-quote {
+margin-top: calc(48 * var(--id4-home-u));
+    letter-spacing: calc(3.6 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-story-card[data-portrait="3"] img,
+#-id4-home-main .-id4-home-story-card[data-portrait="5"] img,
+#-id4-home-main .-id4-home-story-card[data-portrait="6"] img {
+transform: scale(1.15);
+    transform-origin: 50% 35%;
+}
+
+#-id4-home-main .-id4-home-story-card[data-portrait="3"]:hover img,
+#-id4-home-main .-id4-home-story-card[data-portrait="5"]:hover img,
+#-id4-home-main .-id4-home-story-card[data-portrait="6"]:hover img {
+transform: scale(1.18);
+}
+
+#-id4-home-main .-id4-home-stories:has(.-id4-home-story-card:focus-visible) .-id4-home-story-track,
+#-id4-home-main.-id4-home-dialog-open .-id4-home-story-track {
+animation-play-state: paused;
+}
+
+@keyframes id4-home-customer-loop {
+0% {
+        transform: translate3d(0px, 0px, 0px);
+    }
+
+    100% {
+        transform: translate3d(-50%, 0px, 0px);
+    }
+}
+
+#-id4-home-main .-id4-home-doctor-slider {
+position: absolute;
+    top: calc(208 * var(--id4-home-u));
+    left: 0px;
+    width: 100%;
+    height: calc(872 * var(--id4-home-u));
+    outline-offset: -6px;
+}
+
+#-id4-home-main .-id4-home-doctor-viewport {
+width: 100%;
+    height: 100%;
+}
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-photo {
+top: 0px;
+    left: 0px;
+}
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-copy {
+top: calc(92 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-doctor-slider .-id4-home-doctor-nav {
+top: calc(382 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-doctor-slider .-id4-home-slider-dots {
+bottom: calc(36 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-text-link {
+display: inline-block;
+}
+
+#-id4-home-main .-id4-home-benefits-copy,
+#-id4-home-main .-id4-home-doctor-copy {
+font-family: var(--id4-home-font-ui);
+}
+
+#-id4-home-main .-id4-home-doctor-photo {
+width: calc(800 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-solution {
+background-position: center bottom;
+    background-size: 100% calc(900 * var(--id4-home-u));
+    background-repeat: no-repeat;
+}
+
+#-id4-home-main .-id4-home-doctor-slider[data-single="true"] .-id4-home-slider-controls {
+display: none;
+}
+
+#-id4-home-main .-id4-home-facilities-panel {
+grid-template-columns: 2.04fr 1fr;
+    align-items: stretch;
+    gap: calc(20 * var(--id4-home-u));
+    padding: calc(20 * var(--id4-home-u));
+    font-size: var(--id4-home-text-size);
+}
+
+#-id4-home-main .-id4-home-facilities-panel img {
+border-radius: 0px;
+}
+
+#-id4-home-main .-id4-home-facilities-panel .-id4-home-technology-card span {
+font-size: var(--id4-home-text-size);
+}
+
+#-id4-home-main .-id4-home-technology-card small {
+font-size: var(--id4-home-text-size);
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+
+#-id4-home-main .-id4-home-technology-card:focus-visible {
+outline: 3px solid var(--id4-home-gold);
+    outline-offset: 4px;
+}
+
+#-id4-home-main .-id4-home-image-dialog {
+width: min(1200px, 100% - 32px);
+    padding: 48px 20px 16px;
+    background: rgb(23, 21, 17);
+    color: white;
+    border-radius: 16px;
+    animation: 0.25s ease-out 0s 1 normal none running id4-home-image-reveal;
+}
+
+#-id4-home-main .-id4-home-image-dialog .-id4-home-dialog-close {
+color: rgb(255, 255, 255);
+    right: 12px;
+    top: 8px;
+    background: rgba(255, 255, 255, 0.082);
+    border-radius: 50%;
+}
+
+#-id4-home-main .-id4-home-image-dialog img {
+width: 100%;
+    height: auto;
+    max-height: calc(100dvh - 170px);
+    object-fit: contain;
+    border-radius: 8px;
+    margin: auto;
+}
+
+#-id4-home-main .-id4-home-image-dialog h2 {
+font: 400 var(--id4-home-title-size)/1.5 var(--id4-home-font-ui);
+    margin: 14px 0px 0px;
+    letter-spacing: 0px;
+}
+
+@keyframes id4-home-image-reveal {
+0% {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+#-id4-home-main .-id4-home-process-panel {
+position: relative;
+    display: block;
+    padding: calc(36 * var(--id4-home-u));
+    color: var(--id4-home-dark);
+    background: linear-gradient(135deg, rgb(250, 247, 239), rgb(242, 238, 230));
+    overflow: hidden;
+}
+
+#-id4-home-main .-id4-home-process-heading {
+text-align: left;
+    margin-bottom: calc(26 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-process-heading>p {
+font: 600 var(--id4-home-text-size)/1.4 var(--id4-home-font-ui);
+    color: rgb(164, 123, 39);
+    letter-spacing: calc(2 * var(--id4-home-u));
+    margin-bottom: calc(8 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-process-heading h3 {
+font: 700 var(--id4-home-title-size)/1.3 var(--id4-home-font-ui);
+    margin: 0px;
+}
+
+#-id4-home-main .-id4-home-process-panel .-id4-home-process-steps {
+display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(20 * var(--id4-home-u));
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+#-id4-home-main .-id4-home-process-panel .-id4-home-process-step {
+margin: 0px;
+    min-height: calc(190 * var(--id4-home-u));
+    display: flex;
+    gap: calc(20 * var(--id4-home-u));
+    padding: calc(26 * var(--id4-home-u));
+    border: 1px solid rgba(216, 199, 163, 0.3);
+    border-radius: calc(14 * var(--id4-home-u));
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 calc(5 * var(--id4-home-u)) calc(20 * var(--id4-home-u)) #39230005;
+}
+
+#-id4-home-main .-id4-home-step-number {
+font: 400 var(--id4-home-text-size)/1 var(--id4-home-font-ui);
+    color: var(--id4-home-gold);
+    padding-top: calc(3 * var(--id4-home-u));
+    flex-shrink: 0;
+}
+
+#-id4-home-main .-id4-home-process-step h4 {
+font: 700 var(--id4-home-title-size)/1.35 var(--id4-home-font-ui);
+    margin-bottom: calc(12 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-process-step p {
+font: 400 var(--id4-home-text-size)/1.55 var(--id4-home-font-ui);
+    color: rgb(101, 96, 89);
+}
+
+#-id4-home-main .-id4-home-process-action {
+position: absolute;
+    right: calc(36 * var(--id4-home-u));
+    bottom: calc(48 * var(--id4-home-u));
+    width: calc((100% - 112 * var(--id4-home-u)) / 3);
+    min-height: calc(190 * var(--id4-home-u));
+    padding: calc(26 * var(--id4-home-u));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: calc(20 * var(--id4-home-u));
+    font: 600 var(--id4-home-text-size)/1.4 var(--id4-home-font-ui);
+}
+
+#-id4-home-main .-id4-home-process-action .-id4-home-button {
+font-size: var(--id4-home-text-size);
+    padding: calc(14 * var(--id4-home-u));
+    letter-spacing: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#-id4-home-main .-id4-home-comparison {
+background: rgb(255, 255, 255);
+    isolation: isolate;
+}
+
+#-id4-home-main .-id4-home-comparison-slider .-id4-home-round-arrow,
+#-id4-home-main .-id4-home-doctor-slider .-id4-home-round-arrow {
+padding: 0px;
+    line-height: 0;
+}
+
+#-id4-home-main .-id4-home-round-arrow svg {
+display: block;
+    width: 54%;
+    height: 54%;
+    fill: none;
+    stroke: currentcolor;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#-id4-home-main .-id4-home-comparison-slider .-id4-home-round-arrow {
+background: rgb(231, 208, 155);
+}
+
+#-id4-home-main .-id4-home-comparison-slider .-id4-home-round-arrow:hover {
+background: rgb(212, 175, 97);
+}
+
+#-id4-home-main .-id4-home-comparison-viewport {
+background: rgb(243, 242, 244);
+    box-shadow: 0 calc(6 * var(--id4-home-u)) calc(18 * var(--id4-home-u)) #0002;
+}
+
+#-id4-home-main .-id4-home-solution-copy>p:not(.-id4-home-solution-subtitle) {
+line-height: 1.35;
+    text-align: justify;
+    text-align-last: center;
+    text-wrap: pretty;
+    margin: 0 auto calc(24 * var(--id4-home-u));
+    max-width: min(calc(1480 * var(--id4-home-u)), var(--id4-home-content-max));
+}
+
+#-id4-home-main .-id4-home-solution-copy .-id4-home-desktop-break {
+display: none;
+}
+
+#-id4-home-main .-id4-home-solution-subtitle {
+line-height: 1.4;
+}
+
+#-id4-home-main .-id4-home-solution {
+background-size: 100% 100%;
+}
+
+#-id4-home-main .-id4-home-teeth-scene {
+bottom: 0px;
+}
+
+#-id4-home-main #-id4-home-detail-dialog {
+width: min(540px, 100% - 32px);
+    height: min(740px, 100dvh - 32px);
+    max-height: none;
+    padding: 44px 36px 24px;
+    display: grid;
+    grid-template-rows: auto minmax(0px, 1fr) auto auto;
+    gap: 14px;
+}
+
+#-id4-home-main #-id4-home-detail-dialog:not([open]) {
+display: none;
+}
+
+#-id4-home-main #-id4-home-detail-dialog h2 {
+margin: 0px;
+    font: 700 var(--id4-home-title-size)/1.3 var(--id4-home-font-ui);
+    letter-spacing: 0px;
+}
+
+#-id4-home-main #-id4-home-detail-dialog #-id4-home-detail-image {
+width: 100%;
+    height: 100%;
+    max-height: none;
+    min-height: 0px;
+    object-fit: cover;
+    object-position: 50% 18%;
+    border-radius: 12px;
+}
+
+#-id4-home-main #-id4-home-detail-text {
+margin: 0px;
+    font: 400 var(--id4-home-text-size)/1.5 var(--id4-home-font-ui);
+}
+
+#-id4-home-main #-id4-home-story-detail-link {
+place-self: end center;
+}
+
+#-id4-home-main .-id4-home-journey-media {
+position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: 0px;
+    margin-top: calc(48 * var(--id4-home-u));
+    border-radius: calc(30 * var(--id4-home-u));
+    overflow: hidden;
+    background: rgb(23, 21, 17);
+    box-shadow: 0 calc(14 * var(--id4-home-u)) calc(40 * var(--id4-home-u)) #211c161a;
+}
+
+#-id4-home-main .-id4-home-journey .-id4-home-video-placeholder {
+position: absolute;
+    inset: 0px;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    border-radius: 0px;
+    padding: 0px;
+    background: rgb(41, 38, 33);
+    color: rgb(255, 255, 255);
+}
+
+#-id4-home-main .-id4-home-journey-poster {
+position: absolute;
+    inset: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+#-id4-home-main .-id4-home-journey-overlay {
+position: absolute;
+    inset: 0px;
+    background: linear-gradient(0deg, rgba(19, 16, 13, 0.88), transparent 65%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: calc(28 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-journey .-id4-home-play-circle {
+width: calc(116 * var(--id4-home-u));
+    height: calc(116 * var(--id4-home-u));
+    min-width: 64px;
+    min-height: 64px;
+    background: rgba(209, 162, 62, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.44);
+    box-shadow: 0 0 0 calc(12 * var(--id4-home-u)) #ffffff15;
+    transition: transform 0.25s, background 0.25s;
+}
+
+#-id4-home-main .-id4-home-journey .-id4-home-play-circle svg {
+width: 38%;
+    height: 38%;
+    fill: white;
+    transform: translateX(5%);
+}
+
+#-id4-home-main .-id4-home-journey .-id4-home-video-placeholder:hover .-id4-home-play-circle {
+transform: scale(1.06);
+    background: rgb(184, 138, 44);
+}
+
+#-id4-home-main .-id4-home-journey-play-label {
+font: 600 var(--id4-home-text-size)/1.4 var(--id4-home-font-ui);
+    text-shadow: rgba(0, 0, 0, 0.533) 0px 2px 8px;
+}
+
+#-id4-home-main .-id4-home-journey-player {
+position: absolute;
+    inset: 0px;
+    background: rgb(0, 0, 0);
+}
+
+#-id4-home-main .-id4-home-journey-player video {
+display: block;
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    object-fit: cover;
+}
+
+#-id4-home-main #-id4-home-video-reset {
+background: transparent;
+    color: rgb(110, 100, 85);
+    text-decoration: underline;
+    padding: 0px;
+    font: inherit;
+}
+
+#-id4-home-main .-id4-home-doctor-slide {
+display: grid;
+    grid-template-columns: calc(800 * var(--id4-home-u)) minmax(0, 1fr);
+    gap: calc(110 * var(--id4-home-u));
+    padding-right: calc(200 * var(--id4-home-u));
+    height: auto;
+    align-self: stretch;
+}
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-photo {
+position: static;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    margin: 0px;
+    align-self: end;
+}
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-copy {
+position: static;
+    width: auto;
+    margin: calc(92 * var(--id4-home-u)) 0 0;
+    min-width: 0px;
+}
+
+#-id4-home-main #-id4-home-video-reset {
+position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.733);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+#-id4-home-main #-id4-home-video-reset[hidden] {
+display: none;
+}
+
+#-id4-home-main #-id4-home-video-reset svg {
+width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentcolor;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+#-id4-home-main .-id4-home-stories-viewport {
+touch-action: pan-y;
+    user-select: none;
+}
+
+#-id4-home-main .-id4-home-story-track[data-story-dragging="true"] {
+animation-play-state: paused;
+    cursor: grabbing;
+}
+
+#-id4-home-main .-id4-home-story-track[data-story-dragging="true"] .-id4-home-story-card {
+cursor: grabbing;
+}
+
+#-id4-home-main .-id4-home-comparison-slider {
+width: calc(1140 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-comparison-image {
+display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    background: transparent;
+}
+
+#-id4-home-main .-id4-home-comparison-slider .-id4-home-prev {
+left: 0px;
+}
+
+#-id4-home-main .-id4-home-comparison-slider .-id4-home-next {
+right: 0px;
+}
+
+#-id4-home-main .-id4-home-comparison-slider .-id4-home-slider-controls {
+translate: 0px 6px;
+    transition: opacity 0.28s, translate 0.28s;
+}
+
+#-id4-home-main .-id4-home-comparison-slider:hover .-id4-home-slider-controls,
+#-id4-home-main .-id4-home-comparison-slider:focus-visible .-id4-home-slider-controls,
+#-id4-home-main .-id4-home-comparison-slider:has(:focus-visible) .-id4-home-slider-controls {
+translate: 0px;
+}
+
+#-id4-home-main .-id4-home-gallery-dialog>img {
+width: 100%;
+    max-height: 65dvh;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+#-id4-home-main .-id4-home-comparison-detail-link {
+margin-top: 20px;
+}
+
+#-id4-home-main .-id4-home-comparison {
+background-image: var(--id4-home-comparison-background);
+    background-size: 100% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* Chữ đậm 900: thêm class -id4-home-text-black vào phần chữ cần dùng.
+   Bộ font hiện tại chỉ có đến Bold 700; cần file hỗ trợ 900 để có nét 900 thực. */
+
+#-id4-home-main .-id4-home-text-black {
+font-weight: 900;
+}
+
+/* Câu chuyện khách hàng: ảnh nền full width, URL nằm trong style của section HTML. */
+
+#-id4-home-main .-id4-home-stories {
+background-image: var(--id4-home-customer-background);
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#-id4-home-main .-id4-home-stories::before,
+#-id4-home-main .-id4-home-stories-backdrop {
+display: none;
+}
+
+@media (min-width: 1921px) {
+#-id4-home-main {
+background: rgb(245, 243, 239);
+}
+
+#-id4-home-main .-id4-home-site {
+box-shadow: rgba(0, 0, 0, 0.067) 0px 0px 80px;
+}
+}
+
+@media (max-width: 1199px) {
+#-id4-home-main {
+font-size: var(--id4-home-text-size);
+}
+
+#-id4-home-main .-id4-home-site {
+width: 100%;
+}
+
+#-id4-home-main .-id4-home-container {
+width: auto;
+        margin-inline: var(--id4-home-gutter);
+}
+
+#-id4-home-main h2 {
+font-size: var(--id4-home-title-size);
+        letter-spacing: 0.5px;
+        line-height: 1.35;
+}
+
+#-id4-home-main .-id4-home-button {
+font-size: var(--id4-home-text-size);
+        border-radius: 6px;
+        padding: 10px 16px;
+        letter-spacing: 0.4px;
+}
+
+#-id4-home-main section {
+scroll-margin-top: 20px;
+}
+
+#-id4-home-main .-id4-home-comparison {
+height: auto;
+        padding: 48px 18px 46px;
+}
+
+#-id4-home-main .-id4-home-comparison-slider {
+width: 100%;
+        padding-inline: 20px;
+}
+
+#-id4-home-main .-id4-home-round-arrow {
+width: 30px;
+        height: 30px;
+        font-size: 32px;
+        padding-bottom: 4px;
+}
+
+#-id4-home-main .-id4-home-round-arrow.-id4-home-prev {
+left: -5px;
+}
+
+#-id4-home-main .-id4-home-round-arrow.-id4-home-next {
+right: -5px;
+}
+
+#-id4-home-main .-id4-home-comparison-more {
+margin-top: 24px;
+        font-size: var(--id4-home-text-size);
+        padding: 9px 12px;
+}
+
+#-id4-home-main .-id4-home-stories {
+height: auto;
+        padding: 28px 0px 32px;
+}
+
+#-id4-home-main .-id4-home-stories h2 {
+padding-inline: 20px;
+}
+
+#-id4-home-main .-id4-home-story-track {
+height: 300px;
+        width: auto;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        margin: 25px 0px 0px;
+        padding-inline: 20px;
+        gap: var(--id4-home-space-sm);
+        scrollbar-width: thin;
+}
+
+#-id4-home-main .-id4-home-story-card {
+flex-basis: 210px;
+        border-radius: var(--id4-home-radius);
+        scroll-snap-align: center;
+}
+
+#-id4-home-main .-id4-home-story-quote {
+font-size: var(--id4-home-text-size);
+        line-height: 1.5;
+        letter-spacing: 0.4px;
+        margin: 24px 24px 0px;
+}
+
+#-id4-home-main .-id4-home-desktop-break {
+display: none;
+}
+
+#-id4-home-main .-id4-home-solution {
+height: auto;
+        padding-bottom: 210px;
+        background-size: auto 100%;
+}
+
+#-id4-home-main .-id4-home-solution-copy {
+padding-top: 44px;
+}
+
+#-id4-home-main .-id4-home-solution-subtitle {
+font-size: var(--id4-home-text-size);
+        margin: 19px 0px;
+}
+
+#-id4-home-main .-id4-home-solution-copy>p:not(.-id4-home-solution-subtitle) {
+font-size: var(--id4-home-text-size);
+        line-height: 1.5;
+        margin-bottom: 18px;
+}
+
+#-id4-home-main .-id4-home-solution-copy>.-id4-home-button {
+margin-top: 4px;
+}
+
+#-id4-home-main .-id4-home-teeth-scene {
+height: 170px;
+        width: 740px;
+        max-width: none;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0px;
+        object-fit: cover;
+}
+
+#-id4-home-main .-id4-home-benefits {
+height: auto;
+        padding: 38px 0px 40px;
+}
+
+#-id4-home-main .-id4-home-benefits-subtitle {
+font-size: var(--id4-home-text-size);
+        line-height: 1.5;
+        margin-top: 16px;
+}
+
+#-id4-home-main .-id4-home-benefits-grid {
+display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 30px;
+}
+
+#-id4-home-main .-id4-home-benefits-copy h3 {
+font-size: var(--id4-home-title-size);
+        margin-bottom: 18px;
+}
+
+#-id4-home-main .-id4-home-benefits-copy dl {
+font-size: var(--id4-home-text-size);
+        line-height: 1.6;
+}
+
+#-id4-home-main .-id4-home-benefits-copy dt {
+font-size: var(--id4-home-text-size);
+        line-height: 1.4;
+        letter-spacing: 0.6px;
+        margin-top: 14px;
+}
+
+#-id4-home-main .-id4-home-benefits-copy dd {
+padding-left: 13px;
+        margin-top: 3px;
+}
+
+#-id4-home-main .-id4-home-benefits-copy>.-id4-home-button {
+margin-top: 24px;
+}
+
+#-id4-home-main .-id4-home-benefits-art img {
+height: 380px;
+        width: 270px;
+}
+
+#-id4-home-main .-id4-home-doctors {
+height: auto;
+        padding: var(--id4-home-space-lg) 0 0;
+        display: flex;
+        flex-direction: column;
+}
+
+#-id4-home-main .-id4-home-doctors h2 {
+padding-inline: 24px;
+}
+
+#-id4-home-main .-id4-home-doctor-photo {
+position: relative;
+        left: auto;
+        top: auto;
+        width: var(--id4-home-doctor-photo-width);
+        max-width: 100%;
+        height: var(--id4-home-doctor-photo-height);
+        object-fit: cover;
+        object-position: center top;
+        order: 3;
+        margin: 30px auto 0px;
+}
+
+#-id4-home-main .-id4-home-doctor-copy {
+position: relative;
+        left: auto;
+        top: auto;
+        width: auto;
+        margin: 28px 24px 0px;
+        font-size: var(--id4-home-text-size);
+        line-height: 1.5;
+}
+
+#-id4-home-main .-id4-home-doctor-degree {
+font-size: var(--id4-home-text-size);
+}
+
+#-id4-home-main .-id4-home-doctor-copy h3 {
+font-size: var(--id4-home-title-size);
+        letter-spacing: 0.7px;
+        margin: 4px 0px 18px;
+}
+
+#-id4-home-main .-id4-home-doctor-copy h4 {
+font-size: var(--id4-home-title-size);
+        margin-top: 23px;
+        letter-spacing: 0.5px;
+}
+
+#-id4-home-main .-id4-home-doctor-copy .-id4-home-text-link {
+font-size: var(--id4-home-text-size);
+        margin-top: 14px;
+}
+
+#-id4-home-main .-id4-home-journey {
+height: auto;
+        padding: 42px 0px;
+}
+
+/* SECTION 6 — MOBILE/TABLET: nút video phủ kín khung, không có margin làm lộ nền đen. */
+
+#-id4-home-main .-id4-home-journey .-id4-home-video-placeholder {
+inset: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        aspect-ratio: auto;
+        border-radius: 0;
+}
+
+#-id4-home-main .-id4-home-play-circle {
+width: 62px;
+        height: 62px;
+}
+
+#-id4-home-main .-id4-home-play-circle>span {
+margin-left: 6px;
+        border-top-width: 14px;
+        border-bottom-width: 14px;
+        border-left-width: 24px;
+        border-radius: 3px;
+}
+
+#-id4-home-main .-id4-home-technology {
+height: auto;
+        padding: var(--id4-home-space-lg) 0 24px;
+}
+
+#-id4-home-main .-id4-home-technology-tabs {
+gap: 6px;
+        padding: 7px;
+        margin-top: 22px;
+        border-radius: 12px;
+}
+
+#-id4-home-main .-id4-home-technology-tabs button {
+font-size: var(--id4-home-text-size);
+        line-height: 1.4;
+        letter-spacing: 0px;
+        white-space: normal;
+        padding: 8px 3px;
+        border-radius: 6px;
+}
+
+#-id4-home-main .-id4-home-equipment-panel {
+grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 8px;
+        height: auto;
+        margin-top: 16px;
+        border-radius: var(--id4-home-radius);
+}
+
+#-id4-home-main .-id4-home-featured {
+height: auto;
+        aspect-ratio: 1.5 / 1;
+}
+
+#-id4-home-main .-id4-home-technology-stack {
+grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 160px);
+        gap: 10px;
+}
+
+#-id4-home-main .-id4-home-technology-card {
+border-radius: 8px;
+}
+
+#-id4-home-main .-id4-home-technology-card span {
+font-size: var(--id4-home-text-size);
+        bottom: 14px;
+        left: 16px;
+        letter-spacing: 0.5px;
+}
+
+#-id4-home-main .-id4-home-featured span {
+font-size: var(--id4-home-text-size);
+        bottom: 16px;
+        left: 16px;
+}
+
+#-id4-home-main .-id4-home-cbct img {
+width: 65%;
+}
+
+#-id4-home-main .-id4-home-facilities-panel,
+#-id4-home-main .-id4-home-process-panel {
+height: auto;
+        min-height: 550px;
+        grid-template-columns: 1fr;
+        font-size: var(--id4-home-text-size);
+        gap: 20px;
+        padding: 18px;
+        margin-top: 16px;
+        border-radius: var(--id4-home-radius);
+}
+
+#-id4-home-main .-id4-home-facilities-panel h3,
+#-id4-home-main .-id4-home-process-panel h3 {
+font-size: var(--id4-home-title-size);
+        margin-bottom: 15px;
+}
+
+#-id4-home-main .-id4-home-facilities-panel p {
+margin-bottom: 20px;
+}
+
+#-id4-home-main .-id4-home-process-panel>img {
+height: 300px;
+}
+
+#-id4-home-main .-id4-home-process-panel ol {
+padding-left: 23px;
+        margin-bottom: 20px;
+}
+
+#-id4-home-main .-id4-home-process-panel li {
+margin-bottom: 15px;
+}
+
+#-id4-home-main .-id4-home-consultation {
+height: auto;
+        padding: 35px 24px 55px;
+        gap: 20px;
+}
+
+#-id4-home-main .-id4-home-consultation>img {
+width: 300px;
+        height: auto;
+}
+
+#-id4-home-main .-id4-home-consultation-cta {
+font-size: var(--id4-home-text-size);
+        padding: 10px 22px;
+        border-radius: 9px;
+}
+
+#-id4-home-main .-id4-home-small-rule {
+width: 30px;
+        height: 1px;
+        margin: 15px 0px;
+}
+
+#-id4-home-main dialog {
+padding: 42px 20px 26px;
+        font-size: var(--id4-home-text-size);
+}
+
+#-id4-home-main dialog h2 {
+font-size: var(--id4-home-title-size);
+}
+
+#-id4-home-main .-id4-home-gallery-pair {
+gap: 8px;
+}
+
+#-id4-home-main .-id4-home-gallery-pair figcaption {
+font-size: var(--id4-home-text-size);
+}
+}
+
+@media (max-width: 1199px) {
+#-id4-home-main .-id4-home-doctor-nav {
+display: none;
+}
+}
+
+@media (max-width: 1199px) {
+#-id4-home-main h2 {
+letter-spacing: 0.5px;
+}
+
+#-id4-home-main .-id4-home-doctor-copy h3 {
+letter-spacing: 0.7px;
+}
+
+#-id4-home-main .-id4-home-comparison-slider {
+padding: 0px;
+        width: 100%;
+        max-width: 620px;
+}
+
+#-id4-home-main .-id4-home-comparison-viewport {
+width: 100%;
+        height: auto;
+        aspect-ratio: 908.44 / 600;
+        border-radius: 10px;
+}
+
+#-id4-home-main .-id4-home-comparison-slider .-id4-home-round-arrow {
+width: 36px;
+        height: 44px;
+        font-size: 34px;
+        background: rgba(231, 209, 159, 0.9);
+        top: 50%;
+}
+
+#-id4-home-main .-id4-home-comparison-slider .-id4-home-prev {
+left: 8px;
+}
+
+#-id4-home-main .-id4-home-comparison-slider .-id4-home-next {
+right: 8px;
+}
+
+#-id4-home-main .-id4-home-slider-controls {
+opacity: 1;
+        pointer-events: auto;
+}
+
+#-id4-home-main .-id4-home-slider-dots {
+bottom: 8px;
+        padding: 4px 8px;
+        gap: 4px;
+}
+
+#-id4-home-main .-id4-home-slider-dots button {
+width: 24px;
+        height: 24px;
+        background: radial-gradient(circle, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 4px, transparent 5px);
+        box-shadow: none;
+}
+
+#-id4-home-main .-id4-home-slider-dots button[aria-current="true"] {
+background: radial-gradient(circle, var(--id4-home-gold) 0 4px, transparent 5px);
+}
+
+#-id4-home-main .-id4-home-stories {
+height: auto;
+        padding: 28px 0px 40px;
+}
+
+#-id4-home-main .-id4-home-stories-backdrop {
+left: -20px;
+        gap: var(--id4-home-space-sm);
+        opacity: 0.1;
+}
+
+#-id4-home-main .-id4-home-stories-backdrop>div {
+width: 210px;
+        flex-basis: 210px;
+        border-radius: var(--id4-home-radius);
+}
+
+#-id4-home-main .-id4-home-stories-backdrop img {
+height: 300px;
+}
+
+#-id4-home-main .-id4-home-stories-viewport {
+height: 300px;
+        margin-top: 25px;
+}
+
+#-id4-home-main .-id4-home-story-track {
+margin-left: 20px;
+        animation-duration: 24s;
+        padding: 0px;
+        overflow: visible;
+}
+
+#-id4-home-main .-id4-home-story-group {
+gap: var(--id4-home-space-sm);
+        padding-right: 12px;
+}
+
+#-id4-home-main .-id4-home-story-card {
+width: 210px;
+        flex-basis: 210px;
+        border-radius: var(--id4-home-radius);
+}
+
+#-id4-home-main .-id4-home-story-quote {
+margin: 24px 24px 0px;
+        font-size: var(--id4-home-text-size);
+        line-height: 1.5;
+        letter-spacing: 0.4px;
+}
+
+#-id4-home-main .-id4-home-doctors {
+display: block;
+        height: auto;
+        padding: var(--id4-home-space-lg) 0 0;
+}
+
+#-id4-home-main .-id4-home-doctor-slider {
+position: relative;
+        top: auto;
+        height: auto;
+        margin-top: 28px;
+}
+
+#-id4-home-main .-id4-home-doctor-slide {
+display: flex;
+        flex-direction: column;
+        height: auto;
+}
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-copy {
+position: relative;
+        top: auto;
+        left: auto;
+        width: auto;
+        margin: 0px 24px;
+        font-size: var(--id4-home-text-size);
+        line-height: 1.6;
+}
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-photo {
+position: relative;
+        top: auto;
+        left: auto;
+        order: 2;
+        width: var(--id4-home-doctor-photo-width);
+        max-width: 100%;
+        height: var(--id4-home-doctor-photo-height);
+        object-fit: cover;
+        object-position: center top;
+        margin: 30px auto 0px;
+}
+
+#-id4-home-main .-id4-home-doctor-slider .-id4-home-doctor-nav {
+display: grid;
+        top: auto;
+        bottom: 180px;
+        transform: none;
+        width: 40px;
+        height: 44px;
+        font-size: var(--id4-home-text-size);
+}
+
+#-id4-home-main .-id4-home-doctor-slider .-id4-home-doctor-nav.-id4-home-prev {
+left: 12px;
+}
+
+#-id4-home-main .-id4-home-doctor-slider .-id4-home-doctor-nav.-id4-home-next {
+right: 12px;
+}
+
+#-id4-home-main .-id4-home-doctor-slider .-id4-home-slider-dots {
+bottom: 12px;
+}
+
+#-id4-home-main .-id4-home-solution {
+background-size: auto 100%;
+}
+
+#-id4-home-main .-id4-home-benefits-copy dl {
+font-size: var(--id4-home-text-size);
+}
+}
+
+@media (hover: none) {
+#-id4-home-main .-id4-home-slider-controls {
+opacity: 1;
+        pointer-events: auto;
+}
+}
+
+@media (max-width: 1199px) {
+#-id4-home-main .-id4-home-facilities-panel {
+grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 8px;
+        min-height: 0px;
+}
+
+#-id4-home-main .-id4-home-facilities-panel .-id4-home-technology-card span {
+font-size: var(--id4-home-text-size);
+}
+
+#-id4-home-main .-id4-home-technology-card small {
+font-size: var(--id4-home-text-size);
+}
+
+#-id4-home-main .-id4-home-image-dialog {
+padding: 48px 12px 16px;
+}
+
+#-id4-home-main .-id4-home-image-dialog h2 {
+font-size: var(--id4-home-title-size);
+}
+
+#-id4-home-main .-id4-home-process-panel {
+padding: 24px 18px;
+        min-height: 0px;
+}
+
+#-id4-home-main .-id4-home-process-heading {
+margin-bottom: 22px;
+}
+
+#-id4-home-main .-id4-home-process-heading>p {
+font-size: var(--id4-home-text-size);
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+}
+
+#-id4-home-main .-id4-home-process-heading h3 {
+font-size: var(--id4-home-title-size);
+}
+
+#-id4-home-main .-id4-home-process-panel .-id4-home-process-steps {
+grid-template-columns: 1fr 1fr;
+        gap: var(--id4-home-space-sm);
+}
+
+#-id4-home-main .-id4-home-process-panel .-id4-home-process-step {
+padding: 18px;
+        gap: var(--id4-home-space-sm);
+        min-height: 0px;
+        border-radius: 10px;
+}
+
+#-id4-home-main .-id4-home-step-number {
+font-size: var(--id4-home-text-size);
+        padding-top: 2px;
+}
+
+#-id4-home-main .-id4-home-process-step h4 {
+font-size: var(--id4-home-title-size);
+        margin-bottom: 8px;
+}
+
+#-id4-home-main .-id4-home-process-step p {
+font-size: var(--id4-home-text-size);
+        line-height: 1.6;
+}
+
+#-id4-home-main .-id4-home-process-action {
+position: static;
+        width: auto;
+        min-height: 0px;
+        padding: 24px 0px 0px;
+        gap: 14px;
+        font-size: var(--id4-home-text-size);
+}
+
+#-id4-home-main .-id4-home-process-action .-id4-home-button {
+font-size: var(--id4-home-text-size);
+        padding: 13px 18px;
+        align-self: flex-start;
+        gap: 30px;
+}
+}
+
+@media (max-width: 699px) {
+#-id4-home-main .-id4-home-process-panel .-id4-home-process-steps {
+grid-template-columns: 1fr;
+}
+}
+
+@media (max-width: 1199px) {
+#-id4-home-main .-id4-home-comparison-slider .-id4-home-round-arrow {
+width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        top: 50%;
+}
+
+#-id4-home-main .-id4-home-doctor-slider .-id4-home-round-arrow {
+width: 40px;
+        height: 40px;
+        border-radius: 50%;
+}
+
+#-id4-home-main .-id4-home-solution-copy>p:not(.-id4-home-solution-subtitle) {
+font-size: var(--id4-home-text-size);
+        line-height: 1.65;
+        text-align: left;
+        text-align-last: auto;
+        margin-bottom: 20px;
+        max-width: 720px;
+}
+
+#-id4-home-main #-id4-home-detail-dialog {
+padding: 44px 20px 20px;
+        gap: var(--id4-home-space-sm);
+}
+
+#-id4-home-main #-id4-home-detail-dialog h2 {
+font-size: var(--id4-home-title-size);
+}
+
+#-id4-home-main #-id4-home-detail-text {
+font-size: var(--id4-home-text-size);
+}
+
+#-id4-home-main .-id4-home-journey {
+height: auto;
+        padding: var(--id4-home-space-lg) 0 36px;
+}
+
+#-id4-home-main .-id4-home-journey-media {
+margin-top: 26px;
+        border-radius: var(--id4-home-radius);
+}
+
+#-id4-home-main .-id4-home-journey .-id4-home-play-circle {
+width: 72px;
+        height: 72px;
+        box-shadow: rgba(255, 255, 255, 0.082) 0px 0px 0px 8px;
+}
+
+#-id4-home-main .-id4-home-journey-overlay {
+gap: 18px;
+}
+
+#-id4-home-main .-id4-home-journey-play-label {
+font-size: var(--id4-home-text-size);
+}
+}
+
+@media (max-width: 699px) {
+#-id4-home-main .-id4-home-journey-play-label {
+font-size: var(--id4-home-text-size);
+}
+}
+
+@media (min-width: 700px) and (max-width: 1199px) {
+#-id4-home-main h2 {
+font-size: var(--id4-home-title-size);
+}
+
+#-id4-home-main .-id4-home-technology-tabs button {
+font-size: var(--id4-home-text-size);
+        padding: 12px 6px;
+}
+
+#-id4-home-main .-id4-home-equipment-panel,
+#-id4-home-main .-id4-home-facilities-panel {
+grid-template-columns: 2.04fr 1fr;
+        align-items: stretch;
+}
+
+#-id4-home-main .-id4-home-technology-card.-id4-home-featured {
+height: 500px;
+        aspect-ratio: auto;
+}
+
+#-id4-home-main .-id4-home-technology-stack {
+grid-template-rows: repeat(3, 160px);
+}
+}
+
+@media (max-width: 1199px) {
+#-id4-home-main .-id4-home-doctor-slider .-id4-home-slider-track {
+align-items: stretch;
+        height: auto;
+}
+
+#-id4-home-main .-id4-home-doctor-slide {
+display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(0px, 1fr) auto;
+        gap: 30px;
+        padding: 0px;
+        height: auto;
+}
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-copy {
+grid-row: 1;
+        margin: 0px 24px;
+        font-size: var(--id4-home-text-size);
+        line-height: 1.6;
+}
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-photo {
+grid-row: 2;
+        order: initial;
+        width: var(--id4-home-doctor-photo-width);
+        max-width: 100%;
+        height: var(--id4-home-doctor-photo-height);
+        margin: 0px auto;
+        object-fit: contain;
+        object-position: center bottom;
+}
+}
+
+@media (min-width: 700px) and (max-width: 1199px) {
+#-id4-home-main .-id4-home-doctor-slide {
+grid-template-columns: minmax(0px, 0.8fr) minmax(0px, 1fr);
+        grid-template-rows: 1fr;
+        gap: 32px;
+        padding: 0px 32px;
+        min-height: 640px;
+}
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-copy {
+grid-area: 1 / 2;
+        margin: 20px 0px 56px;
+}
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-photo {
+grid-area: 1 / 1;
+        width: 100%;
+        height: 600px;
+        align-self: end;
+}
+
+#-id4-home-main .-id4-home-doctor-copy h3 {
+font-size: var(--id4-home-title-size);
+}
+
+#-id4-home-main .-id4-home-doctor-slider .-id4-home-doctor-nav {
+bottom: 32px;
+}
+}
+
+@media (max-width: 699px) {
+#-id4-home-main .-id4-home-comparison-slider .-id4-home-slider-controls {
+display: none;
+}
+}
+
+@media (min-width: 700px) {
+#-id4-home-main .-id4-home-consultation {
+padding-top: calc(8 * var(--id4-home-u));
+        padding-inline: 0px;
+        padding-bottom: 0px;
+        height: calc(540 * var(--id4-home-u));
+        gap: calc(28 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-consultation>img {
+width: calc(665 * var(--id4-home-u));
+        height: calc(276 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-consultation-cta {
+font-size: var(--id4-home-text-size);
+        padding: calc(11 * var(--id4-home-u)) calc(35 * var(--id4-home-u));
+        border-radius: calc(16 * var(--id4-home-u));
+}
+}
+
+@media (min-width: 700px) and (max-width: 1199px) {
+
+}
+
+@media (max-width: 1199px) {
+#-id4-home-main .-id4-home-comparison-slider {
+width: 100%;
+}
+
+#-id4-home-main .-id4-home-comparison-slider .-id4-home-prev {
+left: 0px;
+}
+
+#-id4-home-main .-id4-home-comparison-slider .-id4-home-next {
+right: 0px;
+}
+}
+
+@media (min-width: 700px) and (max-width: 1199px) {
+#-id4-home-main .-id4-home-comparison-slider {
+max-width: 732px;
+        padding-inline: 56px;
+}
+}
+
+@media (min-width: 700px) and (hover: hover) {
+#-id4-home-main .-id4-home-comparison-slider .-id4-home-slider-controls {
+opacity: 0;
+        pointer-events: none;
+}
+
+#-id4-home-main .-id4-home-comparison-slider:hover .-id4-home-slider-controls,
+#-id4-home-main .-id4-home-comparison-slider:focus-visible .-id4-home-slider-controls,
+#-id4-home-main .-id4-home-comparison-slider:has(:focus-visible) .-id4-home-slider-controls {
+opacity: 1;
+        pointer-events: auto;
+}
+}
+
+@media (max-width: 699px) {
+#-id4-home-main .-id4-home-doctor-slider .-id4-home-slider-controls {
+display: none;
+}
+
+#-id4-home-main #-id4-home-detail-dialog {
+width: min(340px, 100% - 40px);
+        height: min(560px, 100dvh - 48px);
+        padding: 52px 16px 16px;
+        gap: 10px;
+}
+
+#-id4-home-main #-id4-home-detail-dialog h2 {
+font-size: var(--id4-home-title-size);
+}
+
+#-id4-home-main #-id4-home-detail-text {
+font-size: var(--id4-home-text-size);
+        line-height: 1.45;
+}
+
+#-id4-home-main #-id4-home-story-detail-link {
+font-size: var(--id4-home-text-size);
+        padding: 10px 16px;
+}
+
+#-id4-home-main .-id4-home-solution-copy {
+text-align: center;
+}
+
+#-id4-home-main .-id4-home-solution-copy>p:not(.-id4-home-solution-subtitle) {
+text-align: center;
+        text-align-last: center;
+}
+}
+
+#-id4-home-main {
+font-weight: var(--id4-home-weight-content);
+}
+
+#-id4-home-main h2,
+#-id4-home-main h3 {
+font-weight: var(--id4-home-weight-title);
+}
+
+#-id4-home-main button,
+#-id4-home-main .-id4-home-button {
+font-weight: var(--id4-home-weight-button);
+}
+
+#-id4-home-main .-id4-home-text-semibold {
+font-weight: 600;
+}
+
+#-id4-home-main .-id4-home-text-bold {
+font-weight: 700;
+}
+
+#-id4-home-main .-id4-home-text-extrabold {
+font-weight: 800;
+}
+
+#-id4-home-main .-id4-home-text-black {
+font-weight: 900;
+}
+
+/* Chỉnh độ đậm tại --id4-home-weight-content/title/button ở phía trên.
+   Các class font dưới đây dùng khi cần chọn riêng Myriad Pro hoặc Times Italic. */
+
+#-id4-home-main .-id4-home-text-myriad {
+font-family: 'id4HomeMyriadPro', var(--id4-home-font-body);
+    font-weight: 400;
+}
+
+#-id4-home-main .-id4-home-text-times-italic {
+font-family: 'id4HomeTimes', 'Times New Roman', serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* ĐỘ ĐẬM CHỮ: áp dụng cả những đoạn bị font shorthand đặt lại về Regular.
+   Chỉnh các biến --id4-home-weight-* ở trên; không đổi kích thước hoặc bố cục. */
+
+#-id4-home-main p,
+#-id4-home-main li,
+#-id4-home-main dd,
+#-id4-home-main .-id4-home-step-number,
+#-id4-home-main #-id4-home-detail-text {
+font-weight: var(--id4-home-weight-content);
+}
+
+#-id4-home-main h1,
+#-id4-home-main h4,
+#-id4-home-main dt {
+font-weight: var(--id4-home-weight-title);
+}
+
+#-id4-home-main small,
+#-id4-home-main figcaption,
+#-id4-home-main .-id4-home-image-dialog h2 {
+font-weight: var(--id4-home-weight-caption);
+}
+
+#-id4-home-main .-id4-home-story-quote,
+#-id4-home-main .-id4-home-doctor-copy h3 {
+font-weight: var(--id4-home-weight-italic);
+}
+
+/* CĂN NỘI DUNG THEO PDF MẪU: chỉ bố cục trang, không tác động popup. */
+
+/* SECTION 3: tiêu đề, mô tả và nút nằm giữa như bản mẫu. */
+
+#-id4-home-main .-id4-home-solution-copy>p:not(.-id4-home-solution-subtitle) {
+text-align: center;
+    text-align-last: center;
+    max-width: min(100%, calc(1380 * var(--id4-home-u)));
+    margin-inline: auto;
+}
+
+/* SECTION 4 / 5: nội dung chi tiết căn trái, tiêu đề section căn giữa. */
+
+#-id4-home-main .-id4-home-benefits-copy,
+#-id4-home-main .-id4-home-doctor-copy {
+text-align: left;
+}
+
+@media (max-width: 1199px) {
+#-id4-home-main .-id4-home-container {
+width: calc(100% - 40px);
+        max-width: 960px;
+        margin-inline: auto;
+}
+
+#-id4-home-main .-id4-home-solution-copy>p:not(.-id4-home-solution-subtitle) {
+max-width: 720px;
+        font-size: var(--id4-home-text-size);
+        line-height: 1.6;
+        margin-bottom: 18px;
+}
+
+#-id4-home-main .-id4-home-benefits-subtitle {
+max-width: 680px;
+        margin-inline: auto;
+        text-align: center;
+}
+
+#-id4-home-main .-id4-home-benefits-copy dl,
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-copy {
+line-height: 1.55;
+}
+}
+
+@media (min-width: 700px) and (max-width: 1199px) {
+/* SECTION 4: giữ chữ bên trái, ảnh bên phải như PDF. */
+
+#-id4-home-main .-id4-home-benefits-grid {
+display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
+        align-items: center;
+        gap: 28px;
+}
+
+#-id4-home-main .-id4-home-benefits-art img {
+width: 100%;
+        max-width: 320px;
+        height: auto;
+        max-height: 520px;
+        object-fit: contain;
+}
+
+/* SECTION 5: ảnh và hồ sơ cân đối trong hai cột. */
+
+#-id4-home-main .-id4-home-doctor-slide {
+min-height: 0;
+        grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+        gap: 24px;
+        padding-inline: 20px;
+        align-items: end;
+}
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-photo {
+width: 100%;
+        height: auto;
+        max-height: 520px;
+        object-fit: contain;
+}
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-copy {
+margin: 0 0 48px;
+        font-size: var(--id4-home-text-size);
+}
+}
+
+@media (max-width: 699px) {
+/* SECTION 1 / 2: khoảng cách đồng đều và dòng trích dẫn nằm giữa. */
+
+#-id4-home-main .-id4-home-comparison {
+padding: 32px 16px;
+}
+
+#-id4-home-main .-id4-home-stories {
+padding-block: 30px;
+}
+
+#-id4-home-main .-id4-home-story-quote {
+margin: 20px 20px 0;
+        font-size: var(--id4-home-text-size);
+        line-height: 1.45;
+        text-align: center;
+}
+
+/* SECTION 3 / 4: đủ rộng để đọc, không dồn chữ thành cột hẹp. */
+
+#-id4-home-main .-id4-home-solution-copy {
+padding-top: 32px;
+}
+
+#-id4-home-main .-id4-home-solution-subtitle {
+font-size: var(--id4-home-text-size);
+        line-height: 1.5;
+        margin-block: 14px;
+}
+
+#-id4-home-main .-id4-home-solution-copy>p:not(.-id4-home-solution-subtitle) {
+font-size: var(--id4-home-text-size);
+        line-height: 1.55;
+        max-width: 100%;
+}
+
+#-id4-home-main .-id4-home-teeth-scene {
+width: 100%;
+        max-width: 100%;
+        height: 170px;
+        object-fit: cover;
+}
+
+#-id4-home-main .-id4-home-benefits {
+padding-block: 32px;
+}
+
+#-id4-home-main .-id4-home-benefits-grid {
+margin-top: 24px;
+        gap: 24px;
+}
+
+#-id4-home-main .-id4-home-benefits-copy h3 {
+font-size: var(--id4-home-title-size);
+}
+
+#-id4-home-main .-id4-home-benefits-copy dl {
+font-size: var(--id4-home-text-size);
+}
+
+#-id4-home-main .-id4-home-benefits-art img {
+width: min(100%, 270px);
+        height: auto;
+        max-height: 380px;
+}
+
+/* SECTION 5 / 6: căn hồ sơ với lề chung, giữ video đúng tỉ lệ. */
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-copy {
+margin-inline: 20px;
+        font-size: var(--id4-home-text-size);
+}
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-photo {
+max-width: calc(100% - 40px);
+}
+
+#-id4-home-main .-id4-home-journey {
+padding-block: 32px;
+}
+
+/* SECTION 7: ảnh chính và nhóm công nghệ gọn như bố cục mẫu. */
+
+#-id4-home-main .-id4-home-technology {
+padding-top: 32px;
+}
+
+#-id4-home-main .-id4-home-equipment-panel {
+grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+        gap: 8px;
+        padding: 8px;
+        align-items: stretch;
+}
+
+#-id4-home-main .-id4-home-featured {
+height: 100%;
+        min-height: 238px;
+        aspect-ratio: auto;
+}
+
+#-id4-home-main .-id4-home-technology-stack {
+grid-template-rows: repeat(3, minmax(74px, 1fr));
+        gap: 8px;
+}
+
+#-id4-home-main .-id4-home-equipment-panel .-id4-home-technology-card span {
+font-size: var(--id4-home-text-size);
+        line-height: 1.35;
+        left: 7px;
+        right: 5px;
+        bottom: 7px;
+        letter-spacing: 0;
+}
+
+#-id4-home-main .-id4-home-equipment-panel .-id4-home-featured span {
+font-size: var(--id4-home-text-size);
+}
+
+/* SECTION 8: ảnh chữ nằm giữa và luôn vừa chiều ngang điện thoại. */
+
+#-id4-home-main .-id4-home-consultation>img {
+width: min(300px, calc(100% - 48px));
+        height: auto;
+}
+}
+
+/* MOBILE — VỊ TRÍ POPUP: neo gần đầu viewport, không căn giữa dọc màn hình dài. */
+
+@media (max-width: 43.6875em) {
+#-id4-home-main dialog[open] {
+position: fixed;
+        top: max(1rem, env(safe-area-inset-top));
+        bottom: auto;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        max-height: calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+        overflow-y: auto;
+}
+
+#-id4-home-main #-id4-home-gallery-dialog[open],
+#-id4-home-main #-id4-home-detail-dialog[open] {
+top: max(1rem, env(safe-area-inset-top));
+        bottom: auto;
+        margin: 0 auto;
+        max-height: calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+}
+}
+
+/* POPUP SECTION 1 / 2 — PC / TABLET / MOBILE: kích thước tương đối theo viewport.
+   Khung ôm nội dung; ảnh nguyên tỉ lệ; nội dung dài cuộn trong khung. */
+
+#-id4-home-main #-id4-home-gallery-dialog,
+#-id4-home-main #-id4-home-detail-dialog {
+box-sizing: border-box;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    height: fit-content;
+    min-height: 0;
+    max-height: calc(100dvh - 3rem);
+    padding: 3rem clamp(1rem, 2.5vw, 2rem) 1.5rem;
+    border-radius: 1.25rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+#-id4-home-main #-id4-home-gallery-dialog {
+width: min(48rem, 90vw);
+}
+
+#-id4-home-main #-id4-home-detail-dialog {
+width: min(32rem, 90vw);
+}
+
+#-id4-home-main #-id4-home-gallery-dialog[open],
+#-id4-home-main #-id4-home-detail-dialog[open] {
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(.75rem, 1.5vw, 1rem);
+}
+
+#-id4-home-main #-id4-home-gallery-dialog:not([open]),
+#-id4-home-main #-id4-home-detail-dialog:not([open]) {
+display: none;
+}
+
+#-id4-home-main #-id4-home-gallery-dialog .-id4-home-dialog-close,
+#-id4-home-main #-id4-home-detail-dialog .-id4-home-dialog-close {
+top: .5rem;
+    right: .5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.75rem;
+    display: grid;
+    place-items: center;
+}
+
+#-id4-home-main #-id4-home-gallery-dialog h2,
+#-id4-home-main #-id4-home-detail-dialog h2 {
+width: 100%;
+    margin: 0;
+    font-size: var(--id4-home-title-size);
+    line-height: 1.4;
+    letter-spacing: 0;
+    text-align: center;
+    text-wrap: balance;
+}
+
+#-id4-home-main #-id4-home-gallery-dialog>img {
+flex: none;
+    width: 100%;
+    height: auto;
+    max-height: min(45dvh, 30rem);
+    object-fit: contain;
+    margin: 0;
+    border-radius: .75rem;
+}
+
+#-id4-home-main #-id4-home-detail-dialog #-id4-home-detail-image {
+flex: none;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: min(38dvh, 22rem);
+    min-height: 0;
+    object-fit: contain;
+    margin: 0;
+    border-radius: .75rem;
+}
+
+#-id4-home-main #-id4-home-comparison-detail-text,
+#-id4-home-main #-id4-home-detail-text {
+width: 100%;
+    margin: 0;
+    font-size: var(--id4-home-text-size);
+    line-height: 1.55;
+    text-align: center;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+#-id4-home-main #-id4-home-comparison-detail-link,
+#-id4-home-main #-id4-home-story-detail-link {
+flex: none;
+    align-self: center;
+    width: min(100%, 14rem);
+    min-width: 0;
+    min-height: 2.75rem;
+    margin: .125rem 0 0;
+    padding: .625rem 1.25rem;
+    border-radius: .625rem;
+    font-size: var(--id4-home-text-size);
+    line-height: 1.5;
+    text-align: center;
+}
+
+#-id4-home-main #-id4-home-comparison-detail-link[aria-disabled="true"],
+#-id4-home-main #-id4-home-story-detail-link[aria-disabled="true"] {
+opacity: .55;
+    cursor: default;
+}
+
+@media (max-width: 43.6875em) {
+#-id4-home-main #-id4-home-gallery-dialog,
+#-id4-home-main #-id4-home-detail-dialog,
+#-id4-home-main #-id4-home-gallery-dialog[open],
+#-id4-home-main #-id4-home-detail-dialog[open] {
+width: min(26rem, 93vw);
+        top: max(1rem, env(safe-area-inset-top));
+        left: 0;
+        right: 0;
+        bottom: auto;
+        transform: none;
+        margin: 0 auto;
+        max-height: calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+        padding: 3rem clamp(.875rem, 4vw, 1.125rem) 1.25rem;
+        gap: clamp(.75rem, 3vw, .875rem);
+}
+
+#-id4-home-main #-id4-home-gallery-dialog h2,
+#-id4-home-main #-id4-home-detail-dialog h2 {
+font-size: var(--id4-home-title-size);
+}
+
+#-id4-home-main #-id4-home-gallery-dialog>img {
+max-height: min(30dvh, 15rem);
+}
+
+#-id4-home-main #-id4-home-detail-dialog #-id4-home-detail-image {
+max-height: min(32dvh, 16rem);
+}
+
+#-id4-home-main #-id4-home-comparison-detail-text,
+#-id4-home-main #-id4-home-detail-text {
+font-size: var(--id4-home-text-size);
+}
+}
+
+@media (max-height: 30em) {
+#-id4-home-main #-id4-home-gallery-dialog>img,
+#-id4-home-main #-id4-home-detail-dialog #-id4-home-detail-image {
+max-height: 24dvh;
+}
+}
+
+/* SECTION 3 — ẢNH HÀM RĂNG: ảnh PNG riêng, thu theo tỉ lệ mẫu; không phóng/cắt bằng cover. */
+
+#-id4-home-main .-id4-home-teeth-scene {
+left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(70 * var(--id4-home-u));
+    width: min(40vw, 44rem);
+    max-width: 100%;
+    height: auto;
+    max-height: calc(450 * var(--id4-home-u));
+    object-fit: contain;
+    object-position: center;
+}
+
+@media (max-width: 74.9375em) {
+#-id4-home-main .-id4-home-solution {
+padding-bottom: calc(min(70vw, 30rem) * .524 + 3rem);
+}
+
+#-id4-home-main .-id4-home-teeth-scene {
+width: min(70vw, 30rem);
+        height: auto;
+        max-height: none;
+        bottom: 1.5rem;
+}
+}
+
+@media (max-width: 43.6875em) {
+#-id4-home-main .-id4-home-solution {
+padding-bottom: calc(min(85vw, 24rem) * .524 + 2.5rem);
+}
+
+#-id4-home-main .-id4-home-teeth-scene {
+width: min(85vw, 24rem);
+        height: auto;
+        bottom: 1rem;
+}
+}
+
+/* SECTION 5 — CĂN ẢNH BÁC SĨ: giữ nguyên ảnh và tỷ lệ; cân theo từng màn hình. */
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-photo {
+position: static;
+    width: min(100%, calc(760 * var(--id4-home-u)));
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    justify-self: center;
+    align-self: end;
+    margin: 0 auto;
+}
+
+@media (min-width: 43.75em) and (max-width: 74.9375em) {
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-photo {
+width: 100%;
+        height: auto;
+        max-height: 36rem;
+        align-self: center;
+        object-position: center;
+}
+}
+
+@media (max-width: 43.6875em) {
+#-id4-home-main .-id4-home-doctor-slide {
+/* Điện thoại: hồ sơ phía trên, hình bác sĩ phía dưới. */
+        grid-template-rows: minmax(0, 1fr) auto;
+        gap: 1rem;
+}
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-photo {
+grid-row: 2;
+        grid-column: 1;
+        order: 0;
+        width: min(75vw, 20rem);
+        max-width: calc(100% - 2.5rem);
+        height: auto;
+        max-height: none;
+        align-self: end;
+        margin: 0 auto;
+}
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-copy {
+grid-row: 1;
+        grid-column: 1;
+        margin-bottom: 0;
+}
+}
+
+/* SECTION 8 — ẢNH CHỮ THEO PDF MẪU.
+   PNG 1382 x 888 có phần chữ tại x=39, y=180, rộng 1304, cao 528.
+   Khung dưới chỉ ẩn khoảng trống trong suốt; không sửa file ảnh gốc. */
+
+#-id4-home-main .-id4-home-consultation {
+padding-top: calc(32 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-consultation-signature {
+position: relative;
+    flex: none;
+    width: calc(665 * var(--id4-home-u));
+    max-width: calc(100% - 3rem);
+    aspect-ratio: 1304 / 528;
+    overflow: hidden;
+}
+
+#-id4-home-main .-id4-home-consultation-signature>img {
+position: absolute;
+    width: 105.982%;
+    max-width: none;
+    height: 168.182%;
+    left: -2.991%;
+    top: -34.091%;
+    object-fit: contain;
+}
+
+@media (max-width: 43.6875em) {
+#-id4-home-main .-id4-home-consultation {
+padding-top: 2rem;
+        gap: 1.25rem;
+}
+
+#-id4-home-main .-id4-home-consultation-signature {
+width: min(80vw, 20rem);
+        max-width: 100%;
+}
+}
+
+/* SECTION 6 — Ảnh và video phủ hết khung nội dung, giữ tỷ lệ gốc khi hiển thị. */
+
+#-id4-home-main .-id4-home-journey-media {
+width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    transform: none;
+    aspect-ratio: 16 / 9;
+}
+
+#-id4-home-main .-id4-home-journey-poster,
+#-id4-home-main .-id4-home-journey-player video {
+width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* SECTION 4 — Ảnh máng hướng dẫn kèm logo nền: kích thước và vị trí theo PDF mẫu. */
+
+#-id4-home-main .-id4-home-benefits-art {
+justify-content: flex-start;
+}
+
+#-id4-home-main .-id4-home-benefits-art img {
+flex: none;
+    width: calc(965 * var(--id4-home-u));
+    max-width: none;
+    height: auto;
+    max-height: none;
+    margin-left: calc(-78 * var(--id4-home-u));
+    object-fit: contain;
+}
+
+@media (max-width: 74.9375em) {
+#-id4-home-main .-id4-home-benefits-art {
+justify-content: center;
+}
+
+#-id4-home-main .-id4-home-benefits-art img {
+width: 100%;
+        max-width: 36rem;
+        margin-left: 0;
+}
+}
+
+@media (max-width: 43.6875em) {
+#-id4-home-main .-id4-home-benefits-art img {
+width: min(100%, 30rem);
+}
+}
+
+/* KHOẢNG CÁCH THEO GDW iD-4 V2.2: bản PC 1920px; tablet/mobile dùng rem và vw.
+   Chỉ căn nội dung trong main, không thay popup, ảnh nền hoặc chức năng. */
+
+@media (min-width: 75em) {
+/* SECTION 1 / 2: khoảng đầu, cuối và khoảng cách tới ảnh khách hàng. */
+
+#-id4-home-main .-id4-home-comparison {
+height: calc(898.3 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-stories {
+height: calc(800 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-stories-viewport {
+margin-top: calc(48 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-story-quote {
+margin-top: calc(48 * var(--id4-home-u));
+}
+
+/* SECTION 3: tiêu đề, hai đoạn mô tả và hình nằm trong chiều cao bản mẫu. */
+
+#-id4-home-main .-id4-home-solution {
+height: calc(900 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-solution-copy {
+padding-top: calc(98 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-solution-copy>p:not(.-id4-home-solution-subtitle) {
+max-width: 100%;
+        font-size: var(--id4-home-text-size);
+        line-height: 1.2;
+        margin-bottom: calc(23 * var(--id4-home-u));
+}
+
+/* Dành khoảng thở giữa nút và ảnh răng, giữ tỷ lệ gốc bằng contain. */
+
+#-id4-home-main .-id4-home-teeth-scene {
+height: calc(260 * var(--id4-home-u));
+        max-height: calc(260 * var(--id4-home-u));
+        object-fit: contain;
+}
+
+/* SECTION 4: tiêu đề cách mép trên như PDF, hồ sơ lợi ích có lề cuối. */
+
+#-id4-home-main .-id4-home-benefits {
+height: calc(1130 * var(--id4-home-u));
+        padding-top: calc(98 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-benefits-subtitle {
+margin-top: calc(20 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-benefits-grid {
+margin-top: calc(28 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-benefits-copy dl {
+line-height: 1.52;
+}
+
+/* SECTION 5 / 6 / 7: giữ các mốc tiêu đề và nội dung của mẫu. */
+
+#-id4-home-main .-id4-home-doctors {
+padding-top: calc(96 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-doctor-copy h4 {
+margin-top: calc(35 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-doctor-copy h3+h4 {
+margin-top: 0;
+}
+
+#-id4-home-main .-id4-home-journey {
+height: calc(1147.4 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-journey-media {
+margin-top: calc(48 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-technology {
+height: calc(1080 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-technology-tabs,
+#-id4-home-main .-id4-home-technology-panel {
+margin-top: calc(24 * var(--id4-home-u));
+}
+}
+
+@media (max-width: 74.9375em) {
+#-id4-home-main {
+--id4-home-section-space: clamp(2rem, 4.5vw, 3rem);
+        --id4-home-content-space: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+#-id4-home-main>section h2:not(.-id4-home-sr-only):not(dialog h2) {
+font-size: var(--id4-home-title-size);
+        line-height: 1.3;
+        letter-spacing: .035em;
+        text-wrap: balance;
+}
+
+#-id4-home-main .-id4-home-comparison,
+#-id4-home-main .-id4-home-stories,
+#-id4-home-main .-id4-home-benefits,
+#-id4-home-main .-id4-home-journey,
+#-id4-home-main .-id4-home-technology {
+height: auto;
+        padding-block: var(--id4-home-section-space);
+}
+
+#-id4-home-main .-id4-home-comparison-more {
+margin-top: var(--id4-home-content-space);
+}
+
+#-id4-home-main .-id4-home-stories-viewport {
+margin-top: var(--id4-home-content-space);
+}
+
+#-id4-home-main .-id4-home-story-quote {
+margin: var(--id4-home-content-space) 1.25rem 0;
+        font-size: var(--id4-home-text-size);
+        line-height: 1.45;
+        letter-spacing: .025em;
+}
+
+#-id4-home-main .-id4-home-solution-copy {
+padding-top: var(--id4-home-section-space);
+}
+
+#-id4-home-main .-id4-home-solution-subtitle {
+margin-block: 1rem;
+        font-size: var(--id4-home-text-size);
+        line-height: 1.5;
+}
+
+#-id4-home-main .-id4-home-solution-copy>p:not(.-id4-home-solution-subtitle) {
+max-width: 45rem;
+        font-size: var(--id4-home-text-size);
+        line-height: 1.55;
+        margin-bottom: 1.125rem;
+}
+
+#-id4-home-main .-id4-home-benefits-subtitle {
+margin-top: 1rem;
+        font-size: var(--id4-home-text-size);
+        line-height: 1.5;
+}
+
+#-id4-home-main .-id4-home-benefits-grid {
+margin-top: var(--id4-home-content-space);
+}
+
+#-id4-home-main .-id4-home-benefits-copy h3 {
+font-size: var(--id4-home-title-size);
+        line-height: 1.35;
+        margin-bottom: 1rem;
+}
+
+#-id4-home-main .-id4-home-benefits-copy dl {
+font-size: var(--id4-home-text-size);
+        line-height: 1.55;
+}
+
+#-id4-home-main .-id4-home-benefits-copy dt {
+font-size: var(--id4-home-text-size);
+        line-height: 1.4;
+}
+
+#-id4-home-main .-id4-home-benefits-copy dd+dt {
+margin-top: .75rem;
+}
+
+#-id4-home-main .-id4-home-benefits-copy>.-id4-home-button {
+margin-top: 1.5rem;
+}
+
+#-id4-home-main .-id4-home-doctors {
+padding-top: var(--id4-home-section-space);
+}
+
+#-id4-home-main .-id4-home-doctor-slider {
+margin-top: var(--id4-home-content-space);
+}
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-copy {
+font-size: var(--id4-home-text-size);
+        line-height: 1.55;
+}
+
+#-id4-home-main .-id4-home-doctor-degree {
+font-size: var(--id4-home-text-size);
+        line-height: 1.4;
+}
+
+#-id4-home-main .-id4-home-doctor-copy h3 {
+margin-bottom: 1rem;
+        line-height: 1.25;
+}
+
+#-id4-home-main .-id4-home-doctor-copy h4 {
+font-size: var(--id4-home-title-size);
+        line-height: 1.4;
+        margin-top: 1.5rem;
+}
+
+#-id4-home-main .-id4-home-doctor-copy h3+h4 {
+margin-top: 0;
+}
+
+#-id4-home-main .-id4-home-journey-media {
+margin-top: var(--id4-home-content-space);
+}
+
+#-id4-home-main .-id4-home-technology-tabs,
+#-id4-home-main .-id4-home-technology-panel {
+margin-top: var(--id4-home-content-space);
+}
+
+#-id4-home-main .-id4-home-consultation {
+height: auto;
+        min-height: 0;
+        padding-block: var(--id4-home-section-space);
+        gap: var(--id4-home-content-space);
+}
+}
+
+/* MOBILE — Căn giữa hai link Tìm hiểu iD-4 Solution, giữ nội dung mô tả căn như cũ. */
+
+@media (max-width: 43.6875em) {
+#-id4-home-main .-id4-home-solution-copy>.-id4-home-button,
+#-id4-home-main .-id4-home-benefits-copy>.-id4-home-button {
+display: block;
+        width: fit-content;
+        max-width: 100%;
+        margin-inline: auto;
+}
+}
+
+/* SECTION 2 — MOBILE: dùng tỷ lệ ảnh gốc 637/971 như PC, không cắt chân dung. */
+
+@media (max-width: 43.6875em) {
+#-id4-home-main .-id4-home-stories {
+--id4-home-story-mobile-width: clamp(10rem, 54vw, 13.125rem);
+}
+
+#-id4-home-main .-id4-home-stories-viewport {
+height: calc(var(--id4-home-story-mobile-width) * 971 / 637);
+}
+
+#-id4-home-main .-id4-home-story-track,
+#-id4-home-main .-id4-home-story-group {
+height: 100%;
+}
+
+#-id4-home-main .-id4-home-story-card {
+width: var(--id4-home-story-mobile-width);
+        flex-basis: var(--id4-home-story-mobile-width);
+        height: 100%;
+        aspect-ratio: 637 / 971;
+}
+
+#-id4-home-main .-id4-home-story-card img {
+width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+}
+
+#-id4-home-main .-id4-home-story-card:hover img {
+transform: none;
+}
+}
+
+/* SECTION 4: tiêu đề nội dung viết toàn bộ chữ hoa; SECTION 1 / 5: cùng kiểu chấm chuyển slide. */
+
+#-id4-home-main .-id4-home-benefits-copy h3,
+#-id4-home-main .-id4-home-benefits-copy dt {
+text-transform: uppercase;
+}
+
+@media (min-width: 43.75em) {
+#-id4-home-main .-id4-home-comparison-slider .-id4-home-slider-dots,
+#-id4-home-main .-id4-home-doctor-slider .-id4-home-slider-dots {
+bottom: calc(18 * var(--id4-home-u));
+        gap: calc(12 * var(--id4-home-u));
+        padding: calc(6 * var(--id4-home-u)) calc(12 * var(--id4-home-u));
+        border-radius: 2.5rem;
+        background: rgb(0 0 0 / 20%);
+}
+
+#-id4-home-main .-id4-home-comparison-slider .-id4-home-slider-dots button,
+#-id4-home-main .-id4-home-doctor-slider .-id4-home-slider-dots button {
+width: calc(15 * var(--id4-home-u));
+        height: calc(15 * var(--id4-home-u));
+        padding: 0;
+        border-radius: 50%;
+        background: rgb(255 255 255 / 73.3%);
+        box-shadow: 0 0 0 1px rgb(0 0 0 / 6.7%);
+}
+
+#-id4-home-main .-id4-home-comparison-slider .-id4-home-slider-dots button[aria-current="true"],
+#-id4-home-main .-id4-home-doctor-slider .-id4-home-slider-dots button[aria-current="true"] {
+background: var(--id4-home-gold);
+}
+}
+
+/* GIÃN DÒNG CÁC KHỐI NỘI DUNG: tiêu đề 1.2–1.3, mô tả 1.4; giữ font và độ đậm. */
+
+#-id4-home-main>section :is(p,
+    li,
+    dd):not(dialog *) {
+line-height: 1.4;
+}
+
+#-id4-home-main>section :is(h3,
+    h4,
+    dt):not(dialog *) {
+line-height: 1.3;
+}
+
+#-id4-home-main>section h2:not(dialog *) {
+line-height: 1.2;
+}
+
+#-id4-home-main .-id4-home-solution-copy>p:not(.-id4-home-solution-subtitle),
+#-id4-home-main .-id4-home-benefits-copy dl,
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-copy {
+line-height: 1.4;
+}
+
+/* SECTION 3 / 4 — Giãn dòng mô tả và tách các mục lợi ích cho dễ đọc. */
+
+#-id4-home-main>.-id4-home-solution p,
+#-id4-home-main>.-id4-home-benefits :is(p,
+    dd) {
+line-height: 1.6;
+}
+
+#-id4-home-main>.-id4-home-benefits dt {
+line-height: 1.4;
+}
+
+#-id4-home-main .-id4-home-benefits-copy dd {
+margin-top: .2em;
+}
+
+#-id4-home-main .-id4-home-benefits-copy dd+dt {
+margin-top: .65em;
+}
+
+#-id4-home-main .-id4-home-solution-copy>p:not(.-id4-home-solution-subtitle) {
+margin-bottom: 1em;
+}
+
+@media (min-width: 75em) {
+/* Chiều cao theo nội dung để giãn dòng không chồng ảnh hoặc cắt chữ. */
+
+#-id4-home-main .-id4-home-solution {
+height: auto;
+        min-height: calc(900 * var(--id4-home-u));
+        padding-bottom: calc(362 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-benefits {
+height: auto;
+        min-height: calc(1130 * var(--id4-home-u));
+        padding-bottom: calc(60 * var(--id4-home-u));
+}
+}
+
+/* SECTION 5 — Giãn dòng nội dung hồ sơ bác sĩ như các khối giới thiệu và lợi ích. */
+
+#-id4-home-main>.-id4-home-doctors .-id4-home-doctor-copy :is(p,
+    li),
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-copy {
+line-height: 1.6;
+}
+
+#-id4-home-main .-id4-home-doctor-expertise li+li {
+margin-top: .2em;
+}
+
+/* SECTION 5 — Lề trên tiêu đề bằng lề dưới cụm chấm chuyển slide. */
+
+@media (min-width: 75em) {
+#-id4-home-main .-id4-home-doctors {
+--id4-home-doctor-edge-space: calc(96 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-doctor-slider .-id4-home-slider-dots {
+bottom: var(--id4-home-doctor-edge-space);
+}
+}
+
+@media (min-width: 43.75em) and (max-width: 74.9375em) {
+#-id4-home-main .-id4-home-doctor-slider .-id4-home-slider-dots {
+bottom: var(--id4-home-section-space);
+}
+}
+
+/* SECTION 5 — Cân lề trên/dưới của toàn bộ nội dung, không chỉ riêng chấm chuyển slide. */
+
+#-id4-home-main .-id4-home-doctors {
+--id4-home-doctor-section-space: calc(96 * var(--id4-home-u));
+    height: auto;
+    padding-block: var(--id4-home-doctor-section-space);
+}
+
+#-id4-home-main .-id4-home-doctor-slider {
+position: relative;
+    top: auto;
+    left: auto;
+    height: auto;
+    margin-top: calc(44 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-doctor-viewport,
+#-id4-home-main .-id4-home-doctor-slider .-id4-home-slider-track {
+height: auto;
+}
+
+#-id4-home-main .-id4-home-doctor-slider .-id4-home-slider-dots {
+position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    width: fit-content;
+    margin: calc(24 * var(--id4-home-u)) auto 0;
+}
+
+@media (max-width: 74.9375em) {
+#-id4-home-main .-id4-home-doctors {
+--id4-home-doctor-section-space: var(--id4-home-section-space);
+}
+
+#-id4-home-main .-id4-home-doctor-slider {
+margin-top: var(--id4-home-content-space);
+}
+
+#-id4-home-main .-id4-home-doctor-slider .-id4-home-slider-dots {
+margin-top: 1.5rem;
+}
+}
+
+/* SECTION 3 — Phóng lớn ảnh hàm răng, căn giữa và cân khoảng cách trên/dưới ảnh. */
+
+#-id4-home-main .-id4-home-solution {
+--id4-home-teeth-gap: calc(48 * var(--id4-home-u));
+    height: auto;
+    min-height: 0;
+    padding-bottom: var(--id4-home-teeth-gap);
+}
+
+#-id4-home-main .-id4-home-teeth-scene {
+position: static;
+    display: block;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    width: min(52vw, calc(800 * var(--id4-home-u)));
+    max-width: calc(100% - 2rem);
+    height: auto;
+    max-height: none;
+    aspect-ratio: 1485 / 778;
+    object-fit: contain;
+    object-position: center;
+    margin: var(--id4-home-teeth-gap) auto 0;
+}
+
+@media (max-width: 74.9375em) {
+#-id4-home-main .-id4-home-solution {
+--id4-home-teeth-gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+#-id4-home-main .-id4-home-teeth-scene {
+width: min(75vw, 36rem);
+}
+}
+
+@media (max-width: 43.6875em) {
+#-id4-home-main .-id4-home-teeth-scene {
+width: min(90vw, 28rem);
+}
+}
+
+/* SECTION 4 — Toàn bộ nội dung nằm giữa theo chiều cao, lề trên và dưới bằng nhau. */
+
+#-id4-home-main .-id4-home-benefits {
+--id4-home-benefits-section-space: calc(80 * var(--id4-home-u));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding-block: var(--id4-home-benefits-section-space);
+}
+
+#-id4-home-main .-id4-home-benefits>.-id4-home-container {
+flex: none;
+    margin-block: 0;
+}
+
+@media (max-width: 74.9375em) {
+#-id4-home-main .-id4-home-benefits {
+--id4-home-benefits-section-space: var(--id4-home-section-space);
+        min-height: 0;
+}
+}
+
+/* SECTION 5 — Căn giữa toàn khối và hồ sơ từng slide theo chiều dọc. */
+
+#-id4-home-main .-id4-home-doctors {
+--id4-home-doctor-section-space: calc(80 * var(--id4-home-u));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: var(--id4-home-doctor-section-space);
+}
+
+#-id4-home-main .-id4-home-doctor-slider {
+flex: none;
+}
+
+@media (min-width: 43.75em) {
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-copy {
+align-self: center;
+        margin-block: 0;
+}
+}
+
+@media (max-width: 74.9375em) {
+#-id4-home-main .-id4-home-doctors {
+--id4-home-doctor-section-space: var(--id4-home-section-space);
+}
+}
+
+/* SECTION 4 — Cân chiều dọc theo nhóm nội dung thực, bỏ chiều cao tối thiểu cũ. */
+
+#-id4-home-main .-id4-home-benefits {
+display: grid;
+    place-items: center;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+}
+
+#-id4-home-main .-id4-home-benefits>.-id4-home-container {
+--id4-home-benefits-content-space: calc(96 * var(--id4-home-u));
+    padding-block: var(--id4-home-benefits-content-space);
+    margin-block: 0;
+}
+
+#-id4-home-main .-id4-home-benefits-grid {
+align-items: center;
+}
+
+#-id4-home-main .-id4-home-benefits-copy,
+#-id4-home-main .-id4-home-benefits-art {
+margin-block: 0;
+}
+
+@media (max-width: 74.9375em) {
+#-id4-home-main .-id4-home-benefits>.-id4-home-container {
+--id4-home-benefits-content-space: var(--id4-home-section-space);
+}
+}
+
+/* SECTION 5 — Ảnh sát đáy section; hồ sơ nằm giữa vùng từ tiêu đề đến đáy. */
+
+#-id4-home-main .-id4-home-doctors {
+padding-bottom: 0;
+}
+
+#-id4-home-main .-id4-home-doctor-slider {
+margin-top: 0;
+}
+
+#-id4-home-main .-id4-home-doctor-slider .-id4-home-slider-dots {
+position: absolute;
+    left: 50%;
+    bottom: calc(18 * var(--id4-home-u));
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+@media (min-width: 43.75em) {
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-copy {
+align-self: center;
+        margin-block: calc(44 * var(--id4-home-u));
+}
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-photo {
+align-self: end;
+        margin: calc(44 * var(--id4-home-u)) auto 0;
+        object-position: center bottom;
+}
+}
+
+@media (min-width: 43.75em) and (max-width: 74.9375em) {
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-copy {
+margin-block: 1.5rem;
+}
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-photo {
+margin-top: 1.5rem;
+        max-height: none;
+}
+}
+
+@media (max-width: 43.6875em) {
+#-id4-home-main .-id4-home-doctor-slider {
+margin-top: var(--id4-home-content-space);
+}
+
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-photo {
+margin-block: 0;
+        align-self: end;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+#-id4-home-main *,
+#-id4-home-main ::before,
+#-id4-home-main ::after {
+transition: none !important;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+#-id4-home-main .-id4-home-slider-track {
+transition: none;
+}
+
+#-id4-home-main .-id4-home-story-track {
+animation: auto ease 0s 1 normal none running none;
+        transform: none !important;
+}
+
+#-id4-home-main .-id4-home-stories-viewport {
+overflow-x: auto;
+}
+
+#-id4-home-main .-id4-home-story-group[aria-hidden="true"] {
+display: none;
+}
+
+#-id4-home-main .-id4-home-slider-controls {
+transition: none;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+#-id4-home-main .-id4-home-image-dialog {
+animation: auto ease 0s 1 normal none running none;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+#-id4-home-main .-id4-home-comparison-slider .-id4-home-slider-controls {
+transition: none;
+}
+}
+
+#-id4-home-main .-id4-home-doctors {
+background: #211b17 !important;
+}
+
+#-id4-home-main .-id4-home-round-arrow {
+min-height: 0; min-width: 0; aspect-ratio: 1;
+}
+
+#-id4-home-main .-id4-home-slider-dots button {
+min-height: 0; min-width: 0; line-height: 1;
+}
+
+#-id4-home-main .-id4-home-technology-tabs button {
+min-height: 0;
+}
+
+#-id4-home-main .-id4-home-doctor-copy :is(p, li) {
+font-weight: var(--id4-home-weight-content);
+}
+
+/* Mobile: keep swipe and expose the same slide selector without covering the photos. */
+
+@media (max-width: 43.6875em) {
+#-id4-home-main :is(.-id4-home-comparison-slider, .-id4-home-doctor-slider) .-id4-home-slider-controls {
+display: block;
+        opacity: 1;
+        pointer-events: auto;
+}
+
+#-id4-home-main :is(.-id4-home-comparison-slider, .-id4-home-doctor-slider) .-id4-home-round-arrow {
+display: none;
+}
+
+#-id4-home-main :is(.-id4-home-comparison-slider, .-id4-home-doctor-slider) .-id4-home-slider-dots {
+display: flex;
+        bottom: .75rem;
+        gap: .75rem;
+        padding: .5rem .75rem;
+        border-radius: 2rem;
+}
+
+#-id4-home-main .-id4-home-slider-dots button {
+position: relative;
+        width: .625rem;
+        height: .625rem;
+}
+
+#-id4-home-main .-id4-home-slider-dots button::before {
+content: "";
+        position: absolute;
+        inset: -.375rem;
+}
+
+#-id4-home-main [data-single="true"] .-id4-home-slider-controls {
+display: none;
+}
+}
+
+/* Preserve authored sentence case; keep heading/dt capitalization rules. */
+
+#-id4-home-main .-id4-home-benefits-copy dl,
+#-id4-home-main :is(p, dd, li) {
+text-transform: none;
+}
+/* Defaults also cover content added later in WordPress. */
+#-id4-home-main :is(p, li, dd, dt, small, figcaption, blockquote, a, label, input, textarea, select),
+#-id4-home-main button:not(.-id4-home-round-arrow):not([data-close]):not([data-slider-dot]) {
+    font-size: var(--id4-home-text-size);
+}
+#-id4-home-main :is(h1, h2, h3, h4, h5, h6) {
+    font-size: var(--id4-home-title-size);
+}
+/* A longer heading/profile must expand instead of clipping text. */
+#-id4-home-main .-id4-home-doctor-slide {
+    height: auto;
+    min-height: 0;
+}
+#-id4-home-main .-id4-home-doctor-slide .-id4-home-doctor-copy {
+    position: relative;
+    top: auto;
+    padding-bottom: 2rem;
+}
+#-id4-home-main .-id4-home-stories,
+#-id4-home-main .-id4-home-technology {
+    height: auto;
+}
+#-id4-home-main .-id4-home-facilities-panel,
+#-id4-home-main .-id4-home-process-panel {
+    height: auto;
+    min-height: 0;
+}
+#-id4-home-main .-id4-home-technology-tabs button {
+    white-space: normal;
+}
+#-id4-home-main .-id4-home-technology-card span {
+    max-width: calc(100% - 1rem);
+    overflow-wrap: anywhere;
+}
+
+/* DOCTORS ONLY: one grid owns photo/profile positioning; remove legacy left/top offsets. */
+#-id4-home-main #-id4-home-doctors {
+    height: auto;
+    padding-top: clamp(2rem, 5vw, 6rem);
+    padding-bottom: 0;
+}
+#-id4-home-main #-id4-home-doctors > h2 {
+    padding-inline: clamp(1rem, 3vw, 2.5rem);
+}
+#-id4-home-main #-id4-home-doctors .-id4-home-doctor-slider {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    margin-top: calc(44 * var(--id4-home-u));
+}
+#-id4-home-main #-id4-home-doctors .-id4-home-doctor-viewport,
+#-id4-home-main #-id4-home-doctors .-id4-home-slider-track {
+    height: auto;
+}
+#-id4-home-main #-id4-home-doctors .-id4-home-slider-track {
+    align-items: stretch;
+}
+#-id4-home-main #-id4-home-doctors .-id4-home-doctor-slide {
+    display: grid;
+    grid-template-columns: minmax(0, .475fr) minmax(0, .525fr);
+    grid-template-rows: auto;
+    align-items: end;
+    gap: 0;
+    height: auto;
+    min-height: calc(872 * var(--id4-home-u));
+    padding: 0;
+}
+#-id4-home-main #-id4-home-doctors .-id4-home-doctor-slide .-id4-home-doctor-photo {
+    grid-area: 1 / 1;
+    position: relative;
+    inset: auto;
+    align-self: end;
+    justify-self: start;
+    width: min(100%, calc(800 * var(--id4-home-u)));
+    height: auto;
+    max-width: 100%;
+    max-height: none;
+    margin: 0;
+    object-fit: contain;
+    object-position: center bottom;
+}
+#-id4-home-main #-id4-home-doctors .-id4-home-doctor-slide .-id4-home-doctor-copy {
+    grid-area: 1 / 2;
+    position: relative;
+    inset: auto;
+    align-self: center;
+    min-width: 0;
+    width: auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 1rem clamp(2.5rem, 7vw, 8.5rem) 2.5rem 0;
+    font-size: var(--id4-home-text-size);
+    line-height: 1.5;
+}
+#-id4-home-main #-id4-home-doctors .-id4-home-doctor-copy h3 {
+    font-size: var(--id4-home-title-size);
+    line-height: 1.2;
+    margin-bottom: .5em;
+}
+#-id4-home-main #-id4-home-doctors .-id4-home-doctor-copy h4 {
+    font-size: var(--id4-home-text-size);
+    line-height: 1.35;
+    margin-top: 1.25em;
+    margin-bottom: .25em;
+}
+#-id4-home-main #-id4-home-doctors .-id4-home-doctor-copy h3 + h4 {
+    margin-top: 0;
+}
+#-id4-home-main #-id4-home-doctors .-id4-home-doctor-copy :is(p, li) {
+    font-size: var(--id4-home-text-size);
+    line-height: 1.5;
+}
+#-id4-home-main #-id4-home-doctors .-id4-home-doctor-copy li {
+    margin-bottom: 0;
+}
+#-id4-home-main #-id4-home-doctors .-id4-home-doctor-copy .-id4-home-text-link {
+    margin-top: .75em;
+}
+#-id4-home-main #-id4-home-doctors .-id4-home-slider-dots {
+    bottom: .75rem;
+}
+@media (min-width: 43.75em) and (max-width: 74.999em) {
+    #-id4-home-main #-id4-home-doctors .-id4-home-doctor-slide {
+        grid-template-columns: minmax(0, .42fr) minmax(0, .58fr);
+        min-height: 0;
+    }
+    #-id4-home-main #-id4-home-doctors .-id4-home-doctor-slide .-id4-home-doctor-copy {
+        padding: 1rem clamp(1.5rem, 4vw, 3rem) 2.5rem 1rem;
+    }
+    #-id4-home-main #-id4-home-doctors .-id4-home-doctor-slide .-id4-home-doctor-photo {
+        width: 100%;
+    }
+}
+@media (max-width: 43.749em) {
+    #-id4-home-main #-id4-home-doctors .-id4-home-doctor-slider {
+        margin-top: 1.5rem;
+    }
+    #-id4-home-main #-id4-home-doctors .-id4-home-doctor-slide {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto auto;
+        min-height: 0;
+        gap: 1.25rem;
+    }
+    #-id4-home-main #-id4-home-doctors .-id4-home-doctor-slide .-id4-home-doctor-copy {
+        grid-area: 1 / 1;
+        padding: 0 clamp(1rem, 4vw, 1.5rem);
+        align-self: start;
+    }
+    #-id4-home-main #-id4-home-doctors .-id4-home-doctor-slide .-id4-home-doctor-photo {
+        grid-area: 2 / 1;
+        width: min(85vw, 25rem);
+        justify-self: center;
+    }
+}
+
+/* Balance the profile between the section title and bottom in the two-column layout. */
+@media (min-width: 43.75em) {
+    #-id4-home-main #-id4-home-doctors .-id4-home-doctor-slide .-id4-home-doctor-copy {
+        padding-bottom: calc(1rem + 44 * var(--id4-home-u));
+    }
+}
+/* Mobile: center the text above the original bottom-anchored portrait. */
+@media (max-width: 43.749em) {
+    #-id4-home-main #-id4-home-doctors .-id4-home-doctor-slide {
+        grid-template-rows: minmax(0, 1fr) auto;
+    }
+    #-id4-home-main #-id4-home-doctors .-id4-home-doctor-slide .-id4-home-doctor-copy {
+        align-self: center;
+        transform: translateY(calc((1.25rem - 1.5rem) / 2));
+    }
+}
+/* Customer stories only: keep the frame, reveal portraits and balance both text bands. */
+#-id4-home-main #-id4-home-stories {
+    --id4-home-story-band-padding: calc(40 * var(--id4-home-u));
+    --id4-home-story-band-gap: calc(48 * var(--id4-home-u));
+    --id4-home-story-footer-padding: 0rem;
+    --id4-home-story-corner: clamp(.875rem, 1.25vw, 1.5rem);
+}
+#-id4-home-main #-id4-home-stories > h2 {
+    transform: translateY(calc((var(--id4-home-story-band-gap) - var(--id4-home-story-band-padding)) / 2));
+}
+#-id4-home-main #-id4-home-stories > .-id4-home-story-quote {
+    transform: translateY(calc((var(--id4-home-story-footer-padding) - var(--id4-home-story-band-gap)) / 2));
+}
+#-id4-home-main #-id4-home-stories .-id4-home-story-track {
+    margin-block: 0;
+}
+#-id4-home-main #-id4-home-stories .-id4-home-story-card {
+    border-radius: var(--id4-home-story-corner);
+    overflow: hidden;
+}
+#-id4-home-main #-id4-home-stories .-id4-home-story-card img,
+#-id4-home-main #-id4-home-stories .-id4-home-story-card:hover img {
+    object-fit: contain;
+    object-position: center;
+    transform: none;
+    border-radius: inherit;
+}
+@media (max-width: 74.999em) {
+    #-id4-home-main #-id4-home-stories {
+        --id4-home-story-band-padding: var(--id4-home-section-space);
+        --id4-home-story-band-gap: var(--id4-home-content-space);
+        --id4-home-story-footer-padding: var(--id4-home-section-space);
+    }
+}
+/* Desktop exception: quote size follows the 51.68px reference at 1920px. */
+@media (min-width: 75em) {
+    #-id4-home-main #-id4-home-stories > .-id4-home-story-quote {
+        --id4-home-story-quote-size: clamp(2rem, 2.691765625vw, 3.23011875rem);
+        font-size: var(--id4-home-story-quote-size);
+    }
+}

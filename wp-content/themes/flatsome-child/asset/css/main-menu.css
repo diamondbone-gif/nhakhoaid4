@@ -1,16 +1,7 @@
 /* =========================================================
-   iD-4 MAIN MENU — CENTERED + GOLD LANGUAGE SWITCHER
-
-   File:
-   /wp-content/themes/flatsome-child/asset/css/main-menu.css
-
-   Font directory:
-   /wp-content/themes/flatsome-child/asset/font/
-========================================================= */
-
-
-/* =========================================================
-   00. LOCAL FONTS
+   iD-4 MAIN MENU — căn theo hình tham chiếu
+   Thay toàn bộ asset/css/main-menu.css bằng file này.
+   Giữ font local, submenu ngôn ngữ và menu mobile.
 ========================================================= */
 
 @font-face {
@@ -77,28 +68,28 @@
     font-display: swap;
 }
 
-
-/* =========================================================
-   DESKTOP / TABLET HEADER
-   Flatsome dùng desktop header từ 850px trở lên
-========================================================= */
-
 @media (min-width: 850px) {
+    #header {
+        --id4-header-height: 70px;
+        --id4-content-width: 984px;
+        --id4-logo-width: 100px;
+        --id4-logo-gap: 44px;
+        --id4-menu-gap: 36px;
+        --id4-action-gap: 16px;
+        --id4-menu-font-size: 13px;
+        --id4-menu-tracking: 1px;
+    }
 
-    /* =====================================================
-       01. HEADER
-       Khóa toàn bộ cụm nội dung vào chính giữa viewport
-    ===================================================== */
     #top-bar {
         display: none !important;
     }
 
-    #masthead,
-    .header-main {
+    #header #masthead,
+    #header .header-main {
         position: relative !important;
         width: 100% !important;
-        height: 70px !important;
-        min-height: 70px !important;
+        height: var(--id4-header-height) !important;
+        min-height: var(--id4-header-height) !important;
         margin: 0 !important;
         padding: 0 !important;
         background: #11110f !important;
@@ -106,39 +97,40 @@
         box-shadow: none !important;
     }
 
-    .header-main .header-inner {
-        position: absolute !important;
-        top: 0 !important;
-        left: 50% !important;
+    /* Dùng luồng flex bình thường: tránh max-content + absolute
+       làm cụm menu tràn khi thu nhỏ màn hình. */
+    #header .header-main .header-inner {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
         right: auto !important;
-        transform: translateX(-50%) !important;
-        width: max-content !important;
-        max-width: calc(100vw - 40px) !important;
-        height: 70px !important;
-        min-height: 70px !important;
-        margin: 0 !important;
+        transform: none !important;
+        width: calc(100% - 40px) !important;
+        max-width: var(--id4-content-width) !important;
+        height: var(--id4-header-height) !important;
+        min-height: var(--id4-header-height) !important;
+        margin: 0 auto !important;
         padding: 0 !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         flex-wrap: nowrap !important;
+        box-sizing: border-box !important;
+        overflow: visible !important;
     }
 
-    /* =====================================================
-       02. LOGO
-    ===================================================== */
-    #logo {
-        width: 100px !important;
-        min-width: 100px !important;
-        max-width: 100px !important;
-        flex: 0 0 100px !important;
-        margin: 0 46px 0 0 !important;
+    #header #logo {
+        width: var(--id4-logo-width) !important;
+        min-width: var(--id4-logo-width) !important;
+        max-width: var(--id4-logo-width) !important;
+        flex: 0 0 var(--id4-logo-width) !important;
+        margin: 0 var(--id4-logo-gap) 0 0 !important;
         padding: 0 !important;
     }
 
-    #logo a {
+    #header #logo a {
         width: 100% !important;
-        height: 70px !important;
+        height: var(--id4-header-height) !important;
         margin: 0 !important;
         padding: 0 !important;
         display: flex !important;
@@ -146,37 +138,33 @@
         justify-content: center !important;
     }
 
-    #logo img {
-        width: 100px !important;
-        max-width: 100px !important;
+    #header #logo img {
+        width: var(--id4-logo-width) !important;
+        max-width: 100% !important;
         height: auto !important;
-        max-height: 70px !important;
+        max-height: 60px !important;
         margin: 0 !important;
         padding: 0 !important;
         object-fit: contain !important;
     }
 
-    #logo img.header-logo,
-    #logo img.header_logo {
+    #header #logo img.header-logo,
+    #header #logo img.header_logo {
         display: block !important;
     }
 
-    #logo img.header-logo-dark {
+    #header #logo img.header-logo-dark {
         display: none !important;
     }
 
-    /* =====================================================
-       03. LOẠI BỎ ẢNH HƯỞNG TỪ CÁC CỘT FLATSOME
-    ===================================================== */
-    .header-inner .show-for-medium {
+    #header .header-main .header-inner .show-for-medium {
         display: none !important;
     }
 
-    .header-inner .hide-for-medium.flex-left.flex-grow,
-    .header-inner .hide-for-medium.flex-left {
+    #header .header-main .header-inner .hide-for-medium.flex-left {
         width: auto !important;
         min-width: 0 !important;
-        flex: 0 0 auto !important;
+        flex: 0 1 auto !important;
         margin: 0 !important;
         padding: 0 !important;
         display: flex !important;
@@ -184,179 +172,144 @@
         justify-content: center !important;
     }
 
-    .header-inner .hide-for-medium.flex-right {
+    /* Cấu trúc hiện tại: tất cả tab và hai nút ở cùng menu trái. */
+    #header .header-main .header-inner .hide-for-medium.flex-right {
         display: none !important;
-        width: 0 !important;
-        min-width: 0 !important;
-        flex: 0 0 0 !important;
-        margin: 0 !important;
-        padding: 0 !important;
     }
 
-    /* =====================================================
-       04. MENU WORDPRESS
-    ===================================================== */
-    .header-nav-main {
-        width: max-content !important;
-        max-width: none !important;
+    #header .header-nav-main {
+        width: auto !important;
+        max-width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         flex-wrap: nowrap !important;
-        gap: 38px !important;
+        gap: var(--id4-menu-gap) !important;
     }
 
-    .header-nav-main>li {
+    #header .header-nav-main>li {
         flex: 0 0 auto !important;
         margin: 0 !important;
         padding: 0 !important;
         list-style: none !important;
     }
 
-    /* =====================================================
-       05. CHỮ MENU
-    ===================================================== */
-    .header-nav-main>li>a {
-        min-height: 44px !important;
+    #header .header-nav-main>li>a {
+        position: relative !important;
+        min-height: var(--id4-header-height) !important;
         margin: 0 !important;
         padding: 0 !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        color: #ffffff !important;
+        color: #fff !important;
         background: transparent !important;
         font-family: "Open Sans", Arial, sans-serif !important;
-        font-size: 14px !important;
+        font-size: var(--id4-menu-font-size) !important;
         font-weight: 600 !important;
         font-style: normal !important;
-        line-height: 1 !important;
-        letter-spacing: 0.45px !important;
+        line-height: 1.2 !important;
+        letter-spacing: var(--id4-menu-tracking) !important;
         text-transform: none !important;
         white-space: nowrap !important;
-        transition: color 0.2s ease !important;
+        text-decoration: none !important;
+        box-sizing: border-box !important;
+        transition: color .2s ease, background-color .2s ease !important;
     }
 
-    .header-nav-main>li>a:hover {
+    #header .header-nav-main>li>a:hover {
         color: #d7aa3d !important;
     }
 
-    .header-nav-main>li.current-menu-item>a,
-    .header-nav-main>li.current-menu-ancestor>a {
-        color: #ffffff !important;
+    #header .header-nav-main>li>a>.icon-angle-down {
+        display: none !important;
     }
 
-    /* Hiệu ứng gạch chân dày xuất hiện từ từ khi hover tên menu
-       Không áp dụng cho Ngôn ngữ và nút Đặt lịch */
-    .header-nav-main>li:not(.id4-language-switcher):not(.pll-parent-menu-item):not(.id4-booking-button):not(:last-child)>a {
-        position: relative !important;
+    #header .header-nav-main>li.current-menu-item>a,
+    #header .header-nav-main>li.current-menu-ancestor>a {
+        color: #fff !important;
     }
 
-    .header-nav-main>li:not(.id4-language-switcher):not(.pll-parent-menu-item):not(.id4-booking-button):not(:last-child)>a::after {
+    #header .header-nav-main>li:not(.id4-language-switcher):not(.pll-parent-menu-item):not(.id4-booking-button):not(:last-child)>a::after {
         content: "" !important;
         position: absolute !important;
         left: 0 !important;
-        bottom: 5px !important;
+        /* Dòng chữ có line-height 1.2: .6em là nửa chiều cao dòng.
+           Gạch chân cách dòng chữ 3px, không bám đáy header 70px. */
+        top: calc(50% + .6em + 3px) !important;
+        bottom: auto !important;
         width: 100% !important;
-        height: 4px !important;
+        height: 3px !important;
         background: #d7aa3d !important;
         border-radius: 999px !important;
         transform: scaleX(0) !important;
         transform-origin: left center !important;
         opacity: 0 !important;
-        transition: transform 0.30s ease, opacity 0.30s ease !important;
+        transition: transform .3s ease, opacity .3s ease !important;
         pointer-events: none !important;
     }
 
-    .header-nav-main>li:not(.id4-language-switcher):not(.pll-parent-menu-item):not(.id4-booking-button):not(:last-child)>a:hover::after {
+    #header .header-nav-main>li:not(.id4-language-switcher):not(.pll-parent-menu-item):not(.id4-booking-button):not(:last-child)>a:is(:hover,
+        :focus-visible)::after {
         transform: scaleX(1) !important;
         opacity: 1 !important;
     }
 
-    /* =====================================================
-       06. NGÔN NGỮ — DESKTOP / TABLET
-       Hỗ trợ class tùy chỉnh id4-language-switcher
-       và class thực tế do Polylang tạo: pll-parent-menu-item
-    ===================================================== */
-    .header-nav-main>li.id4-language-switcher,
-    .header-nav-main>li.pll-parent-menu-item {
+    #header .header-nav-main>li:is(.id4-language-switcher,
+        .pll-parent-menu-item) {
         position: relative !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        flex: 0 0 auto !important;
+        /* Mẫu: khoảng cách VỀ ID-4 → ngôn ngữ rộng hơn các tab chữ. */
+        margin-left: 10px !important;
     }
 
-    /* Nút ngôn ngữ chính: viền vàng + bo góc + nền đen */
-    .header-nav-main>li.id4-language-switcher>a,
-    .header-nav-main>li.pll-parent-menu-item>a[href="#pll_switcher"] {
-        min-height: 42px !important;
-        height: 42px !important;
-        margin: 0 !important;
-        padding: 0 18px !important;
+    #header .header-nav-main>li:is(.id4-language-switcher,
+        .pll-parent-menu-item)>a {
+        height: 24px !important;
+        min-height: 24px !important;
+        padding: 0 7px !important;
         display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 8px !important;
-        border: 2px solid #d7aa3d !important;
-        border-radius: 14px !important;
+        gap: 4px !important;
+        border: 1px solid #d7aa3d !important;
+        border-radius: 5px !important;
         background: #11110f !important;
         color: #d7aa3d !important;
-        font-family: "Open Sans", Arial, sans-serif !important;
-        font-size: 14px !important;
+        font-size: 8px !important;
         font-weight: 600 !important;
-        line-height: 1 !important;
-        letter-spacing: 0.2px !important;
-        white-space: nowrap !important;
+        letter-spacing: 0 !important;
         box-shadow: none !important;
-        text-decoration: none !important;
     }
 
-    /* Giữ màu vàng cho chữ ngôn ngữ */
-    .header-nav-main>li.id4-language-switcher>a,
-    .header-nav-main>li.id4-language-switcher>a span,
-    .header-nav-main>li.pll-parent-menu-item>a[href="#pll_switcher"],
-    .header-nav-main>li.pll-parent-menu-item>a[href="#pll_switcher"] span {
+    #header .header-nav-main>li:is(.id4-language-switcher,
+        .pll-parent-menu-item)>a span {
         color: #d7aa3d !important;
     }
 
-    /* Hover / active / đang mở dropdown vẫn giữ đúng giao diện */
-    .header-nav-main>li.id4-language-switcher>a:hover,
-    .header-nav-main>li.id4-language-switcher:hover>a,
-    .header-nav-main>li.id4-language-switcher.current-dropdown>a,
-    .header-nav-main>li.pll-parent-menu-item>a[href="#pll_switcher"]:hover,
-    .header-nav-main>li.pll-parent-menu-item:hover>a[href="#pll_switcher"],
-    .header-nav-main>li.pll-parent-menu-item.current-dropdown>a[href="#pll_switcher"] {
+    #header .header-nav-main>li:is(.id4-language-switcher,
+        .pll-parent-menu-item):is(:hover,
+        .current-dropdown)>a {
         background: #11110f !important;
         color: #d7aa3d !important;
         border-color: #d7aa3d !important;
     }
 
-    /* Kích thước lá cờ của ngôn ngữ hiện tại */
-    .header-nav-main>li.id4-language-switcher>a img,
-    .header-nav-main>li.pll-parent-menu-item>a[href="#pll_switcher"] img {
-        width: 20px !important;
+    #header .header-nav-main>li:is(.id4-language-switcher,
+        .pll-parent-menu-item)>a img {
+        width: 13px !important;
         height: auto !important;
         margin: 0 !important;
         padding: 0 !important;
         border-radius: 0 !important;
     }
 
-    /* Bỏ hoàn toàn icon mũi tên xổ xuống nằm trong thẻ a */
-    .header-nav-main>li.id4-language-switcher>a i,
-    .header-nav-main>li.id4-language-switcher>a .icon-angle-down,
-    .header-nav-main>li.pll-parent-menu-item>a[href="#pll_switcher"] i,
-    .header-nav-main>li.pll-parent-menu-item>a[href="#pll_switcher"] .icon-angle-down {
+    #header .header-nav-main>li:is(.id4-language-switcher,
+        .pll-parent-menu-item)>a i {
         display: none !important;
-        width: 0 !important;
-        height: 0 !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        overflow: hidden !important;
     }
 
-    .header-nav-main>li.id4-language-switcher>a::after,
-    .header-nav-main>li.pll-parent-menu-item>a[href="#pll_switcher"]::after {
+    #header .header-nav-main>li:is(.id4-language-switcher,
+        .pll-parent-menu-item)>a::after {
         content: none !important;
         display: none !important;
     }
@@ -366,8 +319,8 @@
        Ghi đè mũi tên trắng mặc định của Flatsome
        Tạo 1 tam giác đen có viền vàng đồng bộ giao diện
     ===================================================== */
-    .header-nav-main>li.id4-language-switcher::before,
-    .header-nav-main>li.pll-parent-menu-item::before {
+    #header .header-nav-main>li.id4-language-switcher::before,
+    #header .header-nav-main>li.pll-parent-menu-item::before {
         content: "" !important;
         position: absolute !important;
         left: 50% !important;
@@ -387,8 +340,8 @@
         z-index: 1002 !important;
     }
 
-    .header-nav-main>li.id4-language-switcher::after,
-    .header-nav-main>li.pll-parent-menu-item::after {
+    #header .header-nav-main>li.id4-language-switcher::after,
+    #header .header-nav-main>li.pll-parent-menu-item::after {
         content: "" !important;
         position: absolute !important;
         left: 50% !important;
@@ -408,14 +361,14 @@
         z-index: 1003 !important;
     }
 
-    .header-nav-main>li.id4-language-switcher:hover::before,
-    .header-nav-main>li.id4-language-switcher.current-dropdown::before,
-    .header-nav-main>li.pll-parent-menu-item:hover::before,
-    .header-nav-main>li.pll-parent-menu-item.current-dropdown::before,
-    .header-nav-main>li.id4-language-switcher:hover::after,
-    .header-nav-main>li.id4-language-switcher.current-dropdown::after,
-    .header-nav-main>li.pll-parent-menu-item:hover::after,
-    .header-nav-main>li.pll-parent-menu-item.current-dropdown::after {
+    #header .header-nav-main>li.id4-language-switcher:hover::before,
+    #header .header-nav-main>li.id4-language-switcher.current-dropdown::before,
+    #header .header-nav-main>li.pll-parent-menu-item:hover::before,
+    #header .header-nav-main>li.pll-parent-menu-item.current-dropdown::before,
+    #header .header-nav-main>li.id4-language-switcher:hover::after,
+    #header .header-nav-main>li.id4-language-switcher.current-dropdown::after,
+    #header .header-nav-main>li.pll-parent-menu-item:hover::after,
+    #header .header-nav-main>li.pll-parent-menu-item.current-dropdown::after {
         opacity: 1 !important;
         visibility: visible !important;
     }
@@ -424,10 +377,10 @@
        08. DROPDOWN NGÔN NGỮ — DESKTOP / TABLET
        Nền đen + chữ vàng
     ===================================================== */
-    .header-nav-main>li.id4-language-switcher>.nav-dropdown,
-    .header-nav-main>li.id4-language-switcher>.sub-menu,
-    .header-nav-main>li.pll-parent-menu-item>.nav-dropdown,
-    .header-nav-main>li.pll-parent-menu-item>.sub-menu {
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu {
         top: calc(100% + 12px) !important;
         left: 50% !important;
         right: auto !important;
@@ -444,23 +397,23 @@
 
     /* Tắt pseudo-element mặc định trên chính dropdown
        để không tạo thêm hình thoi / tam giác trắng */
-    .header-nav-main>li.id4-language-switcher>.nav-dropdown::before,
-    .header-nav-main>li.id4-language-switcher>.nav-dropdown::after,
-    .header-nav-main>li.id4-language-switcher>.sub-menu::before,
-    .header-nav-main>li.id4-language-switcher>.sub-menu::after,
-    .header-nav-main>li.pll-parent-menu-item>.nav-dropdown::before,
-    .header-nav-main>li.pll-parent-menu-item>.nav-dropdown::after,
-    .header-nav-main>li.pll-parent-menu-item>.sub-menu::before,
-    .header-nav-main>li.pll-parent-menu-item>.sub-menu::after {
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown::before,
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown::after,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu::before,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu::after,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown::before,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown::after,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu::before,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu::after {
         content: none !important;
         display: none !important;
     }
 
     /* Từng dòng ngôn ngữ */
-    .header-nav-main>li.id4-language-switcher>.nav-dropdown li,
-    .header-nav-main>li.id4-language-switcher>.sub-menu li,
-    .header-nav-main>li.pll-parent-menu-item>.nav-dropdown li,
-    .header-nav-main>li.pll-parent-menu-item>.sub-menu li {
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown li,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu li,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown li,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu li {
         margin: 0 !important;
         padding: 0 !important;
         border: 0 !important;
@@ -470,10 +423,10 @@
     }
 
     /* Đường phân cách giữa các ngôn ngữ */
-    .header-nav-main>li.id4-language-switcher>.nav-dropdown li+li,
-    .header-nav-main>li.id4-language-switcher>.sub-menu li+li,
-    .header-nav-main>li.pll-parent-menu-item>.nav-dropdown li+li,
-    .header-nav-main>li.pll-parent-menu-item>.sub-menu li+li {
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown li+li,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu li+li,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown li+li,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu li+li {
         margin-top: 8px !important;
         padding-top: 8px !important;
         border-top: 1px solid rgba(215, 170, 61, 0.28) !important;
@@ -481,10 +434,10 @@
 
     /* Link ngôn ngữ
        Tiếng Việt và English dùng cùng 1 giao diện */
-    .header-nav-main>li.id4-language-switcher>.nav-dropdown a,
-    .header-nav-main>li.id4-language-switcher>.sub-menu a,
-    .header-nav-main>li.pll-parent-menu-item>.nav-dropdown a,
-    .header-nav-main>li.pll-parent-menu-item>.sub-menu a {
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown a,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu a,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown a,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu a {
         display: flex !important;
         align-items: center !important;
         gap: 10px !important;
@@ -507,10 +460,10 @@
     }
 
     /* Ép toàn bộ text con của Polylang về màu vàng */
-    .header-nav-main>li.id4-language-switcher>.nav-dropdown a span,
-    .header-nav-main>li.id4-language-switcher>.sub-menu a span,
-    .header-nav-main>li.pll-parent-menu-item>.nav-dropdown a span,
-    .header-nav-main>li.pll-parent-menu-item>.sub-menu a span {
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown a span,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu a span,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown a span,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu a span {
         color: #d7aa3d !important;
         background: transparent !important;
     }
@@ -518,14 +471,14 @@
     /* QUAN TRỌNG:
        Xóa style riêng của ngôn ngữ hiện tại.
        Nhờ vậy Tiếng Việt hiển thị giống hệt English. */
-    .header-nav-main>li.id4-language-switcher>.nav-dropdown .current-lang>a,
-    .header-nav-main>li.id4-language-switcher>.sub-menu .current-lang>a,
-    .header-nav-main>li.id4-language-switcher>.nav-dropdown .lang-item-current>a,
-    .header-nav-main>li.id4-language-switcher>.sub-menu .lang-item-current>a,
-    .header-nav-main>li.pll-parent-menu-item>.nav-dropdown .current-lang>a,
-    .header-nav-main>li.pll-parent-menu-item>.sub-menu .current-lang>a,
-    .header-nav-main>li.pll-parent-menu-item>.nav-dropdown .lang-item-current>a,
-    .header-nav-main>li.pll-parent-menu-item>.sub-menu .lang-item-current>a {
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown .current-lang>a,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu .current-lang>a,
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown .lang-item-current>a,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu .lang-item-current>a,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown .current-lang>a,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu .current-lang>a,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown .lang-item-current>a,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu .lang-item-current>a {
         margin: 0 !important;
         border: 0 !important;
         border-radius: 0 !important;
@@ -536,14 +489,14 @@
     }
 
     /* Hover cho cả Tiếng Việt và English giống nhau */
-    .header-nav-main>li.id4-language-switcher>.nav-dropdown a:hover,
-    .header-nav-main>li.id4-language-switcher>.sub-menu a:hover,
-    .header-nav-main>li.pll-parent-menu-item>.nav-dropdown a:hover,
-    .header-nav-main>li.pll-parent-menu-item>.sub-menu a:hover,
-    .header-nav-main>li.id4-language-switcher>.nav-dropdown .current-lang>a:hover,
-    .header-nav-main>li.id4-language-switcher>.sub-menu .current-lang>a:hover,
-    .header-nav-main>li.pll-parent-menu-item>.nav-dropdown .current-lang>a:hover,
-    .header-nav-main>li.pll-parent-menu-item>.sub-menu .current-lang>a:hover {
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown a:hover,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu a:hover,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown a:hover,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu a:hover,
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown .current-lang>a:hover,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu .current-lang>a:hover,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown .current-lang>a:hover,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu .current-lang>a:hover {
         background: rgba(215, 170, 61, 0.10) !important;
         color: #d7aa3d !important;
         border-radius: 8px !important;
@@ -551,10 +504,10 @@
     }
 
     /* Kích thước cờ trong dropdown */
-    .header-nav-main>li.id4-language-switcher>.nav-dropdown a img,
-    .header-nav-main>li.id4-language-switcher>.sub-menu a img,
-    .header-nav-main>li.pll-parent-menu-item>.nav-dropdown a img,
-    .header-nav-main>li.pll-parent-menu-item>.sub-menu a img {
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown a img,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu a img,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown a img,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu a img {
         width: 20px !important;
         height: auto !important;
         margin: 0 !important;
@@ -564,67 +517,54 @@
         box-shadow: none !important;
     }
 
-    /* =====================================================
-       09. NÚT ĐẶT LỊCH
-    ===================================================== */
-    .header-nav-main>li.id4-booking-button,
-    .header-nav-main>li:last-child:not(.id4-language-switcher) {
-        margin: 0 !important;
-        padding: 0 !important;
-        flex: 0 0 auto !important;
-    }
-
-    .header-nav-main>li.id4-booking-button>a,
-    .header-nav-main>li:last-child:not(.id4-language-switcher)>a {
-        min-height: 38px !important;
-        height: 38px !important;
-        margin: 0 !important;
-        padding: 0 28px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        border: 1px solid #e2b54c !important;
-        border-radius: 10px !important;
-        background: #e2b54c !important;
-        color: #ffffff !important;
-        font-family: "Open Sans", Arial, sans-serif !important;
-        font-size: 14px !important;
+    #header .header-nav-main>li.id4-booking-button>a,
+    #header .header-nav-main>li:last-child:not(.id4-language-switcher):not(.pll-parent-menu-item)>a {
+        height: 24px !important;
+        min-height: 24px !important;
+        padding: 0 9px !important;
+        border: 1px solid #d0a13a !important;
+        border-radius: 5px !important;
+        background: #d0a13a !important;
+        color: #fff !important;
+        font-size: 11px !important;
         font-weight: 700 !important;
-        line-height: 1 !important;
-        letter-spacing: 0.2px !important;
-        white-space: nowrap !important;
+        letter-spacing: .7px !important;
     }
 
-    .header-nav-main>li.id4-booking-button>a:hover,
-    .header-nav-main>li:last-child:not(.id4-language-switcher)>a:hover {
-        background: #d7a83d !important;
-        border-color: #d7a83d !important;
-        color: #ffffff !important;
+    /* Chỉ rút khoảng cách giữa hai nút, không làm lệch tab chữ. */
+    #header .header-nav-main>li:is(.id4-language-switcher,
+        .pll-parent-menu-item)+li.id4-booking-button,
+    #header .header-nav-main>li:is(.id4-language-switcher,
+        .pll-parent-menu-item)+li:last-child:not(.id4-language-switcher):not(.pll-parent-menu-item) {
+        margin-left: calc(var(--id4-action-gap) - var(--id4-menu-gap)) !important;
     }
 
-    /* =====================================================
-       10. STICKY HEADER
-    ===================================================== */
-    .stuck #masthead,
-    .stuck .header-main {
-        position: relative !important;
-        width: 100% !important;
-        height: 70px !important;
-        min-height: 70px !important;
+    #header .header-nav-main>li.id4-booking-button>a:hover,
+    #header .header-nav-main>li:last-child:not(.id4-language-switcher):not(.pll-parent-menu-item)>a:hover {
+        background: #bd902e !important;
+        border-color: #bd902e !important;
+        color: #fff !important;
     }
 
-    .stuck .header-main .header-inner {
-        position: absolute !important;
-        top: 0 !important;
-        left: 50% !important;
-        right: auto !important;
-        transform: translateX(-50%) !important;
-        width: max-content !important;
-        max-width: calc(100vw - 40px) !important;
-        height: 70px !important;
-        min-height: 70px !important;
-        margin: 0 !important;
-        padding: 0 !important;
+    #header .header-nav-main>li>a:focus-visible {
+        outline: 2px solid #d7aa3d !important;
+        outline-offset: 3px !important;
+    }
+
+    /* Không lặp lại layout cho .stuck: các selector phía trên
+       cũng áp dụng khi Flatsome thêm class sticky. */
+}
+
+
+/* Co khoảng cách ở tablet, giữ breakpoint mobile gốc 849px. */
+
+@media (min-width: 850px) and (max-width: 1049px) {
+    #header {
+        --id4-logo-width: 72px;
+        --id4-logo-gap: clamp(20px, calc(12vw - 82px), 44px);
+        --id4-menu-gap: clamp(18px, calc(9vw - 58px), 36px);
+        --id4-menu-font-size: clamp(12px, calc(.5vw + 7.75px), 13px);
+        --id4-menu-tracking: clamp(.65px, calc(.175vw - .8375px), 1px);
     }
 }
 
@@ -762,12 +702,12 @@
        Đồng bộ nền vàng + chữ trắng với Desktop / Tablet
     ===================================================== */
     #main-menu .nav-sidebar>li.id4-booking-button,
-    #main-menu .nav-sidebar>li:last-child {
+    #main-menu .nav-sidebar>li:last-child:not(.id4-language-switcher):not(.pll-parent-menu-item) {
         border-bottom: 0 !important;
     }
 
     #main-menu .nav-sidebar>li.id4-booking-button>a,
-    #main-menu .nav-sidebar>li:last-child>a {
+    #main-menu .nav-sidebar>li:last-child:not(.id4-language-switcher):not(.pll-parent-menu-item)>a {
         margin: 14px 20px !important;
         min-height: 46px !important;
         padding: 0 20px !important;
@@ -784,7 +724,7 @@
     }
 
     #main-menu .nav-sidebar>li.id4-booking-button>a:hover,
-    #main-menu .nav-sidebar>li:last-child>a:hover {
+    #main-menu .nav-sidebar>li:last-child:not(.id4-language-switcher):not(.pll-parent-menu-item)>a:hover {
         background: #d7a83d !important;
         border-color: #d7a83d !important;
         color: #ffffff !important;
@@ -827,14 +767,9 @@
 }
 
 
-/* =========================================================
-   19. STICKY HEADER — GHIM MENU KHI CUỘN TRANG
-   Áp dụng cho Desktop / Tablet / Mobile
-   Không cần JavaScript, không thay đổi cấu trúc Flatsome
-========================================================= */
+/* Sticky và admin bar: giữ cách hoạt động của mã ban đầu. */
 
 #header {
-    position: -webkit-sticky !important;
     position: sticky !important;
     top: 0 !important;
     left: 0 !important;
@@ -842,17 +777,11 @@
     z-index: 9999 !important;
 }
 
-
-/* Giữ nền header kín khi đang ghim */
-
 #header .header-wrapper,
 #header #masthead,
 #header .header-main {
     background-color: #11110f !important;
 }
-
-
-/* Tương thích khi đang đăng nhập WordPress và có Admin Bar */
 
 body.admin-bar #header {
     top: 32px !important;

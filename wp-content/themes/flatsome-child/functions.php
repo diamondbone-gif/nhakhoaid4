@@ -44,7 +44,7 @@ function nhakhoaid4_enqueue_assets()
             wp_enqueue_style(
                 'nhakhoaid4-home',
                 $theme_uri . $home_css,
-                array(),
+                array('flatsome-main', 'flatsome-style'),
                 filemtime($theme_dir . $home_css)
             );
         }
