@@ -1,12 +1,74 @@
-/* iD4 IMPLANT SOLUTION */
+/* START FONT LOCAL */
 
-:root {
-    --id4-solution--gold: #d0a44a;
-    --id4-solution--gold-dark: #af8127;
-    --id4-solution--ink: #251e19;
-    --id4-solution--cream: #f7edd8;
-    --id4-solution--page: 1120px
+@font-face {
+    font-family: "Open Sans";
+    src: url("./assets/fonts/OpenSans-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
 }
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("./assets/fonts/OpenSans-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("./assets/fonts/OpenSans-Italic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("./assets/fonts/OpenSans-Semibold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("./assets/fonts/OpenSans-SemiboldItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("./assets/fonts/OpenSans-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Myriad Pro";
+    src: url("./assets/fonts/MyriadPro-Regular.otf") format("opentype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Times Custom";
+    src: url("./assets/fonts/timesi.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+}
+
+
+/* END FONT LOCAL */
+
+
+/* START iD4 IMPLANT SOLUTION */
 
 * {
     box-sizing: border-box
@@ -18,13 +80,13 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, "Helvetica Neue", sans-serif;
+    font-family: var(--id4-solution--font-family-fallback);
     color: var(--id4-solution--ink);
-    background: #fff
+    background: var(--id4-solution--white)
 }
 
 img {
-    max-width: 100%;
+    max-width: var(--id4-solution--size-100-percent);
     display: block
 }
 
@@ -41,8 +103,8 @@ button {
 button:focus-visible,
 a:focus-visible,
 [role="button"]:focus-visible {
-    outline: 3px solid var(--id4-solution--gold);
-    outline-offset: 3px
+    outline: var(--id4-solution--size-3px) solid var(--id4-solution--gold);
+    outline-offset: var(--id4-solution--size-3px)
 }
 
 [hidden] {
@@ -50,56 +112,56 @@ a:focus-visible,
 }
 
 .id4-solution--container {
-    width: min(90%, var(--id4-solution--page));
+    width: min(var(--id4-solution--size-90-percent), var(--id4-solution--page));
     margin-inline: auto
 }
 
 .id4-solution--narrow {
-    max-width: 1010px
+    max-width: var(--id4-solution--size-1010px)
 }
 
 h2 {
     margin: 0;
     color: var(--id4-solution--gold);
-    font-size: clamp(24px, 2.55vw, 38px);
-    letter-spacing: .045em;
-    line-height: 1.25;
-    font-weight: 800;
+    font-size: var(--id4-solution--font-fluid-24px-2-55vw-38px);
+    letter-spacing: var(--id4-solution--size-0decimal-045em);
+    line-height: var(--id4-solution--line-height-1-25);
+    font-weight: var(--id4-solution--font-weight-800);
     text-align: center
 }
 
 .id4-solution--intro {
-    padding: clamp(32px, 4vw, 62px) 0 clamp(34px, 4.3vw, 64px);
+    padding: clamp(var(--id4-solution--size-32px), var(--id4-solution--size-4vw), var(--id4-solution--size-62px)) 0 clamp(var(--id4-solution--size-34px), var(--id4-solution--size-4-3vw), var(--id4-solution--size-64px));
     text-align: center;
-    background: #fff;
-    color: #24201d
+    background: var(--id4-solution--white);
+    color: var(--id4-solution--hero-text)
 }
 
 .id4-solution--intro-content {
-    max-width: 1000px
+    max-width: var(--id4-solution--size-1000px)
 }
 
 .id4-solution--intro h1 {
-    font-size: clamp(27px, 2.9vw, 41px);
-    line-height: 1.16;
-    letter-spacing: .025em;
+    font-size: var(--id4-solution--font-fluid-27px-2-9vw-41px);
+    line-height: var(--id4-solution--line-height-1-16);
+    letter-spacing: var(--id4-solution--size-0decimal-025em);
     color: var(--id4-solution--gold);
-    margin: 0 0 12px;
-    font-weight: 800
+    margin: 0 0 var(--id4-solution--size-12px);
+    font-weight: var(--id4-solution--font-weight-800)
 }
 
 .id4-solution--intro .id4-solution--eyebrow {
-    font-size: clamp(13px, 1.23vw, 17px);
-    margin: 0 0 11px;
-    font-weight: 400;
-    line-height: 1.35
+    font-size: var(--id4-solution--font-fluid-13px-1-23vw-17px);
+    margin: 0 0 var(--id4-solution--size-11px);
+    font-weight: var(--id4-solution--font-weight-400);
+    line-height: var(--id4-solution--line-height-1-35)
 }
 
 .id4-solution--intro p:not(.id4-solution--eyebrow) {
-    font-size: clamp(13px, 1.18vw, 16px);
-    line-height: 1.27;
-    margin: 0 auto 11px;
-    max-width: 940px
+    font-size: var(--id4-solution--font-fluid-13px-1-18vw-16px);
+    line-height: var(--id4-solution--line-height-1-27);
+    margin: 0 auto var(--id4-solution--size-11px);
+    max-width: var(--id4-solution--size-940px)
 }
 
 .id4-solution--intro p:last-child {
@@ -108,25 +170,25 @@ h2 {
 
 @media(max-width:767px) {
     .id4-solution--container {
-        width: 92%
+        width: var(--id4-solution--size-92-percent)
     }
 
     .id4-solution--intro {
-        padding: 28px 0 35px
+        padding: var(--id4-solution--size-28px) 0 var(--id4-solution--size-35px)
     }
 
     .id4-solution--intro h1 {
-        font-size: clamp(23px, 6vw, 30px)
+        font-size: var(--id4-solution--font-fluid-23px-6vw-30px)
     }
 
     .id4-solution--intro .id4-solution--eyebrow {
-        font-size: clamp(11px, 2.8vw, 14px)
+        font-size: var(--id4-solution--font-fluid-11px-2-8vw-14px)
     }
 
     .id4-solution--intro p:not(.id4-solution--eyebrow) {
-        font-size: clamp(12px, 2.95vw, 14px);
-        line-height: 1.4;
-        margin-bottom: 12px
+        font-size: var(--id4-solution--font-fluid-12px-2-95vw-14px);
+        line-height: var(--id4-solution--line-height-1-4);
+        margin-bottom: var(--id4-solution--size-12px)
     }
 }
 
@@ -142,30 +204,20 @@ h2 {
     }
 }
 
-:root {
-    --id4-solution--gold: #c7a459;
-    --id4-solution--cream: #f5ecd8;
-    --id4-solution--page: 1480px;
-}
-
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: var(--id4-solution--font-family-body);
 }
 
 @media (min-width: 1024px) {
-    :root {
-        --id4-solution--unit: min(1vw, 19.2px);
-    }
-
     .id4-solution--container {
-        width: min(77.2%, var(--id4-solution--page));
+        width: min(var(--id4-solution--size-77-2-percent), var(--id4-solution--page));
         max-width: none;
     }
 
     main>section[aria-labelledby] h2 {
         font-size: calc(3 * var(--id4-solution--unit));
-        line-height: 1.15;
-        letter-spacing: .055em;
+        line-height: var(--id4-solution--line-height-1-15);
+        letter-spacing: var(--id4-solution--size-0decimal-055em);
     }
 
     .id4-solution--intro {
@@ -175,7 +227,7 @@ body {
     .id4-solution--intro h1 {
         font-size: calc(3 * var(--id4-solution--unit));
         margin-bottom: calc(.8 * var(--id4-solution--unit));
-        letter-spacing: .055em;
+        letter-spacing: var(--id4-solution--size-0decimal-055em);
     }
 
     .id4-solution--intro .id4-solution--eyebrow,
@@ -183,7 +235,7 @@ body {
         max-width: none;
         margin-bottom: calc(1.1 * var(--id4-solution--unit));
         font-size: calc(1.57 * var(--id4-solution--unit));
-        line-height: 1.16;
+        line-height: var(--id4-solution--line-height-1-16);
     }
 
     .id4-solution--intro p:last-child {
@@ -192,19 +244,10 @@ body {
 }
 
 
-/* end iD4 IMPLANT SOLUTION */
+/* END iD4 IMPLANT SOLUTION */
 
 
-/* ID4 SOLUTION LÀ GÌ? 
- start **/
-
-:root {
-    --id4-solution--gold: #d0a44a;
-    --id4-solution--gold-dark: #af8127;
-    --id4-solution--ink: #251e19;
-    --id4-solution--cream: #f7edd8;
-    --id4-solution--page: 1120px
-}
+/* START ID4 SOLUTION LÀ GÌ? */
 
 * {
     box-sizing: border-box
@@ -216,13 +259,13 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, "Helvetica Neue", sans-serif;
+    font-family: var(--id4-solution--font-family-fallback);
     color: var(--id4-solution--ink);
-    background: #fff
+    background: var(--id4-solution--white)
 }
 
 img {
-    max-width: 100%;
+    max-width: var(--id4-solution--size-100-percent);
     display: block
 }
 
@@ -239,8 +282,8 @@ button {
 button:focus-visible,
 a:focus-visible,
 [role="button"]:focus-visible {
-    outline: 3px solid var(--id4-solution--gold);
-    outline-offset: 3px
+    outline: var(--id4-solution--size-3px) solid var(--id4-solution--gold);
+    outline-offset: var(--id4-solution--size-3px)
 }
 
 [hidden] {
@@ -248,57 +291,57 @@ a:focus-visible,
 }
 
 .id4-solution--container {
-    width: min(90%, var(--id4-solution--page));
+    width: min(var(--id4-solution--size-90-percent), var(--id4-solution--page));
     margin-inline: auto
 }
 
 .id4-solution--dark {
-    color: #fff;
-    background: #211b17
+    color: var(--id4-solution--white);
+    background: var(--id4-solution--process-ink)
 }
 
 h2 {
     margin: 0;
     color: var(--id4-solution--gold);
-    font-size: clamp(24px, 2.55vw, 38px);
-    letter-spacing: .045em;
-    line-height: 1.25;
-    font-weight: 800;
+    font-size: var(--id4-solution--font-fluid-24px-2-55vw-38px);
+    letter-spacing: var(--id4-solution--size-0decimal-045em);
+    line-height: var(--id4-solution--line-height-1-25);
+    font-weight: var(--id4-solution--font-weight-800);
     text-align: center
 }
 
 .id4-solution--subtitle {
     text-align: center;
-    margin: 10px auto 0;
-    font-size: clamp(12px, 1.22vw, 17px);
-    line-height: 1.4
+    margin: var(--id4-solution--size-10px) auto 0;
+    font-size: var(--id4-solution--font-fluid-12px-1-22vw-17px);
+    line-height: var(--id4-solution--line-height-1-4)
 }
 
 .id4-solution--solution {
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    padding: clamp(52px, 6vw, 88px) 0 clamp(58px, 5vw, 80px);
-    background: linear-gradient(180deg, #241e19, #241e19 72%, #080707)
+    padding: clamp(var(--id4-solution--size-52px), var(--id4-solution--size-6vw), var(--id4-solution--size-88px)) 0 clamp(var(--id4-solution--size-58px), var(--id4-solution--size-5vw), var(--id4-solution--size-80px));
+    background: linear-gradient(180deg, var(--id4-solution--section-bg), var(--id4-solution--section-bg) var(--id4-solution--size-72-percent), var(--id4-solution--section-bg-deep))
 }
 
 .id4-solution--solution h2 {
-    font-size: clamp(29px, 3.15vw, 44px)
+    font-size: var(--id4-solution--font-fluid-29px-3-15vw-44px)
 }
 
 .id4-solution--solution .id4-solution--subtitle {
-    color: #fff;
-    margin-top: 14px;
-    margin-bottom: clamp(28px, 3.2vw, 45px)
+    color: var(--id4-solution--white);
+    margin-top: var(--id4-solution--size-14px);
+    margin-bottom: clamp(var(--id4-solution--size-28px), var(--id4-solution--size-3-2vw), var(--id4-solution--size-45px))
 }
 
 .id4-solution--solution-diagram {
     position: relative;
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr) minmax(0, 1fr);
-    gap: clamp(13px, 2.7vw, 40px);
+    gap: clamp(var(--id4-solution--size-13px), var(--id4-solution--size-2-7vw), var(--id4-solution--size-40px));
     align-items: center;
-    max-width: 1120px;
+    max-width: var(--id4-solution--size-1120px);
     margin-inline: auto
 }
 
@@ -306,45 +349,45 @@ h2 {
     z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: clamp(20px, 3.4vw, 49px)
+    gap: clamp(var(--id4-solution--size-20px), var(--id4-solution--size-3-4vw), var(--id4-solution--size-49px))
 }
 
 .id4-solution--detail-card {
     position: relative;
-    min-height: 220px;
-    border: 1px solid #947034;
-    border-radius: 17px;
-    background: linear-gradient(110deg, #050505, #251d19);
-    padding: clamp(12px, 1.4vw, 20px);
+    min-height: var(--id4-solution--size-220px);
+    border: var(--id4-solution--size-1px) solid var(--id4-solution--guide-border);
+    border-radius: var(--id4-solution--size-17px);
+    background: linear-gradient(110deg, var(--id4-solution--guide-bg-deep), var(--id4-solution--guide-bg));
+    padding: clamp(var(--id4-solution--size-12px), var(--id4-solution--size-1-4vw), var(--id4-solution--size-20px));
     transition: transform .28s, box-shadow .28s, border-color .28s
 }
 
 .id4-solution--detail-card h3 {
-    margin: 0 0 4px;
+    margin: 0 0 var(--id4-solution--size-4px);
     text-align: center;
-    color: #fff;
-    font-size: clamp(12px, 1.23vw, 17px);
-    letter-spacing: .02em
+    color: var(--id4-solution--white);
+    font-size: var(--id4-solution--font-fluid-12px-1-23vw-17px);
+    letter-spacing: var(--id4-solution--size-0decimal-02em)
 }
 
 .id4-solution--detail-subtitle {
-    font-size: clamp(9px, .85vw, 12px);
-    font-weight: 700;
-    color: #e7e7e7;
+    font-size: var(--id4-solution--font-fluid-9px-0-85vw-12px);
+    font-weight: var(--id4-solution--font-weight-700);
+    color: var(--id4-solution--guide-subtitle);
     text-align: center;
-    margin: 0 0 13px
+    margin: 0 0 var(--id4-solution--size-13px)
 }
 
 .id4-solution--detail-card ul {
     margin: 0;
-    padding-left: 17px
+    padding-left: var(--id4-solution--size-17px)
 }
 
 .id4-solution--detail-card li {
-    font-size: clamp(10px, .93vw, 13px);
-    line-height: 1.6;
-    color: #eee;
-    margin: 0 0 6px
+    font-size: var(--id4-solution--font-fluid-10px-0-93vw-13px);
+    line-height: var(--id4-solution--line-height-1-6);
+    color: var(--id4-solution--guide-text);
+    margin: 0 0 var(--id4-solution--size-6px)
 }
 
 .id4-solution--solution-models {
@@ -353,33 +396,33 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 500px
+    min-height: var(--id4-solution--size-500px)
 }
 
 .id4-solution--solution-guides-picture {
     display: block;
-    width: 100%
+    width: var(--id4-solution--size-100-percent)
 }
 
 .id4-solution--solution-guides-picture img {
-    width: 100%;
-    height: min(42vw, 520px);
+    width: var(--id4-solution--size-100-percent);
+    height: min(var(--id4-solution--size-42vw), var(--id4-solution--size-520px));
     object-fit: contain;
     filter: brightness(1.04)
 }
 
 @media(hover:hover) and (pointer:fine) {
     .id4-solution--solution .id4-solution--detail-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 26px #cba64e22;
-        border-color: #e7c47c
+        transform: translateY(var(--id4-solution--size-negative-5px));
+        box-shadow: 0 var(--id4-solution--size-10px) var(--id4-solution--size-26px) var(--id4-solution--guide-hover-shadow);
+        border-color: var(--id4-solution--guide-hover-border)
     }
 }
 
 @keyframes id4-solution--guide-reveal {
     from {
         opacity: 0;
-        transform: translateY(20px)
+        transform: translateY(var(--id4-solution--size-20px))
     }
 
     to {
@@ -391,7 +434,7 @@ h2 {
 @keyframes id4-solution--card-reveal-left {
     from {
         opacity: 0;
-        transform: translateX(-28px)
+        transform: translateX(var(--id4-solution--size-negative-28px))
     }
 
     to {
@@ -403,7 +446,7 @@ h2 {
 @keyframes id4-solution--card-reveal-right {
     from {
         opacity: 0;
-        transform: translateX(28px)
+        transform: translateX(var(--id4-solution--size-28px))
     }
 
     to {
@@ -425,120 +468,120 @@ h2 {
 }
 
 .id4-solution--process .id4-solution--subtitle {
-    font-size: clamp(11px, 1.1vw, 15px)
+    font-size: var(--id4-solution--font-fluid-11px-1-1vw-15px)
 }
 
 .id4-solution--candidates .id4-solution--subtitle {
-    max-width: 900px;
-    color: #eee;
-    margin: 11px auto 26px;
-    font-size: clamp(12px, 1.13vw, 16px)
+    max-width: var(--id4-solution--size-900px);
+    color: var(--id4-solution--guide-text);
+    margin: var(--id4-solution--size-11px) auto var(--id4-solution--size-26px);
+    font-size: var(--id4-solution--font-fluid-12px-1-13vw-16px)
 }
 
 @media(max-width:1023px) {
     .id4-solution--solution-diagram {
-        gap: 13px
+        gap: var(--id4-solution--size-13px)
     }
 
     .id4-solution--solution-models {
-        min-height: 400px
+        min-height: var(--id4-solution--size-400px)
     }
 
     .id4-solution--solution-guides-picture img {
-        height: 390px
+        height: var(--id4-solution--size-390px)
     }
 
     .id4-solution--detail-card {
-        min-height: 200px;
-        padding: 11px
+        min-height: var(--id4-solution--size-200px);
+        padding: var(--id4-solution--size-11px)
     }
 
     .id4-solution--detail-card li {
-        font-size: 10px
+        font-size: var(--id4-solution--size-10px)
     }
 }
 
 @media(max-width:767px) {
     .id4-solution--container {
-        width: 92%
+        width: var(--id4-solution--size-92-percent)
     }
 
     .id4-solution--solution {
-        padding: 44px 0 48px
+        padding: var(--id4-solution--size-44px) 0 var(--id4-solution--size-48px)
     }
 
     .id4-solution--solution h2 {
-        font-size: clamp(25px, 6.1vw, 33px)
+        font-size: var(--id4-solution--font-fluid-25px-6-1vw-33px)
     }
 
     .id4-solution--solution .id4-solution--subtitle {
-        font-size: 11px;
-        margin-bottom: 25px
+        font-size: var(--id4-solution--size-11px);
+        margin-bottom: var(--id4-solution--size-25px)
     }
 
     .id4-solution--solution-diagram {
         grid-template-columns: minmax(0, 1fr) minmax(0, 1.03fr) minmax(0, 1fr);
-        gap: 7px
+        gap: var(--id4-solution--size-7px)
     }
 
     .id4-solution--solution-models {
-        min-height: 300px
+        min-height: var(--id4-solution--size-300px)
     }
 
     .id4-solution--solution-guides-picture img {
-        height: 310px
+        height: var(--id4-solution--size-310px)
     }
 
     .id4-solution--solution-side {
-        gap: 10px
+        gap: var(--id4-solution--size-10px)
     }
 
     .id4-solution--detail-card {
-        min-height: 155px;
-        padding: 7px 5px;
-        border-radius: 9px
+        min-height: var(--id4-solution--size-155px);
+        padding: var(--id4-solution--size-7px) var(--id4-solution--size-5px);
+        border-radius: var(--id4-solution--size-9px)
     }
 
     .id4-solution--detail-card h3 {
-        font-size: clamp(9px, 2.3vw, 12px)
+        font-size: var(--id4-solution--font-fluid-9px-2-3vw-12px)
     }
 
     .id4-solution--detail-subtitle {
-        font-size: clamp(7px, 1.7vw, 9px);
-        margin-bottom: 5px
+        font-size: var(--id4-solution--font-fluid-7px-1-7vw-9px);
+        margin-bottom: var(--id4-solution--size-5px)
     }
 
     .id4-solution--detail-card ul {
-        padding-left: 11px
+        padding-left: var(--id4-solution--size-11px)
     }
 
     .id4-solution--detail-card li {
-        font-size: clamp(7px, 1.65vw, 9px);
-        line-height: 1.34;
-        margin-bottom: 4px
+        font-size: var(--id4-solution--font-fluid-7px-1-65vw-9px);
+        line-height: var(--id4-solution--line-height-1-34);
+        margin-bottom: var(--id4-solution--size-4px)
     }
 
     .id4-solution--process .id4-solution--subtitle {
-        font-size: 11px
+        font-size: var(--id4-solution--size-11px)
     }
 
     .id4-solution--candidates .id4-solution--subtitle {
-        font-size: 11px;
-        margin: 11px auto 24px
+        font-size: var(--id4-solution--size-11px);
+        margin: var(--id4-solution--size-11px) auto var(--id4-solution--size-24px)
     }
 }
 
 @media(max-width:374px) {
     .id4-solution--solution-diagram {
-        gap: 4px
+        gap: var(--id4-solution--size-4px)
     }
 
     .id4-solution--detail-card {
-        padding: 7px 4px
+        padding: var(--id4-solution--size-7px) var(--id4-solution--size-4px)
     }
 
     .id4-solution--detail-card li {
-        font-size: 7px
+        font-size: var(--id4-solution--size-7px)
     }
 }
 
@@ -561,35 +604,24 @@ h2 {
     }
 }
 
-:root {
-    --id4-solution--gold: #c7a459;
-    --id4-solution--white: #fff;
-    --id4-solution--cream: #f5ecd8;
-    --id4-solution--page: 1480px;
-}
-
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: var(--id4-solution--font-family-body);
 }
 
 .id4-solution--solution {
-    background: linear-gradient(180deg, #211b16 62%, #050403);
+    background: linear-gradient(180deg, var(--id4-solution--solution-bg) var(--id4-solution--size-62-percent), var(--id4-solution--solution-bg-deep));
 }
 
 @media (min-width: 1024px) {
-    :root {
-        --id4-solution--unit: min(1vw, 19.2px);
-    }
-
     .id4-solution--container {
-        width: min(77.2%, var(--id4-solution--page));
+        width: min(var(--id4-solution--size-77-2-percent), var(--id4-solution--page));
         max-width: none;
     }
 
     main>section[aria-labelledby] h2 {
         font-size: calc(3 * var(--id4-solution--unit));
-        line-height: 1.15;
-        letter-spacing: .055em;
+        line-height: var(--id4-solution--line-height-1-15);
+        letter-spacing: var(--id4-solution--size-0decimal-055em);
     }
 
     .id4-solution--solution {
@@ -628,13 +660,13 @@ body {
 
     .id4-solution--detail-subtitle {
         font-size: calc(.93 * var(--id4-solution--unit));
-        margin-bottom: .6em;
+        margin-bottom: var(--id4-solution--size-0decimal-6em);
     }
 
     .id4-solution--detail-card li {
         font-size: calc(.94 * var(--id4-solution--unit));
-        line-height: 1.38;
-        margin-bottom: .3em;
+        line-height: var(--id4-solution--line-height-1-38);
+        margin-bottom: var(--id4-solution--size-0decimal-3em);
     }
 
     .id4-solution--solution-models {
@@ -642,7 +674,7 @@ body {
     }
 
     .id4-solution--solution-guides-picture {
-        width: 119%;
+        width: var(--id4-solution--size-119-percent);
         flex: none;
     }
 
@@ -658,12 +690,11 @@ body {
 
 @media (max-width: 767px) {
     .id4-solution--solution>.id4-solution--container {
-        width: min(calc(100% - 32px), 480px);
+        width: min(calc(var(--id4-solution--size-100-percent) - var(--id4-solution--size-32px)), var(--id4-solution--size-480px));
         margin-inline: auto;
     }
 
     .id4-solution--solution-diagram {
-        --id4-solution--mobile-gap: 16px;
         grid-template-columns: minmax(0, 1fr);
         gap: var(--id4-solution--mobile-gap);
     }
@@ -674,7 +705,7 @@ body {
     }
 
     .id4-solution--solution-guides-picture {
-        width: min(68%, 240px);
+        width: min(var(--id4-solution--size-68-percent), var(--id4-solution--size-240px));
     }
 
     .id4-solution--solution-guides-picture img {
@@ -687,40 +718,40 @@ body {
 
     .id4-solution--solution .id4-solution--detail-card {
         min-height: 0;
-        padding: 14px 16px;
+        padding: var(--id4-solution--size-14px) var(--id4-solution--size-16px);
     }
 
     .id4-solution--solution .id4-solution--detail-card h3 {
-        font-size: 14px;
+        font-size: var(--id4-solution--size-14px);
     }
 
     .id4-solution--solution .id4-solution--detail-subtitle,
     .id4-solution--solution .id4-solution--detail-card li {
-        font-size: 12px;
-        line-height: 1.45;
+        font-size: var(--id4-solution--size-12px);
+        line-height: var(--id4-solution--line-height-1-45);
     }
 }
 
 
-/* Typography shared by the four guide cards. */
+/* START Typography shared by the four guide cards. */
 
 .id4-solution--solution .id4-solution--detail-card h3 {
     font-family: inherit;
-    font-weight: 700;
-    line-height: 1.25;
-    letter-spacing: .015em;
-    margin-bottom: .35em;
+    font-weight: var(--id4-solution--font-weight-700);
+    line-height: var(--id4-solution--line-height-1-25);
+    letter-spacing: var(--id4-solution--size-0decimal-015em);
+    margin-bottom: var(--id4-solution--size-0decimal-35em);
 }
 
 .id4-solution--solution .id4-solution--detail-subtitle {
-    font-weight: 600;
-    line-height: 1.35;
-    margin-bottom: .65em;
+    font-weight: var(--id4-solution--font-weight-600);
+    line-height: var(--id4-solution--line-height-1-35);
+    margin-bottom: var(--id4-solution--size-0decimal-65em);
 }
 
 .id4-solution--solution .id4-solution--detail-card li {
-    line-height: 1.5;
-    margin-bottom: .4em;
+    line-height: var(--id4-solution--line-height-1-5);
+    margin-bottom: var(--id4-solution--size-0decimal-4em);
 }
 
 .id4-solution--solution .id4-solution--detail-card li:last-child {
@@ -728,14 +759,14 @@ body {
 }
 
 .id4-solution--solution .id4-solution--subtitle {
-    margin-bottom: .8em;
+    margin-bottom: var(--id4-solution--size-0decimal-8em);
 }
 
 .id4-solution--solution-intro,
 .id4-solution--components-title {
     text-align: center;
-    font-size: clamp(12px, 1.53vw, 28px);
-    line-height: 1.3;
+    font-size: var(--id4-solution--font-fluid-12px-1-53vw-28px);
+    line-height: var(--id4-solution--line-height-1-3);
 }
 
 .id4-solution--solution-intro p {
@@ -744,8 +775,8 @@ body {
 
 .id4-solution--solution .id4-solution--components-title {
     color: var(--id4-solution--white);
-    margin: 1.35em 0 1.6em;
-    font-weight: 500;
+    margin: var(--id4-solution--size-1-35em) 0 var(--id4-solution--size-1-6em);
+    font-weight: var(--id4-solution--font-weight-500);
 }
 
 @media (min-width: 768px) {
@@ -764,44 +795,43 @@ body {
 }
 
 
-/* Responsive type scale for the solution section. */
+/* END Typography shared by the four guide cards. */
+
+
+/* START Responsive type scale for the solution section. */
 
 .id4-solution--solution #id4-solution--solution-title {
     color: var(--id4-solution--gold);
-    font-size: clamp(24px, 2.9vw, 52px);
-    line-height: 1.2;
+    font-size: var(--id4-solution--font-fluid-24px-2-9vw-52px);
+    line-height: var(--id4-solution--line-height-1-2);
 }
 
 .id4-solution--solution .id4-solution--subtitle,
 .id4-solution--solution-intro,
 .id4-solution--components-title {
-    font-size: clamp(13px, 1.45vw, 25px);
-    line-height: 1.5;
+    font-size: var(--id4-solution--font-fluid-13px-1-45vw-25px);
+    line-height: var(--id4-solution--line-height-1-5);
 }
 
 .id4-solution--solution .id4-solution--detail-card h3 {
-    font-size: clamp(14px, 1.2vw, 22px);
-    line-height: 1.3;
+    font-size: var(--id4-solution--font-fluid-14px-1-2vw-22px);
+    line-height: var(--id4-solution--line-height-1-3);
 }
 
 .id4-solution--solution .id4-solution--detail-subtitle,
 .id4-solution--solution .id4-solution--detail-card li {
-    font-size: clamp(13px, .98vw, 18px);
-    line-height: 1.5;
+    font-size: var(--id4-solution--font-fluid-13px-0-98vw-18px);
+    line-height: var(--id4-solution--line-height-1-5);
 }
 
 
-/* end ID4 SOLUTION LÀ GÌ? */
+/* END Responsive type scale for the solution section. */
 
 
-/* QUY TRÌNH CỦA ID-4 IMPLANT SOLUTION */
+/* END ID4 SOLUTION LÀ GÌ? */
 
-:root {
-    --id4-solution--process-ink: #211b17;
-    --id4-solution--process-gold: #d1a346;
-    --id4-solution--process-gold-light: #d5b371;
-    --id4-solution--process-gold-dark: #97671b;
-}
+
+/* START QUY TRÌNH CỦA ID-4 IMPLANT SOLUTION */
 
 body {
     margin: 0;
@@ -811,12 +841,12 @@ body {
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    padding: clamp(32px, 5.25vw, 88px) 0 clamp(26px, 4.3vw, 72px);
+    padding: clamp(var(--id4-solution--size-32px), var(--id4-solution--size-5-25vw), var(--id4-solution--size-88px)) 0 clamp(var(--id4-solution--size-26px), var(--id4-solution--size-4-3vw), var(--id4-solution--size-72px));
     color: var(--id4-solution--process-ink);
-    background: #fff;
-    font-family: "Segoe UI", Arial, sans-serif;
-    font-size: clamp(13px, 1.65vw, 23px);
-    line-height: 1.42;
+    background: var(--id4-solution--white);
+    font-family: var(--id4-solution--font-family-body);
+    font-size: var(--id4-solution--font-fluid-13px-1-65vw-23px);
+    line-height: var(--id4-solution--line-height-1-42);
 }
 
 .id4-solution--process *,
@@ -826,12 +856,12 @@ body {
 }
 
 .id4-solution--process-inner {
-    width: min(77.5%, 1296px);
+    width: min(var(--id4-solution--size-77-5-percent), var(--id4-solution--size-1296px));
     margin-inline: auto;
 }
 
 .id4-solution--process-header {
-    margin-bottom: 1.3em;
+    margin-bottom: var(--id4-solution--size-1-3em);
     text-align: center;
 }
 
@@ -844,11 +874,11 @@ body {
 }
 
 .id4-solution--process #id4-solution--process-title {
-    margin: 0 0 .48em;
-    font-size: clamp(21px, 3.1vw, 51px);
-    font-weight: 800;
-    letter-spacing: .045em;
-    line-height: 1.18;
+    margin: 0 0 var(--id4-solution--size-0decimal-48em);
+    font-size: var(--id4-solution--font-fluid-21px-3-1vw-51px);
+    font-weight: var(--id4-solution--font-weight-800);
+    letter-spacing: var(--id4-solution--size-0decimal-045em);
+    line-height: var(--id4-solution--line-height-1-18);
 }
 
 .id4-solution--process .id4-solution--process-subtitle,
@@ -857,16 +887,16 @@ body {
 }
 
 .id4-solution--process .id4-solution--process-subtitle {
-    margin-bottom: .7em;
-    font-weight: 600;
+    margin-bottom: var(--id4-solution--size-0decimal-7em);
+    font-weight: var(--id4-solution--font-weight-600);
 }
 
 .id4-solution--process-background {
     position: absolute;
     inset: 0;
     z-index: -1;
-    width: 100%;
-    height: 100%;
+    width: var(--id4-solution--size-100-percent);
+    height: var(--id4-solution--size-100-percent);
     max-width: none;
     object-fit: fill;
     pointer-events: none;
@@ -874,32 +904,32 @@ body {
 
 .id4-solution--process-list {
     display: grid;
-    gap: 1.8em;
+    gap: var(--id4-solution--size-1-8em);
 }
 
 .id4-solution--process-visit {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 26%);
+    grid-template-columns: minmax(0, 1fr) minmax(0, var(--id4-solution--size-26-percent));
     grid-template-areas: "copy photo";
-    gap: 10.5%;
+    gap: var(--id4-solution--size-10-5-percent);
     align-items: start;
 }
 
 .id4-solution--process-visit-reverse {
-    grid-template-columns: minmax(0, 26%) minmax(0, 1fr);
+    grid-template-columns: minmax(0, var(--id4-solution--size-26-percent)) minmax(0, 1fr);
     grid-template-areas: "photo copy";
 }
 
 .id4-solution--process-photo {
     grid-area: photo;
     display: block;
-    width: 100%;
+    width: var(--id4-solution--size-100-percent);
     height: auto;
     aspect-ratio: 3 / 4;
     object-fit: cover;
-    margin-top: .36em;
-    border-radius: .95em;
-    box-shadow: 0 .2em .65em #251b1429;
+    margin-top: var(--id4-solution--size-0decimal-36em);
+    border-radius: var(--id4-solution--size-0decimal-95em);
+    box-shadow: 0 var(--id4-solution--size-0decimal-2em) var(--id4-solution--size-0decimal-65em) var(--id4-solution--process-shadow);
 }
 
 .id4-solution--process-copy {
@@ -915,47 +945,47 @@ body {
 }
 
 .id4-solution--process .id4-solution--process-copy h3 {
-    margin-bottom: .45em;
+    margin-bottom: var(--id4-solution--size-0decimal-45em);
     color: var(--id4-solution--process-ink);
-    font-size: 1.65em;
+    font-size: var(--id4-solution--size-1-65em);
     font-style: italic;
-    font-weight: 800;
-    line-height: 1.12;
-    letter-spacing: .045em;
+    font-weight: var(--id4-solution--font-weight-800);
+    line-height: var(--id4-solution--line-height-1-12);
+    letter-spacing: var(--id4-solution--size-0decimal-045em);
 }
 
 .id4-solution--process .id4-solution--process-copy h4 {
     width: fit-content;
-    margin-bottom: .35em;
-    font-size: 1.37em;
-    font-weight: 800;
-    line-height: 1.12;
-    letter-spacing: .035em;
+    margin-bottom: var(--id4-solution--size-0decimal-35em);
+    font-size: var(--id4-solution--size-1-37em);
+    font-weight: var(--id4-solution--font-weight-800);
+    line-height: var(--id4-solution--line-height-1-12);
+    letter-spacing: var(--id4-solution--size-0decimal-035em);
 }
 
 .id4-solution--process .id4-solution--process-copy h5 {
     color: var(--id4-solution--process-ink);
-    font-size: 1.14em;
-    font-weight: 750;
-    line-height: 1.25;
+    font-size: var(--id4-solution--size-1-14em);
+    font-weight: var(--id4-solution--font-weight-750);
+    line-height: var(--id4-solution--line-height-1-25);
 }
 
 .id4-solution--process .id4-solution--process-copy p+h4,
 .id4-solution--process .id4-solution--process-copy p+h5 {
-    margin-top: .4em;
+    margin-top: var(--id4-solution--size-0decimal-4em);
 }
 
 .id4-solution--process .id4-solution--process-cta {
     display: inline-block;
-    margin-top: 1.3em;
-    padding: .25em .8em;
-    border-radius: .25em;
-    color: #fff;
+    margin-top: var(--id4-solution--size-1-3em);
+    padding: var(--id4-solution--size-0decimal-25em) var(--id4-solution--size-0decimal-8em);
+    border-radius: var(--id4-solution--size-0decimal-25em);
+    color: var(--id4-solution--white);
     background: var(--id4-solution--process-gold);
-    font-size: 1.62em;
-    font-weight: 750;
-    letter-spacing: .035em;
-    line-height: 1.25;
+    font-size: var(--id4-solution--size-1-62em);
+    font-weight: var(--id4-solution--font-weight-750);
+    letter-spacing: var(--id4-solution--size-0decimal-035em);
+    line-height: var(--id4-solution--line-height-1-25);
     text-decoration: none;
 }
 
@@ -977,30 +1007,30 @@ body {
     }
 
     .id4-solution--process {
-        font-size: 14px;
+        font-size: var(--id4-solution--size-14px);
     }
 
     .id4-solution--process-inner {
-        width: min(calc(100% - 36px), 480px);
+        width: min(calc(var(--id4-solution--size-100-percent) - var(--id4-solution--size-36px)), var(--id4-solution--size-480px));
     }
 
     .id4-solution--process-header {
-        margin-bottom: 24px;
+        margin-bottom: var(--id4-solution--size-24px);
     }
 
     .id4-solution--process-list {
-        gap: 28px;
+        gap: var(--id4-solution--size-28px);
     }
 
     .id4-solution--process-visit,
     .id4-solution--process-visit-reverse {
         grid-template-columns: minmax(0, 1fr);
         grid-template-areas: "photo" "copy";
-        gap: 14px;
+        gap: var(--id4-solution--size-14px);
     }
 
     .id4-solution--process-photo {
-        width: min(52%, 195px);
+        width: min(var(--id4-solution--size-52-percent), var(--id4-solution--size-195px));
         margin: 0;
         justify-self: center;
     }
@@ -1008,7 +1038,7 @@ body {
 
 @media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
     .id4-solution--process .id4-solution--process-photo:hover {
-        box-shadow: 0 .45em 1.2em #251b1440;
+        box-shadow: 0 var(--id4-solution--size-0decimal-45em) var(--id4-solution--size-1-2em) var(--id4-solution--process-hover-shadow);
     }
 
     .id4-solution--process .id4-solution--process-cta:hover {
@@ -1030,52 +1060,45 @@ body {
     }
 
     .id4-solution--process .id4-solution--process-cta:hover {
-        transform: translateY(-2px);
+        transform: translateY(var(--id4-solution--size-negative-2px));
     }
 }
 
 
-/* end QUY TRÌNH CỦA ID-4 IMPLANT SOLUTION  */
+/* END QUY TRÌNH CỦA ID-4 IMPLANT SOLUTION */
 
 
-/* ai là người phù hợp với iD-4 Implant Solution? */
-
-:root {
-    --id4-solution--gold: #c7a459;
-    --id4-solution--card-border: #87632d;
-    --id4-solution--candidate-text: #f4f0eb;
-}
+/* START ai là người phù hợp với iD-4 Implant Solution? */
 
 body {
     margin: 0;
 }
 
 .id4-solution--candidates {
-    --id4-solution--case-spacing: clamp(28px, 3.5vw, 56px);
-    padding: clamp(34px, 5vw, 76px) 0;
-    background: linear-gradient(#241e19, #090807 32%, #241e19);
+    padding: clamp(var(--id4-solution--size-34px), var(--id4-solution--size-5vw), var(--id4-solution--size-76px)) 0;
+    background: linear-gradient(var(--id4-solution--section-bg), var(--id4-solution--candidates-bg-deep) var(--id4-solution--size-32-percent), var(--id4-solution--section-bg));
     color: var(--id4-solution--candidate-text);
-    font: 400 clamp(14px, 1.12vw, 17px)/1.6 "Segoe UI", Arial, sans-serif;
+    font: var(--id4-solution--font-weight-400) var(--id4-solution--font-fluid-14px-1-12vw-17px)/var(--id4-solution--line-height-1-6) var(--id4-solution--font-family-body);
 }
 
 .id4-solution--candidates .id4-solution--candidates-inner {
-    width: min(calc(100% - 40px), 77.2%, 1480px);
+    width: min(calc(var(--id4-solution--size-100-percent) - var(--id4-solution--size-40px)), var(--id4-solution--size-77-2-percent), var(--id4-solution--size-1480px));
     margin-inline: auto;
 }
 
 .id4-solution--candidates #id4-solution--candidates-title {
-    margin: 0 0 .35em;
+    margin: 0 0 var(--id4-solution--size-0decimal-35em);
     color: var(--id4-solution--gold);
-    font-size: clamp(24px, 3vw, 50px);
-    font-weight: 800;
-    letter-spacing: .035em;
-    line-height: 1.2;
+    font-size: var(--id4-solution--font-fluid-24px-3vw-50px);
+    font-weight: var(--id4-solution--font-weight-800);
+    letter-spacing: var(--id4-solution--size-0decimal-035em);
+    line-height: var(--id4-solution--line-height-1-2);
     text-align: center;
 }
 
 .id4-solution--candidates .id4-solution--subtitle {
     max-width: 74ch;
-    margin: 0 auto clamp(20px, 2.6vw, 40px);
+    margin: 0 auto clamp(var(--id4-solution--size-20px), var(--id4-solution--size-2-6vw), var(--id4-solution--size-40px));
     color: inherit;
     text-align: center;
 }
@@ -1083,18 +1106,18 @@ body {
 .id4-solution--candidate-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: clamp(12px, 1.5vw, 24px);
+    gap: clamp(var(--id4-solution--size-12px), var(--id4-solution--size-1-5vw), var(--id4-solution--size-24px));
     margin-bottom: var(--id4-solution--case-spacing);
 }
 
 .id4-solution--candidate-card {
     box-sizing: border-box;
-    padding: clamp(14px, 1.6vw, 26px);
-    border: 1px solid var(--id4-solution--card-border);
-    border-radius: 13px;
-    background: linear-gradient(110deg, #070606, #27201c);
+    padding: clamp(var(--id4-solution--size-14px), var(--id4-solution--size-1-6vw), var(--id4-solution--size-26px));
+    border: var(--id4-solution--size-1px) solid var(--id4-solution--card-border);
+    border-radius: var(--id4-solution--size-13px);
+    background: linear-gradient(110deg, var(--id4-solution--candidate-card-bg-deep), var(--id4-solution--candidate-card-bg));
     text-align: center;
-    line-height: 1.5;
+    line-height: var(--id4-solution--line-height-1-5);
 }
 
 .id4-solution--case-list {
@@ -1106,15 +1129,15 @@ body {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: stretch;
-    column-gap: clamp(18px, 3vw, 48px);
+    column-gap: clamp(var(--id4-solution--size-18px), var(--id4-solution--size-3vw), var(--id4-solution--size-48px));
 }
 
 .id4-solution--candidates .id4-solution--case>h3 {
-    margin: 0 0 .5em;
+    margin: 0 0 var(--id4-solution--size-0decimal-5em);
     color: var(--id4-solution--gold);
-    font-size: clamp(19px, 2vw, 32px);
-    font-weight: 750;
-    line-height: 1.25;
+    font-size: var(--id4-solution--font-fluid-19px-2vw-32px);
+    font-weight: var(--id4-solution--font-weight-750);
+    line-height: var(--id4-solution--line-height-1-25);
 }
 
 .id4-solution--candidates .id4-solution--case-copy p {
@@ -1123,16 +1146,16 @@ body {
 }
 
 .id4-solution--candidates .id4-solution--case-copy p+p {
-    margin-top: .65em;
+    margin-top: var(--id4-solution--size-0decimal-65em);
 }
 
 .id4-solution--clinical-compare {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     overflow: hidden;
-    border: 2px solid var(--id4-solution--card-border);
-    border-radius: 14px;
-    box-shadow: 0 0 12px #d1ab5855;
+    border: var(--id4-solution--size-2px) solid var(--id4-solution--card-border);
+    border-radius: var(--id4-solution--size-14px);
+    box-shadow: 0 0 var(--id4-solution--size-12px) var(--id4-solution--candidate-hover-shadow);
 }
 
 .id4-solution--clinical-compare figure {
@@ -1143,8 +1166,8 @@ body {
 
 .id4-solution--clinical-compare img {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: var(--id4-solution--size-100-percent);
+    height: var(--id4-solution--size-100-percent);
     object-fit: cover;
 }
 
@@ -1165,7 +1188,7 @@ body {
 
 @media (max-width: 1023px) {
     .id4-solution--candidates .id4-solution--candidates-inner {
-        width: min(calc(100% - 40px), 900px);
+        width: min(calc(var(--id4-solution--size-100-percent) - var(--id4-solution--size-40px)), var(--id4-solution--size-900px));
     }
 
     .id4-solution--candidate-grid {
@@ -1175,19 +1198,19 @@ body {
 
 @media (max-width: 767px) {
     .id4-solution--candidates .id4-solution--candidates-inner {
-        width: min(calc(100% - 32px), 520px);
+        width: min(calc(var(--id4-solution--size-100-percent) - var(--id4-solution--size-32px)), var(--id4-solution--size-520px));
     }
 
     .id4-solution--case {
         grid-template-columns: minmax(0, 1fr);
-        width: 100%;
+        width: var(--id4-solution--size-100-percent);
         margin-inline: auto;
         text-align: left;
     }
 
     .id4-solution--case .id4-solution--case-photo {
-        margin-top: 16px;
-        width: 100%;
+        margin-top: var(--id4-solution--size-16px);
+        width: var(--id4-solution--size-100-percent);
         margin-inline: auto;
     }
 }
@@ -1201,10 +1224,10 @@ body {
 .id4-solution--candidates .id4-solution--case-detail {
     display: block;
     width: fit-content;
-    margin: .55em auto 0;
+    margin: var(--id4-solution--size-0decimal-55em) auto 0;
     color: var(--id4-solution--gold);
-    font-size: 1.1em;
-    font-weight: 700;
+    font-size: var(--id4-solution--size-1-1em);
+    font-weight: var(--id4-solution--font-weight-700);
     font-style: italic;
     text-decoration: none;
 }
@@ -1216,84 +1239,76 @@ body {
 
 .id4-solution--candidates .id4-solution--case>h1 {
     grid-column: 1 / -1;
-    margin: 0 0 .5em;
+    margin: 0 0 var(--id4-solution--size-0decimal-5em);
     color: var(--id4-solution--gold);
-    line-height: 1.2;
+    line-height: var(--id4-solution--line-height-1-2);
 }
 
 .id4-solution--case-photo {
     box-sizing: border-box;
     display: block;
-    width: 100%;
+    width: var(--id4-solution--size-100-percent);
     height: auto;
-    border: 2px solid var(--id4-solution--card-border);
-    border-radius: 14px;
-    box-shadow: 0 0 12px #d1ab5855;
+    border: var(--id4-solution--size-2px) solid var(--id4-solution--card-border);
+    border-radius: var(--id4-solution--size-14px);
+    box-shadow: 0 0 var(--id4-solution--size-12px) var(--id4-solution--candidate-hover-shadow);
 }
 
 
-/* end ai là người phù hợp với iD-4 Implant Solution? */
+/* END ai là người phù hợp với iD-4 Implant Solution? */
 
 
-/* chính sách bảo hành */
-
-:root {
-    --id4-warranty-bg: #f4ecd7;
-    --id4-warranty-white: #fff;
-    --id4-warranty-gold: #9b6a20;
-    --id4-warranty-rule: #d7ae62;
-    --id4-warranty-text: #211b17;
-}
+/* START chính sách bảo hành */
 
 body {
     margin: 0;
 }
 
 .id4-solution--warranty {
-    padding: clamp(24px, 4vw, 64px) 0;
+    padding: clamp(var(--id4-solution--size-24px), var(--id4-solution--size-4vw), var(--id4-solution--size-64px)) 0;
     background: var(--id4-warranty-bg);
     color: var(--id4-warranty-text);
-    font: 400 clamp(14px, 1.15vw, 17px)/1.55 "Segoe UI", Arial, sans-serif;
+    font: var(--id4-solution--font-weight-400) var(--id4-solution--font-fluid-14px-1-15vw-17px)/var(--id4-solution--line-height-1-55) var(--id4-solution--font-family-body);
 }
 
 .id4-solution--warranty-container {
-    width: min(77%, 960px);
+    width: min(var(--id4-solution--size-77-percent), var(--id4-solution--size-960px));
     margin-inline: auto;
 }
 
 .id4-solution--warranty #id4-solution--warranty-title {
-    margin: 0 0 .55em;
+    margin: 0 0 var(--id4-solution--size-0decimal-55em);
     color: var(--id4-warranty-gold);
-    font-size: clamp(22px, 3vw, 42px);
-    line-height: 1.2;
-    letter-spacing: .04em;
+    font-size: var(--id4-solution--font-fluid-22px-3vw-42px);
+    line-height: var(--id4-solution--line-height-1-2);
+    letter-spacing: var(--id4-solution--size-0decimal-04em);
     text-align: center;
 }
 
 .id4-solution--warranty-intro,
 .id4-solution--warranty-panel {
-    padding: clamp(12px, 2vw, 26px) clamp(14px, 4vw, 50px);
-    border-radius: clamp(12px, 2vw, 24px);
+    padding: clamp(var(--id4-solution--size-12px), var(--id4-solution--size-2vw), var(--id4-solution--size-26px)) clamp(var(--id4-solution--size-14px), var(--id4-solution--size-4vw), var(--id4-solution--size-50px));
+    border-radius: clamp(var(--id4-solution--size-12px), var(--id4-solution--size-2vw), var(--id4-solution--size-24px));
     background: var(--id4-warranty-white);
-    box-shadow: 0 2px 6px #38281926;
+    box-shadow: 0 var(--id4-solution--size-2px) var(--id4-solution--size-6px) var(--id4-solution--warranty-shadow);
 }
 
 .id4-solution--warranty-intro {
-    margin-bottom: clamp(10px, 1.5vw, 22px);
+    margin-bottom: clamp(var(--id4-solution--size-10px), var(--id4-solution--size-1-5vw), var(--id4-solution--size-22px));
     text-align: center;
 }
 
 .id4-solution--warranty .id4-solution--warranty-intro h3,
 .id4-solution--warranty-panel summary {
     color: var(--id4-warranty-gold);
-    font-size: clamp(14px, 1.35vw, 20px);
-    font-weight: 800;
-    line-height: 1.3;
-    letter-spacing: .035em;
+    font-size: var(--id4-solution--font-fluid-14px-1-35vw-20px);
+    font-weight: var(--id4-solution--font-weight-800);
+    line-height: var(--id4-solution--line-height-1-3);
+    letter-spacing: var(--id4-solution--size-0decimal-035em);
 }
 
 .id4-solution--warranty .id4-solution--warranty-intro h3 {
-    margin: 0 0 .25em;
+    margin: 0 0 var(--id4-solution--size-0decimal-25em);
 }
 
 .id4-solution--warranty-intro p {
@@ -1301,14 +1316,14 @@ body {
 }
 
 .id4-solution--warranty-panel details+details {
-    margin-top: .35em;
+    margin-top: var(--id4-solution--size-0decimal-35em);
 }
 
 .id4-solution--warranty-panel summary {
     position: relative;
     display: block;
-    padding: .7em 1.6em;
-    border-bottom: 1px solid var(--id4-warranty-rule);
+    padding: var(--id4-solution--size-0decimal-7em) var(--id4-solution--size-1-6em);
+    border-bottom: var(--id4-solution--size-1px) solid var(--id4-warranty-rule);
     cursor: pointer;
     list-style: none;
     text-align: center;
@@ -1320,9 +1335,9 @@ body {
 
 .id4-solution--warranty-panel summary::after {
     position: absolute;
-    inset-inline-end: .25em;
-    top: 50%;
-    transform: translateY(-50%);
+    inset-inline-end: var(--id4-solution--size-0decimal-25em);
+    top: var(--id4-solution--size-50-percent);
+    transform: translateY(var(--id4-solution--size-negative-50-percent));
     content: "+";
 }
 
@@ -1331,42 +1346,42 @@ body {
 }
 
 .id4-solution--warranty-panel summary:focus-visible {
-    outline: 2px solid var(--id4-warranty-gold);
-    outline-offset: 2px;
+    outline: var(--id4-solution--size-2px) solid var(--id4-warranty-gold);
+    outline-offset: var(--id4-solution--size-2px);
 }
 
 .id4-solution--warranty-copy {
-    padding: .7em 0 .35em;
+    padding: var(--id4-solution--size-0decimal-7em) 0 var(--id4-solution--size-0decimal-35em);
 }
 
 .id4-solution--warranty .id4-solution--warranty-copy h4 {
     margin: 0;
     color: inherit;
-    font-size: 1em;
-    font-weight: 800;
+    font-size: var(--id4-solution--size-1em);
+    font-weight: var(--id4-solution--font-weight-800);
     font-style: italic;
 }
 
 .id4-solution--warranty-copy p,
 .id4-solution--warranty-copy ul,
 .id4-solution--warranty-copy ol {
-    margin: 0 0 .45em;
+    margin: 0 0 var(--id4-solution--size-0decimal-45em);
 }
 
 .id4-solution--warranty-copy ul,
 .id4-solution--warranty-copy ol {
-    padding-inline-start: 1.25em;
+    padding-inline-start: var(--id4-solution--size-1-25em);
 }
 
 .id4-solution--warranty-copy li+li {
-    margin-top: .18em;
+    margin-top: var(--id4-solution--size-0decimal-18em);
 }
 
 @media (max-width: 767px) {
     .id4-solution--warranty-container {
-        width: min(calc(100% - 28px), 560px);
+        width: min(calc(var(--id4-solution--size-100-percent) - var(--id4-solution--size-28px)), var(--id4-solution--size-560px));
     }
 }
 
 
-/* end chính sách bảo hành  */
+/* END chính sách bảo hành */
