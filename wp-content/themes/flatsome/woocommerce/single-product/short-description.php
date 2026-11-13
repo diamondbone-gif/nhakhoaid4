@@ -22,5 +22,5 @@ if ( ! $short_description ) {
 
 ?>
 <div class="product-short-description">
-	<?php echo $short_description; // WPCS: XSS ok. ?>
+	<?php echo $short_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Short descriptions intentionally contain filtered post and extension HTML. ?>
 </div>

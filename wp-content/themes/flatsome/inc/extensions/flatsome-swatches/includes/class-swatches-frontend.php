@@ -164,7 +164,7 @@ class Swatches_Frontend {
 		$args['tooltip']      = get_theme_mod( 'swatches_tooltip', 1 );
 		$attr_options         = swatches()->get_attribute_option_by_name( $args['attribute'] );
 		$use_variation_images = $this->use_variation_images( $attr_options );
-		$variations           = $use_variation_images ? array_map( array( $this, 'get_variation' ), $product->get_children() ) : $product->get_available_variations();
+		$variations           = $use_variation_images ? array_map( array( $this, 'get_variation' ), $product->get_children() ) : array();
 
 		$args['swatches']                        = $this->get_swatches( $attribute, $options, $variations, $use_variation_images );
 		$args['swatches']['use_variation_image'] = $use_variation_images;
@@ -237,8 +237,8 @@ class Swatches_Frontend {
 		if ( $args['swatches']['use_variation_image'] ) {
 			$options_flipped = array_flip( $args['options'] );
 			$key             = $options_flipped[ $term->slug ];
-			if ( isset( $args['swatches'][ $key ]['variation_id'] ) && $args['swatches'][ $key ]['variation_id'] ) {
-				$thumb_id = get_post_thumbnail_id( $args['swatches'][ $key ]['variation_id'] );
+			if ( isset( $args['swatches'][ $key ] ) ) {
+				$thumb_id = $this->get_variation_swatch_image_id( $args['swatches'][ $key ], $type );
 
 				if ( $thumb_id ) {
 					$thumb = wp_get_attachment_image( $thumb_id, $img_size, false, array(
@@ -453,7 +453,7 @@ class Swatches_Frontend {
 			$swatch_inner_html = '';
 
 			if ( $this->use_variation_images( $attr_options ) && isset( $swatch['image_src'] ) ) {
-				$thumb_id = get_post_thumbnail_id( $swatch['variation_id'] );
+				$thumb_id = $this->get_variation_swatch_image_id( $swatch, $attribute->type );
 
 				if ( $thumb_id ) {
 					$type_tmp          = 'variation-image';
@@ -598,6 +598,7 @@ class Swatches_Frontend {
 				$option_variation = array(
 					'variation_id' => $variation['variation_id'],
 					'is_in_stock'  => $variation['is_in_stock'],
+					'image_id'     => $variation['image_id'],
 					'image_src'    => $variation['image']['thumb_src'],
 					'image_srcset' => wp_get_attachment_image_srcset( $variation['image_id'], 'woocommerce_thumbnail' ),
 					'image_sizes'  => wp_get_attachment_image_sizes( $variation['image_id'], 'woocommerce_thumbnail' ),
@@ -638,6 +639,36 @@ class Swatches_Frontend {
 		}
 
 		return $swatches_to_show;
+	}
+
+	/**
+	 * Resolves the image for a variation image swatch.
+	 *
+	 * WooCommerce 11.2 removes variation images that equal the parent image. When the
+	 * variation has no own image and the term has no swatch of its own, the image
+	 * WooCommerce resolves for the variation (the inherited parent image) is used.
+	 *
+	 * @param array  $swatch Swatch data, term meta merged with variation data.
+	 * @param string $type   Attribute type.
+	 *
+	 * @return int Attachment ID or 0.
+	 */
+	private function get_variation_swatch_image_id( $swatch, $type ) {
+		if ( empty( $swatch['variation_id'] ) ) {
+			return 0;
+		}
+
+		$thumb_id = (int) get_post_thumbnail_id( $swatch['variation_id'] );
+
+		if ( $thumb_id ) {
+			return $thumb_id;
+		}
+
+		if ( 'ux_label' === $type || ! empty( $swatch[ $type ] ) || empty( $swatch['image_id'] ) ) {
+			return 0;
+		}
+
+		return (int) $swatch['image_id'];
 	}
 
 	/**

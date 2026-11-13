@@ -1,3 +1,14 @@
+--- 3.20.12 ---
+NEW: WooCommerce 11.2 compatibility.
+
+IMPROVED: Removed an unnecessary variation data query for product page swatches when "Use variation images" is disabled.
+
+FIXED: Image swatches showing a placeholder for variations whose image was removed by the WooCommerce 11.2 database update.
+FIXED: Lazy loaded images not loading in the WooCommerce product gallery after selecting a variation with a variation gallery.
+FIXED: Live search showing no image for variations without their own image when searching by SKU.
+FIXED: Live search spinner turning off while a search was still running.
+FIXED: Product gallery slider no longer working after selecting a variation with multiple images in the WooCommerce variation gallery.
+
 --- 3.20.11 ---
 ENHANCEMENT: Prevented a memory exhaustion fatal error with the sale bubble percentage on variable products, caused by a change in WooCommerce 11.1 core.
 FIXED: Stored XSS via `data-*` and `title` attributes in countdown, scroll-to, lightbox, and tooltip behaviors.

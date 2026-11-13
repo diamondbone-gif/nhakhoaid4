@@ -180,7 +180,8 @@ final class MiniCart {
 	public function quantity_html( $markup, $cart_item, $cart_item_key ) {
 		$header_cart_qty = get_theme_mod( 'header_cart_qty' );
 		$product         = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
-		$product_name    = apply_filters( 'woocommerce_cart_item_name', $product->get_name(), $cart_item, $cart_item_key );
+		$cart_item_name  = fl_woocommerce_version_check( '11.2.0' ) ? WC()->cart->get_item_product_name( $cart_item, $product ) : $product->get_name();
+		$product_name    = apply_filters( 'woocommerce_cart_item_name', $cart_item_name, $cart_item, $cart_item_key );
 		ob_start();
 		?>
 		<div class="ux-mini-cart-qty">

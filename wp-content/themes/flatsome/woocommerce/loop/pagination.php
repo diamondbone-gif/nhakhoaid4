@@ -33,8 +33,15 @@ if ( $total <= 1 ) {
 	<nav class="woocommerce-pagination" aria-label="<?php esc_attr_e( 'Product Pagination', 'woocommerce' ); ?>">
 		<?php
 		$pages = paginate_links(
+			/**
+			 * Filters the pagination arguments for the product loop.
+			 *
+			 * @param array $args Pagination arguments.
+			 *
+			 * @since 2.0.0
+			 */
 			apply_filters( 'woocommerce_pagination_args',
-				array( // WPCS: XSS ok.
+				array(
 					'base'      => $base,
 					'format'    => $format,
 					'add_args'  => false,
@@ -56,7 +63,7 @@ if ( $total <= 1 ) {
 				$page = str_replace( 'page-numbers', 'page-number', $page );
 				$page = str_replace( '<a class="next page-number', '<a aria-label="' . esc_attr__( 'Next', 'flatsome' ) . '" class="next page-number', $page );
 				$page = str_replace( '<a class="prev page-number', '<a aria-label="' . esc_attr__( 'Previous', 'flatsome' ) . '" class="prev page-number', $page );
-				echo '<li>' . $page . '</li>';
+				echo '<li>' . $page . '</li>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- WordPress generates the pagination markup after applying the public arguments filter.
 			}
 			echo '</ul>';
 		}

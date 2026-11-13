@@ -29,7 +29,7 @@ if ( ! wc_review_ratings_enabled() ) {
 $rating_count = $product->get_rating_count();
 $review_count = $product->get_review_count();
 
-echo flatsome_get_rating_html( $product->get_average_rating() ); // phpcs:ignore WordPress.Security.EscapeOutput
+echo flatsome_get_rating_html( $product->get_average_rating() ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- The rating helper returns intentionally filterable HTML.
 
 if ( $rating_count > 0 ) :
 	if ( get_theme_mod( 'product_box_review_count' ) ) :

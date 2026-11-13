@@ -1,0 +1,1746 @@
+/* CỠ CHỮ NỘI DUNG: text, tiêu đề chính và tiêu đề bước quy trình.
+   rem giữ khả năng phóng chữ; vw co giãn liên tục cho mobile/tablet/PC. */
+
+@font-face {
+    font-family: id4HomeMyriadPro;
+    src: url('../assets/fonts/MyriadPro-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: id4HomeTimes;
+    src: url('../assets/fonts/timesi.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: id4HomeOpenSans;
+    src: url('../assets/fonts/OpenSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: id4HomeOpenSans;
+    src: url("../assets/fonts/OpenSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: id4HomeOpenSans;
+    src: url("../assets/fonts/OpenSans-Semibold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: id4HomeOpenSans;
+    src: url("../assets/fonts/OpenSans-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: id4HomeOpenSans;
+    src: url("../assets/fonts/OpenSans-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: id4HomeOpenSans;
+    src: url("../assets/fonts/OpenSans-SemiboldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+#-id4-home-part-01 {
+    --id4-home-text-size: clamp(.9375rem, 1.2vw, 1.125rem);
+    --id4-home-title-size: clamp(1.375rem, 2.86vw, 3.4375rem);
+    --id4-home-process-title-size: clamp(1.125rem, 1.5vw, 1.5rem);
+    font-size: var(--id4-home-text-size);
+}
+
+
+/* Isolate Flatsome form/button defaults inside page content. */
+
+#-id4-home-part-01 {
+    display: block;
+    width: 100%;
+    max-width: var(--id4-home-page-max);
+    margin-inline: auto;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+#-id4-home-part-01 button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    min-height: 0;
+    min-width: 0;
+    box-shadow: none;
+    text-shadow: none;
+    text-transform: none;
+    letter-spacing: normal;
+    vertical-align: baseline;
+    appearance: none;
+}
+
+#-id4-home-part-01 h1,
+#-id4-home-part-01 h2,
+#-id4-home-part-01 h3,
+#-id4-home-part-01 h4 {
+    font-family: inherit;
+    color: inherit;
+}
+
+#-id4-home-part-01 p:empty {
+    display: none;
+}
+
+#-id4-home-part-01 .-id4-home-slider-track> :not(.-id4-home-slider-slide) {
+    display: none;
+}
+
+
+/* NỘI DUNG TRANG: không có menu/header, banner đầu và footer. Giữ tokens, font, responsive, slider, popup. */
+
+
+/* Open Sans: Light 300; Regular 400; Semibold 600; Bold 700; Italic 400/600. */
+
+
+/* Font có sẵn: Myriad Pro Regular và Times Italic chỉ có nét 400.
+   Open Sans có nét thật 300/400/600/700; dùng 600 cho nội dung, 700 cho tiêu đề/nút. */
+
+
+/* CSS thường: thứ tự reset, biến, nền tảng, thành phần, responsive, hỗ trợ truy cập.
+   Selector specificity-guard giữ mức ưu tiên responsive; không cần thêm ID này vào HTML. */
+
+#-id4-home-part-01 * {
+    box-sizing: border-box;
+}
+
+#-id4-home-part-01 button,
+#-id4-home-part-01 a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+#-id4-home-part-01 button {
+    font: inherit;
+    cursor: pointer;
+}
+
+#-id4-home-part-01 button:disabled {
+    cursor: default;
+}
+
+#-id4-home-part-01 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#-id4-home-part-01 img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#-id4-home-part-01 button {
+    border: 0px;
+}
+
+#-id4-home-part-01 button:focus-visible,
+#-id4-home-part-01 a:focus-visible {
+    outline: rgb(209, 162, 62) solid 3px;
+    outline-offset: 5px;
+}
+
+#-id4-home-part-01 h1,
+#-id4-home-part-01 h2,
+#-id4-home-part-01 h3,
+#-id4-home-part-01 h4,
+#-id4-home-part-01 p,
+#-id4-home-part-01 figure,
+#-id4-home-part-01 dl,
+#-id4-home-part-01 dd {
+    margin: 0px;
+}
+
+#-id4-home-part-01 [hidden] {
+    display: none !important;
+}
+
+#-id4-home-part-01 {
+    --id4-home-u: min(.0520833333vw, 1px);
+    --id4-home-gold: #d1a23e;
+    --id4-home-dark: #211c16;
+    --id4-home-cream: #f7efdd;
+    --id4-home-heading: linear-gradient(110deg, #dcc18a, #ad7813);
+    --id4-home-font-body: 'id4HomeOpenSans', sans-serif;
+    --id4-home-font-ui: 'id4HomeOpenSans', sans-serif;
+    --id4-home-content-max: 1480px;
+    --id4-home-page-max: 1920px;
+    --id4-home-gutter: 22px;
+    --id4-home-space-sm: 12px;
+    --id4-home-space-md: 24px;
+    --id4-home-space-lg: 40px;
+    --id4-home-radius: 14px;
+    --id4-home-motion: .65s;
+    --id4-home-ease: cubic-bezier(.22, .68, .15, 1);
+    --id4-home-doctor-photo-width: 340px;
+    --id4-home-doctor-photo-height: 375px;
+}
+
+@media (max-width: 1199px) {
+    #-id4-home-part-01 {
+        --id4-home-u: .6px;
+    }
+}
+
+
+/* ĐỘ ĐẬM CHỮ: sửa các số bên dưới khi cần điều chỉnh toàn bộ phần nội dung.
+   600 dùng Semibold; 700 dùng Bold. Mức 800/900 cần font tương ứng để có nét thực. */
+
+#-id4-home-part-01 {
+    --id4-home-weight-content: 400;
+    --id4-home-weight-title: 700;
+    --id4-home-weight-button: 700;
+    --id4-home-weight-caption: 600;
+    /* Chữ chú thích và mô tả nhỏ. */
+    --id4-home-weight-italic: 600;
+    /* File OpenSans-SemiboldItalic.ttf có sẵn. */
+}
+
+#-id4-home-part-01 {
+    margin: 0px;
+    background: rgb(255, 255, 255);
+    color: rgb(33, 28, 22);
+    font-family: var(--id4-home-font-body);
+    font-size: var(--id4-home-text-size);
+}
+
+#-id4-home-part-01 h2 {
+    font: 700 var(--id4-home-title-size)/1.25 var(--id4-home-font-ui);
+    letter-spacing: calc(1.4 * var(--id4-home-u));
+    text-align: center;
+    background-image: var(--id4-home-heading);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#-id4-home-part-01 section {
+    position: relative;
+    scroll-margin-top: calc(70 * var(--id4-home-u));
+}
+
+#-id4-home-part-01 .-id4-home-site {
+    max-width: var(--id4-home-page-max);
+    margin: auto;
+    overflow: hidden;
+}
+
+#-id4-home-part-01 .-id4-home-button {
+    display: inline-block;
+    background: var(--id4-home-gold);
+    color: rgb(255, 255, 255);
+    border-radius: calc(11 * var(--id4-home-u));
+    font: 700 var(--id4-home-text-size)/1.2 var(--id4-home-font-ui);
+    letter-spacing: calc(1.1 * var(--id4-home-u));
+    padding: calc(8 * var(--id4-home-u)) calc(22 * var(--id4-home-u));
+    text-align: center;
+    transition: filter 0.2s, transform 0.2s;
+}
+
+#-id4-home-part-01 .-id4-home-button:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+#-id4-home-part-01 .-id4-home-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+#-id4-home-part-01 .-id4-home-skip-link {
+    position: fixed;
+    left: 16px;
+    top: -100px;
+    background: rgb(255, 255, 255);
+    padding: 12px;
+    z-index: 30;
+    font-size: var(--id4-home-text-size);
+}
+
+#-id4-home-part-01 .-id4-home-skip-link:focus {
+    top: 16px;
+}
+
+
+/* ==================== SECTION 1: Hình ảnh trước / sau ==================== */
+
+#-id4-home-part-01 .-id4-home-comparison {
+    height: calc(900 * var(--id4-home-u));
+    padding-top: calc(100 * var(--id4-home-u));
+    text-align: center;
+}
+
+#-id4-home-part-01 .-id4-home-comparison-slider {
+    position: relative;
+    width: calc(1140 * var(--id4-home-u));
+    margin: auto;
+}
+
+#-id4-home-part-01 .-id4-home-round-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(68 * var(--id4-home-u));
+    height: calc(68 * var(--id4-home-u));
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgb(231, 209, 159);
+    color: rgb(33, 28, 22);
+    font-family: var(--id4-home-font-ui);
+    font-size: calc(68 * var(--id4-home-u));
+    font-weight: 400;
+    line-height: 1;
+    padding: 0 0 calc(8 * var(--id4-home-u));
+}
+
+#-id4-home-part-01 .-id4-home-round-arrow:hover {
+    background: rgb(209, 162, 62);
+}
+
+#-id4-home-part-01 .-id4-home-round-arrow.-id4-home-prev {
+    left: 0px;
+}
+
+#-id4-home-part-01 .-id4-home-round-arrow.-id4-home-next {
+    right: 0px;
+}
+
+#-id4-home-part-01 .-id4-home-comparison-more {
+    position: relative;
+    margin-top: calc(50 * var(--id4-home-u));
+}
+
+
+/* ==================== SECTION 2: Câu chuyện khách hàng ==================== */
+
+
+/* ==================== SECTION 3: Giới thiệu iD-4 Solution ==================== */
+
+
+/* ==================== SECTION 4: Lợi ích ==================== */
+
+
+/* ==================== SECTION 5: Đội ngũ bác sĩ ==================== */
+
+
+/* ==================== SECTION 6: Hành trình / video ==================== */
+
+#-id4-home-part-01 .-id4-home-video-placeholder {
+    margin-top: calc(48 * var(--id4-home-u));
+    width: 100%;
+    height: calc(832 * var(--id4-home-u));
+    background: rgb(230, 231, 232);
+    border-radius: calc(30 * var(--id4-home-u));
+    display: grid;
+    place-items: center;
+}
+
+#-id4-home-part-01 .-id4-home-play-circle {
+    width: calc(188 * var(--id4-home-u));
+    height: calc(188 * var(--id4-home-u));
+    border-radius: 50%;
+    background: rgb(191, 192, 192);
+    display: grid;
+    place-items: center;
+    transition: background 0.2s;
+}
+
+#-id4-home-part-01 .-id4-home-video-placeholder:hover .-id4-home-play-circle {
+    background: rgb(209, 162, 62);
+}
+
+#-id4-home-part-01 .-id4-home-play-circle>span {
+    margin-left: calc(17 * var(--id4-home-u));
+    width: 0px;
+    height: 0px;
+    border-top: calc(41 * var(--id4-home-u)) solid transparent;
+    border-bottom: calc(41 * var(--id4-home-u)) solid transparent;
+    border-left: calc(71 * var(--id4-home-u)) solid #e6e7e8;
+    border-radius: calc(8 * var(--id4-home-u));
+}
+
+
+/* ==================== SECTION 7: Công nghệ kỹ thuật số ==================== */
+
+#-id4-home-part-01 .-id4-home-process-panel {
+    margin-top: calc(24 * var(--id4-home-u));
+    height: calc(668 * var(--id4-home-u));
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    align-items: center;
+    gap: calc(50 * var(--id4-home-u));
+    padding: calc(40 * var(--id4-home-u));
+    background: rgb(250, 249, 247);
+    border-radius: calc(30 * var(--id4-home-u));
+    font-size: var(--id4-home-text-size);
+}
+
+#-id4-home-part-01 .-id4-home-process-panel h3 {
+    font: 700 var(--id4-home-title-size)/1.3 var(--id4-home-font-ui);
+    margin-bottom: calc(24 * var(--id4-home-u));
+}
+
+#-id4-home-part-01 .-id4-home-process-panel {
+    grid-template-columns: 0.8fr 1.4fr;
+    background: var(--id4-home-dark);
+    color: rgb(255, 255, 255);
+}
+
+#-id4-home-part-01 .-id4-home-process-panel>img {
+    height: calc(580 * var(--id4-home-u));
+    width: 100%;
+    object-fit: contain;
+}
+
+#-id4-home-part-01 .-id4-home-process-panel ol {
+    margin-bottom: calc(25 * var(--id4-home-u));
+    padding-left: calc(35 * var(--id4-home-u));
+}
+
+#-id4-home-part-01 .-id4-home-process-panel li {
+    margin-bottom: calc(20 * var(--id4-home-u));
+}
+
+#-id4-home-part-01 .-id4-home-process-panel strong {
+    color: var(--id4-home-gold);
+}
+
+
+/* ==================== SECTION 8: Đặt lịch tư vấn ==================== */
+
+#-id4-home-part-01 .-id4-home-small-rule {
+    display: block;
+    width: calc(45 * var(--id4-home-u));
+    height: calc(2 * var(--id4-home-u));
+    background: var(--id4-home-gold);
+    margin: calc(25 * var(--id4-home-u)) 0;
+}
+
+#-id4-home-part-01 dialog {
+    border: 1px solid rgba(209, 162, 62, 0.333);
+    border-radius: 18px;
+    padding: 44px 36px 32px;
+    width: min(540px, 100% - 32px);
+    max-height: calc(100dvh - 40px);
+    overflow: auto;
+    color: rgb(33, 28, 22);
+    background: rgb(255, 255, 255);
+    font: var(--id4-home-text-size) / 1.5 var(--id4-home-font-ui);
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.333) 0px 20px 80px;
+}
+
+#-id4-home-part-01 dialog::backdrop {
+    background: rgba(0, 0, 0, 0.733);
+    backdrop-filter: blur(4px);
+}
+
+#-id4-home-part-01 dialog h2 {
+    font-size: var(--id4-home-title-size);
+    letter-spacing: 0px;
+    margin-bottom: 20px;
+}
+
+#-id4-home-part-01 dialog p {
+    margin-block: 18px;
+}
+
+#-id4-home-part-01 dialog .-id4-home-button {
+    font-size: var(--id4-home-text-size);
+    letter-spacing: 0.4px;
+    border-radius: 7px;
+    padding: 12px 20px;
+}
+
+#-id4-home-part-01 .-id4-home-dialog-close {
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    width: 38px;
+    height: 38px;
+    font-size: 32px;
+    line-height: 1;
+    background: transparent;
+    color: rgb(33, 28, 22);
+}
+
+#-id4-home-part-01 .-id4-home-gallery-dialog {
+    width: min(1000px, 100% - 32px);
+}
+
+#-id4-home-part-01 .-id4-home-gallery-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--id4-home-space-sm);
+}
+
+#-id4-home-part-01 .-id4-home-gallery-pair img {
+    width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+}
+
+#-id4-home-part-01 .-id4-home-gallery-pair figcaption {
+    font: 700 var(--id4-home-text-size) var(--id4-home-font-ui);
+    color: rgb(165, 123, 34);
+    margin-top: 10px;
+}
+
+body.-id4-home-dialog-open {
+    overflow: hidden;
+}
+
+#-id4-home-part-01 .-id4-home-skip-link {
+    top: 0px;
+    transform: translateY(-160%);
+}
+
+#-id4-home-part-01 .-id4-home-skip-link:focus {
+    transform: translateY(0px);
+}
+
+#-id4-home-part-01 h2 {
+    letter-spacing: calc(2.8 * var(--id4-home-u));
+}
+
+#-id4-home-part-01 .-id4-home-slider-viewport {
+    overflow: hidden;
+    touch-action: pan-y;
+    position: relative;
+}
+
+#-id4-home-part-01 .-id4-home-slider-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform var(--id4-home-motion) var(--id4-home-ease);
+    will-change: transform;
+}
+
+#-id4-home-part-01 .-id4-home-slider-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    min-width: 0px;
+    position: relative;
+}
+
+#-id4-home-part-01 .-id4-home-comparison-slider {
+    outline-offset: 8px;
+}
+
+#-id4-home-part-01 .-id4-home-comparison-viewport {
+    width: calc(908.44 * var(--id4-home-u));
+    height: calc(600 * var(--id4-home-u));
+    margin: auto;
+    border-radius: calc(20 * var(--id4-home-u));
+    box-shadow: 0 calc(8 * var(--id4-home-u)) calc(22 * var(--id4-home-u)) #0002;
+    background: rgb(241, 240, 242);
+}
+
+#-id4-home-part-01 .-id4-home-comparison-viewport img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+}
+
+#-id4-home-part-01 .-id4-home-slider-controls {
+    opacity: 0;
+    transition: opacity 0.28s, transform 0.28s;
+    pointer-events: none;
+}
+
+#-id4-home-part-01 .-id4-home-comparison-slider .-id4-home-round-arrow {
+    z-index: 3;
+}
+
+#-id4-home-part-01 .-id4-home-comparison-slider:hover .-id4-home-slider-controls,
+#-id4-home-part-01 .-id4-home-comparison-slider:focus-visible .-id4-home-slider-controls,
+#-id4-home-part-01 .-id4-home-comparison-slider:has(:focus-visible) .-id4-home-slider-controls {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#-id4-home-part-01 .-id4-home-slider-dots {
+    position: absolute;
+    bottom: calc(18 * var(--id4-home-u));
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: calc(12 * var(--id4-home-u));
+    padding: calc(6 * var(--id4-home-u)) calc(12 * var(--id4-home-u));
+    border-radius: 40px;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 3;
+}
+
+#-id4-home-part-01 .-id4-home-slider-dots button {
+    width: calc(15 * var(--id4-home-u));
+    height: calc(15 * var(--id4-home-u));
+    padding: 0px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.733);
+    box-shadow: rgba(0, 0, 0, 0.067) 0px 0px 0px 1px;
+}
+
+#-id4-home-part-01 .-id4-home-slider-dots button[aria-current="true"] {
+    background: var(--id4-home-gold);
+}
+
+#-id4-home-part-01 [data-single="true"] .-id4-home-slider-controls {
+    display: none;
+}
+
+#-id4-home-part-01 .-id4-home-comparison-more {
+    min-height: calc(48 * var(--id4-home-u));
+}
+
+#-id4-home-part-01 .-id4-home-process-panel {
+    position: relative;
+    display: block;
+    padding: calc(36 * var(--id4-home-u));
+    color: var(--id4-home-dark);
+    background: linear-gradient(135deg, rgb(250, 247, 239), rgb(242, 238, 230));
+    overflow: hidden;
+}
+
+#-id4-home-part-01 .-id4-home-process-heading {
+    text-align: left;
+    margin-bottom: calc(26 * var(--id4-home-u));
+}
+
+#-id4-home-part-01 .-id4-home-process-heading>p {
+    font: 600 var(--id4-home-text-size)/1.4 var(--id4-home-font-ui);
+    color: rgb(164, 123, 39);
+    letter-spacing: calc(2 * var(--id4-home-u));
+    margin-bottom: calc(8 * var(--id4-home-u));
+}
+
+#-id4-home-part-01 .-id4-home-process-heading h3 {
+    font: 700 var(--id4-home-title-size)/1.3 var(--id4-home-font-ui);
+    margin: 0px;
+}
+
+#-id4-home-part-01 .-id4-home-process-panel .-id4-home-process-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(20 * var(--id4-home-u));
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+#-id4-home-part-01 .-id4-home-process-panel .-id4-home-process-step {
+    margin: 0px;
+    min-height: calc(190 * var(--id4-home-u));
+    display: flex;
+    gap: calc(20 * var(--id4-home-u));
+    padding: calc(26 * var(--id4-home-u));
+    border: 1px solid rgba(216, 199, 163, 0.3);
+    border-radius: calc(14 * var(--id4-home-u));
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 calc(5 * var(--id4-home-u)) calc(20 * var(--id4-home-u)) #39230005;
+}
+
+#-id4-home-part-01 .-id4-home-step-number {
+    font: 400 var(--id4-home-text-size)/1 var(--id4-home-font-ui);
+    color: var(--id4-home-gold);
+    padding-top: calc(3 * var(--id4-home-u));
+    flex-shrink: 0;
+}
+
+#-id4-home-part-01 .-id4-home-process-step h4 {
+    font: 700 var(--id4-home-process-title-size)/1.35 var(--id4-home-font-ui);
+    margin-bottom: calc(12 * var(--id4-home-u));
+}
+
+#-id4-home-part-01 .-id4-home-process-step p {
+    font: 400 var(--id4-home-text-size)/1.55 var(--id4-home-font-ui);
+    color: rgb(101, 96, 89);
+}
+
+#-id4-home-part-01 .-id4-home-process-action {
+    position: absolute;
+    right: calc(36 * var(--id4-home-u));
+    bottom: calc(48 * var(--id4-home-u));
+    width: calc((100% - 112 * var(--id4-home-u)) / 3);
+    min-height: calc(190 * var(--id4-home-u));
+    padding: calc(26 * var(--id4-home-u));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: calc(20 * var(--id4-home-u));
+    font: 600 var(--id4-home-text-size)/1.4 var(--id4-home-font-ui);
+}
+
+#-id4-home-part-01 .-id4-home-process-action .-id4-home-button {
+    font-size: var(--id4-home-text-size);
+    padding: calc(14 * var(--id4-home-u));
+    letter-spacing: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#-id4-home-part-01 .-id4-home-comparison {
+    background: rgb(255, 255, 255);
+    isolation: isolate;
+}
+
+#-id4-home-part-01 .-id4-home-comparison-slider .-id4-home-round-arrow {
+    padding: 0px;
+    line-height: 0;
+}
+
+#-id4-home-part-01 .-id4-home-round-arrow svg {
+    display: block;
+    width: 54%;
+    height: 54%;
+    fill: none;
+    stroke: currentcolor;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#-id4-home-part-01 .-id4-home-comparison-slider .-id4-home-round-arrow {
+    background: rgb(231, 208, 155);
+}
+
+#-id4-home-part-01 .-id4-home-comparison-slider .-id4-home-round-arrow:hover {
+    background: rgb(212, 175, 97);
+}
+
+#-id4-home-part-01 .-id4-home-comparison-viewport {
+    background: rgb(243, 242, 244);
+    box-shadow: 0 calc(6 * var(--id4-home-u)) calc(18 * var(--id4-home-u)) #0002;
+}
+
+#-id4-home-part-01 .-id4-home-journey-poster {
+    position: absolute;
+    inset: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+#-id4-home-part-01 .-id4-home-journey-overlay {
+    position: absolute;
+    inset: 0px;
+    background: linear-gradient(0deg, rgba(19, 16, 13, 0.88), transparent 65%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: calc(28 * var(--id4-home-u));
+}
+
+#-id4-home-part-01 .-id4-home-journey-play-label {
+    font: 600 var(--id4-home-text-size)/1.4 var(--id4-home-font-ui);
+    text-shadow: rgba(0, 0, 0, 0.533) 0px 2px 8px;
+}
+
+#-id4-home-part-01 .-id4-home-journey-player {
+    position: absolute;
+    inset: 0px;
+    background: rgb(0, 0, 0);
+}
+
+#-id4-home-part-01 .-id4-home-journey-player iframe,
+#-id4-home-part-01 .-id4-home-journey-player video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    object-fit: cover;
+}
+
+#-id4-home-part-01 #-id4-home-video-reset {
+    background: transparent;
+    color: rgb(110, 100, 85);
+    text-decoration: underline;
+    padding: 0px;
+    font: inherit;
+}
+
+#-id4-home-part-01 #-id4-home-video-reset {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.733);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+#-id4-home-part-01 #-id4-home-video-reset[hidden] {
+    display: none;
+}
+
+#-id4-home-part-01 #-id4-home-video-reset svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentcolor;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+#-id4-home-part-01 .-id4-home-comparison-slider {
+    width: calc(1140 * var(--id4-home-u));
+}
+
+#-id4-home-part-01 .-id4-home-comparison-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    background: transparent;
+}
+
+#-id4-home-part-01 .-id4-home-comparison-slider .-id4-home-prev {
+    left: 0px;
+}
+
+#-id4-home-part-01 .-id4-home-comparison-slider .-id4-home-next {
+    right: 0px;
+}
+
+#-id4-home-part-01 .-id4-home-comparison-slider .-id4-home-slider-controls {
+    translate: 0px 6px;
+    transition: opacity 0.28s, translate 0.28s;
+}
+
+#-id4-home-part-01 .-id4-home-comparison-slider:hover .-id4-home-slider-controls,
+#-id4-home-part-01 .-id4-home-comparison-slider:focus-visible .-id4-home-slider-controls,
+#-id4-home-part-01 .-id4-home-comparison-slider:has(:focus-visible) .-id4-home-slider-controls {
+    translate: 0px;
+}
+
+#-id4-home-part-01 .-id4-home-gallery-dialog>img {
+    width: 100%;
+    max-height: 65dvh;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+#-id4-home-part-01 .-id4-home-comparison-detail-link {
+    margin-top: 20px;
+}
+
+#-id4-home-part-01 .-id4-home-comparison {
+    background-image: var(--id4-home-comparison-background);
+    background-size: 100% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+/* Chữ đậm 900: thêm class -id4-home-text-black vào phần chữ cần dùng.
+   Bộ font hiện tại chỉ có đến Bold 700; cần file hỗ trợ 900 để có nét 900 thực. */
+
+#-id4-home-part-01 .-id4-home-text-black {
+    font-weight: 900;
+}
+
+
+/* Câu chuyện khách hàng: ảnh nền full width, URL nằm trong style của section HTML. */
+
+@media (min-width: 1921px) {
+    #-id4-home-part-01 {
+        background: rgb(245, 243, 239);
+    }
+
+    #-id4-home-part-01 .-id4-home-site {
+        box-shadow: rgba(0, 0, 0, 0.067) 0px 0px 80px;
+    }
+}
+
+@media (max-width: 1199px) {
+    #-id4-home-part-01 {
+        font-size: var(--id4-home-text-size);
+    }
+
+    #-id4-home-part-01 .-id4-home-site {
+        width: 100%;
+    }
+
+    #-id4-home-part-01 h2 {
+        font-size: var(--id4-home-title-size);
+        letter-spacing: 0.5px;
+        line-height: 1.35;
+    }
+
+    #-id4-home-part-01 .-id4-home-button {
+        font-size: var(--id4-home-text-size);
+        border-radius: 6px;
+        padding: 10px 16px;
+        letter-spacing: 0.4px;
+    }
+
+    #-id4-home-part-01 section {
+        scroll-margin-top: 20px;
+    }
+
+    #-id4-home-part-01 .-id4-home-comparison {
+        height: auto;
+        padding: 48px 18px 46px;
+    }
+
+    #-id4-home-part-01 .-id4-home-comparison-slider {
+        width: 100%;
+        padding-inline: 20px;
+    }
+
+    #-id4-home-part-01 .-id4-home-round-arrow {
+        width: 30px;
+        height: 30px;
+        font-size: 32px;
+        padding-bottom: 4px;
+    }
+
+    #-id4-home-part-01 .-id4-home-round-arrow.-id4-home-prev {
+        left: -5px;
+    }
+
+    #-id4-home-part-01 .-id4-home-round-arrow.-id4-home-next {
+        right: -5px;
+    }
+
+    #-id4-home-part-01 .-id4-home-comparison-more {
+        margin-top: 24px;
+        font-size: var(--id4-home-text-size);
+        padding: 9px 12px;
+    }
+
+    /* SECTION 6 — MOBILE/TABLET: nút video phủ kín khung, không có margin làm lộ nền đen. */
+    #-id4-home-part-01 .-id4-home-play-circle {
+        width: 62px;
+        height: 62px;
+    }
+
+    #-id4-home-part-01 .-id4-home-play-circle>span {
+        margin-left: 6px;
+        border-top-width: 14px;
+        border-bottom-width: 14px;
+        border-left-width: 24px;
+        border-radius: 3px;
+    }
+
+    #-id4-home-part-01 .-id4-home-process-panel {
+        height: auto;
+        min-height: 550px;
+        grid-template-columns: 1fr;
+        font-size: var(--id4-home-text-size);
+        gap: 20px;
+        padding: 18px;
+        margin-top: 16px;
+        border-radius: var(--id4-home-radius);
+    }
+
+    #-id4-home-part-01 .-id4-home-process-panel h3 {
+        font-size: var(--id4-home-title-size);
+        margin-bottom: 15px;
+    }
+
+    #-id4-home-part-01 .-id4-home-process-panel>img {
+        height: 300px;
+    }
+
+    #-id4-home-part-01 .-id4-home-process-panel ol {
+        padding-left: 23px;
+        margin-bottom: 20px;
+    }
+
+    #-id4-home-part-01 .-id4-home-process-panel li {
+        margin-bottom: 15px;
+    }
+
+    #-id4-home-part-01 .-id4-home-small-rule {
+        width: 30px;
+        height: 1px;
+        margin: 15px 0px;
+    }
+
+    #-id4-home-part-01 dialog {
+        padding: 42px 20px 26px;
+        font-size: var(--id4-home-text-size);
+    }
+
+    #-id4-home-part-01 dialog h2 {
+        font-size: var(--id4-home-title-size);
+    }
+
+    #-id4-home-part-01 .-id4-home-gallery-pair {
+        gap: 8px;
+    }
+
+    #-id4-home-part-01 .-id4-home-gallery-pair figcaption {
+        font-size: var(--id4-home-text-size);
+    }
+}
+
+@media (max-width: 1199px) {
+    #-id4-home-part-01 h2 {
+        letter-spacing: 0.5px;
+    }
+
+    #-id4-home-part-01 .-id4-home-comparison-slider {
+        padding: 0px;
+        width: 100%;
+        max-width: 620px;
+    }
+
+    #-id4-home-part-01 .-id4-home-comparison-viewport {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 908.44 / 600;
+        border-radius: 10px;
+    }
+
+    #-id4-home-part-01 .-id4-home-comparison-slider .-id4-home-round-arrow {
+        width: 36px;
+        height: 44px;
+        font-size: 34px;
+        background: rgba(231, 209, 159, 0.9);
+        top: 50%;
+    }
+
+    #-id4-home-part-01 .-id4-home-comparison-slider .-id4-home-prev {
+        left: 8px;
+    }
+
+    #-id4-home-part-01 .-id4-home-comparison-slider .-id4-home-next {
+        right: 8px;
+    }
+
+    #-id4-home-part-01 .-id4-home-slider-controls {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    #-id4-home-part-01 .-id4-home-slider-dots {
+        bottom: 8px;
+        padding: 4px 8px;
+        gap: 4px;
+    }
+
+    #-id4-home-part-01 .-id4-home-slider-dots button {
+        width: 24px;
+        height: 24px;
+        background: radial-gradient(circle, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 4px, transparent 5px);
+        box-shadow: none;
+    }
+
+    #-id4-home-part-01 .-id4-home-slider-dots button[aria-current="true"] {
+        background: radial-gradient(circle, var(--id4-home-gold) 0 4px, transparent 5px);
+    }
+}
+
+@media (hover: none) {
+    #-id4-home-part-01 .-id4-home-slider-controls {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+@media (max-width: 1199px) {
+    #-id4-home-part-01 .-id4-home-process-panel {
+        padding: 24px 18px;
+        min-height: 0px;
+    }
+
+    #-id4-home-part-01 .-id4-home-process-heading {
+        margin-bottom: 22px;
+    }
+
+    #-id4-home-part-01 .-id4-home-process-heading>p {
+        font-size: var(--id4-home-text-size);
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+    }
+
+    #-id4-home-part-01 .-id4-home-process-heading h3 {
+        font-size: var(--id4-home-title-size);
+    }
+
+    #-id4-home-part-01 .-id4-home-process-panel .-id4-home-process-steps {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--id4-home-space-sm);
+    }
+
+    #-id4-home-part-01 .-id4-home-process-panel .-id4-home-process-step {
+        padding: 18px;
+        gap: var(--id4-home-space-sm);
+        min-height: 0px;
+        border-radius: 10px;
+    }
+
+    #-id4-home-part-01 .-id4-home-step-number {
+        font-size: var(--id4-home-text-size);
+        padding-top: 2px;
+    }
+
+    #-id4-home-part-01 .-id4-home-process-step h4 {
+        font-size: var(--id4-home-process-title-size);
+        margin-bottom: 8px;
+    }
+
+    #-id4-home-part-01 .-id4-home-process-step p {
+        font-size: var(--id4-home-text-size);
+        line-height: 1.6;
+    }
+
+    #-id4-home-part-01 .-id4-home-process-action {
+        position: static;
+        width: auto;
+        min-height: 0px;
+        padding: 24px 0px 0px;
+        gap: 14px;
+        font-size: var(--id4-home-text-size);
+    }
+
+    #-id4-home-part-01 .-id4-home-process-action .-id4-home-button {
+        font-size: var(--id4-home-text-size);
+        padding: 13px 18px;
+        align-self: flex-start;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 699px) {
+    #-id4-home-part-01 .-id4-home-process-panel .-id4-home-process-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1199px) {
+    #-id4-home-part-01 .-id4-home-comparison-slider .-id4-home-round-arrow {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        top: 50%;
+    }
+
+    #-id4-home-part-01 .-id4-home-journey-overlay {
+        gap: 18px;
+    }
+
+    #-id4-home-part-01 .-id4-home-journey-play-label {
+        font-size: var(--id4-home-text-size);
+    }
+}
+
+@media (max-width: 699px) {
+    #-id4-home-part-01 .-id4-home-journey-play-label {
+        font-size: var(--id4-home-text-size);
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1199px) {
+    #-id4-home-part-01 h2 {
+        font-size: var(--id4-home-title-size);
+    }
+}
+
+@media (max-width: 699px) {
+    #-id4-home-part-01 .-id4-home-comparison-slider .-id4-home-slider-controls {
+        display: none;
+    }
+}
+
+@media (max-width: 1199px) {
+    #-id4-home-part-01 .-id4-home-comparison-slider {
+        width: 100%;
+    }
+
+    #-id4-home-part-01 .-id4-home-comparison-slider .-id4-home-prev {
+        left: 0px;
+    }
+
+    #-id4-home-part-01 .-id4-home-comparison-slider .-id4-home-next {
+        right: 0px;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1199px) {
+    #-id4-home-part-01 .-id4-home-comparison-slider {
+        max-width: 732px;
+        padding-inline: 56px;
+    }
+}
+
+@media (min-width: 700px) and (hover: hover) {
+    #-id4-home-part-01 .-id4-home-comparison-slider .-id4-home-slider-controls {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #-id4-home-part-01 .-id4-home-comparison-slider:hover .-id4-home-slider-controls,
+    #-id4-home-part-01 .-id4-home-comparison-slider:focus-visible .-id4-home-slider-controls,
+    #-id4-home-part-01 .-id4-home-comparison-slider:has(:focus-visible) .-id4-home-slider-controls {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+#-id4-home-part-01 {
+    font-weight: var(--id4-home-weight-content);
+}
+
+#-id4-home-part-01 h2,
+#-id4-home-part-01 h3 {
+    font-weight: var(--id4-home-weight-title);
+}
+
+#-id4-home-part-01 button,
+#-id4-home-part-01 .-id4-home-button {
+    font-weight: var(--id4-home-weight-button);
+}
+
+#-id4-home-part-01 .-id4-home-text-semibold {
+    font-weight: 600;
+}
+
+#-id4-home-part-01 .-id4-home-text-bold {
+    font-weight: 700;
+}
+
+#-id4-home-part-01 .-id4-home-text-extrabold {
+    font-weight: 800;
+}
+
+#-id4-home-part-01 .-id4-home-text-black {
+    font-weight: 900;
+}
+
+
+/* Chỉnh độ đậm tại --id4-home-weight-content/title/button ở phía trên.
+   Các class font dưới đây dùng khi cần chọn riêng Myriad Pro hoặc Times Italic. */
+
+#-id4-home-part-01 .-id4-home-text-myriad {
+    font-family: 'id4HomeMyriadPro', var(--id4-home-font-body);
+    font-weight: 400;
+}
+
+#-id4-home-part-01 .-id4-home-text-times-italic {
+    font-family: 'id4HomeTimes', 'Times New Roman', serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* ĐỘ ĐẬM CHỮ: áp dụng cả những đoạn bị font shorthand đặt lại về Regular.
+   Chỉnh các biến --id4-home-weight-* ở trên; không đổi kích thước hoặc bố cục. */
+
+#-id4-home-part-01 p,
+#-id4-home-part-01 li,
+#-id4-home-part-01 dd,
+#-id4-home-part-01 .-id4-home-step-number {
+    font-weight: var(--id4-home-weight-content);
+}
+
+#-id4-home-part-01 h1,
+#-id4-home-part-01 h4,
+#-id4-home-part-01 dt {
+    font-weight: var(--id4-home-weight-title);
+}
+
+#-id4-home-part-01 small,
+#-id4-home-part-01 figcaption {
+    font-weight: var(--id4-home-weight-caption);
+}
+
+
+/* CĂN NỘI DUNG THEO PDF MẪU: chỉ bố cục trang, không tác động popup. */
+
+
+/* SECTION 3: tiêu đề, mô tả và nút nằm giữa như bản mẫu. */
+
+
+/* SECTION 4 / 5: nội dung chi tiết căn trái, tiêu đề section căn giữa. */
+
+@media (max-width: 699px) {
+
+    /* SECTION 1 / 2: khoảng cách đồng đều và dòng trích dẫn nằm giữa. */
+    #-id4-home-part-01 .-id4-home-comparison {
+        padding: 32px 16px;
+    }
+
+    /* SECTION 3 / 4: đủ rộng để đọc, không dồn chữ thành cột hẹp. */
+    /* SECTION 5 / 6: căn hồ sơ với lề chung, giữ video đúng tỉ lệ. */
+    /* SECTION 7: ảnh chính và nhóm công nghệ gọn như bố cục mẫu. */
+    /* SECTION 8: ảnh chữ nằm giữa và luôn vừa chiều ngang điện thoại. */
+}
+
+
+/* MOBILE — VỊ TRÍ POPUP: neo gần đầu viewport, không căn giữa dọc màn hình dài. */
+
+@media (max-width: 43.6875em) {
+    #-id4-home-part-01 dialog[open] {
+        position: fixed;
+        top: max(1rem, env(safe-area-inset-top));
+        bottom: auto;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        max-height: calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+        overflow-y: auto;
+    }
+
+    #-id4-home-part-01 #-id4-home-gallery-dialog[open] {
+        top: max(1rem, env(safe-area-inset-top));
+        bottom: auto;
+        margin: 0 auto;
+        max-height: calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    }
+}
+
+
+/* POPUP SECTION 1 / 2 — PC / TABLET / MOBILE: kích thước tương đối theo viewport.
+   Khung ôm nội dung; ảnh nguyên tỉ lệ; nội dung dài cuộn trong khung. */
+
+#-id4-home-part-01 #-id4-home-gallery-dialog {
+    box-sizing: border-box;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    height: fit-content;
+    min-height: 0;
+    max-height: calc(100dvh - 3rem);
+    padding: 3rem clamp(1rem, 2.5vw, 2rem) 1.5rem;
+    border-radius: 1.25rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+#-id4-home-part-01 #-id4-home-gallery-dialog {
+    width: min(48rem, 90vw);
+}
+
+#-id4-home-part-01 #-id4-home-gallery-dialog[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(.75rem, 1.5vw, 1rem);
+}
+
+#-id4-home-part-01 #-id4-home-gallery-dialog:not([open]) {
+    display: none;
+}
+
+#-id4-home-part-01 #-id4-home-gallery-dialog .-id4-home-dialog-close {
+    top: .5rem;
+    right: .5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.75rem;
+    display: grid;
+    place-items: center;
+}
+
+#-id4-home-part-01 #-id4-home-gallery-dialog h2 {
+    width: 100%;
+    margin: 0;
+    font-size: var(--id4-home-title-size);
+    line-height: 1.4;
+    letter-spacing: 0;
+    text-align: center;
+    text-wrap: balance;
+}
+
+#-id4-home-part-01 #-id4-home-gallery-dialog>img {
+    flex: none;
+    width: 100%;
+    height: auto;
+    max-height: min(45dvh, 30rem);
+    object-fit: contain;
+    margin: 0;
+    border-radius: .75rem;
+}
+
+#-id4-home-part-01 #-id4-home-comparison-detail-text {
+    width: 100%;
+    margin: 0;
+    font-size: var(--id4-home-text-size);
+    line-height: 1.55;
+    text-align: center;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+#-id4-home-part-01 #-id4-home-comparison-detail-link {
+    flex: none;
+    align-self: center;
+    width: min(100%, 14rem);
+    min-width: 0;
+    min-height: 2.75rem;
+    margin: .125rem 0 0;
+    padding: .625rem 1.25rem;
+    border-radius: .625rem;
+    font-size: var(--id4-home-text-size);
+    line-height: 1.5;
+    text-align: center;
+}
+
+#-id4-home-part-01 #-id4-home-comparison-detail-link[aria-disabled="true"] {
+    opacity: .55;
+    cursor: default;
+}
+
+@media (max-width: 43.6875em) {
+
+    #-id4-home-part-01 #-id4-home-gallery-dialog,
+    #-id4-home-part-01 #-id4-home-gallery-dialog[open] {
+        width: min(26rem, 93vw);
+        top: 50dvh;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        max-height: calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+        padding: 3rem clamp(.875rem, 4vw, 1.125rem) 1.25rem;
+        gap: clamp(.75rem, 3vw, .875rem);
+    }
+
+    #-id4-home-part-01 #-id4-home-gallery-dialog h2 {
+        font-size: var(--id4-home-title-size);
+    }
+
+    #-id4-home-part-01 #-id4-home-gallery-dialog>img {
+        max-height: min(30dvh, 15rem);
+    }
+
+    #-id4-home-part-01 #-id4-home-comparison-detail-text {
+        font-size: var(--id4-home-text-size);
+    }
+}
+
+@media (max-height: 30em) {
+    #-id4-home-part-01 #-id4-home-gallery-dialog>img {
+        max-height: 24dvh;
+    }
+}
+
+
+/* SECTION 3 — ẢNH HÀM RĂNG: ảnh PNG riêng, thu theo tỉ lệ mẫu; không phóng/cắt bằng cover. */
+
+
+/* SECTION 5 — CĂN ẢNH BÁC SĨ: giữ nguyên ảnh và tỷ lệ; cân theo từng màn hình. */
+
+
+/* SECTION 8 — ẢNH CHỮ THEO PDF MẪU.
+   PNG 1382 x 888 có phần chữ tại x=39, y=180, rộng 1304, cao 528.
+   Khung dưới chỉ ẩn khoảng trống trong suốt; không sửa file ảnh gốc. */
+
+
+/* SECTION 6 — Ảnh và video phủ hết khung nội dung, giữ tỷ lệ gốc khi hiển thị. */
+
+#-id4-home-part-01 .-id4-home-journey-poster,
+#-id4-home-part-01 .-id4-home-journey-player video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* SECTION 4 — Ảnh máng hướng dẫn kèm logo nền: kích thước và vị trí theo PDF mẫu. */
+
+
+/* KHOẢNG CÁCH THEO GDW iD-4 V2.2: bản PC 1920px; tablet/mobile dùng rem và vw.
+   Chỉ căn nội dung trong main, không thay popup, ảnh nền hoặc chức năng. */
+
+@media (min-width: 75em) {
+
+    /* SECTION 1 / 2: khoảng đầu, cuối và khoảng cách tới ảnh khách hàng. */
+    #-id4-home-part-01 .-id4-home-comparison {
+        height: calc(898.3 * var(--id4-home-u));
+    }
+
+    /* SECTION 3: tiêu đề, hai đoạn mô tả và hình nằm trong chiều cao bản mẫu. */
+    /* Dành khoảng thở giữa nút và ảnh răng, giữ tỷ lệ gốc bằng contain. */
+    /* SECTION 4: tiêu đề cách mép trên như PDF, hồ sơ lợi ích có lề cuối. */
+    /* SECTION 5 / 6 / 7: giữ các mốc tiêu đề và nội dung của mẫu. */
+    #-id4-home-part-01 .-id4-home-technology-panel {
+        margin-top: calc(24 * var(--id4-home-u));
+    }
+}
+
+@media (max-width: 74.9375em) {
+    #-id4-home-part-01 {
+        --id4-home-section-space: clamp(2rem, 4.5vw, 3rem);
+        --id4-home-content-space: clamp(1.25rem, 3vw, 1.75rem);
+    }
+
+    #-id4-home-part-01>section h2:not(.-id4-home-sr-only):not(dialog h2) {
+        font-size: var(--id4-home-title-size);
+        line-height: 1.3;
+        letter-spacing: .035em;
+        text-wrap: balance;
+    }
+
+    #-id4-home-part-01 .-id4-home-comparison {
+        height: auto;
+        padding-block: var(--id4-home-section-space);
+    }
+
+    #-id4-home-part-01 .-id4-home-comparison-more {
+        margin-top: var(--id4-home-content-space);
+    }
+
+    #-id4-home-part-01 .-id4-home-technology-panel {
+        margin-top: var(--id4-home-content-space);
+    }
+}
+
+
+/* MOBILE — Căn giữa hai link Tìm hiểu iD-4 Solution, giữ nội dung mô tả căn như cũ. */
+
+
+/* SECTION 2 — MOBILE: dùng tỷ lệ ảnh gốc 637/971 như PC, không cắt chân dung. */
+
+
+/* SECTION 4: tiêu đề nội dung viết toàn bộ chữ hoa; SECTION 1 / 5: cùng kiểu chấm chuyển slide. */
+
+@media (min-width: 43.75em) {
+    #-id4-home-part-01 .-id4-home-comparison-slider .-id4-home-slider-dots {
+        bottom: calc(18 * var(--id4-home-u));
+        gap: calc(12 * var(--id4-home-u));
+        padding: calc(6 * var(--id4-home-u)) calc(12 * var(--id4-home-u));
+        border-radius: 2.5rem;
+        background: rgb(0 0 0 / 20%);
+    }
+
+    #-id4-home-part-01 .-id4-home-comparison-slider .-id4-home-slider-dots button {
+        width: calc(15 * var(--id4-home-u));
+        height: calc(15 * var(--id4-home-u));
+        padding: 0;
+        border-radius: 50%;
+        background: rgb(255 255 255 / 73.3%);
+        box-shadow: 0 0 0 1px rgb(0 0 0 / 6.7%);
+    }
+
+    #-id4-home-part-01 .-id4-home-comparison-slider .-id4-home-slider-dots button[aria-current="true"] {
+        background: var(--id4-home-gold);
+    }
+}
+
+
+/* GIÃN DÒNG CÁC KHỐI NỘI DUNG: tiêu đề 1.2–1.3, mô tả 1.4; giữ font và độ đậm. */
+
+#-id4-home-part-01>section :is(p,
+    li,
+    dd):not(dialog *) {
+    line-height: 1.4;
+}
+
+#-id4-home-part-01>section :is(h3,
+    h4,
+    dt):not(dialog *) {
+    line-height: 1.3;
+}
+
+#-id4-home-part-01>section h2:not(dialog *) {
+    line-height: 1.2;
+}
+
+
+/* SECTION 3 / 4 — Giãn dòng mô tả và tách các mục lợi ích cho dễ đọc. */
+
+
+/* SECTION 5 — Giãn dòng nội dung hồ sơ bác sĩ như các khối giới thiệu và lợi ích. */
+
+
+/* SECTION 5 — Lề trên tiêu đề bằng lề dưới cụm chấm chuyển slide. */
+
+
+/* SECTION 5 — Cân lề trên/dưới của toàn bộ nội dung, không chỉ riêng chấm chuyển slide. */
+
+
+/* SECTION 3 — Phóng lớn ảnh hàm răng, căn giữa và cân khoảng cách trên/dưới ảnh. */
+
+
+/* SECTION 4 — Toàn bộ nội dung nằm giữa theo chiều cao, lề trên và dưới bằng nhau. */
+
+
+/* SECTION 5 — Căn giữa toàn khối và hồ sơ từng slide theo chiều dọc. */
+
+
+/* SECTION 4 — Cân chiều dọc theo nhóm nội dung thực, bỏ chiều cao tối thiểu cũ. */
+
+
+/* SECTION 5 — Ảnh sát đáy section; hồ sơ nằm giữa vùng từ tiêu đề đến đáy. */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #-id4-home-part-01 *,
+    #-id4-home-part-01 ::before,
+    #-id4-home-part-01 ::after {
+        transition: none !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #-id4-home-part-01 .-id4-home-slider-track {
+        transition: none;
+    }
+
+    #-id4-home-part-01 .-id4-home-slider-controls {
+        transition: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #-id4-home-part-01 .-id4-home-comparison-slider .-id4-home-slider-controls {
+        transition: none;
+    }
+}
+
+#-id4-home-part-01 .-id4-home-round-arrow {
+    min-height: 0;
+    min-width: 0;
+    aspect-ratio: 1;
+}
+
+#-id4-home-part-01 .-id4-home-slider-dots button {
+    min-height: 0;
+    min-width: 0;
+    line-height: 1;
+}
+
+
+/* Mobile: keep swipe and expose the same slide selector without covering the photos. */
+
+@media (max-width: 43.6875em) {
+
+    #-id4-home-part-01 :is(.-id4-home-comparison-slider,
+        .-id4-home-doctor-slider) .-id4-home-slider-controls {
+        display: block;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    #-id4-home-part-01 :is(.-id4-home-comparison-slider,
+        .-id4-home-doctor-slider) .-id4-home-round-arrow {
+        display: none;
+    }
+
+    #-id4-home-part-01 :is(.-id4-home-comparison-slider,
+        .-id4-home-doctor-slider) .-id4-home-slider-dots {
+        display: flex;
+        bottom: .75rem;
+        gap: .75rem;
+        padding: .5rem .75rem;
+        border-radius: 2rem;
+    }
+
+    #-id4-home-part-01 .-id4-home-slider-dots button {
+        position: relative;
+        width: .625rem;
+        height: .625rem;
+    }
+
+    #-id4-home-part-01 .-id4-home-slider-dots button::before {
+        content: "";
+        position: absolute;
+        inset: -.375rem;
+    }
+
+    #-id4-home-part-01 [data-single="true"] .-id4-home-slider-controls {
+        display: none;
+    }
+}
+
+
+/* Preserve authored sentence case; keep heading/dt capitalization rules. */
+
+#-id4-home-part-01 :is(p,
+    dd,
+    li) {
+    text-transform: none;
+}
+
+
+/* Defaults also cover content added later in WordPress. */
+
+#-id4-home-part-01 :is(p,
+    li,
+    dd,
+    dt,
+    small,
+    figcaption,
+    blockquote,
+    a,
+    label,
+    input,
+    textarea,
+    select),
+#-id4-home-part-01 button:not(.-id4-home-round-arrow):not([data-close]):not([data-slider-dot]) {
+    font-size: var(--id4-home-text-size);
+}
+
+#-id4-home-part-01 :is(h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6) {
+    font-size: var(--id4-home-title-size);
+}
+
+
+/* A longer heading/profile must expand instead of clipping text. */
+
+#-id4-home-part-01 .-id4-home-process-panel {
+    height: auto;
+    min-height: 0;
+}

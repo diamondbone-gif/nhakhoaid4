@@ -1,90 +1,3 @@
-/* CSS riêng footer và popup liên hệ; giữ ../../assets/ cho font/ảnh. */
-
-@font-face {
-    font-family: id4HomeOpenSans;
-    src: url('../../assets/fonts/OpenSans-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: id4HomeOpenSans;
-    src: url("../../assets/fonts/OpenSans-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: id4HomeOpenSans;
-    src: url("../../assets/fonts/OpenSans-Semibold.ttf") format("truetype");
-    font-weight: 600;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: id4HomeOpenSans;
-    src: url("../../assets/fonts/OpenSans-Bold.ttf") format("truetype");
-    font-weight: 700;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: id4HomeOpenSans;
-    src: url("../../assets/fonts/OpenSans-Italic.ttf") format("truetype");
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: id4HomeOpenSans;
-    src: url("../../assets/fonts/OpenSans-SemiboldItalic.ttf") format("truetype");
-    font-weight: 600;
-    font-style: italic;
-    font-display: swap;
-}
-
-
-/* Footer theo ảnh mẫu: chữ trắng, icon vector và bốn cột ở desktop. */
-
-
-/* Desktop theo artboard PDF 1920px: mọi kích thước cùng co giãn một tỉ lệ. */
-
-
-/* Watermark vector theo hình iD-4 trong PDF, không kéo méo ảnh bitmap. */
-
-
-/* Bù khoảng trong suốt của logo gốc để khoảng cách chữ khớp PDF. */
-
-
-/* Hover footer: liên kết vàng, icon nhấc nhẹ, giữ nguyên kích thước bố cục. */
-
-
-/* Gạch chân hover chạy từ trái sang phải; không làm thay đổi bố cục. */
-
-
-/* Mobile: Dịch vụ và Khám phá lần lượt mỗi mục một hàng. */
-
-
-/* Mobile: icon lớn hơn một chút, vẫn vừa hàng trên màn hình 320px. */
-
-
-/* Logo nền dùng ảnh trong HTML. PNG đã có độ trong suốt nên không giảm opacity lần nữa. */
-
-
-/* Ảnh chữ ký gốc có nền tối/logo cắt sẵn: lọc bỏ nền để không chồng hai logo. */
-
-
-/* Logo nền lớn hơn: khung theo đúng tỉ lệ PNG, không bị thu nhỏ bởi chiều cao cũ. */
-
-
-/* Logo nền: giảm khoảng 15% so với bản trước; giữ độ hiển thị 80%. */
-
-
-/* Mobile: logo nền nằm sau chữ Same day new smile, canh cùng lề trái. */
-
-
 /* id4-home-reset */
 
 :where(.-id4-home-page) * {
@@ -1338,10 +1251,14 @@ body.-id4-home-page.-id4-home-dialog-open {
         transition: none;
     }
 }
+
+
 /* Contact links inherit the white address text instead of Flatsome's global link color. */
+
 .-id4-home-footer address a:not(.-id4-home-map-link) {
     color: inherit;
 }
+
 .-id4-home-footer address a:not(.-id4-home-map-link):hover,
 .-id4-home-footer address a:not(.-id4-home-map-link):focus-visible {
     color: var(--id4-home-gold);

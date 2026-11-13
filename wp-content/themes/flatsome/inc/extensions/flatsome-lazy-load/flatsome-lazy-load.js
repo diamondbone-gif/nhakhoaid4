@@ -86,4 +86,19 @@
       })
     }
   })
+
+  // WooCommerce 11.1+ replaces the product gallery element when a variation
+  // with its own gallery is selected. The initial gallery is already observed,
+  // so only galleries that replace a destroyed one are attached.
+  var galleryReplaced = false
+
+  jQuery(document.body)
+    .on('wc-product-gallery-before-destroy', function () {
+      galleryReplaced = true
+    })
+    .on('wc-product-gallery-after-init', function (e, galleryEl) {
+      if (!galleryReplaced) return
+      galleryReplaced = false
+      Flatsome.attach('lazy-load-images', jQuery(galleryEl))
+    })
 })()

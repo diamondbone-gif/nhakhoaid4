@@ -183,7 +183,7 @@ function flatsome_ajax_search() {
 				}
 			}
 
-			$product_image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_id() ) );
+			$product_image = wp_get_attachment_image_src( $product->get_image_id() );
 
 			$suggestions[] = array(
 				'type'  => 'Product',

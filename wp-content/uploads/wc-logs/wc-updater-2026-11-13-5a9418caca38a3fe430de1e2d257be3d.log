@@ -1,0 +1,9 @@
+2026-11-13T07:17:40+00:00 INFO Automatic database update triggered.
+2026-11-13T07:17:40+00:00 INFO Scheduling database updates (from 11.2.2)...
+2026-11-13T07:17:40+00:00 INFO   [11.3.0] Scheduled 'wc_update_1130_set_legacy_variation_price_hash_option'.
+2026-11-13T07:17:40+00:00 INFO   [11.3.0] Scheduled 'wc_update_1130_delete_unpublished_variation_lookup_rows'.
+2026-11-13T07:17:40+00:00 INFO   [11.3.0] Scheduled 'wc_update_1130_split_tax_lookup_taxable_amount'.
+2026-11-13T07:17:40+00:00 INFO   [11.3.0] Scheduled 'wc_update_1130_delete_stock_notification_sync_notice_option'.
+2026-11-13T07:17:40+00:00 INFO   [11.3.0] Scheduled 'wc_update_1130_backfill_order_stats_payment_method'.
+2026-11-13T07:17:40+00:00 INFO   [11.3.0-1] Scheduled 'wc_update_1122_remove_objects_from_default_attributes'.
+2026-11-13T07:17:40+00:00 INFO Database updates scheduled.

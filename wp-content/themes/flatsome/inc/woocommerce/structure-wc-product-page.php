@@ -375,3 +375,24 @@ function flatsome_woocommerce_gallery_image_html_attachment_image_params( $atts,
 }
 
 add_filter( 'woocommerce_gallery_image_html_attachment_image_params', 'flatsome_woocommerce_gallery_image_html_attachment_image_params', 10, 4 );
+
+/**
+ * Keeps WooCommerce from replacing the Flatsome product gallery on variation change.
+ *
+ * WC 11.1+ sends rendered gallery HTML for variations with gallery images and swaps
+ * the gallery element client side. The Flatsome gallery is Flickity-driven and
+ * handles variation images itself, so the swap is only allowed for the WooCommerce gallery.
+ *
+ * @param array $data Variation data.
+ *
+ * @return array
+ */
+function flatsome_woocommerce_available_variation_gallery( $data ) {
+	if ( ! get_theme_mod( 'product_gallery_woocommerce' ) && ! empty( $data['gallery_images_html'] ) ) {
+		$data['gallery_images_html'] = '';
+	}
+
+	return $data;
+}
+
+add_filter( 'woocommerce_available_variation', 'flatsome_woocommerce_available_variation_gallery' );

@@ -12,8 +12,8 @@
  *
  * @see              https://woocommerce.com/document/template-structure/
  * @package          WooCommerce\Templates
- * @version          11.0.0
- * @flatsome-version 3.20.9
+ * @version          11.2.0
+ * @flatsome-version 3.20.12
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -77,6 +77,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 				$visible = apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key );
 
 				if ( $_product instanceof WC_Product && $_product->exists() && $cart_item['quantity'] > 0 && $visible ) {
+					$cart_item_name = fl_woocommerce_version_check( '11.2.0' ) ? WC()->cart->get_item_product_name( $cart_item, $_product ) : $_product->get_name();
+
 					/**
 					 * Filter the product name.
 					 *
@@ -85,7 +87,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 					 * @param array $cart_item The product in the cart.
 					 * @param string $cart_item_key Key for the product in the cart.
 					 */
-					$product_name      = apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key );
+					$product_name      = apply_filters( 'woocommerce_cart_item_name', $cart_item_name, $cart_item, $cart_item_key );
 					$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 					?>
 					<tr class="woocommerce-cart-form__cart-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
@@ -142,13 +144,14 @@ do_action( 'woocommerce_before_cart' ); ?>
 							 *
 							 * @since 2.1.0
 							 */
-							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key ) );
+							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $cart_item_name ), $cart_item, $cart_item_key ) );
 						}
 
 						do_action( 'woocommerce_after_cart_item_name', $cart_item, $cart_item_key );
 
 						// Meta data.
-						echo wc_get_formatted_cart_item_data( $cart_item ); // PHPCS: XSS ok.
+						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						echo wc_get_formatted_cart_item_data( $cart_item, false, $cart_item_name );
 
 						// Backorder notification.
 						if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
