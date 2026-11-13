@@ -199,4 +199,62 @@ function nhakhoaid4_enqueue_assets()
             true
         );
     }
+
+    // ==================================================
+    // 8. CÔNG NGHỆ KỸ THUẬT - TOÀN WEBSITE
+    // ==================================================
+
+    // CSS giao diện Công nghệ kỹ thuật - /asset/css/cong-nghe-ky-thuat.css
+    $technology_css = '/asset/css/cong-nghe-ky-thuat.css';
+
+    if (file_exists($theme_dir . $technology_css)) {
+        wp_enqueue_style(
+            'nhakhoaid4-technology',
+            $theme_uri . $technology_css,
+            $shared_dependencies,
+            filemtime($theme_dir . $technology_css)
+        );
+    }
+
+    // JavaScript tương tác Công nghệ kỹ thuật - /asset/js/cong-nghe-ky-thuat.js
+    $technology_js = '/asset/js/cong-nghe-ky-thuat.js';
+
+    if (file_exists($theme_dir . $technology_js)) {
+        wp_enqueue_script(
+            'nhakhoaid4-technology',
+            $theme_uri . $technology_js,
+            array(),
+            filemtime($theme_dir . $technology_js),
+            true
+        );
+    }
+
+    // ==================================================
+    // 9. CHÍNH SÁCH BẢO HÀNH - TOÀN WEBSITE
+    // ==================================================
+
+    // CSS giao diện Chính sách bảo hành - /asset/css/chinh-sach-bao-hanh.css
+    $warranty_css = '/asset/css/chinh-sach-bao-hanh.css';
+
+    if (file_exists($theme_dir . $warranty_css)) {
+        wp_enqueue_style(
+            'nhakhoaid4-warranty',
+            $theme_uri . $warranty_css,
+            $shared_dependencies,
+            filemtime($theme_dir . $warranty_css)
+        );
+    }
+
+    // JavaScript tương tác Chính sách bảo hành - /asset/js/chinh-sach-bao-hanh.js
+    $warranty_js = '/asset/js/chinh-sach-bao-hanh.js';
+
+    if (file_exists($theme_dir . $warranty_js)) {
+        wp_enqueue_script(
+            'nhakhoaid4-warranty',
+            $theme_uri . $warranty_js,
+            array(),
+            filemtime($theme_dir . $warranty_js),
+            true
+        );
+    }
 }

@@ -1,0 +1,1645 @@
+/* CỠ CHỮ NỘI DUNG: text, tiêu đề chính và tiêu đề bước quy trình.
+   rem giữ khả năng phóng chữ; vw co giãn liên tục cho mobile/tablet/PC. */
+
+@font-face {
+    font-family: id4HomeMyriadPro;
+    src: url('../assets/fonts/MyriadPro-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: id4HomeTimes;
+    src: url('../assets/fonts/timesi.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: id4HomeOpenSans;
+    src: url('../assets/fonts/OpenSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: id4HomeOpenSans;
+    src: url("../assets/fonts/OpenSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: id4HomeOpenSans;
+    src: url("../assets/fonts/OpenSans-Semibold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: id4HomeOpenSans;
+    src: url("../assets/fonts/OpenSans-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: id4HomeOpenSans;
+    src: url("../assets/fonts/OpenSans-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: id4HomeOpenSans;
+    src: url("../assets/fonts/OpenSans-SemiboldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+#cnkt--part-07 {
+    --cnkt--text-size: clamp(.9375rem, 1.2vw, 1.125rem);
+    --cnkt--title-size: clamp(1.375rem, 2.86vw, 3.4375rem);
+    --cnkt--process-title-size: clamp(1.125rem, 1.5vw, 1.5rem);
+    font-size: var(--cnkt--text-size);
+}
+
+
+/* Isolate Flatsome form/button defaults inside page content. */
+
+#cnkt--part-07 {
+    display: block;
+    width: 100%;
+    max-width: var(--cnkt--page-max);
+    margin-inline: auto;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+#cnkt--part-07 button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    min-height: 0;
+    min-width: 0;
+    box-shadow: none;
+    text-shadow: none;
+    text-transform: none;
+    letter-spacing: normal;
+    vertical-align: baseline;
+    appearance: none;
+}
+
+#cnkt--part-07 h1,
+#cnkt--part-07 h2,
+#cnkt--part-07 h3,
+#cnkt--part-07 h4 {
+    font-family: inherit;
+    color: inherit;
+}
+
+#cnkt--part-07 p:empty {
+    display: none;
+}
+
+
+/* NỘI DUNG TRANG: không có menu/header, banner đầu và footer. Giữ tokens, font, responsive, slider, popup. */
+
+
+/* Open Sans: Light 300; Regular 400; Semibold 600; Bold 700; Italic 400/600. */
+
+
+/* Font có sẵn: Myriad Pro Regular và Times Italic chỉ có nét 400.
+   Open Sans có nét thật 300/400/600/700; dùng 600 cho nội dung, 700 cho tiêu đề/nút. */
+
+
+/* CSS thường: thứ tự reset, biến, nền tảng, thành phần, responsive, hỗ trợ truy cập.
+   Selector specificity-guard giữ mức ưu tiên responsive; không cần thêm ID này vào HTML. */
+
+#cnkt--part-07 * {
+    box-sizing: border-box;
+}
+
+#cnkt--part-07 button,
+#cnkt--part-07 a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+#cnkt--part-07 button {
+    font: inherit;
+    cursor: pointer;
+}
+
+#cnkt--part-07 button:disabled {
+    cursor: default;
+}
+
+#cnkt--part-07 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#cnkt--part-07 img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#cnkt--part-07 button {
+    border: 0px;
+}
+
+#cnkt--part-07 button:focus-visible,
+#cnkt--part-07 a:focus-visible {
+    outline: rgb(209, 162, 62) solid 3px;
+    outline-offset: 5px;
+}
+
+#cnkt--part-07 h1,
+#cnkt--part-07 h2,
+#cnkt--part-07 h3,
+#cnkt--part-07 h4,
+#cnkt--part-07 p,
+#cnkt--part-07 figure,
+#cnkt--part-07 dl,
+#cnkt--part-07 dd {
+    margin: 0px;
+}
+
+#cnkt--part-07 [hidden] {
+    display: none !important;
+}
+
+#cnkt--part-07 {
+    --cnkt--u: min(.0520833333vw, 1px);
+    --cnkt--gold: #d1a23e;
+    --cnkt--dark: #211c16;
+    --cnkt--cream: #f7efdd;
+    --cnkt--heading: linear-gradient(110deg, #dcc18a, #ad7813);
+    --cnkt--font-body: 'id4HomeOpenSans', sans-serif;
+    --cnkt--font-ui: 'id4HomeOpenSans', sans-serif;
+    --cnkt--content-max: 1480px;
+    --cnkt--page-max: 1920px;
+    --cnkt--gutter: 22px;
+    --cnkt--space-sm: 12px;
+    --cnkt--space-md: 24px;
+    --cnkt--space-lg: 40px;
+    --cnkt--radius: 14px;
+    --cnkt--motion: .65s;
+    --cnkt--ease: cubic-bezier(.22, .68, .15, 1);
+    --cnkt--doctor-photo-width: 340px;
+    --cnkt--doctor-photo-height: 375px;
+}
+
+@media (max-width: 1199px) {
+    #cnkt--part-07 {
+        --cnkt--u: .6px;
+    }
+}
+
+
+/* ĐỘ ĐẬM CHỮ: sửa các số bên dưới khi cần điều chỉnh toàn bộ phần nội dung.
+   600 dùng Semibold; 700 dùng Bold. Mức 800/900 cần font tương ứng để có nét thực. */
+
+#cnkt--part-07 {
+    --cnkt--weight-content: 400;
+    --cnkt--weight-title: 700;
+    --cnkt--weight-button: 700;
+    --cnkt--weight-caption: 600;
+    /* Chữ chú thích và mô tả nhỏ. */
+    --cnkt--weight-italic: 600;
+    /* File OpenSans-SemiboldItalic.ttf có sẵn. */
+}
+
+#cnkt--part-07 {
+    margin: 0px;
+    background: rgb(255, 255, 255);
+    color: rgb(33, 28, 22);
+    font-family: var(--cnkt--font-body);
+    font-size: var(--cnkt--text-size);
+}
+
+#cnkt--part-07 h2 {
+    font: 700 var(--cnkt--title-size)/1.25 var(--cnkt--font-ui);
+    letter-spacing: calc(1.4 * var(--cnkt--u));
+    text-align: center;
+    background-image: var(--cnkt--heading);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#cnkt--part-07 section {
+    position: relative;
+    scroll-margin-top: calc(70 * var(--cnkt--u));
+}
+
+#cnkt--part-07 .cnkt--site {
+    max-width: var(--cnkt--page-max);
+    margin: auto;
+    overflow: hidden;
+}
+
+#cnkt--part-07 .cnkt--container {
+    width: min(calc(1480 * var(--cnkt--u)), var(--cnkt--content-max));
+    margin-inline: auto;
+}
+
+#cnkt--part-07 .cnkt--skip-link {
+    position: fixed;
+    left: 16px;
+    top: -100px;
+    background: rgb(255, 255, 255);
+    padding: 12px;
+    z-index: 30;
+    font-size: var(--cnkt--text-size);
+}
+
+#cnkt--part-07 .cnkt--skip-link:focus {
+    top: 16px;
+}
+
+
+/* ==================== SECTION 1: Hình ảnh trước / sau ==================== */
+
+
+/* ==================== SECTION 2: Câu chuyện khách hàng ==================== */
+
+
+/* ==================== SECTION 3: Giới thiệu iD-4 Solution ==================== */
+
+
+/* ==================== SECTION 4: Lợi ích ==================== */
+
+
+/* ==================== SECTION 5: Đội ngũ bác sĩ ==================== */
+
+
+/* ==================== SECTION 6: Hành trình / video ==================== */
+
+#cnkt--part-07 .cnkt--video-placeholder {
+    margin-top: calc(48 * var(--cnkt--u));
+    width: 100%;
+    height: calc(832 * var(--cnkt--u));
+    background: rgb(230, 231, 232);
+    border-radius: calc(30 * var(--cnkt--u));
+    display: grid;
+    place-items: center;
+}
+
+#cnkt--part-07 .cnkt--play-circle {
+    width: calc(188 * var(--cnkt--u));
+    height: calc(188 * var(--cnkt--u));
+    border-radius: 50%;
+    background: rgb(191, 192, 192);
+    display: grid;
+    place-items: center;
+    transition: background 0.2s;
+}
+
+#cnkt--part-07 .cnkt--video-placeholder:hover .cnkt--play-circle {
+    background: rgb(209, 162, 62);
+}
+
+#cnkt--part-07 .cnkt--play-circle>span {
+    margin-left: calc(17 * var(--cnkt--u));
+    width: 0px;
+    height: 0px;
+    border-top: calc(41 * var(--cnkt--u)) solid transparent;
+    border-bottom: calc(41 * var(--cnkt--u)) solid transparent;
+    border-left: calc(71 * var(--cnkt--u)) solid #e6e7e8;
+    border-radius: calc(8 * var(--cnkt--u));
+}
+
+
+/* ==================== SECTION 7: Công nghệ kỹ thuật số ==================== */
+
+#cnkt--part-07 .cnkt--technology {
+    height: calc(1078 * var(--cnkt--u));
+    padding-top: calc(102 * var(--cnkt--u));
+    background: rgb(255, 255, 255);
+}
+
+#cnkt--part-07 .cnkt--technology-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(20 * var(--cnkt--u));
+    margin-top: calc(24 * var(--cnkt--u));
+    padding: calc(20 * var(--cnkt--u));
+    border-radius: calc(30 * var(--cnkt--u));
+    background: rgb(250, 249, 247);
+}
+
+#cnkt--part-07 .cnkt--technology-tabs button {
+    background: var(--cnkt--cream);
+    border-radius: calc(9 * var(--cnkt--u));
+    font: 600 var(--cnkt--text-size)/1.2 var(--cnkt--font-ui);
+    letter-spacing: calc(1.7 * var(--cnkt--u));
+    padding: calc(12 * var(--cnkt--u)) calc(8 * var(--cnkt--u));
+    white-space: nowrap;
+}
+
+#cnkt--part-07 .cnkt--technology-tabs button[aria-selected="true"] {
+    color: white;
+    background: var(--cnkt--gold);
+}
+
+#cnkt--part-07 .cnkt--equipment-panel {
+    display: grid;
+    grid-template-columns: 2.04fr 1fr;
+    gap: calc(20 * var(--cnkt--u));
+    padding: calc(20 * var(--cnkt--u));
+    border-radius: calc(30 * var(--cnkt--u));
+    margin-top: calc(24 * var(--cnkt--u));
+    background: rgb(250, 249, 247);
+    height: calc(668 * var(--cnkt--u));
+}
+
+#cnkt--part-07 .cnkt--technology-stack {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: calc(20 * var(--cnkt--u));
+    min-height: 0px;
+}
+
+#cnkt--part-07 .cnkt--technology-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: calc(10 * var(--cnkt--u));
+    background: rgb(126, 128, 129);
+    text-align: left;
+    color: rgb(255, 255, 255);
+    padding: 0px;
+    min-height: 0px;
+}
+
+#cnkt--part-07 .cnkt--technology-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+#cnkt--part-07 .cnkt--technology-card:hover img {
+    transform: scale(1.03);
+}
+
+#cnkt--part-07 .cnkt--technology-card::after {
+    content: "";
+    position: absolute;
+    inset: 45% 0px 0px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.533));
+}
+
+#cnkt--part-07 .cnkt--technology-card span {
+    position: absolute;
+    z-index: 1;
+    bottom: calc(20 * var(--cnkt--u));
+    left: calc(24 * var(--cnkt--u));
+    font: 700 var(--cnkt--text-size)/1.22 var(--cnkt--font-ui);
+    letter-spacing: calc(1.5 * var(--cnkt--u));
+}
+
+#cnkt--part-07 .cnkt--featured span {
+    bottom: calc(23 * var(--cnkt--u));
+    left: calc(40 * var(--cnkt--u));
+}
+
+#cnkt--part-07 .cnkt--facilities-panel,
+#cnkt--part-07 .cnkt--process-panel {
+    margin-top: calc(24 * var(--cnkt--u));
+    height: calc(668 * var(--cnkt--u));
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    align-items: center;
+    gap: calc(50 * var(--cnkt--u));
+    padding: calc(40 * var(--cnkt--u));
+    background: rgb(250, 249, 247);
+    border-radius: calc(30 * var(--cnkt--u));
+    font-size: var(--cnkt--text-size);
+}
+
+#cnkt--part-07 .cnkt--facilities-panel img {
+    width: 100%;
+    border-radius: calc(14 * var(--cnkt--u));
+}
+
+#cnkt--part-07 .cnkt--facilities-panel h3,
+#cnkt--part-07 .cnkt--process-panel h3 {
+    font: 700 var(--cnkt--title-size)/1.3 var(--cnkt--font-ui);
+    margin-bottom: calc(24 * var(--cnkt--u));
+}
+
+#cnkt--part-07 .cnkt--facilities-panel p {
+    margin-bottom: calc(30 * var(--cnkt--u));
+    line-height: 1.5;
+}
+
+#cnkt--part-07 .cnkt--process-panel {
+    grid-template-columns: 0.8fr 1.4fr;
+    background: var(--cnkt--dark);
+    color: rgb(255, 255, 255);
+}
+
+#cnkt--part-07 .cnkt--process-panel>img {
+    height: calc(580 * var(--cnkt--u));
+    width: 100%;
+    object-fit: contain;
+}
+
+#cnkt--part-07 .cnkt--process-panel ol {
+    margin-bottom: calc(25 * var(--cnkt--u));
+    padding-left: calc(35 * var(--cnkt--u));
+}
+
+#cnkt--part-07 .cnkt--process-panel li {
+    margin-bottom: calc(20 * var(--cnkt--u));
+}
+
+#cnkt--part-07 .cnkt--process-panel strong {
+    color: var(--cnkt--gold);
+}
+
+
+/* ==================== SECTION 8: Đặt lịch tư vấn ==================== */
+
+#cnkt--part-07 .cnkt--small-rule {
+    display: block;
+    width: calc(45 * var(--cnkt--u));
+    height: calc(2 * var(--cnkt--u));
+    background: var(--cnkt--gold);
+    margin: calc(25 * var(--cnkt--u)) 0;
+}
+
+#cnkt--part-07 dialog {
+    border: 1px solid rgba(209, 162, 62, 0.333);
+    border-radius: 18px;
+    padding: 44px 36px 32px;
+    width: min(540px, 100% - 32px);
+    max-height: calc(100dvh - 40px);
+    overflow: auto;
+    color: rgb(33, 28, 22);
+    background: rgb(255, 255, 255);
+    font: var(--cnkt--text-size) / 1.5 var(--cnkt--font-ui);
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.333) 0px 20px 80px;
+}
+
+#cnkt--part-07 dialog::backdrop {
+    background: rgba(0, 0, 0, 0.733);
+    backdrop-filter: blur(4px);
+}
+
+#cnkt--part-07 dialog h2 {
+    font-size: var(--cnkt--title-size);
+    letter-spacing: 0px;
+    margin-bottom: 20px;
+}
+
+#cnkt--part-07 dialog p {
+    margin-block: 18px;
+}
+
+#cnkt--part-07 .cnkt--dialog-close {
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    width: 38px;
+    height: 38px;
+    font-size: 32px;
+    line-height: 1;
+    background: transparent;
+    color: rgb(33, 28, 22);
+}
+
+#cnkt--part-07 .cnkt--gallery-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--cnkt--space-sm);
+}
+
+#cnkt--part-07 .cnkt--gallery-pair img {
+    width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+}
+
+#cnkt--part-07 .cnkt--gallery-pair figcaption {
+    font: 700 var(--cnkt--text-size) var(--cnkt--font-ui);
+    color: rgb(165, 123, 34);
+    margin-top: 10px;
+}
+
+body.cnkt--dialog-open {
+    overflow: hidden;
+}
+
+#cnkt--part-07 .cnkt--skip-link {
+    top: 0px;
+    transform: translateY(-160%);
+}
+
+#cnkt--part-07 .cnkt--skip-link:focus {
+    transform: translateY(0px);
+}
+
+#cnkt--part-07 h2 {
+    letter-spacing: calc(2.8 * var(--cnkt--u));
+}
+
+#cnkt--part-07 .cnkt--facilities-panel {
+    grid-template-columns: 2.04fr 1fr;
+    align-items: stretch;
+    gap: calc(20 * var(--cnkt--u));
+    padding: calc(20 * var(--cnkt--u));
+    font-size: var(--cnkt--text-size);
+}
+
+#cnkt--part-07 .cnkt--facilities-panel img {
+    border-radius: 0px;
+}
+
+#cnkt--part-07 .cnkt--facilities-panel .cnkt--technology-card span {
+    font-size: var(--cnkt--text-size);
+}
+
+#cnkt--part-07 .cnkt--technology-card small {
+    font-size: var(--cnkt--text-size);
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+
+#cnkt--part-07 .cnkt--technology-card:focus-visible {
+    outline: 3px solid var(--cnkt--gold);
+    outline-offset: 4px;
+}
+
+#cnkt--part-07 .cnkt--image-dialog {
+    width: min(1200px, 100% - 32px);
+    padding: 48px 20px 16px;
+    background: rgb(23, 21, 17);
+    color: white;
+    border-radius: 16px;
+    animation: 0.25s ease-out 0s 1 normal none running id4-home-image-reveal;
+}
+
+#cnkt--part-07 .cnkt--image-dialog .cnkt--dialog-close {
+    color: rgb(255, 255, 255);
+    right: 12px;
+    top: 8px;
+    background: rgba(255, 255, 255, 0.082);
+    border-radius: 50%;
+}
+
+#cnkt--part-07 .cnkt--image-dialog img {
+    width: 100%;
+    height: auto;
+    max-height: calc(100dvh - 170px);
+    object-fit: contain;
+    border-radius: 8px;
+    margin: auto;
+}
+
+#cnkt--part-07 .cnkt--image-dialog h2 {
+    font: 400 var(--cnkt--title-size)/1.5 var(--cnkt--font-ui);
+    margin: 14px 0px 0px;
+    letter-spacing: 0px;
+}
+
+@keyframes id4-home-image-reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+#cnkt--part-07 .cnkt--process-panel {
+    position: relative;
+    display: block;
+    padding: calc(36 * var(--cnkt--u));
+    color: var(--cnkt--dark);
+    background: linear-gradient(135deg, rgb(250, 247, 239), rgb(242, 238, 230));
+    overflow: hidden;
+}
+
+#cnkt--part-07 .cnkt--process-heading {
+    text-align: left;
+    margin-bottom: calc(26 * var(--cnkt--u));
+}
+
+#cnkt--part-07 .cnkt--process-heading>p {
+    font: 600 var(--cnkt--text-size)/1.4 var(--cnkt--font-ui);
+    color: rgb(164, 123, 39);
+    letter-spacing: calc(2 * var(--cnkt--u));
+    margin-bottom: calc(8 * var(--cnkt--u));
+}
+
+#cnkt--part-07 .cnkt--process-heading h3 {
+    font: 700 var(--cnkt--title-size)/1.3 var(--cnkt--font-ui);
+    margin: 0px;
+}
+
+#cnkt--part-07 .cnkt--process-panel .cnkt--process-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(20 * var(--cnkt--u));
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+#cnkt--part-07 .cnkt--process-panel .cnkt--process-step {
+    margin: 0px;
+    min-height: calc(190 * var(--cnkt--u));
+    display: flex;
+    gap: calc(20 * var(--cnkt--u));
+    padding: calc(26 * var(--cnkt--u));
+    border: 1px solid rgba(216, 199, 163, 0.3);
+    border-radius: calc(14 * var(--cnkt--u));
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 calc(5 * var(--cnkt--u)) calc(20 * var(--cnkt--u)) #39230005;
+}
+
+#cnkt--part-07 .cnkt--step-number {
+    font: 400 var(--cnkt--text-size)/1 var(--cnkt--font-ui);
+    color: var(--cnkt--gold);
+    padding-top: calc(3 * var(--cnkt--u));
+    flex-shrink: 0;
+}
+
+#cnkt--part-07 .cnkt--process-step h4 {
+    font: 700 var(--cnkt--process-title-size)/1.35 var(--cnkt--font-ui);
+    margin-bottom: calc(12 * var(--cnkt--u));
+}
+
+#cnkt--part-07 .cnkt--process-step p {
+    font: 400 var(--cnkt--text-size)/1.55 var(--cnkt--font-ui);
+    color: rgb(101, 96, 89);
+}
+
+#cnkt--part-07 .cnkt--process-action {
+    position: absolute;
+    right: calc(36 * var(--cnkt--u));
+    bottom: calc(48 * var(--cnkt--u));
+    width: calc((100% - 112 * var(--cnkt--u)) / 3);
+    min-height: calc(190 * var(--cnkt--u));
+    padding: calc(26 * var(--cnkt--u));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: calc(20 * var(--cnkt--u));
+    font: 600 var(--cnkt--text-size)/1.4 var(--cnkt--font-ui);
+}
+
+#cnkt--part-07 .cnkt--journey-poster {
+    position: absolute;
+    inset: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+#cnkt--part-07 .cnkt--journey-overlay {
+    position: absolute;
+    inset: 0px;
+    background: linear-gradient(0deg, rgba(19, 16, 13, 0.88), transparent 65%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: calc(28 * var(--cnkt--u));
+}
+
+#cnkt--part-07 .cnkt--journey-play-label {
+    font: 600 var(--cnkt--text-size)/1.4 var(--cnkt--font-ui);
+    text-shadow: rgba(0, 0, 0, 0.533) 0px 2px 8px;
+}
+
+#cnkt--part-07 .cnkt--journey-player {
+    position: absolute;
+    inset: 0px;
+    background: rgb(0, 0, 0);
+}
+
+#cnkt--part-07 .cnkt--journey-player iframe,
+#cnkt--part-07 .cnkt--journey-player video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    object-fit: cover;
+}
+
+#cnkt--part-07 #cnkt--video-reset {
+    background: transparent;
+    color: rgb(110, 100, 85);
+    text-decoration: underline;
+    padding: 0px;
+    font: inherit;
+}
+
+#cnkt--part-07 #cnkt--video-reset {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.733);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+#cnkt--part-07 #cnkt--video-reset[hidden] {
+    display: none;
+}
+
+#cnkt--part-07 #cnkt--video-reset svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentcolor;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+#cnkt--part-07 .cnkt--comparison-detail-link {
+    margin-top: 20px;
+}
+
+
+/* Chữ đậm 900: thêm class cnkt--text-black vào phần chữ cần dùng.
+   Bộ font hiện tại chỉ có đến Bold 700; cần file hỗ trợ 900 để có nét 900 thực. */
+
+#cnkt--part-07 .cnkt--text-black {
+    font-weight: 900;
+}
+
+
+/* Câu chuyện khách hàng: ảnh nền full width, URL nằm trong style của section HTML. */
+
+@media (min-width: 1921px) {
+    #cnkt--part-07 {
+        background: rgb(245, 243, 239);
+    }
+
+    #cnkt--part-07 .cnkt--site {
+        box-shadow: rgba(0, 0, 0, 0.067) 0px 0px 80px;
+    }
+}
+
+@media (max-width: 1199px) {
+    #cnkt--part-07 {
+        font-size: var(--cnkt--text-size);
+    }
+
+    #cnkt--part-07 .cnkt--site {
+        width: 100%;
+    }
+
+    #cnkt--part-07 .cnkt--container {
+        width: auto;
+        margin-inline: var(--cnkt--gutter);
+    }
+
+    #cnkt--part-07 h2 {
+        font-size: var(--cnkt--title-size);
+        letter-spacing: 0.5px;
+        line-height: 1.35;
+    }
+
+    #cnkt--part-07 section {
+        scroll-margin-top: 20px;
+    }
+
+    /* SECTION 6 — MOBILE/TABLET: nút video phủ kín khung, không có margin làm lộ nền đen. */
+    #cnkt--part-07 .cnkt--play-circle {
+        width: 62px;
+        height: 62px;
+    }
+
+    #cnkt--part-07 .cnkt--play-circle>span {
+        margin-left: 6px;
+        border-top-width: 14px;
+        border-bottom-width: 14px;
+        border-left-width: 24px;
+        border-radius: 3px;
+    }
+
+    #cnkt--part-07 .cnkt--technology {
+        height: auto;
+        padding: var(--cnkt--space-lg) 0 24px;
+    }
+
+    #cnkt--part-07 .cnkt--technology-tabs {
+        gap: 6px;
+        padding: 7px;
+        margin-top: 22px;
+        border-radius: 12px;
+    }
+
+    #cnkt--part-07 .cnkt--technology-tabs button {
+        font-size: var(--cnkt--text-size);
+        line-height: 1.4;
+        letter-spacing: 0px;
+        white-space: normal;
+        padding: 8px 3px;
+        border-radius: 6px;
+    }
+
+    #cnkt--part-07 .cnkt--equipment-panel {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 8px;
+        height: auto;
+        margin-top: 16px;
+        border-radius: var(--cnkt--radius);
+    }
+
+    #cnkt--part-07 .cnkt--featured {
+        height: auto;
+        aspect-ratio: 1.5 / 1;
+    }
+
+    #cnkt--part-07 .cnkt--technology-stack {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 160px);
+        gap: 10px;
+    }
+
+    #cnkt--part-07 .cnkt--technology-card {
+        border-radius: 8px;
+    }
+
+    #cnkt--part-07 .cnkt--technology-card span {
+        font-size: var(--cnkt--text-size);
+        bottom: 14px;
+        left: 16px;
+        letter-spacing: 0.5px;
+    }
+
+    #cnkt--part-07 .cnkt--featured span {
+        font-size: var(--cnkt--text-size);
+        bottom: 16px;
+        left: 16px;
+    }
+
+    #cnkt--part-07 .cnkt--facilities-panel,
+    #cnkt--part-07 .cnkt--process-panel {
+        height: auto;
+        min-height: 550px;
+        grid-template-columns: 1fr;
+        font-size: var(--cnkt--text-size);
+        gap: 20px;
+        padding: 18px;
+        margin-top: 16px;
+        border-radius: var(--cnkt--radius);
+    }
+
+    #cnkt--part-07 .cnkt--facilities-panel h3,
+    #cnkt--part-07 .cnkt--process-panel h3 {
+        font-size: var(--cnkt--title-size);
+        margin-bottom: 15px;
+    }
+
+    #cnkt--part-07 .cnkt--facilities-panel p {
+        margin-bottom: 20px;
+    }
+
+    #cnkt--part-07 .cnkt--process-panel>img {
+        height: 300px;
+    }
+
+    #cnkt--part-07 .cnkt--process-panel ol {
+        padding-left: 23px;
+        margin-bottom: 20px;
+    }
+
+    #cnkt--part-07 .cnkt--process-panel li {
+        margin-bottom: 15px;
+    }
+
+    #cnkt--part-07 .cnkt--small-rule {
+        width: 30px;
+        height: 1px;
+        margin: 15px 0px;
+    }
+
+    #cnkt--part-07 dialog {
+        padding: 42px 20px 26px;
+        font-size: var(--cnkt--text-size);
+    }
+
+    #cnkt--part-07 dialog h2 {
+        font-size: var(--cnkt--title-size);
+    }
+
+    #cnkt--part-07 .cnkt--gallery-pair {
+        gap: 8px;
+    }
+
+    #cnkt--part-07 .cnkt--gallery-pair figcaption {
+        font-size: var(--cnkt--text-size);
+    }
+}
+
+@media (max-width: 1199px) {
+    #cnkt--part-07 h2 {
+        letter-spacing: 0.5px;
+    }
+}
+
+@media (max-width: 1199px) {
+    #cnkt--part-07 .cnkt--facilities-panel {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 8px;
+        min-height: 0px;
+    }
+
+    #cnkt--part-07 .cnkt--facilities-panel .cnkt--technology-card span {
+        font-size: var(--cnkt--text-size);
+    }
+
+    #cnkt--part-07 .cnkt--technology-card small {
+        font-size: var(--cnkt--text-size);
+    }
+
+    #cnkt--part-07 .cnkt--image-dialog {
+        padding: 48px 12px 16px;
+    }
+
+    #cnkt--part-07 .cnkt--image-dialog h2 {
+        font-size: var(--cnkt--title-size);
+    }
+
+    #cnkt--part-07 .cnkt--process-panel {
+        padding: 24px 18px;
+        min-height: 0px;
+    }
+
+    #cnkt--part-07 .cnkt--process-heading {
+        margin-bottom: 22px;
+    }
+
+    #cnkt--part-07 .cnkt--process-heading>p {
+        font-size: var(--cnkt--text-size);
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+    }
+
+    #cnkt--part-07 .cnkt--process-heading h3 {
+        font-size: var(--cnkt--title-size);
+    }
+
+    #cnkt--part-07 .cnkt--process-panel .cnkt--process-steps {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--cnkt--space-sm);
+    }
+
+    #cnkt--part-07 .cnkt--process-panel .cnkt--process-step {
+        padding: 18px;
+        gap: var(--cnkt--space-sm);
+        min-height: 0px;
+        border-radius: 10px;
+    }
+
+    #cnkt--part-07 .cnkt--step-number {
+        font-size: var(--cnkt--text-size);
+        padding-top: 2px;
+    }
+
+    #cnkt--part-07 .cnkt--process-step h4 {
+        font-size: var(--cnkt--process-title-size);
+        margin-bottom: 8px;
+    }
+
+    #cnkt--part-07 .cnkt--process-step p {
+        font-size: var(--cnkt--text-size);
+        line-height: 1.6;
+    }
+
+    #cnkt--part-07 .cnkt--process-action {
+        position: static;
+        width: auto;
+        min-height: 0px;
+        padding: 24px 0px 0px;
+        gap: 14px;
+        font-size: var(--cnkt--text-size);
+    }
+}
+
+@media (max-width: 699px) {
+    #cnkt--part-07 .cnkt--process-panel .cnkt--process-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1199px) {
+    #cnkt--part-07 .cnkt--journey-overlay {
+        gap: 18px;
+    }
+
+    #cnkt--part-07 .cnkt--journey-play-label {
+        font-size: var(--cnkt--text-size);
+    }
+}
+
+@media (max-width: 699px) {
+    #cnkt--part-07 .cnkt--journey-play-label {
+        font-size: var(--cnkt--text-size);
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1199px) {
+    #cnkt--part-07 h2 {
+        font-size: var(--cnkt--title-size);
+    }
+
+    #cnkt--part-07 .cnkt--technology-tabs button {
+        font-size: var(--cnkt--text-size);
+        padding: 12px 6px;
+    }
+
+    #cnkt--part-07 .cnkt--equipment-panel,
+    #cnkt--part-07 .cnkt--facilities-panel {
+        grid-template-columns: 2.04fr 1fr;
+        align-items: stretch;
+    }
+
+    #cnkt--part-07 .cnkt--technology-card.cnkt--featured {
+        height: 500px;
+        aspect-ratio: auto;
+    }
+
+    #cnkt--part-07 .cnkt--technology-stack {
+        grid-template-rows: repeat(3, 160px);
+    }
+}
+
+#cnkt--part-07 {
+    font-weight: var(--cnkt--weight-content);
+}
+
+#cnkt--part-07 h2,
+#cnkt--part-07 h3 {
+    font-weight: var(--cnkt--weight-title);
+}
+
+#cnkt--part-07 button {
+    font-weight: var(--cnkt--weight-button);
+}
+
+#cnkt--part-07 .cnkt--text-semibold {
+    font-weight: 600;
+}
+
+#cnkt--part-07 .cnkt--text-bold {
+    font-weight: 700;
+}
+
+#cnkt--part-07 .cnkt--text-extrabold {
+    font-weight: 800;
+}
+
+#cnkt--part-07 .cnkt--text-black {
+    font-weight: 900;
+}
+
+
+/* Chỉnh độ đậm tại --cnkt--weight-content/title/button ở phía trên.
+   Các class font dưới đây dùng khi cần chọn riêng Myriad Pro hoặc Times Italic. */
+
+#cnkt--part-07 .cnkt--text-myriad {
+    font-family: 'id4HomeMyriadPro', var(--cnkt--font-body);
+    font-weight: 400;
+}
+
+#cnkt--part-07 .cnkt--text-times-italic {
+    font-family: 'id4HomeTimes', 'Times New Roman', serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* ĐỘ ĐẬM CHỮ: áp dụng cả những đoạn bị font shorthand đặt lại về Regular.
+   Chỉnh các biến --cnkt--weight-* ở trên; không đổi kích thước hoặc bố cục. */
+
+#cnkt--part-07 p,
+#cnkt--part-07 li,
+#cnkt--part-07 dd,
+#cnkt--part-07 .cnkt--step-number {
+    font-weight: var(--cnkt--weight-content);
+}
+
+#cnkt--part-07 h1,
+#cnkt--part-07 h4,
+#cnkt--part-07 dt {
+    font-weight: var(--cnkt--weight-title);
+}
+
+#cnkt--part-07 small,
+#cnkt--part-07 figcaption,
+#cnkt--part-07 .cnkt--image-dialog h2 {
+    font-weight: var(--cnkt--weight-caption);
+}
+
+
+/* CĂN NỘI DUNG THEO PDF MẪU: chỉ bố cục trang, không tác động popup. */
+
+
+/* SECTION 3: tiêu đề, mô tả và nút nằm giữa như bản mẫu. */
+
+
+/* SECTION 4 / 5: nội dung chi tiết căn trái, tiêu đề section căn giữa. */
+
+@media (max-width: 1199px) {
+    #cnkt--part-07 .cnkt--container {
+        width: calc(100% - 40px);
+        max-width: 960px;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 699px) {
+
+    /* SECTION 1 / 2: khoảng cách đồng đều và dòng trích dẫn nằm giữa. */
+    /* SECTION 3 / 4: đủ rộng để đọc, không dồn chữ thành cột hẹp. */
+    /* SECTION 5 / 6: căn hồ sơ với lề chung, giữ video đúng tỉ lệ. */
+    /* SECTION 7: ảnh chính và nhóm công nghệ gọn như bố cục mẫu. */
+    #cnkt--part-07 .cnkt--technology {
+        padding-top: 32px;
+    }
+
+    #cnkt--part-07 .cnkt--equipment-panel {
+        grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+        gap: 8px;
+        padding: 8px;
+        align-items: stretch;
+    }
+
+    #cnkt--part-07 .cnkt--featured {
+        height: 100%;
+        min-height: 238px;
+        aspect-ratio: auto;
+    }
+
+    #cnkt--part-07 .cnkt--technology-stack {
+        grid-template-rows: repeat(3, minmax(74px, 1fr));
+        gap: 8px;
+    }
+
+    #cnkt--part-07 .cnkt--equipment-panel .cnkt--technology-card span {
+        font-size: var(--cnkt--text-size);
+        line-height: 1.35;
+        left: 7px;
+        right: 5px;
+        bottom: 7px;
+        letter-spacing: 0;
+    }
+
+    #cnkt--part-07 .cnkt--equipment-panel .cnkt--featured span {
+        font-size: var(--cnkt--text-size);
+    }
+
+    /* SECTION 8: ảnh chữ nằm giữa và luôn vừa chiều ngang điện thoại. */
+}
+
+
+/* MOBILE — VỊ TRÍ POPUP: neo gần đầu viewport, không căn giữa dọc màn hình dài. */
+
+@media (max-width: 43.6875em) {
+    #cnkt--part-07 dialog[open] {
+        position: fixed;
+        top: max(1rem, env(safe-area-inset-top));
+        bottom: auto;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        max-height: calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+        overflow-y: auto;
+    }
+}
+
+
+/* POPUP SECTION 1 / 2 — PC / TABLET / MOBILE: kích thước tương đối theo viewport.
+   Khung ôm nội dung; ảnh nguyên tỉ lệ; nội dung dài cuộn trong khung. */
+
+
+/* SECTION 3 — ẢNH HÀM RĂNG: ảnh PNG riêng, thu theo tỉ lệ mẫu; không phóng/cắt bằng cover. */
+
+
+/* SECTION 5 — CĂN ẢNH BÁC SĨ: giữ nguyên ảnh và tỷ lệ; cân theo từng màn hình. */
+
+
+/* SECTION 8 — ẢNH CHỮ THEO PDF MẪU.
+   PNG 1382 x 888 có phần chữ tại x=39, y=180, rộng 1304, cao 528.
+   Khung dưới chỉ ẩn khoảng trống trong suốt; không sửa file ảnh gốc. */
+
+
+/* SECTION 6 — Ảnh và video phủ hết khung nội dung, giữ tỷ lệ gốc khi hiển thị. */
+
+#cnkt--part-07 .cnkt--journey-poster,
+#cnkt--part-07 .cnkt--journey-player video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* SECTION 4 — Ảnh máng hướng dẫn kèm logo nền: kích thước và vị trí theo PDF mẫu. */
+
+
+/* KHOẢNG CÁCH THEO GDW iD-4 V2.2: bản PC 1920px; tablet/mobile dùng rem và vw.
+   Chỉ căn nội dung trong main, không thay popup, ảnh nền hoặc chức năng. */
+
+@media (min-width: 75em) {
+
+    /* SECTION 1 / 2: khoảng đầu, cuối và khoảng cách tới ảnh khách hàng. */
+    /* SECTION 3: tiêu đề, hai đoạn mô tả và hình nằm trong chiều cao bản mẫu. */
+    /* Dành khoảng thở giữa nút và ảnh răng, giữ tỷ lệ gốc bằng contain. */
+    /* SECTION 4: tiêu đề cách mép trên như PDF, hồ sơ lợi ích có lề cuối. */
+    /* SECTION 5 / 6 / 7: giữ các mốc tiêu đề và nội dung của mẫu. */
+    #cnkt--part-07 .cnkt--technology {
+        height: calc(1080 * var(--cnkt--u));
+    }
+
+    #cnkt--part-07 .cnkt--technology-tabs,
+    #cnkt--part-07 .cnkt--technology-panel {
+        margin-top: calc(24 * var(--cnkt--u));
+    }
+}
+
+@media (max-width: 74.9375em) {
+    #cnkt--part-07 {
+        --cnkt--section-space: clamp(2rem, 4.5vw, 3rem);
+        --cnkt--content-space: clamp(1.25rem, 3vw, 1.75rem);
+    }
+
+    #cnkt--part-07>section h2:not(.cnkt--sr-only):not(dialog h2) {
+        font-size: var(--cnkt--title-size);
+        line-height: 1.3;
+        letter-spacing: .035em;
+        text-wrap: balance;
+    }
+
+    #cnkt--part-07 .cnkt--technology {
+        height: auto;
+        padding-block: var(--cnkt--section-space);
+    }
+
+    #cnkt--part-07 .cnkt--technology-tabs,
+    #cnkt--part-07 .cnkt--technology-panel {
+        margin-top: var(--cnkt--content-space);
+    }
+}
+
+
+/* MOBILE — Căn giữa hai link Tìm hiểu iD-4 Solution, giữ nội dung mô tả căn như cũ. */
+
+
+/* SECTION 2 — MOBILE: dùng tỷ lệ ảnh gốc 637/971 như PC, không cắt chân dung. */
+
+
+/* SECTION 4: tiêu đề nội dung viết toàn bộ chữ hoa; SECTION 1 / 5: cùng kiểu chấm chuyển slide. */
+
+
+/* GIÃN DÒNG CÁC KHỐI NỘI DUNG: tiêu đề 1.2–1.3, mô tả 1.4; giữ font và độ đậm. */
+
+#cnkt--part-07>section :is(p,
+    li,
+    dd):not(dialog *) {
+    line-height: 1.4;
+}
+
+#cnkt--part-07>section :is(h3,
+    h4,
+    dt):not(dialog *) {
+    line-height: 1.3;
+}
+
+#cnkt--part-07>section h2:not(dialog *) {
+    line-height: 1.2;
+}
+
+
+/* SECTION 3 / 4 — Giãn dòng mô tả và tách các mục lợi ích cho dễ đọc. */
+
+
+/* SECTION 5 — Giãn dòng nội dung hồ sơ bác sĩ như các khối giới thiệu và lợi ích. */
+
+
+/* SECTION 5 — Lề trên tiêu đề bằng lề dưới cụm chấm chuyển slide. */
+
+
+/* SECTION 5 — Cân lề trên/dưới của toàn bộ nội dung, không chỉ riêng chấm chuyển slide. */
+
+
+/* SECTION 3 — Phóng lớn ảnh hàm răng, căn giữa và cân khoảng cách trên/dưới ảnh. */
+
+
+/* SECTION 4 — Toàn bộ nội dung nằm giữa theo chiều cao, lề trên và dưới bằng nhau. */
+
+
+/* SECTION 5 — Căn giữa toàn khối và hồ sơ từng slide theo chiều dọc. */
+
+
+/* SECTION 4 — Cân chiều dọc theo nhóm nội dung thực, bỏ chiều cao tối thiểu cũ. */
+
+
+/* SECTION 5 — Ảnh sát đáy section; hồ sơ nằm giữa vùng từ tiêu đề đến đáy. */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #cnkt--part-07 *,
+    #cnkt--part-07 ::before,
+    #cnkt--part-07 ::after {
+        transition: none !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #cnkt--part-07 .cnkt--image-dialog {
+        animation: auto ease 0s 1 normal none running none;
+    }
+}
+
+#cnkt--part-07 .cnkt--technology-tabs button {
+    min-height: 0;
+}
+
+
+/* Mobile: keep swipe and expose the same slide selector without covering the photos. */
+
+
+/* Preserve authored sentence case; keep heading/dt capitalization rules. */
+
+#cnkt--part-07 :is(p,
+    dd,
+    li) {
+    text-transform: none;
+}
+
+
+/* Defaults also cover content added later in WordPress. */
+
+#cnkt--part-07 :is(p,
+    li,
+    dd,
+    dt,
+    small,
+    figcaption,
+    blockquote,
+    a,
+    label,
+    input,
+    textarea,
+    select),
+#cnkt--part-07 button:not(.cnkt--round-arrow):not([data-close]):not([data-slider-dot]) {
+    font-size: var(--cnkt--text-size);
+}
+
+#cnkt--part-07 :is(h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6) {
+    font-size: var(--cnkt--title-size);
+}
+
+
+/* A longer heading/profile must expand instead of clipping text. */
+
+#cnkt--part-07 .cnkt--technology {
+    height: auto;
+}
+
+#cnkt--part-07 .cnkt--facilities-panel,
+#cnkt--part-07 .cnkt--process-panel {
+    height: auto;
+    min-height: 0;
+}
+
+#cnkt--part-07 .cnkt--technology-tabs button {
+    white-space: normal;
+}
+
+#cnkt--part-07 .cnkt--technology-card span {
+    max-width: calc(100% - 1rem);
+    overflow-wrap: anywhere;
+}
+
+
+/* DOCTORS ONLY: one grid owns photo/profile positioning; remove legacy left/top offsets. */
+
+
+/* Balance the profile between the section title and bottom in the two-column layout. */
+
+
+/* Mobile: center the text above the original bottom-anchored portrait. */
+
+
+/* Customer stories only: keep the frame, reveal portraits and balance both text bands. */
+
+
+/* Desktop exception: quote size follows the 51.68px reference at 1920px. */
+
+
+/* Consultation artwork and CTA follow the supplied reference; URLs stay in HTML. */
+
+
+/* Keep the secondary benefits heading readable against its dark background. */
+
+
+/* Keep both decorative side patterns visible despite the inline cover setting. */
+
+
+/* Mobile consultation: smaller artwork/CTA, proportional decorative background. */
+
+
+/* Desktop facilities: match equipment panel height instead of intrinsic image height. */
+
+@media (min-width: 75em) {
+    #cnkt--part-07 .cnkt--facilities-panel {
+        height: calc(668 * var(--cnkt--u));
+        min-height: 0;
+    }
+}
+
+
+/* Quy trình & Dịch vụ: bốn ảnh dùng cùng lưới với tab Thiết bị. */
+
+#cnkt--part-07 .cnkt--process-layout .cnkt--technology-card::after {
+    inset: 0;
+    background: linear-gradient(transparent 15%, rgb(0 0 0 / .87));
+}
+
+#cnkt--part-07 .cnkt--process-layout .cnkt--technology-card span {
+    left: clamp(.625rem, 1.25vw, 1.5rem);
+    right: clamp(.625rem, 1.25vw, 1.5rem);
+    bottom: clamp(.625rem, 1.1vw, 1.25rem);
+    letter-spacing: normal;
+}
+
+#cnkt--part-07 .cnkt--process-layout .cnkt--technology-card small {
+    display: block;
+    margin-top: .15em;
+    font-size: .875em;
+    line-height: 1.3;
+}
+
+#cnkt--part-07 .cnkt--process-layout .cnkt--process-product {
+    background: #ede6da;
+}
+
+@media (max-width: 43.749em) {
+    #cnkt--part-07 .cnkt--technology-tabs {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    #cnkt--part-07 .cnkt--technology-tabs button {
+        min-height: 3.6rem;
+    }
+
+    #cnkt--part-07 .cnkt--equipment-panel {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    #cnkt--part-07 .cnkt--equipment-panel .cnkt--technology-stack {
+        grid-template-rows: none;
+    }
+
+    #cnkt--part-07 .cnkt--equipment-panel .cnkt--technology-card {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 21 / 10;
+    }
+
+    #cnkt--part-07 .cnkt--equipment-panel .cnkt--technology-card.cnkt--featured {
+        aspect-ratio: 10 / 7;
+    }
+
+    #cnkt--part-07 .cnkt--equipment-panel .cnkt--technology-card img {
+        position: absolute;
+        inset: 0;
+    }
+}
+
+#cnkt--part-07 .cnkt--container {
+    max-width: calc(100% - 24px);
+}
+
+#cnkt--part-07 .cnkt--technology-tabs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+#cnkt--part-07 .cnkt--technology-tabs button {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+#cnkt--part-07 .cnkt--image-dialog {
+    box-sizing: border-box;
+    max-width: calc(100% - 24px);
+    max-height: calc(100vh - 24px);
+    max-height: calc(100dvh - 24px);
+}
+
+
+/* Điện thoại: căn ba tab và các thẻ ảnh theo cùng một lề. */
+
+@media (max-width: 43.749em) {
+    #cnkt--part-07 .cnkt--technology-tabs {
+        gap: 6px;
+        padding: 6px;
+    }
+
+    #cnkt--part-07 .cnkt--technology-tabs button {
+        min-height: 48px;
+        padding: 6px 4px;
+        line-height: 1.25;
+    }
+
+    #cnkt--part-07 .cnkt--equipment-panel {
+        gap: 8px;
+        padding: 6px;
+    }
+
+    #cnkt--part-07 .cnkt--equipment-panel .cnkt--technology-stack {
+        gap: 8px;
+    }
+
+    #cnkt--part-07 .cnkt--equipment-panel .cnkt--technology-card span {
+        inset: auto 10px 10px;
+        max-width: none;
+        line-height: 1.25;
+    }
+
+    #cnkt--part-07 .cnkt--image-dialog {
+        margin: auto;
+    }
+
+    #cnkt--part-07 .cnkt--image-dialog .cnkt--dialog-close {
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    #cnkt--part-07 .cnkt--image-dialog h2 {
+        font-size: var(--cnkt--text-size);
+        line-height: 1.35;
+        overflow-wrap: anywhere;
+    }
+}
+
+#cnkt--part-07 {
+    margin-inline: auto;
+}
+
+#cnkt--part-07 .cnkt--technology {
+    padding-block: var(--cnkt--section-space, clamp(2rem, 5.3125vw, 102px));
+}
+
+#cnkt--part-07 #cnkt--technology-title {
+    margin: 0;
+}
+
+#cnkt--part-07 .cnkt--technology-tabs,
+#cnkt--part-07 .cnkt--equipment-panel {
+    padding: var(--cnkt--panel-padding, calc(20 * var(--cnkt--u)));
+}
+
+@media (max-width: 1199px) {
+    #cnkt--part-07 {
+        --cnkt--panel-padding: 8px;
+    }
+}
+
+@media (max-width: 43.749em) {
+    #cnkt--part-07 {
+        --cnkt--panel-padding: 6px;
+    }
+}

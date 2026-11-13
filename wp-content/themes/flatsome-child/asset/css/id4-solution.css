@@ -1,3 +1,200 @@
+/* iD4 IMPLANT SOLUTION */
+
+:root {
+    --id4-solution--gold: #d0a44a;
+    --id4-solution--gold-dark: #af8127;
+    --id4-solution--ink: #251e19;
+    --id4-solution--cream: #f7edd8;
+    --id4-solution--page: 1120px
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    font-family: Arial, "Helvetica Neue", sans-serif;
+    color: var(--id4-solution--ink);
+    background: #fff
+}
+
+img {
+    max-width: 100%;
+    display: block
+}
+
+button,
+a {
+    touch-action: manipulation
+}
+
+button {
+    font: inherit;
+    cursor: pointer
+}
+
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible {
+    outline: 3px solid var(--id4-solution--gold);
+    outline-offset: 3px
+}
+
+[hidden] {
+    display: none !important
+}
+
+.id4-solution--container {
+    width: min(90%, var(--id4-solution--page));
+    margin-inline: auto
+}
+
+.id4-solution--narrow {
+    max-width: 1010px
+}
+
+h2 {
+    margin: 0;
+    color: var(--id4-solution--gold);
+    font-size: clamp(24px, 2.55vw, 38px);
+    letter-spacing: .045em;
+    line-height: 1.25;
+    font-weight: 800;
+    text-align: center
+}
+
+.id4-solution--intro {
+    padding: clamp(32px, 4vw, 62px) 0 clamp(34px, 4.3vw, 64px);
+    text-align: center;
+    background: #fff;
+    color: #24201d
+}
+
+.id4-solution--intro-content {
+    max-width: 1000px
+}
+
+.id4-solution--intro h1 {
+    font-size: clamp(27px, 2.9vw, 41px);
+    line-height: 1.16;
+    letter-spacing: .025em;
+    color: var(--id4-solution--gold);
+    margin: 0 0 12px;
+    font-weight: 800
+}
+
+.id4-solution--intro .id4-solution--eyebrow {
+    font-size: clamp(13px, 1.23vw, 17px);
+    margin: 0 0 11px;
+    font-weight: 400;
+    line-height: 1.35
+}
+
+.id4-solution--intro p:not(.id4-solution--eyebrow) {
+    font-size: clamp(13px, 1.18vw, 16px);
+    line-height: 1.27;
+    margin: 0 auto 11px;
+    max-width: 940px
+}
+
+.id4-solution--intro p:last-child {
+    margin-bottom: 0
+}
+
+@media(max-width:767px) {
+    .id4-solution--container {
+        width: 92%
+    }
+
+    .id4-solution--intro {
+        padding: 28px 0 35px
+    }
+
+    .id4-solution--intro h1 {
+        font-size: clamp(23px, 6vw, 30px)
+    }
+
+    .id4-solution--intro .id4-solution--eyebrow {
+        font-size: clamp(11px, 2.8vw, 14px)
+    }
+
+    .id4-solution--intro p:not(.id4-solution--eyebrow) {
+        font-size: clamp(12px, 2.95vw, 14px);
+        line-height: 1.4;
+        margin-bottom: 12px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior: auto
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: .01ms !important
+    }
+}
+
+:root {
+    --id4-solution--gold: #c7a459;
+    --id4-solution--cream: #f5ecd8;
+    --id4-solution--page: 1480px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --id4-solution--unit: min(1vw, 19.2px);
+    }
+
+    .id4-solution--container {
+        width: min(77.2%, var(--id4-solution--page));
+        max-width: none;
+    }
+
+    main>section[aria-labelledby] h2 {
+        font-size: calc(3 * var(--id4-solution--unit));
+        line-height: 1.15;
+        letter-spacing: .055em;
+    }
+
+    .id4-solution--intro {
+        padding: calc(3.3 * var(--id4-solution--unit)) 0 calc(3.5 * var(--id4-solution--unit));
+    }
+
+    .id4-solution--intro h1 {
+        font-size: calc(3 * var(--id4-solution--unit));
+        margin-bottom: calc(.8 * var(--id4-solution--unit));
+        letter-spacing: .055em;
+    }
+
+    .id4-solution--intro .id4-solution--eyebrow,
+    .id4-solution--intro p:not(.id4-solution--eyebrow) {
+        max-width: none;
+        margin-bottom: calc(1.1 * var(--id4-solution--unit));
+        font-size: calc(1.57 * var(--id4-solution--unit));
+        line-height: 1.16;
+    }
+
+    .id4-solution--intro p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+/* end iD4 IMPLANT SOLUTION */
+
+
 /* ID4 SOLUTION LÀ GÌ? 
  start **/
 
@@ -839,3 +1036,337 @@ body {
 
 
 /* end QUY TRÌNH CỦA ID-4 IMPLANT SOLUTION  */
+
+
+/* ai là người phù hợp với iD-4 Implant Solution? */
+
+:root {
+    --id4-solution--gold: #c7a459;
+    --id4-solution--card-border: #87632d;
+    --id4-solution--candidate-text: #f4f0eb;
+}
+
+body {
+    margin: 0;
+}
+
+.id4-solution--candidates {
+    --id4-solution--case-spacing: clamp(28px, 3.5vw, 56px);
+    padding: clamp(34px, 5vw, 76px) 0;
+    background: linear-gradient(#241e19, #090807 32%, #241e19);
+    color: var(--id4-solution--candidate-text);
+    font: 400 clamp(14px, 1.12vw, 17px)/1.6 "Segoe UI", Arial, sans-serif;
+}
+
+.id4-solution--candidates .id4-solution--candidates-inner {
+    width: min(calc(100% - 40px), 77.2%, 1480px);
+    margin-inline: auto;
+}
+
+.id4-solution--candidates #id4-solution--candidates-title {
+    margin: 0 0 .35em;
+    color: var(--id4-solution--gold);
+    font-size: clamp(24px, 3vw, 50px);
+    font-weight: 800;
+    letter-spacing: .035em;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.id4-solution--candidates .id4-solution--subtitle {
+    max-width: 74ch;
+    margin: 0 auto clamp(20px, 2.6vw, 40px);
+    color: inherit;
+    text-align: center;
+}
+
+.id4-solution--candidate-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(12px, 1.5vw, 24px);
+    margin-bottom: var(--id4-solution--case-spacing);
+}
+
+.id4-solution--candidate-card {
+    box-sizing: border-box;
+    padding: clamp(14px, 1.6vw, 26px);
+    border: 1px solid var(--id4-solution--card-border);
+    border-radius: 13px;
+    background: linear-gradient(110deg, #070606, #27201c);
+    text-align: center;
+    line-height: 1.5;
+}
+
+.id4-solution--case-list {
+    display: grid;
+    gap: var(--id4-solution--case-spacing);
+}
+
+.id4-solution--case {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    column-gap: clamp(18px, 3vw, 48px);
+}
+
+.id4-solution--candidates .id4-solution--case>h3 {
+    margin: 0 0 .5em;
+    color: var(--id4-solution--gold);
+    font-size: clamp(19px, 2vw, 32px);
+    font-weight: 750;
+    line-height: 1.25;
+}
+
+.id4-solution--candidates .id4-solution--case-copy p {
+    margin: 0;
+    color: inherit;
+}
+
+.id4-solution--candidates .id4-solution--case-copy p+p {
+    margin-top: .65em;
+}
+
+.id4-solution--clinical-compare {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow: hidden;
+    border: 2px solid var(--id4-solution--card-border);
+    border-radius: 14px;
+    box-shadow: 0 0 12px #d1ab5855;
+}
+
+.id4-solution--clinical-compare figure {
+    aspect-ratio: 1.35;
+    margin: 0;
+    overflow: hidden;
+}
+
+.id4-solution--clinical-compare img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .id4-solution--case {
+        grid-template-columns: minmax(0, .91fr) minmax(0, 1fr);
+        align-items: start;
+    }
+
+    .id4-solution--case>h3 {
+        grid-column: 1 / -1;
+    }
+
+    .id4-solution--clinical-compare figure {
+        aspect-ratio: 4 / 3;
+    }
+}
+
+@media (max-width: 1023px) {
+    .id4-solution--candidates .id4-solution--candidates-inner {
+        width: min(calc(100% - 40px), 900px);
+    }
+
+    .id4-solution--candidate-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767px) {
+    .id4-solution--candidates .id4-solution--candidates-inner {
+        width: min(calc(100% - 32px), 520px);
+    }
+
+    .id4-solution--case {
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        margin-inline: auto;
+        text-align: left;
+    }
+
+    .id4-solution--case .id4-solution--case-photo {
+        margin-top: 16px;
+        width: 100%;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 380px) {
+    .id4-solution--candidate-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.id4-solution--candidates .id4-solution--case-detail {
+    display: block;
+    width: fit-content;
+    margin: .55em auto 0;
+    color: var(--id4-solution--gold);
+    font-size: 1.1em;
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.id4-solution--candidates .id4-solution--case-detail:hover,
+.id4-solution--candidates .id4-solution--case-detail:focus-visible {
+    text-decoration: underline;
+}
+
+.id4-solution--candidates .id4-solution--case>h1 {
+    grid-column: 1 / -1;
+    margin: 0 0 .5em;
+    color: var(--id4-solution--gold);
+    line-height: 1.2;
+}
+
+.id4-solution--case-photo {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--id4-solution--card-border);
+    border-radius: 14px;
+    box-shadow: 0 0 12px #d1ab5855;
+}
+
+
+/* end ai là người phù hợp với iD-4 Implant Solution? */
+
+
+/* chính sách bảo hành */
+
+:root {
+    --id4-warranty-bg: #f4ecd7;
+    --id4-warranty-white: #fff;
+    --id4-warranty-gold: #9b6a20;
+    --id4-warranty-rule: #d7ae62;
+    --id4-warranty-text: #211b17;
+}
+
+body {
+    margin: 0;
+}
+
+.id4-solution--warranty {
+    padding: clamp(24px, 4vw, 64px) 0;
+    background: var(--id4-warranty-bg);
+    color: var(--id4-warranty-text);
+    font: 400 clamp(14px, 1.15vw, 17px)/1.55 "Segoe UI", Arial, sans-serif;
+}
+
+.id4-solution--warranty-container {
+    width: min(77%, 960px);
+    margin-inline: auto;
+}
+
+.id4-solution--warranty #id4-solution--warranty-title {
+    margin: 0 0 .55em;
+    color: var(--id4-warranty-gold);
+    font-size: clamp(22px, 3vw, 42px);
+    line-height: 1.2;
+    letter-spacing: .04em;
+    text-align: center;
+}
+
+.id4-solution--warranty-intro,
+.id4-solution--warranty-panel {
+    padding: clamp(12px, 2vw, 26px) clamp(14px, 4vw, 50px);
+    border-radius: clamp(12px, 2vw, 24px);
+    background: var(--id4-warranty-white);
+    box-shadow: 0 2px 6px #38281926;
+}
+
+.id4-solution--warranty-intro {
+    margin-bottom: clamp(10px, 1.5vw, 22px);
+    text-align: center;
+}
+
+.id4-solution--warranty .id4-solution--warranty-intro h3,
+.id4-solution--warranty-panel summary {
+    color: var(--id4-warranty-gold);
+    font-size: clamp(14px, 1.35vw, 20px);
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: .035em;
+}
+
+.id4-solution--warranty .id4-solution--warranty-intro h3 {
+    margin: 0 0 .25em;
+}
+
+.id4-solution--warranty-intro p {
+    margin: 0;
+}
+
+.id4-solution--warranty-panel details+details {
+    margin-top: .35em;
+}
+
+.id4-solution--warranty-panel summary {
+    position: relative;
+    display: block;
+    padding: .7em 1.6em;
+    border-bottom: 1px solid var(--id4-warranty-rule);
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+}
+
+.id4-solution--warranty-panel summary::-webkit-details-marker {
+    display: none;
+}
+
+.id4-solution--warranty-panel summary::after {
+    position: absolute;
+    inset-inline-end: .25em;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "+";
+}
+
+.id4-solution--warranty-panel details[open]>summary::after {
+    content: "−";
+}
+
+.id4-solution--warranty-panel summary:focus-visible {
+    outline: 2px solid var(--id4-warranty-gold);
+    outline-offset: 2px;
+}
+
+.id4-solution--warranty-copy {
+    padding: .7em 0 .35em;
+}
+
+.id4-solution--warranty .id4-solution--warranty-copy h4 {
+    margin: 0;
+    color: inherit;
+    font-size: 1em;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.id4-solution--warranty-copy p,
+.id4-solution--warranty-copy ul,
+.id4-solution--warranty-copy ol {
+    margin: 0 0 .45em;
+}
+
+.id4-solution--warranty-copy ul,
+.id4-solution--warranty-copy ol {
+    padding-inline-start: 1.25em;
+}
+
+.id4-solution--warranty-copy li+li {
+    margin-top: .18em;
+}
+
+@media (max-width: 767px) {
+    .id4-solution--warranty-container {
+        width: min(calc(100% - 28px), 560px);
+    }
+}
+
+
+/* end chính sách bảo hành  */
