@@ -169,21 +169,4 @@ function nhakhoaid4_enqueue_assets()
             true
         );
     }
-
-    // ==================================================
-    // 7. JAVASCRIPT TRANG CHỦ - TÊN FILE THỰC TẾ
-    // ==================================================
-
-    // JavaScript trang chủ nhakhoaid41
-    $home_js_41 = '/asset/js/nhakhoaid41.js';
-
-    if (is_front_page() && file_exists($theme_dir . $home_js_41)) {
-        wp_enqueue_script(
-            'nhakhoaid4-home-41',
-            $theme_uri . $home_js_41,
-            array(),
-            filemtime($theme_dir . $home_js_41),
-            true
-        );
-    }
 }

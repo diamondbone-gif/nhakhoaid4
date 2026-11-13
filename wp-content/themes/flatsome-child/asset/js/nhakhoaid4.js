@@ -8,10 +8,10 @@ function id4HomeInit() {
     id4HomePage.querySelectorAll("p:not([class]):not([id])").forEach((paragraph) => {
         const nodes = [...paragraph.childNodes];
         if (nodes.length && nodes.every((node) =>
-            node.nodeType === Node.COMMENT_NODE ||
-            (node.nodeType === Node.TEXT_NODE && !node.textContent.trim()) ||
-            (node.nodeType === Node.ELEMENT_NODE && node.matches("img, a, button"))
-        )) paragraph.replaceWith(...nodes);
+                node.nodeType === Node.COMMENT_NODE ||
+                (node.nodeType === Node.TEXT_NODE && !node.textContent.trim()) ||
+                (node.nodeType === Node.ELEMENT_NODE && node.matches("img, a, button"))
+            )) paragraph.replaceWith(...nodes);
     });
 
     // Dữ liệu và đường dẫn ảnh/video đọc trực tiếp từ HTML.

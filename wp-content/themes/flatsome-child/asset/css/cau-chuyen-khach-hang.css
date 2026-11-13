@@ -1,0 +1,1802 @@
+/* CỠ CHỮ NỘI DUNG: text, tiêu đề chính và tiêu đề bước quy trình.
+   rem giữ khả năng phóng chữ; vw co giãn liên tục cho mobile/tablet/PC. */
+
+@font-face {
+    font-family: cckhMyriadPro;
+    src: url('../assets/fonts/MyriadPro-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: cckhTimes;
+    src: url('../assets/fonts/timesi.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: cckhOpenSans;
+    src: url('../assets/fonts/OpenSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: cckhOpenSans;
+    src: url("../assets/fonts/OpenSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: cckhOpenSans;
+    src: url("../assets/fonts/OpenSans-Semibold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: cckhOpenSans;
+    src: url("../assets/fonts/OpenSans-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: cckhOpenSans;
+    src: url("../assets/fonts/OpenSans-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: cckhOpenSans;
+    src: url("../assets/fonts/OpenSans-SemiboldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+#cckh--part-02 {
+    --cckh--text-size: clamp(.9375rem, 1.2vw, 1.125rem);
+    --cckh--title-size: clamp(1.375rem, 2.86vw, 3.4375rem);
+    --cckh--process-title-size: clamp(1.125rem, 1.5vw, 1.5rem);
+    font-size: var(--cckh--text-size);
+}
+
+
+/* Isolate Flatsome form/button defaults inside page content. */
+
+#cckh--part-02 {
+    display: block;
+    width: 100%;
+    max-width: var(--cckh--page-max);
+    margin-inline: auto;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+#cckh--part-02 button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    min-height: 0;
+    min-width: 0;
+    box-shadow: none;
+    text-shadow: none;
+    text-transform: none;
+    letter-spacing: normal;
+    vertical-align: baseline;
+    appearance: none;
+}
+
+#cckh--part-02 h1,
+#cckh--part-02 h2,
+#cckh--part-02 h3,
+#cckh--part-02 h4 {
+    font-family: inherit;
+    color: inherit;
+}
+
+#cckh--part-02 p:empty {
+    display: none;
+}
+
+
+/* NỘI DUNG TRANG: không có menu/header, banner đầu và footer. Giữ tokens, font, responsive, slider, popup. */
+
+
+/* Open Sans: Light 300; Regular 400; Semibold 600; Bold 700; Italic 400/600. */
+
+
+/* Font có sẵn: Myriad Pro Regular và Times Italic chỉ có nét 400.
+   Open Sans có nét thật 300/400/600/700; dùng 600 cho nội dung, 700 cho tiêu đề/nút. */
+
+
+/* CSS thường: thứ tự reset, biến, nền tảng, thành phần, responsive, hỗ trợ truy cập.
+   Selector specificity-guard giữ mức ưu tiên responsive; không cần thêm ID này vào HTML. */
+
+#cckh--part-02 * {
+    box-sizing: border-box;
+}
+
+#cckh--part-02 button,
+#cckh--part-02 a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+#cckh--part-02 button {
+    font: inherit;
+    cursor: pointer;
+}
+
+#cckh--part-02 button:disabled {
+    cursor: default;
+}
+
+#cckh--part-02 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#cckh--part-02 img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#cckh--part-02 button {
+    border: 0px;
+}
+
+#cckh--part-02 button:focus-visible,
+#cckh--part-02 a:focus-visible {
+    outline: rgb(209, 162, 62) solid 3px;
+    outline-offset: 5px;
+}
+
+#cckh--part-02 h1,
+#cckh--part-02 h2,
+#cckh--part-02 h3,
+#cckh--part-02 h4,
+#cckh--part-02 p,
+#cckh--part-02 figure,
+#cckh--part-02 dl,
+#cckh--part-02 dd {
+    margin: 0px;
+}
+
+#cckh--part-02 [hidden] {
+    display: none !important;
+}
+
+#cckh--part-02 {
+    --cckh--u: min(.0520833333vw, 1px);
+    --cckh--gold: #d1a23e;
+    --cckh--dark: #211c16;
+    --cckh--cream: #f7efdd;
+    --cckh--heading: linear-gradient(110deg, #dcc18a, #ad7813);
+    --cckh--font-body: 'cckhOpenSans', sans-serif;
+    --cckh--font-ui: 'cckhOpenSans', sans-serif;
+    --cckh--content-max: 1480px;
+    --cckh--page-max: 1920px;
+    --cckh--gutter: 22px;
+    --cckh--space-sm: 12px;
+    --cckh--space-md: 24px;
+    --cckh--space-lg: 40px;
+    --cckh--radius: 14px;
+    --cckh--motion: .65s;
+    --cckh--ease: cubic-bezier(.22, .68, .15, 1);
+    --cckh--doctor-photo-width: 340px;
+    --cckh--doctor-photo-height: 375px;
+}
+
+@media (max-width: 1199px) {
+    #cckh--part-02 {
+        --cckh--u: .6px;
+    }
+}
+
+
+/* ĐỘ ĐẬM CHỮ: sửa các số bên dưới khi cần điều chỉnh toàn bộ phần nội dung.
+   600 dùng Semibold; 700 dùng Bold. Mức 800/900 cần font tương ứng để có nét thực. */
+
+#cckh--part-02 {
+    --cckh--weight-content: 400;
+    --cckh--weight-title: 700;
+    --cckh--weight-button: 700;
+    --cckh--weight-caption: 600;
+    /* Chữ chú thích và mô tả nhỏ. */
+    --cckh--weight-italic: 600;
+    /* File OpenSans-SemiboldItalic.ttf có sẵn. */
+}
+
+#cckh--part-02 {
+    margin: 0px;
+    background: rgb(255, 255, 255);
+    color: rgb(33, 28, 22);
+    font-family: var(--cckh--font-body);
+    font-size: var(--cckh--text-size);
+}
+
+#cckh--part-02 h2 {
+    font: 700 var(--cckh--title-size)/1.25 var(--cckh--font-ui);
+    letter-spacing: calc(1.4 * var(--cckh--u));
+    text-align: center;
+    background-image: var(--cckh--heading);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#cckh--part-02 section {
+    position: relative;
+    scroll-margin-top: calc(70 * var(--cckh--u));
+}
+
+#cckh--part-02 .cckh--site {
+    max-width: var(--cckh--page-max);
+    margin: auto;
+    overflow: hidden;
+}
+
+#cckh--part-02 .cckh--button {
+    display: inline-block;
+    background: var(--cckh--gold);
+    color: rgb(255, 255, 255);
+    border-radius: calc(11 * var(--cckh--u));
+    font: 700 var(--cckh--text-size)/1.2 var(--cckh--font-ui);
+    letter-spacing: calc(1.1 * var(--cckh--u));
+    padding: calc(8 * var(--cckh--u)) calc(22 * var(--cckh--u));
+    text-align: center;
+    transition: filter 0.2s, transform 0.2s;
+}
+
+#cckh--part-02 .cckh--button:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+#cckh--part-02 .cckh--skip-link {
+    position: fixed;
+    left: 16px;
+    top: -100px;
+    background: rgb(255, 255, 255);
+    padding: 12px;
+    z-index: 30;
+    font-size: var(--cckh--text-size);
+}
+
+#cckh--part-02 .cckh--skip-link:focus {
+    top: 16px;
+}
+
+
+/* ==================== SECTION 1: Hình ảnh trước / sau ==================== */
+
+
+/* ==================== SECTION 2: Câu chuyện khách hàng ==================== */
+
+#cckh--part-02 .cckh--stories {
+    height: calc(828 * var(--cckh--u));
+    padding-top: calc(40 * var(--cckh--u));
+    background: rgb(255, 255, 255);
+    isolation: isolate;
+}
+
+#cckh--part-02 .cckh--stories::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background: var(--cckh--stories-background) 50% 35%/calc(335 * var(--cckh--u)) auto repeat-x;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+#cckh--part-02 .cckh--story-track {
+    display: flex;
+    gap: calc(15 * var(--cckh--u));
+    width: calc(1990 * var(--cckh--u));
+    margin-left: calc(-34 * var(--cckh--u));
+    margin-top: calc(48 * var(--cckh--u));
+    height: calc(554 * var(--cckh--u));
+}
+
+#cckh--part-02 .cckh--story-card {
+    padding: 0px;
+    flex: 0 0 calc(320 * var(--cckh--u));
+    background: rgb(17, 17, 17);
+    border-radius: calc(24 * var(--cckh--u));
+    overflow: hidden;
+    position: relative;
+}
+
+#cckh--part-02 .cckh--story-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 12%;
+    transition: transform 0.3s;
+}
+
+#cckh--part-02 .cckh--story-card:nth-child(3) img,
+#cckh--part-02 .cckh--story-card:nth-child(5) img {
+    object-position: 50% 20%;
+}
+
+#cckh--part-02 .cckh--story-card:nth-child(4) img {
+    object-position: 50% 10%;
+}
+
+#cckh--part-02 .cckh--story-card:hover img {
+    transform: scale(1.03);
+}
+
+#cckh--part-02 .cckh--story-quote {
+    font: 600 italic var(--cckh--text-size)/1.2 var(--cckh--font-ui);
+    letter-spacing: calc(1.6 * var(--cckh--u));
+    text-align: center;
+    margin-top: calc(48 * var(--cckh--u));
+}
+
+
+/* ==================== SECTION 3: Giới thiệu iD-4 Solution ==================== */
+
+
+/* ==================== SECTION 4: Lợi ích ==================== */
+
+
+/* ==================== SECTION 5: Đội ngũ bác sĩ ==================== */
+
+
+/* ==================== SECTION 6: Hành trình / video ==================== */
+
+#cckh--part-02 .cckh--video-placeholder {
+    margin-top: calc(48 * var(--cckh--u));
+    width: 100%;
+    height: calc(832 * var(--cckh--u));
+    background: rgb(230, 231, 232);
+    border-radius: calc(30 * var(--cckh--u));
+    display: grid;
+    place-items: center;
+}
+
+#cckh--part-02 .cckh--play-circle {
+    width: calc(188 * var(--cckh--u));
+    height: calc(188 * var(--cckh--u));
+    border-radius: 50%;
+    background: rgb(191, 192, 192);
+    display: grid;
+    place-items: center;
+    transition: background 0.2s;
+}
+
+#cckh--part-02 .cckh--video-placeholder:hover .cckh--play-circle {
+    background: rgb(209, 162, 62);
+}
+
+#cckh--part-02 .cckh--play-circle>span {
+    margin-left: calc(17 * var(--cckh--u));
+    width: 0px;
+    height: 0px;
+    border-top: calc(41 * var(--cckh--u)) solid transparent;
+    border-bottom: calc(41 * var(--cckh--u)) solid transparent;
+    border-left: calc(71 * var(--cckh--u)) solid #e6e7e8;
+    border-radius: calc(8 * var(--cckh--u));
+}
+
+
+/* ==================== SECTION 7: Công nghệ kỹ thuật số ==================== */
+
+#cckh--part-02 .cckh--process-panel {
+    margin-top: calc(24 * var(--cckh--u));
+    height: calc(668 * var(--cckh--u));
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    align-items: center;
+    gap: calc(50 * var(--cckh--u));
+    padding: calc(40 * var(--cckh--u));
+    background: rgb(250, 249, 247);
+    border-radius: calc(30 * var(--cckh--u));
+    font-size: var(--cckh--text-size);
+}
+
+#cckh--part-02 .cckh--process-panel h3 {
+    font: 700 var(--cckh--title-size)/1.3 var(--cckh--font-ui);
+    margin-bottom: calc(24 * var(--cckh--u));
+}
+
+#cckh--part-02 .cckh--process-panel {
+    grid-template-columns: 0.8fr 1.4fr;
+    background: var(--cckh--dark);
+    color: rgb(255, 255, 255);
+}
+
+#cckh--part-02 .cckh--process-panel>img {
+    height: calc(580 * var(--cckh--u));
+    width: 100%;
+    object-fit: contain;
+}
+
+#cckh--part-02 .cckh--process-panel ol {
+    margin-bottom: calc(25 * var(--cckh--u));
+    padding-left: calc(35 * var(--cckh--u));
+}
+
+#cckh--part-02 .cckh--process-panel li {
+    margin-bottom: calc(20 * var(--cckh--u));
+}
+
+#cckh--part-02 .cckh--process-panel strong {
+    color: var(--cckh--gold);
+}
+
+
+/* ==================== SECTION 8: Đặt lịch tư vấn ==================== */
+
+#cckh--part-02 .cckh--small-rule {
+    display: block;
+    width: calc(45 * var(--cckh--u));
+    height: calc(2 * var(--cckh--u));
+    background: var(--cckh--gold);
+    margin: calc(25 * var(--cckh--u)) 0;
+}
+
+#cckh--part-02 dialog {
+    border: 1px solid rgba(209, 162, 62, 0.333);
+    border-radius: 18px;
+    padding: 44px 36px 32px;
+    width: min(540px, 100% - 32px);
+    max-height: calc(100dvh - 40px);
+    overflow: auto;
+    color: rgb(33, 28, 22);
+    background: rgb(255, 255, 255);
+    font: var(--cckh--text-size) / 1.5 var(--cckh--font-ui);
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.333) 0px 20px 80px;
+}
+
+#cckh--part-02 dialog::backdrop {
+    background: rgba(0, 0, 0, 0.733);
+    backdrop-filter: blur(4px);
+}
+
+#cckh--part-02 dialog h2 {
+    font-size: var(--cckh--title-size);
+    letter-spacing: 0px;
+    margin-bottom: 20px;
+}
+
+#cckh--part-02 dialog p {
+    margin-block: 18px;
+}
+
+#cckh--part-02 dialog .cckh--button {
+    font-size: var(--cckh--text-size);
+    letter-spacing: 0.4px;
+    border-radius: 7px;
+    padding: 12px 20px;
+}
+
+#cckh--part-02 .cckh--dialog-close {
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    width: 38px;
+    height: 38px;
+    font-size: 32px;
+    line-height: 1;
+    background: transparent;
+    color: rgb(33, 28, 22);
+}
+
+#cckh--part-02 .cckh--gallery-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--cckh--space-sm);
+}
+
+#cckh--part-02 .cckh--gallery-pair img {
+    width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+}
+
+#cckh--part-02 .cckh--gallery-pair figcaption {
+    font: 700 var(--cckh--text-size) var(--cckh--font-ui);
+    color: rgb(165, 123, 34);
+    margin-top: 10px;
+}
+
+#cckh--part-02 #cckh--detail-image {
+    margin: auto;
+    max-height: 55vh;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+body.cckh--dialog-open {
+    overflow: hidden;
+}
+
+#cckh--part-02 .cckh--skip-link {
+    top: 0px;
+    transform: translateY(-160%);
+}
+
+#cckh--part-02 .cckh--skip-link:focus {
+    transform: translateY(0px);
+}
+
+#cckh--part-02 h2 {
+    letter-spacing: calc(2.8 * var(--cckh--u));
+}
+
+#cckh--part-02 .cckh--stories {
+    padding-top: calc(40 * var(--cckh--u));
+    height: calc(828 * var(--cckh--u));
+    isolation: isolate;
+    overflow: hidden;
+}
+
+#cckh--part-02 .cckh--stories::before {
+    display: none;
+}
+
+#cckh--part-02 .cckh--stories-backdrop {
+    display: flex;
+    gap: calc(15 * var(--cckh--u));
+    position: absolute;
+    left: calc(-34 * var(--cckh--u));
+    top: 0px;
+    width: max-content;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.105;
+    pointer-events: none;
+    filter: grayscale(1);
+}
+
+#cckh--part-02 .cckh--stories-backdrop>div {
+    flex: 0 0 calc(320 * var(--cckh--u));
+    width: calc(320 * var(--cckh--u));
+    height: 100%;
+    overflow: hidden;
+    border-radius: calc(24 * var(--cckh--u));
+    background: rgb(17, 17, 17);
+}
+
+#cckh--part-02 .cckh--stories-backdrop img {
+    width: 100%;
+    height: calc(486 * var(--cckh--u));
+    object-fit: cover;
+    object-position: 50% 12%;
+}
+
+#cckh--part-02 .cckh--stories-backdrop img+img {
+    transform: scaleY(-1);
+}
+
+#cckh--part-02 .cckh--stories-viewport {
+    height: calc(486 * var(--cckh--u));
+    width: 100%;
+    overflow: hidden;
+    margin-top: calc(48 * var(--cckh--u));
+}
+
+#cckh--part-02 .cckh--story-track {
+    width: max-content;
+    height: 100%;
+    margin: 0 0 0 calc(-34 * var(--cckh--u));
+    padding: 0px;
+    gap: 0px;
+    overflow: visible;
+    scroll-snap-type: none;
+    animation: 55s linear 0s infinite normal none running cckh--customer-loop;
+    will-change: transform;
+}
+
+#cckh--part-02 .cckh--story-group {
+    display: flex;
+    gap: calc(15 * var(--cckh--u));
+    padding-right: calc(15 * var(--cckh--u));
+    height: 100%;
+    flex-shrink: 0;
+}
+
+#cckh--part-02 .cckh--story-card {
+    width: calc(320 * var(--cckh--u));
+    height: 100%;
+    flex-basis: calc(320 * var(--cckh--u));
+    border-radius: calc(24 * var(--cckh--u));
+}
+
+#cckh--part-02 .cckh--story-card img {
+    object-position: 50% 12%;
+}
+
+#cckh--part-02 .cckh--story-quote {
+    margin-top: calc(48 * var(--cckh--u));
+    letter-spacing: calc(3.6 * var(--cckh--u));
+}
+
+#cckh--part-02 .cckh--story-card[data-portrait="3"] img,
+#cckh--part-02 .cckh--story-card[data-portrait="5"] img,
+#cckh--part-02 .cckh--story-card[data-portrait="6"] img {
+    transform: scale(1.15);
+    transform-origin: 50% 35%;
+}
+
+#cckh--part-02 .cckh--story-card[data-portrait="3"]:hover img,
+#cckh--part-02 .cckh--story-card[data-portrait="5"]:hover img,
+#cckh--part-02 .cckh--story-card[data-portrait="6"]:hover img {
+    transform: scale(1.18);
+}
+
+#cckh--part-02 .cckh--stories:has(.cckh--story-card:focus-visible) .cckh--story-track,
+#cckh--part-02.cckh--dialog-open .cckh--story-track {
+    animation-play-state: paused;
+}
+
+@keyframes cckh--customer-loop {
+    0% {
+        transform: translate3d(0px, 0px, 0px);
+    }
+
+    100% {
+        transform: translate3d(-50%, 0px, 0px);
+    }
+}
+
+#cckh--part-02 .cckh--process-panel {
+    position: relative;
+    display: block;
+    padding: calc(36 * var(--cckh--u));
+    color: var(--cckh--dark);
+    background: linear-gradient(135deg, rgb(250, 247, 239), rgb(242, 238, 230));
+    overflow: hidden;
+}
+
+#cckh--part-02 .cckh--process-heading {
+    text-align: left;
+    margin-bottom: calc(26 * var(--cckh--u));
+}
+
+#cckh--part-02 .cckh--process-heading>p {
+    font: 600 var(--cckh--text-size)/1.4 var(--cckh--font-ui);
+    color: rgb(164, 123, 39);
+    letter-spacing: calc(2 * var(--cckh--u));
+    margin-bottom: calc(8 * var(--cckh--u));
+}
+
+#cckh--part-02 .cckh--process-heading h3 {
+    font: 700 var(--cckh--title-size)/1.3 var(--cckh--font-ui);
+    margin: 0px;
+}
+
+#cckh--part-02 .cckh--process-panel .cckh--process-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(20 * var(--cckh--u));
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+#cckh--part-02 .cckh--process-panel .cckh--process-step {
+    margin: 0px;
+    min-height: calc(190 * var(--cckh--u));
+    display: flex;
+    gap: calc(20 * var(--cckh--u));
+    padding: calc(26 * var(--cckh--u));
+    border: 1px solid rgba(216, 199, 163, 0.3);
+    border-radius: calc(14 * var(--cckh--u));
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 calc(5 * var(--cckh--u)) calc(20 * var(--cckh--u)) #39230005;
+}
+
+#cckh--part-02 .cckh--step-number {
+    font: 400 var(--cckh--text-size)/1 var(--cckh--font-ui);
+    color: var(--cckh--gold);
+    padding-top: calc(3 * var(--cckh--u));
+    flex-shrink: 0;
+}
+
+#cckh--part-02 .cckh--process-step h4 {
+    font: 700 var(--cckh--process-title-size)/1.35 var(--cckh--font-ui);
+    margin-bottom: calc(12 * var(--cckh--u));
+}
+
+#cckh--part-02 .cckh--process-step p {
+    font: 400 var(--cckh--text-size)/1.55 var(--cckh--font-ui);
+    color: rgb(101, 96, 89);
+}
+
+#cckh--part-02 .cckh--process-action {
+    position: absolute;
+    right: calc(36 * var(--cckh--u));
+    bottom: calc(48 * var(--cckh--u));
+    width: calc((100% - 112 * var(--cckh--u)) / 3);
+    min-height: calc(190 * var(--cckh--u));
+    padding: calc(26 * var(--cckh--u));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: calc(20 * var(--cckh--u));
+    font: 600 var(--cckh--text-size)/1.4 var(--cckh--font-ui);
+}
+
+#cckh--part-02 .cckh--process-action .cckh--button {
+    font-size: var(--cckh--text-size);
+    padding: calc(14 * var(--cckh--u));
+    letter-spacing: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cckh--part-02 #cckh--detail-dialog {
+    width: min(540px, 100% - 32px);
+    height: min(740px, 100dvh - 32px);
+    max-height: none;
+    padding: 44px 36px 24px;
+    display: grid;
+    grid-template-rows: auto minmax(0px, 1fr) auto auto;
+    gap: 14px;
+}
+
+#cckh--part-02 #cckh--detail-dialog:not([open]) {
+    display: none;
+}
+
+#cckh--part-02 #cckh--detail-dialog h2 {
+    margin: 0px;
+    font: 700 var(--cckh--title-size)/1.3 var(--cckh--font-ui);
+    letter-spacing: 0px;
+}
+
+#cckh--part-02 #cckh--detail-dialog #cckh--detail-image {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    min-height: 0px;
+    object-fit: cover;
+    object-position: 50% 18%;
+    border-radius: 12px;
+}
+
+#cckh--part-02 #cckh--detail-text {
+    margin: 0px;
+    font: 400 var(--cckh--text-size)/1.5 var(--cckh--font-ui);
+}
+
+#cckh--part-02 #cckh--story-detail-link {
+    place-self: end center;
+}
+
+#cckh--part-02 .cckh--journey-poster {
+    position: absolute;
+    inset: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+#cckh--part-02 .cckh--journey-overlay {
+    position: absolute;
+    inset: 0px;
+    background: linear-gradient(0deg, rgba(19, 16, 13, 0.88), transparent 65%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: calc(28 * var(--cckh--u));
+}
+
+#cckh--part-02 .cckh--journey-play-label {
+    font: 600 var(--cckh--text-size)/1.4 var(--cckh--font-ui);
+    text-shadow: rgba(0, 0, 0, 0.533) 0px 2px 8px;
+}
+
+#cckh--part-02 .cckh--journey-player {
+    position: absolute;
+    inset: 0px;
+    background: rgb(0, 0, 0);
+}
+
+#cckh--part-02 .cckh--journey-player iframe,
+#cckh--part-02 .cckh--journey-player video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    object-fit: cover;
+}
+
+#cckh--part-02 #cckh--video-reset {
+    background: transparent;
+    color: rgb(110, 100, 85);
+    text-decoration: underline;
+    padding: 0px;
+    font: inherit;
+}
+
+#cckh--part-02 #cckh--video-reset {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.733);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+#cckh--part-02 #cckh--video-reset[hidden] {
+    display: none;
+}
+
+#cckh--part-02 #cckh--video-reset svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentcolor;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+#cckh--part-02 .cckh--stories-viewport {
+    touch-action: pan-y;
+    user-select: none;
+}
+
+#cckh--part-02 .cckh--story-track[data-story-dragging="true"] {
+    animation-play-state: paused;
+    cursor: grabbing;
+}
+
+#cckh--part-02 .cckh--story-track[data-story-dragging="true"] .cckh--story-card {
+    cursor: grabbing;
+}
+
+#cckh--part-02 .cckh--comparison-detail-link {
+    margin-top: 20px;
+}
+
+
+/* Chữ đậm 900: thêm class cckh--text-black vào phần chữ cần dùng.
+   Bộ font hiện tại chỉ có đến Bold 700; cần file hỗ trợ 900 để có nét 900 thực. */
+
+#cckh--part-02 .cckh--text-black {
+    font-weight: 900;
+}
+
+
+/* Câu chuyện khách hàng: ảnh nền full width, URL nằm trong style của section HTML. */
+
+#cckh--part-02 .cckh--stories {
+    background-image: var(--cckh--customer-background);
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#cckh--part-02 .cckh--stories::before,
+#cckh--part-02 .cckh--stories-backdrop {
+    display: none;
+}
+
+@media (min-width: 1921px) {
+    #cckh--part-02 {
+        background: rgb(245, 243, 239);
+    }
+
+    #cckh--part-02 .cckh--site {
+        box-shadow: rgba(0, 0, 0, 0.067) 0px 0px 80px;
+    }
+}
+
+@media (max-width: 1199px) {
+    #cckh--part-02 {
+        font-size: var(--cckh--text-size);
+    }
+
+    #cckh--part-02 .cckh--site {
+        width: 100%;
+    }
+
+    #cckh--part-02 h2 {
+        font-size: var(--cckh--title-size);
+        letter-spacing: 0.5px;
+        line-height: 1.35;
+    }
+
+    #cckh--part-02 .cckh--button {
+        font-size: var(--cckh--text-size);
+        border-radius: 6px;
+        padding: 10px 16px;
+        letter-spacing: 0.4px;
+    }
+
+    #cckh--part-02 section {
+        scroll-margin-top: 20px;
+    }
+
+    #cckh--part-02 .cckh--stories {
+        height: auto;
+        padding: 28px 0px 32px;
+    }
+
+    #cckh--part-02 .cckh--stories h2 {
+        padding-inline: 20px;
+    }
+
+    #cckh--part-02 .cckh--story-track {
+        height: 300px;
+        width: auto;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        margin: 25px 0px 0px;
+        padding-inline: 20px;
+        gap: var(--cckh--space-sm);
+        scrollbar-width: thin;
+    }
+
+    #cckh--part-02 .cckh--story-card {
+        flex-basis: 210px;
+        border-radius: var(--cckh--radius);
+        scroll-snap-align: center;
+    }
+
+    #cckh--part-02 .cckh--story-quote {
+        font-size: var(--cckh--text-size);
+        line-height: 1.5;
+        letter-spacing: 0.4px;
+        margin: 24px 24px 0px;
+    }
+
+    /* SECTION 6 — MOBILE/TABLET: nút video phủ kín khung, không có margin làm lộ nền đen. */
+    #cckh--part-02 .cckh--play-circle {
+        width: 62px;
+        height: 62px;
+    }
+
+    #cckh--part-02 .cckh--play-circle>span {
+        margin-left: 6px;
+        border-top-width: 14px;
+        border-bottom-width: 14px;
+        border-left-width: 24px;
+        border-radius: 3px;
+    }
+
+    #cckh--part-02 .cckh--process-panel {
+        height: auto;
+        min-height: 550px;
+        grid-template-columns: 1fr;
+        font-size: var(--cckh--text-size);
+        gap: 20px;
+        padding: 18px;
+        margin-top: 16px;
+        border-radius: var(--cckh--radius);
+    }
+
+    #cckh--part-02 .cckh--process-panel h3 {
+        font-size: var(--cckh--title-size);
+        margin-bottom: 15px;
+    }
+
+    #cckh--part-02 .cckh--process-panel>img {
+        height: 300px;
+    }
+
+    #cckh--part-02 .cckh--process-panel ol {
+        padding-left: 23px;
+        margin-bottom: 20px;
+    }
+
+    #cckh--part-02 .cckh--process-panel li {
+        margin-bottom: 15px;
+    }
+
+    #cckh--part-02 .cckh--small-rule {
+        width: 30px;
+        height: 1px;
+        margin: 15px 0px;
+    }
+
+    #cckh--part-02 dialog {
+        padding: 42px 20px 26px;
+        font-size: var(--cckh--text-size);
+    }
+
+    #cckh--part-02 dialog h2 {
+        font-size: var(--cckh--title-size);
+    }
+
+    #cckh--part-02 .cckh--gallery-pair {
+        gap: 8px;
+    }
+
+    #cckh--part-02 .cckh--gallery-pair figcaption {
+        font-size: var(--cckh--text-size);
+    }
+}
+
+@media (max-width: 1199px) {
+    #cckh--part-02 h2 {
+        letter-spacing: 0.5px;
+    }
+
+    #cckh--part-02 .cckh--stories {
+        height: auto;
+        padding: 28px 0px 40px;
+    }
+
+    #cckh--part-02 .cckh--stories-backdrop {
+        left: -20px;
+        gap: var(--cckh--space-sm);
+        opacity: 0.1;
+    }
+
+    #cckh--part-02 .cckh--stories-backdrop>div {
+        width: 210px;
+        flex-basis: 210px;
+        border-radius: var(--cckh--radius);
+    }
+
+    #cckh--part-02 .cckh--stories-backdrop img {
+        height: 300px;
+    }
+
+    #cckh--part-02 .cckh--stories-viewport {
+        height: 300px;
+        margin-top: 25px;
+    }
+
+    #cckh--part-02 .cckh--story-track {
+        margin-left: 20px;
+        animation-duration: 24s;
+        padding: 0px;
+        overflow: visible;
+    }
+
+    #cckh--part-02 .cckh--story-group {
+        gap: var(--cckh--space-sm);
+        padding-right: 12px;
+    }
+
+    #cckh--part-02 .cckh--story-card {
+        width: 210px;
+        flex-basis: 210px;
+        border-radius: var(--cckh--radius);
+    }
+
+    #cckh--part-02 .cckh--story-quote {
+        margin: 24px 24px 0px;
+        font-size: var(--cckh--text-size);
+        line-height: 1.5;
+        letter-spacing: 0.4px;
+    }
+}
+
+@media (max-width: 1199px) {
+    #cckh--part-02 .cckh--process-panel {
+        padding: 24px 18px;
+        min-height: 0px;
+    }
+
+    #cckh--part-02 .cckh--process-heading {
+        margin-bottom: 22px;
+    }
+
+    #cckh--part-02 .cckh--process-heading>p {
+        font-size: var(--cckh--text-size);
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+    }
+
+    #cckh--part-02 .cckh--process-heading h3 {
+        font-size: var(--cckh--title-size);
+    }
+
+    #cckh--part-02 .cckh--process-panel .cckh--process-steps {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--cckh--space-sm);
+    }
+
+    #cckh--part-02 .cckh--process-panel .cckh--process-step {
+        padding: 18px;
+        gap: var(--cckh--space-sm);
+        min-height: 0px;
+        border-radius: 10px;
+    }
+
+    #cckh--part-02 .cckh--step-number {
+        font-size: var(--cckh--text-size);
+        padding-top: 2px;
+    }
+
+    #cckh--part-02 .cckh--process-step h4 {
+        font-size: var(--cckh--process-title-size);
+        margin-bottom: 8px;
+    }
+
+    #cckh--part-02 .cckh--process-step p {
+        font-size: var(--cckh--text-size);
+        line-height: 1.6;
+    }
+
+    #cckh--part-02 .cckh--process-action {
+        position: static;
+        width: auto;
+        min-height: 0px;
+        padding: 24px 0px 0px;
+        gap: 14px;
+        font-size: var(--cckh--text-size);
+    }
+
+    #cckh--part-02 .cckh--process-action .cckh--button {
+        font-size: var(--cckh--text-size);
+        padding: 13px 18px;
+        align-self: flex-start;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 699px) {
+    #cckh--part-02 .cckh--process-panel .cckh--process-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1199px) {
+    #cckh--part-02 #cckh--detail-dialog {
+        padding: 44px 20px 20px;
+        gap: var(--cckh--space-sm);
+    }
+
+    #cckh--part-02 #cckh--detail-dialog h2 {
+        font-size: var(--cckh--title-size);
+    }
+
+    #cckh--part-02 #cckh--detail-text {
+        font-size: var(--cckh--text-size);
+    }
+
+    #cckh--part-02 .cckh--journey-overlay {
+        gap: 18px;
+    }
+
+    #cckh--part-02 .cckh--journey-play-label {
+        font-size: var(--cckh--text-size);
+    }
+}
+
+@media (max-width: 699px) {
+    #cckh--part-02 .cckh--journey-play-label {
+        font-size: var(--cckh--text-size);
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1199px) {
+    #cckh--part-02 h2 {
+        font-size: var(--cckh--title-size);
+    }
+}
+
+@media (max-width: 699px) {
+    #cckh--part-02 #cckh--detail-dialog {
+        width: min(340px, 100% - 40px);
+        height: min(560px, 100dvh - 48px);
+        padding: 52px 16px 16px;
+        gap: 10px;
+    }
+
+    #cckh--part-02 #cckh--detail-dialog h2 {
+        font-size: var(--cckh--title-size);
+    }
+
+    #cckh--part-02 #cckh--detail-text {
+        font-size: var(--cckh--text-size);
+        line-height: 1.45;
+    }
+
+    #cckh--part-02 #cckh--story-detail-link {
+        font-size: var(--cckh--text-size);
+        padding: 10px 16px;
+    }
+}
+
+#cckh--part-02 {
+    font-weight: var(--cckh--weight-content);
+}
+
+#cckh--part-02 h2,
+#cckh--part-02 h3 {
+    font-weight: var(--cckh--weight-title);
+}
+
+#cckh--part-02 button,
+#cckh--part-02 .cckh--button {
+    font-weight: var(--cckh--weight-button);
+}
+
+#cckh--part-02 .cckh--text-semibold {
+    font-weight: 600;
+}
+
+#cckh--part-02 .cckh--text-bold {
+    font-weight: 700;
+}
+
+#cckh--part-02 .cckh--text-extrabold {
+    font-weight: 800;
+}
+
+#cckh--part-02 .cckh--text-black {
+    font-weight: 900;
+}
+
+
+/* Chỉnh độ đậm tại --cckh--weight-content/title/button ở phía trên.
+   Các class font dưới đây dùng khi cần chọn riêng Myriad Pro hoặc Times Italic. */
+
+#cckh--part-02 .cckh--text-myriad {
+    font-family: 'cckhMyriadPro', var(--cckh--font-body);
+    font-weight: 400;
+}
+
+#cckh--part-02 .cckh--text-times-italic {
+    font-family: 'cckhTimes', 'Times New Roman', serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* ĐỘ ĐẬM CHỮ: áp dụng cả những đoạn bị font shorthand đặt lại về Regular.
+   Chỉnh các biến --cckh--weight-* ở trên; không đổi kích thước hoặc bố cục. */
+
+#cckh--part-02 p,
+#cckh--part-02 li,
+#cckh--part-02 dd,
+#cckh--part-02 .cckh--step-number,
+#cckh--part-02 #cckh--detail-text {
+    font-weight: var(--cckh--weight-content);
+}
+
+#cckh--part-02 h1,
+#cckh--part-02 h4,
+#cckh--part-02 dt {
+    font-weight: var(--cckh--weight-title);
+}
+
+#cckh--part-02 small,
+#cckh--part-02 figcaption {
+    font-weight: var(--cckh--weight-caption);
+}
+
+#cckh--part-02 .cckh--story-quote {
+    font-weight: var(--cckh--weight-italic);
+}
+
+
+/* CĂN NỘI DUNG THEO PDF MẪU: chỉ bố cục trang, không tác động popup. */
+
+
+/* SECTION 3: tiêu đề, mô tả và nút nằm giữa như bản mẫu. */
+
+
+/* SECTION 4 / 5: nội dung chi tiết căn trái, tiêu đề section căn giữa. */
+
+@media (max-width: 699px) {
+
+    /* SECTION 1 / 2: khoảng cách đồng đều và dòng trích dẫn nằm giữa. */
+    #cckh--part-02 .cckh--stories {
+        padding-block: 30px;
+    }
+
+    #cckh--part-02 .cckh--story-quote {
+        margin: 20px 20px 0;
+        font-size: var(--cckh--text-size);
+        line-height: 1.45;
+        text-align: center;
+    }
+
+    /* SECTION 3 / 4: đủ rộng để đọc, không dồn chữ thành cột hẹp. */
+    /* SECTION 5 / 6: căn hồ sơ với lề chung, giữ video đúng tỉ lệ. */
+    /* SECTION 7: ảnh chính và nhóm công nghệ gọn như bố cục mẫu. */
+    /* SECTION 8: ảnh chữ nằm giữa và luôn vừa chiều ngang điện thoại. */
+}
+
+
+/* MOBILE — VỊ TRÍ POPUP: neo gần đầu viewport, không căn giữa dọc màn hình dài. */
+
+@media (max-width: 43.6875em) {
+    #cckh--part-02 dialog[open] {
+        position: fixed;
+        top: max(1rem, env(safe-area-inset-top));
+        bottom: auto;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        max-height: calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+        overflow-y: auto;
+    }
+
+    #cckh--part-02 #cckh--detail-dialog[open] {
+        top: max(1rem, env(safe-area-inset-top));
+        bottom: auto;
+        margin: 0 auto;
+        max-height: calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    }
+}
+
+
+/* POPUP SECTION 1 / 2 — PC / TABLET / MOBILE: kích thước tương đối theo viewport.
+   Khung ôm nội dung; ảnh nguyên tỉ lệ; nội dung dài cuộn trong khung. */
+
+#cckh--part-02 #cckh--detail-dialog {
+    box-sizing: border-box;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    height: fit-content;
+    min-height: 0;
+    max-height: calc(100dvh - 3rem);
+    padding: 3rem clamp(1rem, 2.5vw, 2rem) 1.5rem;
+    border-radius: 1.25rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+#cckh--part-02 #cckh--detail-dialog {
+    width: min(32rem, 90vw);
+}
+
+#cckh--part-02 #cckh--detail-dialog[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(.75rem, 1.5vw, 1rem);
+}
+
+#cckh--part-02 #cckh--detail-dialog:not([open]) {
+    display: none;
+}
+
+#cckh--part-02 #cckh--detail-dialog .cckh--dialog-close {
+    top: .5rem;
+    right: .5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.75rem;
+    display: grid;
+    place-items: center;
+}
+
+#cckh--part-02 #cckh--detail-dialog h2 {
+    width: 100%;
+    margin: 0;
+    font-size: var(--cckh--title-size);
+    line-height: 1.4;
+    letter-spacing: 0;
+    text-align: center;
+    text-wrap: balance;
+}
+
+#cckh--part-02 #cckh--detail-dialog #cckh--detail-image {
+    flex: none;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: min(38dvh, 22rem);
+    min-height: 0;
+    object-fit: contain;
+    margin: 0;
+    border-radius: .75rem;
+}
+
+#cckh--part-02 #cckh--detail-text {
+    width: 100%;
+    margin: 0;
+    font-size: var(--cckh--text-size);
+    line-height: 1.55;
+    text-align: center;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+#cckh--part-02 #cckh--story-detail-link {
+    flex: none;
+    align-self: center;
+    width: min(100%, 14rem);
+    min-width: 0;
+    min-height: 2.75rem;
+    margin: .125rem 0 0;
+    padding: .625rem 1.25rem;
+    border-radius: .625rem;
+    font-size: var(--cckh--text-size);
+    line-height: 1.5;
+    text-align: center;
+}
+
+#cckh--part-02 #cckh--story-detail-link[aria-disabled="true"] {
+    opacity: .55;
+    cursor: default;
+}
+
+@media (max-width: 43.6875em) {
+
+    #cckh--part-02 #cckh--detail-dialog,
+    #cckh--part-02 #cckh--detail-dialog[open] {
+        width: min(26rem, 93vw);
+        top: 50dvh;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        max-height: calc(100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+        padding: 3rem clamp(.875rem, 4vw, 1.125rem) 1.25rem;
+        gap: clamp(.75rem, 3vw, .875rem);
+    }
+
+    #cckh--part-02 #cckh--detail-dialog h2 {
+        font-size: var(--cckh--title-size);
+    }
+
+    #cckh--part-02 #cckh--detail-dialog #cckh--detail-image {
+        max-height: min(32dvh, 16rem);
+    }
+
+    #cckh--part-02 #cckh--detail-text {
+        font-size: var(--cckh--text-size);
+    }
+}
+
+@media (max-height: 30em) {
+    #cckh--part-02 #cckh--detail-dialog #cckh--detail-image {
+        max-height: 24dvh;
+    }
+}
+
+
+/* SECTION 3 — ẢNH HÀM RĂNG: ảnh PNG riêng, thu theo tỉ lệ mẫu; không phóng/cắt bằng cover. */
+
+
+/* SECTION 5 — CĂN ẢNH BÁC SĨ: giữ nguyên ảnh và tỷ lệ; cân theo từng màn hình. */
+
+
+/* SECTION 8 — ẢNH CHỮ THEO PDF MẪU.
+   PNG 1382 x 888 có phần chữ tại x=39, y=180, rộng 1304, cao 528.
+   Khung dưới chỉ ẩn khoảng trống trong suốt; không sửa file ảnh gốc. */
+
+
+/* SECTION 6 — Ảnh và video phủ hết khung nội dung, giữ tỷ lệ gốc khi hiển thị. */
+
+#cckh--part-02 .cckh--journey-poster,
+#cckh--part-02 .cckh--journey-player video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* SECTION 4 — Ảnh máng hướng dẫn kèm logo nền: kích thước và vị trí theo PDF mẫu. */
+
+
+/* KHOẢNG CÁCH THEO GDW iD-4 V2.2: bản PC 1920px; tablet/mobile dùng rem và vw.
+   Chỉ căn nội dung trong main, không thay popup, ảnh nền hoặc chức năng. */
+
+@media (min-width: 75em) {
+
+    /* SECTION 1 / 2: khoảng đầu, cuối và khoảng cách tới ảnh khách hàng. */
+    #cckh--part-02 .cckh--stories {
+        height: calc(800 * var(--cckh--u));
+    }
+
+    #cckh--part-02 .cckh--stories-viewport {
+        margin-top: calc(48 * var(--cckh--u));
+    }
+
+    #cckh--part-02 .cckh--story-quote {
+        margin-top: calc(48 * var(--cckh--u));
+    }
+
+    /* SECTION 3: tiêu đề, hai đoạn mô tả và hình nằm trong chiều cao bản mẫu. */
+    /* Dành khoảng thở giữa nút và ảnh răng, giữ tỷ lệ gốc bằng contain. */
+    /* SECTION 4: tiêu đề cách mép trên như PDF, hồ sơ lợi ích có lề cuối. */
+    /* SECTION 5 / 6 / 7: giữ các mốc tiêu đề và nội dung của mẫu. */
+    #cckh--part-02 .cckh--technology-panel {
+        margin-top: calc(24 * var(--cckh--u));
+    }
+}
+
+@media (max-width: 74.9375em) {
+    #cckh--part-02 {
+        --cckh--section-space: clamp(2rem, 4.5vw, 3rem);
+        --cckh--content-space: clamp(1.25rem, 3vw, 1.75rem);
+    }
+
+    #cckh--part-02>section h2:not(.cckh--sr-only):not(dialog h2) {
+        font-size: var(--cckh--title-size);
+        line-height: 1.3;
+        letter-spacing: .035em;
+        text-wrap: balance;
+    }
+
+    #cckh--part-02 .cckh--stories {
+        height: auto;
+        padding-block: var(--cckh--section-space);
+    }
+
+    #cckh--part-02 .cckh--stories-viewport {
+        margin-top: var(--cckh--content-space);
+    }
+
+    #cckh--part-02 .cckh--story-quote {
+        margin: var(--cckh--content-space) 1.25rem 0;
+        font-size: var(--cckh--text-size);
+        line-height: 1.45;
+        letter-spacing: .025em;
+    }
+
+    #cckh--part-02 .cckh--technology-panel {
+        margin-top: var(--cckh--content-space);
+    }
+}
+
+
+/* MOBILE — Căn giữa hai link Tìm hiểu iD-4 Solution, giữ nội dung mô tả căn như cũ. */
+
+
+/* SECTION 2 — MOBILE: dùng tỷ lệ ảnh gốc 637/971 như PC, không cắt chân dung. */
+
+@media (max-width: 43.6875em) {
+    #cckh--part-02 .cckh--stories {
+        --cckh--story-mobile-width: clamp(10rem, 54vw, 13.125rem);
+    }
+
+    #cckh--part-02 .cckh--stories-viewport {
+        height: calc(var(--cckh--story-mobile-width) * 971 / 637);
+    }
+
+    #cckh--part-02 .cckh--story-track,
+    #cckh--part-02 .cckh--story-group {
+        height: 100%;
+    }
+
+    #cckh--part-02 .cckh--story-card {
+        width: var(--cckh--story-mobile-width);
+        flex-basis: var(--cckh--story-mobile-width);
+        height: 100%;
+        aspect-ratio: 637 / 971;
+    }
+
+    #cckh--part-02 .cckh--story-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    #cckh--part-02 .cckh--story-card:hover img {
+        transform: none;
+    }
+}
+
+
+/* SECTION 4: tiêu đề nội dung viết toàn bộ chữ hoa; SECTION 1 / 5: cùng kiểu chấm chuyển slide. */
+
+
+/* GIÃN DÒNG CÁC KHỐI NỘI DUNG: tiêu đề 1.2–1.3, mô tả 1.4; giữ font và độ đậm. */
+
+#cckh--part-02>section :is(p,
+    li,
+    dd):not(dialog *) {
+    line-height: 1.4;
+}
+
+#cckh--part-02>section :is(h3,
+    h4,
+    dt):not(dialog *) {
+    line-height: 1.3;
+}
+
+#cckh--part-02>section h2:not(dialog *) {
+    line-height: 1.2;
+}
+
+
+/* SECTION 3 / 4 — Giãn dòng mô tả và tách các mục lợi ích cho dễ đọc. */
+
+
+/* SECTION 5 — Giãn dòng nội dung hồ sơ bác sĩ như các khối giới thiệu và lợi ích. */
+
+
+/* SECTION 5 — Lề trên tiêu đề bằng lề dưới cụm chấm chuyển slide. */
+
+
+/* SECTION 5 — Cân lề trên/dưới của toàn bộ nội dung, không chỉ riêng chấm chuyển slide. */
+
+
+/* SECTION 3 — Phóng lớn ảnh hàm răng, căn giữa và cân khoảng cách trên/dưới ảnh. */
+
+
+/* SECTION 4 — Toàn bộ nội dung nằm giữa theo chiều cao, lề trên và dưới bằng nhau. */
+
+
+/* SECTION 5 — Căn giữa toàn khối và hồ sơ từng slide theo chiều dọc. */
+
+
+/* SECTION 4 — Cân chiều dọc theo nhóm nội dung thực, bỏ chiều cao tối thiểu cũ. */
+
+
+/* SECTION 5 — Ảnh sát đáy section; hồ sơ nằm giữa vùng từ tiêu đề đến đáy. */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #cckh--part-02 *,
+    #cckh--part-02 ::before,
+    #cckh--part-02 ::after {
+        transition: none !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #cckh--part-02 .cckh--story-track {
+        animation: auto ease 0s 1 normal none running none;
+        transform: none !important;
+    }
+
+    #cckh--part-02 .cckh--stories-viewport {
+        overflow-x: auto;
+    }
+
+    #cckh--part-02 .cckh--story-group[aria-hidden="true"] {
+        display: none;
+    }
+}
+
+
+/* Mobile: keep swipe and expose the same slide selector without covering the photos. */
+
+
+/* Preserve authored sentence case; keep heading/dt capitalization rules. */
+
+#cckh--part-02 :is(p,
+    dd,
+    li) {
+    text-transform: none;
+}
+
+
+/* Defaults also cover content added later in WordPress. */
+
+#cckh--part-02 :is(p,
+    li,
+    dd,
+    dt,
+    small,
+    figcaption,
+    blockquote,
+    a,
+    label,
+    input,
+    textarea,
+    select),
+#cckh--part-02 button:not(.cckh--round-arrow):not([data-close]):not([data-slider-dot]) {
+    font-size: var(--cckh--text-size);
+}
+
+#cckh--part-02 :is(h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6) {
+    font-size: var(--cckh--title-size);
+}
+
+
+/* A longer heading/profile must expand instead of clipping text. */
+
+#cckh--part-02 .cckh--stories {
+    height: auto;
+}
+
+#cckh--part-02 .cckh--process-panel {
+    height: auto;
+    min-height: 0;
+}
+
+
+/* DOCTORS ONLY: one grid owns photo/profile positioning; remove legacy left/top offsets. */
+
+
+/* Balance the profile between the section title and bottom in the two-column layout. */
+
+
+/* Mobile: center the text above the original bottom-anchored portrait. */
+
+
+/* Customer stories only: keep the frame, reveal portraits and balance both text bands. */
+
+#cckh--part-02 #cckh--stories {
+    --cckh--story-band-padding: calc(40 * var(--cckh--u));
+    --cckh--story-band-gap: calc(48 * var(--cckh--u));
+    --cckh--story-footer-padding: 0rem;
+    --cckh--story-corner: clamp(.875rem, 1.25vw, 1.5rem);
+}
+
+#cckh--part-02 #cckh--stories>h2 {
+    transform: translateY(calc((var(--cckh--story-band-gap) - var(--cckh--story-band-padding)) / 2));
+}
+
+#cckh--part-02 #cckh--stories>.cckh--story-quote {
+    transform: translateY(calc((var(--cckh--story-footer-padding) - var(--cckh--story-band-gap)) / 2));
+}
+
+#cckh--part-02 #cckh--stories .cckh--story-track {
+    margin-block: 0;
+}
+
+#cckh--part-02 #cckh--stories .cckh--story-card {
+    border-radius: var(--cckh--story-corner);
+    overflow: hidden;
+}
+
+#cckh--part-02 #cckh--stories .cckh--story-card img,
+#cckh--part-02 #cckh--stories .cckh--story-card:hover img {
+    object-fit: contain;
+    object-position: center;
+    transform: none;
+    border-radius: inherit;
+}
+
+@media (max-width: 74.999em) {
+    #cckh--part-02 #cckh--stories {
+        --cckh--story-band-padding: var(--cckh--section-space);
+        --cckh--story-band-gap: var(--cckh--content-space);
+        --cckh--story-footer-padding: var(--cckh--section-space);
+    }
+}
+
+
+/* Desktop exception: quote size follows the 51.68px reference at 1920px. */
+
+@media (min-width: 75em) {
+    #cckh--part-02 #cckh--stories>.cckh--story-quote {
+        --cckh--story-quote-size: clamp(2rem, 2.691765625vw, 3.23011875rem);
+        font-size: var(--cckh--story-quote-size);
+    }
+}
+
+#cckh--part-02 .cckh--stories::before,
+#cckh--part-02 .cckh--stories .cckh--stories-backdrop {
+    display: none;
+}
