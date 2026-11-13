@@ -1,4 +1,3 @@
-/* global objectFitImages */
 ;(function () {
   function createObserver (handler) {
     return new IntersectionObserver(function (entries) {
@@ -29,9 +28,6 @@
 
           $el.imagesLoaded(function () {
             $el.removeClass('lazy-load')
-            if (typeof objectFitImages !== 'undefined') {
-              objectFitImages($el)
-            }
           })
         }
       })

@@ -210,6 +210,7 @@ function shortcode_latest_from_blog($atts, $content = null, $tag = '' ) {
 		$ids = array_map( 'trim', $ids );
 
 		$args = array(
+			'post_status' => 'publish',
 			'post__in' => $ids,
             'post_type' => array(
                 'post',

@@ -2069,6 +2069,8 @@ if ( ! class_exists( 'Envato_Theme_Setup_Wizard' ) ) {
 
 
 		public function envato_setup_customize() {
+			$can_create_child_theme  = current_user_can( is_multisite() ? 'manage_network_themes' : 'manage_options' );
+			$is_creating_child_theme = $can_create_child_theme && isset( $_POST['theme_name'] );
 		?>
 
 			<h1>Setup Flatsome Child Theme (Optional)</h1>
@@ -2077,21 +2079,25 @@ if ( ! class_exists( 'Envato_Theme_Setup_Wizard' ) ) {
 				If you are going to make changes to the theme source code please use a <a href="https://codex.wordpress.org/Child_Themes" target="_blank">Child Theme</a> rather than modifying the main theme HTML/CSS/PHP code. This allows the parent theme to receive updates without overwriting your source code changes. Use the form below to create and activate the Child Theme.
 			</p>
 
-			<?php if(!isset($_REQUEST['theme_name'])){ ?>
+			<?php if ( ! $can_create_child_theme ) { ?>
+			<p class="lead">Only a network administrator can create a Child Theme on a multisite network.</p>
+			<?php } elseif ( ! $is_creating_child_theme ) { ?>
 			<p class="lead">If you're not sure what a Child Theme is just click the "Skip this step" button.</p>
 			<?php } ?>
 
 			<?php
 				// Create Child Theme
-				if(isset($_REQUEST['theme_name']) && current_user_can('manage_options')){
-					$this->_make_child_theme(esc_html($_REQUEST['theme_name']));
+				if ( $is_creating_child_theme ) {
+					check_admin_referer( 'envato-setup' );
+					$this->_make_child_theme( esc_html( sanitize_text_field( wp_unslash( $_POST['theme_name'] ) ) ) );
 				}
 				$theme = get_option('fl_has_child_theme') ? wp_get_theme(get_option('fl_has_child_theme') )->Name : 'Flatsome Child';
 			 ?>
 
-			<?php if(!isset($_REQUEST['theme_name'])){ ?>
+			<?php if ( $can_create_child_theme && ! $is_creating_child_theme ) { ?>
 
 			<form action="<?php $_PHP_SELF ?>" method="POST">
+			 <?php wp_nonce_field( 'envato-setup' ); ?>
 			 <div class="child-theme-input" style="margin-bottom: 20px;">
 			 <label style="font-weight: bold;margin-bottom: 5px; display: block;">Child Theme Title</label>
 		 	 <input type="text" style="padding:10px; width: 100%;" name="theme_name" value="<?php echo $theme; ?>" />

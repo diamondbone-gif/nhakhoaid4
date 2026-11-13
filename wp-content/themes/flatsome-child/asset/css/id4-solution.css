@@ -1,0 +1,841 @@
+/* ID4 SOLUTION LÀ GÌ? 
+ start **/
+
+:root {
+    --id4-solution--gold: #d0a44a;
+    --id4-solution--gold-dark: #af8127;
+    --id4-solution--ink: #251e19;
+    --id4-solution--cream: #f7edd8;
+    --id4-solution--page: 1120px
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    font-family: Arial, "Helvetica Neue", sans-serif;
+    color: var(--id4-solution--ink);
+    background: #fff
+}
+
+img {
+    max-width: 100%;
+    display: block
+}
+
+button,
+a {
+    touch-action: manipulation
+}
+
+button {
+    font: inherit;
+    cursor: pointer
+}
+
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible {
+    outline: 3px solid var(--id4-solution--gold);
+    outline-offset: 3px
+}
+
+[hidden] {
+    display: none !important
+}
+
+.id4-solution--container {
+    width: min(90%, var(--id4-solution--page));
+    margin-inline: auto
+}
+
+.id4-solution--dark {
+    color: #fff;
+    background: #211b17
+}
+
+h2 {
+    margin: 0;
+    color: var(--id4-solution--gold);
+    font-size: clamp(24px, 2.55vw, 38px);
+    letter-spacing: .045em;
+    line-height: 1.25;
+    font-weight: 800;
+    text-align: center
+}
+
+.id4-solution--subtitle {
+    text-align: center;
+    margin: 10px auto 0;
+    font-size: clamp(12px, 1.22vw, 17px);
+    line-height: 1.4
+}
+
+.id4-solution--solution {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: clamp(52px, 6vw, 88px) 0 clamp(58px, 5vw, 80px);
+    background: linear-gradient(180deg, #241e19, #241e19 72%, #080707)
+}
+
+.id4-solution--solution h2 {
+    font-size: clamp(29px, 3.15vw, 44px)
+}
+
+.id4-solution--solution .id4-solution--subtitle {
+    color: #fff;
+    margin-top: 14px;
+    margin-bottom: clamp(28px, 3.2vw, 45px)
+}
+
+.id4-solution--solution-diagram {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr) minmax(0, 1fr);
+    gap: clamp(13px, 2.7vw, 40px);
+    align-items: center;
+    max-width: 1120px;
+    margin-inline: auto
+}
+
+.id4-solution--solution-side {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 3.4vw, 49px)
+}
+
+.id4-solution--detail-card {
+    position: relative;
+    min-height: 220px;
+    border: 1px solid #947034;
+    border-radius: 17px;
+    background: linear-gradient(110deg, #050505, #251d19);
+    padding: clamp(12px, 1.4vw, 20px);
+    transition: transform .28s, box-shadow .28s, border-color .28s
+}
+
+.id4-solution--detail-card h3 {
+    margin: 0 0 4px;
+    text-align: center;
+    color: #fff;
+    font-size: clamp(12px, 1.23vw, 17px);
+    letter-spacing: .02em
+}
+
+.id4-solution--detail-subtitle {
+    font-size: clamp(9px, .85vw, 12px);
+    font-weight: 700;
+    color: #e7e7e7;
+    text-align: center;
+    margin: 0 0 13px
+}
+
+.id4-solution--detail-card ul {
+    margin: 0;
+    padding-left: 17px
+}
+
+.id4-solution--detail-card li {
+    font-size: clamp(10px, .93vw, 13px);
+    line-height: 1.6;
+    color: #eee;
+    margin: 0 0 6px
+}
+
+.id4-solution--solution-models {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px
+}
+
+.id4-solution--solution-guides-picture {
+    display: block;
+    width: 100%
+}
+
+.id4-solution--solution-guides-picture img {
+    width: 100%;
+    height: min(42vw, 520px);
+    object-fit: contain;
+    filter: brightness(1.04)
+}
+
+@media(hover:hover) and (pointer:fine) {
+    .id4-solution--solution .id4-solution--detail-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 26px #cba64e22;
+        border-color: #e7c47c
+    }
+}
+
+@keyframes id4-solution--guide-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes id4-solution--card-reveal-left {
+    from {
+        opacity: 0;
+        transform: translateX(-28px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes id4-solution--card-reveal-right {
+    from {
+        opacity: 0;
+        transform: translateX(28px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+.id4-solution--solution-visible .id4-solution--solution-models {
+    animation: id4-solution--guide-reveal .75s ease both
+}
+
+.id4-solution--solution-visible .id4-solution--solution-left {
+    animation: id4-solution--card-reveal-left .7s .34s ease both
+}
+
+.id4-solution--solution-visible .id4-solution--solution-right {
+    animation: id4-solution--card-reveal-right .7s .43s ease both
+}
+
+.id4-solution--process .id4-solution--subtitle {
+    font-size: clamp(11px, 1.1vw, 15px)
+}
+
+.id4-solution--candidates .id4-solution--subtitle {
+    max-width: 900px;
+    color: #eee;
+    margin: 11px auto 26px;
+    font-size: clamp(12px, 1.13vw, 16px)
+}
+
+@media(max-width:1023px) {
+    .id4-solution--solution-diagram {
+        gap: 13px
+    }
+
+    .id4-solution--solution-models {
+        min-height: 400px
+    }
+
+    .id4-solution--solution-guides-picture img {
+        height: 390px
+    }
+
+    .id4-solution--detail-card {
+        min-height: 200px;
+        padding: 11px
+    }
+
+    .id4-solution--detail-card li {
+        font-size: 10px
+    }
+}
+
+@media(max-width:767px) {
+    .id4-solution--container {
+        width: 92%
+    }
+
+    .id4-solution--solution {
+        padding: 44px 0 48px
+    }
+
+    .id4-solution--solution h2 {
+        font-size: clamp(25px, 6.1vw, 33px)
+    }
+
+    .id4-solution--solution .id4-solution--subtitle {
+        font-size: 11px;
+        margin-bottom: 25px
+    }
+
+    .id4-solution--solution-diagram {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.03fr) minmax(0, 1fr);
+        gap: 7px
+    }
+
+    .id4-solution--solution-models {
+        min-height: 300px
+    }
+
+    .id4-solution--solution-guides-picture img {
+        height: 310px
+    }
+
+    .id4-solution--solution-side {
+        gap: 10px
+    }
+
+    .id4-solution--detail-card {
+        min-height: 155px;
+        padding: 7px 5px;
+        border-radius: 9px
+    }
+
+    .id4-solution--detail-card h3 {
+        font-size: clamp(9px, 2.3vw, 12px)
+    }
+
+    .id4-solution--detail-subtitle {
+        font-size: clamp(7px, 1.7vw, 9px);
+        margin-bottom: 5px
+    }
+
+    .id4-solution--detail-card ul {
+        padding-left: 11px
+    }
+
+    .id4-solution--detail-card li {
+        font-size: clamp(7px, 1.65vw, 9px);
+        line-height: 1.34;
+        margin-bottom: 4px
+    }
+
+    .id4-solution--process .id4-solution--subtitle {
+        font-size: 11px
+    }
+
+    .id4-solution--candidates .id4-solution--subtitle {
+        font-size: 11px;
+        margin: 11px auto 24px
+    }
+}
+
+@media(max-width:374px) {
+    .id4-solution--solution-diagram {
+        gap: 4px
+    }
+
+    .id4-solution--detail-card {
+        padding: 7px 4px
+    }
+
+    .id4-solution--detail-card li {
+        font-size: 7px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior: auto
+    }
+
+    .id4-solution--solution-models,
+    .id4-solution--solution-side {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: .01ms !important
+    }
+}
+
+:root {
+    --id4-solution--gold: #c7a459;
+    --id4-solution--white: #fff;
+    --id4-solution--cream: #f5ecd8;
+    --id4-solution--page: 1480px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.id4-solution--solution {
+    background: linear-gradient(180deg, #211b16 62%, #050403);
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --id4-solution--unit: min(1vw, 19.2px);
+    }
+
+    .id4-solution--container {
+        width: min(77.2%, var(--id4-solution--page));
+        max-width: none;
+    }
+
+    main>section[aria-labelledby] h2 {
+        font-size: calc(3 * var(--id4-solution--unit));
+        line-height: 1.15;
+        letter-spacing: .055em;
+    }
+
+    .id4-solution--solution {
+        padding: calc(4.2 * var(--id4-solution--unit)) 0 calc(4 * var(--id4-solution--unit));
+    }
+
+    .id4-solution--solution .id4-solution--subtitle,
+    .id4-solution--process .id4-solution--subtitle,
+    .id4-solution--candidates .id4-solution--subtitle {
+        font-size: calc(1.55 * var(--id4-solution--unit));
+    }
+
+    .id4-solution--solution .id4-solution--subtitle {
+        margin: calc(1.4 * var(--id4-solution--unit)) 0 calc(3.2 * var(--id4-solution--unit));
+    }
+
+    .id4-solution--solution-diagram {
+        max-width: none;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr) minmax(0, 1fr);
+        gap: 0;
+    }
+
+    .id4-solution--solution-side {
+        gap: calc(3 * var(--id4-solution--unit));
+    }
+
+    .id4-solution--detail-card {
+        min-height: calc(16.5 * var(--id4-solution--unit));
+        padding: calc(1.05 * var(--id4-solution--unit));
+        border-radius: calc(1.4 * var(--id4-solution--unit));
+    }
+
+    .id4-solution--detail-card h3 {
+        font-size: calc(1.24 * var(--id4-solution--unit));
+    }
+
+    .id4-solution--detail-subtitle {
+        font-size: calc(.93 * var(--id4-solution--unit));
+        margin-bottom: .6em;
+    }
+
+    .id4-solution--detail-card li {
+        font-size: calc(.94 * var(--id4-solution--unit));
+        line-height: 1.38;
+        margin-bottom: .3em;
+    }
+
+    .id4-solution--solution-models {
+        min-height: 0;
+    }
+
+    .id4-solution--solution-guides-picture {
+        width: 119%;
+        flex: none;
+    }
+
+    .id4-solution--solution-guides-picture img {
+        height: calc(37.6 * var(--id4-solution--unit));
+    }
+
+    .id4-solution--candidates .id4-solution--subtitle {
+        max-width: none;
+        margin: calc(1.25 * var(--id4-solution--unit)) auto calc(2.1 * var(--id4-solution--unit));
+    }
+}
+
+@media (max-width: 767px) {
+    .id4-solution--solution>.id4-solution--container {
+        width: min(calc(100% - 32px), 480px);
+        margin-inline: auto;
+    }
+
+    .id4-solution--solution-diagram {
+        --id4-solution--mobile-gap: 16px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: var(--id4-solution--mobile-gap);
+    }
+
+    .id4-solution--solution-models {
+        grid-row: 1;
+        min-height: 0;
+    }
+
+    .id4-solution--solution-guides-picture {
+        width: min(68%, 240px);
+    }
+
+    .id4-solution--solution-guides-picture img {
+        height: auto;
+    }
+
+    .id4-solution--solution-side {
+        gap: var(--id4-solution--mobile-gap);
+    }
+
+    .id4-solution--solution .id4-solution--detail-card {
+        min-height: 0;
+        padding: 14px 16px;
+    }
+
+    .id4-solution--solution .id4-solution--detail-card h3 {
+        font-size: 14px;
+    }
+
+    .id4-solution--solution .id4-solution--detail-subtitle,
+    .id4-solution--solution .id4-solution--detail-card li {
+        font-size: 12px;
+        line-height: 1.45;
+    }
+}
+
+
+/* Typography shared by the four guide cards. */
+
+.id4-solution--solution .id4-solution--detail-card h3 {
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: .015em;
+    margin-bottom: .35em;
+}
+
+.id4-solution--solution .id4-solution--detail-subtitle {
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: .65em;
+}
+
+.id4-solution--solution .id4-solution--detail-card li {
+    line-height: 1.5;
+    margin-bottom: .4em;
+}
+
+.id4-solution--solution .id4-solution--detail-card li:last-child {
+    margin-bottom: 0;
+}
+
+.id4-solution--solution .id4-solution--subtitle {
+    margin-bottom: .8em;
+}
+
+.id4-solution--solution-intro,
+.id4-solution--components-title {
+    text-align: center;
+    font-size: clamp(12px, 1.53vw, 28px);
+    line-height: 1.3;
+}
+
+.id4-solution--solution-intro p {
+    margin: 0;
+}
+
+.id4-solution--solution .id4-solution--components-title {
+    color: var(--id4-solution--white);
+    margin: 1.35em 0 1.6em;
+    font-weight: 500;
+}
+
+@media (min-width: 768px) {
+    .id4-solution--solution-diagram {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.48fr) minmax(0, 1fr);
+        gap: 0;
+    }
+
+    .id4-solution--solution-side {
+        align-self: stretch;
+    }
+
+    .id4-solution--solution-side .id4-solution--detail-card {
+        flex: 1;
+    }
+}
+
+
+/* Responsive type scale for the solution section. */
+
+.id4-solution--solution #id4-solution--solution-title {
+    color: var(--id4-solution--gold);
+    font-size: clamp(24px, 2.9vw, 52px);
+    line-height: 1.2;
+}
+
+.id4-solution--solution .id4-solution--subtitle,
+.id4-solution--solution-intro,
+.id4-solution--components-title {
+    font-size: clamp(13px, 1.45vw, 25px);
+    line-height: 1.5;
+}
+
+.id4-solution--solution .id4-solution--detail-card h3 {
+    font-size: clamp(14px, 1.2vw, 22px);
+    line-height: 1.3;
+}
+
+.id4-solution--solution .id4-solution--detail-subtitle,
+.id4-solution--solution .id4-solution--detail-card li {
+    font-size: clamp(13px, .98vw, 18px);
+    line-height: 1.5;
+}
+
+
+/* end ID4 SOLUTION LÀ GÌ? */
+
+
+/* QUY TRÌNH CỦA ID-4 IMPLANT SOLUTION */
+
+:root {
+    --id4-solution--process-ink: #211b17;
+    --id4-solution--process-gold: #d1a346;
+    --id4-solution--process-gold-light: #d5b371;
+    --id4-solution--process-gold-dark: #97671b;
+}
+
+body {
+    margin: 0;
+}
+
+.id4-solution--process {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: clamp(32px, 5.25vw, 88px) 0 clamp(26px, 4.3vw, 72px);
+    color: var(--id4-solution--process-ink);
+    background: #fff;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: clamp(13px, 1.65vw, 23px);
+    line-height: 1.42;
+}
+
+.id4-solution--process *,
+.id4-solution--process *::before,
+.id4-solution--process *::after {
+    box-sizing: border-box;
+}
+
+.id4-solution--process-inner {
+    width: min(77.5%, 1296px);
+    margin-inline: auto;
+}
+
+.id4-solution--process-header {
+    margin-bottom: 1.3em;
+    text-align: center;
+}
+
+.id4-solution--process #id4-solution--process-title,
+.id4-solution--process .id4-solution--process-copy h4 {
+    color: var(--id4-solution--process-gold-dark);
+    background: linear-gradient(100deg, var(--id4-solution--process-gold-light), var(--id4-solution--process-gold-dark));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.id4-solution--process #id4-solution--process-title {
+    margin: 0 0 .48em;
+    font-size: clamp(21px, 3.1vw, 51px);
+    font-weight: 800;
+    letter-spacing: .045em;
+    line-height: 1.18;
+}
+
+.id4-solution--process .id4-solution--process-subtitle,
+.id4-solution--process .id4-solution--process-intro {
+    margin: 0;
+}
+
+.id4-solution--process .id4-solution--process-subtitle {
+    margin-bottom: .7em;
+    font-weight: 600;
+}
+
+.id4-solution--process-background {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: fill;
+    pointer-events: none;
+}
+
+.id4-solution--process-list {
+    display: grid;
+    gap: 1.8em;
+}
+
+.id4-solution--process-visit {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 26%);
+    grid-template-areas: "copy photo";
+    gap: 10.5%;
+    align-items: start;
+}
+
+.id4-solution--process-visit-reverse {
+    grid-template-columns: minmax(0, 26%) minmax(0, 1fr);
+    grid-template-areas: "photo copy";
+}
+
+.id4-solution--process-photo {
+    grid-area: photo;
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    margin-top: .36em;
+    border-radius: .95em;
+    box-shadow: 0 .2em .65em #251b1429;
+}
+
+.id4-solution--process-copy {
+    grid-area: copy;
+    min-width: 0;
+}
+
+.id4-solution--process .id4-solution--process-copy h3,
+.id4-solution--process .id4-solution--process-copy h4,
+.id4-solution--process .id4-solution--process-copy h5,
+.id4-solution--process .id4-solution--process-copy p {
+    margin: 0;
+}
+
+.id4-solution--process .id4-solution--process-copy h3 {
+    margin-bottom: .45em;
+    color: var(--id4-solution--process-ink);
+    font-size: 1.65em;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: .045em;
+}
+
+.id4-solution--process .id4-solution--process-copy h4 {
+    width: fit-content;
+    margin-bottom: .35em;
+    font-size: 1.37em;
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: .035em;
+}
+
+.id4-solution--process .id4-solution--process-copy h5 {
+    color: var(--id4-solution--process-ink);
+    font-size: 1.14em;
+    font-weight: 750;
+    line-height: 1.25;
+}
+
+.id4-solution--process .id4-solution--process-copy p+h4,
+.id4-solution--process .id4-solution--process-copy p+h5 {
+    margin-top: .4em;
+}
+
+.id4-solution--process .id4-solution--process-cta {
+    display: inline-block;
+    margin-top: 1.3em;
+    padding: .25em .8em;
+    border-radius: .25em;
+    color: #fff;
+    background: var(--id4-solution--process-gold);
+    font-size: 1.62em;
+    font-weight: 750;
+    letter-spacing: .035em;
+    line-height: 1.25;
+    text-decoration: none;
+}
+
+.id4-solution--process .id4-solution--process-cta:focus-visible {
+    background: var(--id4-solution--process-gold-dark);
+}
+
+@media (max-width: 767px) {
+    .id4-solution--process .id4-solution--process-cta {
+        display: block;
+        width: fit-content;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .id4-solution--process-background {
+        object-fit: contain;
+        object-position: center bottom;
+    }
+
+    .id4-solution--process {
+        font-size: 14px;
+    }
+
+    .id4-solution--process-inner {
+        width: min(calc(100% - 36px), 480px);
+    }
+
+    .id4-solution--process-header {
+        margin-bottom: 24px;
+    }
+
+    .id4-solution--process-list {
+        gap: 28px;
+    }
+
+    .id4-solution--process-visit,
+    .id4-solution--process-visit-reverse {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "photo" "copy";
+        gap: 14px;
+    }
+
+    .id4-solution--process-photo {
+        width: min(52%, 195px);
+        margin: 0;
+        justify-self: center;
+    }
+}
+
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+    .id4-solution--process .id4-solution--process-photo:hover {
+        box-shadow: 0 .45em 1.2em #251b1440;
+    }
+
+    .id4-solution--process .id4-solution--process-cta:hover {
+        background: var(--id4-solution--process-gold-dark);
+    }
+}
+
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .id4-solution--process .id4-solution--process-photo {
+        transition: transform .22s ease, box-shadow .22s ease;
+    }
+
+    .id4-solution--process .id4-solution--process-cta {
+        transition: transform .22s ease, background-color .22s ease;
+    }
+
+    .id4-solution--process .id4-solution--process-photo:hover {
+        transform: scale(1.035);
+    }
+
+    .id4-solution--process .id4-solution--process-cta:hover {
+        transform: translateY(-2px);
+    }
+}
+
+
+/* end QUY TRÌNH CỦA ID-4 IMPLANT SOLUTION  */

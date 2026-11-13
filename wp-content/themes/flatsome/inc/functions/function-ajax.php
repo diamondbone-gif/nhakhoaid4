@@ -31,6 +31,13 @@ function flatsome_ajax_apply_shortcode() {
 		) );
 	}
 
+	foreach ( array( 'posts', 'products' ) as $key ) {
+		if ( isset( $atts[ $key ] ) ) {
+			$count        = (int) $atts[ $key ];
+			$atts[ $key ] = $count > 0 ? min( $count, 100 ) : 100;
+		}
+	}
+
 	$markup = flatsome_apply_shortcode( $tag, $atts );
 
 	wp_send_json_success( trim( $markup ) );

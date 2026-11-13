@@ -5,20 +5,25 @@ function id4HomeInit() {
     const id4HomePage = document.querySelector("#-id4-home-main");
     if (!id4HomePage) return;
     // WordPress may wrap standalone controls and images in formatting paragraphs.
-    id4HomePage.querySelectorAll("p:not([class]):not([id])").forEach((paragraph) => {
-        const nodes = [...paragraph.childNodes];
-        if (nodes.length && nodes.every((node) =>
-                node.nodeType === Node.COMMENT_NODE ||
-                (node.nodeType === Node.TEXT_NODE && !node.textContent.trim()) ||
-                (node.nodeType === Node.ELEMENT_NODE && node.matches("img, a, button"))
-            )) paragraph.replaceWith(...nodes);
-    });
+    id4HomePage
+        .querySelectorAll("p:not([class]):not([id])")
+        .forEach((paragraph) => {
+            const nodes = [...paragraph.childNodes];
+            if (
+                nodes.length &&
+                nodes.every(
+                    (node) =>
+                    node.nodeType === Node.COMMENT_NODE ||
+                    (node.nodeType === Node.TEXT_NODE && !node.textContent.trim()) ||
+                    (node.nodeType === Node.ELEMENT_NODE &&
+                        node.matches("img, a, button")),
+                )
+            )
+                paragraph.replaceWith(...nodes);
+        });
 
-    // Dữ liệu và đường dẫn ảnh/video đọc trực tiếp từ HTML.
-    const id4HomeVideoSource = id4HomePage.querySelector("[data-video-src]");
+    // Dữ liệu và đường dẫn ảnh đọc trực tiếp từ HTML.
     const id4HomeContent = {
-        journeyVideoUrl:
-            (id4HomeVideoSource ? id4HomeVideoSource.dataset.videoSrc : "") || "",
         comparisons: [...id4HomePage.querySelectorAll("[data-comparison]")].map(
             (id4HomeButton) => ({
                 id: id4HomeButton.dataset.comparison,
@@ -39,23 +44,12 @@ function id4HomeInit() {
         ),
     };
 
-    function id4HomeGetVideoUrl(id4HomeValue) {
-        try {
-            const id4HomeUrl = new URL(id4HomeValue, document.baseURI);
-            if (!["https:", "http:", "file:"].includes(id4HomeUrl.protocol))
-                return null;
-            return /\.(mp4|webm|ogv)$/i.test(id4HomeUrl.pathname) ?
-                id4HomeUrl.href :
-                null;
-        } catch {
-            return null;
-        }
-    }
-
     function id4HomeCreateSlider(id4HomeRoot) {
         if (!id4HomeRoot) return;
         const id4HomeTrack = id4HomeRoot.querySelector(".-id4-home-slider-track");
-        const id4HomeSlides = [...id4HomeTrack.children].filter((slide) => slide.matches(".-id4-home-slider-slide"));
+        const id4HomeSlides = [...id4HomeTrack.children].filter((slide) =>
+            slide.matches(".-id4-home-slider-slide"),
+        );
         if (!id4HomeSlides.length) {
             id4HomeRoot.hidden = true;
             return;
@@ -363,7 +357,6 @@ function id4HomeInit() {
         );
     }
 
-
     if (!id4HomePage) return;
     const id4HomeDialogs = [...id4HomePage.querySelectorAll("dialog")];
 
@@ -543,62 +536,18 @@ function id4HomeInit() {
             );
         }),
     );
-    const id4HomeVideoPlayer = id4HomePage.querySelector(
-        "#-id4-home-journey-player",
-    );
-    const id4HomeVideoOpen = id4HomePage.querySelector("#-id4-home-video-open");
-    const id4HomeVideoReset = id4HomePage.querySelector("#-id4-home-video-reset");
-    id4HomePage
-        .querySelector("#-id4-home-video-open")
-        .addEventListener("click", () => {
-            const id4HomeVideoUrl = id4HomeGetVideoUrl(
-                id4HomeContent.journeyVideoUrl,
-            );
-            id4HomeVideoPlayer.replaceChildren();
-            id4HomeVideoPlayer.hidden = !id4HomeVideoUrl;
-            id4HomePage.querySelector("#-id4-home-video-unavailable").hidden =
-                Boolean(id4HomeVideoUrl);
-            if (id4HomeVideoUrl) {
-                const id4HomeVideo = document.createElement("video");
-                id4HomeVideo.controls = true;
-                id4HomeVideo.playsInline = true;
-                id4HomeVideo.preload = "metadata";
-                id4HomeVideo.setAttribute("aria-label", "Video mẫu minh họa");
-                id4HomeVideo.src = id4HomeVideoUrl;
-                id4HomeVideo.addEventListener("error", () => {
-                    if (!id4HomeVideo.isConnected) return;
-                    id4HomeVideoPlayer.replaceChildren();
-                    id4HomeVideoPlayer.hidden = true;
-                    id4HomeVideoOpen.hidden = false;
-                    id4HomeVideoReset.hidden = true;
-                    const id4HomeMessage = id4HomePage.querySelector(
-                        "#-id4-home-video-unavailable",
-                    );
-                    id4HomeMessage.textContent =
-                        "Không tải được video. Vui lòng bấm phát để thử lại.";
-                    id4HomeMessage.hidden = false;
-                    id4HomeVideoOpen.title = "Không tải được video. Bấm để thử lại.";
-                });
-                id4HomeVideoPlayer.append(id4HomeVideo);
-                id4HomeVideoOpen.hidden = true;
-                id4HomeVideoReset.hidden = false;
-                id4HomeVideo.focus();
-                id4HomeVideo.play().catch(() => {});
-            }
-        });
-    id4HomeVideoReset.addEventListener("click", () => {
-        const id4HomeVideo = id4HomeVideoPlayer.querySelector("video");
-        if (id4HomeVideo) {
-            id4HomeVideo.pause();
-            id4HomeVideo.removeAttribute("src");
-            id4HomeVideo.load();
-        }
-        id4HomeVideoPlayer.replaceChildren();
-        id4HomeVideoPlayer.hidden = true;
-        id4HomeVideoOpen.hidden = false;
-        id4HomeVideoReset.hidden = true;
-        id4HomeVideoOpen.focus();
-    });
+    const id4HomeVideoPlayer = id4HomePage.querySelector("#-id4-home-journey-player");
+    if (id4HomeVideoPlayer ? .matches("iframe") && "IntersectionObserver" in window) {
+        const id4HomeVideoObserver = new IntersectionObserver((entries, observer) => {
+            if (!entries.some((entry) => entry.intersectionRatio >= 0.51)) return;
+            observer.disconnect();
+            const id4HomeVideoUrl = new URL(id4HomeVideoPlayer.src);
+            id4HomeVideoUrl.searchParams.set("autoplay", "1");
+            id4HomeVideoUrl.searchParams.set("mute", "1");
+            id4HomeVideoPlayer.src = id4HomeVideoUrl.href;
+        }, { threshold: 0.51 });
+        id4HomeVideoObserver.observe(id4HomeVideoPlayer);
+    }
     const id4HomeTabs = [...id4HomePage.querySelectorAll('[role="tab"]')];
 
     function id4HomeActivateTab(id4HomeTab, id4HomeMoveFocus = false) {
@@ -645,7 +594,6 @@ function id4HomeInit() {
                 id4HomeOpenDialog(id4HomePage.querySelector("#-id4-home-image-dialog"));
             }),
         );
-
 }
 if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", id4HomeInit, { once: true });

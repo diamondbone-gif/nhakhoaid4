@@ -87,6 +87,13 @@ class AjaxManager {
 
     if ( array_key_exists( 'id', $data ) ) {
       $args['ID'] = intval( $data['id'] );
+
+      if ( ! $this->can_modify_template( $args['ID'], 'edit_post' ) ) {
+        return wp_send_json_error( array(
+          'message' => 'You are not allowed to edit this template.',
+        ) );
+      }
+
       $post_id = wp_update_post( $args, true );
     } else {
       $post_id = wp_insert_post( $args, true );
@@ -127,6 +134,12 @@ class AjaxManager {
     if ( 'ux_template' !== $post_type ) {
       return wp_send_json_error( array(
         'message' => "Cannot remove post with type {$post_type}.",
+      ) );
+    }
+
+    if ( ! $this->can_modify_template( $post_id, 'delete_post' ) ) {
+      return wp_send_json_error( array(
+        'message' => 'You are not allowed to delete this template.',
       ) );
     }
 
@@ -197,6 +210,16 @@ class AjaxManager {
    * Importa external meda files.
    */
   public function import_media () {
+    $post_id = isset( $_POST['post_id'] ) ? intval( $_POST['post_id'] ) : 0;
+
+    check_ajax_referer( 'ux-builder-' . $post_id, 'security' );
+
+    if ( ! current_user_can( 'upload_files' ) ) {
+      return wp_send_json_error( array(
+        'message' => 'You are not allowed to upload files.',
+      ) );
+    }
+
     $id  = intval( $_POST['id'] );
     $url = $_POST['url'];
 
@@ -253,6 +276,16 @@ class AjaxManager {
    * Parse presets for a shortcode.
    */
   public function parse_presets () {
+    $post_id = isset( $_GET['post_id'] ) ? intval( $_GET['post_id'] ) : 0;
+
+    check_ajax_referer( 'ux-builder-' . $post_id, 'security' );
+
+    if ( ! current_user_can( 'edit_post', $post_id ) ) {
+      return wp_send_json_error( array(
+        'message' => 'You are not allowed to edit this post.',
+      ) );
+    }
+
     $tag     = wp_unslash( $_GET['tag'] );
     $presets = array();
 
@@ -330,5 +363,18 @@ class AjaxManager {
     }, $ux_templates );
 
     return array_merge( $custom_templates, $templates );
+  }
+
+  protected function can_modify_template( $post_id, $capability ) {
+    $post = get_post( $post_id );
+
+    if ( ! $post || 'ux_template' !== $post->post_type ) {
+      return false;
+    }
+
+    // `ux_template` maps to page capabilities, which Authors and Contributors
+    // lack, so owners must be allowed explicitly to keep their own templates.
+    return (int) $post->post_author === get_current_user_id()
+      || current_user_can( $capability, $post_id );
   }
 }

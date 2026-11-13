@@ -1,3 +1,25 @@
+--- 3.20.13 ---
+NEW: WooCommerce 11.3 compatibility.
+
+IMPROVED: Limited the number of items loaded per relay request.
+IMPROVED: Security hardening for the setup wizard child theme step.
+IMPROVED: Security hardening for UX Builder permissions and requests.
+IMPROVED: Security hardening for UX Builder templates and editor.
+IMPROVED: Stricter attribute handling in Gallery and Payment Icons elements.
+IMPROVED: Stricter output escaping in portfolio and swatch attributes.
+
+FIXED: Mini cart quantity update failing for removed items.
+FIXED: Misaligned media button icons in the UX Builder text editor.
+FIXED: Permissions policy violation errors in the browser console when editing text in UX Builder.
+FIXED: Swatches with "Use variation images" showing the term color instead of the product image for variations without their own image.
+FIXED: Unpublished posts could be read through the public shortcode AJAX endpoint.
+FIXED: Users who cannot publish now see "Submit for Review" in UX Builder.
+FIXED: UX Blocks widget title is now passed through the `widget_title` filter so WPML and similar plugins can translate it.
+
+DEV: Recommended PHP version 8.3 or higher (8.1 EOL) for better performance and security.
+
+Note: This release contains an enhanced security measure. We recommend updating your sites promptly for optimal protection.
+
 --- 3.20.12 ---
 NEW: WooCommerce 11.2 compatibility.
 

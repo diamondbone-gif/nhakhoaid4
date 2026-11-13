@@ -238,7 +238,7 @@ class Swatches_Frontend {
 			$options_flipped = array_flip( $args['options'] );
 			$key             = $options_flipped[ $term->slug ];
 			if ( isset( $args['swatches'][ $key ] ) ) {
-				$thumb_id = $this->get_variation_swatch_image_id( $args['swatches'][ $key ], $type );
+				$thumb_id = $this->get_variation_swatch_image_id( $args['swatches'][ $key ] );
 
 				if ( $thumb_id ) {
 					$thumb = wp_get_attachment_image( $thumb_id, $img_size, false, array(
@@ -453,7 +453,7 @@ class Swatches_Frontend {
 			$swatch_inner_html = '';
 
 			if ( $this->use_variation_images( $attr_options ) && isset( $swatch['image_src'] ) ) {
-				$thumb_id = $this->get_variation_swatch_image_id( $swatch, $attribute->type );
+				$thumb_id = $this->get_variation_swatch_image_id( $swatch );
 
 				if ( $thumb_id ) {
 					$type_tmp          = 'variation-image';
@@ -487,9 +487,9 @@ class Swatches_Frontend {
 			}
 
 			if ( isset( $swatch['image_src'] ) ) {
-				$swatch_atts['data-image-src']    = $swatch['image_src'];
-				$swatch_atts['data-image-srcset'] = $swatch['image_srcset'];
-				$swatch_atts['data-image-sizes']  = $swatch['image_sizes'];
+				$swatch_atts['data-image-src']    = esc_url( $swatch['image_src'] );
+				$swatch_atts['data-image-srcset'] = esc_attr( $swatch['image_srcset'] );
+				$swatch_atts['data-image-sizes']  = esc_attr( $swatch['image_sizes'] );
 			}
 
 			if ( isset( $swatch['is_in_stock'] ) && ! $swatch['is_in_stock'] ) {
@@ -645,15 +645,14 @@ class Swatches_Frontend {
 	 * Resolves the image for a variation image swatch.
 	 *
 	 * WooCommerce 11.2 removes variation images that equal the parent image. When the
-	 * variation has no own image and the term has no swatch of its own, the image
-	 * WooCommerce resolves for the variation (the inherited parent image) is used.
+	 * variation has no own image, the image WooCommerce resolves for the variation
+	 * (the inherited parent image) is used before any term swatch.
 	 *
-	 * @param array  $swatch Swatch data, term meta merged with variation data.
-	 * @param string $type   Attribute type.
+	 * @param array $swatch Swatch data, term meta merged with variation data.
 	 *
 	 * @return int Attachment ID or 0.
 	 */
-	private function get_variation_swatch_image_id( $swatch, $type ) {
+	private function get_variation_swatch_image_id( $swatch ) {
 		if ( empty( $swatch['variation_id'] ) ) {
 			return 0;
 		}
@@ -664,11 +663,7 @@ class Swatches_Frontend {
 			return $thumb_id;
 		}
 
-		if ( 'ux_label' === $type || ! empty( $swatch[ $type ] ) || empty( $swatch['image_id'] ) ) {
-			return 0;
-		}
-
-		return (int) $swatch['image_id'];
+		return ! empty( $swatch['image_id'] ) ? (int) $swatch['image_id'] : 0;
 	}
 
 	/**

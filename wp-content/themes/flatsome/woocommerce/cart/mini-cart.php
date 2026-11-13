@@ -14,8 +14,8 @@
  *
  * @see              https://woocommerce.com/document/template-structure/
  * @package          WooCommerce\Templates
- * @version          11.2.0
- * @flatsome-version 3.20.12
+ * @version          11.2.2
+ * @flatsome-version 3.20.13
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -80,7 +80,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 						</a>
 					<?php endif; ?>
 					<?php echo wc_get_formatted_cart_item_data( $cart_item, false, $cart_item_name ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-					<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<span class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</span>', $cart_item, $cart_item_key ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+					<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<span class="quantity">' . sprintf( '%s &times; %s', esc_html( $cart_item['quantity'] ), $product_price ) . '</span>', $cart_item, $cart_item_key ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped, WooCommerce.Commenting.CommentHooks.MissingHookComment -- pre-existing undocumented hook, out of scope here ?>
 				</li>
 				<?php
 			}

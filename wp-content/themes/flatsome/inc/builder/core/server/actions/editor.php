@@ -112,9 +112,7 @@ function ux_builder_editor_data() {
       ? __( 'Publish', 'wordpress' )
       : __( 'Update', 'wordpress' );
   } else {
-    $save_button = $post_status == 'pending'
-      ? __( 'Submit for Review', 'wordpress' )
-      : __( 'Save draft', 'wordpress' );
+    $save_button = __( 'Submit for Review', 'wordpress' );
   }
 
   $data = apply_filters( 'ux_builder_data', array(

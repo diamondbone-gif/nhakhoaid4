@@ -84,13 +84,14 @@ final class MiniCart {
 			wp_send_json_error();
 		}
 
-		$cart         = WC()->cart->get_cart();
-		$values       = array();
-		$cart_updated = false;
+		$cart = WC()->cart->get_cart();
 
-		if ( ! empty( $cart[ $cart_item_key ] ) ) {
-			$values = $cart[ $cart_item_key ];
+		if ( ! ( ( $cart[ $cart_item_key ]['data'] ?? null ) instanceof \WC_Product ) ) {
+			wp_send_json_error();
 		}
+
+		$values       = $cart[ $cart_item_key ];
+		$cart_updated = false;
 
 		$passed_validation = apply_filters( 'woocommerce_update_cart_validation', true, $cart_item_key, $values, $quantity );
 

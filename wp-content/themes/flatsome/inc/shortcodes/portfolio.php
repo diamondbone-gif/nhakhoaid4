@@ -249,7 +249,7 @@ get_flatsome_repeater_start($repeater);
               if($grid[$current]['size']) $image_size = $grid[$current]['size'];
           }
 
-          ?><div class="<?php echo esc_attr( implode( ' ', $classes_col ) ); ?>" data-terms="<?php echo strip_tags( get_the_term_list( get_the_ID(), 'featured_item_category', "[&quot;", "&quot;,&quot;", "&quot;]" ) ); ?>" <?php echo $animate; ?>>
+          ?><div class="<?php echo esc_attr( implode( ' ', $classes_col ) ); ?>" data-terms="<?php echo esc_attr( strip_tags( get_the_term_list( get_the_ID(), 'featured_item_category', "[&quot;", "&quot;,&quot;", "&quot;]" ) ) ); ?>" <?php echo $animate; ?>>
           <div class="col-inner" <?php echo get_shortcode_inline_css($css_col); ?>>
           <a href="<?php echo esc_url( $link ); ?>" class="plain <?php echo $has_lightbox; ?>">
           <div class="<?php echo esc_attr( implode( ' ', $classes_box ) ); ?>">

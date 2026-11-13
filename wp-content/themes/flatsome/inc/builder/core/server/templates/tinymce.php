@@ -47,6 +47,18 @@ if ( isset( $_GET['post'] ) ) {
     thousandsSeparator = '<?php echo addslashes( $wp_locale->number_format['thousands_sep'] ); ?>',
     decimalPoint = '<?php echo addslashes( $wp_locale->number_format['decimal_point'] ); ?>',
     isRtl = <?php echo (int) is_rtl(); ?>;
+
+  // TinyMCE's bundled Sizzle adds an `unload` listener each time it switches
+  // documents inside an iframe, which happens on every window resize here.
+  // Browsers block `unload` listeners and log a permissions policy violation.
+  var uxBuilderIgnoreUnload = function (win) {
+    var addEventListener = win.addEventListener;
+    win.addEventListener = function (type) {
+      if (type === 'unload') return;
+      return addEventListener.apply(this, arguments);
+    };
+  };
+  uxBuilderIgnoreUnload(window);
   </script>
   <?php do_action( 'admin_enqueue_scripts', $hook_suffix ); ?>
   <?php do_action( "admin_print_styles-{$hook_suffix}" ); ?>
@@ -118,7 +130,8 @@ if ( isset( $_GET['post'] ) ) {
     }
     .wp-editor-tools .wp-media-buttons .dashicons {
       display: inline-block;
-      margin-top: 10px;
+      line-height: 1;
+      vertical-align: middle;
       margin-right: 5px;
       width: 18px;
       height: 18px;
@@ -148,6 +161,9 @@ if ( isset( $_GET['post'] ) ) {
 
     tinyMCE.on('AddEditor', function (event) {
       editor = event.editor;
+      editor.on('PreInit', function () {
+        uxBuilderIgnoreUnload(event.editor.getWin());
+      });
     });
 
     window.uxBuilderHide = function () {
@@ -159,7 +175,7 @@ if ( isset( $_GET['post'] ) ) {
     }
 
     window.addEventListener('message', function (event) {
-      if (event.data.source !== 'uxbuilder') return;
+      if (event.source !== parent || event.data.source !== 'uxbuilder') return;
 
       editor = tinyMCE.activeEditor;
 

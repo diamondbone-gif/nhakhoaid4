@@ -38,11 +38,13 @@ class Flatsome_UX_Blocks_Widget extends WP_Widget {
 
 		ob_start();
 		extract($args);
+
+		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 		?>
 
 		<?php echo $before_widget; ?>
 
-		<?php if (!empty($instance['title']) ) echo $before_title . $instance['title'] . $after_title; ?>
+		<?php if ( ! empty( $title ) ) echo $before_title . $title . $after_title; ?>
 
 		<?php if(!empty($instance['block'])) echo do_shortcode('[block id="'.$instance['block'].'"]'); ?>
 

@@ -169,4 +169,34 @@ function nhakhoaid4_enqueue_assets()
             true
         );
     }
+
+
+    // ==================================================
+    // 7. ID4 SOLUTION - TOÀN WEBSITE
+    // ==================================================
+
+    // CSS giao diện ID4 Solution - /asset/css/id4-solution.css
+    $id4_solution_css = '/asset/css/id4-solution.css';
+
+    if (file_exists($theme_dir . $id4_solution_css)) {
+        wp_enqueue_style(
+            'nhakhoaid4-id4-solution',
+            $theme_uri . $id4_solution_css,
+            $shared_dependencies,
+            filemtime($theme_dir . $id4_solution_css)
+        );
+    }
+
+    // JavaScript tương tác ID4 Solution - /asset/js/id4-solution.js
+    $id4_solution_js = '/asset/js/id4-solution.js';
+
+    if (file_exists($theme_dir . $id4_solution_js)) {
+        wp_enqueue_script(
+            'nhakhoaid4-id4-solution',
+            $theme_uri . $id4_solution_js,
+            array(),
+            filemtime($theme_dir . $id4_solution_js),
+            true
+        );
+    }
 }

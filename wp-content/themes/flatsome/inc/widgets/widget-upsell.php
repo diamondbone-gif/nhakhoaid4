@@ -41,12 +41,7 @@ class Upsell_Widget extends WP_Widget {
 
 		extract( $args );
 
-		if ( isset( $instance[ 'title' ] ) ) {
-			$title = apply_filters( 'widget_title', $instance['title'] );
-		}
-		else {
-			$title = __( 'Complete the look', 'flatsome' );
-		}
+		$title = apply_filters( 'widget_title', isset( $instance['title'] ) ? $instance['title'] : __( 'Complete the look', 'flatsome' ), $instance, $this->id_base );
 
 		$meta_query = WC()->query->get_meta_query();
 

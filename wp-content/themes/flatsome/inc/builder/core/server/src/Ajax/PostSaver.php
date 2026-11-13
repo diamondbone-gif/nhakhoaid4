@@ -3,6 +3,7 @@
 namespace UxBuilder\Ajax;
 
 use UxBuilder\Options\Options;
+use UxBuilder\Post\PostOptions;
 use UxBuilder\Transformers\ArrayToString;
 
 class PostSaver {
@@ -36,20 +37,32 @@ class PostSaver {
       $post_content = $stringify->transform( $data['content']['children'] );
     }
 
-    // Publish post if user has permission to do it.
-    if ( $can_publish && $data['status'] == 'publish' ) {
-      $post_status = $data['status'];
-      $save_button = __( 'Update', 'wordpress' );
-    } else {
-      $post_status = $data['status'];
-      $save_button = $post_status == 'pending'
-        ? __( 'Submit for Review', 'wordpress' )
-        : __( 'Publish', 'wordpress' );
+    $current_status = get_post_status( $data['id'] );
+    $post_status    = in_array( $data['status'], array( 'publish', 'private', 'pending', 'draft' ), true )
+      ? $data['status']
+      : $current_status;
+
+    // Same rule as core: a user who cannot publish submits for review instead.
+    if ( ! $can_publish && $post_status !== $current_status && in_array( $post_status, array( 'publish', 'private' ), true ) ) {
+      $post_status = 'pending';
     }
 
-    $post = apply_filters( 'ux_builder_save_post', array_merge( $data['attributes'], array(
+    if ( $can_publish ) {
+      $save_button = $post_status == 'publish'
+        ? __( 'Update', 'wordpress' )
+        : __( 'Publish', 'wordpress' );
+    } else {
+      $save_button = __( 'Submit for Review', 'wordpress' );
+    }
+
+    // Only fields the builder exposes for this post can be saved.
+    $options    = new PostOptions( get_post( $data['id'] ) );
+    $attributes = array_intersect_key( (array) $data['attributes'], $options->get_attributes_array()['values'] );
+    $meta       = array_intersect_key( (array) $data['meta'], $options->get_meta_array()['values'] );
+
+    $post = apply_filters( 'ux_builder_save_post', array_merge( $attributes, array(
       'ID' => $data['id'],
-      'meta_input' => $data['meta'],
+      'meta_input' => $meta,
       'post_content' => trim( $post_content ),
       'post_status' => $post_status,
     ) ) );

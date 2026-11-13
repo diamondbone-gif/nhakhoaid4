@@ -1,7 +1,7 @@
 <?php
 
 function ux_gallery($atts) {
-    extract(shortcode_atts(array(
+    $defaults = array(
       // meta
       '_id' => 'gallery-'.rand(),
       'class' => '',
@@ -51,7 +51,9 @@ function ux_gallery($atts) {
       'image_hover_alt' => '',
       'image_overlay' => '',
 
-      ), $atts));
+      );
+
+    extract(shortcode_atts($defaults, $atts));
 
 	ob_start();
 
@@ -188,7 +190,8 @@ function ux_gallery($atts) {
             if($grid[$current]['size'] == 'medium') $image_size = 'medium';
         }
 
-        $image_output = wp_get_attachment_image( $id, $image_size, false, $atts );
+        // Undeclared attribute names would otherwise become image event handlers.
+        $image_output = wp_get_attachment_image( $id, $image_size, false, array_intersect_key( (array) $atts, $defaults ) );
       ?><div class="<?php echo esc_attr( implode( ' ', $classes_col ) ); ?>" <?php echo $animate;?>>
           <div class="col-inner">
             <?php echo $link_start; ?>

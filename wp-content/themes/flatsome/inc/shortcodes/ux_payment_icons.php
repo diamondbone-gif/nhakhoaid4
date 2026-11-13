@@ -21,7 +21,7 @@ function ux_payment_icons( $atts ) {
 	$classes = implode( ' ', $classes );
 
 	$element_atts = array(
-		'class'      => $classes,
+		'class'      => esc_attr( $classes ),
 		'role'       => $is_custom ? null : 'group',
 		'aria-label' => $is_custom || $link ? null : esc_attr__( 'Payment icons', 'flatsome' ),
 	);
