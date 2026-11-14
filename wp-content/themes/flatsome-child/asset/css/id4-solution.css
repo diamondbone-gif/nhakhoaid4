@@ -1,4 +1,5 @@
 :root {
+    --id4-solution--font-family-body: "Open Sans", sans-serif;
     --id4-intro-padding-top: clamp(24px, 5.20833vw, 78.7083px);
 }
 
@@ -6,7 +7,7 @@
 /* START FONT LOCAL */
 
 @font-face {
-    font-family: "id4-solution-font";
+    font-family: "Open Sans";
     src: url("../assets/fonts/OpenSans-Light.ttf") format("truetype");
     font-style: normal;
     font-weight: 300;
@@ -14,7 +15,7 @@
 }
 
 @font-face {
-    font-family: "id4-solution-font";
+    font-family: "Open Sans";
     src: url("../assets/fonts/OpenSans-Regular.ttf") format("truetype");
     font-style: normal;
     font-weight: 400;
@@ -22,7 +23,7 @@
 }
 
 @font-face {
-    font-family: "id4-solution-font";
+    font-family: "Open Sans";
     src: url("../assets/fonts/OpenSans-Italic.ttf") format("truetype");
     font-style: italic;
     font-weight: 400;
@@ -30,7 +31,7 @@
 }
 
 @font-face {
-    font-family: "id4-solution-font";
+    font-family: "Open Sans";
     src: url("../assets/fonts/OpenSans-Semibold.ttf") format("truetype");
     font-style: normal;
     font-weight: 600;
@@ -38,7 +39,7 @@
 }
 
 @font-face {
-    font-family: "id4-solution-font";
+    font-family: "Open Sans";
     src: url("../assets/fonts/OpenSans-SemiboldItalic.ttf") format("truetype");
     font-style: italic;
     font-weight: 600;
@@ -46,26 +47,10 @@
 }
 
 @font-face {
-    font-family: "id4-solution-font";
+    font-family: "Open Sans";
     src: url("../assets/fonts/OpenSans-Bold.ttf") format("truetype");
     font-style: normal;
     font-weight: 700;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "id4-solution-font-myriad";
-    src: url("../assets/fonts/MyriadPro-Regular.otf") format("opentype");
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "id4-solution-font-times";
-    src: url("../assets/fonts/timesi.ttf") format("truetype");
-    font-style: italic;
-    font-weight: 400;
     font-display: swap;
 }
 
@@ -179,6 +164,7 @@ h2 {
     }
 
     .id4-solution--intro h1 {
+        font-family: Open Sans, sans-serif;
         font-size: var(--id4-solution--font-fluid-23px-6vw-30px)
     }
 
@@ -222,6 +208,7 @@ body {
     }
 
     .id4-solution--intro h1 {
+        font-family: Open Sans, sans-serif;
         font-size: calc(3 * var(--id4-solution--unit));
         margin-bottom: calc(.8 * var(--id4-solution--unit));
         letter-spacing: var(--id4-solution--size-0decimal-055em);
@@ -864,7 +851,7 @@ body {
 
 .id4-solution--process #id4-solution--process-title,
 .id4-solution--process .id4-solution--process-copy h4 {
-    font-family: 'Open Sans';
+    font-family: var(--id4-solution--font-family-body);
     color: var(--id4-solution--process-gold-dark);
     background: linear-gradient(100deg, var(--id4-solution--process-gold-light), var(--id4-solution--process-gold-dark));
     background-clip: text;
@@ -872,7 +859,7 @@ body {
 }
 
 .id4-solution--process #id4-solution--process-title {
-    font-family: 'Open Sans';
+    font-family: var(--id4-solution--font-family-body);
     margin: 0 0 var(--id4-solution--size-0decimal-48em);
     font-size: var(--id4-solution--font-fluid-21px-3-1vw-51px);
     font-weight: var(--id4-solution--font-weight-800);
@@ -945,7 +932,7 @@ body {
 
 .id4-solution--process .id4-solution--process-copy h3,
 .id4-solution--process .id4-solution--process-copy h5 {
-    font-family: Arial, sans-serif;
+    font-family: var(--id4-solution--font-family-body);
 }
 
 .id4-solution--process .id4-solution--process-copy h3 {
@@ -1091,6 +1078,7 @@ body {
 }
 
 .id4-solution--candidates #id4-solution--candidates-title {
+    font-family: Open Sans, sans-serif;
     margin: 0 0 var(--id4-solution--size-0decimal-35em);
     color: var(--id4-solution--gold);
     font-size: var(--id4-solution--font-fluid-24px-3vw-50px);
@@ -1122,6 +1110,17 @@ body {
     background: linear-gradient(110deg, var(--id4-solution--candidate-card-bg-deep), var(--id4-solution--candidate-card-bg));
     text-align: center;
     line-height: var(--id4-solution--line-height-1-5);
+}
+
+.id4-solution--candidate-card h3 {
+    margin: 0 0 var(--id4-solution--size-0decimal-65em, .65em);
+    color: var(--id4-solution--gold);
+    font-size: 1.15em;
+    line-height: var(--id4-solution--line-height-1-25, 1.25);
+}
+
+.id4-solution--candidate-card p {
+    margin: 0;
 }
 
 .id4-solution--case-list {
@@ -1256,6 +1255,34 @@ body {
     border: var(--id4-solution--size-2px) solid var(--id4-solution--card-border);
     border-radius: var(--id4-solution--size-14px);
     box-shadow: 0 0 var(--id4-solution--size-12px) var(--id4-solution--candidate-hover-shadow);
+}
+
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+
+    .id4-solution--candidate-card,
+    .id4-solution--case-photo {
+        transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+    }
+
+    .id4-solution--candidate-card:hover,
+    .id4-solution--case-photo:hover {
+        border-color: #e8c675;
+        box-shadow: 0 0 20px #e8c67566, 0 6px 18px #0005;
+        transform: translateY(-4px);
+    }
+}
+
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: reduce) {
+
+    .id4-solution--candidate-card,
+    .id4-solution--case-photo {
+        transition: none;
+    }
+
+    .id4-solution--candidate-card:hover,
+    .id4-solution--case-photo:hover {
+        transform: none;
+    }
 }
 
 

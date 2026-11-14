@@ -1,54 +1,60 @@
-/* START chính sách bảo hành */
+:root {
+    --id4-warranty-bg: #f4ecd7;
+    --id4-warranty-white: #fff;
+    --id4-warranty-gold: #9b6a20;
+    --id4-warranty-rule: #d7ae62;
+    --id4-warranty-text: #211b17;
+}
 
 body {
     margin: 0;
 }
 
 .id4-solution--warranty {
-    padding: clamp(var(--id4-solution--size-24px), var(--id4-solution--size-4vw), var(--id4-solution--size-64px)) 0;
+    padding: clamp(24px, 4vw, 64px) 0;
     background: var(--id4-warranty-bg);
     color: var(--id4-warranty-text);
-    font: var(--id4-solution--font-weight-400) var(--id4-solution--font-fluid-14px-1-15vw-17px)/var(--id4-solution--line-height-1-55) var(--id4-solution--font-family-body);
+    font: 400 clamp(14px, 1.15vw, 17px)/1.55 "Segoe UI", Arial, sans-serif;
 }
 
 .id4-solution--warranty-container {
-    width: min(var(--id4-solution--size-77-percent), var(--id4-solution--size-960px));
+    width: min(77%, 960px);
     margin-inline: auto;
 }
 
 .id4-solution--warranty #id4-solution--warranty-title {
-    margin: 0 0 var(--id4-solution--size-0decimal-55em);
+    margin: 0 0 .55em;
     color: var(--id4-warranty-gold);
-    font-size: var(--id4-solution--font-fluid-22px-3vw-42px);
-    line-height: var(--id4-solution--line-height-1-2);
-    letter-spacing: var(--id4-solution--size-0decimal-04em);
+    font-size: clamp(22px, 3vw, 42px);
+    line-height: 1.2;
+    letter-spacing: .04em;
     text-align: center;
 }
 
 .id4-solution--warranty-intro,
 .id4-solution--warranty-panel {
-    padding: clamp(var(--id4-solution--size-12px), var(--id4-solution--size-2vw), var(--id4-solution--size-26px)) clamp(var(--id4-solution--size-14px), var(--id4-solution--size-4vw), var(--id4-solution--size-50px));
-    border-radius: clamp(var(--id4-solution--size-12px), var(--id4-solution--size-2vw), var(--id4-solution--size-24px));
+    padding: clamp(12px, 2vw, 26px) clamp(14px, 4vw, 50px);
+    border-radius: clamp(12px, 2vw, 24px);
     background: var(--id4-warranty-white);
-    box-shadow: 0 var(--id4-solution--size-2px) var(--id4-solution--size-6px) var(--id4-solution--warranty-shadow);
+    box-shadow: 0 2px 6px #38281926;
 }
 
 .id4-solution--warranty-intro {
-    margin-bottom: clamp(var(--id4-solution--size-10px), var(--id4-solution--size-1-5vw), var(--id4-solution--size-22px));
+    margin-bottom: clamp(10px, 1.5vw, 22px);
     text-align: center;
 }
 
 .id4-solution--warranty .id4-solution--warranty-intro h3,
 .id4-solution--warranty-panel summary {
     color: var(--id4-warranty-gold);
-    font-size: var(--id4-solution--font-fluid-14px-1-35vw-20px);
-    font-weight: var(--id4-solution--font-weight-800);
-    line-height: var(--id4-solution--line-height-1-3);
-    letter-spacing: var(--id4-solution--size-0decimal-035em);
+    font-size: clamp(14px, 1.35vw, 20px);
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: .035em;
 }
 
 .id4-solution--warranty .id4-solution--warranty-intro h3 {
-    margin: 0 0 var(--id4-solution--size-0decimal-25em);
+    margin: 0 0 .25em;
 }
 
 .id4-solution--warranty-intro p {
@@ -56,14 +62,14 @@ body {
 }
 
 .id4-solution--warranty-panel details+details {
-    margin-top: var(--id4-solution--size-0decimal-35em);
+    margin-top: .35em;
 }
 
 .id4-solution--warranty-panel summary {
     position: relative;
     display: block;
-    padding: var(--id4-solution--size-0decimal-7em) var(--id4-solution--size-1-6em);
-    border-bottom: var(--id4-solution--size-1px) solid var(--id4-warranty-rule);
+    padding: .7em 1.6em;
+    border-bottom: 1px solid var(--id4-warranty-rule);
     cursor: pointer;
     list-style: none;
     text-align: center;
@@ -75,9 +81,9 @@ body {
 
 .id4-solution--warranty-panel summary::after {
     position: absolute;
-    inset-inline-end: var(--id4-solution--size-0decimal-25em);
-    top: var(--id4-solution--size-50-percent);
-    transform: translateY(var(--id4-solution--size-negative-50-percent));
+    inset-inline-end: .25em;
+    top: 50%;
+    transform: translateY(-50%);
     content: "+";
 }
 
@@ -86,42 +92,39 @@ body {
 }
 
 .id4-solution--warranty-panel summary:focus-visible {
-    outline: var(--id4-solution--size-2px) solid var(--id4-warranty-gold);
-    outline-offset: var(--id4-solution--size-2px);
+    outline: 2px solid var(--id4-warranty-gold);
+    outline-offset: 2px;
 }
 
 .id4-solution--warranty-copy {
-    padding: var(--id4-solution--size-0decimal-7em) 0 var(--id4-solution--size-0decimal-35em);
+    padding: .7em 0 .35em;
 }
 
 .id4-solution--warranty .id4-solution--warranty-copy h4 {
     margin: 0;
     color: inherit;
-    font-size: var(--id4-solution--size-1em);
-    font-weight: var(--id4-solution--font-weight-800);
+    font-size: 1em;
+    font-weight: 800;
     font-style: italic;
 }
 
 .id4-solution--warranty-copy p,
 .id4-solution--warranty-copy ul,
 .id4-solution--warranty-copy ol {
-    margin: 0 0 var(--id4-solution--size-0decimal-45em);
+    margin: 0 0 .45em;
 }
 
 .id4-solution--warranty-copy ul,
 .id4-solution--warranty-copy ol {
-    padding-inline-start: var(--id4-solution--size-1-25em);
+    padding-inline-start: 1.25em;
 }
 
 .id4-solution--warranty-copy li+li {
-    margin-top: var(--id4-solution--size-0decimal-18em);
+    margin-top: .18em;
 }
 
 @media (max-width: 767px) {
     .id4-solution--warranty-container {
-        width: min(calc(var(--id4-solution--size-100-percent) - var(--id4-solution--size-28px)), var(--id4-solution--size-560px));
+        width: min(calc(100% - 28px), 560px);
     }
 }
-
-
-/* END chính sách bảo hành */
