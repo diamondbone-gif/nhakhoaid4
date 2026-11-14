@@ -792,22 +792,42 @@ body.admin-bar #header {
         top: 46px !important;
     }
 }
+
+
 /* Center the actual logo/menu width, including the enlarged action buttons. */
+
 @media (min-width: 850px) {
     #header .header-main .header-inner {
         width: max-content !important;
         max-width: calc(100% - 2.5rem) !important;
     }
+
     #header .header-main .header-inner .hide-for-medium.flex-left {
         flex: 0 0 auto !important;
     }
+
     #header .header-nav-main {
         width: max-content !important;
     }
 }
+
 @media (min-width: 850px) and (max-width: 949px) {
     #header {
         --id4-logo-gap: 1rem;
         --id4-menu-gap: clamp(.625rem, calc(10vw - 4.6875rem), 1.125rem);
+    }
+}
+
+
+/* Đặt hàng đầu tiên sát dưới header mobile. */
+
+@media (max-width: 849px) {
+    #main-menu .sidebar-menu {
+        margin-top: 70px !important;
+        padding-top: 0 !important;
+    }
+
+    #main-menu .nav-sidebar {
+        margin-top: 0 !important;
     }
 }

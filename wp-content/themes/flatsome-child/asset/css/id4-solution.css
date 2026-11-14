@@ -1,64 +1,69 @@
+:root {
+    --id4-intro-padding-top: clamp(24px, 5.20833vw, 78.7083px);
+}
+
+
 /* START FONT LOCAL */
 
 @font-face {
-    font-family: "Open Sans";
-    src: url("./assets/fonts/OpenSans-Light.ttf") format("truetype");
+    font-family: "id4-solution-font";
+    src: url("../assets/fonts/OpenSans-Light.ttf") format("truetype");
     font-style: normal;
     font-weight: 300;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Open Sans";
-    src: url("./assets/fonts/OpenSans-Regular.ttf") format("truetype");
+    font-family: "id4-solution-font";
+    src: url("../assets/fonts/OpenSans-Regular.ttf") format("truetype");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Open Sans";
-    src: url("./assets/fonts/OpenSans-Italic.ttf") format("truetype");
+    font-family: "id4-solution-font";
+    src: url("../assets/fonts/OpenSans-Italic.ttf") format("truetype");
     font-style: italic;
     font-weight: 400;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Open Sans";
-    src: url("./assets/fonts/OpenSans-Semibold.ttf") format("truetype");
+    font-family: "id4-solution-font";
+    src: url("../assets/fonts/OpenSans-Semibold.ttf") format("truetype");
     font-style: normal;
     font-weight: 600;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Open Sans";
-    src: url("./assets/fonts/OpenSans-SemiboldItalic.ttf") format("truetype");
+    font-family: "id4-solution-font";
+    src: url("../assets/fonts/OpenSans-SemiboldItalic.ttf") format("truetype");
     font-style: italic;
     font-weight: 600;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Open Sans";
-    src: url("./assets/fonts/OpenSans-Bold.ttf") format("truetype");
+    font-family: "id4-solution-font";
+    src: url("../assets/fonts/OpenSans-Bold.ttf") format("truetype");
     font-style: normal;
     font-weight: 700;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Myriad Pro";
-    src: url("./assets/fonts/MyriadPro-Regular.otf") format("opentype");
+    font-family: "id4-solution-font-myriad";
+    src: url("../assets/fonts/MyriadPro-Regular.otf") format("opentype");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Times Custom";
-    src: url("./assets/fonts/timesi.ttf") format("truetype");
+    font-family: "id4-solution-font-times";
+    src: url("../assets/fonts/timesi.ttf") format("truetype");
     font-style: italic;
     font-weight: 400;
     font-display: swap;
@@ -80,7 +85,7 @@ html {
 
 body {
     margin: 0;
-    font-family: var(--id4-solution--font-family-fallback);
+    font-family: var(--id4-solution--font-family-body);
     color: var(--id4-solution--ink);
     background: var(--id4-solution--white)
 }
@@ -131,7 +136,7 @@ h2 {
 }
 
 .id4-solution--intro {
-    padding: clamp(var(--id4-solution--size-32px), var(--id4-solution--size-4vw), var(--id4-solution--size-62px)) 0 clamp(var(--id4-solution--size-34px), var(--id4-solution--size-4-3vw), var(--id4-solution--size-64px));
+    padding-top: var(--id4-intro-padding-top);
     text-align: center;
     background: var(--id4-solution--white);
     color: var(--id4-solution--hero-text)
@@ -171,10 +176,6 @@ h2 {
 @media(max-width:767px) {
     .id4-solution--container {
         width: var(--id4-solution--size-92-percent)
-    }
-
-    .id4-solution--intro {
-        padding: var(--id4-solution--size-28px) 0 var(--id4-solution--size-35px)
     }
 
     .id4-solution--intro h1 {
@@ -220,10 +221,6 @@ body {
         letter-spacing: var(--id4-solution--size-0decimal-055em);
     }
 
-    .id4-solution--intro {
-        padding: calc(3.3 * var(--id4-solution--unit)) 0 calc(3.5 * var(--id4-solution--unit));
-    }
-
     .id4-solution--intro h1 {
         font-size: calc(3 * var(--id4-solution--unit));
         margin-bottom: calc(.8 * var(--id4-solution--unit));
@@ -259,7 +256,7 @@ html {
 
 body {
     margin: 0;
-    font-family: var(--id4-solution--font-family-fallback);
+    font-family: var(--id4-solution--font-family-body);
     color: var(--id4-solution--ink);
     background: var(--id4-solution--white)
 }
@@ -867,6 +864,7 @@ body {
 
 .id4-solution--process #id4-solution--process-title,
 .id4-solution--process .id4-solution--process-copy h4 {
+    font-family: 'Open Sans';
     color: var(--id4-solution--process-gold-dark);
     background: linear-gradient(100deg, var(--id4-solution--process-gold-light), var(--id4-solution--process-gold-dark));
     background-clip: text;
@@ -874,6 +872,7 @@ body {
 }
 
 .id4-solution--process #id4-solution--process-title {
+    font-family: 'Open Sans';
     margin: 0 0 var(--id4-solution--size-0decimal-48em);
     font-size: var(--id4-solution--font-fluid-21px-3-1vw-51px);
     font-weight: var(--id4-solution--font-weight-800);
@@ -942,6 +941,11 @@ body {
 .id4-solution--process .id4-solution--process-copy h5,
 .id4-solution--process .id4-solution--process-copy p {
     margin: 0;
+}
+
+.id4-solution--process .id4-solution--process-copy h3,
+.id4-solution--process .id4-solution--process-copy h5 {
+    font-family: Arial, sans-serif;
 }
 
 .id4-solution--process .id4-solution--process-copy h3 {
@@ -1256,132 +1260,3 @@ body {
 
 
 /* END ai là người phù hợp với iD-4 Implant Solution? */
-
-
-/* START chính sách bảo hành */
-
-body {
-    margin: 0;
-}
-
-.id4-solution--warranty {
-    padding: clamp(var(--id4-solution--size-24px), var(--id4-solution--size-4vw), var(--id4-solution--size-64px)) 0;
-    background: var(--id4-warranty-bg);
-    color: var(--id4-warranty-text);
-    font: var(--id4-solution--font-weight-400) var(--id4-solution--font-fluid-14px-1-15vw-17px)/var(--id4-solution--line-height-1-55) var(--id4-solution--font-family-body);
-}
-
-.id4-solution--warranty-container {
-    width: min(var(--id4-solution--size-77-percent), var(--id4-solution--size-960px));
-    margin-inline: auto;
-}
-
-.id4-solution--warranty #id4-solution--warranty-title {
-    margin: 0 0 var(--id4-solution--size-0decimal-55em);
-    color: var(--id4-warranty-gold);
-    font-size: var(--id4-solution--font-fluid-22px-3vw-42px);
-    line-height: var(--id4-solution--line-height-1-2);
-    letter-spacing: var(--id4-solution--size-0decimal-04em);
-    text-align: center;
-}
-
-.id4-solution--warranty-intro,
-.id4-solution--warranty-panel {
-    padding: clamp(var(--id4-solution--size-12px), var(--id4-solution--size-2vw), var(--id4-solution--size-26px)) clamp(var(--id4-solution--size-14px), var(--id4-solution--size-4vw), var(--id4-solution--size-50px));
-    border-radius: clamp(var(--id4-solution--size-12px), var(--id4-solution--size-2vw), var(--id4-solution--size-24px));
-    background: var(--id4-warranty-white);
-    box-shadow: 0 var(--id4-solution--size-2px) var(--id4-solution--size-6px) var(--id4-solution--warranty-shadow);
-}
-
-.id4-solution--warranty-intro {
-    margin-bottom: clamp(var(--id4-solution--size-10px), var(--id4-solution--size-1-5vw), var(--id4-solution--size-22px));
-    text-align: center;
-}
-
-.id4-solution--warranty .id4-solution--warranty-intro h3,
-.id4-solution--warranty-panel summary {
-    color: var(--id4-warranty-gold);
-    font-size: var(--id4-solution--font-fluid-14px-1-35vw-20px);
-    font-weight: var(--id4-solution--font-weight-800);
-    line-height: var(--id4-solution--line-height-1-3);
-    letter-spacing: var(--id4-solution--size-0decimal-035em);
-}
-
-.id4-solution--warranty .id4-solution--warranty-intro h3 {
-    margin: 0 0 var(--id4-solution--size-0decimal-25em);
-}
-
-.id4-solution--warranty-intro p {
-    margin: 0;
-}
-
-.id4-solution--warranty-panel details+details {
-    margin-top: var(--id4-solution--size-0decimal-35em);
-}
-
-.id4-solution--warranty-panel summary {
-    position: relative;
-    display: block;
-    padding: var(--id4-solution--size-0decimal-7em) var(--id4-solution--size-1-6em);
-    border-bottom: var(--id4-solution--size-1px) solid var(--id4-warranty-rule);
-    cursor: pointer;
-    list-style: none;
-    text-align: center;
-}
-
-.id4-solution--warranty-panel summary::-webkit-details-marker {
-    display: none;
-}
-
-.id4-solution--warranty-panel summary::after {
-    position: absolute;
-    inset-inline-end: var(--id4-solution--size-0decimal-25em);
-    top: var(--id4-solution--size-50-percent);
-    transform: translateY(var(--id4-solution--size-negative-50-percent));
-    content: "+";
-}
-
-.id4-solution--warranty-panel details[open]>summary::after {
-    content: "−";
-}
-
-.id4-solution--warranty-panel summary:focus-visible {
-    outline: var(--id4-solution--size-2px) solid var(--id4-warranty-gold);
-    outline-offset: var(--id4-solution--size-2px);
-}
-
-.id4-solution--warranty-copy {
-    padding: var(--id4-solution--size-0decimal-7em) 0 var(--id4-solution--size-0decimal-35em);
-}
-
-.id4-solution--warranty .id4-solution--warranty-copy h4 {
-    margin: 0;
-    color: inherit;
-    font-size: var(--id4-solution--size-1em);
-    font-weight: var(--id4-solution--font-weight-800);
-    font-style: italic;
-}
-
-.id4-solution--warranty-copy p,
-.id4-solution--warranty-copy ul,
-.id4-solution--warranty-copy ol {
-    margin: 0 0 var(--id4-solution--size-0decimal-45em);
-}
-
-.id4-solution--warranty-copy ul,
-.id4-solution--warranty-copy ol {
-    padding-inline-start: var(--id4-solution--size-1-25em);
-}
-
-.id4-solution--warranty-copy li+li {
-    margin-top: var(--id4-solution--size-0decimal-18em);
-}
-
-@media (max-width: 767px) {
-    .id4-solution--warranty-container {
-        width: min(calc(var(--id4-solution--size-100-percent) - var(--id4-solution--size-28px)), var(--id4-solution--size-560px));
-    }
-}
-
-
-/* END chính sách bảo hành */
