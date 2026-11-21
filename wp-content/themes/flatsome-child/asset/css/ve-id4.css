@@ -1,0 +1,1384 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #fff;
+    color: #222;
+}
+
+.video-gallery,
+.video-dialog {
+    --video-font-family: "Open Sans";
+    --video-text-size: clamp(16px, 1.5vw, 18px);
+    --video-line-height: 1.5;
+    font-family: var(--video-font-family);
+    font-size: var(--video-text-size);
+    line-height: var(--video-line-height);
+}
+
+.video-gallery .video-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.video-gallery {
+    --video-grid-gap: clamp(12px, 1.1vw, 24px);
+    width: calc(100% - 2 * var(--video-grid-gap));
+    max-width: 960px;
+    margin: 0 auto;
+    padding-block: var(--video-gallery-block-padding, 12px);
+}
+
+@media (min-width: 1200px) {
+    .video-gallery {
+        --video-grid-gap: 20px;
+        --video-gallery-block-padding: 32px;
+        width: min(100%, 77.083333vw);
+        max-width: 1480px;
+    }
+}
+
+.video-gallery .video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--video-grid-gap);
+}
+
+.video-gallery .video-gallery-actions {
+    margin-top: clamp(24px, 1.75vw, 44px);
+    text-align: center;
+}
+
+.video-gallery .video-gallery-more {
+    display: inline-block;
+    padding: .5em 1.1em;
+    border-radius: .55em;
+    background: #d1a23e;
+    color: #fff;
+    font-size: clamp(18px, 1.1vw, 28px);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: .04em;
+    text-decoration: none;
+}
+
+.video-gallery .video-gallery-more:focus-visible {
+    outline: 3px solid #19786c;
+    outline-offset: 3px;
+}
+
+.video-gallery .video-card {
+    display: grid;
+    position: relative;
+    grid-template-areas: "cover";
+    grid-template-rows: minmax(0, 1fr);
+    aspect-ratio: 16 / 9;
+    container-type: inline-size;
+    min-width: 0;
+    background: #151515;
+    border-radius: 3px;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.video-gallery .video-card:focus-visible,
+.video-dialog :focus-visible {
+    outline: 3px solid #19786c;
+    outline-offset: 3px;
+}
+
+.video-gallery .video-thumb {
+    grid-area: cover;
+    position: relative;
+    align-self: stretch;
+}
+
+.video-gallery .video-thumb img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+}
+
+@media (min-width: 1200px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .video-gallery .video-thumb img {
+        transition: transform .35s ease;
+    }
+
+    .video-gallery .video-card:hover .video-thumb img {
+        transform: scale(1.06);
+    }
+}
+
+.video-gallery .video-thumb img[hidden],
+.video-gallery .video-category[hidden] {
+    display: none;
+}
+
+.video-gallery .video-thumb::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #000 0%, rgb(0 0 0 / 75%) 22%, transparent 68%);
+}
+
+.video-gallery .video-copy {
+    grid-area: cover;
+    position: relative;
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(3px, 1cqi, 6px);
+    padding: clamp(9px, 4cqi, 22px);
+    color: #fff;
+    overflow-wrap: anywhere;
+}
+
+.video-gallery .video-category {
+    display: inline-block;
+    max-width: 100%;
+    padding: .35em .9em;
+    border-radius: .65em;
+    background: #d1a23e;
+    color: #fff;
+    font-size: clamp(.625rem, 3.05cqi, .9375rem);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.video-gallery .video-copy h2 {
+    text-align: left;
+    margin: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: clamp(.9375rem, 5.2cqi, 1.625rem);
+    font-weight: 700;
+    line-height: 1.16;
+}
+
+.video-gallery .video-copy p {
+    margin: 0;
+    color: inherit;
+    font-size: clamp(.75rem, 3.55cqi, 1.125rem);
+    line-height: 1.35;
+}
+
+.video-dialog {
+    width: min(calc(100% - 24px), 960px);
+    max-width: none;
+    max-height: calc(100% - 24px);
+    max-height: calc(100dvh - 24px);
+    padding: 0;
+    border: 0;
+    border-radius: 12px;
+    color: #fff;
+    background: #141719;
+    overflow: auto;
+}
+
+.video-dialog::backdrop {
+    background: #000b;
+}
+
+html:has(.video-dialog[open]) {
+    overflow: hidden;
+}
+
+dialog.video-dialog .video-dialog-header,
+dialog.video-dialog .video-dialog-footer {
+    margin: 0;
+    padding: 8px 14px;
+    background: #141719;
+}
+
+dialog.video-dialog .video-dialog-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+dialog.video-dialog #video-dialog-title {
+    min-width: 0;
+    margin: 0;
+    color: #fff;
+    font: 700 var(--video-text-size)/var(--video-line-height) var(--video-font-family);
+    letter-spacing: normal;
+    text-align: left;
+    text-transform: none;
+    overflow-wrap: anywhere;
+}
+
+dialog.video-dialog button.video-close {
+    display: grid;
+    place-items: center;
+    flex: 0 0 44px;
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #fff2;
+    color: #fff;
+    box-shadow: none;
+    font: 26px/1 var(--video-font-family);
+    letter-spacing: normal;
+    text-transform: none;
+    cursor: pointer;
+}
+
+dialog.video-dialog button.video-close:hover,
+dialog.video-dialog button.video-close:focus-visible {
+    background: #fff4;
+    color: #fff;
+}
+
+
+/* WordPress may wrap the controls in paragraphs when inserting HTML. */
+
+dialog.video-dialog .video-dialog-header>p:has(> .video-close) {
+    display: contents;
+}
+
+dialog.video-dialog> :is(p:empty, br),
+dialog.video-dialog .video-dialog-header> :is(p:empty, br) {
+    display: none;
+}
+
+.video-player {
+    width: min(100%, max(0px, (100dvh - 125px) * 16 / 9));
+    margin-inline: auto;
+    aspect-ratio: 16 / 9;
+    background: #000;
+}
+
+.video-player iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-dialog-footer {
+    text-align: right;
+}
+
+dialog.video-dialog a.video-external {
+    display: inline-block;
+    padding: 3px 0;
+    color: #fff;
+    font: 400 var(--video-text-size)/var(--video-line-height) var(--video-font-family);
+}
+
+dialog.video-dialog a.video-external:hover,
+dialog.video-dialog a.video-external:focus-visible {
+    color: #fff;
+    text-decoration: underline;
+}
+
+@media (width < 1200px) {
+    .video-gallery .video-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .video-gallery .video-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .video-gallery .video-thumb {
+        overflow: hidden;
+    }
+
+    .video-gallery .video-thumb img {
+        transform: scale(1.04);
+    }
+
+    .video-gallery .video-thumb::after {
+        background: linear-gradient(to top, rgb(0 0 0 / 85%), rgb(0 0 0 / 55%) 25%, transparent 65%);
+    }
+}
+
+
+/*Lịch sử thanh lập*/
+
+
+/* =========================================================
+   iD-4 MAIN MENU — căn theo hình tham chiếu
+   Thay toàn bộ asset/css/main-menu.css bằng file này.
+   Giữ font local, submenu ngôn ngữ và menu mobile.
+========================================================= */
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("/wp-content/themes/flatsome-child/asset/font/OpenSans-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("/wp-content/themes/flatsome-child/asset/font/OpenSans-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("/wp-content/themes/flatsome-child/asset/font/OpenSans-Italic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("/wp-content/themes/flatsome-child/asset/font/OpenSans-Semibold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("/wp-content/themes/flatsome-child/asset/font/OpenSans-SemiboldItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("/wp-content/themes/flatsome-child/asset/font/OpenSans-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Myriad Pro";
+    src: url("/wp-content/themes/flatsome-child/asset/font/MyriadPro-Regular.otf") format("opentype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Times Custom";
+    src: url("/wp-content/themes/flatsome-child/asset/font/timesi.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@media (min-width: 850px) {
+    #header {
+        --id4-header-height: 70px;
+        --id4-content-width: 984px;
+        --id4-logo-width: 100px;
+        --id4-logo-gap: 44px;
+        --id4-menu-gap: 36px;
+        --id4-action-gap: 16px;
+        --id4-menu-font-size: 13px;
+        --id4-menu-tracking: 1px;
+    }
+
+    #top-bar {
+        display: none !important;
+    }
+
+    #header #masthead,
+    #header .header-main {
+        position: relative !important;
+        width: 100% !important;
+        height: var(--id4-header-height) !important;
+        min-height: var(--id4-header-height) !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: #11110f !important;
+        border: 0 !important;
+        box-shadow: none !important;
+    }
+
+    /* Dùng luồng flex bình thường: tránh max-content + absolute
+       làm cụm menu tràn khi thu nhỏ màn hình. */
+    #header .header-main .header-inner {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+        width: calc(100% - 40px) !important;
+        max-width: var(--id4-content-width) !important;
+        height: var(--id4-header-height) !important;
+        min-height: var(--id4-header-height) !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-wrap: nowrap !important;
+        box-sizing: border-box !important;
+        overflow: visible !important;
+    }
+
+    #header #logo {
+        width: var(--id4-logo-width) !important;
+        min-width: var(--id4-logo-width) !important;
+        max-width: var(--id4-logo-width) !important;
+        flex: 0 0 var(--id4-logo-width) !important;
+        margin: 0 var(--id4-logo-gap) 0 0 !important;
+        padding: 0 !important;
+    }
+
+    #header #logo a {
+        width: 100% !important;
+        height: var(--id4-header-height) !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    #header #logo img {
+        width: var(--id4-logo-width) !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: 60px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        object-fit: contain !important;
+    }
+
+    #header #logo img.header-logo,
+    #header #logo img.header_logo {
+        display: block !important;
+    }
+
+    #header #logo img.header-logo-dark {
+        display: none !important;
+    }
+
+    #header .header-main .header-inner .show-for-medium {
+        display: none !important;
+    }
+
+    #header .header-main .header-inner .hide-for-medium.flex-left {
+        width: auto !important;
+        min-width: 0 !important;
+        flex: 0 1 auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Cấu trúc hiện tại: tất cả tab và hai nút ở cùng menu trái. */
+    #header .header-main .header-inner .hide-for-medium.flex-right {
+        display: none !important;
+    }
+
+    #header .header-nav-main {
+        width: auto !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-wrap: nowrap !important;
+        gap: var(--id4-menu-gap) !important;
+    }
+
+    #header .header-nav-main>li {
+        flex: 0 0 auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+    }
+
+    #header .header-nav-main>li>a {
+        position: relative !important;
+        min-height: var(--id4-header-height) !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        color: #fff !important;
+        background: transparent !important;
+        font-family: "Open Sans", Arial, sans-serif !important;
+        font-size: var(--id4-menu-font-size) !important;
+        font-weight: 600 !important;
+        font-style: normal !important;
+        line-height: 1.2 !important;
+        letter-spacing: var(--id4-menu-tracking) !important;
+        text-transform: none !important;
+        white-space: nowrap !important;
+        text-decoration: none !important;
+        box-sizing: border-box !important;
+        transition: color .2s ease, background-color .2s ease !important;
+    }
+
+    #header .header-nav-main>li>a:hover {
+        color: #d7aa3d !important;
+    }
+
+    #header .header-nav-main>li>a>.icon-angle-down {
+        display: none !important;
+    }
+
+    #header .header-nav-main>li.current-menu-item>a,
+    #header .header-nav-main>li.current-menu-ancestor>a {
+        color: #fff !important;
+    }
+
+    #header .header-nav-main>li:not(.id4-language-switcher):not(.pll-parent-menu-item):not(.id4-booking-button):not(:last-child)>a::after {
+        content: "" !important;
+        position: absolute !important;
+        left: 0 !important;
+        /* Dòng chữ có line-height 1.2: .6em là nửa chiều cao dòng.
+           Gạch chân cách dòng chữ 3px, không bám đáy header 70px. */
+        top: calc(50% + .6em + 3px) !important;
+        bottom: auto !important;
+        width: 100% !important;
+        height: 3px !important;
+        background: #d7aa3d !important;
+        border-radius: 999px !important;
+        transform: scaleX(0) !important;
+        transform-origin: left center !important;
+        opacity: 0 !important;
+        transition: transform .3s ease, opacity .3s ease !important;
+        pointer-events: none !important;
+    }
+
+    #header .header-nav-main>li:not(.id4-language-switcher):not(.pll-parent-menu-item):not(.id4-booking-button):not(:last-child)>a:is(:hover,
+        :focus-visible)::after {
+        transform: scaleX(1) !important;
+        opacity: 1 !important;
+    }
+
+    #header .header-nav-main>li:is(.id4-language-switcher,
+        .pll-parent-menu-item) {
+        position: relative !important;
+        /* Mẫu: khoảng cách VỀ ID-4 → ngôn ngữ rộng hơn các tab chữ. */
+        margin-left: 10px !important;
+    }
+
+    #header .header-nav-main>li:is(.id4-language-switcher,
+        .pll-parent-menu-item)>a {
+        height: 24px !important;
+        min-height: 24px !important;
+        padding: 0 7px !important;
+        display: inline-flex !important;
+        gap: 4px !important;
+        border: 1px solid #d7aa3d !important;
+        border-radius: 5px !important;
+        background: #11110f !important;
+        color: #d7aa3d !important;
+        font-size: .75rem !important;
+        font-weight: 600 !important;
+        letter-spacing: 0 !important;
+        box-shadow: none !important;
+    }
+
+    #header .header-nav-main>li:is(.id4-language-switcher,
+        .pll-parent-menu-item)>a span {
+        color: #d7aa3d !important;
+    }
+
+    #header .header-nav-main>li:is(.id4-language-switcher,
+        .pll-parent-menu-item):is(:hover,
+        .current-dropdown)>a {
+        background: #11110f !important;
+        color: #d7aa3d !important;
+        border-color: #d7aa3d !important;
+    }
+
+    #header .header-nav-main>li:is(.id4-language-switcher,
+        .pll-parent-menu-item)>a img {
+        width: 13px !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    #header .header-nav-main>li:is(.id4-language-switcher,
+        .pll-parent-menu-item)>a i {
+        display: none !important;
+    }
+
+    #header .header-nav-main>li:is(.id4-language-switcher,
+        .pll-parent-menu-item)>a::after {
+        content: none !important;
+        display: none !important;
+    }
+
+    /* =====================================================
+       07. MŨI NHỌN NỐI NÚT VỚI DROPDOWN
+       Ghi đè mũi tên trắng mặc định của Flatsome
+       Tạo 1 tam giác đen có viền vàng đồng bộ giao diện
+    ===================================================== */
+    #header .header-nav-main>li.id4-language-switcher::before,
+    #header .header-nav-main>li.pll-parent-menu-item::before {
+        content: "" !important;
+        position: absolute !important;
+        left: 50% !important;
+        bottom: -13px !important;
+        width: 0 !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        transform: translateX(-50%) !important;
+        border-left: 12px solid transparent !important;
+        border-right: 12px solid transparent !important;
+        border-bottom: 12px solid #d7aa3d !important;
+        border-top: 0 !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        z-index: 1002 !important;
+    }
+
+    #header .header-nav-main>li.id4-language-switcher::after,
+    #header .header-nav-main>li.pll-parent-menu-item::after {
+        content: "" !important;
+        position: absolute !important;
+        left: 50% !important;
+        bottom: -14px !important;
+        width: 0 !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        transform: translateX(-50%) !important;
+        border-left: 10px solid transparent !important;
+        border-right: 10px solid transparent !important;
+        border-bottom: 10px solid #11110f !important;
+        border-top: 0 !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        z-index: 1003 !important;
+    }
+
+    #header .header-nav-main>li.id4-language-switcher:hover::before,
+    #header .header-nav-main>li.id4-language-switcher.current-dropdown::before,
+    #header .header-nav-main>li.pll-parent-menu-item:hover::before,
+    #header .header-nav-main>li.pll-parent-menu-item.current-dropdown::before,
+    #header .header-nav-main>li.id4-language-switcher:hover::after,
+    #header .header-nav-main>li.id4-language-switcher.current-dropdown::after,
+    #header .header-nav-main>li.pll-parent-menu-item:hover::after,
+    #header .header-nav-main>li.pll-parent-menu-item.current-dropdown::after {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    /* =====================================================
+       08. DROPDOWN NGÔN NGỮ — DESKTOP / TABLET
+       Nền đen + chữ vàng
+    ===================================================== */
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu {
+        top: calc(100% + 12px) !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        min-width: 260px !important;
+        padding: 18px 14px !important;
+        background: #11110f !important;
+        background-color: #11110f !important;
+        border: 2px solid #d7aa3d !important;
+        border-radius: 18px !important;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28) !important;
+        overflow: visible !important;
+    }
+
+    /* Tắt pseudo-element mặc định trên chính dropdown
+       để không tạo thêm hình thoi / tam giác trắng */
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown::before,
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown::after,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu::before,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu::after,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown::before,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown::after,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu::before,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu::after {
+        content: none !important;
+        display: none !important;
+    }
+
+    /* Từng dòng ngôn ngữ */
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown li,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu li,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown li,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu li {
+        margin: 0 !important;
+        padding: 0 !important;
+        border: 0 !important;
+        background: transparent !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+    }
+
+    /* Đường phân cách giữa các ngôn ngữ */
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown li+li,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu li+li,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown li+li,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu li+li {
+        margin-top: 8px !important;
+        padding-top: 8px !important;
+        border-top: 1px solid rgba(215, 170, 61, 0.28) !important;
+    }
+
+    /* Link ngôn ngữ
+       Tiếng Việt và English dùng cùng 1 giao diện */
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown a,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu a,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown a,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu a {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        min-height: 42px !important;
+        margin: 0 !important;
+        padding: 10px 12px !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        color: #d7aa3d !important;
+        background: transparent !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        font-family: "Open Sans", Arial, sans-serif !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        line-height: 1.3 !important;
+        text-transform: none !important;
+        white-space: nowrap !important;
+        text-decoration: none !important;
+    }
+
+    /* Ép toàn bộ text con của Polylang về màu vàng */
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown a span,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu a span,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown a span,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu a span {
+        color: #d7aa3d !important;
+        background: transparent !important;
+    }
+
+    /* QUAN TRỌNG:
+       Xóa style riêng của ngôn ngữ hiện tại.
+       Nhờ vậy Tiếng Việt hiển thị giống hệt English. */
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown .current-lang>a,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu .current-lang>a,
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown .lang-item-current>a,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu .lang-item-current>a,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown .current-lang>a,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu .current-lang>a,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown .lang-item-current>a,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu .lang-item-current>a {
+        margin: 0 !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        background-color: transparent !important;
+        color: #d7aa3d !important;
+        box-shadow: none !important;
+    }
+
+    /* Hover cho cả Tiếng Việt và English giống nhau */
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown a:hover,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu a:hover,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown a:hover,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu a:hover,
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown .current-lang>a:hover,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu .current-lang>a:hover,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown .current-lang>a:hover,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu .current-lang>a:hover {
+        background: rgba(215, 170, 61, 0.10) !important;
+        color: #d7aa3d !important;
+        border-radius: 8px !important;
+        box-shadow: none !important;
+    }
+
+    /* Kích thước cờ trong dropdown */
+    #header .header-nav-main>li.id4-language-switcher>.nav-dropdown a img,
+    #header .header-nav-main>li.id4-language-switcher>.sub-menu a img,
+    #header .header-nav-main>li.pll-parent-menu-item>.nav-dropdown a img,
+    #header .header-nav-main>li.pll-parent-menu-item>.sub-menu a img {
+        width: 20px !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    #header .header-nav-main>li.id4-booking-button>a,
+    #header .header-nav-main>li:last-child:not(.id4-language-switcher):not(.pll-parent-menu-item)>a {
+        height: 24px !important;
+        min-height: 24px !important;
+        padding: 0 9px !important;
+        border: 1px solid #d0a13a !important;
+        border-radius: 5px !important;
+        background: #d0a13a !important;
+        color: #fff !important;
+        font-size: .875rem !important;
+        font-weight: 700 !important;
+        letter-spacing: .7px !important;
+    }
+
+    /* Chỉ rút khoảng cách giữa hai nút, không làm lệch tab chữ. */
+    #header .header-nav-main>li:is(.id4-language-switcher,
+        .pll-parent-menu-item)+li.id4-booking-button,
+    #header .header-nav-main>li:is(.id4-language-switcher,
+        .pll-parent-menu-item)+li:last-child:not(.id4-language-switcher):not(.pll-parent-menu-item) {
+        margin-left: calc(var(--id4-action-gap) - var(--id4-menu-gap)) !important;
+    }
+
+    #header .header-nav-main>li.id4-booking-button>a:hover,
+    #header .header-nav-main>li:last-child:not(.id4-language-switcher):not(.pll-parent-menu-item)>a:hover {
+        background: #bd902e !important;
+        border-color: #bd902e !important;
+        color: #fff !important;
+    }
+
+    #header .header-nav-main>li>a:focus-visible {
+        outline: 2px solid #d7aa3d !important;
+        outline-offset: 3px !important;
+    }
+
+    /* Không lặp lại layout cho .stuck: các selector phía trên
+       cũng áp dụng khi Flatsome thêm class sticky. */
+}
+
+
+/* Co khoảng cách ở tablet, giữ breakpoint mobile gốc 849px. */
+
+@media (min-width: 850px) and (max-width: 1049px) {
+    #header {
+        --id4-logo-width: 72px;
+        --id4-logo-gap: clamp(20px, calc(12vw - 82px), 44px);
+        --id4-menu-gap: clamp(18px, calc(9vw - 58px), 36px);
+        --id4-menu-font-size: clamp(12px, calc(.5vw + 7.75px), 13px);
+        --id4-menu-tracking: clamp(.65px, calc(.175vw - .8375px), 1px);
+    }
+}
+
+
+/* =========================================================
+   MOBILE MENU — ĐỒNG BỘ MÀU DESKTOP / TABLET
+   Giữ nguyên cấu trúc Off-Canvas mặc định của Flatsome
+========================================================= */
+
+@media (max-width: 849px) {
+
+    /* =====================================================
+       11. NỀN MENU MOBILE
+       Đồng bộ nền đen với header Desktop / Tablet
+    ===================================================== */
+    .off-canvas .mfp-content,
+    #main-menu,
+    #main-menu .sidebar-menu,
+    #main-menu .nav-sidebar {
+        background: #11110f !important;
+        background-color: #11110f !important;
+    }
+
+    /* =====================================================
+       12. MÀU CHỮ MENU MOBILE
+       Menu chính màu trắng, hover chuyển vàng
+    ===================================================== */
+    #main-menu .nav-sidebar>li {
+        background: transparent !important;
+        border-bottom: 0 !important;
+    }
+
+    #main-menu .nav-sidebar>li>a {
+        color: #ffffff !important;
+        background: transparent !important;
+        font-family: "Open Sans", Arial, sans-serif !important;
+        font-weight: 600 !important;
+        text-decoration: none !important;
+        transition: color 0.25s ease, background-color 0.25s ease !important;
+    }
+
+    #main-menu .nav-sidebar>li>a:hover,
+    #main-menu .nav-sidebar>li>a:focus {
+        color: #d7aa3d !important;
+        background: rgba(215, 170, 61, 0.08) !important;
+    }
+
+    #main-menu .nav-sidebar>li.current-menu-item>a,
+    #main-menu .nav-sidebar>li.current-menu-ancestor>a {
+        color: #ffffff !important;
+        background: transparent !important;
+    }
+
+    /* =====================================================
+       13. ICON / MŨI TÊN MENU MOBILE
+       Bỏ màu xám mặc định của Flatsome
+    ===================================================== */
+    #main-menu .nav-sidebar>li>.toggle,
+    #main-menu .nav-sidebar>li>button.toggle,
+    #main-menu .nav-sidebar>li>.toggle i,
+    #main-menu .nav-sidebar>li>button.toggle i,
+    #main-menu .nav-sidebar>li>a i {
+        color: #ffffff !important;
+        background: transparent !important;
+    }
+
+    /* =====================================================
+       14. NGÔN NGỮ MOBILE
+       Đồng bộ màu vàng với nút ngôn ngữ Desktop / Tablet
+    ===================================================== */
+    #main-menu .nav-sidebar>li.id4-language-switcher>a,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>a,
+    #main-menu .nav-sidebar>li.id4-language-switcher>a span,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>a span {
+        color: #d7aa3d !important;
+    }
+
+    #main-menu .nav-sidebar>li.id4-language-switcher>.toggle,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.toggle,
+    #main-menu .nav-sidebar>li.id4-language-switcher>button.toggle,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>button.toggle,
+    #main-menu .nav-sidebar>li.id4-language-switcher>.toggle i,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.toggle i,
+    #main-menu .nav-sidebar>li.id4-language-switcher>button.toggle i,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>button.toggle i {
+        color: #d7aa3d !important;
+        background: transparent !important;
+    }
+
+    /* =====================================================
+       15. SUBMENU NGÔN NGỮ MOBILE
+       Nền đen + chữ vàng giống dropdown Desktop / Tablet
+    ===================================================== */
+    #main-menu .nav-sidebar>li.id4-language-switcher>.sub-menu,
+    #main-menu .nav-sidebar>li.id4-language-switcher>.children,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.sub-menu,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.children {
+        background: #11110f !important;
+        background-color: #11110f !important;
+        border-top: 1px solid rgba(215, 170, 61, 0.22) !important;
+    }
+
+    #main-menu .nav-sidebar>li.id4-language-switcher>.sub-menu li,
+    #main-menu .nav-sidebar>li.id4-language-switcher>.children li,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.sub-menu li,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.children li {
+        background: transparent !important;
+        border: 0 !important;
+    }
+
+    #main-menu .nav-sidebar>li.id4-language-switcher>.sub-menu a,
+    #main-menu .nav-sidebar>li.id4-language-switcher>.children a,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.sub-menu a,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.children a,
+    #main-menu .nav-sidebar>li.id4-language-switcher>.sub-menu a span,
+    #main-menu .nav-sidebar>li.id4-language-switcher>.children a span,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.sub-menu a span,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.children a span {
+        color: #d7aa3d !important;
+        background: transparent !important;
+        font-family: "Open Sans", Arial, sans-serif !important;
+        font-weight: 600 !important;
+    }
+
+    #main-menu .nav-sidebar>li.id4-language-switcher>.sub-menu a:hover,
+    #main-menu .nav-sidebar>li.id4-language-switcher>.children a:hover,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.sub-menu a:hover,
+    #main-menu .nav-sidebar>li.pll-parent-menu-item>.children a:hover {
+        color: #d7aa3d !important;
+        background: rgba(215, 170, 61, 0.10) !important;
+    }
+
+    /* =====================================================
+       16. NÚT ĐẶT LỊCH MOBILE
+       Đồng bộ nền vàng + chữ trắng với Desktop / Tablet
+    ===================================================== */
+    #main-menu .nav-sidebar>li.id4-booking-button,
+    #main-menu .nav-sidebar>li:last-child:not(.id4-language-switcher):not(.pll-parent-menu-item) {
+        border-bottom: 0 !important;
+    }
+
+    #main-menu .nav-sidebar>li.id4-booking-button>a,
+    #main-menu .nav-sidebar>li:last-child:not(.id4-language-switcher):not(.pll-parent-menu-item)>a {
+        margin: 14px 20px !important;
+        min-height: 46px !important;
+        padding: 0 20px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border: 1px solid #e2b54c !important;
+        border-radius: 10px !important;
+        background: #e2b54c !important;
+        color: #ffffff !important;
+        font-family: "Open Sans", Arial, sans-serif !important;
+        font-weight: 700 !important;
+        text-align: center !important;
+    }
+
+    #main-menu .nav-sidebar>li.id4-booking-button>a:hover,
+    #main-menu .nav-sidebar>li:last-child:not(.id4-language-switcher):not(.pll-parent-menu-item)>a:hover {
+        background: #d7a83d !important;
+        border-color: #d7a83d !important;
+        color: #ffffff !important;
+    }
+
+    /* =====================================================
+       17. NÚT ĐÓNG OFF-CANVAS
+       Đồng bộ icon đóng với tông vàng của giao diện
+    ===================================================== */
+    .off-canvas .mfp-close,
+    #main-menu .mfp-close {
+        color: #d7aa3d !important;
+        background: transparent !important;
+        opacity: 1 !important;
+    }
+}
+
+
+/* =========================================================
+   18. MOBILE — BỎ TOÀN BỘ ĐƯỜNG PHÂN CÁCH
+   Chỉ loại bỏ đường gạch, giữ nguyên giao diện còn lại
+========================================================= */
+
+@media (max-width: 849px) {
+
+    #main-menu .nav-sidebar>li,
+    #main-menu .nav-sidebar>li>a,
+    #main-menu .nav-sidebar .sub-menu,
+    #main-menu .nav-sidebar .sub-menu>li,
+    #main-menu .nav-sidebar .sub-menu>li>a,
+    #main-menu .nav-sidebar .children,
+    #main-menu .nav-sidebar .children>li,
+    #main-menu .nav-sidebar .children>li>a {
+        border-top: 0 !important;
+        border-right: 0 !important;
+        border-bottom: 0 !important;
+        border-left: 0 !important;
+        box-shadow: none !important;
+    }
+}
+
+
+/* Sticky và admin bar: giữ cách hoạt động của mã ban đầu. */
+
+#header {
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+}
+
+#header .header-wrapper,
+#header #masthead,
+#header .header-main {
+    background-color: #11110f !important;
+}
+
+body.admin-bar #header {
+    top: 32px !important;
+}
+
+@media (max-width: 782px) {
+    body.admin-bar #header {
+        top: 46px !important;
+    }
+}
+
+
+/* Center the actual logo/menu width, including the enlarged action buttons. */
+
+@media (min-width: 850px) {
+    #header .header-main .header-inner {
+        width: max-content !important;
+        max-width: calc(100% - 2.5rem) !important;
+    }
+
+    #header .header-main .header-inner .hide-for-medium.flex-left {
+        flex: 0 0 auto !important;
+    }
+
+    #header .header-nav-main {
+        width: max-content !important;
+    }
+}
+
+@media (min-width: 850px) and (max-width: 949px) {
+    #header {
+        --id4-logo-gap: 1rem;
+        --id4-menu-gap: clamp(.625rem, calc(10vw - 4.6875rem), 1.125rem);
+    }
+}
+
+
+/* Đặt hàng đầu tiên sát dưới header mobile. */
+
+@media (max-width: 849px) {
+    #main-menu .sidebar-menu {
+        margin-top: 70px !important;
+        padding-top: 0 !important;
+    }
+
+    #main-menu .nav-sidebar {
+        margin-top: 0 !important;
+    }
+}
+
+.about-us--timeline,
+.about-us--timeline *,
+.about-us--timeline *::before,
+.about-us--timeline *::after {
+    box-sizing: border-box;
+}
+
+.about-us--timeline {
+    --about-us--gold: #d1a347;
+    --about-us--menu-height: 70px;
+    --about-us--pin: 0px;
+    --about-us--card-height: 41.6667vw;
+    position: relative;
+    isolation: isolate;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    background: #211b17;
+    color: #f7f4f1;
+    font-family: "Myriad Pro", system-ui, sans-serif;
+}
+
+body:has(#header) .about-us--timeline {
+    --about-us--pin: calc(var(--id4-header-height, var(--menu-header-height, var(--meta3d-layout-header-height, var(--about-us--menu-height)))) + var(--wp-admin--admin-bar--height, 0px));
+}
+
+.about-us--milestone {
+    position: sticky;
+    top: var(--about-us--pin);
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    grid-template-areas: 'copy image';
+    min-height: max(var(--about-us--card-height), calc(100svh - var(--about-us--pin)));
+    background-color: var(--about-us--brown, #211b17);
+}
+
+.about-us--milestone+.about-us--milestone {
+    box-shadow: 0 -14px 30px -9px rgb(0 0 0 / .38);
+}
+
+.about-us--milestone:nth-of-type(1) {
+    --about-us--brown: #523e31;
+}
+
+.about-us--milestone:nth-of-type(2) {
+    --about-us--brown: #4a382d;
+}
+
+.about-us--milestone:nth-of-type(3) {
+    --about-us--brown: #423228;
+}
+
+.about-us--milestone:nth-of-type(4) {
+    --about-us--brown: #3a2d24;
+}
+
+.about-us--milestone:nth-of-type(5) {
+    --about-us--brown: #312720;
+}
+
+.about-us--milestone:nth-of-type(6) {
+    --about-us--brown: #29211b;
+}
+
+.about-us--milestone.about-us--milestone-current {
+    --about-us--brown: #211b17;
+}
+
+.about-us--milestone-copy {
+    grid-area: copy;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(22px, 5.6vw, 108px) 5.6vw clamp(22px, 5.6vw, 108px) 11.8vw;
+}
+
+.about-us--milestone-copy::before,
+.about-us--milestone-copy::after {
+    content: "";
+    position: absolute;
+    left: 5.7vw;
+    transform: translateX(-50%);
+}
+
+.about-us--milestone-copy::before {
+    inset-block: 0;
+    width: max(2px, .25vw);
+    background: var(--about-us--gold);
+}
+
+.about-us--milestone-copy::after {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(12px, 2.75vw, 53px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--about-us--gold) 26%, #211b17 28% 47%, var(--about-us--gold) 49%);
+}
+
+.about-us--timeline .about-us--milestone-copy :is(h2,
+    h3,
+    p) {
+    font-family: inherit;
+    font-style: normal;
+    text-transform: none;
+}
+
+.about-us--timeline .about-us--milestone-copy :is(h3,
+    p) {
+    color: inherit;
+    letter-spacing: normal;
+}
+
+.about-us--timeline .about-us--milestone-copy> :is(h2,
+    h3,
+    p) {
+    inline-size: 100%;
+    max-inline-size: none;
+    margin: 0;
+}
+
+.about-us--timeline .about-us--milestone-copy>h2+h3,
+.about-us--timeline .about-us--milestone-copy>h3+p {
+    margin-block-start: clamp(.5rem, 1vw, 1rem);
+}
+
+.about-us--timeline .about-us--milestone-copy>h2 {
+    text-align: left !important;
+    color: var(--about-us--gold);
+    font-size: clamp(3rem, 5.6vw, 6.75rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: .045em;
+}
+
+.about-us--timeline .about-us--milestone:not(.about-us--milestone-current) .about-us--milestone-copy>h2 {
+    font-size: 7rem;
+}
+
+.about-us--timeline .about-us--milestone-copy>h3 {
+    font-size: clamp(1.125rem, 1.8vw, 2rem);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.about-us--timeline .about-us--milestone-copy>p {
+    font-size: max(20px, 1.125rem);
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+@media (max-width: 767px) {
+    .about-us--timeline .about-us--milestone:not(.about-us--milestone-current) .about-us--milestone-copy>h2 {
+        font-size: 4rem;
+    }
+
+    .about-us--timeline .about-us--milestone-copy>h3 {
+        font-size: 1rem;
+        text-align: start;
+    }
+}
+
+.about-us--milestone-image {
+    grid-area: image;
+    position: relative;
+    background: #808285;
+    margin: 0;
+}
+
+.about-us--milestone-image img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+}
+
+@media (max-width: 640px) {
+    .about-us--timeline {
+        --about-us--copy-height: clamp(265px, 87vw, 390px);
+        --about-us--image-height: min(100vw, 48svh);
+        --about-us--card-height: calc(var(--about-us--copy-height) + var(--about-us--image-height));
+        --about-us--timeline-line-left: clamp(27px, 10vw, 48px);
+    }
+
+    .about-us--milestone {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: minmax(var(--about-us--copy-height), auto) minmax(var(--about-us--image-height), 1fr);
+        grid-template-areas: 'copy' 'image';
+    }
+
+    .about-us--milestone-copy {
+        padding: clamp(32px, 11vw, 52px) clamp(20px, 6vw, 32px) clamp(32px, 11vw, 52px) calc(var(--about-us--timeline-line-left) + 14px);
+    }
+
+    .about-us--milestone-copy::before {
+        content: none;
+    }
+
+    .about-us--milestone::before {
+        content: "";
+        position: absolute;
+        inset-block: 0;
+        left: var(--about-us--timeline-line-left);
+        z-index: 1;
+        width: 2px;
+        background: var(--about-us--gold);
+        transform: translateX(-50%);
+        pointer-events: none;
+    }
+
+    .about-us--milestone-copy::after {
+        left: var(--about-us--timeline-line-left);
+        z-index: 2;
+        width: 17px;
+    }
+
+    .about-us--timeline .about-us--milestone-copy>p {
+        text-align: start;
+    }
+}

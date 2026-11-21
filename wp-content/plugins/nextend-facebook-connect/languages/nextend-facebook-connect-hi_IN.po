@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: nextend-facebook-connect\n"
-"POT-Creation-Date: 2026-07-28 09:19+0200\n"
-"PO-Revision-Date: 2026-07-28 09:19+0200\n"
+"POT-Creation-Date: 2026-11-12 15:20+0100\n"
+"PO-Revision-Date: 2026-11-12 15:20+0100\n"
 "Last-Translator: \n"
 "Language-Team: nextend-facebook-connect\n"
 "Language: hi_IN\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: "
@@ -119,13 +119,13 @@ msgid "Deactivate completed."
 msgstr "निष्क्रियकरण प्रक्रिया पूरी हो गई।"
 
 msgid "(no title)"
-msgstr ""
+msgstr "(कोई शीर्षक नहीं)"
 
 msgid "Settings"
 msgstr "सेटिंग्स"
 
 msgid "Analyze & Repair"
-msgstr ""
+msgstr "विश्लेषण करें और सुधारें"
 
 #, php-format
 msgid "Unexpected response: %s"
@@ -609,19 +609,19 @@ msgid "Loved it"
 msgstr "यह बहुत पसंद आया"
 
 msgid "Rate 1 star"
-msgstr ""
+msgstr "1 स्टार रेटिंग दें"
 
 msgid "Rate 2 stars"
-msgstr ""
+msgstr "2 स्टार रेटिंग दें"
 
 msgid "Rate 3 stars"
-msgstr ""
+msgstr "3 स्टार रेटिंग दें"
 
 msgid "Rate 4 stars"
-msgstr ""
+msgstr "4 स्टार रेटिंग दें"
 
 msgid "Rate 5 stars"
-msgstr ""
+msgstr "5 स्टार रेटिंग दें"
 
 msgid "Please Leave a Review"
 msgstr "कृपया एक समीक्षा छोड़ें"
@@ -637,7 +637,7 @@ msgid "Ok, you deserve it"
 msgstr "ठीक है, तुम इसके हकदार हो"
 
 msgid "Close review box"
-msgstr ""
+msgstr "समीक्षा बॉक्स बंद करें"
 
 msgid "Register form"
 msgstr "पंजीकरण प्रपत्र"
@@ -897,10 +897,8 @@ msgstr "रजिस्टर प्रवाह के लिए पेज"
 msgid "None"
 msgstr "कुछ भी नहीं"
 
-#, fuzzy
-#| msgid "Page for register flow"
 msgid "Clear - Page for register flow"
-msgstr "रजिस्टर प्रवाह के लिए पेज"
+msgstr "साफ़ करें - रजिस्टर प्रवाह के लिए पेज"
 
 msgid ""
 "This setting is used when you request additional data from the users (such as email address) "
@@ -923,10 +921,8 @@ msgstr "%1$s जब तक सोशल लॉगिन/पंजीकरण �
 msgid "OAuth redirect uri proxy page"
 msgstr "OAuth रीडायरेक्ट यूआरआई प्रॉक्सी पेज"
 
-#, fuzzy
-#| msgid "OAuth redirect uri proxy page"
 msgid "Clear - OAuth redirect uri proxy page"
-msgstr "OAuth रीडायरेक्ट यूआरआई प्रॉक्सी पेज"
+msgstr "साफ़ करें - OAuth रीडायरेक्ट यूआरआई प्रॉक्सी पेज"
 
 msgid "You can use this setting when wp-login.php page is not available to handle the OAuth flow."
 msgstr ""
@@ -1428,6 +1424,41 @@ msgstr "आवश्यक दायरा: %1$s"
 msgid "Neutral"
 msgstr "तटस्थ"
 
+msgid "Required by Google One Tap. Without it the One Tap prompt never appears."
+msgstr "Google One Tap के लिए आवश्यक। इसके बिना One Tap प्रॉम्प्ट कभी दिखाई नहीं देगा।"
+
+msgid "Google One Tap"
+msgstr "Google One Tap"
+
+msgid "Show where the Google button appears"
+msgstr "जहाँ Google बटन दिखाई देता है, वहाँ दिखाएँ"
+
+msgid "Show on all pages"
+msgstr "सभी पेजों पर दिखाएँ"
+
+#, php-format
+msgid ""
+"Shows Google's One Tap prompt, so visitors can sign in with their Google account without "
+"leaving the page. %1$sLearn more%2$s."
+msgstr ""
+"Google का One Tap प्रॉम्प्ट दिखाता है, ताकि आगंतुक पेज छोड़े बिना अपने Google खाते से साइन इन कर सकें। "
+"%1$sअधिक जानें%2$s."
+
+#, php-format
+msgid ""
+"%1$s Requires HTTPS, and %2$s added to the %3$sAuthorized JavaScript origins%4$s of your Google "
+"app."
+msgstr ""
+"%1$s HTTPS आवश्यक है, और %2$s आपके Google ऐप के %3$sAuthorized JavaScript origins%4$s में जोड़ा होना "
+"चाहिए।"
+
+#, php-format
+msgid ""
+"%1$s Unlike the Google button, One Tap loads Google's script as soon as the page opens. "
+"%2$sLearn more%3$s."
+msgstr ""
+"%1$s Google बटन के विपरीत, One Tap पेज खुलते ही Google की स्क्रिप्ट लोड करता है। %2$sअधिक जानें%3$s."
+
 msgid "Client ID"
 msgstr "क्लाइंट आईडी"
 
@@ -1591,6 +1622,24 @@ msgid ""
 msgstr ""
 "फेसबुक सिंक डेटा के लिए एक स्वीकृत %1$s की आवश्यकता है और आपके ऐप को नवीनतम %2$s संस्करण का उपयोग करना "
 "चाहिए!"
+
+#, php-format
+msgid ""
+"Yes. With Google One Tap enabled, %1$s loads Google's Identity Services library from %2$s on "
+"the pages where the One Tap prompt can appear. Google receives the visitor's IP address and "
+"reads its own cookies on that domain to decide whether the prompt can be shown."
+msgstr ""
+"हाँ। Google One Tap सक्षम होने पर, %1$s उन पेजों पर %2$s से Google की Identity Services लाइब्रेरी लोड "
+"करता है जहाँ One Tap प्रॉम्प्ट दिखाई दे सकता है। Google आगंतुक का IP पता प्राप्त करता है और यह तय करने के लिए "
+"कि प्रॉम्प्ट दिखाया जा सकता है या नहीं, उस डोमेन पर अपनी कुकीज़ पढ़ता है।"
+
+#, php-format
+msgid ""
+"With Google One Tap enabled, Google's library also stores a %1$s cookie on this site, which "
+"holds the visitor's One Tap status, such as whether they closed the prompt."
+msgstr ""
+"Google One Tap सक्षम होने पर, Google की लाइब्रेरी इस साइट पर एक %1$s कुकी भी संग्रहीत करती है, जिसमें "
+"आगंतुक की One Tap स्थिति होती है, जैसे कि क्या उन्होंने प्रॉम्प्ट बंद किया है।"
 
 #, php-format
 msgid ""
@@ -1874,20 +1923,16 @@ msgid "Audience"
 msgstr "श्रोता"
 
 msgid "Multiple Entra ID tenants"
-msgstr ""
+msgstr "एकाधिक Entra ID टेनेंट"
 
-#, fuzzy
-#| msgid "Personal Microsoft accounts only"
 msgid "Any Entra ID Tenant + Personal Microsoft accounts"
-msgstr "केवल व्यक्तिगत Microsoft खाते"
+msgstr "कोई भी Entra ID टेनेंट + व्यक्तिगत Microsoft खाते"
 
-#, fuzzy
-#| msgid "Personal Microsoft accounts only"
 msgid "Personal accounts only"
-msgstr "केवल व्यक्तिगत Microsoft खाते"
+msgstr "केवल व्यक्तिगत खाते"
 
 msgid "Single tenant only - Default Directory with Azure AD tenant:"
-msgstr ""
+msgstr "केवल एकल टेनेंट - Azure AD टेनेंट के साथ Default Directory:"
 
 #, php-format
 msgid "The selected value will define the supported account types. %1$sLearn more.%2$s"
@@ -2129,6 +2174,16 @@ msgstr "पासवर्ड की पुष्टि कीजिये"
 
 msgid "Username"
 msgstr "उपयोगकर्ता नाम"
+
+#~ msgid ""
+#~ "Shows Google's One Tap prompt, so visitors can sign in with their Google account without "
+#~ "leaving the page. Depending on the browser, Google shows it to every visitor, or only to "
+#~ "those who are signed in to Google. One Tap works alongside the Google button, it does not "
+#~ "replace it."
+#~ msgstr ""
+#~ "Google का One Tap प्रॉम्प्ट दिखाता है, ताकि आगंतुक पेज छोड़े बिना अपने Google खाते से साइन इन कर सकें। "
+#~ "ब्राउज़र के आधार पर, Google इसे हर आगंतुक को दिखाता है, या केवल उन्हीं को जो Google में साइन इन हैं। One "
+#~ "Tap, Google बटन के साथ काम करता है, यह उसकी जगह नहीं लेता।"
 
 #~ msgid "Accounts in any organizational directory (Any Azure AD directory - Multitenant)"
 #~ msgstr "किसी भी संगठनात्मक निर्देशिका में खाते (कोई भी Azure AD निर्देशिका - मल्टीटेनेंट)"

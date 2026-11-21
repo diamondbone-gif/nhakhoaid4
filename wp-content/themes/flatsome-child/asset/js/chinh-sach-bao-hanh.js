@@ -1,7 +1,6 @@
 const reducedWarrantyMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)",
 );
-const warrantyDuration = 760;
 
 document.querySelectorAll(".id4-solution--warranty-panel").forEach((panel) => {
     const tabs = [...panel.querySelectorAll("details")];
@@ -16,7 +15,8 @@ document.querySelectorAll(".id4-solution--warranty-panel").forEach((panel) => {
             paddingTop: "0px",
             paddingBottom: "0px",
         };
-        const start = tab.open ? {
+        const start = tab.open ?
+            {
                 height: style.height,
                 paddingTop: style.paddingTop,
                 paddingBottom: style.paddingBottom,
@@ -24,41 +24,47 @@ document.querySelectorAll(".id4-solution--warranty-panel").forEach((panel) => {
             collapsed;
         if (activeAnimation) {
             activeAnimation.cancel();
+            activeAnimation = undefined;
         }
+        content.removeAttribute("data-warranty-animating");
         tab.open = true;
 
-        if (reducedWarrantyMotion.matches || !content.animate) {
+        if (reducedWarrantyMotion.matches || !content.getAnimations) {
             tab.open = expand;
             return true;
         }
 
         const full = getComputedStyle(content);
-        const end = expand ? {
-                height: full.height,
+        const fullHeight = full.height;
+        const end = expand ?
+            {
+                height: fullHeight,
                 paddingTop: full.paddingTop,
                 paddingBottom: full.paddingBottom,
             } :
             collapsed;
-        const animation = content.animate(
-            [
-                {...start, overflow: "hidden" },
-                {...end, overflow: "hidden" },
-            ], {
-                duration: warrantyDuration,
-                easing: "cubic-bezier(.45, 0, .55, 1)",
-                fill: "forwards",
-            },
+        for (const [edge, size] of[["from", start], ["to", end]]) {
+            content.style.setProperty("--id4-warranty-" + edge + "-height", size.height);
+            content.style.setProperty("--id4-warranty-" + edge + "-padding-top", size.paddingTop);
+            content.style.setProperty("--id4-warranty-" + edge + "-padding-bottom", size.paddingBottom);
+        }
+
+        content.setAttribute("data-warranty-animating", expand ? "open" : "close");
+        const animation = content.getAnimations().find(
+            (item) => item.animationName === "id4-warranty-toggle",
         );
         activeAnimation = animation;
 
-        try {
-            await animation.finished;
-        } catch {
-            return false;
+        if (animation) {
+            try {
+                await animation.finished;
+            } catch {
+                if (activeAnimation !== animation) return false;
+            }
         }
 
         tab.open = expand;
-        animation.cancel();
+        content.removeAttribute("data-warranty-animating");
         activeAnimation = undefined;
         return true;
     }

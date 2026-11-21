@@ -3,8 +3,8 @@ Contributors: nextendweb
 Tags: social login, facebook, google, twitter, x, linkedin, register, login, social, nextend facebook connect, social sign in
 Donate link: https://www.facebook.com/nextendweb
 Requires at least: 4.9
-Tested up to: 7.0.2
-Stable tag: 3.1.26
+Tested up to: 7.1
+Stable tag: 3.1.27
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -55,6 +55,7 @@ Providers are the services which the visitors can use to register and log in to 
 * Restrict specific user roles from using the social logins. (You can restrict different roles for each provider.)
 * Assign specific user roles to the newly registered users who use any social login provider. (You can set different roles for each provider.)
 * Show the name of the linked providers in the Users table
+* Google One Tap integration
 
 #### Usage
 
@@ -124,6 +125,14 @@ Using the Pro Addon you can set where the login buttons should appear on the Reg
 4. The Settings page of the Facebook provider.
 
 == Changelog ==
+
+= 3.1.27 =
+* Improvement: The register flow form only accepts submissions that were sent from the form itself.
+* Improvement: The ID of the login session is generated with a cryptographically secure random generator.
+
+* PRO: Feature: [Google One Tap](https://social-login.nextendweb.com/documentation/providers/google/#google-one-tap-setting) - shows Google's One Tap prompt, so visitors can sign in or register with their Google account without leaving the page. It is turned off by default, and can be enabled in the PRO settings of the Google provider.
+* PRO: Improvement: [New filters](https://social-login.nextendweb.com/documentation/for-developers/hooks/) for developers: "nsl_google_one_tap_should_display" (on which pages the One Tap prompt appears), "nsl_google_one_tap_needs_access_token" (when a One Tap login also requests Google's access token) and "nsl_google_one_tap_itp_support" (whether Safari, Firefox and Chrome on iOS get the prompt).
+
 
 = 3.1.26 =
 * Improvement: Security improvements.

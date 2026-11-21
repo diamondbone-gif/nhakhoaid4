@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: nextend-facebook-connect\n"
-"POT-Creation-Date: 2026-07-28 09:20+0200\n"
-"PO-Revision-Date: 2026-07-28 09:20+0200\n"
+"POT-Creation-Date: 2026-11-12 15:21+0100\n"
+"PO-Revision-Date: 2026-11-12 15:21+0100\n"
 "Last-Translator: Erik Molenaar <info@erikmolenaar.nl>\n"
 "Language-Team: nextend-facebook-connect\n"
 "Language: nl_NL\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: "
@@ -116,7 +116,7 @@ msgid "User"
 msgstr "Gebruiker"
 
 msgid "This provider doesn't support REST API calls!"
-msgstr ""
+msgstr "Deze provider ondersteunt geen REST API-aanroepen!"
 
 #, php-format
 msgid "%s needs json_decode function."
@@ -135,13 +135,13 @@ msgid "Deactivate completed."
 msgstr "Deactiveren voltooid."
 
 msgid "(no title)"
-msgstr ""
+msgstr "(geen titel)"
 
 msgid "Settings"
 msgstr "Instellingen"
 
 msgid "Analyze & Repair"
-msgstr ""
+msgstr "Analyseren & repareren"
 
 #, php-format
 msgid "Unexpected response: %s"
@@ -192,17 +192,12 @@ msgstr "Nu maken"
 msgid "Activate your Pro Addon"
 msgstr "Activeer je Pro Add-on"
 
-#, fuzzy
-#| msgid ""
-#| "To be able to use the Pro features, you need to activate Nextend Social "
-#| "Connect Pro Addon. You can do this by clicking on the Activate button "
-#| "below then select the related purchase."
 msgid ""
 "To be able to use the Pro features, you need to activate Nextend Social "
 "Login Pro Addon. You can do this by clicking on the Activate button below "
 "then select the related purchase."
 msgstr ""
-"Om de Pro-functies te kunnen gebruiken, moet je Nextend Social Connect Pro-"
+"Om de Pro-functies te kunnen gebruiken, moet je de Nextend Social Login Pro-"
 "uitbreiding activeren. Je kunt dit doen door hieronder op de knop Activeren "
 "te klikken en vervolgens de bijbehorende aankoop te selecteren."
 
@@ -227,10 +222,8 @@ msgstr "Login label"
 msgid "Reset to default"
 msgstr "Reset naar standaard"
 
-#, fuzzy
-#| msgid "Register layout"
 msgid "Register label"
-msgstr "Registratie layout"
+msgstr "Registratielabel"
 
 msgid "Link label"
 msgstr "Koppel label"
@@ -258,28 +251,20 @@ msgstr "Wijzigingen Opslaan"
 
 #, php-format
 msgid "Follow the guide at: %s"
-msgstr ""
+msgstr "Volg de handleiding op: %s"
 
 #, php-format
 msgid "I am done setting up my %s"
 msgstr "Ik ben klaar met het instellen van mijn %s"
 
-#, fuzzy
-#| msgid "App ID"
 msgctxt "Social Login App"
 msgid "App"
-msgstr "App ID"
+msgstr "App"
 
 msgid "Getting Started"
 msgstr "Aan de Slag"
 
-#, fuzzy, php-format
-#| msgid ""
-#| "To allow your visitors to log in with their %1$s account, first you must "
-#| "create an %1$s App. The following guide will help you through the %1$s "
-#| "App creation process. After you have created your %1$s App, head over to "
-#| "\"Settings\" and configure the given \"%2$s\" and \"%3$s\" according to "
-#| "your %1$s App."
+#, php-format
 msgid ""
 "To allow your visitors to log in with their %1$s account, first you must "
 "create an App for %1$s. The following guide will help you through the %1$s "
@@ -288,17 +273,17 @@ msgid ""
 "created."
 msgstr ""
 "Om je bezoekers in te laten loggen met hun %1$s account, moet je eerst een "
-"%1$s App aanmaken. De volgende gids helpt je door het %1$s App "
-"creatieproces. Nadat je je %1$s App heeft aangemaakt, ga je naar "
-"\"Instellingen\" en configureer je de gegevens \"%2$s\" en \"%3$s\" volgens "
-"je %1$s App."
+"App voor %1$s aanmaken. De volgende gids helpt je door het %1$s App "
+"creatieproces. Nadat je je %1$s App hebt aangemaakt, ga je naar "
+"\"Instellingen\" en vul je de velden in met de gegevens van de App die je "
+"hebt aangemaakt."
 
 #, php-format
 msgid "How to create an App for %s: "
-msgstr ""
+msgstr "Zo maak je een App voor %s aan: "
 
 msgid "URLs for the App creation:"
-msgstr ""
+msgstr "URL's voor het aanmaken van de App:"
 
 msgid "Buttons"
 msgstr "Knoppen"
@@ -372,19 +357,16 @@ msgid "Default roles for user who registered with this provider"
 msgstr ""
 "Standaardrollen voor gebruiker die zich bij deze provider heeft geregistreerd"
 
-#, fuzzy, php-format
-#| msgid "Click on the Create button"
+#, php-format
 msgid "Default (The %1$s is: %2$s)"
-msgstr "Klik op de knop Aanmaken"
+msgstr "Standaard (De %1$s is: %2$s)"
 
-#, fuzzy
-#| msgid "Default redirect url"
 msgid "default WordPress role"
-msgstr "Standaard omleidings-URL"
+msgstr "standaard WordPress-rol"
 
 #, php-format
 msgid "Default (The %s.)"
-msgstr ""
+msgstr "Standaard (De %s.)"
 
 msgid "Register"
 msgstr "Registreren"
@@ -462,7 +444,7 @@ msgid "Comment"
 msgstr "Reactie"
 
 msgid "Custom Actions"
-msgstr ""
+msgstr "Aangepaste acties"
 
 msgid "Docs"
 msgstr "Documentatie"
@@ -521,21 +503,17 @@ msgstr "Activeren..."
 msgid "Not compatible!"
 msgstr "Niet compatibel!"
 
-#, fuzzy, php-format
-#| msgid ""
-#| "%1$s and %2$s are not compatible. Please update %2$s to version %3$s or "
-#| "newer."
+#, php-format
 msgid ""
 "%1$s and %2$s are not compatible. Please update %1$s to version %3$s or "
 "newer."
 msgstr ""
-"%1$s en %2$s zijn niet compatibel. Gelieve %2$s bij te werken naar versie "
+"%1$s en %2$s zijn niet compatibel. Gelieve %1$s bij te werken naar versie "
 "%3$s of nieuwer."
 
-#, fuzzy, php-format
-#| msgid "Update now!"
+#, php-format
 msgid "Update %s"
-msgstr "Update nu!"
+msgstr "%s bijwerken"
 
 #, php-format
 msgid ""
@@ -585,16 +563,12 @@ msgstr "Machtigen Pro-uitbreiding"
 msgid "Pro Addon is not activated"
 msgstr "Pro-uitbreiding is niet geactiveerd"
 
-#, fuzzy
-#| msgid ""
-#| "To be able to use the Pro features, you need to install and activate the "
-#| "Nextend Social Connect Pro Addon."
 msgid ""
 "To be able to use the Pro features, you need to install and activate the "
 "Nextend Social Login Pro Addon."
 msgstr ""
-"Om de Pro-functies te kunnen gebruiken, moet je de Nextend Social Connect "
-"Pro-uitbreiding installeren en activeren."
+"Om de Pro-functies te kunnen gebruiken, moet je de Nextend Social Login Pro-"
+"uitbreiding installeren en activeren."
 
 #, php-format
 msgid ""
@@ -602,6 +576,9 @@ msgid ""
 "enabled. To display any social buttons, please make sure you have at least "
 "one provider enabled!"
 msgstr ""
+"%1$s heeft gedetecteerd dat je providers hebt geconfigureerd, maar dat geen "
+"ervan is ingeschakeld. Zorg dat er minstens één provider is ingeschakeld om "
+"sociale knoppen te tonen!"
 
 msgid "Not Available"
 msgstr "Niet Beschikbaar"
@@ -684,19 +661,19 @@ msgid "Loved it"
 msgstr "Vond het geweldig"
 
 msgid "Rate 1 star"
-msgstr ""
+msgstr "Beoordeel met 1 ster"
 
 msgid "Rate 2 stars"
-msgstr ""
+msgstr "Beoordeel met 2 sterren"
 
 msgid "Rate 3 stars"
-msgstr ""
+msgstr "Beoordeel met 3 sterren"
 
 msgid "Rate 4 stars"
-msgstr ""
+msgstr "Beoordeel met 4 sterren"
 
 msgid "Rate 5 stars"
-msgstr ""
+msgstr "Beoordeel met 5 sterren"
 
 msgid "Please Leave a Review"
 msgstr "Laat alsjeblieft een recensie achter"
@@ -712,7 +689,7 @@ msgid "Ok, you deserve it"
 msgstr "Ok, je verdient het"
 
 msgid "Close review box"
-msgstr ""
+msgstr "Recensievenster sluiten"
 
 msgid "Register form"
 msgstr "Registratieformulier"
@@ -739,7 +716,7 @@ msgid "Default"
 msgstr "Standaard"
 
 msgid "Fullwidth"
-msgstr ""
+msgstr "Volledige breedte"
 
 msgid "Icon"
 msgstr "Icoon"
@@ -786,10 +763,8 @@ msgstr "Inlogknop stijl"
 msgid "Login layout"
 msgstr "Inlog-layout"
 
-#, fuzzy
-#| msgid "Social accounts"
 msgid "Social accounts tab"
-msgstr "Social accounts"
+msgstr "Tabblad Social accounts"
 
 msgid "Hide"
 msgstr "Verberg"
@@ -802,6 +777,8 @@ msgid ""
 "Creates a new tab called %s, where the Link and Unlink buttons will be "
 "displayed."
 msgstr ""
+"Maakt een nieuw tabblad met de naam %s aan, waar de knoppen Koppelen en "
+"Ontkoppelen worden getoond."
 
 msgid "Social Accounts"
 msgstr "Social Accounts"
@@ -818,26 +795,22 @@ msgstr "Midden"
 msgid "Right"
 msgstr "Rechts"
 
-#, fuzzy
-#| msgid "Ask E-mail on registration"
 msgid "Email template for registration"
-msgstr "Vraag E-mail bij inschrijving"
+msgstr "E-mailsjabloon voor registratie"
 
-#, fuzzy
-#| msgid "WordPress default"
 msgid "WordPress default notification"
-msgstr "WordPress standaard"
+msgstr "Standaard WordPress-notificatie"
 
-#, fuzzy
-#| msgid "WordPress default"
 msgid "BuddyPress welcome notification"
-msgstr "WordPress standaard"
+msgstr "BuddyPress welkomstnotificatie"
 
 #, php-format
 msgid ""
 "Defines whether the registration with %1$s will send the same welcome "
 "notification that %2$s does, instead of the %3$s default one."
 msgstr ""
+"Bepaalt of registratie via %1$s dezelfde welkomstmelding verstuurt als %2$s, "
+"in plaats van de standaardmelding van %3$s."
 
 msgid "Login button"
 msgstr "Loginknop"
@@ -859,7 +832,7 @@ msgstr "Knop stijl"
 
 #, php-format
 msgid "%1$s Add your custom actions here. One action per line."
-msgstr ""
+msgstr "%1$s Voeg hier je aangepaste acties toe. Eén actie per regel."
 
 msgid "Usage:"
 msgstr "Gebruik:"
@@ -869,6 +842,8 @@ msgid ""
 "%1$s The HTML of the social buttons will be added at the place where the "
 "action is fired."
 msgstr ""
+"%1$s De HTML van de sociale knoppen wordt toegevoegd op de plek waar de "
+"actie wordt uitgevoerd."
 
 msgid "Important:"
 msgstr "Let op:"
@@ -878,26 +853,20 @@ msgid ""
 "If you %1$sexperience problems%2$s because of this feature, you can disable "
 "it by defining the %3$s constant."
 msgstr ""
+"Als je %1$sproblemen ondervindt%2$s door deze functie, kun je die "
+"uitschakelen door de constante %3$s te definiëren."
 
-#, fuzzy
-#| msgid "Login layout"
 msgid "Button layout"
-msgstr "Inlog-layout"
+msgstr "Knop-layout"
 
-#, fuzzy
-#| msgid "Below with separator"
 msgid "Default with top separator"
-msgstr "Hieronder met separator"
+msgstr "Standaard met separator bovenaan"
 
-#, fuzzy
-#| msgid "Below with separator"
 msgid "Default with bottom separator"
-msgstr "Hieronder met separator"
+msgstr "Standaard met separator onderaan"
 
-#, fuzzy
-#| msgid "Unlink"
 msgid "Link/Unlink"
-msgstr "Ontkoppelen"
+msgstr "Koppelen/ontkoppelen"
 
 msgid "No Connect button in Login form"
 msgstr "Geen Verbindingsknop  in inlogformulier"
@@ -915,22 +884,16 @@ msgid "Register form button style"
 msgstr "Registratieformulier knopstijl"
 
 msgid "Checkout form"
-msgstr ""
+msgstr "Afrekenformulier"
 
-#, fuzzy
-#| msgid "No Connect button in Login form"
 msgid "No Connect button in Checkout form"
-msgstr "Geen Verbindingsknop  in inlogformulier"
+msgstr "Geen Verbindingsknop in afrekenformulier"
 
-#, fuzzy
-#| msgid "Login form button style"
 msgid "Checkout form button style"
-msgstr "Aanmeldingsformulier knopstijl"
+msgstr "Afrekenformulier knopstijl"
 
-#, fuzzy
-#| msgid "Register layout"
 msgid "Checkout layout"
-msgstr "Registratie layout"
+msgstr "Afreken-layout"
 
 msgid "Target window"
 msgstr "Doelvenster"
@@ -965,19 +928,15 @@ msgstr "Ontkoppelen"
 msgid "Allow Social account unlink"
 msgstr "Sta ontkoppelen Social account toe"
 
-#, fuzzy
-#| msgid "Show link buttons"
 msgid "Show linked providers"
-msgstr "Toon koppel-knoppen"
+msgstr "Gekoppelde providers tonen"
 
 #, php-format
 msgid "Providers linked to the account will appear in the %1$s."
-msgstr ""
+msgstr "Providers die aan het account gekoppeld zijn, verschijnen in de %1$s."
 
-#, fuzzy
-#| msgid "Username"
 msgid "Users table"
-msgstr "Gebruikersnaam"
+msgstr "gebruikerstabel"
 
 msgid "Disable Admin bar for roles"
 msgstr "Adminbalk voor rollen uitschakelen"
@@ -986,7 +945,7 @@ msgid "Debug mode"
 msgstr "Debugmodus"
 
 msgid "Bypass cache on redirect"
-msgstr ""
+msgstr "Cache omzeilen bij omleiding"
 
 #, php-format
 msgid ""
@@ -994,6 +953,9 @@ msgid ""
 "after a successful registration or login with social login. %1$sLearn "
 "more%2$s."
 msgstr ""
+"Als je deze optie inschakelt, wordt er een GET-parameter toegevoegd aan de "
+"URL waarnaar we omleiden na een geslaagde registratie of login via social "
+"login. %1$sMeer informatie%2$s."
 
 msgid "Page for register flow"
 msgstr "Pagina voor registreerproces"
@@ -1001,10 +963,8 @@ msgstr "Pagina voor registreerproces"
 msgid "None"
 msgstr "Geen"
 
-#, fuzzy
-#| msgid "Page for register flow"
 msgid "Clear - Page for register flow"
-msgstr "Pagina voor registreerproces"
+msgstr "Wissen - Pagina voor registreerproces"
 
 msgid ""
 "This setting is used when you request additional data from the users (such "
@@ -1032,10 +992,8 @@ msgstr ""
 msgid "OAuth redirect uri proxy page"
 msgstr "OAuth omleidings-uri proxy pagina"
 
-#, fuzzy
-#| msgid "OAuth redirect uri proxy page"
 msgid "Clear - OAuth redirect uri proxy page"
-msgstr "OAuth omleidings-uri proxy pagina"
+msgstr "Wissen - OAuth omleidings-uri proxy pagina"
 
 msgid ""
 "You can use this setting when wp-login.php page is not available to handle "
@@ -1098,10 +1056,8 @@ msgstr "Lidmaatschap"
 msgid "Allow registration with Social login."
 msgstr "Registratie toestaan met Social login."
 
-#, fuzzy
-#| msgid "Page for register flow"
 msgid "Custom label for register buttons"
-msgstr "Pagina voor registreerproces"
+msgstr "Aangepast label voor registreerknoppen"
 
 #, php-format
 msgid ""
@@ -1110,55 +1066,61 @@ msgid ""
 "can be modified at the Buttons tab of each provider.<br>This option also "
 "allows the use of register specific %3$s options."
 msgstr ""
+"Stel een eigen label in voor de sociale knoppen in registratieformulieren en "
+"voor shortcodes waarbij de parameter %1$s is ingesteld op %2$s.<br>De "
+"registratiespecifieke labels kun je aanpassen op het tabblad Knoppen van "
+"elke provider.<br>Met deze optie kun je ook registratiespecifieke %3$s-"
+"opties gebruiken."
 
 msgid "Redirect overlay"
-msgstr ""
+msgstr "Omleidingsoverlay"
 
 msgid "No overlay"
-msgstr ""
+msgstr "Geen overlay"
 
 msgid "Display overlay"
-msgstr ""
+msgstr "Overlay tonen"
 
 msgid "Display overlay with spinner"
-msgstr ""
+msgstr "Overlay met laadindicator tonen"
 
 msgid "Display overlay with spinner and message"
-msgstr ""
+msgstr "Overlay met laadindicator en bericht tonen"
 
 msgid ""
 "You can display an overlay on your site when we start the redirect after the "
 "authentication."
 msgstr ""
+"Je kunt een overlay op je site tonen wanneer we na de authenticatie met de "
+"omleiding beginnen."
 
 #, php-format
 msgid "%1$s The overlay won't be displayed if the %2$s setting is set to %3$s!"
 msgstr ""
+"%1$s De overlay wordt niet getoond als de instelling %2$s op %3$s staat!"
 
 msgid "Note:"
-msgstr ""
+msgstr "Let op:"
 
 msgid "Unsupported WebView behavior"
-msgstr ""
+msgstr "Gedrag bij niet-ondersteunde WebView"
 
-#, fuzzy
-#| msgid "Image button"
 msgid "Remove button"
-msgstr "Knop afbeelding"
+msgstr "Knop verwijderen"
 
-#, fuzzy
-#| msgid "Default button"
 msgid "Disable button"
-msgstr "Standaard knop"
+msgstr "Knop uitschakelen"
 
 #, php-format
 msgid "Some %1$sproviders%2$s don't support embedded browsers."
-msgstr ""
+msgstr "Sommige %1$sproviders%2$s ondersteunen geen ingebouwde browsers."
 
 msgid ""
 "This setting defines if we should remove or disable the related buttons in "
 "WebView environments."
 msgstr ""
+"Deze instelling bepaalt of we de betreffende knoppen in WebView-omgevingen "
+"verwijderen of uitschakelen."
 
 msgid "Below and floating"
 msgstr "Onder en zwevend"
@@ -1239,10 +1201,8 @@ msgstr "Geen Verbindingsknop  in het factureringsformulier"
 msgid "Billing layout"
 msgstr "Facturering layout"
 
-#, fuzzy
-#| msgid "Below with separator"
 msgid "Default with separator"
-msgstr "Hieronder met separator"
+msgstr "Standaard met separator"
 
 msgid "No Connect buttons in account details form"
 msgstr "Geen Verbindingsknop  in het accountgegevens formulier"
@@ -1250,16 +1210,16 @@ msgstr "Geen Verbindingsknop  in het accountgegevens formulier"
 msgid "Link buttons on"
 msgstr "Koppelknoppen op"
 
-#, fuzzy
-#| msgid "Registration notification sent to"
 msgid "WooCommerce registration notification"
-msgstr "Registratie notificatie verzonden naar"
+msgstr "WooCommerce registratienotificatie"
 
 #, php-format
 msgid ""
 "Defines whether the registration with %1$s will send the same registration "
 "notification that %2$s does, instead of the %3$s default one."
 msgstr ""
+"Bepaalt of registratie via %1$s dezelfde registratiemelding verstuurt als "
+"%2$s, in plaats van de standaardmelding van %3$s."
 
 #, php-format
 msgid "Network connection successful: %1$s"
@@ -1355,6 +1315,8 @@ msgstr "Sla je wijzigingen op voordat je de instellingen controleert."
 
 msgid "Error: Email verification status is not checked in this provider!"
 msgstr ""
+"Fout: de verificatiestatus van het e-mailadres wordt bij deze provider niet "
+"gecontroleerd!"
 
 msgid "Authentication successful"
 msgstr "Authenticatie geslaagd"
@@ -1369,15 +1331,15 @@ msgid "Unlink is not allowed!"
 msgstr "Ontkoppelen is niet toegestaan!"
 
 msgid "Unlink failed: nonce is invalid"
-msgstr ""
+msgstr "Ontkoppelen mislukt: nonce is ongeldig"
 
 #, php-format
 msgid "You are attempting to unlink your WordPress account from %s."
-msgstr ""
+msgstr "Je staat op het punt je WordPress-account los te koppelen van %s."
 
 #, php-format
 msgid "Do you really want to %1$s unlink %2$s it?"
-msgstr ""
+msgstr "Wil je het echt %1$s ontkoppelen %2$s?"
 
 msgid "The test was successful"
 msgstr "De test was succesvol"
@@ -1388,8 +1350,6 @@ msgstr "Authenticatie mislukt"
 msgid "Identifier"
 msgstr "Identificatie"
 
-#, fuzzy
-#| msgid "Profile picture"
 msgid "Profile Picture"
 msgstr "Profielfoto"
 
@@ -1401,19 +1361,15 @@ msgstr ""
 "Je %1$s account is succesvol gekoppeld aan je account. Je kunt je nu "
 "gemakkelijk aanmelden met %2$s."
 
-#, fuzzy, php-format
-#| msgid ""
-#| "You have already linked a(n) %s account. Please unlink the current and "
-#| "then you can link other %s account."
+#, php-format
 msgid ""
 "You have already linked a(n) %s account. Please unlink the current and then "
 "you can link another %s account."
 msgstr ""
-"Je hebt al een %s account gekoppeld. Ontkoppel de huidige en dan kun je "
-"andere %s account koppelen."
+"Je hebt al een %s account gekoppeld. Ontkoppel het huidige account, daarna "
+"kun je een ander %s account koppelen."
 
-#, fuzzy, php-format
-#| msgid "This %s account is already linked to other user."
+#, php-format
 msgid "This %s account is already linked to another user."
 msgstr "Dit %s account is al gekoppeld aan een andere gebruiker."
 
@@ -1426,6 +1382,9 @@ msgid ""
 "address is not verified.%2$sPlease login to your existing account using your "
 "password and link your %1$s account to it manually!"
 msgstr ""
+"We hebben een gebruiker gevonden met je %1$s e-mailadres, maar het lijkt "
+"erop dat dit e-mailadres niet geverifieerd is.%2$sLog in op je bestaande "
+"account met je wachtwoord en koppel je %1$s account er handmatig aan!"
 
 #, php-format
 msgid ""
@@ -1433,11 +1392,12 @@ msgid ""
 "different account, so we are unable to log you in. Please use the linked "
 "account or log in with your password!"
 msgstr ""
+"We hebben een gebruiker gevonden met je %1$s e-mailadres. Helaas hoort dit "
+"bij een ander account, dus we kunnen je niet inloggen. Gebruik het "
+"gekoppelde account of log in met je wachtwoord!"
 
-#, fuzzy
-#| msgid "Register For This Site!"
 msgid "Register For This Site"
-msgstr "Registreer Voor Deze Site!"
+msgstr "Registreren voor deze site"
 
 #, php-format
 msgid "%1$s requires PHP version %2$s+, plugin is currently NOT ACTIVE."
@@ -1466,13 +1426,15 @@ msgstr ""
 "href=\"#privacy_policy_url\" target=\"_blank\">Privacybeleid</a>"
 
 msgid "Hold On"
-msgstr ""
+msgstr "Even geduld"
 
 msgid "You are being redirected to another page,<br>it may take a few seconds."
 msgstr ""
+"Je wordt doorgestuurd naar een andere pagina,<br>dit kan een paar seconden "
+"duren."
 
 msgid "The selected provider doesn't support embedded browsers!"
-msgstr ""
+msgstr "De geselecteerde provider ondersteunt geen ingebouwde browsers!"
 
 msgid "Social Login"
 msgstr "Social Login"
@@ -1487,10 +1449,10 @@ msgid "Light"
 msgstr "Licht"
 
 msgid "Black"
-msgstr ""
+msgstr "Zwart"
 
 msgid "White"
-msgstr ""
+msgstr "Wit"
 
 #, php-format
 msgid ""
@@ -1525,32 +1487,32 @@ msgid ""
 "By replacing your existing %1$s App, users with linked %1$s accounts will no "
 "longer be able to login with %1$s."
 msgstr ""
+"Als je je bestaande %1$s App vervangt, kunnen gebruikers met gekoppelde %1$s "
+"accounts niet meer inloggen met %1$s."
 
 msgid "Find out why?"
-msgstr ""
+msgstr "Waarom?"
 
 msgid "Profile image size"
 msgstr "Profielafbeelding grootte"
 
 msgid "Small"
-msgstr ""
+msgstr "Klein"
 
 msgid "Medium"
-msgstr ""
+msgstr "Middel"
 
 msgid "Large"
-msgstr ""
+msgstr "Groot"
 
 msgid "Extra Large"
-msgstr ""
+msgstr "Extra groot"
 
 msgid "Continue with <b>Facebook</b>"
 msgstr "Doorgaan met <b>Facebook</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Facebook</b>"
 msgid "Sign up with <b>Facebook</b>"
-msgstr "Doorgaan met <b>Facebook</b>"
+msgstr "Registreren met <b>Facebook</b>"
 
 msgid "Link account with <b>Facebook</b>"
 msgstr "Koppel met <b>Facebook</b>"
@@ -1568,7 +1530,45 @@ msgid "Required scope: %1$s"
 msgstr "Vereiste scope: %1$s"
 
 msgid "Neutral"
+msgstr "Neutraal"
+
+msgid ""
+"Required by Google One Tap. Without it the One Tap prompt never appears."
 msgstr ""
+"Vereist voor Google One Tap. Zonder dit verschijnt het One Tap-venster nooit."
+
+msgid "Google One Tap"
+msgstr "Google One Tap"
+
+msgid "Show where the Google button appears"
+msgstr "Tonen waar de Google-knop verschijnt"
+
+msgid "Show on all pages"
+msgstr "Op alle pagina's tonen"
+
+#, php-format
+msgid ""
+"Shows Google's One Tap prompt, so visitors can sign in with their Google "
+"account without leaving the page. %1$sLearn more%2$s."
+msgstr ""
+"Toont het One Tap-venster van Google, zodat bezoekers met hun Google-account "
+"kunnen inloggen zonder de pagina te verlaten. %1$sMeer informatie%2$s."
+
+#, php-format
+msgid ""
+"%1$s Requires HTTPS, and %2$s added to the %3$sAuthorized JavaScript "
+"origins%4$s of your Google app."
+msgstr ""
+"%1$s Vereist HTTPS, en %2$s moet zijn toegevoegd aan de %3$sgeautoriseerde "
+"JavaScript-bronnen%4$s van je Google-app."
+
+#, php-format
+msgid ""
+"%1$s Unlike the Google button, One Tap loads Google's script as soon as the "
+"page opens. %2$sLearn more%3$s."
+msgstr ""
+"%1$s In tegenstelling tot de Google-knop laadt One Tap het script van Google "
+"zodra de pagina wordt geopend. %2$sMeer informatie%3$s."
 
 msgid "Client ID"
 msgstr "Client ID"
@@ -1577,11 +1577,12 @@ msgid "Client Secret"
 msgstr "Client Geheim"
 
 msgid "Select account on each login"
-msgstr ""
+msgstr "Bij elke login een account selecteren"
 
 msgid ""
 "Disable, when you don't want to see the account select prompt on each login."
 msgstr ""
+"Schakel dit uit als je de accountselectie niet bij elke login wilt zien."
 
 msgid "Original"
 msgstr "Origineel"
@@ -1589,10 +1590,8 @@ msgstr "Origineel"
 msgid "Continue with <b>Google</b>"
 msgstr "Doorgaan met <b>Google</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Google</b>"
 msgid "Sign up with <b>Google</b>"
-msgstr "Doorgaan met <b>Google</b>"
+msgstr "Registreren met <b>Google</b>"
 
 msgid "Link account with <b>Google</b>"
 msgstr "Koppel met <b>Google</b>"
@@ -1605,52 +1604,38 @@ msgid "Required API: %1$s"
 msgstr "Vereiste API: %1$s"
 
 msgid "X"
-msgstr ""
+msgstr "X"
 
 msgid "Legacy"
-msgstr ""
+msgstr "Verouderd"
 
-#, fuzzy
-#| msgid "API Permission"
 msgid "API version"
-msgstr "API-toestemming"
+msgstr "API-versie"
 
 msgid "v1.1"
-msgstr ""
+msgstr "v1.1"
 
 msgid "v2"
-msgstr ""
+msgstr "v2"
 
 msgid "API Key"
 msgstr "API Sleutel"
 
-#, fuzzy
-#| msgid "API Secret"
 msgid "API Key Secret"
-msgstr "API Geheim"
+msgstr "API Sleutel Geheim"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Continue with <b>X</b>"
-msgstr "Doorgaan met <b>VK</b>"
+msgstr "Doorgaan met <b>X</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Sign up with <b>X</b>"
-msgstr "Doorgaan met <b>VK</b>"
+msgstr "Registreren met <b>X</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>VK</b>"
 msgid "Link account with <b>X</b>"
-msgstr "Koppel met <b>VK</b>"
+msgstr "Koppel met <b>X</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>VK</b>"
 msgid "Unlink account from <b>X</b>"
-msgstr "Ontkoppel van <b>VK</b>"
+msgstr "Ontkoppel van <b>X</b>"
 
-#, fuzzy
-#| msgid "Register"
 msgctxt "Register form submit button label"
 msgid "Register"
 msgstr "Registreren"
@@ -1687,57 +1672,42 @@ msgstr ""
 "Deze gebruikersnaam is ongeldig omdat hij illegale tekens gebruikt. Vul een "
 "geldige gebruikersnaam in."
 
-#, fuzzy
-#| msgid "This username is already registered. Please choose another one."
 msgid ""
 "<strong>Error</strong>: This username is already registered. Please choose "
 "another one."
-msgstr "Deze gebruikersnaam is al in gebruik. Kies een andere."
+msgstr ""
+"<strong>Fout</strong>: Deze gebruikersnaam is al geregistreerd. Kies een "
+"andere."
 
-#, fuzzy
-#| msgid "Sorry, that username is not allowed."
 msgid "<strong>Error</strong>: Sorry, that username is not allowed."
-msgstr "Sorry, deze gebruikersnaam is niet toegestaan."
+msgstr "<strong>Fout</strong>: Sorry, deze gebruikersnaam is niet toegestaan."
 
-#, fuzzy
-#| msgid "<strong>ERROR</strong>: Please enter a password."
 msgid "<strong>Error</strong>: Please enter an email address."
-msgstr "<strong>FOUT</strong>: Voer een wachtwoord in."
+msgstr "<strong>Fout</strong>: Voer een e-mailadres in."
 
-#, fuzzy
-#| msgid "The email address isn&#8217;t correct."
 msgid "<strong>Error</strong>: The email address isn&#8217;t correct."
-msgstr "Het e-mailadres is niet juist."
+msgstr "<strong>Fout</strong>: Het e-mailadres is niet juist."
 
-#, fuzzy
-#| msgid "This email is already registered, please choose another one."
 msgid ""
 "<strong>Error</strong>: This email is already registered. Please choose "
 "another one."
-msgstr "Dit e-mailadres is al geregistreerd. Kies een andere."
+msgstr ""
+"<strong>Fout</strong>: Dit e-mailadres is al geregistreerd. Kies een ander e-"
+"mailadres."
 
-#, fuzzy
-#| msgid "<strong>ERROR</strong>: Please enter a password."
 msgid "<strong>Error</strong>: Please enter a password."
-msgstr "<strong>FOUT</strong>: Voer een wachtwoord in."
+msgstr "<strong>Fout</strong>: Voer een wachtwoord in."
 
-#, fuzzy
-#| msgid ""
-#| "<strong>ERROR</strong>: Passwords may not contain the character \"\\\"."
 msgid "<strong>Error</strong>: Passwords may not contain the character \"\\\"."
 msgstr ""
-"<strong>FOUT</strong>: Wachtwoorden mogen niet het teken \"\\\" bevatten."
+"<strong>Fout</strong>: Wachtwoorden mogen het teken \"\\\" niet bevatten."
 
-#, fuzzy
-#| msgid ""
-#| "<strong>ERROR</strong>: Please enter the same password in both password "
-#| "fields."
 msgid ""
 "<strong>Error</strong>: Passwords don&#8217;t match. Please enter the same "
 "password in both password fields."
 msgstr ""
-"<strong>FOUT</strong>: Voer hetzelfde wachtwoord in beide wachtwoordvelden "
-"in."
+"<strong>Fout</strong>: De wachtwoorden komen niet overeen. Voer in beide "
+"wachtwoordvelden hetzelfde wachtwoord in."
 
 #, php-format
 msgid ""
@@ -1749,20 +1719,23 @@ msgstr ""
 
 msgid "Unexpected response: The provider didn't return the Authorization URL!"
 msgstr ""
+"Onverwacht antwoord: de provider heeft de autorisatie-URL niet teruggegeven!"
 
 msgid "Unexpected response: Authentication has been cancelled!"
-msgstr ""
+msgstr "Onverwacht antwoord: de authenticatie is geannuleerd!"
 
 msgid "Unexpected response: Immediate request failed - Setup Needed!"
-msgstr ""
+msgstr "Onverwacht antwoord: directe aanvraag mislukt - configuratie nodig!"
 
 msgid ""
 "Unexpected response: The targeted OpenID server is not authorized to verify "
 "this request!"
 msgstr ""
+"Onverwacht antwoord: de betreffende OpenID-server is niet gemachtigd om deze "
+"aanvraag te verifiëren!"
 
 msgid "Unexpected response: OpenID Verification failed!"
-msgstr ""
+msgstr "Onverwacht antwoord: OpenID-verificatie mislukt!"
 
 #, php-format
 msgid "Please install and activate %1$s to use the %2$s"
@@ -1774,10 +1747,8 @@ msgstr "Netwerk Activeren"
 msgid "Install now!"
 msgstr "Installeer nu!"
 
-#, fuzzy
-#| msgid "Providers"
 msgid "Social Providers"
-msgstr "Providers"
+msgstr "Social providers"
 
 #, php-format
 msgid ""
@@ -1789,51 +1760,69 @@ msgstr ""
 
 #, php-format
 msgid ""
+"Yes. With Google One Tap enabled, %1$s loads Google's Identity Services "
+"library from %2$s on the pages where the One Tap prompt can appear. Google "
+"receives the visitor's IP address and reads its own cookies on that domain "
+"to decide whether the prompt can be shown."
+msgstr ""
+"Ja. Als Google One Tap is ingeschakeld, laadt %1$s de Identity Services-"
+"bibliotheek van Google vanaf %2$s op de pagina's waar het One Tap-venster "
+"kan verschijnen. Google ontvangt het IP-adres van de bezoeker en leest zijn "
+"eigen cookies op dat domein om te bepalen of het venster getoond kan worden."
+
+#, php-format
+msgid ""
+"With Google One Tap enabled, Google's library also stores a %1$s cookie on "
+"this site, which holds the visitor's One Tap status, such as whether they "
+"closed the prompt."
+msgstr ""
+"Als Google One Tap is ingeschakeld, slaat de bibliotheek van Google ook een "
+"cookie %1$s op deze site op. Deze bevat de One Tap-status van de bezoeker, "
+"bijvoorbeeld of de bezoeker het venster heeft gesloten."
+
+#, php-format
+msgid ""
 "Most of these information can only be retrieved, when the field is marked as "
 "Public on the user's %s page!"
 msgstr ""
 "De meeste van deze informatie kan alleen worden opgehaald, wanneer het veld "
 "als openbaar is gemarkeerd op de %s pagina van de gebruiker!"
 
-#, fuzzy, php-format
-#| msgid ""
-#| "Most of these information can only be retrieved, when the field is marked "
-#| "as Public on the user's %s page!"
+#, php-format
 msgid ""
 "Most of these information can only be retrieved, when the field is filled on "
 "the user's %s page!"
 msgstr ""
-"De meeste van deze informatie kan alleen worden opgehaald, wanneer het veld "
-"als openbaar is gemarkeerd op de %s pagina van de gebruiker!"
+"De meeste van deze informatie kan alleen worden opgehaald wanneer het veld "
+"is ingevuld op de %s pagina van de gebruiker!"
 
-#, fuzzy, php-format
-#| msgid ""
-#| "Most of these information can only be retrieved, when the field is marked "
-#| "as Public on the user's %s page!"
+#, php-format
 msgid ""
 "Most of these information can only be retrieved, when the field is filled on "
 "the user's %s page! For the campaigns, the user must have a public campaign!"
 msgstr ""
-"De meeste van deze informatie kan alleen worden opgehaald, wanneer het veld "
-"als openbaar is gemarkeerd op de %s pagina van de gebruiker!"
+"De meeste van deze informatie kan alleen worden opgehaald wanneer het veld "
+"is ingevuld op de %s pagina van de gebruiker! Voor de campagnes moet de "
+"gebruiker een openbare campagne hebben!"
 
 #, php-format
 msgid ""
 "The Spotify Sync data requires the %1$s with the necessary scopes enabled!"
 msgstr ""
+"Voor Spotify Sync data moet de %1$s met de benodigde scopes ingeschakeld "
+"zijn!"
 
 #, php-format
 msgid ""
 "The TikTok Sync data requires the %1$s with the necessary scopes enabled!"
 msgstr ""
+"Voor TikTok Sync data moet de %1$s met de benodigde scopes ingeschakeld zijn!"
 
 msgid "Continue with <b>Amazon</b>"
 msgstr "Doorgaan met <b>Amazonië</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Amazon</b>"
 msgid "Sign up with <b>Amazon</b>"
-msgstr "Doorgaan met <b>Amazonië</b>"
+msgstr "Registreren met <b>Amazon</b>"
 
 msgid "Link account with <b>Amazon</b>"
 msgstr "Koppel met <b>Amazon</b>"
@@ -1842,36 +1831,28 @@ msgid "Unlink account from <b>Amazon</b>"
 msgstr "Ontkoppel van <b>Amazon</b>"
 
 msgid "Delete credentials"
-msgstr ""
+msgstr "Inloggegevens verwijderen"
 
 msgid "Private Key ID"
-msgstr ""
+msgstr "Private Key ID"
 
-#, fuzzy
-#| msgid "Privacy"
 msgid "Private Key"
-msgstr "Privacy"
+msgstr "Privésleutel"
 
-#, fuzzy
-#| msgid "Identifier"
 msgid "Team Identifier"
-msgstr "Identificatie"
+msgstr "Team-identificatie"
 
-#, fuzzy
-#| msgid "Identifier"
 msgid "Service Identifier"
-msgstr "Identificatie"
+msgstr "Service-identificatie"
 
 msgid "Generate Token"
-msgstr ""
+msgstr "Token genereren"
 
 msgid "Continue with <b>Apple</b>"
 msgstr "Doorgaan met <b>Apple</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Apple</b>"
 msgid "Sign up with <b>Apple</b>"
-msgstr "Doorgaan met <b>Apple</b>"
+msgstr "Registreren met <b>Apple</b>"
 
 msgid "Link account with <b>Apple</b>"
 msgstr "Koppel met <b>Apple</b>"
@@ -1881,53 +1862,46 @@ msgstr "Ontkoppel van <b>Apple</b>"
 
 #, php-format
 msgid "An error occurred when storing of the expiration timestamp : %1$s"
-msgstr ""
+msgstr "Er is een fout opgetreden bij het opslaan van de vervaltijd: %1$s"
 
-#, fuzzy, php-format
-#| msgid "Network connection failed: %1$s"
+#, php-format
 msgid "Token generation failed: %1$s"
-msgstr "Netwerkverbinding mislukt: %1$s"
+msgstr "Tokengeneratie mislukt: %1$s"
 
 msgid "Please check your credentials!"
-msgstr ""
+msgstr "Controleer je inloggegevens!"
 
 msgid "Private key format is not valid!"
-msgstr ""
+msgstr "De indeling van de private key is ongeldig!"
 
 #, php-format
 msgid ""
 "%s detected that your Apple credentials have expired. Please delete the "
 "current credentials and generate new one!"
 msgstr ""
+"%s heeft gedetecteerd dat je Apple-inloggegevens zijn verlopen. Verwijder de "
+"huidige inloggegevens en genereer nieuwe!"
 
 msgid "Apple Credentials"
-msgstr ""
+msgstr "Apple-inloggegevens"
 
 msgid "Force reauthorization on each login"
-msgstr ""
+msgstr "Bij elke login opnieuw autoriseren"
 
 msgid "Enable, when you want to see the consent screen on each login."
-msgstr ""
+msgstr "Schakel dit in als je het toestemmingsscherm bij elke login wilt zien."
 
-#, fuzzy
-#| msgid "Continue with <b>Disqus</b>"
 msgid "Continue with <b>Discord</b>"
-msgstr "Doorgaan met <b>Disqus</b>"
+msgstr "Doorgaan met <b>Discord</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Disqus</b>"
 msgid "Sign up with <b>Discord</b>"
-msgstr "Doorgaan met <b>Disqus</b>"
+msgstr "Registreren met <b>Discord</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>Disqus</b>"
 msgid "Link account with <b>Discord</b>"
-msgstr "Koppel met <b>Disqus</b>"
+msgstr "Koppel met <b>Discord</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Disqus</b>"
 msgid "Unlink account from <b>Discord</b>"
-msgstr "Ontkoppel van <b>Disqus</b>"
+msgstr "Ontkoppel van <b>Discord</b>"
 
 msgid "API Secret"
 msgstr "API Geheim"
@@ -1935,18 +1909,18 @@ msgstr "API Geheim"
 #, php-format
 msgid "We detected that your %1$s is probably overridden over the %2$s filter!"
 msgstr ""
+"We hebben gedetecteerd dat je %1$s waarschijnlijk wordt overschreven via de "
+"filter %2$s!"
 
 #, php-format
 msgid "We detected that your %1$s has been overridden over the %2$s filter!"
-msgstr ""
+msgstr "We hebben gedetecteerd dat je %1$s is overschreven via de filter %2$s!"
 
 msgid "Continue with <b>Disqus</b>"
 msgstr "Doorgaan met <b>Disqus</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Disqus</b>"
 msgid "Sign up with <b>Disqus</b>"
-msgstr "Doorgaan met <b>Disqus</b>"
+msgstr "Registreren met <b>Disqus</b>"
 
 msgid "Link account with <b>Disqus</b>"
 msgstr "Koppel met <b>Disqus</b>"
@@ -1957,9 +1931,8 @@ msgstr "Ontkoppel van <b>Disqus</b>"
 msgid "Continue with <b>GitHub</b>"
 msgstr "Doorgaan met <b>GitHub</b>"
 
-#, fuzzy
 msgid "Sign up with <b>GitHub</b>"
-msgstr "Doorgaan met <b>GitHub</b>"
+msgstr "Registreren met <b>GitHub</b>"
 
 msgid "Link account with <b>GitHub</b>"
 msgstr "Koppel met <b>GitHub</b>"
@@ -1967,29 +1940,23 @@ msgstr "Koppel met <b>GitHub</b>"
 msgid "Unlink account from <b>GitHub</b>"
 msgstr "Ontkoppel van <b>GitHub</b>"
 
-#, fuzzy
-#| msgid "API Key"
 msgid "REST API Key"
-msgstr "API Sleutel"
+msgstr "REST API Sleutel"
 
-#, fuzzy
-#| msgid "Client Secret"
 msgid "Client Secret Code"
-msgstr "Client Geheim"
+msgstr "Client Geheim Code"
 
-#, fuzzy
-#| msgid "Authentication error"
 msgid "Authorization Prompt"
-msgstr "Authenticatiefout"
+msgstr "Autorisatieprompt"
 
 msgid "Display account select modal"
-msgstr ""
+msgstr "Accountselectievenster tonen"
 
 msgid "Force user to enter login credentials on each login"
-msgstr ""
+msgstr "Gebruiker bij elke login inloggegevens laten invoeren"
 
 msgid "Start the authentication with the Kakao Account sign-up page."
-msgstr ""
+msgstr "Begin de authenticatie op de registratiepagina van Kakao Account."
 
 msgid "Email scope"
 msgstr "E-mail scope"
@@ -1998,114 +1965,102 @@ msgid "Disable, when you have no rights for email address."
 msgstr "Uitschakelen, wanneer je geen rechten hebt voor e-mailadres."
 
 msgid "Mini"
-msgstr ""
+msgstr "Mini"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Continue with <b>Kakao</b>"
-msgstr "Doorgaan met <b>VK</b>"
+msgstr "Doorgaan met <b>Kakao</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Sign up with <b>Kakao</b>"
-msgstr "Doorgaan met <b>VK</b>"
+msgstr "Registreren met <b>Kakao</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>VK</b>"
 msgid "Link account with <b>Kakao</b>"
-msgstr "Koppel met <b>VK</b>"
+msgstr "Koppel met <b>Kakao</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>VK</b>"
 msgid "Unlink account from <b>Kakao</b>"
-msgstr "Ontkoppel van <b>VK</b>"
+msgstr "Ontkoppel van <b>Kakao</b>"
 
 msgid "Channel ID"
-msgstr ""
+msgstr "Channel ID"
 
-#, fuzzy
-#| msgid "Client Secret"
 msgid "Channel Secret"
-msgstr "Client Geheim"
+msgstr "Channel Geheim"
 
 msgid "Add LINE Official Account as a friend"
-msgstr ""
+msgstr "LINE Official Account als vriend toevoegen"
 
 msgid "Don't display"
-msgstr ""
+msgstr "Niet tonen"
 
 msgid "Display the add friend option in the consent screen"
-msgstr ""
+msgstr "De optie om als vriend toe te voegen tonen in het toestemmingsscherm"
 
 msgid "Opens a new screen with the add friend option after the consent screen"
 msgstr ""
+"Opent na het toestemmingsscherm een nieuw scherm met de optie om als vriend "
+"toe te voegen"
 
 #, php-format
 msgid ""
 "If you have a LINE Official Account, people can add it as a friend when they "
 "authorize your App. %1$sLearn more%2$s."
 msgstr ""
+"Als je een LINE Official Account hebt, kunnen mensen het als vriend "
+"toevoegen wanneer ze je App autoriseren. %1$sMeer informatie%2$s."
 
 msgid "Initial Login method"
-msgstr ""
+msgstr "Eerste loginmethode"
 
-#, fuzzy
-#| msgid "Password"
 msgid "Email and Password"
-msgstr "Wachtwoord"
+msgstr "E-mail en wachtwoord"
 
 msgid "QR code"
-msgstr ""
+msgstr "QR-code"
 
 msgid ""
 "The selected value defines whether the Email and Password or the QR code "
 "login option will be presented in the LINE authentication screen by default."
 msgstr ""
+"De geselecteerde waarde bepaalt of standaard de login met e-mail en "
+"wachtwoord of met QR-code wordt getoond in het LINE-authenticatiescherm."
 
 msgid "Force initial login method"
-msgstr ""
+msgstr "Eerste loginmethode afdwingen"
 
 msgid ""
 "Enable, if you want to offer only the selected Initial Login method in the "
 "LINE authentication screen."
 msgstr ""
+"Schakel dit in als je in het LINE-authenticatiescherm alleen de "
+"geselecteerde eerste loginmethode wilt aanbieden."
 
 msgid "Allow Auto login"
-msgstr ""
+msgstr "Automatisch inloggen toestaan"
 
 #, php-format
 msgid ""
 "Having the Auto login enabled could make the login fail in certain cases. "
 "%1$sLearn more%2$s."
 msgstr ""
+"Als automatisch inloggen is ingeschakeld, kan het inloggen in bepaalde "
+"gevallen mislukken. %1$sMeer informatie%2$s."
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Continue with <b>Line</b>"
-msgstr "Doorgaan met <b>LinkedIn</b>"
+msgstr "Doorgaan met <b>Line</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Sign up with <b>Line</b>"
-msgstr "Doorgaan met <b>LinkedIn</b>"
+msgstr "Registreren met <b>Line</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>LinkedIn</b>"
 msgid "Link account with <b>Line</b>"
-msgstr "Koppel met <b>LinkedIn</b>"
+msgstr "Koppel met <b>Line</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>LinkedIn</b>"
 msgid "Unlink account from <b>Line</b>"
-msgstr "Ontkoppel van <b>LinkedIn</b>"
+msgstr "Ontkoppel van <b>Line</b>"
 
 msgid "Continue with <b>LinkedIn</b>"
 msgstr "Doorgaan met <b>LinkedIn</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Sign up with <b>LinkedIn</b>"
-msgstr "Doorgaan met <b>LinkedIn</b>"
+msgstr "Registreren met <b>LinkedIn</b>"
 
 msgid "Link account with <b>LinkedIn</b>"
 msgstr "Koppel met <b>LinkedIn</b>"
@@ -2113,81 +2068,61 @@ msgstr "Koppel met <b>LinkedIn</b>"
 msgid "Unlink account from <b>LinkedIn</b>"
 msgstr "Ontkoppel van <b>LinkedIn</b>"
 
-#, fuzzy
-#| msgid "Application ID"
 msgid "Application (client) ID"
-msgstr "Applicatie-ID"
+msgstr "Toepassings-id (client)"
 
-#, fuzzy
-#| msgid "Client Secret"
 msgid "Client secret"
-msgstr "Client Geheim"
+msgstr "Clientgeheim"
 
 msgid "Audience"
-msgstr ""
+msgstr "Doelgroep"
 
 msgid "Multiple Entra ID tenants"
-msgstr ""
+msgstr "Meerdere Entra ID-tenants"
 
 msgid "Any Entra ID Tenant + Personal Microsoft accounts"
-msgstr ""
+msgstr "Elke Entra ID-tenant + persoonlijke Microsoft-accounts"
 
-#, fuzzy
-#| msgid "Social accounts"
 msgid "Personal accounts only"
-msgstr "Social accounts"
+msgstr "Alleen persoonlijke accounts"
 
 msgid "Single tenant only - Default Directory with Azure AD tenant:"
-msgstr ""
+msgstr "Alleen één tenant - Standaardmap met Azure AD-tenant:"
 
 #, php-format
 msgid ""
 "The selected value will define the supported account types. %1$sLearn more."
 "%2$s"
 msgstr ""
+"De geselecteerde waarde bepaalt welke accounttypes worden ondersteund. "
+"%1$sMeer informatie.%2$s"
 
 msgid "Display authorization and authentication dialog only when necessary"
-msgstr ""
+msgstr "Autorisatie- en authenticatievenster alleen tonen als dat nodig is"
 
-#, fuzzy
-#| msgid "Continue with <b>Yahoo</b>"
 msgid "Continue with <b>Microsoft</b>"
-msgstr "Doorgaan met <b>Yahoo</b>"
+msgstr "Doorgaan met <b>Microsoft</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Yahoo</b>"
 msgid "Sign up with <b>Microsoft</b>"
-msgstr "Doorgaan met <b>Yahoo</b>"
+msgstr "Registreren met <b>Microsoft</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>Yahoo</b>"
 msgid "Link account with <b>Microsoft</b>"
-msgstr "Koppel met <b>Yahoo</b>"
+msgstr "Koppel met <b>Microsoft</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Yahoo</b>"
 msgid "Unlink account from <b>Microsoft</b>"
-msgstr "Ontkoppel van <b>Yahoo</b>"
+msgstr "Ontkoppel van <b>Microsoft</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Amazon</b>"
 msgid "Continue with <b>Patreon</b>"
-msgstr "Doorgaan met <b>Amazonië</b>"
+msgstr "Doorgaan met <b>Patreon</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Amazon</b>"
 msgid "Sign up with <b>Patreon</b>"
-msgstr "Doorgaan met <b>Amazonië</b>"
+msgstr "Registreren met <b>Patreon</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>Amazon</b>"
 msgid "Link account with <b>Patreon</b>"
-msgstr "Koppel met <b>Amazon</b>"
+msgstr "Koppel met <b>Patreon</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Amazon</b>"
 msgid "Unlink account from <b>Patreon</b>"
-msgstr "Ontkoppel van <b>Amazon</b>"
+msgstr "Ontkoppel van <b>Patreon</b>"
 
 msgid "Secret"
 msgstr "Geheim"
@@ -2195,10 +2130,8 @@ msgstr "Geheim"
 msgid "Continue with <b>PayPal</b>"
 msgstr "Doorgaan met <b>PayPal</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>PayPal</b>"
 msgid "Sign up with <b>PayPal</b>"
-msgstr "Doorgaan met <b>PayPal</b>"
+msgstr "Registreren met <b>PayPal</b>"
 
 msgid "Link account with <b>PayPal</b>"
 msgstr "Koppel met <b>PayPal</b>"
@@ -2206,164 +2139,114 @@ msgstr "Koppel met <b>PayPal</b>"
 msgid "Unlink account from <b>PayPal</b>"
 msgstr "Ontkoppel van <b>PayPal</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Continue with <b>Reddit</b>"
-msgstr "Doorgaan met <b>VK</b>"
+msgstr "Doorgaan met <b>Reddit</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Sign up with <b>Reddit</b>"
-msgstr "Doorgaan met <b>VK</b>"
+msgstr "Registreren met <b>Reddit</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>VK</b>"
 msgid "Link account with <b>Reddit</b>"
-msgstr "Koppel met <b>VK</b>"
+msgstr "Koppel met <b>Reddit</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>VK</b>"
 msgid "Unlink account from <b>Reddit</b>"
-msgstr "Ontkoppel van <b>VK</b>"
+msgstr "Ontkoppel van <b>Reddit</b>"
 
 msgid "Slack Team ID"
-msgstr ""
+msgstr "Slack Team ID"
 
 msgid "Optional"
-msgstr ""
+msgstr "Optioneel"
 
 #, php-format
 msgid ""
 "The Team ID of a workspace to attempt to restrict to. %1$sLearn more.%2$s"
 msgstr ""
+"De Team ID van een workspace waartoe je de toegang wilt beperken. %1$sMeer "
+"informatie.%2$s"
 
 msgid "72x72"
-msgstr ""
+msgstr "72x72"
 
 msgid "192x192"
-msgstr ""
+msgstr "192x192"
 
 msgid "512x512"
-msgstr ""
+msgstr "512x512"
 
 msgid "1024x1024"
-msgstr ""
+msgstr "1024x1024"
 
-#, fuzzy
-#| msgid "Continue with <b>Facebook</b>"
 msgid "Sign in with <b>Slack</b>"
-msgstr "Doorgaan met <b>Facebook</b>"
+msgstr "Inloggen met <b>Slack</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Facebook</b>"
 msgid "Sign up with <b>Slack</b>"
-msgstr "Doorgaan met <b>Facebook</b>"
+msgstr "Registreren met <b>Slack</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>Facebook</b>"
 msgid "Link account with <b>Slack</b>"
-msgstr "Koppel met <b>Facebook</b>"
+msgstr "Koppel met <b>Slack</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Facebook</b>"
 msgid "Unlink account from <b>Slack</b>"
-msgstr "Ontkoppel van <b>Facebook</b>"
+msgstr "Ontkoppel van <b>Slack</b>"
 
 msgid "Green"
-msgstr ""
+msgstr "Groen"
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Continue with <b>Spotify</b>"
-msgstr "Doorgaan met <b>LinkedIn</b>"
+msgstr "Doorgaan met <b>Spotify</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Facebook</b>"
 msgid "Sign up with <b>Spotify</b>"
-msgstr "Doorgaan met <b>Facebook</b>"
+msgstr "Registreren met <b>Spotify</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>Facebook</b>"
 msgid "Link account with <b>Spotify</b>"
-msgstr "Koppel met <b>Facebook</b>"
+msgstr "Koppel met <b>Spotify</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Facebook</b>"
 msgid "Unlink account from <b>Spotify</b>"
-msgstr "Ontkoppel van <b>Facebook</b>"
+msgstr "Ontkoppel van <b>Spotify</b>"
 
-#, fuzzy
-#| msgid "API Key"
 msgid "Web API Key"
-msgstr "API Sleutel"
+msgstr "Web API Sleutel"
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Continue with <b>Steam</b>"
-msgstr "Doorgaan met <b>LinkedIn</b>"
+msgstr "Doorgaan met <b>Steam</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Facebook</b>"
 msgid "Sign up with <b>Steam</b>"
-msgstr "Doorgaan met <b>Facebook</b>"
+msgstr "Registreren met <b>Steam</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>Facebook</b>"
 msgid "Link account with <b>Steam</b>"
-msgstr "Koppel met <b>Facebook</b>"
+msgstr "Koppel met <b>Steam</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Facebook</b>"
 msgid "Unlink account from <b>Steam</b>"
-msgstr "Ontkoppel van <b>Facebook</b>"
+msgstr "Ontkoppel van <b>Steam</b>"
 
 msgid "Error: The 64-bit SteamID can not be retrieved for this user!"
-msgstr ""
+msgstr "Fout: de 64-bit SteamID van deze gebruiker kan niet worden opgehaald!"
 
-#, fuzzy
-#| msgid "Client ID"
 msgid "Client key"
-msgstr "Client ID"
+msgstr "Client Sleutel"
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Continue with <b>TikTok</b>"
-msgstr "Doorgaan met <b>LinkedIn</b>"
+msgstr "Doorgaan met <b>TikTok</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Sign up with <b>TikTok</b>"
-msgstr "Doorgaan met <b>LinkedIn</b>"
+msgstr "Registreren met <b>TikTok</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>LinkedIn</b>"
 msgid "Link account with <b>TikTok</b>"
-msgstr "Koppel met <b>LinkedIn</b>"
+msgstr "Koppel met <b>TikTok</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>LinkedIn</b>"
 msgid "Unlink account from <b>TikTok</b>"
-msgstr "Ontkoppel van <b>LinkedIn</b>"
+msgstr "Ontkoppel van <b>TikTok</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Twitter</b>"
 msgid "Continue with <b>Twitch</b>"
-msgstr "Doorgaan met <b>Twitter</b>"
+msgstr "Doorgaan met <b>Twitch</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Twitter</b>"
 msgid "Sign up with <b>Twitch</b>"
-msgstr "Doorgaan met <b>Twitter</b>"
+msgstr "Registreren met <b>Twitch</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>Twitter</b>"
 msgid "Link account with <b>Twitch</b>"
-msgstr "Koppel met <b>Twitter</b>"
+msgstr "Koppel met <b>Twitch</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Twitter</b>"
 msgid "Unlink account from <b>Twitch</b>"
-msgstr "Ontkoppel van <b>Twitter</b>"
+msgstr "Ontkoppel van <b>Twitch</b>"
 
 msgid "Secure key"
 msgstr "Beveiligde sleutel"
@@ -2371,10 +2254,8 @@ msgstr "Beveiligde sleutel"
 msgid "Continue with <b>VK</b>"
 msgstr "Doorgaan met <b>VK</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Sign up with <b>VK</b>"
-msgstr "Doorgaan met <b>VK</b>"
+msgstr "Registreren met <b>VK</b>"
 
 msgid "Link account with <b>VK</b>"
 msgstr "Koppel met <b>VK</b>"
@@ -2390,22 +2271,25 @@ msgid ""
 "resolve the problem, please create a new App based on our %4$s guide, and "
 "replace the credentials on the %5$s tab with your new App credentials."
 msgstr ""
+"%1$s: %2$s heeft nieuwe App-types geïntroduceerd en de endpoints aangepast, "
+"en die zijn niet compatibel met de oude Apps.%3$sWe hebben gedetecteerd dat "
+"je nog een oude %2$s App gebruikt, daarom hebben we je %2$s configuratie "
+"moeten uitschakelen. Maak een nieuwe App aan volgens onze %4$s handleiding "
+"en vervang de gegevens op het tabblad %5$s door de gegevens van je nieuwe "
+"App om het probleem op te lossen."
 
 msgid "VKontakte"
-msgstr ""
+msgstr "VKontakte"
 
-#, fuzzy, php-format
-#| msgid "Click on the Create button"
+#, php-format
 msgid "Open %1$s - %2$s"
-msgstr "Klik op de knop Aanmaken"
+msgstr "Open %1$s - %2$s"
 
 msgid "Continue with <b>WordPress.com</b>"
 msgstr "Doorgaan met <b>WordPress.com</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>WordPress.com</b>"
 msgid "Sign up with <b>WordPress.com</b>"
-msgstr "Doorgaan met <b>WordPress.com</b>"
+msgstr "Registreren met <b>WordPress.com</b>"
 
 msgid "Link account with <b>WordPress.com</b>"
 msgstr "Koppel met <b>WordPress.com</b>"
@@ -2416,10 +2300,8 @@ msgstr "Ontkoppel van <b>WordPress.com</b>"
 msgid "Continue with <b>Yahoo</b>"
 msgstr "Doorgaan met <b>Yahoo</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Yahoo</b>"
 msgid "Sign up with <b>Yahoo</b>"
-msgstr "Doorgaan met <b>Yahoo</b>"
+msgstr "Registreren met <b>Yahoo</b>"
 
 msgid "Link account with <b>Yahoo</b>"
 msgstr "Koppel met <b>Yahoo</b>"
@@ -2443,10 +2325,8 @@ msgstr "Een bevestiging van de registratie wordt naar je gemaild."
 msgid "Password"
 msgstr "Wachtwoord"
 
-#, fuzzy
-#| msgid "Confirm password"
 msgid "Hide password"
-msgstr "Bevestig wachtwoord"
+msgstr "Wachtwoord verbergen"
 
 msgid "Strength indicator"
 msgstr "Sterkte-indicator"
@@ -2459,6 +2339,18 @@ msgstr "Bevestig wachtwoord"
 
 msgid "Username"
 msgstr "Gebruikersnaam"
+
+#~ msgid ""
+#~ "Shows Google's One Tap prompt, so visitors can sign in with their Google "
+#~ "account without leaving the page. Depending on the browser, Google shows "
+#~ "it to every visitor, or only to those who are signed in to Google. One "
+#~ "Tap works alongside the Google button, it does not replace it."
+#~ msgstr ""
+#~ "Toont het One Tap-venster van Google, zodat bezoekers met hun Google-"
+#~ "account kunnen inloggen zonder de pagina te verlaten. Afhankelijk van de "
+#~ "browser toont Google het aan elke bezoeker, of alleen aan bezoekers die "
+#~ "bij Google zijn ingelogd. One Tap werkt naast de Google-knop en vervangt "
+#~ "deze niet."
 
 #, fuzzy, php-format
 #~| msgid "Navigate to %s"

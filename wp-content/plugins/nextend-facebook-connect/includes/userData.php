@@ -1,8 +1,15 @@
 <?php
 
 use NSL\Notices;
+use NSL\Persistent\Persistent;
 
 class NextendSocialUserData {
+
+    /**
+     * The hidden field of the register flow form that proves the form was submitted from the page
+     * that we rendered for this login.
+     */
+    const TOKEN_FIELD = 'nsl_register_flow_token';
 
     /** @var array */
     private $userData;
@@ -17,6 +24,9 @@ class NextendSocialUserData {
     private $errors;
 
     private $isCustomRegisterFlow = false;
+
+    /** @var string */
+    private $token = '';
 
     /**
      * NextendSocialUserData constructor.
@@ -53,6 +63,18 @@ class NextendSocialUserData {
                     'loginSocial' => $this->provider->getId()
                 ), NextendSocialLogin::getRegisterUrl()));
                 exit;
+            }
+
+            /**
+             * The extra input is only accepted from the form that we rendered for this login. The
+             * login session cookie is sent with the requests that other sites start too.
+             *
+             * It has to happen before the validators run, as they look for the submit marker on
+             * their own. Without the marker, they treat the request as the first display of the
+             * form, so nothing that was posted gets used or shown.
+             */
+            if ($this->isPost() && !$this->hasValidToken()) {
+                unset($_POST['submit'], $_REQUEST['submit']);
             }
 
             $this->errors = new WP_Error();
@@ -92,9 +114,48 @@ class NextendSocialUserData {
     }
 
     /**
+     * @return string
+     */
+    private function getTokenKey() {
+        return $this->provider->getId() . '_register_flow_token';
+    }
+
+    /**
+     * @return bool Whether the request carries the token of the form that we rendered for this login.
+     */
+    private function hasValidToken() {
+        $token  = Persistent::get($this->getTokenKey());
+        $posted = isset($_POST[self::TOKEN_FIELD]) && is_string($_POST[self::TOKEN_FIELD]) ? $_POST[self::TOKEN_FIELD] : '';
+
+        return is_string($token) && $token !== '' && hash_equals($token, $posted);
+    }
+
+    /**
+     * The token lives in the login session, next to the data of the login that is in progress, so it
+     * needs no cookie of its own. It stays the same until the login ends, so the form keeps working
+     * when it is open in more than one tab, or when it is displayed again with an error.
+     *
+     * @return string
+     */
+    private function getToken() {
+        $token = Persistent::get($this->getTokenKey());
+        if (!is_string($token) || $token === '') {
+            $token = bin2hex(random_bytes(16));
+            Persistent::set($this->getTokenKey(), $token);
+        }
+
+        return $token;
+    }
+
+    /**
      * @throws NSLContinuePageRenderException
      */
     public function displayForm() {
+        /**
+         * Read here, before any output, because the form is rendered later, in the page content.
+         */
+        $this->token = $this->getToken();
+
         NextendSocialLogin::removeLoginFormAssets();
 
         if ($this->isCustomRegisterFlow) {
@@ -210,6 +271,7 @@ class NextendSocialUserData {
         ?>
         <form name="registerform" id="registerform" action="<?php echo esc_url($postUrl); ?>" method="post">
             <input type="hidden" name="submit" value="1"/>
+            <input type="hidden" name="<?php echo esc_attr(self::TOKEN_FIELD); ?>" value="<?php echo esc_attr($this->token); ?>"/>
 
             <?php do_action('nsl_registration_form_start', $this->userData, $this->provider); ?>
 

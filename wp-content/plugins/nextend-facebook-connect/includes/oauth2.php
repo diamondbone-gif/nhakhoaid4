@@ -14,6 +14,7 @@ abstract class NextendSocialOauth2 extends NextendSocialAuth {
     protected $client_id;
     protected $client_secret;
     protected $redirect_uri;
+    protected $login_hint = '';
 
     protected $endpointAuthorization;
     protected $endpointAccessToken;
@@ -68,6 +69,19 @@ abstract class NextendSocialOauth2 extends NextendSocialAuth {
         $this->redirect_uri = $redirect_uri;
     }
 
+    /**
+     * The standard OpenID Connect login_hint parameter. It tells the provider which account the
+     * visitor is expected to authenticate with, so the account chooser can be skipped.
+     *
+     * This is only a hint. The provider always authenticates the browser's own session, so the
+     * value we send here can never decide who gets logged in.
+     *
+     * @param string $login_hint
+     */
+    public function setLoginHint($login_hint) {
+        $this->login_hint = $login_hint;
+    }
+
     public function getEndpointAuthorization() {
         return $this->endpointAuthorization;
     }
@@ -90,6 +104,10 @@ abstract class NextendSocialOauth2 extends NextendSocialAuth {
         $scopes = apply_filters('nsl_' . $this->providerID . '_scopes', $this->scopes);
         if (count($scopes)) {
             $args['scope'] = urlencode($this->formatScopes($scopes));
+        }
+
+        if ($this->login_hint !== '') {
+            $args['login_hint'] = urlencode($this->login_hint);
         }
 
         $args = apply_filters('nsl_' . $this->providerID . '_auth_url_args', $args);

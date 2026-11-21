@@ -116,6 +116,12 @@ class NextendSocialLoginAdmin {
 
         if (current_user_can(NextendSocialLogin::getRequiredCapability())) {
 
+            if (!defined('NSL_PRO_PATH')) {
+
+                require_once(dirname(__FILE__) . '/notice.php');
+
+            }
+
             if (!isset($_GET['page']) || $_GET['page'] != 'nextend-social-login' || !isset($_GET['view']) || $_GET['view'] != 'fix-redirect-uri') {
                 add_action('admin_notices', 'NextendSocialLoginAdmin::show_oauth_uri_notice');
             }
@@ -867,10 +873,10 @@ class NextendSocialLoginAdmin {
 
     public static function display_post_states($post_states, $post) {
         if (NextendSocialLogin::getProxyPage() === $post->ID) {
-            $post_states['nsl_proxy_page'] = __('OAuth proxy page') . ' — NSL';
+            $post_states['nsl_proxy_page'] = __('OAuth proxy page', 'nextend-facebook-connect') . ' — NSL';
         }
         if (NextendSocialLogin::getRegisterFlowPage() === $post->ID) {
-            $post_states['nsl_proxy_page'] = __('Register flow page') . ' — NSL';
+            $post_states['nsl_proxy_page'] = __('Register flow page', 'nextend-facebook-connect') . ' — NSL';
         }
 
         return $post_states;

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: nextend-facebook-connect\n"
-"POT-Creation-Date: 2026-07-28 09:19+0200\n"
-"PO-Revision-Date: 2026-07-28 09:19+0200\n"
+"POT-Creation-Date: 2026-11-12 15:21+0100\n"
+"PO-Revision-Date: 2026-11-12 15:21+0100\n"
 "Last-Translator: \n"
 "Language-Team: nextend-facebook-connect\n"
 "Language: hu\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: "
@@ -51,36 +51,47 @@ msgid ""
 "except the access token which used for the authenticated communication with "
 "the social providers."
 msgstr ""
+"%1$s a személyes adatokat a te oldaladon tárolja, és senkivel nem osztja meg "
+"őket, kivéve a hozzáférési tokent, amelyet a közösségi szolgáltatókkal "
+"folytatott hitelesített kommunikációhoz használ."
 
 msgid "Does the plugin share personal data with third parties"
-msgstr ""
+msgstr "Megosztja-e a bővítmény a személyes adatokat harmadik felekkel"
 
 #, php-format
 msgid ""
 "%1$s use the access token what the social provider gave to communicate with "
 "the providers to verify account and securely access personal data."
 msgstr ""
+"%1$s a közösségi szolgáltatótól kapott hozzáférési tokent használja a "
+"szolgáltatókkal való kommunikációhoz, a fiók ellenőrzéséhez és a személyes "
+"adatok biztonságos eléréséhez."
 
 msgid "How long we retain your data"
-msgstr ""
+msgstr "Mennyi ideig őrizzük meg az adataidat"
 
 #, php-format
 msgid ""
 "%1$s removes the collected personal data when the user deleted from "
 "WordPress."
 msgstr ""
+"%1$s törli az összegyűjtött személyes adatokat, amikor a felhasználót törlik "
+"a WordPressből."
 
 msgid "Does the plugin use personal data collected by others?"
-msgstr ""
+msgstr "Használ-e a bővítmény mások által gyűjtött személyes adatokat?"
 
 #, php-format
 msgid ""
 "%1$s use the personal data collected by the social providers to create "
 "account on your site when the visitor authorize it."
 msgstr ""
+"%1$s a közösségi szolgáltatók által gyűjtött személyes adatokat arra "
+"használja, hogy fiókot hozzon létre az oldaladon, ha a látogató ezt "
+"engedélyezi."
 
 msgid "Does the plugin store things in the browser?"
-msgstr ""
+msgstr "Tárol-e a bővítmény adatokat a böngészőben?"
 
 #, php-format
 msgid ""
@@ -88,23 +99,29 @@ msgid ""
 "authorization flow. This cookie required for every provider to secure the "
 "communication and to redirect the user back to the last location."
 msgstr ""
+"Igen, a(z) %1$s bővítménynek létre kell hoznia egy sütit azoknak a "
+"látogatóknak, akik a közösségi bejelentkezést használják. Erre a sütire "
+"minden szolgáltatónál szükség van a kommunikáció biztonságához, és ahhoz, "
+"hogy a felhasználót visszairányítsuk oda, ahol utoljára járt."
 
 msgid "Does the plugin collect telemetry data, directly or indirectly?"
-msgstr ""
+msgstr "Gyűjt-e a bővítmény telemetriai adatokat közvetlenül vagy közvetve?"
 
 msgid "No"
-msgstr ""
+msgstr "Nem"
 
 msgid ""
 "Does the plugin enqueue JavaScript, tracking pixels or embed iframes from a "
 "third party?"
 msgstr ""
+"Betölt-e a bővítmény harmadik féltől származó JavaScriptet, követőpixelt "
+"vagy beágyazott iframe-et?"
 
 msgid "User"
 msgstr "Felhasználó"
 
 msgid "This provider doesn't support REST API calls!"
-msgstr ""
+msgstr "Ez a szolgáltató nem támogatja a REST API-hívásokat!"
 
 #, php-format
 msgid "%s needs json_decode function."
@@ -124,13 +141,13 @@ msgid "Deactivate completed."
 msgstr "A deaktiválás befejeződött."
 
 msgid "(no title)"
-msgstr ""
+msgstr "(nincs cím)"
 
 msgid "Settings"
 msgstr "Beállítások"
 
 msgid "Analyze & Repair"
-msgstr ""
+msgstr "Elemzés és javítás"
 
 #, php-format
 msgid "Unexpected response: %s"
@@ -171,6 +188,9 @@ msgid ""
 "register flow</b>\" and \"<b>OAuth redirect uri proxy page</b>\" in %1$s to "
 "work properly."
 msgstr ""
+"A(z) %1$s észlelte, hogy a(z) %2$s telepítve van az oldaladon. A megfelelő "
+"működéshez be kell állítanod a \"<b>Page for register flow</b>\" és az "
+"\"<b>OAuth redirect uri proxy page</b>\" opciót a(z) %1$s beállításaiban."
 
 msgid "Fix now"
 msgstr "Javítás most"
@@ -178,19 +198,14 @@ msgstr "Javítás most"
 msgid "Activate your Pro Addon"
 msgstr "Pro Addon aktiválása"
 
-#, fuzzy
-#| msgid ""
-#| "To be able to use the Pro features, you need to activate Nextend Social "
-#| "Connect Pro Addon. You can do this by clicking on the Activate button "
-#| "below then select the related purchase."
 msgid ""
 "To be able to use the Pro features, you need to activate Nextend Social "
 "Login Pro Addon. You can do this by clicking on the Activate button below "
 "then select the related purchase."
 msgstr ""
-"A Pro funkciók használatához  aktiválnod kell a Nextend Social Login  Pro "
-"Addon-t.  Ezt megteheted az Activate gombra való kattintással és a társított "
-"vásárlás kiválasztásával."
+"A Pro funkciók használatához aktiválnod kell a Nextend Social Login Pro "
+"Addont. Ezt az alábbi Activate gombra kattintva, majd a kapcsolódó vásárlás "
+"kiválasztásával teheted meg."
 
 msgid "Activate"
 msgstr "Aktiválás"
@@ -213,10 +228,8 @@ msgstr "Bejelentkezés felirat"
 msgid "Reset to default"
 msgstr "Alapbeállítás visszaállítása"
 
-#, fuzzy
-#| msgid "Login layout"
 msgid "Register label"
-msgstr "Login elrendezése"
+msgstr "Regisztráció felirat"
 
 msgid "Link label"
 msgstr "Profil összekapcsolás felirat"
@@ -242,28 +255,20 @@ msgstr "Változtatások Mentése"
 
 #, php-format
 msgid "Follow the guide at: %s"
-msgstr ""
+msgstr "Kövesd az útmutatót: %s"
 
 #, php-format
 msgid "I am done setting up my %s"
 msgstr "Befejeztem a %s appom elkészítését"
 
-#, fuzzy
-#| msgid "App ID"
 msgctxt "Social Login App"
 msgid "App"
-msgstr "App ID"
+msgstr "App"
 
 msgid "Getting Started"
 msgstr "Első Lépések"
 
-#, fuzzy, php-format
-#| msgid ""
-#| "To allow your visitors to log in with their %1$s account, first you must "
-#| "create an %1$s App. The following guide will help you through the %1$s "
-#| "App creation process. After you have created your %1$s App, head over to "
-#| "\"Settings\" and configure the given \"%2$s\" and \"%3$s\" according to "
-#| "your %1$s App."
+#, php-format
 msgid ""
 "To allow your visitors to log in with their %1$s account, first you must "
 "create an App for %1$s. The following guide will help you through the %1$s "
@@ -271,18 +276,18 @@ msgid ""
 "\"Settings\" and configure the fields with the credentials of the App you "
 "created."
 msgstr ""
-"Ahhoz. hogy a felhasználók beléphessenek a %1$s fiókjukkal, először létre "
-"kell hoznod egy %1$s Appot. Az alábbi útmutató végig vezet a %1$s App "
-"létrehozás folyamatán. Miután a(z) %1$s fiókod elkészült, menj a "
-"\"Beállítások\" fülre és állítsd be a \"%2$s\"-t és \"%3$s\"-t a %1$s Appod "
-"alapján."
+"Ahhoz, hogy a látogatóid a(z) %1$s fiókjukkal bejelentkezhessenek, először "
+"létre kell hoznod egy Appot a(z) %1$s oldalán. Az alábbi útmutató végigvezet "
+"a(z) %1$s App létrehozásának folyamatán. Miután létrehoztad a(z) %1$s Appot, "
+"menj a \"Beállítások\" fülre, és töltsd ki a mezőket a létrehozott App "
+"hitelesítő adataival."
 
 #, php-format
 msgid "How to create an App for %s: "
-msgstr ""
+msgstr "Így hozhatsz létre Appot a(z) %s számára: "
 
 msgid "URLs for the App creation:"
-msgstr ""
+msgstr "URL-ek az App létrehozásához:"
 
 msgid "Buttons"
 msgstr "Gombok"
@@ -354,19 +359,16 @@ msgstr "Bejelntkezés kikapcsolása a kijelölt szerepköröknek"
 msgid "Default roles for user who registered with this provider"
 msgstr "Alap szerepkör, aki ezzel a szolgáltatóval registrál"
 
-#, fuzzy, php-format
-#| msgid "Click on the Create button"
+#, php-format
 msgid "Default (The %1$s is: %2$s)"
-msgstr "Kattints a \"Create\" gombra"
+msgstr "Alapértelmezett (%1$s: %2$s)"
 
-#, fuzzy
-#| msgid "Default redirect url"
 msgid "default WordPress role"
-msgstr "Alapértelmezett átirányítási url"
+msgstr "alapértelmezett WordPress szerepkör"
 
 #, php-format
 msgid "Default (The %s.)"
-msgstr ""
+msgstr "Alapértelmezett (%s.)"
 
 msgid "Register"
 msgstr "Regisztráció"
@@ -383,16 +385,15 @@ msgstr "Tárolás a meta kulcsban"
 msgid "Shortcode"
 msgstr "Shortcode"
 
-#, fuzzy
-#| msgid "Important:"
 msgid "Important!"
-msgstr "Fontos:"
+msgstr "Fontos!"
 
 msgid "The shortcodes are only rendered for users who haven't logged in yet!"
 msgstr ""
+"A shortcode-ok csak a még be nem jelentkezett felhasználóknak jelennek meg!"
 
 msgid "See the full list of shortcode parameters."
-msgstr ""
+msgstr "Nézd meg a shortcode-paraméterek teljes listáját."
 
 msgid "Simple link"
 msgstr "Egyszerű link"
@@ -444,7 +445,7 @@ msgid "Comment"
 msgstr "Komment"
 
 msgid "Custom Actions"
-msgstr ""
+msgstr "Egyedi action hookok"
 
 msgid "Docs"
 msgstr "Dokumentáció"
@@ -501,33 +502,31 @@ msgstr "Pro Kiegészítő telepítése"
 msgid "Activating..."
 msgstr "Aktiválás..."
 
-#, fuzzy
-#| msgid "Not Available"
 msgid "Not compatible!"
-msgstr "Nem elérhető"
+msgstr "Nem kompatibilis!"
 
 #, php-format
 msgid ""
 "%1$s and %2$s are not compatible. Please update %1$s to version %3$s or "
 "newer."
 msgstr ""
+"A(z) %1$s és a(z) %2$s nem kompatibilis egymással. Frissítsd a(z) %1$s "
+"bővítményt a(z) %3$s vagy újabb verzióra."
 
-#, fuzzy, php-format
-#| msgctxt "App creation"
-#| msgid "Create %s"
+#, php-format
 msgid "Update %s"
-msgstr "%s létrehozása"
+msgstr "%s frissítése"
 
 #, php-format
 msgid ""
 "%1$s and %2$s are not compatible. Please update %2$s to version %3$s or "
 "newer."
 msgstr ""
+"A(z) %1$s és a(z) %2$s nem kompatibilis egymással. Frissítsd a(z) %2$s "
+"bővítményt a(z) %3$s vagy újabb verzióra."
 
-#, fuzzy
-#| msgid "Activate Pro Addon"
 msgid "Update Pro Addon"
-msgstr "Pro Addon aktiválása"
+msgstr "Pro Kiegészítő frissítése"
 
 msgid "Pro Addon is installed and activated"
 msgstr "A Pro Kiegészítő telepítve és aktiválva"
@@ -566,17 +565,12 @@ msgstr "Pro Kiegészítő aktiválása"
 msgid "Pro Addon is not activated"
 msgstr "A Pro Kiegészítő nincs aktiválva"
 
-#, fuzzy
-#| msgid ""
-#| "To be able to use the Pro features, you need to install and activate the "
-#| "Nextend Social Connect Pro Addon."
 msgid ""
 "To be able to use the Pro features, you need to install and activate the "
 "Nextend Social Login Pro Addon."
 msgstr ""
-"A Pro funkciók használatához  aktiválnod kell a Nextend Social Login  Pro "
-"Addon-t.  Ezt megteheted az Activate gombra való kattintással és a társított "
-"vásárlás kiválasztásával."
+"A Pro funkciók használatához telepítened és aktiválnod kell a Nextend Social "
+"Login Pro Addont."
 
 #, php-format
 msgid ""
@@ -584,6 +578,9 @@ msgid ""
 "enabled. To display any social buttons, please make sure you have at least "
 "one provider enabled!"
 msgstr ""
+"A(z) %1$s észlelte, hogy vannak beállított szolgáltatóid, de egyik sincs "
+"engedélyezve. A közösségi gombok megjelenítéséhez legalább egy szolgáltatót "
+"engedélyezz!"
 
 msgid "Not Available"
 msgstr "Nem elérhető"
@@ -640,6 +637,8 @@ msgid ""
 "We'll be bringing you all the latest news and updates about Social Login - "
 "right to your inbox."
 msgstr ""
+"A Social Loginnal kapcsolatos legfrissebb híreket és újdonságokat egyenesen "
+"a postafiókodba küldjük."
 
 msgid "The entered email address is invalid!"
 msgstr "A beírt email cím helytelen!"
@@ -663,19 +662,19 @@ msgid "Loved it"
 msgstr "Imádom"
 
 msgid "Rate 1 star"
-msgstr ""
+msgstr "1 csillagos értékelés"
 
 msgid "Rate 2 stars"
-msgstr ""
+msgstr "2 csillagos értékelés"
 
 msgid "Rate 3 stars"
-msgstr ""
+msgstr "3 csillagos értékelés"
 
 msgid "Rate 4 stars"
-msgstr ""
+msgstr "4 csillagos értékelés"
 
 msgid "Rate 5 stars"
-msgstr ""
+msgstr "5 csillagos értékelés"
 
 msgid "Please Leave a Review"
 msgstr "Kérem hagyjon értékelést!"
@@ -691,7 +690,7 @@ msgid "Ok, you deserve it"
 msgstr "Rendben, megérdemlitek."
 
 msgid "Close review box"
-msgstr ""
+msgstr "Értékelési doboz bezárása"
 
 msgid "Register form"
 msgstr "Regisztrációs form"
@@ -718,15 +717,13 @@ msgid "Default"
 msgstr "Alapbeállítás"
 
 msgid "Fullwidth"
-msgstr ""
+msgstr "Teljes szélesség"
 
 msgid "Icon"
 msgstr "Ikon"
 
-#, fuzzy
-#| msgid "Login layout"
 msgid "Register layout"
-msgstr "Login elrendezése"
+msgstr "Regisztráció elrendezése"
 
 msgid "Below"
 msgstr "Alul"
@@ -740,40 +737,35 @@ msgstr "Felül"
 msgid "Above with separator"
 msgstr "Felül, elválasztóval"
 
-#, fuzzy
-#| msgid "Login layout"
 msgid "Sidebar Login form"
-msgstr "Login elrendezése"
+msgstr "Oldalsávos bejelentkezési űrlap"
 
 msgid "Hide login buttons"
-msgstr ""
+msgstr "Bejelentkezési gombok elrejtése"
 
 msgid "Show login buttons"
-msgstr ""
+msgstr "Bejelentkezési gombok megjelenítése"
 
 msgid ""
 "Some themes that use BuddyPress, display the social buttons twice in the "
 "same login form. This option can disable the one for: "
 "<b>bp_sidebar_login_form action</b>.  "
 msgstr ""
+"Egyes BuddyPress-t használó témák kétszer jelenítik meg a közösségi gombokat "
+"ugyanabban a bejelentkezési űrlapban. Ezzel az opcióval letilthatod a "
+"következőhöz tartozó gombokat: <b>bp_sidebar_login_form action</b>.  "
 
-#, fuzzy
-#| msgid "Login layout"
 msgid "Login form"
-msgstr "Login elrendezése"
+msgstr "Bejelentkezési űrlap"
 
-#, fuzzy
-#| msgid "Login form button style"
 msgid "Login button style"
-msgstr "Login gomb stílusa"
+msgstr "Bejelentkezési gomb stílusa"
 
 msgid "Login layout"
 msgstr "Login elrendezése"
 
-#, fuzzy
-#| msgid "Social accounts"
 msgid "Social accounts tab"
-msgstr "Közösségi fiókok"
+msgstr "Közösségi fiókok fül"
 
 msgid "Hide"
 msgstr "Elrejt"
@@ -786,9 +778,11 @@ msgid ""
 "Creates a new tab called %s, where the Link and Unlink buttons will be "
 "displayed."
 msgstr ""
+"Létrehoz egy %s nevű új fület, ahol az összekapcsoló és szétkapcsoló gombok "
+"jelennek meg."
 
 msgid "Social Accounts"
-msgstr ""
+msgstr "Közösségi fiókok"
 
 msgid "Button alignment"
 msgstr "Gombok igazítása"
@@ -802,26 +796,23 @@ msgstr "Közép"
 msgid "Right"
 msgstr "Jobb"
 
-#, fuzzy
-#| msgid "Ask E-mail on registration"
 msgid "Email template for registration"
-msgstr "E-mail kérésére regisztrációkor"
+msgstr "Regisztrációs e-mail sablon"
 
-#, fuzzy
-#| msgid "WordPress default"
 msgid "WordPress default notification"
-msgstr "WordPress alapértelmezett"
+msgstr "WordPress alapértelmezett értesítés"
 
-#, fuzzy
-#| msgid "WordPress default"
 msgid "BuddyPress welcome notification"
-msgstr "WordPress alapértelmezett"
+msgstr "BuddyPress üdvözlő értesítés"
 
 #, php-format
 msgid ""
 "Defines whether the registration with %1$s will send the same welcome "
 "notification that %2$s does, instead of the %3$s default one."
 msgstr ""
+"Meghatározza, hogy a(z) %1$s használatával történő regisztráció ugyanazt az "
+"üdvözlő értesítést küldje-e, mint a(z) %2$s, a(z) %3$s alapértelmezett "
+"értesítése helyett."
 
 msgid "Login button"
 msgstr "Login gomb"
@@ -843,7 +834,7 @@ msgstr "Gomb stílus:"
 
 #, php-format
 msgid "%1$s Add your custom actions here. One action per line."
-msgstr ""
+msgstr "%1$s Itt adhatod meg az egyedi action hookokat. Soronként egyet."
 
 msgid "Usage:"
 msgstr "Használat"
@@ -853,6 +844,7 @@ msgid ""
 "%1$s The HTML of the social buttons will be added at the place where the "
 "action is fired."
 msgstr ""
+"%1$s A közösségi gombok HTML-kódja ott jelenik meg, ahol az action lefut."
 
 msgid "Important:"
 msgstr "Fontos:"
@@ -862,67 +854,47 @@ msgid ""
 "If you %1$sexperience problems%2$s because of this feature, you can disable "
 "it by defining the %3$s constant."
 msgstr ""
+"Ha ez a funkció %1$sproblémákat okoz%2$s, a(z) %3$s konstans definiálásával "
+"kikapcsolhatod."
 
-#, fuzzy
-#| msgid "Login layout"
 msgid "Button layout"
-msgstr "Login elrendezése"
+msgstr "Gombok elrendezése"
 
-#, fuzzy
-#| msgid "Below with separator"
 msgid "Default with top separator"
-msgstr "Alul, elválasztóval"
+msgstr "Alapértelmezett, felső elválasztóval"
 
-#, fuzzy
-#| msgid "Below with separator"
 msgid "Default with bottom separator"
-msgstr "Alul, elválasztóval"
+msgstr "Alapértelmezett, alsó elválasztóval"
 
-#, fuzzy
-#| msgid "Unlink"
 msgid "Link/Unlink"
-msgstr "Szétkapcsolás "
+msgstr "Összekapcsolás/Szétkapcsolás"
 
-#, fuzzy
-#| msgid "No Connect button in login form"
 msgid "No Connect button in Login form"
-msgstr "Ne legyen összekapcsoló gomb a belépő űrlapnál"
+msgstr "Ne legyen összekapcsoló gomb a bejelentkezési űrlapnál"
 
-#, fuzzy
-#| msgid "No Connect button in login form"
 msgid "Connect button on"
-msgstr "Ne legyen összekapcsoló gomb a belépő űrlapnál"
+msgstr "Összekapcsoló gomb helye"
 
 msgid "Login form button style"
 msgstr "Login gomb stílusa"
 
-#, fuzzy
-#| msgid "No Connect button in login form"
 msgid "No Connect button in Register form"
-msgstr "Ne legyen összekapcsoló gomb a belépő űrlapnál"
+msgstr "Ne legyen összekapcsoló gomb a regisztrációs űrlapnál"
 
-#, fuzzy
-#| msgid "Login form button style"
 msgid "Register form button style"
-msgstr "Login gomb stílusa"
+msgstr "Regisztrációs űrlap gombjainak stílusa"
 
 msgid "Checkout form"
-msgstr ""
+msgstr "Pénztár űrlap"
 
-#, fuzzy
-#| msgid "No Connect button in login form"
 msgid "No Connect button in Checkout form"
-msgstr "Ne legyen összekapcsoló gomb a belépő űrlapnál"
+msgstr "Ne legyen összekapcsoló gomb a pénztár űrlapnál"
 
-#, fuzzy
-#| msgid "Login form button style"
 msgid "Checkout form button style"
-msgstr "Login gomb stílusa"
+msgstr "Pénztár űrlap gombjainak stílusa"
 
-#, fuzzy
-#| msgid "Login layout"
 msgid "Checkout layout"
-msgstr "Login elrendezése"
+msgstr "Pénztár elrendezése"
 
 msgid "Target window"
 msgstr "Célablak"
@@ -958,27 +930,23 @@ msgid "Allow Social account unlink"
 msgstr "Szétkapcsolás engedélyezése"
 
 msgid "Show linked providers"
-msgstr ""
+msgstr "Összekapcsolt szolgáltatók megjelenítése"
 
 #, php-format
 msgid "Providers linked to the account will appear in the %1$s."
-msgstr ""
+msgstr "A fiókhoz kapcsolt szolgáltatók itt jelennek meg:%1$s."
 
-#, fuzzy
-#| msgid "Test to Enable"
 msgid "Users table"
-msgstr "Tesztelés az Engedélyezéshez"
+msgstr "Felhasználók táblázat"
 
-#, fuzzy
-#| msgid "Disable login for the selected roles"
 msgid "Disable Admin bar for roles"
-msgstr "Bejelntkezés kikapcsolása a kijelölt szerepköröknek"
+msgstr "Adminsáv kikapcsolása szerepkörönként"
 
 msgid "Debug mode"
 msgstr "Debug mód"
 
 msgid "Bypass cache on redirect"
-msgstr ""
+msgstr "Gyorsítótár megkerülése átirányításkor"
 
 #, php-format
 msgid ""
@@ -986,6 +954,9 @@ msgid ""
 "after a successful registration or login with social login. %1$sLearn "
 "more%2$s."
 msgstr ""
+"Ha bekapcsolod, egy GET paramétert adunk annak az URL-nek a végéhez, ahová a "
+"sikeres közösségi regisztráció vagy bejelentkezés után átirányítunk. "
+"%1$sTovábbi információ%2$s."
 
 msgid "Page for register flow"
 msgstr "Page for register flow"
@@ -993,10 +964,8 @@ msgstr "Page for register flow"
 msgid "None"
 msgstr "Semmi"
 
-#, fuzzy
-#| msgid "Page for register flow"
 msgid "Clear - Page for register flow"
-msgstr "Page for register flow"
+msgstr "Törlés - Page for register flow"
 
 msgid ""
 "This setting is used when you request additional data from the users (such "
@@ -1025,10 +994,8 @@ msgstr ""
 msgid "OAuth redirect uri proxy page"
 msgstr "OAuth redirect uri proxy page"
 
-#, fuzzy
-#| msgid "OAuth redirect uri proxy page"
 msgid "Clear - OAuth redirect uri proxy page"
-msgstr "OAuth redirect uri proxy page"
+msgstr "Törlés - OAuth redirect uri proxy page"
 
 msgid ""
 "You can use this setting when wp-login.php page is not available to handle "
@@ -1064,32 +1031,34 @@ msgstr "Tiltott átirányítások"
 
 msgid "If you want to blacklist redirect url params. One pattern per line."
 msgstr ""
+"Ha tiltólistára szeretnél tenni átirányítási URL-paramétereket. Soronként "
+"egy minta."
 
 msgid "Support login restrictions"
-msgstr ""
+msgstr "Bejelentkezési korlátozások támogatása"
 
 #, php-format
 msgid "Please visit to our %1$s to check what plugins are supported!"
-msgstr ""
+msgstr "A támogatott bővítményeket itt találod: %1$s!"
 
 msgid "Display avatars in \"All media items\""
-msgstr ""
+msgstr "Profilképek megjelenítése az \"Összes médiaelem\" nézetben"
 
 msgid ""
 "Enabling this option can speed up loading images in Media Library - Grid "
 "view!"
 msgstr ""
+"Ennek az opciónak a bekapcsolása gyorsíthatja a képek betöltését a Médiatár "
+"rács nézetében!"
 
 msgid "Membership"
-msgstr ""
+msgstr "Tagság"
 
 msgid "Allow registration with Social login."
-msgstr ""
+msgstr "Regisztráció engedélyezése közösségi bejelentkezéssel."
 
-#, fuzzy
-#| msgid "Page for register flow"
 msgid "Custom label for register buttons"
-msgstr "Page for register flow"
+msgstr "Egyedi felirat a regisztrációs gombokhoz"
 
 #, php-format
 msgid ""
@@ -1098,214 +1067,201 @@ msgid ""
 "can be modified at the Buttons tab of each provider.<br>This option also "
 "allows the use of register specific %3$s options."
 msgstr ""
+"Egyedi felirat a közösségi gombokhoz a regisztrációs űrlapokon, valamint "
+"azoknál a shortcode-oknál, ahol a(z) %1$s paraméter értéke %2$s.<br>A "
+"regisztrációs feliratokat az egyes szolgáltatók Gombok fülén módosíthatod."
+"<br>Ez az opció a regisztrációspecifikus %3$s beállítások használatát is "
+"lehetővé teszi."
 
 msgid "Redirect overlay"
-msgstr ""
+msgstr "Átirányítási fedőréteg"
 
 msgid "No overlay"
-msgstr ""
+msgstr "Nincs fedőréteg"
 
 msgid "Display overlay"
-msgstr ""
+msgstr "Fedőréteg megjelenítése"
 
 msgid "Display overlay with spinner"
-msgstr ""
+msgstr "Fedőréteg megjelenítése töltésjelzővel"
 
 msgid "Display overlay with spinner and message"
-msgstr ""
+msgstr "Fedőréteg megjelenítése töltésjelzővel és üzenettel"
 
 msgid ""
 "You can display an overlay on your site when we start the redirect after the "
 "authentication."
 msgstr ""
+"Megjeleníthetsz egy fedőréteget az oldaladon, amikor a hitelesítés után "
+"elindítjuk az átirányítást."
 
 #, php-format
 msgid "%1$s The overlay won't be displayed if the %2$s setting is set to %3$s!"
-msgstr ""
+msgstr "%1$s A fedőréteg nem jelenik meg, ha a(z) %2$s beállítás értéke %3$s!"
 
 msgid "Note:"
-msgstr ""
+msgstr "Megjegyzés:"
 
 msgid "Unsupported WebView behavior"
-msgstr ""
+msgstr "Nem támogatott WebView viselkedés"
 
-#, fuzzy
-#| msgid "Image button"
 msgid "Remove button"
-msgstr "Gomb képpel"
+msgstr "Gomb eltávolítása"
 
-#, fuzzy
-#| msgid "Default button"
 msgid "Disable button"
-msgstr "Alap gomb"
+msgstr "Gomb letiltása"
 
 #, php-format
 msgid "Some %1$sproviders%2$s don't support embedded browsers."
-msgstr ""
+msgstr "Egyes %1$sszolgáltatók%2$s nem támogatják a beágyazott böngészőket."
 
 msgid ""
 "This setting defines if we should remove or disable the related buttons in "
 "WebView environments."
 msgstr ""
+"Ez a beállítás határozza meg, hogy a kapcsolódó gombokat eltávolítsuk vagy "
+"letiltsuk-e WebView környezetben."
 
 msgid "Below and floating"
 msgstr "Alul lebegve"
 
 msgid "Embedded Login form button style"
-msgstr ""
+msgstr "Beágyazott bejelentkezési űrlap gombstílusa"
 
 msgid "Embedded Login layout"
-msgstr ""
+msgstr "Beágyazott bejelentkezési űrlap elrendezése"
 
-#, fuzzy
-#| msgid "Login form button style"
 msgid "Embedded login form button alignment"
-msgstr "Login gomb stílusa"
+msgstr "Beágyazott bejelentkezési űrlap gombjainak igazítása"
 
 msgid "Registration Form"
-msgstr ""
+msgstr "Regisztrációs űrlap"
 
 msgid "Embedded login form"
-msgstr ""
+msgstr "Beágyazott bejelentkezési űrlap"
 
 msgid "Sign Up form"
-msgstr ""
+msgstr "Feliratkozási űrlap"
 
-#, fuzzy
-#| msgid "No Connect button in login form"
 msgid "No Connect button in Sign Up form"
-msgstr "Ne legyen összekapcsoló gomb a belépő űrlapnál"
+msgstr "Ne legyen összekapcsoló gomb a regisztrációs űrlapnál"
 
-#, fuzzy
-#| msgid "Login form button style"
 msgid "Sign Up form button style"
-msgstr "Login gomb stílusa"
+msgstr "Regisztrációs űrlap gombjainak stílusa"
 
-#, fuzzy
-#| msgid "Login layout"
 msgid "Sign Up layout"
-msgstr "Login elrendezése"
+msgstr "Regisztráció elrendezése"
 
-#, fuzzy
-#| msgid "WooCommerce account details"
 msgid "Account details"
-msgstr "WooCommerce fiók részletes beállítások"
+msgstr "Fiók adatai"
 
 msgid "No link buttons"
-msgstr ""
+msgstr "Nincsenek összekapcsoló gombok"
 
 msgid "Link buttons after account details"
 msgstr "Összekapcsoló gombok a profil részletes beállításai után"
 
 msgid "Store"
-msgstr ""
+msgstr "Tárolás"
 
 msgid "First and last name"
-msgstr ""
+msgstr "Vezeték- és keresztnév"
 
 msgid "When not enabled, username will be randomly generated."
-msgstr ""
+msgstr "Ha nincs bekapcsolva, a felhasználónév véletlenszerűen jön létre."
 
 msgid "Email"
 msgstr "Email"
 
 msgid "When not enabled, email will be empty."
-msgstr ""
+msgstr "Ha nincs bekapcsolva, az e-mail-cím üres marad."
 
 msgid "Avatar"
-msgstr ""
+msgstr "Profilkép"
 
 msgid "Access token"
-msgstr ""
+msgstr "Hozzáférési token"
 
 msgid "Register Form"
-msgstr ""
+msgstr "Regisztrációs űrlap"
 
 msgid "No Connect button in login form"
 msgstr "Ne legyen összekapcsoló gomb a belépő űrlapnál"
 
 msgid "No Connect button in register form"
-msgstr ""
+msgstr "Ne legyen összekapcsoló gomb a regisztrációs űrlapnál"
 
-#, fuzzy
-#| msgid "WooCommerce billing form"
 msgid "Billing form"
-msgstr "WooCommerce számlázási űrlap"
+msgstr "Számlázási űrlap"
 
 msgid "No Connect button in billing form"
 msgstr "Ne legyen összekapcsoló gomb a számlázási űrlapnál"
 
-#, fuzzy
-#| msgid "Login layout"
 msgid "Billing layout"
-msgstr "Login elrendezése"
+msgstr "Számlázás elrendezése"
 
-#, fuzzy
-#| msgid "Below with separator"
 msgid "Default with separator"
-msgstr "Alul, elválasztóval"
+msgstr "Alapértelmezett, elválasztóval"
 
-#, fuzzy
-#| msgid "No Connect button in login form"
 msgid "No Connect buttons in account details form"
-msgstr "Ne legyen összekapcsoló gomb a belépő űrlapnál"
+msgstr "Ne legyenek összekapcsoló gombok a fiókadatok űrlapon"
 
-#, fuzzy
-#| msgid "Icon button"
 msgid "Link buttons on"
-msgstr "Ikon gomb"
+msgstr "Összekapcsoló gombok helye"
 
-#, fuzzy
-#| msgid "Registration notification sent to"
 msgid "WooCommerce registration notification"
-msgstr "Regisztrációról értesítést kap"
+msgstr "WooCommerce regisztrációs értesítés"
 
 #, php-format
 msgid ""
 "Defines whether the registration with %1$s will send the same registration "
 "notification that %2$s does, instead of the %3$s default one."
 msgstr ""
+"Meghatározza, hogy a(z) %1$s használatával történő regisztráció ugyanazt a "
+"regisztrációs értesítést küldje-e, mint a(z) %2$s, a(z) %3$s alapértelmezett "
+"értesítése helyett."
 
-#, fuzzy, php-format
-#| msgid "Authentication successful"
+#, php-format
 msgid "Network connection successful: %1$s"
-msgstr "Hitelesítés sikeres"
+msgstr "Sikeres hálózati kapcsolat: %1$s"
 
 #, php-format
 msgid "Network connection failed: %1$s"
-msgstr ""
+msgstr "A hálózati kapcsolat sikertelen: %1$s"
 
 msgid ""
 "Please contact with your hosting provider to resolve the network issue "
 "between your server and the provider."
 msgstr ""
+"Vedd fel a kapcsolatot a tárhelyszolgáltatóddal, hogy megoldja a szervered "
+"és a szolgáltató közötti hálózati problémát."
 
 msgid "Manage Avatar"
-msgstr ""
+msgstr "Profilkép kezelése"
 
 #, php-format
 msgid "Avatar <span class=\"count\">(%s)</span>"
 msgid_plural "Avatar <span class=\"count\">(%s)</span>"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Avatar <span class=\"count\">(%s)</span>"
+msgstr[1] "Avatar <span class=\"count\">(%s)</span>"
 
 #, php-format
 msgid "%1$s &lsaquo; %2$s &#8212; WordPress"
-msgstr ""
+msgstr "%1$s &lsaquo; %2$s &#8212; WordPress"
 
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://wordpress.org/"
 
 msgid "Powered by WordPress"
-msgstr ""
+msgstr "Működteti: WordPress"
 
 #, php-format
 msgctxt "site"
 msgid "&larr; Back to %s"
-msgstr ""
+msgstr "&larr; Vissza ide: %s"
 
 msgid "Your configuration needs to be verified"
-msgstr ""
+msgstr "A beállításaidat ellenőrizni kell"
 
 msgid ""
 "Before you can start letting your users register with your app it needs to "
@@ -1321,7 +1277,7 @@ msgstr ""
 "Ha nincs hibaüzenet, az azt jelenti, hogy minden rendben van."
 
 msgid "Please save your changes to verify settings."
-msgstr ""
+msgstr "A beállítások ellenőrzéséhez mentsd el a módosításokat."
 
 msgid "Works Fine"
 msgstr "Megfelelően Működik"
@@ -1352,13 +1308,14 @@ msgstr ""
 "regisztrálhatnak és beléphetnek a %s fiókjukkal."
 
 msgid "Verify Settings Again"
-msgstr ""
+msgstr "Beállítások újraellenőrzése"
 
 msgid "Please save your changes before verifying settings."
-msgstr ""
+msgstr "A beállítások ellenőrzése előtt mentsd el a módosításokat."
 
 msgid "Error: Email verification status is not checked in this provider!"
 msgstr ""
+"Hiba: ez a szolgáltató nem ellenőrzi az e-mail-cím megerősítési állapotát!"
 
 msgid "Authentication successful"
 msgstr "Hitelesítés sikeres"
@@ -1370,18 +1327,18 @@ msgid "Unlink successful."
 msgstr "Szétkapcsolás sikeres"
 
 msgid "Unlink is not allowed!"
-msgstr ""
+msgstr "A szétkapcsolás nem engedélyezett!"
 
 msgid "Unlink failed: nonce is invalid"
-msgstr ""
+msgstr "A szétkapcsolás sikertelen: érvénytelen nonce"
 
 #, php-format
 msgid "You are attempting to unlink your WordPress account from %s."
-msgstr ""
+msgstr "A WordPress-fiókod szétkapcsolására készülsz a következőtől: %s."
 
 #, php-format
 msgid "Do you really want to %1$s unlink %2$s it?"
-msgstr ""
+msgstr "Biztosan %1$s szét akarod kapcsolni %2$s?"
 
 msgid "The test was successful"
 msgstr "A teszt sikeres volt"
@@ -1390,10 +1347,10 @@ msgid "Authentication failed"
 msgstr "Hitelesítés sikertelen"
 
 msgid "Identifier"
-msgstr ""
+msgstr "Azonosító"
 
 msgid "Profile Picture"
-msgstr ""
+msgstr "Profilkép"
 
 #, php-format
 msgid ""
@@ -1408,18 +1365,15 @@ msgid ""
 "You have already linked a(n) %s account. Please unlink the current and then "
 "you can link another %s account."
 msgstr ""
+"Már összekapcsoltál egy %s fiókot. Először kapcsold szét a jelenlegit, utána "
+"összekapcsolhatsz egy másik %s fiókot."
 
-#, fuzzy, php-format
-#| msgid ""
-#| "This %s account is already linked with other account. Linking process "
-#| "failed!"
+#, php-format
 msgid "This %s account is already linked to another user."
-msgstr ""
-"Az %s fiók már haszálva van egy másik közösségi fiókkal. Az összekapcsolási "
-"folyamat sikertelen!"
+msgstr "Ez a(z) %s fiók már egy másik felhasználóhoz van kapcsolva."
 
 msgid "User registration is currently not allowed."
-msgstr ""
+msgstr "A felhasználói regisztráció jelenleg nem engedélyezett."
 
 #, php-format
 msgid ""
@@ -1427,6 +1381,9 @@ msgid ""
 "address is not verified.%2$sPlease login to your existing account using your "
 "password and link your %1$s account to it manually!"
 msgstr ""
+"Találtunk egy felhasználót a(z) %1$s e-mail-címeddel, de úgy tűnik, az e-"
+"mail-címe nincs megerősítve.%2$sJelentkezz be a meglévő fiókodba a "
+"jelszavaddal, és kapcsold hozzá kézzel a(z) %1$s fiókodat!"
 
 #, php-format
 msgid ""
@@ -1434,33 +1391,40 @@ msgid ""
 "different account, so we are unable to log you in. Please use the linked "
 "account or log in with your password!"
 msgstr ""
+"Találtunk egy felhasználót a(z) %1$s e-mail-címeddel. Sajnos ez egy másik "
+"fiókhoz tartozik, ezért nem tudunk bejelentkeztetni. Használd az "
+"összekapcsolt fiókot, vagy jelentkezz be a jelszavaddal!"
 
-#, fuzzy
-#| msgid "Register button style"
 msgid "Register For This Site"
-msgstr "Regisztrációs gomb stílusa"
+msgstr "Regisztráció erre a honlapra"
 
 #, php-format
 msgid "%1$s requires PHP version %2$s+, plugin is currently NOT ACTIVE."
 msgstr ""
+"A(z) %1$s működéséhez PHP %2$s+ verzió szükséges, a bővítmény jelenleg NEM "
+"AKTÍV."
 
 #, php-format
 msgid ""
 "%1$s requires WordPress version %2$s+. Because you are using an earlier "
 "version, the plugin is currently NOT ACTIVE."
 msgstr ""
+"A(z) %1$s működéséhez WordPress %2$s+ verzió szükséges. Mivel régebbi "
+"verziót használsz, a bővítmény jelenleg NEM AKTÍV."
 
 #, php-format
 msgid "Please update %1$s to version %2$s or newer."
-msgstr ""
+msgstr "Frissítsd a(z) %1$s bővítményt a(z) %2$s vagy újabb verzióra."
 
 msgid "Update now!"
-msgstr ""
+msgstr "Frissítés most!"
 
 msgid ""
 "By clicking Register, you accept our <a href=\"#privacy_policy_url\" "
 "target=\"_blank\">Privacy Policy</a>"
 msgstr ""
+"A Regisztráció gombra kattintva elfogadod az <a href=\"#privacy_policy_url\" "
+"target=\"_blank\">Adatvédelmi irányelveinket</a>"
 
 msgid "Hold On"
 msgstr "Egy kis türelmet kérünk..."
@@ -1469,7 +1433,7 @@ msgid "You are being redirected to another page,<br>it may take a few seconds."
 msgstr "Átirányítás folyamatban,<br> ez eltarthat néhány másodpercig."
 
 msgid "The selected provider doesn't support embedded browsers!"
-msgstr ""
+msgstr "A kiválasztott szolgáltató nem támogatja a beágyazott böngészőket!"
 
 msgid "Social Login"
 msgstr "Közösségi belépés"
@@ -1478,25 +1442,28 @@ msgid "Button skin"
 msgstr "Gomb skin"
 
 msgid "Dark"
-msgstr ""
+msgstr "Sötét"
 
 msgid "Light"
-msgstr ""
+msgstr "Világos"
 
 msgid "Black"
-msgstr ""
+msgstr "Fekete"
 
 msgid "White"
-msgstr ""
+msgstr "Fehér"
 
 #, php-format
 msgid ""
 "%1$s allows HTTPS OAuth Redirects only. You must move your site to HTTPS in "
 "order to allow login with %1$s."
 msgstr ""
+"A(z) %1$s csak HTTPS OAuth átirányításokat engedélyez. Át kell állítanod az "
+"oldaladat HTTPS-re, hogy lehetővé tedd a bejelentkezést a(z) %1$s "
+"használatával."
 
 msgid "How to get SSL for my WordPress site?"
-msgstr ""
+msgstr "Hogyan szerezhetek SSL-t a WordPress oldalamhoz?"
 
 msgid "App ID"
 msgstr "App ID"
@@ -1520,24 +1487,26 @@ msgid ""
 "By replacing your existing %1$s App, users with linked %1$s accounts will no "
 "longer be able to login with %1$s."
 msgstr ""
+"Ha lecseréled a meglévő %1$s Appodat, a(z) %1$s fiókot összekapcsolt "
+"felhasználók többé nem tudnak bejelentkezni a(z) %1$s használatával."
 
 msgid "Find out why?"
-msgstr ""
+msgstr "Tudd meg, miért!"
 
 msgid "Profile image size"
-msgstr ""
+msgstr "Profilkép mérete"
 
 msgid "Small"
-msgstr ""
+msgstr "Kicsi"
 
 msgid "Medium"
-msgstr ""
+msgstr "Közepes"
 
 msgid "Large"
-msgstr ""
+msgstr "Nagy"
 
 msgid "Extra Large"
-msgstr ""
+msgstr "Extra nagy"
 
 msgid "Continue with <b>Facebook</b>"
 msgstr "Folytatás a <b>Facebook</b>-kal"
@@ -1560,10 +1529,49 @@ msgstr ""
 
 #, php-format
 msgid "Required scope: %1$s"
-msgstr ""
+msgstr "Szükséges scope: %1$s"
 
 msgid "Neutral"
+msgstr "Semleges"
+
+msgid ""
+"Required by Google One Tap. Without it the One Tap prompt never appears."
 msgstr ""
+"A Google One Tap használatához szükséges. Enélkül a One Tap ablak nem "
+"jelenik meg."
+
+msgid "Google One Tap"
+msgstr "Google One Tap"
+
+msgid "Show where the Google button appears"
+msgstr "Megjelenítés ott, ahol a Google gomb is megjelenik"
+
+msgid "Show on all pages"
+msgstr "Megjelenítés minden oldalon"
+
+#, php-format
+msgid ""
+"Shows Google's One Tap prompt, so visitors can sign in with their Google "
+"account without leaving the page. %1$sLearn more%2$s."
+msgstr ""
+"Megjeleníti a Google One Tap ablakát, így a látogatók az oldal elhagyása "
+"nélkül bejelentkezhetnek a Google fiókjukkal. %1$sTovábbi információ%2$s."
+
+#, php-format
+msgid ""
+"%1$s Requires HTTPS, and %2$s added to the %3$sAuthorized JavaScript "
+"origins%4$s of your Google app."
+msgstr ""
+"%1$s HTTPS szükséges, és a(z) %2$s címet hozzá kell adnod a Google Appod "
+"%3$sAuthorized JavaScript origins%4$s listájához."
+
+#, php-format
+msgid ""
+"%1$s Unlike the Google button, One Tap loads Google's script as soon as the "
+"page opens. %2$sLearn more%3$s."
+msgstr ""
+"%1$s A Google gombbal ellentétben a One Tap már az oldal megnyitásakor "
+"betölti a Google szkriptjét. %2$sTovábbi információ%3$s."
 
 msgid "Client ID"
 msgstr "Client ID"
@@ -1572,14 +1580,16 @@ msgid "Client Secret"
 msgstr "Client Secret"
 
 msgid "Select account on each login"
-msgstr ""
+msgstr "Fiókválasztás minden bejelentkezéskor"
 
 msgid ""
 "Disable, when you don't want to see the account select prompt on each login."
 msgstr ""
+"Kapcsold ki, ha nem szeretnéd, hogy minden bejelentkezéskor megjelenjen a "
+"fiókválasztó ablak."
 
 msgid "Original"
-msgstr ""
+msgstr "Eredeti"
 
 msgid "Continue with <b>Google</b>"
 msgstr "Folytatás a <b>Google</b>-lel"
@@ -1598,50 +1608,38 @@ msgid "Required API: %1$s"
 msgstr "Szükséges API: %1$s"
 
 msgid "X"
-msgstr ""
+msgstr "X"
 
 msgid "Legacy"
 msgstr "Örökölt"
 
 msgid "API version"
-msgstr ""
+msgstr "API verzió"
 
 msgid "v1.1"
-msgstr ""
+msgstr "v1.1"
 
 msgid "v2"
-msgstr ""
+msgstr "v2"
 
 msgid "API Key"
-msgstr ""
+msgstr "API Key"
 
-#, fuzzy
-#| msgid "API Secret"
 msgid "API Key Secret"
-msgstr "API Secret"
+msgstr "API Key Secret"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Continue with <b>X</b>"
-msgstr "Folytatás a <b>VK</b>-val"
+msgstr "Folytatás az <b>X</b>-szel"
 
-#, fuzzy
-#| msgid "Sign up with <b>VK</b>"
 msgid "Sign up with <b>X</b>"
-msgstr "Regisztrálás a <b>VK</b>-val"
+msgstr "Regisztrálás az <b>X</b>-szel"
 
-#, fuzzy
-#| msgid "Link account with <b>VK</b>"
 msgid "Link account with <b>X</b>"
-msgstr "Fiók összekapcsolása a <b>VK</b>-val"
+msgstr "Fiók összekapcsolása az <b>X</b>-szel"
 
-#, fuzzy
-#| msgid "Unlink account from <b>VK</b>"
 msgid "Unlink account from <b>X</b>"
-msgstr "Szétkapcsolás <b>VK</b>-tól"
+msgstr "Szétkapcsolás <b>X</b>-től"
 
-#, fuzzy
-#| msgid "Register"
 msgctxt "Register form submit button label"
 msgid "Register"
 msgstr "Regisztráció"
@@ -1651,7 +1649,7 @@ msgid "%s Buttons"
 msgstr "%s Gombok"
 
 msgid "Title:"
-msgstr ""
+msgstr "Cím:"
 
 msgid "Button style:"
 msgstr "Gomb stílus:"
@@ -1660,10 +1658,10 @@ msgid "Button align:"
 msgstr "Gombok igazítása"
 
 msgid "Show link buttons"
-msgstr ""
+msgstr "Összekapcsoló gombok megjelenítése"
 
 msgid "Show unlink buttons"
-msgstr ""
+msgstr "Szétkapcsoló gombok megjelenítése"
 
 msgid "Social login is not allowed with this role!"
 msgstr ""
@@ -1671,114 +1669,159 @@ msgstr ""
 "szintre."
 
 msgid "Please enter a username."
-msgstr ""
+msgstr "Adj meg egy felhasználónevet."
 
 msgid ""
 "This username is invalid because it uses illegal characters. Please enter a "
 "valid username."
 msgstr ""
+"Ez a felhasználónév érvénytelen, mert nem engedélyezett karaktereket "
+"tartalmaz. Adj meg egy érvényes felhasználónevet."
 
 msgid ""
 "<strong>Error</strong>: This username is already registered. Please choose "
 "another one."
 msgstr ""
+"<strong>Hiba</strong>: Ez a felhasználónév már foglalt. Válassz másikat."
 
 msgid "<strong>Error</strong>: Sorry, that username is not allowed."
-msgstr ""
+msgstr "<strong>Hiba</strong>: Ez a felhasználónév nem engedélyezett."
 
 msgid "<strong>Error</strong>: Please enter an email address."
-msgstr ""
+msgstr "<strong>Hiba</strong>: Adj meg egy e-mail-címet."
 
 msgid "<strong>Error</strong>: The email address isn&#8217;t correct."
-msgstr ""
+msgstr "<strong>Hiba</strong>: Az e-mail-cím nem megfelelő."
 
 msgid ""
 "<strong>Error</strong>: This email is already registered. Please choose "
 "another one."
 msgstr ""
+"<strong>Hiba</strong>: Ez az e-mail-cím már regisztrálva van. Válassz "
+"másikat."
 
 msgid "<strong>Error</strong>: Please enter a password."
-msgstr ""
+msgstr "<strong>Hiba</strong>: Adj meg egy jelszót."
 
 msgid "<strong>Error</strong>: Passwords may not contain the character \"\\\"."
-msgstr ""
+msgstr "<strong>Hiba</strong>: A jelszó nem tartalmazhatja a \"\\\" karaktert."
 
 msgid ""
 "<strong>Error</strong>: Passwords don&#8217;t match. Please enter the same "
 "password in both password fields."
 msgstr ""
+"<strong>Hiba</strong>: A jelszavak nem egyeznek. Írd be ugyanazt a jelszót "
+"mindkét jelszómezőbe."
 
 #, php-format
 msgid ""
 "This email is already registered, please login in to your account to link "
 "with %1$s."
 msgstr ""
+"Ez az e-mail-cím már regisztrálva van. Jelentkezz be a fiókodba, hogy "
+"összekapcsold a(z) %1$s fiókkal."
 
 msgid "Unexpected response: The provider didn't return the Authorization URL!"
-msgstr ""
+msgstr "Nem várt válasz: A szolgáltató nem adta vissza az engedélyezési URL-t!"
 
 msgid "Unexpected response: Authentication has been cancelled!"
-msgstr ""
+msgstr "Nem várt válasz: A hitelesítés megszakadt!"
 
 msgid "Unexpected response: Immediate request failed - Setup Needed!"
-msgstr ""
+msgstr "Nem várt válasz: Az azonnali kérés sikertelen - beállítás szükséges!"
 
 msgid ""
 "Unexpected response: The targeted OpenID server is not authorized to verify "
 "this request!"
 msgstr ""
+"Nem várt válasz: A megcélzott OpenID szerver nem jogosult a kérés "
+"ellenőrzésére!"
 
 msgid "Unexpected response: OpenID Verification failed!"
-msgstr ""
+msgstr "Nem várt válasz: Az OpenID ellenőrzés sikertelen!"
 
 #, php-format
 msgid "Please install and activate %1$s to use the %2$s"
-msgstr ""
+msgstr "A(z) %2$s használatához telepítsd és aktiváld a(z) %1$s bővítményt"
 
 msgid "Network Activate"
-msgstr ""
+msgstr "Hálózati aktiválás"
 
 msgid "Install now!"
-msgstr ""
+msgstr "Telepítés most!"
 
-#, fuzzy
-#| msgid "Providers"
 msgid "Social Providers"
-msgstr "Providerek"
+msgstr "Közösségi szolgáltatók"
 
 #, php-format
 msgid ""
 "The Facebook Sync data needs an approved %1$s and your App must use the "
 "latest %2$s version!"
 msgstr ""
+"A Facebook Sync data funkcióhoz jóváhagyott %1$s szükséges, és az Appodnak a "
+"legújabb %2$s verziót kell használnia!"
+
+#, php-format
+msgid ""
+"Yes. With Google One Tap enabled, %1$s loads Google's Identity Services "
+"library from %2$s on the pages where the One Tap prompt can appear. Google "
+"receives the visitor's IP address and reads its own cookies on that domain "
+"to decide whether the prompt can be shown."
+msgstr ""
+"Igen. Ha a Google One Tap engedélyezve van, a(z) %1$s betölti a Google "
+"Identity Services könyvtárát a(z) %2$s címről azokon az oldalakon, ahol a "
+"One Tap ablak megjelenhet. A Google megkapja a látogató IP-címét, és "
+"beolvassa a saját sütijeit ezen a domainen, hogy eldöntse, megjeleníthető-e "
+"az ablak."
+
+#, php-format
+msgid ""
+"With Google One Tap enabled, Google's library also stores a %1$s cookie on "
+"this site, which holds the visitor's One Tap status, such as whether they "
+"closed the prompt."
+msgstr ""
+"Ha a Google One Tap engedélyezve van, a Google könyvtára egy %1$s sütit is "
+"tárol ezen az oldalon, amely a látogató One Tap állapotát tartalmazza, "
+"például azt, hogy bezárta-e az ablakot."
 
 #, php-format
 msgid ""
 "Most of these information can only be retrieved, when the field is marked as "
 "Public on the user's %s page!"
 msgstr ""
+"Ezen adatok többsége csak akkor kérhető le, ha a mező Nyilvánosként van "
+"megjelölve a felhasználó %s oldalán!"
 
 #, php-format
 msgid ""
 "Most of these information can only be retrieved, when the field is filled on "
 "the user's %s page!"
 msgstr ""
+"Ezen adatok többsége csak akkor kérhető le, ha a mező ki van töltve a "
+"felhasználó %s oldalán!"
 
 #, php-format
 msgid ""
 "Most of these information can only be retrieved, when the field is filled on "
 "the user's %s page! For the campaigns, the user must have a public campaign!"
 msgstr ""
+"Ezen adatok többsége csak akkor kérhető le, ha a mező ki van töltve a "
+"felhasználó %s oldalán! A kampányokhoz a felhasználónak nyilvános kampánnyal "
+"kell rendelkeznie!"
 
 #, php-format
 msgid ""
 "The Spotify Sync data requires the %1$s with the necessary scopes enabled!"
 msgstr ""
+"A Spotify Sync data funkcióhoz a(z) %1$s szükséges, a megfelelő scope-ok "
+"engedélyezésével!"
 
 #, php-format
 msgid ""
 "The TikTok Sync data requires the %1$s with the necessary scopes enabled!"
 msgstr ""
+"A TikTok Sync data funkcióhoz a(z) %1$s szükséges, a megfelelő scope-ok "
+"engedélyezésével!"
 
 msgid "Continue with <b>Amazon</b>"
 msgstr "Folytatás az <b>Amazon</b>-nal"
@@ -1793,24 +1836,22 @@ msgid "Unlink account from <b>Amazon</b>"
 msgstr "Szétkapcsolás <b>Amazon</b>-tól"
 
 msgid "Delete credentials"
-msgstr ""
+msgstr "Hitelesítő adatok törlése"
 
 msgid "Private Key ID"
-msgstr ""
+msgstr "Private Key ID"
 
-#, fuzzy
-#| msgid "Privacy"
 msgid "Private Key"
-msgstr "Privacy"
+msgstr "Private Key"
 
 msgid "Team Identifier"
-msgstr ""
+msgstr "Team Identifier"
 
 msgid "Service Identifier"
-msgstr ""
+msgstr "Service Identifier"
 
 msgid "Generate Token"
-msgstr ""
+msgstr "Token generálása"
 
 msgid "Continue with <b>Apple</b>"
 msgstr "Folytatás az <b>Apple</b>-lel"
@@ -1826,52 +1867,48 @@ msgstr "Szétkapcsolás <b>Apple</b>-től"
 
 #, php-format
 msgid "An error occurred when storing of the expiration timestamp : %1$s"
-msgstr ""
+msgstr "Hiba történt a lejárati időbélyeg tárolásakor: %1$s"
 
 #, php-format
 msgid "Token generation failed: %1$s"
-msgstr ""
+msgstr "A token generálása sikertelen: %1$s"
 
 msgid "Please check your credentials!"
-msgstr ""
+msgstr "Ellenőrizd a hitelesítő adataidat!"
 
 msgid "Private key format is not valid!"
-msgstr ""
+msgstr "A privát kulcs formátuma érvénytelen!"
 
 #, php-format
 msgid ""
 "%s detected that your Apple credentials have expired. Please delete the "
 "current credentials and generate new one!"
 msgstr ""
+"A(z) %s észlelte, hogy az Apple hitelesítő adataid lejártak. Töröld a "
+"jelenlegi hitelesítő adatokat, és generálj újakat!"
 
 msgid "Apple Credentials"
-msgstr ""
+msgstr "Apple hitelesítő adatok"
 
 msgid "Force reauthorization on each login"
-msgstr ""
+msgstr "Újbóli engedélyezés kényszerítése minden bejelentkezéskor"
 
 msgid "Enable, when you want to see the consent screen on each login."
 msgstr ""
+"Kapcsold be, ha minden bejelentkezéskor látni szeretnéd a hozzájárulási "
+"képernyőt."
 
-#, fuzzy
-#| msgid "Continue with <b>Disqus</b>"
 msgid "Continue with <b>Discord</b>"
-msgstr "Folytatás a <b>Disqus</b>-szal"
+msgstr "Folytatás a <b>Discord</b>-dal"
 
-#, fuzzy
-#| msgid "Sign up with <b>Disqus</b>"
 msgid "Sign up with <b>Discord</b>"
-msgstr "Regisztrálás a <b>Disqus</b>-szal"
+msgstr "Regisztrálás a <b>Discord</b>-dal"
 
-#, fuzzy
-#| msgid "Link account with <b>Disqus</b>"
 msgid "Link account with <b>Discord</b>"
-msgstr "Fiók összekapcsolása a <b>Disqus</b>-szal"
+msgstr "Fiók összekapcsolása a <b>Discord</b>-dal"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Disqus</b>"
 msgid "Unlink account from <b>Discord</b>"
-msgstr "Szétkapcsolás <b>Disqus</b>-tól"
+msgstr "Szétkapcsolás <b>Discord</b>-tól"
 
 msgid "API Secret"
 msgstr "API Secret"
@@ -1879,10 +1916,12 @@ msgstr "API Secret"
 #, php-format
 msgid "We detected that your %1$s is probably overridden over the %2$s filter!"
 msgstr ""
+"Úgy észleltük, hogy a(z) %1$s értékét valószínűleg felülírja a(z) %2$s "
+"filter!"
 
 #, php-format
 msgid "We detected that your %1$s has been overridden over the %2$s filter!"
-msgstr ""
+msgstr "Úgy észleltük, hogy a(z) %1$s értékét felülírta a(z) %2$s filter!"
 
 msgid "Continue with <b>Disqus</b>"
 msgstr "Folytatás a <b>Disqus</b>-szal"
@@ -1909,132 +1948,123 @@ msgid "Unlink account from <b>GitHub</b>"
 msgstr "Szétkapcsolás <b>GitHub</b>-tól"
 
 msgid "REST API Key"
-msgstr ""
+msgstr "REST API Key"
 
-#, fuzzy
-#| msgid "Client Secret"
 msgid "Client Secret Code"
-msgstr "Client Secret"
+msgstr "Client Secret Code"
 
-#, fuzzy
-#| msgid "Authentication error"
 msgid "Authorization Prompt"
-msgstr "Hitelesítési hiba"
+msgstr "Engedélyezési kérés"
 
 msgid "Display account select modal"
-msgstr ""
+msgstr "Fiókválasztó ablak megjelenítése"
 
 msgid "Force user to enter login credentials on each login"
 msgstr ""
+"Bejelentkezési adatok megadásának kényszerítése minden bejelentkezéskor"
 
 msgid "Start the authentication with the Kakao Account sign-up page."
-msgstr ""
+msgstr "A hitelesítés a Kakao Account regisztrációs oldalával induljon."
 
 msgid "Email scope"
 msgstr "Email scope"
 
 msgid "Disable, when you have no rights for email address."
-msgstr ""
+msgstr "Kapcsold ki, ha nincs jogosultságod az e-mail-címhez."
 
 msgid "Mini"
-msgstr ""
+msgstr "Mini"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Continue with <b>Kakao</b>"
-msgstr "Folytatás a <b>VK</b>-val"
+msgstr "Folytatás a <b>Kakao</b>-val"
 
-#, fuzzy
-#| msgid "Sign up with <b>VK</b>"
 msgid "Sign up with <b>Kakao</b>"
-msgstr "Regisztrálás a <b>VK</b>-val"
+msgstr "Regisztrálás a <b>Kakao</b>-val"
 
-#, fuzzy
-#| msgid "Link account with <b>VK</b>"
 msgid "Link account with <b>Kakao</b>"
-msgstr "Fiók összekapcsolása a <b>VK</b>-val"
+msgstr "Fiók összekapcsolása a <b>Kakao</b>-val"
 
-#, fuzzy
-#| msgid "Unlink account from <b>VK</b>"
 msgid "Unlink account from <b>Kakao</b>"
-msgstr "Szétkapcsolás <b>VK</b>-tól"
+msgstr "Szétkapcsolás <b>Kakao</b>-tól"
 
 msgid "Channel ID"
-msgstr ""
+msgstr "Channel ID"
 
-#, fuzzy
-#| msgid "Consumer Secret"
 msgid "Channel Secret"
-msgstr "Consumer Secret"
+msgstr "Channel Secret"
 
 msgid "Add LINE Official Account as a friend"
-msgstr ""
+msgstr "LINE Official Account hozzáadása ismerősként"
 
 msgid "Don't display"
-msgstr ""
+msgstr "Ne jelenjen meg"
 
 msgid "Display the add friend option in the consent screen"
 msgstr ""
+"Az ismerősnek jelölés lehetőségének megjelenítése a hozzájárulási képernyőn"
 
 msgid "Opens a new screen with the add friend option after the consent screen"
 msgstr ""
+"A hozzájárulási képernyő után egy új képernyő nyílik meg az ismerősnek "
+"jelölés lehetőségével"
 
 #, php-format
 msgid ""
 "If you have a LINE Official Account, people can add it as a friend when they "
 "authorize your App. %1$sLearn more%2$s."
 msgstr ""
+"Ha van LINE Official Accountod, a felhasználók ismerősként adhatják hozzá, "
+"amikor engedélyezik az Appodat. %1$sTovábbi információ%2$s."
 
 msgid "Initial Login method"
-msgstr ""
+msgstr "Kezdeti bejelentkezési mód"
 
 msgid "Email and Password"
-msgstr ""
+msgstr "E-mail és jelszó"
 
 msgid "QR code"
-msgstr ""
+msgstr "QR-kód"
 
 msgid ""
 "The selected value defines whether the Email and Password or the QR code "
 "login option will be presented in the LINE authentication screen by default."
 msgstr ""
+"A kiválasztott érték határozza meg, hogy alapértelmezetten az E-mail és "
+"jelszó vagy a QR-kódos bejelentkezési lehetőség jelenjen meg a LINE "
+"hitelesítési képernyőjén."
 
 msgid "Force initial login method"
-msgstr ""
+msgstr "Kezdeti bejelentkezési mód kényszerítése"
 
 msgid ""
 "Enable, if you want to offer only the selected Initial Login method in the "
 "LINE authentication screen."
 msgstr ""
+"Kapcsold be, ha csak a kiválasztott kezdeti bejelentkezési módot szeretnéd "
+"felkínálni a LINE hitelesítési képernyőjén."
 
 msgid "Allow Auto login"
-msgstr ""
+msgstr "Automatikus bejelentkezés engedélyezése"
 
 #, php-format
 msgid ""
 "Having the Auto login enabled could make the login fail in certain cases. "
 "%1$sLearn more%2$s."
 msgstr ""
+"Bekapcsolt automatikus bejelentkezés esetén bizonyos helyzetekben a "
+"bejelentkezés sikertelen lehet. %1$sTovábbi információ%2$s."
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Continue with <b>Line</b>"
-msgstr "Folytatás a <b>LinkedIn</b>-nel"
+msgstr "Folytatás a <b>Line</b>-nal"
 
-#, fuzzy
-#| msgid "Sign up with <b>LinkedIn</b>"
 msgid "Sign up with <b>Line</b>"
-msgstr "Folytatás a <b>LinkedIn</b>-nel"
+msgstr "Regisztrálás a <b>Line</b>-nal"
 
-#, fuzzy
-#| msgid "Link account with <b>LinkedIn</b>"
 msgid "Link account with <b>Line</b>"
-msgstr "Fiók összekapcsolása a <b>LinkedIn</b>-nel"
+msgstr "Fiók összekapcsolása a <b>Line</b>-nal"
 
-#, fuzzy
-#| msgid "Unlink account from <b>LinkedIn</b>"
 msgid "Unlink account from <b>Line</b>"
-msgstr "Szétkapcsolás <b>LinkedIn</b>-től"
+msgstr "Szétkapcsolás <b>Line</b>-tól"
 
 msgid "Continue with <b>LinkedIn</b>"
 msgstr "Folytatás a <b>LinkedIn</b>-nel"
@@ -2049,78 +2079,62 @@ msgid "Unlink account from <b>LinkedIn</b>"
 msgstr "Szétkapcsolás <b>LinkedIn</b>-től"
 
 msgid "Application (client) ID"
-msgstr ""
+msgstr "Application (client) ID"
 
-#, fuzzy
-#| msgid "Client Secret"
 msgid "Client secret"
-msgstr "Client Secret"
+msgstr "Client secret"
 
 msgid "Audience"
-msgstr ""
+msgstr "Célközönség"
 
 msgid "Multiple Entra ID tenants"
-msgstr ""
+msgstr "Több Entra ID-bérlő"
 
 msgid "Any Entra ID Tenant + Personal Microsoft accounts"
-msgstr ""
+msgstr "Bármely Entra ID-bérlő + személyes Microsoft-fiókok"
 
-#, fuzzy
-#| msgid "Social accounts"
 msgid "Personal accounts only"
-msgstr "Közösségi fiókok"
+msgstr "Csak személyes fiókok"
 
 msgid "Single tenant only - Default Directory with Azure AD tenant:"
-msgstr ""
+msgstr "Csak egyetlen bérlő - Default Directory az Azure AD-bérlővel:"
 
 #, php-format
 msgid ""
 "The selected value will define the supported account types. %1$sLearn more."
 "%2$s"
 msgstr ""
+"A kiválasztott érték határozza meg a támogatott fióktípusokat. %1$sTovábbi "
+"információ.%2$s"
 
 msgid "Display authorization and authentication dialog only when necessary"
 msgstr ""
+"Engedélyezési és hitelesítési párbeszédablak megjelenítése csak szükség "
+"esetén"
 
-#, fuzzy
-#| msgid "Continue with <b>Yahoo</b>"
 msgid "Continue with <b>Microsoft</b>"
-msgstr "Folytatás a <b>Yahoo</b>-val"
+msgstr "Folytatás a <b>Microsoft</b>-tal"
 
-#, fuzzy
-#| msgid "Sign up with <b>Yahoo</b>"
 msgid "Sign up with <b>Microsoft</b>"
-msgstr "Regisztrálás a <b>Yahool</b>-val"
+msgstr "Regisztrálás a <b>Microsoft</b>-tal"
 
-#, fuzzy
-#| msgid "Link account with <b>Yahoo</b>"
 msgid "Link account with <b>Microsoft</b>"
-msgstr "Fiók összekapcsolása a <b>Yahoo</b>-val"
+msgstr "Fiók összekapcsolása a <b>Microsoft</b>-tal"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Yahoo</b>"
 msgid "Unlink account from <b>Microsoft</b>"
-msgstr "Szétkapcsolás <b>Yahoo</b>-tól"
+msgstr "Szétkapcsolás <b>Microsoft</b>-tól"
 
-#, fuzzy
-#| msgid "Continue with <b>Amazon</b>"
 msgid "Continue with <b>Patreon</b>"
-msgstr "Folytatás az <b>Amazon</b>-nal"
+msgstr "Folytatás a <b>Patreon</b>-nal"
 
-#, fuzzy
-#| msgid "Sign up with <b>Amazon</b>"
 msgid "Sign up with <b>Patreon</b>"
-msgstr "Regisztrálás az <b>Amazon</b>-nal"
+msgstr "Regisztrálás a <b>Patreon</b>-nal"
 
-#, fuzzy
-#| msgid "Link account with <b>Amazon</b>"
 msgid "Link account with <b>Patreon</b>"
-msgstr "Fiók összekapcsolása az <b>Amazon</b>-nal"
+msgstr "Fiók összekapcsolása a <b>Patreon</b>-nal"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Amazon</b>"
 msgid "Unlink account from <b>Patreon</b>"
-msgstr "Szétkapcsolás <b>Amazon</b>-tól"
+msgstr "Szétkapcsolás <b>Patreon</b>-tól"
 
 msgid "Secret"
 msgstr "Secret"
@@ -2137,165 +2151,117 @@ msgstr "Fiók összekapcsolása a <b>PayPal</b>-al"
 msgid "Unlink account from <b>PayPal</b>"
 msgstr "Szétkapcsolás <b>PayPal</b>-tól"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Continue with <b>Reddit</b>"
-msgstr "Folytatás a <b>VK</b>-val"
+msgstr "Folytatás a <b>Reddit</b>-tel"
 
-#, fuzzy
-#| msgid "Sign up with <b>VK</b>"
 msgid "Sign up with <b>Reddit</b>"
-msgstr "Regisztrálás a <b>VK</b>-val"
+msgstr "Regisztrálás a <b>Reddit</b>-tel"
 
-#, fuzzy
-#| msgid "Link account with <b>VK</b>"
 msgid "Link account with <b>Reddit</b>"
-msgstr "Fiók összekapcsolása a <b>VK</b>-val"
+msgstr "Fiók összekapcsolása a <b>Reddit</b>-tel"
 
-#, fuzzy
-#| msgid "Unlink account from <b>VK</b>"
 msgid "Unlink account from <b>Reddit</b>"
-msgstr "Szétkapcsolás <b>VK</b>-tól"
+msgstr "Szétkapcsolás <b>Reddit</b>-től"
 
 msgid "Slack Team ID"
-msgstr ""
+msgstr "Slack Team ID"
 
 msgid "Optional"
-msgstr ""
+msgstr "Opcionális"
 
 #, php-format
 msgid ""
 "The Team ID of a workspace to attempt to restrict to. %1$sLearn more.%2$s"
 msgstr ""
+"Annak a munkaterületnek a Team ID-ja, amelyre a bejelentkezést korlátozni "
+"szeretnéd. %1$sTovábbi információ.%2$s"
 
 msgid "72x72"
-msgstr ""
+msgstr "72x72"
 
 msgid "192x192"
-msgstr ""
+msgstr "192x192"
 
 msgid "512x512"
-msgstr ""
+msgstr "512x512"
 
 msgid "1024x1024"
-msgstr ""
+msgstr "1024x1024"
 
-#, fuzzy
-#| msgid "Sign up with <b>Facebook</b>"
 msgid "Sign in with <b>Slack</b>"
-msgstr "Regisztrálás a <b>Facebook</b>-kal"
+msgstr "Bejelentkezés a <b>Slack</b>-kel"
 
-#, fuzzy
-#| msgid "Sign up with <b>Facebook</b>"
 msgid "Sign up with <b>Slack</b>"
-msgstr "Regisztrálás a <b>Facebook</b>-kal"
+msgstr "Regisztrálás a <b>Slack</b>-kel"
 
-#, fuzzy
-#| msgid "Link account with <b>Facebook</b>"
 msgid "Link account with <b>Slack</b>"
-msgstr "Fiók összekapcsolása a <b>Facebook</b>-kal"
+msgstr "Fiók összekapcsolása a <b>Slack</b>-kel"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Facebook</b>"
 msgid "Unlink account from <b>Slack</b>"
-msgstr "Szétkapcsolás <b>Facebook</b>-tól"
+msgstr "Szétkapcsolás <b>Slack</b>-től"
 
 msgid "Green"
-msgstr ""
+msgstr "Zöld"
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Continue with <b>Spotify</b>"
-msgstr "Folytatás a <b>LinkedIn</b>-nel"
+msgstr "Folytatás a <b>Spotify</b>-jal"
 
-#, fuzzy
-#| msgid "Sign up with <b>Facebook</b>"
 msgid "Sign up with <b>Spotify</b>"
-msgstr "Regisztrálás a <b>Facebook</b>-kal"
+msgstr "Regisztrálás a <b>Spotify</b>-jal"
 
-#, fuzzy
-#| msgid "Link account with <b>Facebook</b>"
 msgid "Link account with <b>Spotify</b>"
-msgstr "Fiók összekapcsolása a <b>Facebook</b>-kal"
+msgstr "Fiók összekapcsolása a <b>Spotify</b>-jal"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Facebook</b>"
 msgid "Unlink account from <b>Spotify</b>"
-msgstr "Szétkapcsolás <b>Facebook</b>-tól"
+msgstr "Szétkapcsolás <b>Spotify</b>-tól"
 
 msgid "Web API Key"
-msgstr ""
+msgstr "Web API Key"
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Continue with <b>Steam</b>"
-msgstr "Folytatás a <b>LinkedIn</b>-nel"
+msgstr "Folytatás a <b>Steam</b>-mel"
 
-#, fuzzy
-#| msgid "Sign up with <b>Facebook</b>"
 msgid "Sign up with <b>Steam</b>"
-msgstr "Regisztrálás a <b>Facebook</b>-kal"
+msgstr "Regisztrálás a <b>Steam</b>-mel"
 
-#, fuzzy
-#| msgid "Link account with <b>Facebook</b>"
 msgid "Link account with <b>Steam</b>"
-msgstr "Fiók összekapcsolása a <b>Facebook</b>-kal"
+msgstr "Fiók összekapcsolása a <b>Steam</b>-mel"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Facebook</b>"
 msgid "Unlink account from <b>Steam</b>"
-msgstr "Szétkapcsolás <b>Facebook</b>-tól"
+msgstr "Szétkapcsolás <b>Steam</b>-től"
 
 msgid "Error: The 64-bit SteamID can not be retrieved for this user!"
-msgstr ""
+msgstr "Hiba: Ennek a felhasználónak a 64 bites SteamID-ja nem kérhető le!"
 
-#, fuzzy
-#| msgid "Client ID"
 msgid "Client key"
-msgstr "Client ID"
+msgstr "Client key"
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Continue with <b>TikTok</b>"
-msgstr "Folytatás a <b>LinkedIn</b>-nel"
+msgstr "Folytatás a <b>TikTok</b>-kal"
 
-#, fuzzy
-#| msgid "Sign up with <b>LinkedIn</b>"
 msgid "Sign up with <b>TikTok</b>"
-msgstr "Folytatás a <b>LinkedIn</b>-nel"
+msgstr "Regisztrálás a <b>TikTok</b>-kal"
 
-#, fuzzy
-#| msgid "Link account with <b>LinkedIn</b>"
 msgid "Link account with <b>TikTok</b>"
-msgstr "Fiók összekapcsolása a <b>LinkedIn</b>-nel"
+msgstr "Fiók összekapcsolása a <b>TikTok</b>-kal"
 
-#, fuzzy
-#| msgid "Unlink account from <b>LinkedIn</b>"
 msgid "Unlink account from <b>TikTok</b>"
-msgstr "Szétkapcsolás <b>LinkedIn</b>-től"
+msgstr "Szétkapcsolás <b>TikTok</b>-tól"
 
-#, fuzzy
-#| msgid "Continue with <b>Twitter</b>"
 msgid "Continue with <b>Twitch</b>"
-msgstr "Folytatás a <b>Twitter</b>-rel"
+msgstr "Folytatás a <b>Twitch</b>-csel"
 
-#, fuzzy
-#| msgid "Sign up with <b>Twitter</b>"
 msgid "Sign up with <b>Twitch</b>"
-msgstr "Regisztrálás a <b>Twitter</b>-rel"
+msgstr "Regisztrálás a <b>Twitch</b>-csel"
 
-#, fuzzy
-#| msgid "Link account with <b>Twitter</b>"
 msgid "Link account with <b>Twitch</b>"
-msgstr "Fiók összekapcsolása a <b>Twitter</b>-rel"
+msgstr "Fiók összekapcsolása a <b>Twitch</b>-csel"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Twitter</b>"
 msgid "Unlink account from <b>Twitch</b>"
-msgstr "Szétkapcsolás <b>Twitter</b>-től"
+msgstr "Szétkapcsolás <b>Twitch</b>-től"
 
 msgid "Secure key"
-msgstr ""
+msgstr "Secure key"
 
 msgid "Continue with <b>VK</b>"
 msgstr "Folytatás a <b>VK</b>-val"
@@ -2317,14 +2283,19 @@ msgid ""
 "resolve the problem, please create a new App based on our %4$s guide, and "
 "replace the credentials on the %5$s tab with your new App credentials."
 msgstr ""
+"%1$s: A(z) %2$s új App típusokat vezetett be, és módosította a végpontjait, "
+"amelyek nem kompatibilisek a régi Appokkal.%3$sÚgy észleltük, hogy jelenleg "
+"egy régi %2$s Appot használsz, ezért ki kellett kapcsolnunk a(z) %2$s "
+"beállításaidat. A probléma megoldásához hozz létre egy új Appot a(z) %4$s "
+"útmutatónk alapján, és cseréld le a hitelesítő adatokat a(z) %5$s fülön az "
+"új Appod adataira."
 
 msgid "VKontakte"
-msgstr ""
+msgstr "VKontakte"
 
-#, fuzzy, php-format
-#| msgid "Click on the Create button"
+#, php-format
 msgid "Open %1$s - %2$s"
-msgstr "Kattints a \"Create\" gombra"
+msgstr "%1$s - %2$s megnyitása"
 
 msgid "Continue with <b>WordPress.com</b>"
 msgstr "Folytatás a <b>WordPress.com</b>-al"
@@ -2350,10 +2321,9 @@ msgstr "Fiók összekapcsolása a <b>Yahoo</b>-val"
 msgid "Unlink account from <b>Yahoo</b>"
 msgstr "Szétkapcsolás <b>Yahoo</b>-tól"
 
-#, fuzzy, php-format
-#| msgid "Required API: %1$s"
+#, php-format
 msgid "Required permission: %1$s"
-msgstr "Szükséges API: %1$s"
+msgstr "Szükséges engedély: %1$s"
 
 msgid "OR"
 msgstr "VAGY"
@@ -2362,25 +2332,37 @@ msgid "Social accounts"
 msgstr "Közösségi fiókok"
 
 msgid "Registration confirmation will be emailed to you."
-msgstr ""
+msgstr "A regisztráció megerősítését e-mailben küldjük el."
 
 msgid "Password"
-msgstr ""
+msgstr "Jelszó"
 
 msgid "Hide password"
-msgstr ""
+msgstr "Jelszó elrejtése"
 
 msgid "Strength indicator"
-msgstr ""
+msgstr "Erősségjelző"
 
 msgid "Confirm use of weak password"
-msgstr ""
+msgstr "Gyenge jelszó használatának megerősítése"
 
 msgid "Confirm password"
-msgstr ""
+msgstr "Jelszó megerősítése"
 
 msgid "Username"
-msgstr ""
+msgstr "Felhasználónév"
+
+#~ msgid ""
+#~ "Shows Google's One Tap prompt, so visitors can sign in with their Google "
+#~ "account without leaving the page. Depending on the browser, Google shows "
+#~ "it to every visitor, or only to those who are signed in to Google. One "
+#~ "Tap works alongside the Google button, it does not replace it."
+#~ msgstr ""
+#~ "Megjeleníti a Google One Tap ablakát, így a látogatók az oldal elhagyása "
+#~ "nélkül bejelentkezhetnek a Google fiókjukkal. A böngészőtől függően a "
+#~ "Google minden látogatónak megjeleníti, vagy csak azoknak, akik be vannak "
+#~ "jelentkezve a Google-be. A One Tap a Google gomb mellett működik, nem "
+#~ "helyettesíti azt."
 
 #, fuzzy, php-format
 #~| msgid "Navigate to %s"

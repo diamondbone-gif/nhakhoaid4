@@ -47,13 +47,21 @@ class GDPR {
         $content .= '<p class="privacy-policy-tutorial">' . sprintf(__('%1$s use the personal data collected by the social providers to create account on your site when the visitor authorize it.', 'nextend-facebook-connect'), 'Nextend Social Login') . '</p>';
 
         $content .= '<h2>' . __('Does the plugin store things in the browser?', 'nextend-facebook-connect') . '</h2>';
-        $content .= '<p class="privacy-policy-tutorial">' . sprintf(__('Yes, %1$s must create a cookie for visitors who use the social login authorization flow. This cookie required for every provider to secure the communication and to redirect the user back to the last location.', 'nextend-facebook-connect'), 'Nextend Social Login') . '</p>';
+        /**
+         * Extensions that make the plugin store more than the authorization flow cookie have to
+         * amend this answer, so the suggested privacy policy stays accurate.
+         */
+        $content .= '<p class="privacy-policy-tutorial">' . apply_filters('nsl_privacy_policy_browser_storage', sprintf(__('Yes, %1$s must create a cookie for visitors who use the social login authorization flow. This cookie required for every provider to secure the communication and to redirect the user back to the last location.', 'nextend-facebook-connect'), 'Nextend Social Login')) . '</p>';
 
         $content .= '<h2>' . __('Does the plugin collect telemetry data, directly or indirectly?', 'nextend-facebook-connect') . '</h2>';
         $content .= '<p class="privacy-policy-tutorial">' . __('No') . '</p>';
 
         $content .= '<h2>' . __('Does the plugin enqueue JavaScript, tracking pixels or embed iframes from a third party?', 'nextend-facebook-connect') . '</h2>';
-        $content .= '<p class="privacy-policy-tutorial">' . __('No') . '</p>';
+        /**
+         * The core plugin never loads third party assets, but a feature that does, such as Google
+         * One Tap, must correct this answer rather than leave a "No" that is no longer true.
+         */
+        $content .= '<p class="privacy-policy-tutorial">' . apply_filters('nsl_privacy_policy_third_party_assets', __('No')) . '</p>';
 
 
         wp_add_privacy_policy_content('Nextend Social Login', wp_kses_post($content));

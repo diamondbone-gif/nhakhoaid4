@@ -2,64 +2,48 @@
    rem giữ khả năng phóng chữ; vw co giãn liên tục cho mobile/tablet/PC. */
 
 @font-face {
-    font-family: id4HomeMyriadPro;
-    src: url('../assets/fonts/MyriadPro-Regular.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: id4HomeTimes;
-    src: url('../assets/fonts/timesi.ttf') format('truetype');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: id4HomeOpenSans;
-    src: url('../assets/fonts/OpenSans-Light.ttf') format('truetype');
+    font-family: "Open Sans";
+    src: url('../../assets/fonts/OpenSans-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: id4HomeOpenSans;
-    src: url("../assets/fonts/OpenSans-Regular.ttf") format("truetype");
+    font-family: "Open Sans";
+    src: url("../../assets/fonts/OpenSans-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: id4HomeOpenSans;
-    src: url("../assets/fonts/OpenSans-Semibold.ttf") format("truetype");
+    font-family: "Open Sans";
+    src: url("../../assets/fonts/OpenSans-Semibold.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: id4HomeOpenSans;
-    src: url("../assets/fonts/OpenSans-Bold.ttf") format("truetype");
+    font-family: "Open Sans";
+    src: url("../../assets/fonts/OpenSans-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: id4HomeOpenSans;
-    src: url("../assets/fonts/OpenSans-Italic.ttf") format("truetype");
+    font-family: "Open Sans";
+    src: url("../../assets/fonts/OpenSans-Italic.ttf") format("truetype");
     font-weight: 400;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: id4HomeOpenSans;
-    src: url("../assets/fonts/OpenSans-SemiboldItalic.ttf") format("truetype");
+    font-family: "Open Sans";
+    src: url("../../assets/fonts/OpenSans-SemiboldItalic.ttf") format("truetype");
     font-weight: 600;
     font-style: italic;
     font-display: swap;
@@ -81,7 +65,7 @@
     max-width: var(--cnkt--page-max);
     margin-inline: auto;
     overflow: hidden;
-    line-height: 1.5;
+    line-height: var(--cnkt--line-height);
 }
 
 #cnkt--part-07 button {
@@ -184,8 +168,8 @@
     --cnkt--dark: #211c16;
     --cnkt--cream: #f7efdd;
     --cnkt--heading: linear-gradient(110deg, #dcc18a, #ad7813);
-    --cnkt--font-body: 'id4HomeOpenSans', sans-serif;
-    --cnkt--font-ui: 'id4HomeOpenSans', sans-serif;
+    --cnkt--font-body: "Open Sans", sans-serif;
+    --cnkt--line-height: 1.5;
     --cnkt--content-max: 1480px;
     --cnkt--page-max: 1920px;
     --cnkt--gutter: 22px;
@@ -227,8 +211,22 @@
     font-size: var(--cnkt--text-size);
 }
 
+#cnkt--part-07 :is(h1,
+    h2,
+    h3,
+    h4,
+    p,
+    a,
+    button,
+    span,
+    small,
+    li,
+    dialog) {
+    font-family: var(--cnkt--font-body);
+}
+
 #cnkt--part-07 h2 {
-    font: 700 var(--cnkt--title-size)/1.25 var(--cnkt--font-ui);
+    font: 700 var(--cnkt--title-size)/var(--cnkt--line-height) var(--cnkt--font-body);
     letter-spacing: calc(1.4 * var(--cnkt--u));
     text-align: center;
     background-image: var(--cnkt--heading);
@@ -338,13 +336,13 @@
     margin-top: calc(24 * var(--cnkt--u));
     padding: calc(20 * var(--cnkt--u));
     border-radius: calc(30 * var(--cnkt--u));
-    background: rgb(250, 249, 247);
+    background: #faf9f8;
 }
 
 #cnkt--part-07 .cnkt--technology-tabs button {
-    background: var(--cnkt--cream);
+    background: #f6ecda;
     border-radius: calc(9 * var(--cnkt--u));
-    font: 600 var(--cnkt--text-size)/1.2 var(--cnkt--font-ui);
+    font: 600 var(--cnkt--text-size)/var(--cnkt--line-height) var(--cnkt--font-body);
     letter-spacing: calc(1.7 * var(--cnkt--u));
     padding: calc(12 * var(--cnkt--u)) calc(8 * var(--cnkt--u));
     white-space: nowrap;
@@ -352,7 +350,7 @@
 
 #cnkt--part-07 .cnkt--technology-tabs button[aria-selected="true"] {
     color: white;
-    background: var(--cnkt--gold);
+    background: #d1a246;
 }
 
 #cnkt--part-07 .cnkt--equipment-panel {
@@ -407,7 +405,7 @@
     z-index: 1;
     bottom: calc(20 * var(--cnkt--u));
     left: calc(24 * var(--cnkt--u));
-    font: 700 var(--cnkt--text-size)/1.22 var(--cnkt--font-ui);
+    font: 700 var(--cnkt--text-size)/var(--cnkt--line-height) var(--cnkt--font-body);
     letter-spacing: calc(1.5 * var(--cnkt--u));
 }
 
@@ -437,13 +435,13 @@
 
 #cnkt--part-07 .cnkt--facilities-panel h3,
 #cnkt--part-07 .cnkt--process-panel h3 {
-    font: 700 var(--cnkt--title-size)/1.3 var(--cnkt--font-ui);
+    font: 700 var(--cnkt--title-size)/var(--cnkt--line-height) var(--cnkt--font-body);
     margin-bottom: calc(24 * var(--cnkt--u));
 }
 
 #cnkt--part-07 .cnkt--facilities-panel p {
     margin-bottom: calc(30 * var(--cnkt--u));
-    line-height: 1.5;
+    line-height: var(--cnkt--line-height);
 }
 
 #cnkt--part-07 .cnkt--process-panel {
@@ -491,7 +489,7 @@
     overflow: auto;
     color: rgb(33, 28, 22);
     background: rgb(255, 255, 255);
-    font: var(--cnkt--text-size) / 1.5 var(--cnkt--font-ui);
+    font: var(--cnkt--text-size)/var(--cnkt--line-height) var(--cnkt--font-body);
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.333) 0px 20px 80px;
 }
@@ -536,7 +534,7 @@
 }
 
 #cnkt--part-07 .cnkt--gallery-pair figcaption {
-    font: 700 var(--cnkt--text-size) var(--cnkt--font-ui);
+    font: 700 var(--cnkt--text-size)/var(--cnkt--line-height) var(--cnkt--font-body);
     color: rgb(165, 123, 34);
     margin-top: 10px;
 }
@@ -612,7 +610,7 @@ body.cnkt--dialog-open {
 }
 
 #cnkt--part-07 .cnkt--image-dialog h2 {
-    font: 400 var(--cnkt--title-size)/1.5 var(--cnkt--font-ui);
+    font: 400 var(--cnkt--title-size)/var(--cnkt--line-height) var(--cnkt--font-body);
     margin: 14px 0px 0px;
     letter-spacing: 0px;
 }
@@ -644,14 +642,14 @@ body.cnkt--dialog-open {
 }
 
 #cnkt--part-07 .cnkt--process-heading>p {
-    font: 600 var(--cnkt--text-size)/1.4 var(--cnkt--font-ui);
+    font: 600 var(--cnkt--text-size)/var(--cnkt--line-height) var(--cnkt--font-body);
     color: rgb(164, 123, 39);
     letter-spacing: calc(2 * var(--cnkt--u));
     margin-bottom: calc(8 * var(--cnkt--u));
 }
 
 #cnkt--part-07 .cnkt--process-heading h3 {
-    font: 700 var(--cnkt--title-size)/1.3 var(--cnkt--font-ui);
+    font: 700 var(--cnkt--title-size)/var(--cnkt--line-height) var(--cnkt--font-body);
     margin: 0px;
 }
 
@@ -677,19 +675,19 @@ body.cnkt--dialog-open {
 }
 
 #cnkt--part-07 .cnkt--step-number {
-    font: 400 var(--cnkt--text-size)/1 var(--cnkt--font-ui);
+    font: 400 var(--cnkt--text-size)/1 var(--cnkt--font-body);
     color: var(--cnkt--gold);
     padding-top: calc(3 * var(--cnkt--u));
     flex-shrink: 0;
 }
 
 #cnkt--part-07 .cnkt--process-step h4 {
-    font: 700 var(--cnkt--process-title-size)/1.35 var(--cnkt--font-ui);
+    font: 700 var(--cnkt--process-title-size)/var(--cnkt--line-height) var(--cnkt--font-body);
     margin-bottom: calc(12 * var(--cnkt--u));
 }
 
 #cnkt--part-07 .cnkt--process-step p {
-    font: 400 var(--cnkt--text-size)/1.55 var(--cnkt--font-ui);
+    font: 400 var(--cnkt--text-size)/var(--cnkt--line-height) var(--cnkt--font-body);
     color: rgb(101, 96, 89);
 }
 
@@ -704,7 +702,7 @@ body.cnkt--dialog-open {
     flex-direction: column;
     justify-content: center;
     gap: calc(20 * var(--cnkt--u));
-    font: 600 var(--cnkt--text-size)/1.4 var(--cnkt--font-ui);
+    font: 600 var(--cnkt--text-size)/var(--cnkt--line-height) var(--cnkt--font-body);
 }
 
 #cnkt--part-07 .cnkt--journey-poster {
@@ -728,7 +726,7 @@ body.cnkt--dialog-open {
 }
 
 #cnkt--part-07 .cnkt--journey-play-label {
-    font: 600 var(--cnkt--text-size)/1.4 var(--cnkt--font-ui);
+    font: 600 var(--cnkt--text-size)/var(--cnkt--line-height) var(--cnkt--font-body);
     text-shadow: rgba(0, 0, 0, 0.533) 0px 2px 8px;
 }
 
@@ -826,7 +824,7 @@ body.cnkt--dialog-open {
     #cnkt--part-07 h2 {
         font-size: var(--cnkt--title-size);
         letter-spacing: 0.5px;
-        line-height: 1.35;
+        line-height: var(--cnkt--line-height);
     }
 
     #cnkt--part-07 section {
@@ -861,7 +859,7 @@ body.cnkt--dialog-open {
 
     #cnkt--part-07 .cnkt--technology-tabs button {
         font-size: var(--cnkt--text-size);
-        line-height: 1.4;
+        line-height: var(--cnkt--line-height);
         letter-spacing: 0px;
         white-space: normal;
         padding: 8px 3px;
@@ -1037,7 +1035,7 @@ body.cnkt--dialog-open {
 
     #cnkt--part-07 .cnkt--process-step p {
         font-size: var(--cnkt--text-size);
-        line-height: 1.6;
+        line-height: var(--cnkt--line-height);
     }
 
     #cnkt--part-07 .cnkt--process-action {
@@ -1132,12 +1130,12 @@ body.cnkt--dialog-open {
    Các class font dưới đây dùng khi cần chọn riêng Myriad Pro hoặc Times Italic. */
 
 #cnkt--part-07 .cnkt--text-myriad {
-    font-family: 'id4HomeMyriadPro', var(--cnkt--font-body);
+    font-family: var(--cnkt--font-body);
     font-weight: 400;
 }
 
 #cnkt--part-07 .cnkt--text-times-italic {
-    font-family: 'id4HomeTimes', 'Times New Roman', serif;
+    font-family: var(--cnkt--font-body);
     font-weight: 400;
     font-style: italic;
 }
@@ -1212,7 +1210,7 @@ body.cnkt--dialog-open {
 
     #cnkt--part-07 .cnkt--equipment-panel .cnkt--technology-card span {
         font-size: var(--cnkt--text-size);
-        line-height: 1.35;
+        line-height: var(--cnkt--line-height);
         left: 7px;
         right: 5px;
         bottom: 7px;
@@ -1300,7 +1298,7 @@ body.cnkt--dialog-open {
 
     #cnkt--part-07>section h2:not(.cnkt--sr-only):not(dialog h2) {
         font-size: var(--cnkt--title-size);
-        line-height: 1.3;
+        line-height: var(--cnkt--line-height);
         letter-spacing: .035em;
         text-wrap: balance;
     }
@@ -1331,17 +1329,17 @@ body.cnkt--dialog-open {
 #cnkt--part-07>section :is(p,
     li,
     dd):not(dialog *) {
-    line-height: 1.4;
+    line-height: var(--cnkt--line-height);
 }
 
 #cnkt--part-07>section :is(h3,
     h4,
     dt):not(dialog *) {
-    line-height: 1.3;
+    line-height: var(--cnkt--line-height);
 }
 
 #cnkt--part-07>section h2:not(dialog *) {
-    line-height: 1.2;
+    line-height: var(--cnkt--line-height);
 }
 
 
@@ -1508,7 +1506,7 @@ body.cnkt--dialog-open {
     display: block;
     margin-top: .15em;
     font-size: .875em;
-    line-height: 1.3;
+    line-height: var(--cnkt--line-height);
 }
 
 #cnkt--part-07 .cnkt--process-layout .cnkt--process-product {
@@ -1581,7 +1579,7 @@ body.cnkt--dialog-open {
     #cnkt--part-07 .cnkt--technology-tabs button {
         min-height: 48px;
         padding: 6px 4px;
-        line-height: 1.25;
+        line-height: var(--cnkt--line-height);
     }
 
     #cnkt--part-07 .cnkt--equipment-panel {
@@ -1596,7 +1594,7 @@ body.cnkt--dialog-open {
     #cnkt--part-07 .cnkt--equipment-panel .cnkt--technology-card span {
         inset: auto 10px 10px;
         max-width: none;
-        line-height: 1.25;
+        line-height: var(--cnkt--line-height);
     }
 
     #cnkt--part-07 .cnkt--image-dialog {
@@ -1610,7 +1608,7 @@ body.cnkt--dialog-open {
 
     #cnkt--part-07 .cnkt--image-dialog h2 {
         font-size: var(--cnkt--text-size);
-        line-height: 1.35;
+        line-height: var(--cnkt--line-height);
         overflow-wrap: anywhere;
     }
 }
@@ -1641,5 +1639,15 @@ body.cnkt--dialog-open {
 @media (max-width: 43.749em) {
     #cnkt--part-07 {
         --cnkt--panel-padding: 6px;
+    }
+}
+
+
+/* Ngắt nhãn tab theo cụm trên điện thoại, kể cả khi xoay ngang. */
+
+@media (width < 43.75em),
+(orientation: landscape) and (max-height: 37.5em) and (hover: none) and (pointer: coarse) {
+    #cnkt--part-07 .cnkt--technology-tabs button>.cnkt--tab-line {
+        display: block;
     }
 }

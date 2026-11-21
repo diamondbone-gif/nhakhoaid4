@@ -141,6 +141,18 @@ NextendSocialLoginAdmin::showProBox();
                 <input type="hidden" name="register_roles[]" value=""/>
             </td>
         </tr>
+        <?php
+        /**
+         * Lets an individual provider add its own rows to the shared PRO settings section.
+         * The fragment inherits $provider, $settings, $isPRO and $attr from this scope, so a
+         * provider specific row gets the same disabled-for-free treatment as the rows above.
+         * It must output <tr> elements only.
+         */
+        $proSettingsPath = $provider->getPath() . '/admin/settings-pro.php';
+        if (file_exists($proSettingsPath)) {
+            include($proSettingsPath);
+        }
+        ?>
         </tbody>
     </table>
 <?php if ($isPRO): ?>

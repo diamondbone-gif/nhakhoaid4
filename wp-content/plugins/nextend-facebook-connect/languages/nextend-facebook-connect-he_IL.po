@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nextend-facebook-connect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-28 09:19+0200\n"
-"PO-Revision-Date: 2026-07-28 09:19+0200\n"
+"POT-Creation-Date: 2026-11-12 15:20+0100\n"
+"PO-Revision-Date: 2026-11-12 15:20+0100\n"
 "Last-Translator: \n"
 "Language-Team: עִבְרִית\n"
 "Language: he_IL\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: "
@@ -127,13 +127,13 @@ msgid "Deactivate completed."
 msgstr "הכיבוי הושלם."
 
 msgid "(no title)"
-msgstr ""
+msgstr "(ללא כותרת)"
 
 msgid "Settings"
 msgstr "הגדרות"
 
 msgid "Analyze & Repair"
-msgstr ""
+msgstr "ניתוח ותיקון"
 
 #, php-format
 msgid "Unexpected response: %s"
@@ -238,28 +238,20 @@ msgstr "שמור שינויים"
 
 #, php-format
 msgid "Follow the guide at: %s"
-msgstr ""
+msgstr "יש לעקוב אחר המדריך בכתובת: %s"
 
 #, php-format
 msgid "I am done setting up my %s"
 msgstr "סיימתי להגדיר את ה %s שלי"
 
-#, fuzzy
-#| msgid "App ID"
 msgctxt "Social Login App"
 msgid "App"
-msgstr "מזהה אפליקציה App ID"
+msgstr "אפליקציה"
 
 msgid "Getting Started"
 msgstr "איך מתחילים"
 
-#, fuzzy, php-format
-#| msgid ""
-#| "To allow your visitors to log in with their %1$s account, first you must "
-#| "create an %1$s App. The following guide will help you through the %1$s "
-#| "App creation process. After you have created your %1$s App, head over to "
-#| "\"Settings\" and configure the given \"%2$s\" and \"%3$s\" according to "
-#| "your %1$s App."
+#, php-format
 msgid ""
 "To allow your visitors to log in with their %1$s account, first you must "
 "create an App for %1$s. The following guide will help you through the %1$s "
@@ -267,17 +259,17 @@ msgid ""
 "\"Settings\" and configure the fields with the credentials of the App you "
 "created."
 msgstr ""
-"כדי לאפשר למבקרים שלך להתחבר באמצעות חשבון %1$s שלהם, תחילה עליך ליצור יישום "
-"%1$s. המדריך הבא יעזור לכם בתהליך יצירת האפליקציה %1$s. לאחר יצירת אפליקציית "
-"%1$s, יש לעבור אל \"הגדרות\" ולקבוע את התצורה של \"%2$s\" ו -\" %3$s \"בהתאם "
-"לאפליקציית %1$s."
+"כדי לאפשר למבקרים שלך להתחבר באמצעות חשבון %1$s שלהם, תחילה עליך ליצור "
+"אפליקציה עבור %1$s. המדריך הבא יעזור לך בתהליך יצירת אפליקציית %1$s. לאחר "
+"יצירת אפליקציית %1$s, יש לעבור אל \"הגדרות\" ולמלא את השדות בפרטי הגישה של "
+"האפליקציה שיצרת."
 
 #, php-format
 msgid "How to create an App for %s: "
-msgstr ""
+msgstr "כיצד ליצור אפליקציה עבור %s: "
 
 msgid "URLs for the App creation:"
-msgstr ""
+msgstr "כתובות URL ליצירת האפליקציה:"
 
 msgid "Buttons"
 msgstr "כפתורים"
@@ -349,19 +341,16 @@ msgstr "בטל כניסה לתפקידים שנבחרו"
 msgid "Default roles for user who registered with this provider"
 msgstr "תפקידי ברירת מחדל עבור משתמש שנרשם לספק זה"
 
-#, fuzzy, php-format
-#| msgid "Check the %1$s option."
+#, php-format
 msgid "Default (The %1$s is: %2$s)"
-msgstr "יש לבדוק את האפשרות %1$s."
+msgstr "ברירת מחדל (%1$s הוא: %2$s)"
 
-#, fuzzy
-#| msgid "Default redirect url"
 msgid "default WordPress role"
-msgstr "ברירת המחדל לניתוב"
+msgstr "תפקיד ברירת המחדל של WordPress"
 
 #, php-format
 msgid "Default (The %s.)"
-msgstr ""
+msgstr "ברירת מחדל (%s.)"
 
 msgid "Register"
 msgstr "הרשמה"
@@ -644,19 +633,19 @@ msgid "Loved it"
 msgstr "אהבתי"
 
 msgid "Rate 1 star"
-msgstr ""
+msgstr "דירוג כוכב אחד"
 
 msgid "Rate 2 stars"
-msgstr ""
+msgstr "דירוג 2 כוכבים"
 
 msgid "Rate 3 stars"
-msgstr ""
+msgstr "דירוג 3 כוכבים"
 
 msgid "Rate 4 stars"
-msgstr ""
+msgstr "דירוג 4 כוכבים"
 
 msgid "Rate 5 stars"
-msgstr ""
+msgstr "דירוג 5 כוכבים"
 
 msgid "Please Leave a Review"
 msgstr "אנא השאירו חוות דעת"
@@ -672,7 +661,7 @@ msgid "Ok, you deserve it"
 msgstr "אוקי, מגיע לכם"
 
 msgid "Close review box"
-msgstr ""
+msgstr "סגירת תיבת הביקורת"
 
 msgid "Register form"
 msgstr "טופס הרשמה"
@@ -782,21 +771,16 @@ msgstr "תבנית אימייל להרשמה"
 msgid "WordPress default notification"
 msgstr "הודעת ברירת מחדל של WordPress"
 
-#, fuzzy
-#| msgid "WordPress default notification"
 msgid "BuddyPress welcome notification"
-msgstr "הודעת ברירת מחדל של WordPress"
+msgstr "הודעת ברוכים הבאים של BuddyPress"
 
-#, fuzzy, php-format
-#| msgid ""
-#| "Defines whether the registration with %1$s will send the same "
-#| "registration notification that %2$s does, instead of the %3$s default one."
+#, php-format
 msgid ""
 "Defines whether the registration with %1$s will send the same welcome "
 "notification that %2$s does, instead of the %3$s default one."
 msgstr ""
-"מגדירה אם ההרשמה עם %1$s תשלח את אותה הודעת רישום כמו %2$s, במקום הודעת "
-"ברירת המחדל %3$s."
+"מגדירה אם ההרשמה עם %1$s תשלח את אותה הודעת ברוכים הבאים כמו %2$s, במקום "
+"הודעת ברירת המחדל של %3$s."
 
 msgid "Login button"
 msgstr "כפתור התחברות"
@@ -847,10 +831,8 @@ msgstr "ברירת מחדל עם מפריד עליון"
 msgid "Default with bottom separator"
 msgstr "ברירת מחדל עם מפריד תחתון"
 
-#, fuzzy
-#| msgid "Unlink"
 msgid "Link/Unlink"
-msgstr "ביטול קישור"
+msgstr "קישור/ביטול קישור"
 
 msgid "No Connect button in Login form"
 msgstr "אין כפתור התחברות בטופס התחברות"
@@ -946,10 +928,8 @@ msgstr "עמוד לזרימת רישום"
 msgid "None"
 msgstr "אין"
 
-#, fuzzy
-#| msgid "Page for register flow"
 msgid "Clear - Page for register flow"
-msgstr "עמוד לזרימת רישום"
+msgstr "ניקוי - עמוד לזרימת רישום"
 
 msgid ""
 "This setting is used when you request additional data from the users (such "
@@ -974,10 +954,8 @@ msgstr "%1$s לא תוכלו להגיע לדף שנבחר אלא אם תתבצע
 msgid "OAuth redirect uri proxy page"
 msgstr "דף שרת proxy להפניה מחדש של OAuth"
 
-#, fuzzy
-#| msgid "OAuth redirect uri proxy page"
 msgid "Clear - OAuth redirect uri proxy page"
-msgstr "דף שרת proxy להפניה מחדש של OAuth"
+msgstr "ניקוי - דף שרת proxy להפניה מחדש של OAuth"
 
 msgid ""
 "You can use this setting when wp-login.php page is not available to handle "
@@ -1039,11 +1017,7 @@ msgstr "אפשר רישום עם התחברות חברתית."
 msgid "Custom label for register buttons"
 msgstr "תווית מותאמת אישית עבור לחצני הרשמה"
 
-#, fuzzy, php-format
-#| msgid ""
-#| "Set a custom label for the social buttons in registration forms and for "
-#| "shortcodes with %1$s parameter set to %2$s.<br>The register specific "
-#| "labels can be modified at the Buttons tab of each provider."
+#, php-format
 msgid ""
 "Set a custom label for the social buttons in registration forms and for "
 "shortcodes with %1$s parameter set to %2$s.<br>The register specific labels "
@@ -1052,7 +1026,8 @@ msgid ""
 msgstr ""
 "הגדר תווית מותאמת אישית עבור הכפתורים החברתיים בטופסי ההרשמה ועבור קודי "
 "קיצור עם פרמטר %1$s המוגדר ל - %2$s.<br>ניתן לשנות את התוויות הספציפיות "
-"לרישום בכרטיסייה לחצנים של כל ספק."
+"לרישום בכרטיסייה כפתורים של כל ספק.<br>אפשרות זו מאפשרת גם שימוש באפשרויות "
+"%3$s ספציפיות לרישום."
 
 msgid "Redirect overlay"
 msgstr "הפנה שכבת - על"
@@ -1082,26 +1057,23 @@ msgid "Note:"
 msgstr "הערה: "
 
 msgid "Unsupported WebView behavior"
-msgstr ""
+msgstr "התנהגות כאשר WebView אינו נתמך"
 
-#, fuzzy
-#| msgid "Image button"
 msgid "Remove button"
-msgstr "לחצן תמונה"
+msgstr "הסרת הכפתור"
 
-#, fuzzy
-#| msgid "Default button"
 msgid "Disable button"
-msgstr "לחצן ברירת מחדל למסך תצוגה"
+msgstr "השבתת הכפתור"
 
 #, php-format
 msgid "Some %1$sproviders%2$s don't support embedded browsers."
-msgstr ""
+msgstr "%1$sספקים%2$s מסוימים אינם תומכים בדפדפנים מוטמעים."
 
 msgid ""
 "This setting defines if we should remove or disable the related buttons in "
 "WebView environments."
 msgstr ""
+"הגדרה זו קובעת אם להסיר או להשבית את הכפתורים הרלוונטיים בסביבות WebView."
 
 msgid "Below and floating"
 msgstr "מתחת וצף"
@@ -1291,7 +1263,7 @@ msgid "Please save your changes before verifying settings."
 msgstr "יש לשמור את השינויים לפני אימות ההגדרות."
 
 msgid "Error: Email verification status is not checked in this provider!"
-msgstr ""
+msgstr "שגיאה: ספק זה אינו בודק את סטטוס אימות האימייל!"
 
 msgid "Authentication successful"
 msgstr "האימות בוצע בהצלחה"
@@ -1306,15 +1278,15 @@ msgid "Unlink is not allowed!"
 msgstr "ביטול הקישור אינו מותר!"
 
 msgid "Unlink failed: nonce is invalid"
-msgstr ""
+msgstr "ביטול הקישור נכשל: ה-nonce אינו תקין"
 
 #, php-format
 msgid "You are attempting to unlink your WordPress account from %s."
-msgstr ""
+msgstr "אתה מנסה לבטל את הקישור בין חשבון WordPress שלך לבין %s."
 
 #, php-format
 msgid "Do you really want to %1$s unlink %2$s it?"
-msgstr ""
+msgstr "האם באמת ברצונך %1$s לבטל את הקישור %2$s?"
 
 msgid "The test was successful"
 msgstr "הבדיקה בוצעה בהצלחה"
@@ -1356,20 +1328,18 @@ msgid ""
 "address is not verified.%2$sPlease login to your existing account using your "
 "password and link your %1$s account to it manually!"
 msgstr ""
+"מצאנו משתמש עם כתובת האימייל %1$s שלך, אך נראה שכתובת האימייל שלו לא אומתה."
+"%2$sיש להתחבר לחשבון הקיים שלך באמצעות הסיסמה ולקשר אליו באופן ידני את חשבון "
+"%1$s שלך!"
 
-#, fuzzy, php-format
-#| msgid ""
-#| "We found a user with your %1$s email address. Unfortunately it belongs to "
-#| "a different %1$s account, so we are unable to log you in. Please use the "
-#| "linked %1$s account or log in with your password!"
+#, php-format
 msgid ""
 "We found a user with your %1$s email address. Unfortunately, it belongs to a "
 "different account, so we are unable to log you in. Please use the linked "
 "account or log in with your password!"
 msgstr ""
-"מצאנו משתמש עם כתובת האימייל %1$s שלך. לצערנו הוא שייך לחשבון %1$s אחר, לכן "
-"אין לנו אפשרות להתחבר אליך. יש להשתמש בחשבון %1$s המקושר או להתחבר באמצעות "
-"הסיסמה!"
+"מצאנו משתמש עם כתובת האימייל %1$s שלך. לצערנו, הוא שייך לחשבון אחר, ולכן לא "
+"נוכל לחבר אותך. יש להשתמש בחשבון המקושר או להתחבר באמצעות הסיסמה שלך!"
 
 msgid "Register For This Site"
 msgstr "הרשם לאתר זה"
@@ -1406,10 +1376,8 @@ msgstr "חכה. "
 msgid "You are being redirected to another page,<br>it may take a few seconds."
 msgstr "אתה מנותב לדף אחר,<br>זה עשוי לקחת כמה שניות."
 
-#, fuzzy
-#| msgid "This provider doesn't support REST API calls!"
 msgid "The selected provider doesn't support embedded browsers!"
-msgstr "ספק זה אינו תומך בשיחות REST API!"
+msgstr "הספק שנבחר אינו תומך בדפדפנים מוטמעים!"
 
 msgid "Social Login"
 msgstr "התחברות לרשתות חברתיות"
@@ -1472,16 +1440,16 @@ msgid "Profile image size"
 msgstr "תמונת פרופיל"
 
 msgid "Small"
-msgstr ""
+msgstr "קטן"
 
 msgid "Medium"
-msgstr ""
+msgstr "בינוני"
 
 msgid "Large"
-msgstr ""
+msgstr "גדול"
 
 msgid "Extra Large"
-msgstr ""
+msgstr "גדול במיוחד"
 
 msgid "Continue with <b>Facebook</b>"
 msgstr "המשך עם <b>פייסבוק</b>"
@@ -1505,7 +1473,44 @@ msgid "Required scope: %1$s"
 msgstr "היקף נדרש: %1$s"
 
 msgid "Neutral"
+msgstr "ניטרלי"
+
+msgid ""
+"Required by Google One Tap. Without it the One Tap prompt never appears."
+msgstr "נדרש עבור Google One Tap. בלעדיו חלונית One Tap לא תופיע לעולם."
+
+msgid "Google One Tap"
+msgstr "Google One Tap"
+
+msgid "Show where the Google button appears"
+msgstr "הצגה במקומות שבהם מופיע כפתור Google"
+
+msgid "Show on all pages"
+msgstr "הצגה בכל העמודים"
+
+#, php-format
+msgid ""
+"Shows Google's One Tap prompt, so visitors can sign in with their Google "
+"account without leaving the page. %1$sLearn more%2$s."
 msgstr ""
+"מציג את חלונית One Tap של Google, כך שמבקרים יכולים להתחבר עם חשבון Google "
+"שלהם בלי לעזוב את הדף. %1$sלמידע נוסף%2$s."
+
+#, php-format
+msgid ""
+"%1$s Requires HTTPS, and %2$s added to the %3$sAuthorized JavaScript "
+"origins%4$s of your Google app."
+msgstr ""
+"%1$s נדרש HTTPS, ויש להוסיף את %2$s ל-%3$sAuthorized JavaScript origins%4$s "
+"באפליקציית Google שלך."
+
+#, php-format
+msgid ""
+"%1$s Unlike the Google button, One Tap loads Google's script as soon as the "
+"page opens. %2$sLearn more%3$s."
+msgstr ""
+"%1$s בניגוד לכפתור Google, One Tap טוען את הסקריפט של Google מיד עם פתיחת "
+"הדף. %2$sלמידע נוסף%3$s."
 
 msgid "Client ID"
 msgstr "מזהה לקוח"
@@ -1540,19 +1545,19 @@ msgid "Required API: %1$s"
 msgstr "API נדרש: %1$s"
 
 msgid "X"
-msgstr ""
+msgstr "X"
 
 msgid "Legacy"
-msgstr ""
+msgstr "מדור קודם"
 
 msgid "API version"
-msgstr ""
+msgstr "גרסת API"
 
 msgid "v1.1"
-msgstr ""
+msgstr "v1.1"
 
 msgid "v2"
-msgstr ""
+msgstr "v2"
 
 msgid "API Key"
 msgstr "מפתח API"
@@ -1560,25 +1565,17 @@ msgstr "מפתח API"
 msgid "API Key Secret"
 msgstr "מפתח API סודי"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Continue with <b>X</b>"
-msgstr "המשך עם <b>VK</b>"
+msgstr "המשך עם <b>X</b>"
 
-#, fuzzy
-#| msgid "Sign up with <b>VK</b>"
 msgid "Sign up with <b>X</b>"
-msgstr "הרשמה באמצעות <b>VK</b>"
+msgstr "הרשמה באמצעות <b>X</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>VK</b>"
 msgid "Link account with <b>X</b>"
-msgstr "קשר חשבון עם <b>VK</b>"
+msgstr "קשר חשבון עם <b>X</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>VK</b>"
 msgid "Unlink account from <b>X</b>"
-msgstr "בטל קישור של חשבון מ - <b>VK</b>"
+msgstr "בטל קישור של חשבון מ - <b>X</b>"
 
 msgctxt "Register form submit button label"
 msgid "Register"
@@ -1695,40 +1692,55 @@ msgstr ""
 
 #, php-format
 msgid ""
+"Yes. With Google One Tap enabled, %1$s loads Google's Identity Services "
+"library from %2$s on the pages where the One Tap prompt can appear. Google "
+"receives the visitor's IP address and reads its own cookies on that domain "
+"to decide whether the prompt can be shown."
+msgstr ""
+"כן. כאשר Google One Tap מופעל, %1$s טוען את ספריית Identity Services של "
+"Google מ-%2$s בדפים שבהם חלונית One Tap עשויה להופיע. Google מקבלת את כתובת "
+"ה-IP של המבקר וקוראת את קובצי ה-cookie שלה בדומיין זה כדי להחליט אם ניתן "
+"להציג את החלונית."
+
+#, php-format
+msgid ""
+"With Google One Tap enabled, Google's library also stores a %1$s cookie on "
+"this site, which holds the visitor's One Tap status, such as whether they "
+"closed the prompt."
+msgstr ""
+"כאשר Google One Tap מופעל, הספרייה של Google שומרת באתר זה גם קובץ cookie "
+"בשם %1$s, המכיל את מצב One Tap של המבקר, למשל אם סגר את החלונית."
+
+#, php-format
+msgid ""
 "Most of these information can only be retrieved, when the field is marked as "
 "Public on the user's %s page!"
 msgstr ""
 "רוב המידע הזה ניתן לאחזר רק כאשר השדה מסומן כציבורי בדף ה %s של המשתמש!"
 
-#, fuzzy, php-format
-#| msgid ""
-#| "Most of these information can only be retrieved, when the field is marked "
-#| "as Public on the user's %s page!"
+#, php-format
 msgid ""
 "Most of these information can only be retrieved, when the field is filled on "
 "the user's %s page!"
-msgstr ""
-"רוב המידע הזה ניתן לאחזר רק כאשר השדה מסומן כציבורי בדף ה %s של המשתמש!"
+msgstr "רוב המידע הזה ניתן לאחזר רק כאשר השדה מולא בדף ה %s של המשתמש!"
 
-#, fuzzy, php-format
-#| msgid ""
-#| "Most of these information can only be retrieved, when the field is marked "
-#| "as Public on the user's %s page!"
+#, php-format
 msgid ""
 "Most of these information can only be retrieved, when the field is filled on "
 "the user's %s page! For the campaigns, the user must have a public campaign!"
 msgstr ""
-"רוב המידע הזה ניתן לאחזר רק כאשר השדה מסומן כציבורי בדף ה %s של המשתמש!"
+"רוב המידע הזה ניתן לאחזר רק כאשר השדה מולא בדף ה %s של המשתמש! עבור "
+"הקמפיינים, למשתמש חייב להיות קמפיין ציבורי!"
 
 #, php-format
 msgid ""
 "The Spotify Sync data requires the %1$s with the necessary scopes enabled!"
-msgstr ""
+msgstr "סנכרון הנתונים של Spotify דורש את %1$s כשההיקפים הנדרשים מופעלים!"
 
 #, php-format
 msgid ""
 "The TikTok Sync data requires the %1$s with the necessary scopes enabled!"
-msgstr ""
+msgstr "סנכרון הנתונים של TikTok דורש את %1$s כשההיקפים הנדרשים מופעלים!"
 
 msgid "Continue with <b>Amazon</b>"
 msgstr "המשך עם <b>Amazon</b>"
@@ -1820,11 +1832,11 @@ msgstr "מפתח API סודי"
 
 #, php-format
 msgid "We detected that your %1$s is probably overridden over the %2$s filter!"
-msgstr ""
+msgstr "זיהינו שהערך של %1$s כנראה נדרס באמצעות המסנן %2$s!"
 
 #, php-format
 msgid "We detected that your %1$s has been overridden over the %2$s filter!"
-msgstr ""
+msgstr "זיהינו שהערך של %1$s נדרס באמצעות המסנן %2$s!"
 
 msgid "Continue with <b>Disqus</b>"
 msgstr "המשך עם <b>Disqus</b>"
@@ -1850,15 +1862,11 @@ msgstr "קישור חשבון ל <b>- GitHub</b>"
 msgid "Unlink account from <b>GitHub</b>"
 msgstr "ביטול קישור החשבון ל <b>- GitHub</b>"
 
-#, fuzzy
-#| msgid "API Key"
 msgid "REST API Key"
-msgstr "מפתח API"
+msgstr "מפתח REST API"
 
-#, fuzzy
-#| msgid "Client Secret"
 msgid "Client Secret Code"
-msgstr "מפתח לקוח סודי"
+msgstr "קוד מפתח לקוח סודי"
 
 msgid "Authorization Prompt"
 msgstr "בקשה לאישור"
@@ -1870,7 +1878,7 @@ msgid "Force user to enter login credentials on each login"
 msgstr "כפה על המשתמש להזין אישורי כניסה בכל התחברות"
 
 msgid "Start the authentication with the Kakao Account sign-up page."
-msgstr ""
+msgstr "התחלת האימות מדף ההרשמה של Kakao Account."
 
 msgid "Email scope"
 msgstr "היקף דוא\"ל"
@@ -1879,27 +1887,19 @@ msgid "Disable, when you have no rights for email address."
 msgstr "השבת, כאשר אין לך זכויות לכתובת דואר אלקטרוני."
 
 msgid "Mini"
-msgstr ""
+msgstr "מיני"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Continue with <b>Kakao</b>"
-msgstr "המשך עם <b>VK</b>"
+msgstr "המשך עם <b>Kakao</b>"
 
-#, fuzzy
-#| msgid "Sign up with <b>VK</b>"
 msgid "Sign up with <b>Kakao</b>"
-msgstr "הרשמה באמצעות <b>VK</b>"
+msgstr "הרשמה באמצעות <b>Kakao</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>VK</b>"
 msgid "Link account with <b>Kakao</b>"
-msgstr "קשר חשבון עם <b>VK</b>"
+msgstr "קשר חשבון עם <b>Kakao</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>VK</b>"
 msgid "Unlink account from <b>Kakao</b>"
-msgstr "בטל קישור של חשבון מ - <b>VK</b>"
+msgstr "בטל קישור של חשבון מ - <b>Kakao</b>"
 
 msgid "Channel ID"
 msgstr "מזהה ערוץ"
@@ -1953,13 +1953,15 @@ msgstr ""
 "הפעל, אם ברצונך להציע רק את שיטת ההתחברות הראשונית שנבחרה במסך אימות השורה."
 
 msgid "Allow Auto login"
-msgstr ""
+msgstr "אפשר התחברות אוטומטית"
 
 #, php-format
 msgid ""
 "Having the Auto login enabled could make the login fail in certain cases. "
 "%1$sLearn more%2$s."
 msgstr ""
+"הפעלת ההתחברות האוטומטית עלולה לגרום לכשל בהתחברות במקרים מסוימים. %1$sלמידע "
+"נוסף%2$s."
 
 msgid "Continue with <b>Line</b>"
 msgstr "המשך עם <b>שורה</b>"
@@ -1995,20 +1997,16 @@ msgid "Audience"
 msgstr "קהל"
 
 msgid "Multiple Entra ID tenants"
-msgstr ""
+msgstr "דיירי Entra ID מרובים"
 
-#, fuzzy
-#| msgid "Personal Microsoft accounts only"
 msgid "Any Entra ID Tenant + Personal Microsoft accounts"
-msgstr "חשבונות Microsoft אישיים בלבד"
+msgstr "כל דייר Entra ID + חשבונות Microsoft אישיים"
 
-#, fuzzy
-#| msgid "Personal Microsoft accounts only"
 msgid "Personal accounts only"
-msgstr "חשבונות Microsoft אישיים בלבד"
+msgstr "חשבונות אישיים בלבד"
 
 msgid "Single tenant only - Default Directory with Azure AD tenant:"
-msgstr ""
+msgstr "דייר יחיד בלבד - Default Directory עם דייר Azure AD:"
 
 #, php-format
 msgid ""
@@ -2031,25 +2029,17 @@ msgstr "קשר חשבון עם <b>Microsoft</b>"
 msgid "Unlink account from <b>Microsoft</b>"
 msgstr "ביטול קישור חשבון מ - <b>Microsoft</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Amazon</b>"
 msgid "Continue with <b>Patreon</b>"
-msgstr "המשך עם <b>Amazon</b>"
+msgstr "המשך עם <b>Patreon</b>"
 
-#, fuzzy
-#| msgid "Sign up with <b>Amazon</b>"
 msgid "Sign up with <b>Patreon</b>"
-msgstr "הרשמה ל - <b>Amazon</b>"
+msgstr "הרשמה באמצעות <b>Patreon</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>Amazon</b>"
 msgid "Link account with <b>Patreon</b>"
-msgstr "קשר חשבון עם <b>אמזון</b>"
+msgstr "קשר חשבון עם <b>Patreon</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Amazon</b>"
 msgid "Unlink account from <b>Patreon</b>"
-msgstr "ביטול הקישור של החשבון <b>לאמזון</b>"
+msgstr "בטל קישור של חשבון מ - <b>Patreon</b>"
 
 msgid "Secret"
 msgstr "סוד"
@@ -2066,25 +2056,17 @@ msgstr "קישור החשבון ל <b>- PayPal</b>"
 msgid "Unlink account from <b>PayPal</b>"
 msgstr "ביטול הקישור של החשבון ל - <b>PayPal</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Continue with <b>Reddit</b>"
-msgstr "המשך עם <b>VK</b>"
+msgstr "המשך עם <b>Reddit</b>"
 
-#, fuzzy
-#| msgid "Sign up with <b>VK</b>"
 msgid "Sign up with <b>Reddit</b>"
-msgstr "הרשמה באמצעות <b>VK</b>"
+msgstr "הרשמה באמצעות <b>Reddit</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>VK</b>"
 msgid "Link account with <b>Reddit</b>"
-msgstr "קשר חשבון עם <b>VK</b>"
+msgstr "קשר חשבון עם <b>Reddit</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>VK</b>"
 msgid "Unlink account from <b>Reddit</b>"
-msgstr "בטל קישור של חשבון מ - <b>VK</b>"
+msgstr "בטל קישור של חשבון מ - <b>Reddit</b>"
 
 msgid "Slack Team ID"
 msgstr "מזהה צוות Slack"
@@ -2123,27 +2105,19 @@ msgid "Unlink account from <b>Slack</b>"
 msgstr "בטל קישור חשבון מ <b>Slack</b>"
 
 msgid "Green"
-msgstr ""
+msgstr "ירוק"
 
-#, fuzzy
-#| msgid "Continue with <b>Steam</b>"
 msgid "Continue with <b>Spotify</b>"
-msgstr "המשך עם <b>Steam</b>"
+msgstr "המשך עם <b>Spotify</b>"
 
-#, fuzzy
-#| msgid "Sign up with <b>Steam</b>"
 msgid "Sign up with <b>Spotify</b>"
-msgstr "הרשמה באמצעות <b>Steam</b>"
+msgstr "הרשמה באמצעות <b>Spotify</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>Steam</b>"
 msgid "Link account with <b>Spotify</b>"
-msgstr "קישור חשבון עם <b>Steam</b>"
+msgstr "קשר חשבון עם <b>Spotify</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Steam</b>"
 msgid "Unlink account from <b>Spotify</b>"
-msgstr "ביטול קישור החשבון מ - <b>Steam</b>"
+msgstr "בטל קישור של חשבון מ - <b>Spotify</b>"
 
 msgid "Web API Key"
 msgstr "מפתח API של האינטרנט"
@@ -2163,8 +2137,6 @@ msgstr "ביטול קישור החשבון מ - <b>Steam</b>"
 msgid "Error: The 64-bit SteamID can not be retrieved for this user!"
 msgstr "שגיאה: לא ניתן לאחזר את ה - SteamID של 64 סיביות עבור משתמש זה!"
 
-#, fuzzy
-#| msgid "Client Key"
 msgid "Client key"
 msgstr "מפתח לקוח"
 
@@ -2180,25 +2152,17 @@ msgstr "קשר חשבון עם <b>TikTok</b>"
 msgid "Unlink account from <b>TikTok</b>"
 msgstr "ביטול קישור החשבון מ - <b>TikTok</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Twitter</b>"
 msgid "Continue with <b>Twitch</b>"
-msgstr "המשך עם <b>Twitter</b>"
+msgstr "המשך עם <b>Twitch</b>"
 
-#, fuzzy
-#| msgid "Sign up with <b>Twitter</b>"
 msgid "Sign up with <b>Twitch</b>"
-msgstr "הרשמה באמצעות <b>Twitter</b>"
+msgstr "הרשמה באמצעות <b>Twitch</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>Twitter</b>"
 msgid "Link account with <b>Twitch</b>"
-msgstr "קישור חשבון <b>לטוויטר</b>"
+msgstr "קשר חשבון עם <b>Twitch</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Twitter</b>"
 msgid "Unlink account from <b>Twitch</b>"
-msgstr "ביטול הקישור של החשבון <b>לטוויטר</b>"
+msgstr "בטל קישור של חשבון מ - <b>Twitch</b>"
 
 msgid "Secure key"
 msgstr "מפתח מאובטח"
@@ -2223,13 +2187,18 @@ msgid ""
 "resolve the problem, please create a new App based on our %4$s guide, and "
 "replace the credentials on the %5$s tab with your new App credentials."
 msgstr ""
+"%1$s: %2$s הציגה סוגי אפליקציות חדשים ושינתה את נקודות הקצה שלהן, שאינן "
+"תואמות לאפליקציות הישנות.%3$sזיהינו שאתה משתמש כעת באפליקציית %2$s ישנה, "
+"ולכן נאלצנו להשבית את תצורת %2$s שלך. כדי לפתור את הבעיה, יש ליצור אפליקציה "
+"חדשה לפי המדריך %4$s שלנו, ולהחליף את פרטי הכניסה בכרטיסייה %5$s בפרטי "
+"הכניסה של האפליקציה החדשה."
 
 msgid "VKontakte"
-msgstr ""
+msgstr "VKontakte"
 
 #, php-format
 msgid "Open %1$s - %2$s"
-msgstr ""
+msgstr "פתח את %1$s - %2$s"
 
 msgid "Continue with <b>WordPress.com</b>"
 msgstr "להמשך עם <b>WordPress.com</b>"
@@ -2271,10 +2240,8 @@ msgstr "אישור הרשמה יישלח אליך במייל."
 msgid "Password"
 msgstr "סיסמה"
 
-#, fuzzy
-#| msgid "Confirm password"
 msgid "Hide password"
-msgstr "אימות סיסמה"
+msgstr "הסתרת הסיסמה"
 
 msgid "Strength indicator"
 msgstr "חוזק סיסמא"
@@ -2287,6 +2254,17 @@ msgstr "אימות סיסמה"
 
 msgid "Username"
 msgstr "שם משתמש"
+
+#~ msgid ""
+#~ "Shows Google's One Tap prompt, so visitors can sign in with their Google "
+#~ "account without leaving the page. Depending on the browser, Google shows "
+#~ "it to every visitor, or only to those who are signed in to Google. One "
+#~ "Tap works alongside the Google button, it does not replace it."
+#~ msgstr ""
+#~ "מציג את חלונית One Tap של Google, כך שמבקרים יכולים להתחבר עם חשבון "
+#~ "Google שלהם בלי לעזוב את הדף. בהתאם לדפדפן, Google מציגה אותה לכל מבקר, "
+#~ "או רק למבקרים המחוברים ל-Google. One Tap פועל לצד כפתור Google ואינו "
+#~ "מחליף אותו."
 
 #~ msgid ""
 #~ "Accounts in any organizational directory (Any Azure AD directory - "

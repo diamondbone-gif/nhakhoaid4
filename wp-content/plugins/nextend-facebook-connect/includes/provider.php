@@ -26,6 +26,14 @@ abstract class NextendSocialProvider extends NextendSocialProviderDummy {
     protected $sync_fields = array();
 
     /**
+     * Whether a connect button for this provider was rendered during the current request. Every
+     * place that offers a social login, the login and registration forms, the shortcode, the widget
+     * and each of the PRO Addon integrations, goes through getConnectButton(), so this is a reliable
+     * answer to "does this page offer a login with this provider".
+     */
+    protected $connectButtonRendered = false;
+
+    /**
      * NextendSocialProvider constructor.
      *
      * @param $defaultSettings
@@ -422,6 +430,29 @@ abstract class NextendSocialProvider extends NextendSocialProviderDummy {
     }
 
     /**
+     * Continues the login with user data that was authenticated outside of the provider's own flow,
+     * like the claims of an ID token that an extension verified. From here on, the login works
+     * exactly like after the provider's own flow, so every login, register and link setting applies.
+     *
+     * Only pass data whose origin was verified, because it decides who gets logged in. It does
+     * nothing outside of a live login request, where the user profile action is not registered.
+     *
+     * @param array $authUserData The same structure getCurrentUserInfo() returns.
+     * @param array $data         Passed to the user profile action, in place of the access token data.
+     */
+    public function connectWithAuthUserData($authUserData, $data = array()) {
+        /**
+         * When the login continues in a popup, the popup hands over to the window that opened it
+         * first, like it does in the provider's own flow.
+         */
+        $this->handlePopupRedirectAfterAuthentication();
+
+        $this->authUserData = $authUserData;
+
+        do_action($this->id . '_login_action_get_user_profile', $data);
+    }
+
+    /**
      * @param $user_id
      * @param $providerIdentifier
      * @param $isRegister
@@ -661,8 +692,16 @@ abstract class NextendSocialProvider extends NextendSocialProviderDummy {
         $buttonLinkOpeningTagStart = '<a' . $this->getEscapeAttributesString($allLinkAttributes) . '>';
         $buttonLinkClosingTag      = '</a>';
 
+        $this->connectButtonRendered = true;
 
         return $buttonLinkOpeningTagStart . $button . $buttonLinkClosingTag;
+    }
+
+    /**
+     * @return bool True when a connect button for this provider was rendered on the current page.
+     */
+    public function hasRenderedConnectButton() {
+        return $this->connectButtonRendered;
     }
 
     public function getLinkButton() {
@@ -808,7 +847,7 @@ abstract class NextendSocialProvider extends NextendSocialProviderDummy {
 
                     $html = $title;
                     $html .= '<p>';
-                    $html .= sprintf(__('Do you really want to %1$s unlink %2$s it?'), '<a href="' . $unlinkButtonUrl . '">', '</a>', 'nsl_unlink_provider');
+                    $html .= sprintf(__('Do you really want to %1$s unlink %2$s it?', 'nextend-facebook-connect'), '<a href="' . $unlinkButtonUrl . '">', '</a>', 'nsl_unlink_provider');
                     $html .= '</p>';
                     wp_die($html, $title, $response_code);
                 }
@@ -1065,10 +1104,22 @@ abstract class NextendSocialProvider extends NextendSocialProviderDummy {
         Persistent::delete($this->id . '_interim_login');
         Persistent::delete($this->id . '_display');
         Persistent::delete($this->id . '_action');
+        Persistent::delete($this->id . '_register_flow_token');
         Persistent::delete('test');
+
+        /**
+         * Lets extensions clean up the persistent data they created for this provider, without the
+         * core needing to know their storage keys.
+         */
+        do_action('nsl_' . $this->id . '_delete_login_persistent_data', $this);
     }
 
     public function deleteTokenPersistentData() {
+        /**
+         * Lets extensions drop the authentication data they stored for this provider together with
+         * the provider's own tokens, so the visitor can start over with another account.
+         */
+        do_action('nsl_' . $this->id . '_delete_token_persistent_data', $this);
     }
 
     /**

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: nextend-facebook-connect\n"
-"POT-Creation-Date: 2026-07-28 09:18+0200\n"
-"PO-Revision-Date: 2026-07-28 09:18+0200\n"
+"POT-Creation-Date: 2026-11-12 15:20+0100\n"
+"PO-Revision-Date: 2026-11-12 15:20+0100\n"
 "Last-Translator: \n"
 "Language-Team: nextend-facebook-connect\n"
 "Language: de\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: "
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-1: nextend-facebook-connect\n"
 
 msgid "What personal data we collect and why we collect it"
-msgstr ""
+msgstr "Welche personenbezogenen Daten wir sammeln und warum"
 
 #, php-format
 msgid ""
@@ -30,9 +30,14 @@ msgid ""
 "can collect profile picture and more fields with the Pro Addon's sync data "
 "feature."
 msgstr ""
+"%1$s sammelt Daten, wenn sich ein Besucher mit einem der aktivierten Social-"
+"Anbieter registriert, anmeldet oder sein Konto verknüpft. Dabei werden "
+"folgende Daten gesammelt: E-Mail-Adresse, Name, Kennung beim Social-Anbieter "
+"und Zugriffstoken. Mit der Funktion zum Synchronisieren von Daten des Pro "
+"Addons können außerdem das Profilbild und weitere Felder gesammelt werden."
 
 msgid "Who we share your data with"
-msgstr ""
+msgstr "Mit wem wir Ihre Daten teilen"
 
 #, php-format
 msgid ""
@@ -40,36 +45,49 @@ msgid ""
 "except the access token which used for the authenticated communication with "
 "the social providers."
 msgstr ""
+"%1$s speichert die personenbezogenen Daten auf Ihrer Website und teilt sie "
+"mit niemandem, mit Ausnahme des Zugriffstokens, das für die authentifizierte "
+"Kommunikation mit den Social-Anbietern verwendet wird."
 
 msgid "Does the plugin share personal data with third parties"
-msgstr ""
+msgstr "Teilt das Plugin personenbezogene Daten mit Dritten?"
 
 #, php-format
 msgid ""
 "%1$s use the access token what the social provider gave to communicate with "
 "the providers to verify account and securely access personal data."
 msgstr ""
+"%1$s verwendet das vom Social-Anbieter bereitgestellte Zugriffstoken, um mit "
+"den Anbietern zu kommunizieren, das Konto zu verifizieren und sicher auf "
+"personenbezogene Daten zuzugreifen."
 
 msgid "How long we retain your data"
-msgstr ""
+msgstr "Wie lange wir Ihre Daten speichern"
 
 #, php-format
 msgid ""
 "%1$s removes the collected personal data when the user deleted from "
 "WordPress."
 msgstr ""
+"%1$s entfernt die gesammelten personenbezogenen Daten, wenn der Benutzer aus "
+"WordPress gelöscht wird."
 
 msgid "Does the plugin use personal data collected by others?"
 msgstr ""
+"Verwendet das Plugin personenbezogene Daten, die von anderen gesammelt "
+"wurden?"
 
 #, php-format
 msgid ""
 "%1$s use the personal data collected by the social providers to create "
 "account on your site when the visitor authorize it."
 msgstr ""
+"%1$s verwendet die von den Social-Anbietern gesammelten personenbezogenen "
+"Daten, um ein Konto auf Ihrer Website zu erstellen, wenn der Besucher dies "
+"autorisiert."
 
 msgid "Does the plugin store things in the browser?"
-msgstr ""
+msgstr "Speichert das Plugin Daten im Browser?"
 
 #, php-format
 msgid ""
@@ -77,76 +95,89 @@ msgid ""
 "authorization flow. This cookie required for every provider to secure the "
 "communication and to redirect the user back to the last location."
 msgstr ""
+"Ja, %1$s muss ein Cookie für Besucher setzen, die den Social-Login-"
+"Autorisierungsablauf verwenden. Dieses Cookie wird bei jedem Anbieter "
+"benötigt, um die Kommunikation abzusichern und den Benutzer zurück zur "
+"letzten Position weiterzuleiten."
 
 msgid "Does the plugin collect telemetry data, directly or indirectly?"
-msgstr ""
+msgstr "Sammelt das Plugin direkt oder indirekt Telemetriedaten?"
 
 msgid "No"
-msgstr ""
+msgstr "Nein"
 
 msgid ""
 "Does the plugin enqueue JavaScript, tracking pixels or embed iframes from a "
 "third party?"
 msgstr ""
+"Bindet das Plugin JavaScript, Tracking-Pixel oder iframes von Drittanbietern "
+"ein?"
 
 msgid "User"
-msgstr ""
+msgstr "Benutzer"
 
 msgid "This provider doesn't support REST API calls!"
-msgstr ""
+msgstr "Dieser Anbieter unterstützt keine REST-API-Aufrufe!"
 
 #, php-format
 msgid "%s needs json_decode function."
-msgstr ""
+msgstr "%s benötigt die Funktion json_decode."
 
 msgid "Please contact your server administrator and ask for solution!"
 msgstr ""
+"Bitte wenden Sie sich an Ihren Server-Administrator und bitten Sie um eine "
+"Lösung!"
 
 msgid "Settings saved."
-msgstr ""
+msgstr "Einstellungen gespeichert."
 
 msgid "The activation was successful"
-msgstr ""
+msgstr "Die Aktivierung war erfolgreich"
 
 msgid "Deactivate completed."
-msgstr ""
+msgstr "Deaktivierung abgeschlossen."
 
 msgid "(no title)"
-msgstr ""
+msgstr "(kein Titel)"
 
 msgid "Settings"
-msgstr ""
+msgstr "Einstellungen"
 
 msgid "Analyze & Repair"
-msgstr ""
+msgstr "Analysieren & reparieren"
 
 #, php-format
 msgid "Unexpected response: %s"
-msgstr ""
+msgstr "Unerwartete Antwort: %s"
 
 #, php-format
 msgid ""
 "%s detected that your login url changed. You must update the Oauth redirect "
 "URIs in the related social applications."
 msgstr ""
+"%s hat festgestellt, dass sich Ihre Anmelde-URL geändert hat. Sie müssen die "
+"OAuth-Weiterleitungs-URIs in den zugehörigen Social-Apps aktualisieren."
 
 msgid "Fix Error"
-msgstr ""
+msgstr "Fehler beheben"
 
 msgid "Oauth Redirect URI"
-msgstr ""
+msgstr "OAuth-Weiterleitungs-URI"
 
 #, php-format
 msgid ""
 "%1$s detected that %2$s installed on your site. You need the Pro Addon to "
 "display Social Login buttons in %2$s login form!"
 msgstr ""
+"%1$s hat festgestellt, dass %2$s auf Ihrer Website installiert ist. Sie "
+"benötigen das Pro Addon, um Social-Login-Buttons im Anmeldeformular von %2$s "
+"anzuzeigen!"
 
 msgid "Dismiss and check Pro Addon"
-msgstr ""
+msgstr "Ausblenden und Pro Addon ansehen"
 
 msgid "Dismiss"
-msgstr ""
+msgstr "Ausblenden"
 
 #, php-format
 msgid ""
@@ -154,79 +185,88 @@ msgid ""
 "register flow</b>\" and \"<b>OAuth redirect uri proxy page</b>\" in %1$s to "
 "work properly."
 msgstr ""
+"%1$s hat festgestellt, dass %2$s auf Ihrer Website installiert ist. Damit "
+"%1$s richtig funktioniert, müssen Sie „<b>Seite für den "
+"Registrierungsablauf</b>“ und „<b>Proxy-Seite für die OAuth-Weiterleitungs-"
+"URI</b>“ festlegen."
 
 msgid "Fix now"
-msgstr ""
+msgstr "Jetzt beheben"
 
 msgid "Activate your Pro Addon"
-msgstr ""
+msgstr "Aktivieren Sie Ihr Pro Addon"
 
 msgid ""
 "To be able to use the Pro features, you need to activate Nextend Social "
 "Login Pro Addon. You can do this by clicking on the Activate button below "
 "then select the related purchase."
 msgstr ""
+"Um die Pro-Funktionen nutzen zu können, müssen Sie das Nextend Social Login "
+"Pro Addon aktivieren. Klicken Sie dazu unten auf den Button „Aktivieren“ und "
+"wählen Sie dann den zugehörigen Kauf aus."
 
 msgid "Activate"
-msgstr ""
+msgstr "Aktivieren"
 
 msgid "License key"
-msgstr ""
+msgstr "Lizenzschlüssel"
 
 msgid "OAuth proxy page"
-msgstr ""
+msgstr "OAuth-Proxy-Seite"
 
 msgid "Register flow page"
-msgstr ""
+msgstr "Seite für den Registrierungsablauf"
 
 msgid "You have logged in successfully."
-msgstr ""
+msgstr "Sie haben sich erfolgreich angemeldet."
 
 msgid "Login label"
-msgstr ""
+msgstr "Beschriftung für Anmelden"
 
 msgid "Reset to default"
-msgstr ""
+msgstr "Auf Standard zurücksetzen"
 
 msgid "Register label"
-msgstr ""
+msgstr "Beschriftung für Registrieren"
 
 msgid "Link label"
-msgstr ""
+msgstr "Beschriftung für Verknüpfen"
 
 msgid "Unlink label"
-msgstr ""
+msgstr "Beschriftung für Trennen"
 
 msgid "Default button"
-msgstr ""
+msgstr "Standard-Button"
 
 msgid "Use custom button"
-msgstr ""
+msgstr "Benutzerdefinierten Button verwenden"
 
 #, php-format
 msgid "Use the %s in your custom button's code to make the label show up."
 msgstr ""
+"Verwenden Sie %s im Code Ihres benutzerdefinierten Buttons, damit die "
+"Beschriftung angezeigt wird."
 
 msgid "Icon button"
-msgstr ""
+msgstr "Icon-Button"
 
 msgid "Save Changes"
-msgstr ""
+msgstr "Änderungen speichern"
 
 #, php-format
 msgid "Follow the guide at: %s"
-msgstr ""
+msgstr "Folgen Sie der Anleitung unter: %s"
 
 #, php-format
 msgid "I am done setting up my %s"
-msgstr ""
+msgstr "Ich habe die Einrichtung von %s abgeschlossen"
 
 msgctxt "Social Login App"
 msgid "App"
-msgstr ""
+msgstr "App"
 
 msgid "Getting Started"
-msgstr ""
+msgstr "Erste Schritte"
 
 #, php-format
 msgid ""
@@ -236,276 +276,304 @@ msgid ""
 "\"Settings\" and configure the fields with the credentials of the App you "
 "created."
 msgstr ""
+"Damit sich Ihre Besucher mit ihrem %1$s-Konto anmelden können, müssen Sie "
+"zuerst eine App für %1$s erstellen. Die folgende Anleitung führt Sie durch "
+"die Erstellung der %1$s-App. Nachdem Sie Ihre %1$s-App erstellt haben, "
+"wechseln Sie zu „Einstellungen“ und füllen Sie die Felder mit den "
+"Zugangsdaten der erstellten App aus."
 
 #, php-format
 msgid "How to create an App for %s: "
-msgstr ""
+msgstr "So erstellen Sie eine App für %s: "
 
 msgid "URLs for the App creation:"
-msgstr ""
+msgstr "URLs für die App-Erstellung:"
 
 msgid "Buttons"
-msgstr ""
+msgstr "Buttons"
 
 msgid "Sync data"
-msgstr ""
+msgstr "Daten synchronisieren"
 
 msgid "Usage"
-msgstr ""
+msgstr "Verwendung"
 
 msgid "Other settings"
-msgstr ""
+msgstr "Weitere Einstellungen"
 
 msgid "Username prefix on register"
-msgstr ""
+msgstr "Benutzernamen-Präfix bei der Registrierung"
 
 msgid "Fallback username prefix on register"
-msgstr ""
+msgstr "Ersatz-Benutzernamen-Präfix bei der Registrierung"
 
 msgid "Used when username is invalid or not stored"
 msgstr ""
+"Wird verwendet, wenn der Benutzername ungültig ist oder nicht gespeichert "
+"wird"
 
 msgid "Terms and conditions"
-msgstr ""
+msgstr "Allgemeine Geschäftsbedingungen"
 
 #, php-format
 msgid "Override global \"%1$s\""
-msgstr ""
+msgstr "Globale Einstellung „%1$s“ überschreiben"
 
 msgid "PRO settings"
-msgstr ""
+msgstr "PRO-Einstellungen"
 
 msgid "Ask E-mail on registration"
-msgstr ""
+msgstr "E-Mail-Adresse bei der Registrierung abfragen"
 
 msgid "Never"
-msgstr ""
+msgstr "Nie"
 
 msgid "When email is not provided or empty"
-msgstr ""
+msgstr "Wenn keine E-Mail-Adresse übermittelt wird oder sie leer ist"
 
 msgid "Always"
-msgstr ""
+msgstr "Immer"
 
 msgid "Ask Username on registration"
-msgstr ""
+msgstr "Benutzernamen bei der Registrierung abfragen"
 
 msgid "Never, generate automatically"
-msgstr ""
+msgstr "Nie, automatisch generieren"
 
 msgid "When username is empty or invalid"
-msgstr ""
+msgstr "Wenn der Benutzername leer oder ungültig ist"
 
 msgid "Ask Password on registration"
-msgstr ""
+msgstr "Passwort bei der Registrierung abfragen"
 
 msgid "Automatically connect the existing account upon registration"
-msgstr ""
+msgstr "Bestehendes Konto bei der Registrierung automatisch verknüpfen"
 
 msgid "Disabled"
-msgstr ""
+msgstr "Deaktiviert"
 
 msgid "Automatic, based on email address"
-msgstr ""
+msgstr "Automatisch, anhand der E-Mail-Adresse"
 
 msgid "Disable login for the selected roles"
-msgstr ""
+msgstr "Anmeldung für die ausgewählten Rollen deaktivieren"
 
 msgid "Default roles for user who registered with this provider"
 msgstr ""
+"Standardrollen für Benutzer, die sich über diesen Anbieter registriert haben"
 
 #, php-format
 msgid "Default (The %1$s is: %2$s)"
-msgstr ""
+msgstr "Standard (Die %1$s ist: %2$s)"
 
 msgid "default WordPress role"
-msgstr ""
+msgstr "Standard-WordPress-Rolle"
 
 #, php-format
 msgid "Default (The %s.)"
-msgstr ""
+msgstr "Standard (Die %s.)"
 
 msgid "Register"
-msgstr ""
+msgstr "Registrieren"
 
 msgid "Login"
-msgstr ""
+msgstr "Anmelden"
 
 msgid "Link"
-msgstr ""
+msgstr "Verknüpfen"
 
 msgid "Store in meta key"
-msgstr ""
+msgstr "In Meta-Schlüssel speichern"
 
 msgid "Shortcode"
-msgstr ""
+msgstr "Shortcode"
 
 msgid "Important!"
-msgstr ""
+msgstr "Wichtig!"
 
 msgid "The shortcodes are only rendered for users who haven't logged in yet!"
 msgstr ""
+"Die Shortcodes werden nur für Benutzer angezeigt, die noch nicht angemeldet "
+"sind!"
 
 msgid "See the full list of shortcode parameters."
-msgstr ""
+msgstr "Vollständige Liste der Shortcode-Parameter ansehen."
 
 msgid "Simple link"
-msgstr ""
+msgstr "Einfacher Link"
 
 msgid "Click here to login or register"
-msgstr ""
+msgstr "Hier klicken, um sich anzumelden oder zu registrieren"
 
 msgid "Image button"
-msgstr ""
+msgstr "Bild-Button"
 
 msgid "Image url"
-msgstr ""
+msgstr "Bild-URL"
 
 msgid "Debug"
-msgstr ""
+msgstr "Debug"
 
 msgid "Test network connection with providers"
-msgstr ""
+msgstr "Netzwerkverbindung zu den Anbietern testen"
 
 msgid "You don't have cURL support, please enable it in php.ini!"
-msgstr ""
+msgstr "cURL wird nicht unterstützt. Bitte aktivieren Sie es in der php.ini!"
 
 #, php-format
 msgid "Test %1$s connection"
-msgstr ""
+msgstr "Verbindung zu %1$s testen"
 
 msgid "Fix Oauth Redirect URIs"
-msgstr ""
+msgstr "OAuth-Weiterleitungs-URIs korrigieren"
 
 msgid "Every Oauth Redirect URI seems fine"
-msgstr ""
+msgstr "Alle OAuth-Weiterleitungs-URIs scheinen in Ordnung zu sein"
 
 msgid "Got it"
-msgstr ""
+msgstr "Verstanden"
 
 msgid "Global Settings"
-msgstr ""
+msgstr "Globale Einstellungen"
 
 msgid "General"
-msgstr ""
+msgstr "Allgemein"
 
 msgid "Privacy"
-msgstr ""
+msgstr "Datenschutz"
 
 msgid "Login Form"
-msgstr ""
+msgstr "Anmeldeformular"
 
 msgid "Comment"
-msgstr ""
+msgstr "Kommentar"
 
 msgid "Custom Actions"
-msgstr ""
+msgstr "Benutzerdefinierte Aktionen"
 
 msgid "Docs"
-msgstr ""
+msgstr "Dokumentation"
 
 msgid "Support"
-msgstr ""
+msgstr "Support"
 
 msgid "Pro Addon"
-msgstr ""
+msgstr "Pro Addon"
 
 msgid "Providers"
-msgstr ""
+msgstr "Anbieter"
 
 msgid "Error"
-msgstr ""
+msgstr "Fehler"
 
 msgid ""
 "You don’t have sufficient permissions to install and activate plugins. "
 "Please contact your site’s administrator!"
 msgstr ""
+"Sie haben keine ausreichenden Berechtigungen, um Plugins zu installieren und "
+"zu aktivieren. Bitte wenden Sie sich an den Administrator Ihrer Website!"
 
 msgid "Activate Pro Addon"
-msgstr ""
+msgstr "Pro Addon aktivieren"
 
 msgid ""
 "Pro Addon is installed but not activated. To be able to use the Pro "
 "features, you need to activate it."
 msgstr ""
+"Das Pro Addon ist installiert, aber nicht aktiviert. Um die Pro-Funktionen "
+"nutzen zu können, müssen Sie es aktivieren."
 
 msgid "Deactivate Pro Addon"
-msgstr ""
+msgstr "Pro Addon deaktivieren"
 
 msgid "Pro Addon is not installed"
-msgstr ""
+msgstr "Das Pro Addon ist nicht installiert"
 
 msgid ""
 "To access the Pro features, you need to install and activate the Pro Addon."
 msgstr ""
+"Um auf die Pro-Funktionen zugreifen zu können, müssen Sie das Pro Addon "
+"installieren und aktivieren."
 
 #, php-format
 msgid "Install %s now"
-msgstr ""
+msgstr "%s jetzt installieren"
 
 msgid "Install Pro Addon"
-msgstr ""
+msgstr "Pro Addon installieren"
 
 msgid "Activating..."
-msgstr ""
+msgstr "Wird aktiviert …"
 
 msgid "Not compatible!"
-msgstr ""
+msgstr "Nicht kompatibel!"
 
 #, php-format
 msgid ""
 "%1$s and %2$s are not compatible. Please update %1$s to version %3$s or "
 "newer."
 msgstr ""
+"%1$s und %2$s sind nicht kompatibel. Bitte aktualisieren Sie %1$s auf "
+"Version %3$s oder neuer."
 
 #, php-format
 msgid "Update %s"
-msgstr ""
+msgstr "%s aktualisieren"
 
 #, php-format
 msgid ""
 "%1$s and %2$s are not compatible. Please update %2$s to version %3$s or "
 "newer."
 msgstr ""
+"%1$s und %2$s sind nicht kompatibel. Bitte aktualisieren Sie %2$s auf "
+"Version %3$s oder neuer."
 
 msgid "Update Pro Addon"
-msgstr ""
+msgstr "Pro Addon aktualisieren"
 
 msgid "Pro Addon is installed and activated"
-msgstr ""
+msgstr "Das Pro Addon ist installiert und aktiviert"
 
 msgid ""
 "You installed and activated the Pro Addon. If you don’t want to use it "
 "anymore, you can deactivate using the button below."
 msgstr ""
+"Sie haben das Pro Addon installiert und aktiviert. Wenn Sie es nicht mehr "
+"verwenden möchten, können Sie es mit dem Button unten deaktivieren."
 
 msgid "Get Pro Addon to unlock more features"
-msgstr ""
+msgstr "Holen Sie sich das Pro Addon, um weitere Funktionen freizuschalten"
 
 #, php-format
 msgid ""
 "The features below are available in %s Pro Addon. Get it today and tweak the "
 "awesome settings."
 msgstr ""
+"Die folgenden Funktionen sind im %s Pro Addon verfügbar. Holen Sie es sich "
+"noch heute und passen Sie die Einstellungen an."
 
 msgid ""
 "If you already have a license, you can Authorize your Pro Addon. Otherwise "
 "you can purchase it using the button below."
 msgstr ""
+"Wenn Sie bereits eine Lizenz haben, können Sie Ihr Pro Addon autorisieren. "
+"Andernfalls können Sie es über den Button unten kaufen."
 
 msgid "Buy Pro Addon"
-msgstr ""
+msgstr "Pro Addon kaufen"
 
 msgid "Authorize Pro Addon"
-msgstr ""
+msgstr "Pro Addon autorisieren"
 
 msgid "Pro Addon is not activated"
-msgstr ""
+msgstr "Das Pro Addon ist nicht aktiviert"
 
 msgid ""
 "To be able to use the Pro features, you need to install and activate the "
 "Nextend Social Login Pro Addon."
 msgstr ""
+"Um die Pro-Funktionen nutzen zu können, müssen Sie das Nextend Social Login "
+"Pro Addon installieren und aktivieren."
 
 #, php-format
 msgid ""
@@ -513,354 +581,379 @@ msgid ""
 "enabled. To display any social buttons, please make sure you have at least "
 "one provider enabled!"
 msgstr ""
+"%1$s hat festgestellt, dass Sie Anbieter konfiguriert haben, aber keiner "
+"davon aktiviert ist. Damit Social-Buttons angezeigt werden, stellen Sie "
+"bitte sicher, dass mindestens ein Anbieter aktiviert ist!"
 
 msgid "Not Available"
-msgstr ""
+msgstr "Nicht verfügbar"
 
 msgid "Not Configured"
-msgstr ""
+msgstr "Nicht konfiguriert"
 
 msgid "Not Verified"
-msgstr ""
+msgstr "Nicht verifiziert"
 
 msgid "Enabled"
-msgstr ""
+msgstr "Aktiviert"
 
 msgid "Upgrade Now"
-msgstr ""
+msgstr "Jetzt upgraden"
 
 msgid "Verify Settings"
-msgstr ""
+msgstr "Einstellungen verifizieren"
 
 msgid "Enable"
-msgstr ""
+msgstr "Aktivieren"
 
 msgid "Disable"
-msgstr ""
+msgstr "Deaktivieren"
 
 msgid "Stay Updated"
-msgstr ""
+msgstr "Bleiben Sie auf dem Laufenden"
 
 msgid ""
 "Receive info on the latest plugin updates and social provider related "
 "changes."
 msgstr ""
+"Erhalten Sie Informationen zu den neuesten Plugin-Updates und zu Änderungen "
+"bei den Social-Anbietern."
 
 msgid "Enter your email address"
-msgstr ""
+msgstr "Geben Sie Ihre E-Mail-Adresse ein"
 
 msgid "Subscribe"
-msgstr ""
+msgstr "Abonnieren"
 
 msgid "Saving..."
-msgstr ""
+msgstr "Wird gespeichert …"
 
 msgid "Saving failed"
-msgstr ""
+msgstr "Speichern fehlgeschlagen"
 
 msgid "Order Saved"
-msgstr ""
+msgstr "Reihenfolge gespeichert"
 
 msgid "Successfully subscribed!"
-msgstr ""
+msgstr "Erfolgreich abonniert!"
 
 msgid ""
 "We'll be bringing you all the latest news and updates about Social Login - "
 "right to your inbox."
 msgstr ""
+"Wir senden Ihnen alle Neuigkeiten und Updates zu Social Login – direkt in "
+"Ihr Postfach."
 
 msgid "The entered email address is invalid!"
-msgstr ""
+msgstr "Die eingegebene E-Mail-Adresse ist ungültig!"
 
 msgid "Rate your experience!"
-msgstr ""
+msgstr "Bewerten Sie Ihre Erfahrung!"
 
 msgid "Hated it"
-msgstr ""
+msgstr "Überhaupt nicht gefallen"
 
 msgid "Disliked it"
-msgstr ""
+msgstr "Nicht gefallen"
 
 msgid "It was ok"
-msgstr ""
+msgstr "Es war okay"
 
 msgid "Liked it"
-msgstr ""
+msgstr "Gefallen"
 
 msgid "Loved it"
-msgstr ""
+msgstr "Sehr gut gefallen"
 
 msgid "Rate 1 star"
-msgstr ""
+msgstr "Mit 1 Stern bewerten"
 
 msgid "Rate 2 stars"
-msgstr ""
+msgstr "Mit 2 Sternen bewerten"
 
 msgid "Rate 3 stars"
-msgstr ""
+msgstr "Mit 3 Sternen bewerten"
 
 msgid "Rate 4 stars"
-msgstr ""
+msgstr "Mit 4 Sternen bewerten"
 
 msgid "Rate 5 stars"
-msgstr ""
+msgstr "Mit 5 Sternen bewerten"
 
 msgid "Please Leave a Review"
-msgstr ""
+msgstr "Bitte hinterlassen Sie eine Bewertung"
 
 msgid ""
 "If you are happy with <b>Nextend Social Login</b> and can take a minute "
 "please leave us a review. It will be a tremendous help for us!"
 msgstr ""
+"Wenn Sie mit <b>Nextend Social Login</b> zufrieden sind und eine Minute Zeit "
+"haben, hinterlassen Sie uns bitte eine Bewertung. Das würde uns sehr helfen!"
 
 msgid "Ok, you deserve it"
-msgstr ""
+msgstr "Ok, gerne"
 
 msgid "Close review box"
-msgstr ""
+msgstr "Bewertungsbox schließen"
 
 msgid "Register form"
-msgstr ""
+msgstr "Registrierungsformular"
 
 msgid "No Connect button"
-msgstr ""
+msgstr "Kein Verbinden-Button"
 
 msgid "Connect button before register"
-msgstr ""
+msgstr "Verbinden-Button vor der Registrierung"
 
 msgid "Action:"
-msgstr ""
+msgstr "Aktion:"
 
 msgid "Connect button before account details"
-msgstr ""
+msgstr "Verbinden-Button vor den Kontodetails"
 
 msgid "Connect button after register"
-msgstr ""
+msgstr "Verbinden-Button nach der Registrierung"
 
 msgid "Register button style"
-msgstr ""
+msgstr "Stil des Registrierungs-Buttons"
 
 msgid "Default"
-msgstr ""
+msgstr "Standard"
 
 msgid "Fullwidth"
-msgstr ""
+msgstr "Volle Breite"
 
 msgid "Icon"
-msgstr ""
+msgstr "Icon"
 
 msgid "Register layout"
-msgstr ""
+msgstr "Layout der Registrierung"
 
 msgid "Below"
-msgstr ""
+msgstr "Unterhalb"
 
 msgid "Below with separator"
-msgstr ""
+msgstr "Unterhalb mit Trennlinie"
 
 msgid "Above"
-msgstr ""
+msgstr "Oberhalb"
 
 msgid "Above with separator"
-msgstr ""
+msgstr "Oberhalb mit Trennlinie"
 
 msgid "Sidebar Login form"
-msgstr ""
+msgstr "Anmeldeformular in der Seitenleiste"
 
 msgid "Hide login buttons"
-msgstr ""
+msgstr "Anmelde-Buttons ausblenden"
 
 msgid "Show login buttons"
-msgstr ""
+msgstr "Anmelde-Buttons anzeigen"
 
 msgid ""
 "Some themes that use BuddyPress, display the social buttons twice in the "
 "same login form. This option can disable the one for: "
 "<b>bp_sidebar_login_form action</b>.  "
 msgstr ""
+"Einige Themes, die BuddyPress verwenden, zeigen die Social-Buttons im selben "
+"Anmeldeformular doppelt an. Mit dieser Option können Sie die Buttons für "
+"folgende Aktion deaktivieren: <b>bp_sidebar_login_form action</b>.  "
 
 msgid "Login form"
-msgstr ""
+msgstr "Anmeldeformular"
 
 msgid "Login button style"
-msgstr ""
+msgstr "Stil des Anmelde-Buttons"
 
 msgid "Login layout"
-msgstr ""
+msgstr "Layout der Anmeldung"
 
 msgid "Social accounts tab"
-msgstr ""
+msgstr "Tab für Social-Konten"
 
 msgid "Hide"
-msgstr ""
+msgstr "Ausblenden"
 
 msgid "Show"
-msgstr ""
+msgstr "Anzeigen"
 
 #, php-format
 msgid ""
 "Creates a new tab called %s, where the Link and Unlink buttons will be "
 "displayed."
 msgstr ""
+"Erstellt einen neuen Tab namens %s, in dem die Buttons zum Verknüpfen und "
+"Trennen angezeigt werden."
 
 msgid "Social Accounts"
-msgstr ""
+msgstr "Social-Konten"
 
 msgid "Button alignment"
-msgstr ""
+msgstr "Button-Ausrichtung"
 
 msgid "Left"
-msgstr ""
+msgstr "Links"
 
 msgid "Center"
-msgstr ""
+msgstr "Zentriert"
 
 msgid "Right"
-msgstr ""
+msgstr "Rechts"
 
 msgid "Email template for registration"
-msgstr ""
+msgstr "E-Mail-Vorlage für die Registrierung"
 
 msgid "WordPress default notification"
-msgstr ""
+msgstr "WordPress-Standardbenachrichtigung"
 
 msgid "BuddyPress welcome notification"
-msgstr ""
+msgstr "BuddyPress-Willkommensbenachrichtigung"
 
 #, php-format
 msgid ""
 "Defines whether the registration with %1$s will send the same welcome "
 "notification that %2$s does, instead of the %3$s default one."
 msgstr ""
+"Legt fest, ob die Registrierung über %1$s dieselbe "
+"Willkommensbenachrichtigung sendet wie %2$s anstelle der "
+"Standardbenachrichtigung von %3$s."
 
 msgid "Login button"
-msgstr ""
+msgstr "Anmelde-Button"
 
 #, php-format
 msgid "You need to turn on the ' %1$s > %2$s > %3$s ' for this feature to work"
 msgstr ""
+"Sie müssen ' %1$s > %2$s > %3$s ' aktivieren, damit diese Funktion "
+"funktioniert"
 
 msgid "Discussion"
-msgstr ""
+msgstr "Diskussion"
 
 msgid "Users must be registered and logged in to comment"
-msgstr ""
+msgstr "Benutzer müssen zum Kommentieren registriert und angemeldet sein"
 
 msgid "Button style"
-msgstr ""
+msgstr "Button-Stil"
 
 #, php-format
 msgid "%1$s Add your custom actions here. One action per line."
 msgstr ""
+"%1$s Fügen Sie hier Ihre benutzerdefinierten Actions hinzu. Eine Action pro "
+"Zeile."
 
 msgid "Usage:"
-msgstr ""
+msgstr "Verwendung:"
 
 #, php-format
 msgid ""
 "%1$s The HTML of the social buttons will be added at the place where the "
 "action is fired."
 msgstr ""
+"%1$s Das HTML der Social-Buttons wird an der Stelle eingefügt, an der die "
+"Action ausgelöst wird."
 
 msgid "Important:"
-msgstr ""
+msgstr "Wichtig:"
 
 #, php-format
 msgid ""
 "If you %1$sexperience problems%2$s because of this feature, you can disable "
 "it by defining the %3$s constant."
 msgstr ""
+"Wenn diese Funktion %1$sProbleme verursacht%2$s, können Sie sie "
+"deaktivieren, indem Sie die Konstante %3$s definieren."
 
 msgid "Button layout"
-msgstr ""
+msgstr "Button-Layout"
 
 msgid "Default with top separator"
-msgstr ""
+msgstr "Standard mit Trennlinie oben"
 
 msgid "Default with bottom separator"
-msgstr ""
+msgstr "Standard mit Trennlinie unten"
 
 msgid "Link/Unlink"
-msgstr ""
+msgstr "Verknüpfen/Trennen"
 
 msgid "No Connect button in Login form"
-msgstr ""
+msgstr "Kein Verbinden-Button im Anmeldeformular"
 
 msgid "Connect button on"
-msgstr ""
+msgstr "Verbinden-Button bei"
 
 msgid "Login form button style"
-msgstr ""
+msgstr "Button-Stil im Anmeldeformular"
 
 msgid "No Connect button in Register form"
-msgstr ""
+msgstr "Kein Verbinden-Button im Registrierungsformular"
 
 msgid "Register form button style"
-msgstr ""
+msgstr "Button-Stil im Registrierungsformular"
 
 msgid "Checkout form"
-msgstr ""
+msgstr "Kassenformular"
 
 msgid "No Connect button in Checkout form"
-msgstr ""
+msgstr "Kein Verbinden-Button im Kassenformular"
 
 msgid "Checkout form button style"
-msgstr ""
+msgstr "Button-Stil im Kassenformular"
 
 msgid "Checkout layout"
-msgstr ""
+msgstr "Layout der Kasse"
 
 msgid "Target window"
-msgstr ""
+msgstr "Zielfenster"
 
 msgid "Prefer popup"
-msgstr ""
+msgstr "Popup bevorzugen"
 
 msgid "Prefer new tab"
-msgstr ""
+msgstr "Neuen Tab bevorzugen"
 
 msgid "Prefer same window"
-msgstr ""
+msgstr "Gleiches Fenster bevorzugen"
 
 msgid "Registration notification sent to"
-msgstr ""
+msgstr "Registrierungsbenachrichtigung senden an"
 
 msgid "WordPress default"
-msgstr ""
+msgstr "WordPress-Standard"
 
 msgid "Nobody"
-msgstr ""
+msgstr "Niemanden"
 
 msgid "Admin"
-msgstr ""
+msgstr "Administrator"
 
 msgid "User and Admin"
-msgstr ""
+msgstr "Benutzer und Administrator"
 
 msgid "Unlink"
-msgstr ""
+msgstr "Trennen"
 
 msgid "Allow Social account unlink"
-msgstr ""
+msgstr "Trennen von Social-Konten erlauben"
 
 msgid "Show linked providers"
-msgstr ""
+msgstr "Verknüpfte Anbieter anzeigen"
 
 #, php-format
 msgid "Providers linked to the account will appear in the %1$s."
-msgstr ""
+msgstr "Mit dem Konto verknüpfte Anbieter werden in der %1$s angezeigt."
 
 msgid "Users table"
-msgstr ""
+msgstr "Benutzertabelle"
 
 msgid "Disable Admin bar for roles"
-msgstr ""
+msgstr "Werkzeugleiste für Rollen deaktivieren"
 
 msgid "Debug mode"
-msgstr ""
+msgstr "Debug-Modus"
 
 msgid "Bypass cache on redirect"
-msgstr ""
+msgstr "Cache bei der Weiterleitung umgehen"
 
 #, php-format
 msgid ""
@@ -868,95 +961,115 @@ msgid ""
 "after a successful registration or login with social login. %1$sLearn "
 "more%2$s."
 msgstr ""
+"Wenn Sie diese Option aktivieren, wird der URL, zu der nach einer "
+"erfolgreichen Registrierung oder Anmeldung über Social Login weitergeleitet "
+"wird, ein GET-Parameter hinzugefügt. %1$sMehr erfahren%2$s."
 
 msgid "Page for register flow"
-msgstr ""
+msgstr "Seite für den Registrierungsablauf"
 
 msgid "None"
-msgstr ""
+msgstr "Keine"
 
 msgid "Clear - Page for register flow"
-msgstr ""
+msgstr "Leeren - Seite für den Registrierungsablauf"
 
 msgid ""
 "This setting is used when you request additional data from the users (such "
 "as email address) and to display the Terms and conditions."
 msgstr ""
+"Diese Einstellung wird verwendet, wenn Sie zusätzliche Daten von den "
+"Benutzern anfordern (z. B. die E-Mail-Adresse) und um die Allgemeinen "
+"Geschäftsbedingungen anzuzeigen."
 
 #, php-format
 msgid ""
 "%2$s First create a new page and insert the following shortcode: %1$s then "
 "select this page above"
 msgstr ""
+"%2$s Erstellen Sie zuerst eine neue Seite und fügen Sie den folgenden "
+"Shortcode ein: %1$s Wählen Sie diese Seite dann oben aus"
 
 #, php-format
 msgid ""
 "%1$s You won't be able to reach the selected page unless a social login/"
 "registration happens."
 msgstr ""
+"%1$s Die ausgewählte Seite ist nur erreichbar, wenn eine Social-Anmeldung "
+"oder -Registrierung stattfindet."
 
 msgid "OAuth redirect uri proxy page"
-msgstr ""
+msgstr "Proxy-Seite für die OAuth-Weiterleitungs-URI"
 
 msgid "Clear - OAuth redirect uri proxy page"
-msgstr ""
+msgstr "Leeren - Proxy-Seite für die OAuth-Weiterleitungs-URI"
 
 msgid ""
 "You can use this setting when wp-login.php page is not available to handle "
 "the OAuth flow."
 msgstr ""
+"Sie können diese Einstellung verwenden, wenn die Seite wp-login.php nicht "
+"für den OAuth-Ablauf verfügbar ist."
 
 #, php-format
 msgid "%1$s First create a new page then select this page above."
 msgstr ""
+"%1$s Erstellen Sie zuerst eine neue Seite und wählen Sie diese Seite dann "
+"oben aus."
 
 msgid "Prevent external redirect overrides"
-msgstr ""
+msgstr "Überschreiben durch externe Weiterleitungen verhindern"
 
 msgid "Disable external redirects"
-msgstr ""
+msgstr "Externe Weiterleitungen deaktivieren"
 
 msgid "Default redirect url"
-msgstr ""
+msgstr "Standard-Weiterleitungs-URL"
 
 msgid "for Login"
-msgstr ""
+msgstr "für die Anmeldung"
 
 msgid "for Register"
-msgstr ""
+msgstr "für die Registrierung"
 
 msgid "Fixed redirect url"
-msgstr ""
+msgstr "Feste Weiterleitungs-URL"
 
 msgid "Blacklisted redirects"
-msgstr ""
+msgstr "Gesperrte Weiterleitungen"
 
 msgid "If you want to blacklist redirect url params. One pattern per line."
 msgstr ""
+"Wenn Sie Parameter für Weiterleitungs-URLs sperren möchten. Ein Muster pro "
+"Zeile."
 
 msgid "Support login restrictions"
-msgstr ""
+msgstr "Anmeldebeschränkungen unterstützen"
 
 #, php-format
 msgid "Please visit to our %1$s to check what plugins are supported!"
 msgstr ""
+"Bitte besuchen Sie unsere %1$s, um zu sehen, welche Plugins unterstützt "
+"werden!"
 
 msgid "Display avatars in \"All media items\""
-msgstr ""
+msgstr "Avatare in „Alle Medienelemente“ anzeigen"
 
 msgid ""
 "Enabling this option can speed up loading images in Media Library - Grid "
 "view!"
 msgstr ""
+"Wenn Sie diese Option aktivieren, können Bilder in der Rasteransicht der "
+"Mediathek schneller geladen werden!"
 
 msgid "Membership"
-msgstr ""
+msgstr "Mitgliedschaft"
 
 msgid "Allow registration with Social login."
-msgstr ""
+msgstr "Registrierung über Social Login erlauben."
 
 msgid "Custom label for register buttons"
-msgstr ""
+msgstr "Eigene Beschriftung für Registrierungs-Buttons"
 
 #, php-format
 msgid ""
@@ -965,187 +1078,204 @@ msgid ""
 "can be modified at the Buttons tab of each provider.<br>This option also "
 "allows the use of register specific %3$s options."
 msgstr ""
+"Legen Sie eine eigene Beschriftung für die Social-Buttons in "
+"Registrierungsformularen und für Shortcodes fest, bei denen der Parameter "
+"%1$s auf %2$s gesetzt ist.<br>Die registrierungsspezifischen Beschriftungen "
+"können im Tab „Buttons“ des jeweiligen Anbieters geändert werden.<br>Mit "
+"dieser Option können außerdem registrierungsspezifische %3$s-Optionen "
+"verwendet werden."
 
 msgid "Redirect overlay"
-msgstr ""
+msgstr "Overlay bei der Weiterleitung"
 
 msgid "No overlay"
-msgstr ""
+msgstr "Kein Overlay"
 
 msgid "Display overlay"
-msgstr ""
+msgstr "Overlay anzeigen"
 
 msgid "Display overlay with spinner"
-msgstr ""
+msgstr "Overlay mit Ladeanimation anzeigen"
 
 msgid "Display overlay with spinner and message"
-msgstr ""
+msgstr "Overlay mit Ladeanimation und Nachricht anzeigen"
 
 msgid ""
 "You can display an overlay on your site when we start the redirect after the "
 "authentication."
 msgstr ""
+"Sie können auf Ihrer Website ein Overlay anzeigen, wenn nach der "
+"Authentifizierung die Weiterleitung beginnt."
 
 #, php-format
 msgid "%1$s The overlay won't be displayed if the %2$s setting is set to %3$s!"
 msgstr ""
+"%1$s Das Overlay wird nicht angezeigt, wenn die Einstellung %2$s auf %3$s "
+"gesetzt ist!"
 
 msgid "Note:"
-msgstr ""
+msgstr "Hinweis:"
 
 msgid "Unsupported WebView behavior"
-msgstr ""
+msgstr "Verhalten bei nicht unterstützter WebView"
 
 msgid "Remove button"
-msgstr ""
+msgstr "Button entfernen"
 
 msgid "Disable button"
-msgstr ""
+msgstr "Button deaktivieren"
 
 #, php-format
 msgid "Some %1$sproviders%2$s don't support embedded browsers."
-msgstr ""
+msgstr "Einige %1$sAnbieter%2$s unterstützen keine eingebetteten Browser."
 
 msgid ""
 "This setting defines if we should remove or disable the related buttons in "
 "WebView environments."
 msgstr ""
+"Diese Einstellung legt fest, ob die betroffenen Buttons in WebView-"
+"Umgebungen entfernt oder deaktiviert werden."
 
 msgid "Below and floating"
-msgstr ""
+msgstr "Unterhalb und schwebend"
 
 msgid "Embedded Login form button style"
-msgstr ""
+msgstr "Button-Stil im eingebetteten Anmeldeformular"
 
 msgid "Embedded Login layout"
-msgstr ""
+msgstr "Layout der eingebetteten Anmeldung"
 
 msgid "Embedded login form button alignment"
-msgstr ""
+msgstr "Button-Ausrichtung im eingebetteten Anmeldeformular"
 
 msgid "Registration Form"
-msgstr ""
+msgstr "Registrierungsformular"
 
 msgid "Embedded login form"
-msgstr ""
+msgstr "Eingebettetes Anmeldeformular"
 
 msgid "Sign Up form"
-msgstr ""
+msgstr "Registrierungsformular"
 
 msgid "No Connect button in Sign Up form"
-msgstr ""
+msgstr "Kein Verbinden-Button im Registrierungsformular"
 
 msgid "Sign Up form button style"
-msgstr ""
+msgstr "Button-Stil im Registrierungsformular"
 
 msgid "Sign Up layout"
-msgstr ""
+msgstr "Layout der Registrierung"
 
 msgid "Account details"
-msgstr ""
+msgstr "Kontodetails"
 
 msgid "No link buttons"
-msgstr ""
+msgstr "Keine Verknüpfen-Buttons"
 
 msgid "Link buttons after account details"
-msgstr ""
+msgstr "Verknüpfen-Buttons nach den Kontodetails"
 
 msgid "Store"
-msgstr ""
+msgstr "Speichern"
 
 msgid "First and last name"
-msgstr ""
+msgstr "Vor- und Nachname"
 
 msgid "When not enabled, username will be randomly generated."
-msgstr ""
+msgstr "Wenn nicht aktiviert, wird der Benutzername zufällig generiert."
 
 msgid "Email"
-msgstr ""
+msgstr "E-Mail"
 
 msgid "When not enabled, email will be empty."
-msgstr ""
+msgstr "Wenn nicht aktiviert, bleibt die E-Mail-Adresse leer."
 
 msgid "Avatar"
-msgstr ""
+msgstr "Avatar"
 
 msgid "Access token"
-msgstr ""
+msgstr "Zugriffstoken"
 
 msgid "Register Form"
-msgstr ""
+msgstr "Registrierungsformular"
 
 msgid "No Connect button in login form"
-msgstr ""
+msgstr "Kein Verbinden-Button im Anmeldeformular"
 
 msgid "No Connect button in register form"
-msgstr ""
+msgstr "Kein Verbinden-Button im Registrierungsformular"
 
 msgid "Billing form"
-msgstr ""
+msgstr "Rechnungsformular"
 
 msgid "No Connect button in billing form"
-msgstr ""
+msgstr "Kein Verbinden-Button im Rechnungsformular"
 
 msgid "Billing layout"
-msgstr ""
+msgstr "Layout des Rechnungsformulars"
 
 msgid "Default with separator"
-msgstr ""
+msgstr "Standard mit Trennlinie"
 
 msgid "No Connect buttons in account details form"
-msgstr ""
+msgstr "Keine Verbinden-Buttons im Formular für die Kontodetails"
 
 msgid "Link buttons on"
-msgstr ""
+msgstr "Verknüpfen-Buttons bei"
 
 msgid "WooCommerce registration notification"
-msgstr ""
+msgstr "WooCommerce-Registrierungsbenachrichtigung"
 
 #, php-format
 msgid ""
 "Defines whether the registration with %1$s will send the same registration "
 "notification that %2$s does, instead of the %3$s default one."
 msgstr ""
+"Legt fest, ob die Registrierung über %1$s dieselbe "
+"Registrierungsbenachrichtigung sendet wie %2$s anstelle der "
+"Standardbenachrichtigung von %3$s."
 
 #, php-format
 msgid "Network connection successful: %1$s"
-msgstr ""
+msgstr "Netzwerkverbindung erfolgreich: %1$s"
 
 #, php-format
 msgid "Network connection failed: %1$s"
-msgstr ""
+msgstr "Netzwerkverbindung fehlgeschlagen: %1$s"
 
 msgid ""
 "Please contact with your hosting provider to resolve the network issue "
 "between your server and the provider."
 msgstr ""
+"Bitte wenden Sie sich an Ihren Hosting-Anbieter, um das Netzwerkproblem "
+"zwischen Ihrem Server und dem Anbieter zu beheben."
 
 msgid "Manage Avatar"
-msgstr ""
+msgstr "Avatar verwalten"
 
 #, php-format
 msgid "Avatar <span class=\"count\">(%s)</span>"
 msgid_plural "Avatar <span class=\"count\">(%s)</span>"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Avatar <span class=\"count\">(%s)</span>"
+msgstr[1] "Avatare <span class=\"count\">(%s)</span>"
 
 #, php-format
 msgid "%1$s &lsaquo; %2$s &#8212; WordPress"
-msgstr ""
+msgstr "%1$s &lsaquo; %2$s &#8212; WordPress"
 
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://wordpress.org/"
 
 msgid "Powered by WordPress"
-msgstr ""
+msgstr "Powered by WordPress"
 
 #, php-format
 msgctxt "site"
 msgid "&larr; Back to %s"
-msgstr ""
+msgstr "&larr; Zurück zu %s"
 
 msgid "Your configuration needs to be verified"
-msgstr ""
+msgstr "Ihre Konfiguration muss verifiziert werden"
 
 msgid ""
 "Before you can start letting your users register with your app it needs to "
@@ -1154,93 +1284,115 @@ msgid ""
 "check the copied ID and secret or the app itself. Otherwise your settings "
 "are fine."
 msgstr ""
+"Bevor sich Ihre Benutzer über Ihre App registrieren können, muss sie "
+"getestet werden. Dieser Test stellt sicher, dass bei der Anmeldung und "
+"Registrierung keine Probleme auftreten. <br> Wenn im Popup eine "
+"Fehlermeldung erscheint, überprüfen Sie die kopierte ID und das Secret oder "
+"die App selbst. Andernfalls sind Ihre Einstellungen in Ordnung."
 
 msgid "Please save your changes to verify settings."
 msgstr ""
+"Bitte speichern Sie Ihre Änderungen, um die Einstellungen zu verifizieren."
 
 msgid "Works Fine"
-msgstr ""
+msgstr "Funktioniert"
 
 #, php-format
 msgid ""
 "This provider is currently disabled, which means that users can’t register "
 "or login via their %s account."
 msgstr ""
+"Dieser Anbieter ist derzeit deaktiviert. Benutzer können sich also nicht "
+"über ihr %s-Konto registrieren oder anmelden."
 
 #, php-format
 msgid ""
 "This provider works fine, but you can test it again. If you don’t want to "
 "let users register or login with %s anymore you can disable it."
 msgstr ""
+"Dieser Anbieter funktioniert, Sie können ihn aber erneut testen. Wenn sich "
+"Benutzer nicht mehr über %s registrieren oder anmelden sollen, können Sie "
+"ihn deaktivieren."
 
 #, php-format
 msgid ""
 "This provider is currently enabled, which means that users can register or "
 "login via their %s account."
 msgstr ""
+"Dieser Anbieter ist derzeit aktiviert. Benutzer können sich also über ihr %s-"
+"Konto registrieren oder anmelden."
 
 msgid "Verify Settings Again"
-msgstr ""
+msgstr "Einstellungen erneut verifizieren"
 
 msgid "Please save your changes before verifying settings."
 msgstr ""
+"Bitte speichern Sie Ihre Änderungen, bevor Sie die Einstellungen "
+"verifizieren."
 
 msgid "Error: Email verification status is not checked in this provider!"
 msgstr ""
+"Fehler: Der Verifizierungsstatus der E-Mail-Adresse wird bei diesem Anbieter "
+"nicht geprüft!"
 
 msgid "Authentication successful"
-msgstr ""
+msgstr "Authentifizierung erfolgreich"
 
 msgid "Authentication error"
-msgstr ""
+msgstr "Authentifizierungsfehler"
 
 msgid "Unlink successful."
-msgstr ""
+msgstr "Verknüpfung erfolgreich aufgehoben."
 
 msgid "Unlink is not allowed!"
-msgstr ""
+msgstr "Das Aufheben der Verknüpfung ist nicht erlaubt!"
 
 msgid "Unlink failed: nonce is invalid"
-msgstr ""
+msgstr "Aufheben der Verknüpfung fehlgeschlagen: Die Nonce ist ungültig"
 
 #, php-format
 msgid "You are attempting to unlink your WordPress account from %s."
 msgstr ""
+"Sie sind dabei, die Verknüpfung Ihres WordPress-Kontos mit %s aufzuheben."
 
 #, php-format
 msgid "Do you really want to %1$s unlink %2$s it?"
-msgstr ""
+msgstr "Möchten Sie die Verknüpfung wirklich %1$s aufheben %2$s?"
 
 msgid "The test was successful"
-msgstr ""
+msgstr "Der Test war erfolgreich"
 
 msgid "Authentication failed"
-msgstr ""
+msgstr "Authentifizierung fehlgeschlagen"
 
 msgid "Identifier"
-msgstr ""
+msgstr "Kennung"
 
 msgid "Profile Picture"
-msgstr ""
+msgstr "Profilbild"
 
 #, php-format
 msgid ""
 "Your %1$s account is successfully linked with your account. Now you can sign "
 "in with %2$s easily."
 msgstr ""
+"Ihr %1$s-Konto wurde erfolgreich mit Ihrem Konto verknüpft. Jetzt können Sie "
+"sich ganz einfach mit %2$s anmelden."
 
 #, php-format
 msgid ""
 "You have already linked a(n) %s account. Please unlink the current and then "
 "you can link another %s account."
 msgstr ""
+"Sie haben bereits ein %s-Konto verknüpft. Bitte heben Sie die aktuelle "
+"Verknüpfung auf, dann können Sie ein anderes %s-Konto verknüpfen."
 
 #, php-format
 msgid "This %s account is already linked to another user."
-msgstr ""
+msgstr "Dieses %s-Konto ist bereits mit einem anderen Benutzer verknüpft."
 
 msgid "User registration is currently not allowed."
-msgstr ""
+msgstr "Die Registrierung von Benutzern ist derzeit nicht erlaubt."
 
 #, php-format
 msgid ""
@@ -1248,6 +1400,10 @@ msgid ""
 "address is not verified.%2$sPlease login to your existing account using your "
 "password and link your %1$s account to it manually!"
 msgstr ""
+"Wir haben einen Benutzer mit Ihrer %1$s-E-Mail-Adresse gefunden, aber seine "
+"E-Mail-Adresse scheint nicht verifiziert zu sein.%2$sBitte melden Sie sich "
+"mit Ihrem Passwort bei Ihrem bestehenden Konto an und verknüpfen Sie Ihr "
+"%1$s-Konto manuell damit!"
 
 #, php-format
 msgid ""
@@ -1255,756 +1411,895 @@ msgid ""
 "different account, so we are unable to log you in. Please use the linked "
 "account or log in with your password!"
 msgstr ""
+"Wir haben einen Benutzer mit Ihrer %1$s-E-Mail-Adresse gefunden. Sie gehört "
+"jedoch zu einem anderen Konto, daher können wir Sie nicht anmelden. Bitte "
+"verwenden Sie das verknüpfte Konto oder melden Sie sich mit Ihrem Passwort "
+"an!"
 
 msgid "Register For This Site"
-msgstr ""
+msgstr "Für diese Website registrieren"
 
 #, php-format
 msgid "%1$s requires PHP version %2$s+, plugin is currently NOT ACTIVE."
-msgstr ""
+msgstr "%1$s benötigt PHP-Version %2$s+, das Plugin ist derzeit NICHT AKTIV."
 
 #, php-format
 msgid ""
 "%1$s requires WordPress version %2$s+. Because you are using an earlier "
 "version, the plugin is currently NOT ACTIVE."
 msgstr ""
+"%1$s benötigt WordPress-Version %2$s+. Da Sie eine ältere Version verwenden, "
+"ist das Plugin derzeit NICHT AKTIV."
 
 #, php-format
 msgid "Please update %1$s to version %2$s or newer."
-msgstr ""
+msgstr "Bitte aktualisieren Sie %1$s auf Version %2$s oder neuer."
 
 msgid "Update now!"
-msgstr ""
+msgstr "Jetzt aktualisieren!"
 
 msgid ""
 "By clicking Register, you accept our <a href=\"#privacy_policy_url\" "
 "target=\"_blank\">Privacy Policy</a>"
 msgstr ""
+"Indem Sie auf „Registrieren“ klicken, akzeptieren Sie unsere <a "
+"href=\"#privacy_policy_url\" target=\"_blank\">Datenschutzerklärung</a>"
 
 msgid "Hold On"
-msgstr ""
+msgstr "Einen Moment bitte"
 
 msgid "You are being redirected to another page,<br>it may take a few seconds."
 msgstr ""
+"Sie werden auf eine andere Seite weitergeleitet,<br>das kann einige Sekunden "
+"dauern."
 
 msgid "The selected provider doesn't support embedded browsers!"
-msgstr ""
+msgstr "Der ausgewählte Anbieter unterstützt keine eingebetteten Browser!"
 
 msgid "Social Login"
-msgstr ""
+msgstr "Social Login"
 
 msgid "Button skin"
-msgstr ""
+msgstr "Button-Design"
 
 msgid "Dark"
-msgstr ""
+msgstr "Dunkel"
 
 msgid "Light"
-msgstr ""
+msgstr "Hell"
 
 msgid "Black"
-msgstr ""
+msgstr "Schwarz"
 
 msgid "White"
-msgstr ""
+msgstr "Weiß"
 
 #, php-format
 msgid ""
 "%1$s allows HTTPS OAuth Redirects only. You must move your site to HTTPS in "
 "order to allow login with %1$s."
 msgstr ""
+"%1$s erlaubt nur OAuth-Weiterleitungen über HTTPS. Sie müssen Ihre Website "
+"auf HTTPS umstellen, damit die Anmeldung mit %1$s möglich ist."
 
 msgid "How to get SSL for my WordPress site?"
-msgstr ""
+msgstr "Wie erhalte ich ein SSL-Zertifikat für meine WordPress-Website?"
 
 msgid "App ID"
-msgstr ""
+msgstr "App ID"
 
 msgid "Required"
-msgstr ""
+msgstr "Erforderlich"
 
 #, php-format
 msgid ""
 "If you are not sure what is your %1$s, please head over to <a "
 "href=\"%2$s\">Getting Started</a>"
 msgstr ""
+"Wenn Sie nicht wissen, wo Sie %1$s finden, lesen Sie bitte den Abschnitt <a "
+"href=\"%2$s\">Erste Schritte</a>"
 
 msgid "App Secret"
-msgstr ""
+msgstr "App Secret"
 
 #, php-format
 msgid ""
 "By replacing your existing %1$s App, users with linked %1$s accounts will no "
 "longer be able to login with %1$s."
 msgstr ""
+"Wenn Sie Ihre bestehende %1$s-App ersetzen, können sich Benutzer mit "
+"verknüpften %1$s-Konten nicht mehr mit %1$s anmelden."
 
 msgid "Find out why?"
-msgstr ""
+msgstr "Warum?"
 
 msgid "Profile image size"
-msgstr ""
+msgstr "Größe des Profilbilds"
 
 msgid "Small"
-msgstr ""
+msgstr "Klein"
 
 msgid "Medium"
-msgstr ""
+msgstr "Mittel"
 
 msgid "Large"
-msgstr ""
+msgstr "Groß"
 
 msgid "Extra Large"
-msgstr ""
+msgstr "Sehr groß"
 
 msgid "Continue with <b>Facebook</b>"
-msgstr ""
+msgstr "Weiter mit <b>Facebook</b>"
 
 msgid "Sign up with <b>Facebook</b>"
-msgstr ""
+msgstr "Mit <b>Facebook</b> registrieren"
 
 msgid "Link account with <b>Facebook</b>"
-msgstr ""
+msgstr "Konto mit <b>Facebook</b> verknüpfen"
 
 msgid "Unlink account from <b>Facebook</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>Facebook</b> aufheben"
 
 #, php-format
 msgid ""
 "The %1$s entered did not appear to be a valid. Please enter a valid %2$s."
 msgstr ""
+"Der eingegebene Wert für %1$s scheint ungültig zu sein. Bitte geben Sie "
+"einen gültigen Wert für %2$s ein."
 
 #, php-format
 msgid "Required scope: %1$s"
-msgstr ""
+msgstr "Erforderlicher Scope: %1$s"
 
 msgid "Neutral"
+msgstr "Neutral"
+
+msgid ""
+"Required by Google One Tap. Without it the One Tap prompt never appears."
 msgstr ""
+"Wird für Google One Tap benötigt. Ohne diesen Eintrag erscheint das One-Tap-"
+"Fenster nie."
+
+msgid "Google One Tap"
+msgstr "Google One Tap"
+
+msgid "Show where the Google button appears"
+msgstr "Dort anzeigen, wo der Google-Button erscheint"
+
+msgid "Show on all pages"
+msgstr "Auf allen Seiten anzeigen"
+
+#, php-format
+msgid ""
+"Shows Google's One Tap prompt, so visitors can sign in with their Google "
+"account without leaving the page. %1$sLearn more%2$s."
+msgstr ""
+"Zeigt das One-Tap-Fenster von Google an, damit sich Besucher mit ihrem "
+"Google-Konto anmelden können, ohne die Seite zu verlassen. %1$sMehr "
+"erfahren%2$s."
+
+#, php-format
+msgid ""
+"%1$s Requires HTTPS, and %2$s added to the %3$sAuthorized JavaScript "
+"origins%4$s of your Google app."
+msgstr ""
+"%1$s Erfordert HTTPS, und %2$s muss in Ihrer Google-App zu den "
+"%3$sAuthorized JavaScript origins%4$s hinzugefügt sein."
+
+#, php-format
+msgid ""
+"%1$s Unlike the Google button, One Tap loads Google's script as soon as the "
+"page opens. %2$sLearn more%3$s."
+msgstr ""
+"%1$s Anders als der Google-Button lädt One Tap das Skript von Google, sobald "
+"die Seite geöffnet wird. %2$sMehr erfahren%3$s."
 
 msgid "Client ID"
-msgstr ""
+msgstr "Client ID"
 
 msgid "Client Secret"
-msgstr ""
+msgstr "Client Secret"
 
 msgid "Select account on each login"
-msgstr ""
+msgstr "Bei jeder Anmeldung Konto auswählen"
 
 msgid ""
 "Disable, when you don't want to see the account select prompt on each login."
 msgstr ""
+"Deaktivieren Sie diese Option, wenn die Kontoauswahl nicht bei jeder "
+"Anmeldung angezeigt werden soll."
 
 msgid "Original"
-msgstr ""
+msgstr "Original"
 
 msgid "Continue with <b>Google</b>"
-msgstr ""
+msgstr "Weiter mit <b>Google</b>"
 
 msgid "Sign up with <b>Google</b>"
-msgstr ""
+msgstr "Mit <b>Google</b> registrieren"
 
 msgid "Link account with <b>Google</b>"
-msgstr ""
+msgstr "Konto mit <b>Google</b> verknüpfen"
 
 msgid "Unlink account from <b>Google</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>Google</b> aufheben"
 
 #, php-format
 msgid "Required API: %1$s"
-msgstr ""
+msgstr "Erforderliche API: %1$s"
 
 msgid "X"
-msgstr ""
+msgstr "X"
 
 msgid "Legacy"
-msgstr ""
+msgstr "Veraltet"
 
 msgid "API version"
-msgstr ""
+msgstr "API-Version"
 
 msgid "v1.1"
-msgstr ""
+msgstr "v1.1"
 
 msgid "v2"
-msgstr ""
+msgstr "v2"
 
 msgid "API Key"
-msgstr ""
+msgstr "API Key"
 
 msgid "API Key Secret"
-msgstr ""
+msgstr "API Key Secret"
 
 msgid "Continue with <b>X</b>"
-msgstr ""
+msgstr "Weiter mit <b>X</b>"
 
 msgid "Sign up with <b>X</b>"
-msgstr ""
+msgstr "Mit <b>X</b> registrieren"
 
 msgid "Link account with <b>X</b>"
-msgstr ""
+msgstr "Konto mit <b>X</b> verknüpfen"
 
 msgid "Unlink account from <b>X</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>X</b> aufheben"
 
 msgctxt "Register form submit button label"
 msgid "Register"
-msgstr ""
+msgstr "Registrieren"
 
 #, php-format
 msgid "%s Buttons"
-msgstr ""
+msgstr "%s Buttons"
 
 msgid "Title:"
-msgstr ""
+msgstr "Titel:"
 
 msgid "Button style:"
-msgstr ""
+msgstr "Button-Stil:"
 
 msgid "Button align:"
-msgstr ""
+msgstr "Button-Ausrichtung:"
 
 msgid "Show link buttons"
-msgstr ""
+msgstr "Verknüpfen-Buttons anzeigen"
 
 msgid "Show unlink buttons"
-msgstr ""
+msgstr "Trennen-Buttons anzeigen"
 
 msgid "Social login is not allowed with this role!"
-msgstr ""
+msgstr "Social Login ist mit dieser Rolle nicht erlaubt!"
 
 msgid "Please enter a username."
-msgstr ""
+msgstr "Bitte geben Sie einen Benutzernamen ein."
 
 msgid ""
 "This username is invalid because it uses illegal characters. Please enter a "
 "valid username."
 msgstr ""
+"Dieser Benutzername ist ungültig, da er nicht erlaubte Zeichen enthält. "
+"Bitte geben Sie einen gültigen Benutzernamen ein."
 
 msgid ""
 "<strong>Error</strong>: This username is already registered. Please choose "
 "another one."
 msgstr ""
+"<strong>Fehler</strong>: Dieser Benutzername ist bereits registriert. Bitte "
+"wählen Sie einen anderen."
 
 msgid "<strong>Error</strong>: Sorry, that username is not allowed."
-msgstr ""
+msgstr "<strong>Fehler</strong>: Dieser Benutzername ist leider nicht erlaubt."
 
 msgid "<strong>Error</strong>: Please enter an email address."
-msgstr ""
+msgstr "<strong>Fehler</strong>: Bitte geben Sie eine E-Mail-Adresse ein."
 
 msgid "<strong>Error</strong>: The email address isn&#8217;t correct."
-msgstr ""
+msgstr "<strong>Fehler</strong>: Die E-Mail-Adresse ist nicht korrekt."
 
 msgid ""
 "<strong>Error</strong>: This email is already registered. Please choose "
 "another one."
 msgstr ""
+"<strong>Fehler</strong>: Diese E-Mail-Adresse ist bereits registriert. Bitte "
+"wählen Sie eine andere."
 
 msgid "<strong>Error</strong>: Please enter a password."
-msgstr ""
+msgstr "<strong>Fehler</strong>: Bitte geben Sie ein Passwort ein."
 
 msgid "<strong>Error</strong>: Passwords may not contain the character \"\\\"."
 msgstr ""
+"<strong>Fehler</strong>: Passwörter dürfen das Zeichen „\\“ nicht enthalten."
 
 msgid ""
 "<strong>Error</strong>: Passwords don&#8217;t match. Please enter the same "
 "password in both password fields."
 msgstr ""
+"<strong>Fehler</strong>: Die Passwörter stimmen nicht überein. Bitte geben "
+"Sie in beiden Passwortfeldern dasselbe Passwort ein."
 
 #, php-format
 msgid ""
 "This email is already registered, please login in to your account to link "
 "with %1$s."
 msgstr ""
+"Diese E-Mail-Adresse ist bereits registriert. Bitte melden Sie sich bei "
+"Ihrem Konto an, um es mit %1$s zu verknüpfen."
 
 msgid "Unexpected response: The provider didn't return the Authorization URL!"
 msgstr ""
+"Unerwartete Antwort: Der Anbieter hat keine Autorisierungs-URL zurückgegeben!"
 
 msgid "Unexpected response: Authentication has been cancelled!"
-msgstr ""
+msgstr "Unerwartete Antwort: Die Authentifizierung wurde abgebrochen!"
 
 msgid "Unexpected response: Immediate request failed - Setup Needed!"
 msgstr ""
+"Unerwartete Antwort: Sofortige Anfrage fehlgeschlagen – Einrichtung "
+"erforderlich!"
 
 msgid ""
 "Unexpected response: The targeted OpenID server is not authorized to verify "
 "this request!"
 msgstr ""
+"Unerwartete Antwort: Der angesprochene OpenID-Server ist nicht berechtigt, "
+"diese Anfrage zu verifizieren!"
 
 msgid "Unexpected response: OpenID Verification failed!"
-msgstr ""
+msgstr "Unerwartete Antwort: OpenID-Verifizierung fehlgeschlagen!"
 
 #, php-format
 msgid "Please install and activate %1$s to use the %2$s"
-msgstr ""
+msgstr "Bitte installieren und aktivieren Sie %1$s, um das %2$s zu verwenden"
 
 msgid "Network Activate"
-msgstr ""
+msgstr "Netzwerkweit aktivieren"
 
 msgid "Install now!"
-msgstr ""
+msgstr "Jetzt installieren!"
 
 msgid "Social Providers"
-msgstr ""
+msgstr "Social-Anbieter"
 
 #, php-format
 msgid ""
 "The Facebook Sync data needs an approved %1$s and your App must use the "
 "latest %2$s version!"
 msgstr ""
+"Für die Facebook-Datensynchronisierung muss Ihre App den %1$s bestanden "
+"haben und die neueste %2$s-Version verwenden!"
+
+#, php-format
+msgid ""
+"Yes. With Google One Tap enabled, %1$s loads Google's Identity Services "
+"library from %2$s on the pages where the One Tap prompt can appear. Google "
+"receives the visitor's IP address and reads its own cookies on that domain "
+"to decide whether the prompt can be shown."
+msgstr ""
+"Ja. Wenn Google One Tap aktiviert ist, lädt %1$s die Identity Services-"
+"Bibliothek von Google von %2$s auf den Seiten, auf denen das One-Tap-Fenster "
+"erscheinen kann. Google erhält die IP-Adresse des Besuchers und liest seine "
+"eigenen Cookies auf dieser Domain, um zu entscheiden, ob das Fenster "
+"angezeigt werden kann."
+
+#, php-format
+msgid ""
+"With Google One Tap enabled, Google's library also stores a %1$s cookie on "
+"this site, which holds the visitor's One Tap status, such as whether they "
+"closed the prompt."
+msgstr ""
+"Wenn Google One Tap aktiviert ist, speichert die Bibliothek von Google "
+"außerdem ein Cookie namens %1$s auf dieser Website. Es enthält den One-Tap-"
+"Status des Besuchers, zum Beispiel, ob er das Fenster geschlossen hat."
 
 #, php-format
 msgid ""
 "Most of these information can only be retrieved, when the field is marked as "
 "Public on the user's %s page!"
 msgstr ""
+"Die meisten dieser Informationen können nur abgerufen werden, wenn das Feld "
+"auf der %s-Seite des Benutzers als öffentlich markiert ist!"
 
 #, php-format
 msgid ""
 "Most of these information can only be retrieved, when the field is filled on "
 "the user's %s page!"
 msgstr ""
+"Die meisten dieser Informationen können nur abgerufen werden, wenn das Feld "
+"auf der %s-Seite des Benutzers ausgefüllt ist!"
 
 #, php-format
 msgid ""
 "Most of these information can only be retrieved, when the field is filled on "
 "the user's %s page! For the campaigns, the user must have a public campaign!"
 msgstr ""
+"Die meisten dieser Informationen können nur abgerufen werden, wenn das Feld "
+"auf der %s-Seite des Benutzers ausgefüllt ist! Für die Kampagnen muss der "
+"Benutzer eine öffentliche Kampagne haben!"
 
 #, php-format
 msgid ""
 "The Spotify Sync data requires the %1$s with the necessary scopes enabled!"
 msgstr ""
+"Für die Spotify-Datensynchronisierung muss die %1$s mit den nötigen Scopes "
+"aktiviert sein!"
 
 #, php-format
 msgid ""
 "The TikTok Sync data requires the %1$s with the necessary scopes enabled!"
 msgstr ""
+"Für die TikTok-Datensynchronisierung muss die %1$s mit den nötigen Scopes "
+"aktiviert sein!"
 
 msgid "Continue with <b>Amazon</b>"
-msgstr ""
+msgstr "Weiter mit <b>Amazon</b>"
 
 msgid "Sign up with <b>Amazon</b>"
-msgstr ""
+msgstr "Mit <b>Amazon</b> registrieren"
 
 msgid "Link account with <b>Amazon</b>"
-msgstr ""
+msgstr "Konto mit <b>Amazon</b> verknüpfen"
 
 msgid "Unlink account from <b>Amazon</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>Amazon</b> aufheben"
 
 msgid "Delete credentials"
-msgstr ""
+msgstr "Zugangsdaten löschen"
 
 msgid "Private Key ID"
-msgstr ""
+msgstr "Private Key ID"
 
 msgid "Private Key"
-msgstr ""
+msgstr "Private Key"
 
 msgid "Team Identifier"
-msgstr ""
+msgstr "Team Identifier"
 
 msgid "Service Identifier"
-msgstr ""
+msgstr "Service Identifier"
 
 msgid "Generate Token"
-msgstr ""
+msgstr "Token generieren"
 
 msgid "Continue with <b>Apple</b>"
-msgstr ""
+msgstr "Weiter mit <b>Apple</b>"
 
 msgid "Sign up with <b>Apple</b>"
-msgstr ""
+msgstr "Mit <b>Apple</b> registrieren"
 
 msgid "Link account with <b>Apple</b>"
-msgstr ""
+msgstr "Konto mit <b>Apple</b> verknüpfen"
 
 msgid "Unlink account from <b>Apple</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>Apple</b> aufheben"
 
 #, php-format
 msgid "An error occurred when storing of the expiration timestamp : %1$s"
-msgstr ""
+msgstr "Beim Speichern des Ablaufzeitpunkts ist ein Fehler aufgetreten: %1$s"
 
 #, php-format
 msgid "Token generation failed: %1$s"
-msgstr ""
+msgstr "Token-Generierung fehlgeschlagen: %1$s"
 
 msgid "Please check your credentials!"
-msgstr ""
+msgstr "Bitte überprüfen Sie Ihre Zugangsdaten!"
 
 msgid "Private key format is not valid!"
-msgstr ""
+msgstr "Das Format des Private Keys ist ungültig!"
 
 #, php-format
 msgid ""
 "%s detected that your Apple credentials have expired. Please delete the "
 "current credentials and generate new one!"
 msgstr ""
+"%s hat festgestellt, dass Ihre Apple-Zugangsdaten abgelaufen sind. Bitte "
+"löschen Sie die aktuellen Zugangsdaten und generieren Sie neue!"
 
 msgid "Apple Credentials"
-msgstr ""
+msgstr "Apple-Zugangsdaten"
 
 msgid "Force reauthorization on each login"
-msgstr ""
+msgstr "Erneute Autorisierung bei jeder Anmeldung erzwingen"
 
 msgid "Enable, when you want to see the consent screen on each login."
 msgstr ""
+"Aktivieren Sie diese Option, wenn der Zustimmungsbildschirm bei jeder "
+"Anmeldung angezeigt werden soll."
 
 msgid "Continue with <b>Discord</b>"
-msgstr ""
+msgstr "Weiter mit <b>Discord</b>"
 
 msgid "Sign up with <b>Discord</b>"
-msgstr ""
+msgstr "Mit <b>Discord</b> registrieren"
 
 msgid "Link account with <b>Discord</b>"
-msgstr ""
+msgstr "Konto mit <b>Discord</b> verknüpfen"
 
 msgid "Unlink account from <b>Discord</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>Discord</b> aufheben"
 
 msgid "API Secret"
-msgstr ""
+msgstr "API Secret"
 
 #, php-format
 msgid "We detected that your %1$s is probably overridden over the %2$s filter!"
 msgstr ""
+"Wir haben festgestellt, dass der Wert für %1$s wahrscheinlich über den "
+"Filter %2$s überschrieben wird!"
 
 #, php-format
 msgid "We detected that your %1$s has been overridden over the %2$s filter!"
 msgstr ""
+"Wir haben festgestellt, dass der Wert für %1$s über den Filter %2$s "
+"überschrieben wurde!"
 
 msgid "Continue with <b>Disqus</b>"
-msgstr ""
+msgstr "Weiter mit <b>Disqus</b>"
 
 msgid "Sign up with <b>Disqus</b>"
-msgstr ""
+msgstr "Mit <b>Disqus</b> registrieren"
 
 msgid "Link account with <b>Disqus</b>"
-msgstr ""
+msgstr "Konto mit <b>Disqus</b> verknüpfen"
 
 msgid "Unlink account from <b>Disqus</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>Disqus</b> aufheben"
 
 msgid "Continue with <b>GitHub</b>"
-msgstr ""
+msgstr "Weiter mit <b>GitHub</b>"
 
 msgid "Sign up with <b>GitHub</b>"
-msgstr ""
+msgstr "Mit <b>GitHub</b> registrieren"
 
 msgid "Link account with <b>GitHub</b>"
-msgstr ""
+msgstr "Konto mit <b>GitHub</b> verknüpfen"
 
 msgid "Unlink account from <b>GitHub</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>GitHub</b> aufheben"
 
 msgid "REST API Key"
-msgstr ""
+msgstr "REST API Key"
 
 msgid "Client Secret Code"
-msgstr ""
+msgstr "Client Secret Code"
 
 msgid "Authorization Prompt"
-msgstr ""
+msgstr "Autorisierungsabfrage"
 
 msgid "Display account select modal"
-msgstr ""
+msgstr "Dialog zur Kontoauswahl anzeigen"
 
 msgid "Force user to enter login credentials on each login"
-msgstr ""
+msgstr "Benutzer bei jeder Anmeldung zur Eingabe der Anmeldedaten zwingen"
 
 msgid "Start the authentication with the Kakao Account sign-up page."
 msgstr ""
+"Die Authentifizierung mit der Registrierungsseite für Kakao-Konten starten."
 
 msgid "Email scope"
-msgstr ""
+msgstr "E-Mail-Scope"
 
 msgid "Disable, when you have no rights for email address."
 msgstr ""
+"Deaktivieren Sie diese Option, wenn Sie keine Berechtigung für die E-Mail-"
+"Adresse haben."
 
 msgid "Mini"
-msgstr ""
+msgstr "Mini"
 
 msgid "Continue with <b>Kakao</b>"
-msgstr ""
+msgstr "Weiter mit <b>Kakao</b>"
 
 msgid "Sign up with <b>Kakao</b>"
-msgstr ""
+msgstr "Mit <b>Kakao</b> registrieren"
 
 msgid "Link account with <b>Kakao</b>"
-msgstr ""
+msgstr "Konto mit <b>Kakao</b> verknüpfen"
 
 msgid "Unlink account from <b>Kakao</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>Kakao</b> aufheben"
 
 msgid "Channel ID"
-msgstr ""
+msgstr "Channel ID"
 
 msgid "Channel Secret"
-msgstr ""
+msgstr "Channel Secret"
 
 msgid "Add LINE Official Account as a friend"
-msgstr ""
+msgstr "Offizielles LINE-Konto als Freund hinzufügen"
 
 msgid "Don't display"
-msgstr ""
+msgstr "Nicht anzeigen"
 
 msgid "Display the add friend option in the consent screen"
-msgstr ""
+msgstr "Option zum Hinzufügen als Freund im Zustimmungsbildschirm anzeigen"
 
 msgid "Opens a new screen with the add friend option after the consent screen"
 msgstr ""
+"Öffnet nach dem Zustimmungsbildschirm einen neuen Bildschirm mit der Option "
+"zum Hinzufügen als Freund"
 
 #, php-format
 msgid ""
 "If you have a LINE Official Account, people can add it as a friend when they "
 "authorize your App. %1$sLearn more%2$s."
 msgstr ""
+"Wenn Sie ein offizielles LINE-Konto haben, können Personen es als Freund "
+"hinzufügen, wenn sie Ihre App autorisieren. %1$sMehr erfahren%2$s."
 
 msgid "Initial Login method"
-msgstr ""
+msgstr "Anfängliche Anmeldemethode"
 
 msgid "Email and Password"
-msgstr ""
+msgstr "E-Mail und Passwort"
 
 msgid "QR code"
-msgstr ""
+msgstr "QR-Code"
 
 msgid ""
 "The selected value defines whether the Email and Password or the QR code "
 "login option will be presented in the LINE authentication screen by default."
 msgstr ""
+"Der ausgewählte Wert legt fest, ob im LINE-Authentifizierungsbildschirm "
+"standardmäßig die Anmeldung mit E-Mail und Passwort oder mit QR-Code "
+"angeboten wird."
 
 msgid "Force initial login method"
-msgstr ""
+msgstr "Anfängliche Anmeldemethode erzwingen"
 
 msgid ""
 "Enable, if you want to offer only the selected Initial Login method in the "
 "LINE authentication screen."
 msgstr ""
+"Aktivieren Sie diese Option, wenn im LINE-Authentifizierungsbildschirm nur "
+"die ausgewählte anfängliche Anmeldemethode angeboten werden soll."
 
 msgid "Allow Auto login"
-msgstr ""
+msgstr "Automatische Anmeldung erlauben"
 
 #, php-format
 msgid ""
 "Having the Auto login enabled could make the login fail in certain cases. "
 "%1$sLearn more%2$s."
 msgstr ""
+"Wenn die automatische Anmeldung aktiviert ist, kann die Anmeldung in "
+"bestimmten Fällen fehlschlagen. %1$sMehr erfahren%2$s."
 
 msgid "Continue with <b>Line</b>"
-msgstr ""
+msgstr "Weiter mit <b>Line</b>"
 
 msgid "Sign up with <b>Line</b>"
-msgstr ""
+msgstr "Mit <b>Line</b> registrieren"
 
 msgid "Link account with <b>Line</b>"
-msgstr ""
+msgstr "Konto mit <b>Line</b> verknüpfen"
 
 msgid "Unlink account from <b>Line</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>Line</b> aufheben"
 
 msgid "Continue with <b>LinkedIn</b>"
-msgstr ""
+msgstr "Weiter mit <b>LinkedIn</b>"
 
 msgid "Sign up with <b>LinkedIn</b>"
-msgstr ""
+msgstr "Mit <b>LinkedIn</b> registrieren"
 
 msgid "Link account with <b>LinkedIn</b>"
-msgstr ""
+msgstr "Konto mit <b>LinkedIn</b> verknüpfen"
 
 msgid "Unlink account from <b>LinkedIn</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>LinkedIn</b> aufheben"
 
 msgid "Application (client) ID"
-msgstr ""
+msgstr "Application (client) ID"
 
 msgid "Client secret"
-msgstr ""
+msgstr "Client secret"
 
 msgid "Audience"
-msgstr ""
+msgstr "Zielgruppe"
 
 msgid "Multiple Entra ID tenants"
-msgstr ""
+msgstr "Mehrere Entra ID-Mandanten"
 
 msgid "Any Entra ID Tenant + Personal Microsoft accounts"
-msgstr ""
+msgstr "Beliebiger Entra ID-Mandant + persönliche Microsoft-Konten"
 
 msgid "Personal accounts only"
-msgstr ""
+msgstr "Nur persönliche Konten"
 
 msgid "Single tenant only - Default Directory with Azure AD tenant:"
-msgstr ""
+msgstr "Nur ein einzelner Mandant - Standardverzeichnis mit Azure AD-Mandant:"
 
 #, php-format
 msgid ""
 "The selected value will define the supported account types. %1$sLearn more."
 "%2$s"
 msgstr ""
+"Der ausgewählte Wert legt die unterstützten Kontotypen fest. %1$sMehr "
+"erfahren.%2$s"
 
 msgid "Display authorization and authentication dialog only when necessary"
-msgstr ""
+msgstr "Autorisierungs- und Authentifizierungsdialog nur bei Bedarf anzeigen"
 
 msgid "Continue with <b>Microsoft</b>"
-msgstr ""
+msgstr "Weiter mit <b>Microsoft</b>"
 
 msgid "Sign up with <b>Microsoft</b>"
-msgstr ""
+msgstr "Mit <b>Microsoft</b> registrieren"
 
 msgid "Link account with <b>Microsoft</b>"
-msgstr ""
+msgstr "Konto mit <b>Microsoft</b> verknüpfen"
 
 msgid "Unlink account from <b>Microsoft</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>Microsoft</b> aufheben"
 
 msgid "Continue with <b>Patreon</b>"
-msgstr ""
+msgstr "Weiter mit <b>Patreon</b>"
 
 msgid "Sign up with <b>Patreon</b>"
-msgstr ""
+msgstr "Mit <b>Patreon</b> registrieren"
 
 msgid "Link account with <b>Patreon</b>"
-msgstr ""
+msgstr "Konto mit <b>Patreon</b> verknüpfen"
 
 msgid "Unlink account from <b>Patreon</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>Patreon</b> aufheben"
 
 msgid "Secret"
-msgstr ""
+msgstr "Secret"
 
 msgid "Continue with <b>PayPal</b>"
-msgstr ""
+msgstr "Weiter mit <b>PayPal</b>"
 
 msgid "Sign up with <b>PayPal</b>"
-msgstr ""
+msgstr "Mit <b>PayPal</b> registrieren"
 
 msgid "Link account with <b>PayPal</b>"
-msgstr ""
+msgstr "Konto mit <b>PayPal</b> verknüpfen"
 
 msgid "Unlink account from <b>PayPal</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>PayPal</b> aufheben"
 
 msgid "Continue with <b>Reddit</b>"
-msgstr ""
+msgstr "Weiter mit <b>Reddit</b>"
 
 msgid "Sign up with <b>Reddit</b>"
-msgstr ""
+msgstr "Mit <b>Reddit</b> registrieren"
 
 msgid "Link account with <b>Reddit</b>"
-msgstr ""
+msgstr "Konto mit <b>Reddit</b> verknüpfen"
 
 msgid "Unlink account from <b>Reddit</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>Reddit</b> aufheben"
 
 msgid "Slack Team ID"
-msgstr ""
+msgstr "Slack Team ID"
 
 msgid "Optional"
-msgstr ""
+msgstr "Optional"
 
 #, php-format
 msgid ""
 "The Team ID of a workspace to attempt to restrict to. %1$sLearn more.%2$s"
 msgstr ""
+"Die Team ID eines Workspaces, auf den die Anmeldung beschränkt werden soll. "
+"%1$sMehr erfahren.%2$s"
 
 msgid "72x72"
-msgstr ""
+msgstr "72x72"
 
 msgid "192x192"
-msgstr ""
+msgstr "192x192"
 
 msgid "512x512"
-msgstr ""
+msgstr "512x512"
 
 msgid "1024x1024"
-msgstr ""
+msgstr "1024x1024"
 
 msgid "Sign in with <b>Slack</b>"
-msgstr ""
+msgstr "Mit <b>Slack</b> anmelden"
 
 msgid "Sign up with <b>Slack</b>"
-msgstr ""
+msgstr "Mit <b>Slack</b> registrieren"
 
 msgid "Link account with <b>Slack</b>"
-msgstr ""
+msgstr "Konto mit <b>Slack</b> verknüpfen"
 
 msgid "Unlink account from <b>Slack</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>Slack</b> aufheben"
 
 msgid "Green"
-msgstr ""
+msgstr "Grün"
 
 msgid "Continue with <b>Spotify</b>"
-msgstr ""
+msgstr "Weiter mit <b>Spotify</b>"
 
 msgid "Sign up with <b>Spotify</b>"
-msgstr ""
+msgstr "Mit <b>Spotify</b> registrieren"
 
 msgid "Link account with <b>Spotify</b>"
-msgstr ""
+msgstr "Konto mit <b>Spotify</b> verknüpfen"
 
 msgid "Unlink account from <b>Spotify</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>Spotify</b> aufheben"
 
 msgid "Web API Key"
-msgstr ""
+msgstr "Web API Key"
 
 msgid "Continue with <b>Steam</b>"
-msgstr ""
+msgstr "Weiter mit <b>Steam</b>"
 
 msgid "Sign up with <b>Steam</b>"
-msgstr ""
+msgstr "Mit <b>Steam</b> registrieren"
 
 msgid "Link account with <b>Steam</b>"
-msgstr ""
+msgstr "Konto mit <b>Steam</b> verknüpfen"
 
 msgid "Unlink account from <b>Steam</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>Steam</b> aufheben"
 
 msgid "Error: The 64-bit SteamID can not be retrieved for this user!"
 msgstr ""
+"Fehler: Die 64-Bit-SteamID kann für diesen Benutzer nicht abgerufen werden!"
 
 msgid "Client key"
-msgstr ""
+msgstr "Client key"
 
 msgid "Continue with <b>TikTok</b>"
-msgstr ""
+msgstr "Weiter mit <b>TikTok</b>"
 
 msgid "Sign up with <b>TikTok</b>"
-msgstr ""
+msgstr "Mit <b>TikTok</b> registrieren"
 
 msgid "Link account with <b>TikTok</b>"
-msgstr ""
+msgstr "Konto mit <b>TikTok</b> verknüpfen"
 
 msgid "Unlink account from <b>TikTok</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>TikTok</b> aufheben"
 
 msgid "Continue with <b>Twitch</b>"
-msgstr ""
+msgstr "Weiter mit <b>Twitch</b>"
 
 msgid "Sign up with <b>Twitch</b>"
-msgstr ""
+msgstr "Mit <b>Twitch</b> registrieren"
 
 msgid "Link account with <b>Twitch</b>"
-msgstr ""
+msgstr "Konto mit <b>Twitch</b> verknüpfen"
 
 msgid "Unlink account from <b>Twitch</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>Twitch</b> aufheben"
 
 msgid "Secure key"
-msgstr ""
+msgstr "Secure key"
 
 msgid "Continue with <b>VK</b>"
-msgstr ""
+msgstr "Weiter mit <b>VK</b>"
 
 msgid "Sign up with <b>VK</b>"
-msgstr ""
+msgstr "Mit <b>VK</b> registrieren"
 
 msgid "Link account with <b>VK</b>"
-msgstr ""
+msgstr "Konto mit <b>VK</b> verknüpfen"
 
 msgid "Unlink account from <b>VK</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>VK</b> aufheben"
 
 #, php-format
 msgid ""
@@ -2014,65 +2309,83 @@ msgid ""
 "resolve the problem, please create a new App based on our %4$s guide, and "
 "replace the credentials on the %5$s tab with your new App credentials."
 msgstr ""
+"%1$s: %2$s hat neue App-Typen eingeführt und deren Endpunkte geändert, die "
+"mit den alten Apps nicht kompatibel sind.%3$sWir haben festgestellt, dass "
+"Sie derzeit eine alte %2$s-App verwenden, daher mussten wir Ihre %2$s-"
+"Konfiguration deaktivieren. Um das Problem zu beheben, erstellen Sie bitte "
+"anhand unserer Anleitung %4$s eine neue App und ersetzen Sie die "
+"Zugangsdaten im Tab %5$s durch die Zugangsdaten Ihrer neuen App."
 
 msgid "VKontakte"
-msgstr ""
+msgstr "VKontakte"
 
 #, php-format
 msgid "Open %1$s - %2$s"
-msgstr ""
+msgstr "%1$s - %2$s öffnen"
 
 msgid "Continue with <b>WordPress.com</b>"
-msgstr ""
+msgstr "Weiter mit <b>WordPress.com</b>"
 
 msgid "Sign up with <b>WordPress.com</b>"
-msgstr ""
+msgstr "Mit <b>WordPress.com</b> registrieren"
 
 msgid "Link account with <b>WordPress.com</b>"
-msgstr ""
+msgstr "Konto mit <b>WordPress.com</b> verknüpfen"
 
 msgid "Unlink account from <b>WordPress.com</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>WordPress.com</b> aufheben"
 
 msgid "Continue with <b>Yahoo</b>"
-msgstr ""
+msgstr "Weiter mit <b>Yahoo</b>"
 
 msgid "Sign up with <b>Yahoo</b>"
-msgstr ""
+msgstr "Mit <b>Yahoo</b> registrieren"
 
 msgid "Link account with <b>Yahoo</b>"
-msgstr ""
+msgstr "Konto mit <b>Yahoo</b> verknüpfen"
 
 msgid "Unlink account from <b>Yahoo</b>"
-msgstr ""
+msgstr "Verknüpfung mit <b>Yahoo</b> aufheben"
 
 #, php-format
 msgid "Required permission: %1$s"
-msgstr ""
+msgstr "Erforderliche Berechtigung: %1$s"
 
 msgid "OR"
 msgstr "ODER"
 
 msgid "Social accounts"
-msgstr ""
+msgstr "Social-Konten"
 
 msgid "Registration confirmation will be emailed to you."
-msgstr ""
+msgstr "Die Registrierungsbestätigung wird Ihnen per E-Mail zugesendet."
 
 msgid "Password"
-msgstr ""
+msgstr "Passwort"
 
 msgid "Hide password"
-msgstr ""
+msgstr "Passwort ausblenden"
 
 msgid "Strength indicator"
-msgstr ""
+msgstr "Stärkeanzeige"
 
 msgid "Confirm use of weak password"
-msgstr ""
+msgstr "Verwendung eines schwachen Passworts bestätigen"
 
 msgid "Confirm password"
-msgstr ""
+msgstr "Passwort bestätigen"
 
 msgid "Username"
-msgstr ""
+msgstr "Benutzername"
+
+#~ msgid ""
+#~ "Shows Google's One Tap prompt, so visitors can sign in with their Google "
+#~ "account without leaving the page. Depending on the browser, Google shows "
+#~ "it to every visitor, or only to those who are signed in to Google. One "
+#~ "Tap works alongside the Google button, it does not replace it."
+#~ msgstr ""
+#~ "Zeigt das One-Tap-Fenster von Google an, damit sich Besucher mit ihrem "
+#~ "Google-Konto anmelden können, ohne die Seite zu verlassen. Je nach "
+#~ "Browser zeigt Google es allen Besuchern oder nur denjenigen, die bei "
+#~ "Google angemeldet sind. One Tap funktioniert zusätzlich zum Google-Button "
+#~ "und ersetzt ihn nicht."

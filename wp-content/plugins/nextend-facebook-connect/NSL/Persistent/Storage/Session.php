@@ -58,7 +58,12 @@ class Session extends StorageAbstract {
             if (isset($_COOKIE[$this->sessionName])) {
                 $this->sessionId = 'nsl_persistent_' . md5(SECURE_AUTH_KEY . $_COOKIE[$this->sessionName]);
             } else if ($createSession) {
-                $unique = uniqid('nsl', true);
+                /**
+                 * The value of this cookie is all that separates the visitor's unfinished login from
+                 * everybody else, so it has to be unguessable. uniqid() is built from the current
+                 * time, so it is not.
+                 */
+                $unique = 'nsl' . bin2hex(random_bytes(16));
 
                 $this->setCookie($unique, apply_filters('nsl_session_cookie_expiration', 0), apply_filters('nsl_session_use_secure_cookie', false));
 

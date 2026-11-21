@@ -1,3 +1,35 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url("../assets/fonts/OpenSans-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../assets/fonts/OpenSans-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../assets/fonts/OpenSans-Semibold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../assets/fonts/OpenSans-SemiboldItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+}
+
 :root {
     --id4-warranty-bg: #f4ecd7;
     --id4-warranty-white: #fff;
@@ -14,7 +46,7 @@ body {
     padding: clamp(24px, 4vw, 64px) 0;
     background: var(--id4-warranty-bg);
     color: var(--id4-warranty-text);
-    font: 400 clamp(14px, 1.15vw, 17px)/1.55 "Segoe UI", Arial, sans-serif;
+    font: 400 clamp(1.25rem, 1.5vw, 1.375rem)/1.55 "Open Sans";
 }
 
 .id4-solution--warranty-container {
@@ -25,7 +57,8 @@ body {
 .id4-solution--warranty #id4-solution--warranty-title {
     margin: 0 0 .55em;
     color: var(--id4-warranty-gold);
-    font-size: clamp(22px, 3vw, 42px);
+    font-size: clamp(2.5rem, 4vw, 3.4375rem);
+    font-weight: 700;
     line-height: 1.2;
     letter-spacing: .04em;
     text-align: center;
@@ -47,13 +80,14 @@ body {
 .id4-solution--warranty .id4-solution--warranty-intro h3,
 .id4-solution--warranty-panel summary {
     color: var(--id4-warranty-gold);
-    font-size: clamp(14px, 1.35vw, 20px);
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.3;
     letter-spacing: .035em;
 }
 
 .id4-solution--warranty .id4-solution--warranty-intro h3 {
+    font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+    text-wrap: balance;
     margin: 0 0 .25em;
 }
 
@@ -67,6 +101,8 @@ body {
 
 .id4-solution--warranty-panel summary {
     position: relative;
+    font-size: clamp(.875rem, 1.35vw, 1.25rem);
+    font-weight: 700;
     display: block;
     padding: .7em 1.6em;
     border-bottom: 1px solid var(--id4-warranty-rule);
@@ -97,15 +133,60 @@ body {
 }
 
 .id4-solution--warranty-copy {
-    padding: .7em 0 .35em;
+    padding: 1em 0 .35em;
+    font-size: clamp(1.25rem, 1.2vw, 1.375rem);
+    font-weight: 400;
 }
 
 .id4-solution--warranty .id4-solution--warranty-copy h4 {
     margin: 0;
+}
+
+.id4-solution--warranty .id4-solution--warranty-copy h4,
+.id4-solution--warranty .id4-solution--warranty-copy>p>strong>em {
     color: inherit;
-    font-size: 1em;
-    font-weight: 800;
+    font-family: inherit;
+    font-size: 21px;
+    font-weight: 600;
     font-style: italic;
+    text-transform: uppercase;
+}
+
+.id4-solution--warranty-copy .id4-warranty-heading-line {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .id4-solution--warranty-copy .id4-warranty-mobile-line {
+        display: block;
+    }
+
+    .id4-solution--warranty-copy :is(h4,
+        p>strong>em) {
+        text-wrap: pretty;
+    }
+
+    .id4-solution--warranty-copy .id4-warranty-condition-title {
+        display: block;
+        text-wrap: balance;
+    }
+
+    .id4-warranty-condition-title>span {
+        white-space: nowrap;
+    }
+}
+
+.id4-solution--warranty .id4-solution--warranty-copy>p+h4 {
+    margin-top: 1.25em;
+}
+
+.id4-solution--warranty-copy>h4+p {
+    margin-top: .3em;
+}
+
+.id4-solution--warranty-copy> :is(ul,
+    ol)+p {
+    margin-top: 1em;
 }
 
 .id4-solution--warranty-copy p,
@@ -119,6 +200,10 @@ body {
     padding-inline-start: 1.25em;
 }
 
+.id4-solution--warranty-copy ul>li::marker {
+    content: "–  ";
+}
+
 .id4-solution--warranty-copy li+li {
     margin-top: .18em;
 }
@@ -126,5 +211,50 @@ body {
 @media (max-width: 767px) {
     .id4-solution--warranty-container {
         width: min(calc(100% - 28px), 560px);
+    }
+}
+
+@keyframes id4-warranty-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    55% {
+        transform: translateY(-3px);
+    }
+
+    78% {
+        transform: translateY(1px);
+    }
+}
+
+html:has(.id4-solution--warranty-copy[data-warranty-animating]) {
+    overflow-anchor: none;
+}
+
+@keyframes id4-warranty-toggle {
+    from {
+        height: var(--id4-warranty-from-height);
+        padding-top: var(--id4-warranty-from-padding-top);
+        padding-bottom: var(--id4-warranty-from-padding-bottom);
+    }
+
+    to {
+        height: var(--id4-warranty-to-height);
+        padding-top: var(--id4-warranty-to-padding-top);
+        padding-bottom: var(--id4-warranty-to-padding-bottom);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .id4-solution--warranty-copy[data-warranty-animating] {
+        overflow: hidden;
+        animation: id4-warranty-toggle .1s cubic-bezier(.45, 0, .55, 1) both;
+    }
+
+    .id4-solution--warranty-copy[data-warranty-animating="open"] {
+        animation: id4-warranty-toggle .3s ease-out both, id4-warranty-bounce .3s ease-in-out both;
     }
 }

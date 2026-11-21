@@ -86,6 +86,15 @@ class NextendSocialProviderGoogle extends NextendSocialProviderOAuth {
             'client_id'          => '',
             'client_secret'      => '',
             'select_account'     => 1,
+            /**
+             * Google One Tap: disabled, buttons or all. The PRO Addon owns the behaviour and the
+             * validation of this key, but the default must be declared here:
+             * NextendSocialLoginSettings::update() whitelists the stored settings against the
+             * default keys, so declaring it only from the PRO Addon would drop the visitor's One
+             * Tap configuration whenever the Google settings form gets saved while the PRO Addon
+             * is deactivated.
+             */
+            'one_tap'            => 'disabled',
             'skin'               => 'light',
             'login_label'        => 'Continue with <b>Google</b>',
             'register_label'     => 'Sign up with <b>Google</b>',
@@ -323,8 +332,14 @@ class NextendSocialProviderGoogle extends NextendSocialProviderOAuth {
 
     public function getProviderEmailVerificationStatus() {
         /**
-         * The email address returned by Google is always verified
+         * The email address returned by Google is always verified, but Google is not authoritative
+         * for every address. When the login could tell whether this one can be trusted for linking,
+         * like a Google One Tap login can, we go with that.
          */
+        if (isset($this->authUserData['verified_email'])) {
+            return (bool)$this->authUserData['verified_email'];
+        }
+
         return true;
     }
 

@@ -101,6 +101,8 @@ abstract class NextendSocialProviderOpenId extends NextendSocialProvider {
     }
 
     public function deleteTokenPersistentData() {
+        parent::deleteTokenPersistentData();
+
         Persistent::delete($this->id . '_openid_claimed_id');
     }
 

@@ -460,6 +460,8 @@ abstract class NextendSocialProviderOAuth extends NextendSocialProvider {
 
 
     public function deleteTokenPersistentData() {
+        parent::deleteTokenPersistentData();
+
         Persistent::delete($this->id . '_at');
         Persistent::delete($this->id . '_state');
     }

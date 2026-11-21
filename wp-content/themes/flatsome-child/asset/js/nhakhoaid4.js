@@ -475,22 +475,26 @@ function id4HomeInit() {
         id4HomeBackdrop.append(id4HomeCard);
     });
     // Các hồ sơ bác sĩ nằm trong HTML; JS chỉ tạo chấm điều hướng và chạy slider.
-    const id4HomeDoctorSlides = [
-        ...id4HomePage.querySelectorAll(
-            ".-id4-home-doctor-slider .-id4-home-slider-track > article",
-        ),
-    ];
-    id4HomeDoctorSlides.forEach((id4HomeSlide) => {
-        const id4HomeDot = document.createElement("button");
-        id4HomeDot.type = "button";
-        id4HomeDot.dataset.sliderDot = "";
-        id4HomeDot.setAttribute(
-            "aria-label",
-            "Hồ sơ " + id4HomeSlide.querySelector("h3").textContent,
+    const id4HomeDoctorSlider = id4HomePage.querySelector(".-id4-home-doctor-slider");
+    const id4HomeDoctorDots = id4HomeDoctorSlider == null
+        ? undefined
+        : id4HomeDoctorSlider.querySelector(".-id4-home-doctor-dots");
+    if (id4HomeDoctorDots && !id4HomeDoctorSlider.hasAttribute("data-doctor-slider-ready")) {
+        const slides = id4HomeDoctorSlider.querySelectorAll(
+            ".-id4-home-slider-track > .-id4-home-slider-slide:not([data-slider-clone])",
         );
-        id4HomePage.querySelector(".-id4-home-doctor-dots").append(id4HomeDot);
-    });
-    id4HomeCreateSlider(id4HomePage.querySelector(".-id4-home-doctor-slider"));
+        id4HomeDoctorDots.replaceChildren(
+            ...Array.from(slides, (slide) => {
+                const dot = document.createElement("button");
+                dot.type = "button";
+                dot.dataset.sliderDot = "";
+                dot.setAttribute("aria-label", "Hồ sơ " + slide.querySelector("h3").textContent);
+                return dot;
+            }),
+        );
+        id4HomeCreateSlider(id4HomeDoctorSlider);
+        id4HomeDoctorSlider.setAttribute("data-doctor-slider-ready", "");
+    }
     const id4HomeDetailDialog = id4HomePage.querySelector(
         "#-id4-home-detail-dialog",
     );
@@ -537,7 +541,7 @@ function id4HomeInit() {
         }),
     );
     const id4HomeVideoPlayer = id4HomePage.querySelector("#-id4-home-journey-player");
-    if (id4HomeVideoPlayer ? .matches("iframe") && "IntersectionObserver" in window) {
+    if (id4HomeVideoPlayer != null && id4HomeVideoPlayer.matches("iframe") && "IntersectionObserver" in window) {
         const id4HomeVideoObserver = new IntersectionObserver((entries, observer) => {
             if (!entries.some((entry) => entry.intersectionRatio >= 0.51)) return;
             observer.disconnect();

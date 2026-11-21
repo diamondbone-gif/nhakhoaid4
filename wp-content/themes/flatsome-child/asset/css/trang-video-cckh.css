@@ -1,0 +1,404 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url("../assets/fonts/OpenSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../assets/fonts/OpenSans-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    font-family: "Open Sans";
+    color: #251e19;
+    background: #fffefa;
+    --gold: #d1a23e;
+    --border: #e8e0d2;
+    --body-size: clamp(1.25rem, 1.2vw, 1.375rem);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body {
+    margin: 0;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+button:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+}
+
+.cckh-stories {
+    width: min(68rem, calc(100% - 2rem));
+    margin: auto;
+    padding: clamp(1.5rem, 4vw, 3rem) 0 3rem;
+}
+
+.cckh-heading {
+    text-align: center;
+}
+
+.cckh-heading h1 {
+    margin: 0;
+    color: var(--gold);
+    font-size: clamp(1.375rem, 2.86vw, 3.4375rem);
+    line-height: 1.15;
+    text-transform: uppercase;
+}
+
+.cckh-heading p {
+    margin: .6rem auto 0;
+    font-size: var(--body-size);
+    line-height: 1.45;
+}
+
+.cckh-topics {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: .6rem;
+    max-width: 57rem;
+    margin: 1.25rem auto;
+}
+
+.cckh-topics button,
+.cckh-more,
+.cckh-pages button {
+    min-height: 44px;
+    padding: .5rem .75rem;
+    border: 1px solid var(--border);
+    border-radius: .5rem;
+    background: white;
+    color: inherit;
+    font-weight: 700;
+    font-size: .9375rem;
+}
+
+.cckh-topics button:hover,
+.cckh-more:hover,
+.cckh-pages button:hover {
+    border-color: var(--gold);
+}
+
+.cckh-topics button[aria-pressed="true"],
+.cckh-pages button[aria-current="page"] {
+    border-color: var(--gold);
+    background: var(--gold);
+    color: #251e19;
+}
+
+.cckh-topics button[aria-pressed="true"],
+.cckh-pages button[aria-current="page"] {
+    color: #fff;
+}
+
+.cckh-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .75rem;
+}
+
+.cckh-card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 0;
+    border-radius: .625rem;
+    padding: .75rem;
+    text-align: left;
+    isolation: isolate;
+    color: white;
+    background: #827262;
+}
+
+.cckh-card img,
+.cckh-card::before {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.cckh-card img {
+    z-index: -2;
+    object-fit: cover;
+    display: block;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    object-position: center;
+}
+
+.cckh-card::before {
+    z-index: -1;
+    background: linear-gradient(0deg, #17100df5, #17100d93 46%, transparent 85%);
+    content: "";
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .cckh-card img {
+        transition: transform .2s ease;
+    }
+
+    .cckh-card:hover img {
+        transform: scale(1.06);
+    }
+}
+
+.cckh-card-content {
+    min-width: 0;
+    max-width: 90%;
+}
+
+.cckh-badge {
+    display: inline-block;
+    padding: .2rem .55rem;
+    border-radius: 1rem;
+    background: var(--gold);
+    color: #fff;
+    font-size: .6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.cckh-card-title {
+    display: block;
+    margin-top: .35rem;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.22;
+}
+
+.cckh-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .55rem;
+    margin: 1.25rem auto .75rem;
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #fff;
+}
+
+.cckh-more span {
+    display: grid;
+    place-items: center;
+    width: .75rem;
+    height: .75rem;
+    font-size: 0;
+}
+
+.cckh-more span::before {
+    width: .35rem;
+    height: .35rem;
+    border: solid currentColor;
+    border-width: 0 2px 2px 0;
+    transform: translateY(-1px) rotate(45deg);
+    content: "";
+}
+
+.cckh-pages {
+    display: flex;
+    justify-content: center;
+    gap: .4rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.cckh-pages button {
+    min-width: 44px;
+    border-color: var(--gold);
+}
+
+.cckh-player {
+    width: min(calc(100% - 24px), 1200px, max(320px, (100dvh - 144px) * 16 / 9));
+    max-width: none;
+    max-height: calc(100dvh - 24px);
+    padding: 0;
+    border: 0;
+    border-radius: 12px;
+    color: #fff;
+    background: #141719;
+    overflow: auto;
+}
+
+.cckh-player::backdrop {
+    background: #000b;
+}
+
+html:has(.cckh-player[open]) {
+    overflow: hidden;
+}
+
+.cckh-player-header,
+.cckh-player-footer {
+    padding: 8px 14px;
+    background: #141719;
+}
+
+.cckh-player-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.cckh-player-header h2 {
+    min-width: 0;
+    margin: 0;
+    font-size: clamp(16px, 1.5vw, 18px);
+    overflow-wrap: anywhere;
+}
+
+.cckh-player-header button {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #fff2;
+    color: #fff;
+    font-size: 26px;
+    line-height: 1;
+}
+
+.cckh-player-header button:hover {
+    background: #fff4;
+}
+
+.cckh-player-content {
+    width: 100%;
+    margin-inline: auto;
+    aspect-ratio: 16 / 9;
+    background: #000;
+}
+
+.cckh-player-content iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.cckh-player-footer {
+    text-align: right;
+}
+
+.cckh-player-external {
+    color: #fff;
+    font-size: .875rem;
+}
+
+.cckh-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+@media (max-width: 56rem) {
+    .cckh-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 40rem) {
+    .cckh-topics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cckh-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.cckh-page button {
+    font-family: "Open Sans";
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+.cckh-page button.cckh-card {
+    margin: 0;
+    height: auto;
+    min-height: 0;
+    line-height: 1.3;
+}
+
+
+/* Keep these controls independent of theme typography and form styles. */
+
+.cckh-page button.cckh-card .cckh-badge {
+    display: inline-block;
+    padding: .22rem .55rem !important;
+    height: auto !important;
+    min-height: 0 !important;
+    font: 700 .6875rem/1.25 "Open Sans" !important;
+    letter-spacing: normal !important;
+    vertical-align: top;
+}
+
+.cckh-page button.cckh-card .cckh-card-title {
+    font: 700 clamp(1rem, 1.5vw, 1.25rem)/1.22 "Open Sans" !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+}
+
+.cckh-page dialog.cckh-player .cckh-player-header {
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 8px 14px !important;
+}
+
+.cckh-page dialog.cckh-player .cckh-player-header> :is(p,
+    br) {
+    display: contents;
+}
+
+.cckh-page dialog.cckh-player .cckh-player-header h2 {
+    flex: 1;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #fff !important;
+    font: 700 clamp(16px, 1.5vw, 18px)/1.4 "Open Sans" !important;
+    letter-spacing: normal !important;
+    text-align: left !important;
+    text-transform: none !important;
+}
+
+.cckh-page dialog.cckh-player button.cckh-player-close {
+    flex: 0 0 44px;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #fff !important;
+    font: 400 26px/1 "Open Sans" !important;
+}

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: nextend-facebook-connect\n"
-"POT-Creation-Date: 2026-07-28 09:20+0200\n"
-"PO-Revision-Date: 2026-07-28 09:20+0200\n"
+"POT-Creation-Date: 2026-11-12 15:21+0100\n"
+"PO-Revision-Date: 2026-11-12 15:21+0100\n"
 "Last-Translator: \n"
 "Language-Team: nextend-facebook-connect\n"
 "Language: zh_CN\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: "
@@ -26,7 +26,7 @@ msgstr ""
 "compat\n"
 
 msgid "What personal data we collect and why we collect it"
-msgstr ""
+msgstr "我们收集哪些个人数据以及收集原因"
 
 #, php-format
 msgid ""
@@ -36,9 +36,12 @@ msgid ""
 "can collect profile picture and more fields with the Pro Addon's sync data "
 "feature."
 msgstr ""
+"当访客通过任一已启用的社交提供商注册、登录或关联账号时，%1$s 会收集数据。收集"
+"的数据包括：电子邮箱地址、姓名、社交提供商标识符和访问令牌。借助专业版插件的"
+"同步数据功能，还可以收集头像及更多字段。"
 
 msgid "Who we share your data with"
-msgstr ""
+msgstr "我们与谁共享您的数据"
 
 #, php-format
 msgid ""
@@ -46,36 +49,41 @@ msgid ""
 "except the access token which used for the authenticated communication with "
 "the social providers."
 msgstr ""
+"%1$s 将个人数据存储在您的网站上，不会与任何人共享，但用于与社交提供商进行身份"
+"验证通信的访问令牌除外。"
 
 msgid "Does the plugin share personal data with third parties"
-msgstr ""
+msgstr "插件是否与第三方共享个人数据"
 
 #, php-format
 msgid ""
 "%1$s use the access token what the social provider gave to communicate with "
 "the providers to verify account and securely access personal data."
 msgstr ""
+"%1$s 使用社交提供商提供的访问令牌与提供商通信，以验证账号并安全地访问个人数"
+"据。"
 
 msgid "How long we retain your data"
-msgstr ""
+msgstr "我们保留您的数据多长时间"
 
 #, php-format
 msgid ""
 "%1$s removes the collected personal data when the user deleted from "
 "WordPress."
-msgstr ""
+msgstr "当用户从 WordPress 中删除时，%1$s 会移除所收集的个人数据。"
 
 msgid "Does the plugin use personal data collected by others?"
-msgstr ""
+msgstr "插件是否使用他人收集的个人数据？"
 
 #, php-format
 msgid ""
 "%1$s use the personal data collected by the social providers to create "
 "account on your site when the visitor authorize it."
 msgstr ""
+"在访客授权后，%1$s 会使用社交提供商收集的个人数据在您的网站上创建账号。"
 
 msgid "Does the plugin store things in the browser?"
-msgstr ""
+msgstr "插件是否在浏览器中存储内容？"
 
 #, php-format
 msgid ""
@@ -83,23 +91,25 @@ msgid ""
 "authorization flow. This cookie required for every provider to secure the "
 "communication and to redirect the user back to the last location."
 msgstr ""
+"是的，%1$s 必须为使用社交登录授权流程的访客创建一个 Cookie。每个提供商都需要"
+"此 Cookie，用于保护通信安全并将用户重定向回其上次所在的位置。"
 
 msgid "Does the plugin collect telemetry data, directly or indirectly?"
-msgstr ""
+msgstr "插件是否直接或间接收集遥测数据？"
 
 msgid "No"
-msgstr ""
+msgstr "否"
 
 msgid ""
 "Does the plugin enqueue JavaScript, tracking pixels or embed iframes from a "
 "third party?"
-msgstr ""
+msgstr "插件是否加载第三方的 JavaScript、跟踪像素或嵌入第三方 iframe？"
 
 msgid "User"
 msgstr "用户"
 
 msgid "This provider doesn't support REST API calls!"
-msgstr ""
+msgstr "此提供商不支持 REST API 调用！"
 
 #, php-format
 msgid "%s needs json_decode function."
@@ -111,24 +121,20 @@ msgstr "请与服务器管理员联系并寻求解决方案!"
 msgid "Settings saved."
 msgstr "设置已保存。"
 
-#, fuzzy
-#| msgid "The authorization was successful"
 msgid "The activation was successful"
-msgstr "授权成功"
+msgstr "激活成功"
 
-#, fuzzy
-#| msgid "Deauthorize completed."
 msgid "Deactivate completed."
-msgstr "取消授权."
+msgstr "已取消激活。"
 
 msgid "(no title)"
-msgstr ""
+msgstr "（无标题）"
 
 msgid "Settings"
 msgstr "设置"
 
 msgid "Analyze & Repair"
-msgstr ""
+msgstr "分析并修复"
 
 #, php-format
 msgid "Unexpected response: %s"
@@ -168,43 +174,34 @@ msgid ""
 "register flow</b>\" and \"<b>OAuth redirect uri proxy page</b>\" in %1$s to "
 "work properly."
 msgstr ""
+"%1$s 检测到您的网站上安装了 %2$s。您必须在 %1$s 中设置“<b>用于注册流程的页面"
+"</b>”和“<b>OAuth 重定向 URI 代理页面</b>”，才能正常工作。"
 
-#, fuzzy
-#| msgid "Fix Error"
 msgid "Fix now"
-msgstr "修复错误"
+msgstr "立即修复"
 
-#, fuzzy
-#| msgid "Activate Pro Addon"
 msgid "Activate your Pro Addon"
-msgstr "启用专业版本插件"
+msgstr "激活您的专业版插件"
 
-#, fuzzy
-#| msgid ""
-#| "To be able to use the Pro features, you need to authorize Nextend Social "
-#| "Connect Pro Addon. You can do this by clicking on the Authorize button "
-#| "below then select the related purchase."
 msgid ""
 "To be able to use the Pro features, you need to activate Nextend Social "
 "Login Pro Addon. You can do this by clicking on the Activate button below "
 "then select the related purchase."
 msgstr ""
-"要想使用专业版本功能，你需要 Nextend Social Connect 专业版本的授权。你可以点"
-"击下面的授权按钮，然后选择购买。"
+"要使用专业版功能，您需要激活 Nextend Social Login 专业版插件。您可以点击下方"
+"的“激活”按钮，然后选择相应的购买记录。"
 
 msgid "Activate"
-msgstr ""
+msgstr "激活"
 
 msgid "License key"
 msgstr "密匙"
 
 msgid "OAuth proxy page"
-msgstr ""
+msgstr "OAuth 代理页面"
 
-#, fuzzy
-#| msgid "Register"
 msgid "Register flow page"
-msgstr "注册"
+msgstr "注册流程页面"
 
 msgid "You have logged in successfully."
 msgstr "你已经成功登录。"
@@ -215,10 +212,8 @@ msgstr "登录标签"
 msgid "Reset to default"
 msgstr "恢复默认设置"
 
-#, fuzzy
-#| msgid "Register"
 msgid "Register label"
-msgstr "注册"
+msgstr "注册标签"
 
 msgid "Link label"
 msgstr "链接标签"
@@ -244,28 +239,20 @@ msgstr "保存设置"
 
 #, php-format
 msgid "Follow the guide at: %s"
-msgstr ""
+msgstr "请按照以下指南操作：%s"
 
 #, php-format
 msgid "I am done setting up my %s"
 msgstr "我已经设置完毕我的 %s"
 
-#, fuzzy
-#| msgid "App ID"
 msgctxt "Social Login App"
 msgid "App"
-msgstr "应用程序 ID"
+msgstr "应用"
 
 msgid "Getting Started"
 msgstr "从这里开始"
 
-#, fuzzy, php-format
-#| msgid ""
-#| "To allow your visitors to log in with their %1$s account, first you must "
-#| "create a %1$s App. The following guide will help you through the %1$s App "
-#| "creation process. After you have created your %1$s App, head over to "
-#| "\"Settings\" and configure the given \"%2$s\" and \"%3$s\" according to "
-#| "your %1$s App."
+#, php-format
 msgid ""
 "To allow your visitors to log in with their %1$s account, first you must "
 "create an App for %1$s. The following guide will help you through the %1$s "
@@ -273,22 +260,22 @@ msgid ""
 "\"Settings\" and configure the fields with the credentials of the App you "
 "created."
 msgstr ""
-"要想允许你的访问者使用 %1$s 账号登录，你首先要建立一个 %1$s 应用。下面的导航"
-"将帮助你了解 %1$s 应用建立的过程，然后你可以建立一个你自己的 %1$s App。转到"
-"\"设置“，然后根据你的 %1$s 配置，给予 \"%2$s\" and \"%3$s\"。"
+"要允许访问者使用其 %1$s 账号登录，您首先需要为 %1$s 创建一个应用。以下指南将"
+"帮助您完成 %1$s 应用的创建过程。创建好 %1$s 应用后，请前往“设置”，并使用所创"
+"建应用的凭据填写各个字段。"
 
 #, php-format
 msgid "How to create an App for %s: "
-msgstr ""
+msgstr "如何为 %s 创建应用： "
 
 msgid "URLs for the App creation:"
-msgstr ""
+msgstr "创建应用所需的 URL："
 
 msgid "Buttons"
 msgstr "按钮"
 
 msgid "Sync data"
-msgstr ""
+msgstr "同步数据"
 
 msgid "Usage"
 msgstr "用法"
@@ -302,17 +289,15 @@ msgstr "用户名前缀注册"
 msgid "Fallback username prefix on register"
 msgstr "用户名前缀注册机制"
 
-#, fuzzy
-#| msgid "Used when username is invalid"
 msgid "Used when username is invalid or not stored"
-msgstr "当用户名无效时使用"
+msgstr "当用户名无效或未存储时使用"
 
 msgid "Terms and conditions"
-msgstr ""
+msgstr "条款和条件"
 
 #, php-format
 msgid "Override global \"%1$s\""
-msgstr ""
+msgstr "覆盖全局“%1$s”"
 
 msgid "PRO settings"
 msgstr "专业版本设置"
@@ -336,12 +321,10 @@ msgid "Never, generate automatically"
 msgstr "永远不要，自动生成"
 
 msgid "When username is empty or invalid"
-msgstr ""
+msgstr "当用户名为空或无效时"
 
-#, fuzzy
-#| msgid "Ask Username on registration"
 msgid "Ask Password on registration"
-msgstr "注册时需要用户名"
+msgstr "注册时询问密码"
 
 msgid "Automatically connect the existing account upon registration"
 msgstr "注册后自动连接现有帐户"
@@ -358,45 +341,40 @@ msgstr "禁止所选对象登录"
 msgid "Default roles for user who registered with this provider"
 msgstr "为使用此提供商的用户设置默认角色"
 
-#, fuzzy, php-format
-#| msgid "Click on the Create button"
+#, php-format
 msgid "Default (The %1$s is: %2$s)"
-msgstr "点击创建按钮"
+msgstr "默认（%1$s为：%2$s）"
 
-#, fuzzy
-#| msgid "Oauth Redirect URI"
 msgid "default WordPress role"
-msgstr "Oauth Redirect URI"
+msgstr "WordPress 默认角色"
 
 #, php-format
 msgid "Default (The %s.)"
-msgstr ""
+msgstr "默认（%s）"
 
 msgid "Register"
 msgstr "注册"
 
 msgid "Login"
-msgstr ""
+msgstr "登录"
 
 msgid "Link"
-msgstr ""
+msgstr "关联"
 
 msgid "Store in meta key"
-msgstr ""
+msgstr "存储到 meta 键"
 
 msgid "Shortcode"
 msgstr "短码"
 
-#, fuzzy
-#| msgid "Import"
 msgid "Important!"
-msgstr "导入"
+msgstr "重要！"
 
 msgid "The shortcodes are only rendered for users who haven't logged in yet!"
-msgstr ""
+msgstr "短码仅对尚未登录的用户显示！"
 
 msgid "See the full list of shortcode parameters."
-msgstr ""
+msgstr "查看完整的短码参数列表。"
 
 msgid "Simple link"
 msgstr "简单链接"
@@ -410,20 +388,18 @@ msgstr "图片按钮"
 msgid "Image url"
 msgstr "图片链接地址"
 
-#, fuzzy
-#| msgid "Debug mode"
 msgid "Debug"
-msgstr "调试模式"
+msgstr "调试"
 
 msgid "Test network connection with providers"
-msgstr ""
+msgstr "测试与提供商的网络连接"
 
 msgid "You don't have cURL support, please enable it in php.ini!"
-msgstr ""
+msgstr "您的服务器不支持 cURL，请在 php.ini 中启用！"
 
 #, php-format
 msgid "Test %1$s connection"
-msgstr ""
+msgstr "测试 %1$s 连接"
 
 msgid "Fix Oauth Redirect URIs"
 msgstr "修复 Oauth Redirect URIs"
@@ -441,7 +417,7 @@ msgid "General"
 msgstr "常规"
 
 msgid "Privacy"
-msgstr ""
+msgstr "隐私"
 
 msgid "Login Form"
 msgstr "登录界面"
@@ -450,7 +426,7 @@ msgid "Comment"
 msgstr "评论"
 
 msgid "Custom Actions"
-msgstr ""
+msgstr "自定义动作"
 
 msgid "Docs"
 msgstr "文档"
@@ -480,10 +456,8 @@ msgid ""
 "features, you need to activate it."
 msgstr "专业版插件已经安装但没有启用。要使用专业版本功能，你需要先启用它。"
 
-#, fuzzy
-#| msgid "Activate Pro Addon"
 msgid "Deactivate Pro Addon"
-msgstr "启用专业版本插件"
+msgstr "取消激活专业版插件"
 
 msgid "Pro Addon is not installed"
 msgstr "没有安装专业版"
@@ -502,47 +476,36 @@ msgstr "安装专业的扩展"
 msgid "Activating..."
 msgstr "正在启用."
 
-#, fuzzy
-#| msgid "Not Available"
 msgid "Not compatible!"
-msgstr "无法使用"
+msgstr "不兼容！"
 
-#, fuzzy, php-format
-#| msgid "Please update %1$s to version %2$s or newer."
+#, php-format
 msgid ""
 "%1$s and %2$s are not compatible. Please update %1$s to version %3$s or "
 "newer."
-msgstr "请更新 %1$s 到 %2$s 版本."
+msgstr "%1$s 与 %2$s 不兼容。请将 %1$s 更新到 %3$s 或更高版本。"
 
-#, fuzzy, php-format
-#| msgid "Update now!"
+#, php-format
 msgid "Update %s"
-msgstr "现在更新！"
+msgstr "更新 %s"
 
-#, fuzzy, php-format
-#| msgid "Please update %1$s to version %2$s or newer."
+#, php-format
 msgid ""
 "%1$s and %2$s are not compatible. Please update %2$s to version %3$s or "
 "newer."
-msgstr "请更新 %1$s 到 %2$s 版本."
+msgstr "%1$s 与 %2$s 不兼容。请将 %2$s 更新到 %3$s 或更高版本。"
 
-#, fuzzy
-#| msgid "Activate Pro Addon"
 msgid "Update Pro Addon"
-msgstr "启用专业版本插件"
+msgstr "更新专业版插件"
 
 msgid "Pro Addon is installed and activated"
 msgstr "专业版本已经安装并启用了"
 
-#, fuzzy
-#| msgid ""
-#| "You installed and activated the Pro Addon. If you don’t want to use it "
-#| "anymore, you can deauthorize using the button below."
 msgid ""
 "You installed and activated the Pro Addon. If you don’t want to use it "
 "anymore, you can deactivate using the button below."
 msgstr ""
-"你已经安装并启用了专业版本，如果你不想使用它，你可以点击下面的按钮取消授权。"
+"您已安装并激活了专业版插件。如果不想再使用它，可以使用下方的按钮取消激活。"
 
 msgid "Get Pro Addon to unlock more features"
 msgstr "购买专业版本来解锁更多的功能"
@@ -569,14 +532,10 @@ msgstr "验证专业版插件"
 msgid "Pro Addon is not activated"
 msgstr "专业版本未启用"
 
-#, fuzzy
-#| msgid ""
-#| "To be able to use the Pro features, you need to install and activate the "
-#| "Nextend Social Connect Pro Addon."
 msgid ""
 "To be able to use the Pro features, you need to install and activate the "
 "Nextend Social Login Pro Addon."
-msgstr "要想使用专业功能，你需要先安装然后启用 Nextend Social Connect 专业版."
+msgstr "要使用专业版功能，您需要安装并启用 Nextend Social Login 专业版插件。"
 
 #, php-format
 msgid ""
@@ -584,6 +543,8 @@ msgid ""
 "enabled. To display any social buttons, please make sure you have at least "
 "one provider enabled!"
 msgstr ""
+"%1$s 检测到您已配置了提供商，但没有启用任何提供商。要显示社交按钮，请确保至少"
+"启用一个提供商！"
 
 msgid "Not Available"
 msgstr "无法使用"
@@ -610,20 +571,18 @@ msgid "Disable"
 msgstr "禁止"
 
 msgid "Stay Updated"
-msgstr ""
+msgstr "获取最新动态"
 
 msgid ""
 "Receive info on the latest plugin updates and social provider related "
 "changes."
-msgstr ""
+msgstr "接收有关插件最新更新和社交提供商相关变更的信息。"
 
-#, fuzzy
-#| msgid "Please enter an email address."
 msgid "Enter your email address"
-msgstr "请输入电子邮箱."
+msgstr "输入您的电子邮箱地址"
 
 msgid "Subscribe"
-msgstr ""
+msgstr "订阅"
 
 msgid "Saving..."
 msgstr "正在保存."
@@ -635,17 +594,15 @@ msgid "Order Saved"
 msgstr "订单已保存"
 
 msgid "Successfully subscribed!"
-msgstr ""
+msgstr "订阅成功！"
 
 msgid ""
 "We'll be bringing you all the latest news and updates about Social Login - "
 "right to your inbox."
-msgstr ""
+msgstr "我们会将 Social Login 的所有最新消息和更新直接发送到您的收件箱。"
 
-#, fuzzy
-#| msgid "Please enter an email address."
 msgid "The entered email address is invalid!"
-msgstr "请输入电子邮箱."
+msgstr "输入的电子邮箱地址无效！"
 
 msgid "Rate your experience!"
 msgstr "留一个评论!"
@@ -666,19 +623,19 @@ msgid "Loved it"
 msgstr "大爱"
 
 msgid "Rate 1 star"
-msgstr ""
+msgstr "评为 1 星"
 
 msgid "Rate 2 stars"
-msgstr ""
+msgstr "评为 2 星"
 
 msgid "Rate 3 stars"
-msgstr ""
+msgstr "评为 3 星"
 
 msgid "Rate 4 stars"
-msgstr ""
+msgstr "评为 4 星"
 
 msgid "Rate 5 stars"
-msgstr ""
+msgstr "评为 5 星"
 
 msgid "Please Leave a Review"
 msgstr "请留下一个评论"
@@ -694,12 +651,10 @@ msgid "Ok, you deserve it"
 msgstr "好吧，你应得的"
 
 msgid "Close review box"
-msgstr ""
+msgstr "关闭评价框"
 
-#, fuzzy
-#| msgid "Registration Form"
 msgid "Register form"
-msgstr "注册信息表"
+msgstr "注册表单"
 
 msgid "No Connect button"
 msgstr "没有连接按钮"
@@ -716,24 +671,20 @@ msgstr "登录按钮在账户详情之前"
 msgid "Connect button after register"
 msgstr "登录按钮在注册之后"
 
-#, fuzzy
-#| msgid "Login form button style"
 msgid "Register button style"
-msgstr "登录界面按钮样式"
+msgstr "注册按钮样式"
 
 msgid "Default"
 msgstr "默认"
 
 msgid "Fullwidth"
-msgstr ""
+msgstr "全宽"
 
 msgid "Icon"
 msgstr "图标"
 
-#, fuzzy
-#| msgid "Register"
 msgid "Register layout"
-msgstr "注册"
+msgstr "注册布局"
 
 msgid "Below"
 msgstr "下面"
@@ -747,10 +698,8 @@ msgstr "上面"
 msgid "Above with separator"
 msgstr "在上面并分割"
 
-#, fuzzy
-#| msgid "Login form"
 msgid "Sidebar Login form"
-msgstr "登录表单"
+msgstr "侧边栏登录表单"
 
 msgid "Hide login buttons"
 msgstr "隐藏登录按钮"
@@ -763,22 +712,20 @@ msgid ""
 "same login form. This option can disable the one for: "
 "<b>bp_sidebar_login_form action</b>.  "
 msgstr ""
+"某些使用 BuddyPress 的主题会在同一个登录表单中显示两次社交按钮。此选项可以禁"
+"用以下位置的按钮：<b>bp_sidebar_login_form action</b>。  "
 
 msgid "Login form"
 msgstr "登录表单"
 
-#, fuzzy
-#| msgid "Login form button style"
 msgid "Login button style"
-msgstr "登录界面按钮样式"
+msgstr "登录按钮样式"
 
 msgid "Login layout"
 msgstr "登录界面布局"
 
-#, fuzzy
-#| msgid "Social accounts"
 msgid "Social accounts tab"
-msgstr "社交账号"
+msgstr "社交账号选项卡"
 
 msgid "Hide"
 msgstr "隐藏"
@@ -790,50 +737,42 @@ msgstr "显示"
 msgid ""
 "Creates a new tab called %s, where the Link and Unlink buttons will be "
 "displayed."
-msgstr ""
+msgstr "创建一个名为 %s 的新选项卡，关联和取消关联按钮将显示在其中。"
 
 msgid "Social Accounts"
 msgstr "社交账号"
 
-#, fuzzy
-#| msgid "Buttons"
 msgid "Button alignment"
-msgstr "按钮"
+msgstr "按钮对齐方式"
 
 msgid "Left"
-msgstr ""
+msgstr "左"
 
 msgid "Center"
-msgstr ""
+msgstr "居中"
 
 msgid "Right"
-msgstr ""
+msgstr "右"
 
-#, fuzzy
-#| msgid "Ask E-mail on registration"
 msgid "Email template for registration"
-msgstr "注册时询问E-MAIL"
+msgstr "注册邮件模板"
 
-#, fuzzy
-#| msgid "WordPress default"
 msgid "WordPress default notification"
-msgstr "WordPress 默认"
+msgstr "WordPress 默认通知"
 
-#, fuzzy
-#| msgid "WordPress default"
 msgid "BuddyPress welcome notification"
-msgstr "WordPress 默认"
+msgstr "BuddyPress 欢迎通知"
 
 #, php-format
 msgid ""
 "Defines whether the registration with %1$s will send the same welcome "
 "notification that %2$s does, instead of the %3$s default one."
 msgstr ""
+"设置通过 %1$s 注册时，是否发送与 %2$s 相同的欢迎通知，而不是 %3$s 的默认通"
+"知。"
 
-#, fuzzy
-#| msgid "Icon button"
 msgid "Login button"
-msgstr "图标按钮"
+msgstr "登录按钮"
 
 #, php-format
 msgid "You need to turn on the ' %1$s > %2$s > %3$s ' for this feature to work"
@@ -845,97 +784,69 @@ msgstr "讨论"
 msgid "Users must be registered and logged in to comment"
 msgstr "必须是登录用户才能评论"
 
-#, fuzzy
-#| msgid "Button style:"
 msgid "Button style"
-msgstr "按钮样式:"
+msgstr "按钮样式"
 
 #, php-format
 msgid "%1$s Add your custom actions here. One action per line."
-msgstr ""
+msgstr "%1$s 在此处添加您的自定义动作，每行一个。"
 
-#, fuzzy
-#| msgid "Usage"
 msgid "Usage:"
-msgstr "用法"
+msgstr "用法："
 
 #, php-format
 msgid ""
 "%1$s The HTML of the social buttons will be added at the place where the "
 "action is fired."
-msgstr ""
+msgstr "%1$s 社交按钮的 HTML 将被添加到该动作触发的位置。"
 
-#, fuzzy
-#| msgid "Import"
 msgid "Important:"
-msgstr "导入"
+msgstr "重要："
 
 #, php-format
 msgid ""
 "If you %1$sexperience problems%2$s because of this feature, you can disable "
 "it by defining the %3$s constant."
-msgstr ""
+msgstr "如果此功能导致您%1$s遇到问题%2$s，可以通过定义 %3$s 常量来禁用它。"
 
-#, fuzzy
-#| msgid "Login layout"
 msgid "Button layout"
-msgstr "登录界面布局"
+msgstr "按钮布局"
 
-#, fuzzy
-#| msgid "Below with separator"
 msgid "Default with top separator"
-msgstr "下面并分割"
+msgstr "默认，带顶部分隔线"
 
-#, fuzzy
-#| msgid "Below with separator"
 msgid "Default with bottom separator"
-msgstr "下面并分割"
+msgstr "默认，带底部分隔线"
 
-#, fuzzy
-#| msgid "Unlink label"
 msgid "Link/Unlink"
-msgstr "解除链接标签"
+msgstr "关联/取消关联"
 
-#, fuzzy
-#| msgid "No Connect button in login form"
 msgid "No Connect button in Login form"
-msgstr "在登录表单里不要登录按钮"
+msgstr "登录表单中不显示连接按钮"
 
-#, fuzzy
-#| msgid "No Connect button"
 msgid "Connect button on"
-msgstr "没有连接按钮"
+msgstr "连接按钮显示于"
 
 msgid "Login form button style"
 msgstr "登录界面按钮样式"
 
-#, fuzzy
-#| msgid "No Connect button in register form"
 msgid "No Connect button in Register form"
-msgstr "不要登录按钮在注册表上"
+msgstr "注册表单中不显示连接按钮"
 
-#, fuzzy
-#| msgid "Login form button style"
 msgid "Register form button style"
-msgstr "登录界面按钮样式"
+msgstr "注册表单按钮样式"
 
 msgid "Checkout form"
-msgstr ""
+msgstr "结账表单"
 
-#, fuzzy
-#| msgid "No Connect button in login form"
 msgid "No Connect button in Checkout form"
-msgstr "在登录表单里不要登录按钮"
+msgstr "结账表单中不显示连接按钮"
 
-#, fuzzy
-#| msgid "Login form button style"
 msgid "Checkout form button style"
-msgstr "登录界面按钮样式"
+msgstr "结账表单按钮样式"
 
-#, fuzzy
-#| msgid "Register"
 msgid "Checkout layout"
-msgstr "注册"
+msgstr "结账布局"
 
 msgid "Target window"
 msgstr "目标窗口"
@@ -964,38 +875,30 @@ msgstr "管理员"
 msgid "User and Admin"
 msgstr "用户和管理员"
 
-#, fuzzy
-#| msgid "Unlink label"
 msgid "Unlink"
-msgstr "解除链接标签"
+msgstr "取消关联"
 
-#, fuzzy
-#| msgid "Social accounts"
 msgid "Allow Social account unlink"
-msgstr "社交账号"
+msgstr "允许取消关联社交账号"
 
 msgid "Show linked providers"
-msgstr ""
+msgstr "显示已关联的提供商"
 
 #, php-format
 msgid "Providers linked to the account will appear in the %1$s."
-msgstr ""
+msgstr "已关联到该账号的提供商将显示在%1$s中。"
 
-#, fuzzy
-#| msgid "Username"
 msgid "Users table"
-msgstr "用户名"
+msgstr "用户列表"
 
-#, fuzzy
-#| msgid "Disable login for the selected roles"
 msgid "Disable Admin bar for roles"
-msgstr "禁止所选对象登录"
+msgstr "为指定角色禁用管理工具栏"
 
 msgid "Debug mode"
 msgstr "调试模式"
 
 msgid "Bypass cache on redirect"
-msgstr ""
+msgstr "重定向时绕过缓存"
 
 #, php-format
 msgid ""
@@ -1003,115 +906,99 @@ msgid ""
 "after a successful registration or login with social login. %1$sLearn "
 "more%2$s."
 msgstr ""
+"启用此选项后，通过社交登录成功注册或登录后，我们会在重定向的目标 URL 中添加一"
+"个 GET 参数。%1$s了解更多%2$s。"
 
-#, fuzzy
-#| msgid "Register"
 msgid "Page for register flow"
-msgstr "注册"
+msgstr "用于注册流程的页面"
 
 msgid "None"
-msgstr ""
+msgstr "无"
 
-#, fuzzy
-#| msgid "Register"
 msgid "Clear - Page for register flow"
-msgstr "注册"
+msgstr "清除 - 用于注册流程的页面"
 
 msgid ""
 "This setting is used when you request additional data from the users (such "
 "as email address) and to display the Terms and conditions."
 msgstr ""
+"当您需要向用户请求额外数据（例如电子邮箱地址）以及显示条款和条件时，将使用此"
+"设置。"
 
 #, php-format
 msgid ""
 "%2$s First create a new page and insert the following shortcode: %1$s then "
 "select this page above"
-msgstr ""
+msgstr "%2$s 请先创建一个新页面并插入以下短码：%1$s 然后在上方选择该页面"
 
 #, php-format
 msgid ""
 "%1$s You won't be able to reach the selected page unless a social login/"
 "registration happens."
-msgstr ""
+msgstr "%1$s 除非进行社交登录/注册，否则无法访问所选页面。"
 
 msgid "OAuth redirect uri proxy page"
-msgstr ""
+msgstr "OAuth 重定向 URI 代理页面"
 
 msgid "Clear - OAuth redirect uri proxy page"
-msgstr ""
+msgstr "清除 - OAuth 重定向 URI 代理页面"
 
 msgid ""
 "You can use this setting when wp-login.php page is not available to handle "
 "the OAuth flow."
-msgstr ""
+msgstr "当 wp-login.php 页面无法处理 OAuth 流程时，您可以使用此设置。"
 
 #, php-format
 msgid "%1$s First create a new page then select this page above."
-msgstr ""
+msgstr "%1$s 请先创建一个新页面，然后在上方选择该页面。"
 
 msgid "Prevent external redirect overrides"
-msgstr ""
+msgstr "防止外部重定向覆盖"
 
 msgid "Disable external redirects"
-msgstr ""
+msgstr "禁用外部重定向"
 
-#, fuzzy
-#| msgid "Oauth Redirect URI"
 msgid "Default redirect url"
-msgstr "Oauth Redirect URI"
+msgstr "默认重定向 URL"
 
-#, fuzzy
-#| msgid "Social Login"
 msgid "for Login"
-msgstr "社交登录"
+msgstr "用于登录"
 
-#, fuzzy
-#| msgid "Register"
 msgid "for Register"
-msgstr "注册"
+msgstr "用于注册"
 
-#, fuzzy
-#| msgid "Fixed redirect url for login"
 msgid "Fixed redirect url"
-msgstr "修改登录后重定向URL"
+msgstr "固定重定向 URL"
 
-#, fuzzy
-#| msgid "Fixed redirect url for login"
 msgid "Blacklisted redirects"
-msgstr "修改登录后重定向URL"
+msgstr "重定向黑名单"
 
 msgid "If you want to blacklist redirect url params. One pattern per line."
-msgstr ""
+msgstr "用于将重定向 URL 参数加入黑名单。每行一个规则。"
 
-#, fuzzy
-#| msgid "Show login buttons"
 msgid "Support login restrictions"
-msgstr "显示登录按钮"
+msgstr "支持登录限制"
 
 #, php-format
 msgid "Please visit to our %1$s to check what plugins are supported!"
-msgstr ""
+msgstr "请访问我们的 %1$s，查看支持哪些插件！"
 
 msgid "Display avatars in \"All media items\""
-msgstr ""
+msgstr "在“所有媒体项目”中显示头像"
 
 msgid ""
 "Enabling this option can speed up loading images in Media Library - Grid "
 "view!"
-msgstr ""
+msgstr "启用此选项可以加快媒体库网格视图中图片的加载速度！"
 
 msgid "Membership"
 msgstr "会员"
 
-#, fuzzy
-#| msgid "Allow registration with Social login"
 msgid "Allow registration with Social login."
-msgstr "允许通过社交登录注册"
+msgstr "允许通过社交登录注册。"
 
-#, fuzzy
-#| msgid "Register"
 msgid "Custom label for register buttons"
-msgstr "注册"
+msgstr "注册按钮的自定义标签"
 
 #, php-format
 msgid ""
@@ -1120,55 +1007,54 @@ msgid ""
 "can be modified at the Buttons tab of each provider.<br>This option also "
 "allows the use of register specific %3$s options."
 msgstr ""
+"为注册表单中的社交按钮以及 %1$s 参数设置为 %2$s 的短码设置自定义标签。<br>注"
+"册专用标签可在每个提供商的“按钮”选项卡中修改。<br>此选项还允许使用注册专用的 "
+"%3$s 选项。"
 
 msgid "Redirect overlay"
-msgstr ""
+msgstr "重定向遮罩层"
 
 msgid "No overlay"
-msgstr ""
+msgstr "无遮罩层"
 
 msgid "Display overlay"
-msgstr ""
+msgstr "显示遮罩层"
 
 msgid "Display overlay with spinner"
-msgstr ""
+msgstr "显示带加载动画的遮罩层"
 
 msgid "Display overlay with spinner and message"
-msgstr ""
+msgstr "显示带加载动画和消息的遮罩层"
 
 msgid ""
 "You can display an overlay on your site when we start the redirect after the "
 "authentication."
-msgstr ""
+msgstr "身份验证后开始重定向时，您可以在网站上显示遮罩层。"
 
 #, php-format
 msgid "%1$s The overlay won't be displayed if the %2$s setting is set to %3$s!"
-msgstr ""
+msgstr "%1$s 如果 %2$s 设置为 %3$s，则不会显示遮罩层！"
 
 msgid "Note:"
-msgstr ""
+msgstr "注意："
 
 msgid "Unsupported WebView behavior"
-msgstr ""
+msgstr "不支持 WebView 时的行为"
 
-#, fuzzy
-#| msgid "Image button"
 msgid "Remove button"
-msgstr "图片按钮"
+msgstr "移除按钮"
 
-#, fuzzy
-#| msgid "Default button"
 msgid "Disable button"
-msgstr "默认按钮"
+msgstr "禁用按钮"
 
 #, php-format
 msgid "Some %1$sproviders%2$s don't support embedded browsers."
-msgstr ""
+msgstr "部分%1$s提供商%2$s不支持内嵌浏览器。"
 
 msgid ""
 "This setting defines if we should remove or disable the related buttons in "
 "WebView environments."
-msgstr ""
+msgstr "此设置决定在 WebView 环境中是移除还是禁用相关按钮。"
 
 msgid "Below and floating"
 msgstr "下面并浮动"
@@ -1179,10 +1065,8 @@ msgstr "嵌入式登录表单按钮样式"
 msgid "Embedded Login layout"
 msgstr "嵌入式登录表单布局"
 
-#, fuzzy
-#| msgid "Embedded Login form button style"
 msgid "Embedded login form button alignment"
-msgstr "嵌入式登录表单按钮样式"
+msgstr "嵌入式登录表单按钮对齐方式"
 
 msgid "Registration Form"
 msgstr "注册信息表"
@@ -1190,62 +1074,50 @@ msgstr "注册信息表"
 msgid "Embedded login form"
 msgstr "嵌入登录表单"
 
-#, fuzzy
-#| msgid "Login form"
 msgid "Sign Up form"
-msgstr "登录表单"
+msgstr "注册表单"
 
-#, fuzzy
-#| msgid "No Connect button in login form"
 msgid "No Connect button in Sign Up form"
-msgstr "在登录表单里不要登录按钮"
+msgstr "注册表单中不显示连接按钮"
 
-#, fuzzy
-#| msgid "Login form button style"
 msgid "Sign Up form button style"
-msgstr "登录界面按钮样式"
+msgstr "注册表单按钮样式"
 
-#, fuzzy
-#| msgid "Login layout"
 msgid "Sign Up layout"
-msgstr "登录界面布局"
+msgstr "注册布局"
 
-#, fuzzy
-#| msgid "WooCommerce account details"
 msgid "Account details"
-msgstr "WooCommerce 账户详情"
+msgstr "账户详情"
 
 msgid "No link buttons"
-msgstr ""
+msgstr "不显示关联按钮"
 
 msgid "Link buttons after account details"
 msgstr "链接按钮在账户详情后面"
 
 msgid "Store"
-msgstr ""
+msgstr "存储"
 
 msgid "First and last name"
-msgstr ""
+msgstr "名字和姓氏"
 
 msgid "When not enabled, username will be randomly generated."
-msgstr ""
+msgstr "未启用时，将随机生成用户名。"
 
 msgid "Email"
 msgstr "Email"
 
 msgid "When not enabled, email will be empty."
-msgstr ""
+msgstr "未启用时，电子邮箱将为空。"
 
 msgid "Avatar"
-msgstr ""
+msgstr "头像"
 
 msgid "Access token"
-msgstr ""
+msgstr "访问令牌"
 
-#, fuzzy
-#| msgid "Registration Form"
 msgid "Register Form"
-msgstr "注册信息表"
+msgstr "注册表单"
 
 msgid "No Connect button in login form"
 msgstr "在登录表单里不要登录按钮"
@@ -1253,81 +1125,70 @@ msgstr "在登录表单里不要登录按钮"
 msgid "No Connect button in register form"
 msgstr "不要登录按钮在注册表上"
 
-#, fuzzy
-#| msgid "Login form"
 msgid "Billing form"
-msgstr "登录表单"
+msgstr "账单表单"
 
 msgid "No Connect button in billing form"
 msgstr "不要链接按钮在结算表单"
 
-#, fuzzy
-#| msgid "Login layout"
 msgid "Billing layout"
-msgstr "登录界面布局"
+msgstr "账单布局"
 
-#, fuzzy
-#| msgid "Below with separator"
 msgid "Default with separator"
-msgstr "下面并分割"
+msgstr "默认，带分隔线"
 
-#, fuzzy
-#| msgid "Connect button before account details"
 msgid "No Connect buttons in account details form"
-msgstr "登录按钮在账户详情之前"
+msgstr "账户详情表单中不显示连接按钮"
 
-#, fuzzy
-#| msgid "Icon button"
 msgid "Link buttons on"
-msgstr "图标按钮"
+msgstr "关联按钮显示于"
 
-#, fuzzy
-#| msgid "WooCommerce register form"
 msgid "WooCommerce registration notification"
-msgstr "WooCommerce 注册表单"
+msgstr "WooCommerce 注册通知"
 
 #, php-format
 msgid ""
 "Defines whether the registration with %1$s will send the same registration "
 "notification that %2$s does, instead of the %3$s default one."
 msgstr ""
+"设置通过 %1$s 注册时，是否发送与 %2$s 相同的注册通知，而不是 %3$s 的默认通"
+"知。"
 
-#, fuzzy, php-format
-#| msgid "Authentication successful"
+#, php-format
 msgid "Network connection successful: %1$s"
-msgstr "授权成功"
+msgstr "网络连接成功：%1$s"
 
 #, php-format
 msgid "Network connection failed: %1$s"
-msgstr ""
+msgstr "网络连接失败：%1$s"
 
 msgid ""
 "Please contact with your hosting provider to resolve the network issue "
 "between your server and the provider."
-msgstr ""
+msgstr "请联系您的主机服务商，以解决您的服务器与提供商之间的网络问题。"
 
 msgid "Manage Avatar"
-msgstr ""
+msgstr "管理头像"
 
 #, php-format
 msgid "Avatar <span class=\"count\">(%s)</span>"
 msgid_plural "Avatar <span class=\"count\">(%s)</span>"
-msgstr[0] ""
+msgstr[0] "头像 <span class=\"count\">(%s)</span>"
 
 #, php-format
 msgid "%1$s &lsaquo; %2$s &#8212; WordPress"
-msgstr ""
+msgstr "%1$s &lsaquo; %2$s &#8212; WordPress"
 
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://wordpress.org/"
 
 msgid "Powered by WordPress"
-msgstr ""
+msgstr "由 WordPress 驱动"
 
 #, php-format
 msgctxt "site"
 msgid "&larr; Back to %s"
-msgstr ""
+msgstr "&larr; 返回 %s"
 
 msgid "Your configuration needs to be verified"
 msgstr "您的配置需要验证"
@@ -1373,10 +1234,10 @@ msgid "Verify Settings Again"
 msgstr "再次验证设置"
 
 msgid "Please save your changes before verifying settings."
-msgstr ""
+msgstr "请先保存更改，再验证设置。"
 
 msgid "Error: Email verification status is not checked in this provider!"
-msgstr ""
+msgstr "错误：此提供商未检查电子邮箱的验证状态！"
 
 msgid "Authentication successful"
 msgstr "授权成功"
@@ -1388,18 +1249,18 @@ msgid "Unlink successful."
 msgstr "解除链接成功."
 
 msgid "Unlink is not allowed!"
-msgstr ""
+msgstr "不允许取消关联！"
 
 msgid "Unlink failed: nonce is invalid"
-msgstr ""
+msgstr "取消关联失败：nonce 无效"
 
 #, php-format
 msgid "You are attempting to unlink your WordPress account from %s."
-msgstr ""
+msgstr "您正在尝试取消您的 WordPress 账号与 %s 的关联。"
 
 #, php-format
 msgid "Do you really want to %1$s unlink %2$s it?"
-msgstr ""
+msgstr "您确定要%1$s取消关联%2$s吗？"
 
 msgid "The test was successful"
 msgstr "测试成功"
@@ -1408,10 +1269,10 @@ msgid "Authentication failed"
 msgstr "授权认证失败"
 
 msgid "Identifier"
-msgstr ""
+msgstr "标识符"
 
 msgid "Profile Picture"
-msgstr ""
+msgstr "头像"
 
 #, php-format
 msgid ""
@@ -1419,23 +1280,19 @@ msgid ""
 "in with %2$s easily."
 msgstr "你的 %1$s 账号已经成功链接到你的网站帐号. 你可以快速登录 %2$s ."
 
-#, fuzzy, php-format
-#| msgid ""
-#| "You have already linked a(n) %s account. Please unlink the current and "
-#| "then you can link other %s account."
+#, php-format
 msgid ""
 "You have already linked a(n) %s account. Please unlink the current and then "
 "you can link another %s account."
 msgstr ""
-"你已经链接了 a(n) %s 账号. 请解除现有的链接账号，你才可以重新链接 %s 账号。"
+"您已经关联了一个 %s 账号。请先取消关联当前账号，然后才能关联另一个 %s 账号。"
 
-#, fuzzy, php-format
-#| msgid "This %s account is already linked to other user."
+#, php-format
 msgid "This %s account is already linked to another user."
-msgstr "这个 %s 账号已经链接到了其他用户。"
+msgstr "该 %s 账号已关联到其他用户。"
 
 msgid "User registration is currently not allowed."
-msgstr ""
+msgstr "目前不允许用户注册。"
 
 #, php-format
 msgid ""
@@ -1443,6 +1300,8 @@ msgid ""
 "address is not verified.%2$sPlease login to your existing account using your "
 "password and link your %1$s account to it manually!"
 msgstr ""
+"我们找到了一个使用您 %1$s 电子邮箱地址的用户，但该电子邮箱地址似乎尚未验证。"
+"%2$s请使用密码登录您的现有账号，然后手动关联您的 %1$s 账号！"
 
 #, php-format
 msgid ""
@@ -1450,21 +1309,22 @@ msgid ""
 "different account, so we are unable to log you in. Please use the linked "
 "account or log in with your password!"
 msgstr ""
+"我们找到了一个使用您 %1$s 电子邮箱地址的用户。但该地址属于另一个账号，因此无"
+"法为您登录。请使用已关联的账号，或使用密码登录！"
 
-#, fuzzy
-#| msgid "Register For This Site!"
 msgid "Register For This Site"
-msgstr "注册此网站！"
+msgstr "注册此网站"
 
 #, php-format
 msgid "%1$s requires PHP version %2$s+, plugin is currently NOT ACTIVE."
-msgstr ""
+msgstr "%1$s 需要 PHP %2$s+ 版本，插件当前未激活。"
 
 #, php-format
 msgid ""
 "%1$s requires WordPress version %2$s+. Because you are using an earlier "
 "version, the plugin is currently NOT ACTIVE."
 msgstr ""
+"%1$s 需要 WordPress %2$s+ 版本。由于您使用的是较早的版本，插件当前未激活。"
 
 #, php-format
 msgid "Please update %1$s to version %2$s or newer."
@@ -1477,44 +1337,46 @@ msgid ""
 "By clicking Register, you accept our <a href=\"#privacy_policy_url\" "
 "target=\"_blank\">Privacy Policy</a>"
 msgstr ""
+"点击“注册”即表示您接受我们的<a href=\"#privacy_policy_url\" "
+"target=\"_blank\">隐私政策</a>"
 
 msgid "Hold On"
-msgstr ""
+msgstr "请稍候"
 
 msgid "You are being redirected to another page,<br>it may take a few seconds."
-msgstr ""
+msgstr "正在将您重定向到其他页面，<br>这可能需要几秒钟。"
 
 msgid "The selected provider doesn't support embedded browsers!"
-msgstr ""
+msgstr "所选提供商不支持内嵌浏览器！"
 
 msgid "Social Login"
 msgstr "社交登录"
 
-#, fuzzy
-#| msgid "Buttons"
 msgid "Button skin"
-msgstr "按钮"
+msgstr "按钮外观"
 
 msgid "Dark"
-msgstr ""
+msgstr "深色"
 
 msgid "Light"
-msgstr ""
+msgstr "浅色"
 
 msgid "Black"
-msgstr ""
+msgstr "黑色"
 
 msgid "White"
-msgstr ""
+msgstr "白色"
 
 #, php-format
 msgid ""
 "%1$s allows HTTPS OAuth Redirects only. You must move your site to HTTPS in "
 "order to allow login with %1$s."
 msgstr ""
+"%1$s 仅允许 HTTPS OAuth 重定向。您必须将网站迁移到 HTTPS，才能允许通过 %1$s "
+"登录。"
 
 msgid "How to get SSL for my WordPress site?"
-msgstr ""
+msgstr "如何为我的 WordPress 网站获取 SSL？"
 
 msgid "App ID"
 msgstr "应用程序 ID"
@@ -1536,32 +1398,31 @@ msgid ""
 "By replacing your existing %1$s App, users with linked %1$s accounts will no "
 "longer be able to login with %1$s."
 msgstr ""
+"如果替换现有的 %1$s 应用，已关联 %1$s 账号的用户将无法再通过 %1$s 登录。"
 
 msgid "Find out why?"
-msgstr ""
+msgstr "了解原因"
 
 msgid "Profile image size"
-msgstr ""
+msgstr "头像尺寸"
 
 msgid "Small"
-msgstr ""
+msgstr "小"
 
 msgid "Medium"
-msgstr ""
+msgstr "中"
 
 msgid "Large"
-msgstr ""
+msgstr "大"
 
 msgid "Extra Large"
-msgstr ""
+msgstr "特大"
 
 msgid "Continue with <b>Facebook</b>"
 msgstr "通过 <b>Facebook</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Facebook</b>"
 msgid "Sign up with <b>Facebook</b>"
-msgstr "通过 <b>Facebook</b>"
+msgstr "通过 <b>Facebook</b> 注册"
 
 msgid "Link account with <b>Facebook</b>"
 msgstr "关联 <b>Facebook</b> 账号"
@@ -1576,10 +1437,47 @@ msgstr "输入的 %1$s 似乎不是有效的。 请输入有效的 %2$s."
 
 #, php-format
 msgid "Required scope: %1$s"
-msgstr ""
+msgstr "所需权限范围：%1$s"
 
 msgid "Neutral"
+msgstr "中性"
+
+msgid ""
+"Required by Google One Tap. Without it the One Tap prompt never appears."
+msgstr "Google One Tap 需要此项。没有它，One Tap 提示将永远不会出现。"
+
+msgid "Google One Tap"
+msgstr "Google One Tap"
+
+msgid "Show where the Google button appears"
+msgstr "在显示 Google 按钮的位置显示"
+
+msgid "Show on all pages"
+msgstr "在所有页面上显示"
+
+#, php-format
+msgid ""
+"Shows Google's One Tap prompt, so visitors can sign in with their Google "
+"account without leaving the page. %1$sLearn more%2$s."
 msgstr ""
+"显示 Google 的 One Tap 提示，访问者无需离开当前页面即可使用其 Google 账号登"
+"录。%1$s了解更多%2$s。"
+
+#, php-format
+msgid ""
+"%1$s Requires HTTPS, and %2$s added to the %3$sAuthorized JavaScript "
+"origins%4$s of your Google app."
+msgstr ""
+"%1$s 需要 HTTPS，并且需要将 %2$s 添加到您的 Google 应用的 %3$sAuthorized "
+"JavaScript origins%4$s 中。"
+
+#, php-format
+msgid ""
+"%1$s Unlike the Google button, One Tap loads Google's script as soon as the "
+"page opens. %2$sLearn more%3$s."
+msgstr ""
+"%1$s 与 Google 按钮不同，One Tap 会在页面打开时立即加载 Google 的脚本。%2$s了"
+"解更多%3$s。"
 
 msgid "Client ID"
 msgstr "客户端ID"
@@ -1588,22 +1486,20 @@ msgid "Client Secret"
 msgstr "客户端密码"
 
 msgid "Select account on each login"
-msgstr ""
+msgstr "每次登录时选择账号"
 
 msgid ""
 "Disable, when you don't want to see the account select prompt on each login."
-msgstr ""
+msgstr "如果不希望每次登录时都显示账号选择提示，请禁用此项。"
 
 msgid "Original"
-msgstr ""
+msgstr "原始"
 
 msgid "Continue with <b>Google</b>"
 msgstr "通过 <b>Google</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Google</b>"
 msgid "Sign up with <b>Google</b>"
-msgstr "通过 <b>Google</b>"
+msgstr "通过 <b>Google</b> 注册"
 
 msgid "Link account with <b>Google</b>"
 msgstr "关联 <b>Google</b>"
@@ -1611,56 +1507,43 @@ msgstr "关联 <b>Google</b>"
 msgid "Unlink account from <b>Google</b>"
 msgstr "取消关联 <b>Google</b>"
 
-#, fuzzy, php-format
-#| msgid "Required"
+#, php-format
 msgid "Required API: %1$s"
-msgstr "请求"
+msgstr "所需 API：%1$s"
 
 msgid "X"
-msgstr ""
+msgstr "X"
 
 msgid "Legacy"
 msgstr "旧版"
 
 msgid "API version"
-msgstr ""
+msgstr "API 版本"
 
 msgid "v1.1"
-msgstr ""
+msgstr "v1.1"
 
 msgid "v2"
-msgstr ""
+msgstr "v2"
 
 msgid "API Key"
-msgstr ""
+msgstr "API Key"
 
-#, fuzzy
-#| msgid "App Secret"
 msgid "API Key Secret"
-msgstr "App 密匙"
+msgstr "API Key Secret"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Continue with <b>X</b>"
-msgstr "通过 <b>VK</b>"
+msgstr "通过 <b>X</b> 继续"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Sign up with <b>X</b>"
-msgstr "通过 <b>VK</b>"
+msgstr "通过 <b>X</b> 注册"
 
-#, fuzzy
-#| msgid "Link account with <b>VK</b>"
 msgid "Link account with <b>X</b>"
-msgstr "关联 <b>VK</b>"
+msgstr "关联 <b>X</b> 账号"
 
-#, fuzzy
-#| msgid "Unlink account from <b>VK</b>"
 msgid "Unlink account from <b>X</b>"
-msgstr "取消关联 <b>VK</b>"
+msgstr "取消关联 <b>X</b> 账号"
 
-#, fuzzy
-#| msgid "Register"
 msgctxt "Register form submit button label"
 msgid "Register"
 msgstr "注册"
@@ -1675,16 +1558,14 @@ msgstr "标题:"
 msgid "Button style:"
 msgstr "按钮样式:"
 
-#, fuzzy
-#| msgid "Buttons"
 msgid "Button align:"
-msgstr "按钮"
+msgstr "按钮对齐："
 
 msgid "Show link buttons"
-msgstr ""
+msgstr "显示关联按钮"
 
 msgid "Show unlink buttons"
-msgstr ""
+msgstr "显示取消关联按钮"
 
 msgid "Social login is not allowed with this role!"
 msgstr "此用户组不允许社交登录！"
@@ -1697,128 +1578,134 @@ msgid ""
 "valid username."
 msgstr "此用户名无效，因为它使用了非法字符。 请输入有效的用户名。"
 
-#, fuzzy
-#| msgid "This username is already registered. Please choose another one."
 msgid ""
 "<strong>Error</strong>: This username is already registered. Please choose "
 "another one."
-msgstr "这个用户名已经有人注册，请选择其他的。"
+msgstr "<strong>错误</strong>：该用户名已被注册，请选择其他用户名。"
 
-#, fuzzy
-#| msgid "Sorry, that username is not allowed."
 msgid "<strong>Error</strong>: Sorry, that username is not allowed."
-msgstr "对不起，这个用户名不允许使用。"
+msgstr "<strong>错误</strong>：抱歉，不允许使用该用户名。"
 
-#, fuzzy
-#| msgid "Please enter an email address."
 msgid "<strong>Error</strong>: Please enter an email address."
-msgstr "请输入电子邮箱."
+msgstr "<strong>错误</strong>：请输入电子邮箱地址。"
 
-#, fuzzy
-#| msgid "The email address isn&#8217;t correct."
 msgid "<strong>Error</strong>: The email address isn&#8217;t correct."
-msgstr "邮箱地址是n&#8217;t 正确."
+msgstr "<strong>错误</strong>：电子邮箱地址不正确。"
 
-#, fuzzy
-#| msgid "This email is already registered, please choose another one."
 msgid ""
 "<strong>Error</strong>: This email is already registered. Please choose "
 "another one."
-msgstr "这个邮箱已经注册使用过，请选择其他的。"
+msgstr "<strong>错误</strong>：该电子邮箱地址已被注册，请选择其他地址。"
 
 msgid "<strong>Error</strong>: Please enter a password."
-msgstr ""
+msgstr "<strong>错误</strong>：请输入密码。"
 
 msgid "<strong>Error</strong>: Passwords may not contain the character \"\\\"."
-msgstr ""
+msgstr "<strong>错误</strong>：密码不能包含字符 \"\\\"。"
 
 msgid ""
 "<strong>Error</strong>: Passwords don&#8217;t match. Please enter the same "
 "password in both password fields."
-msgstr ""
+msgstr "<strong>错误</strong>：密码不匹配。请在两个密码字段中输入相同的密码。"
 
-#, fuzzy, php-format
-#| msgid ""
-#| "This email is already registered, please login in to your account to link "
-#| "with Facebook."
+#, php-format
 msgid ""
 "This email is already registered, please login in to your account to link "
 "with %1$s."
-msgstr "这个电子邮件已经注册过，请登录到您的帐户以链接到Facebook。"
+msgstr "该电子邮箱地址已被注册，请登录您的账户以关联 %1$s。"
 
 msgid "Unexpected response: The provider didn't return the Authorization URL!"
-msgstr ""
+msgstr "意外响应：提供商未返回授权 URL！"
 
 msgid "Unexpected response: Authentication has been cancelled!"
-msgstr ""
+msgstr "意外响应：身份验证已取消！"
 
 msgid "Unexpected response: Immediate request failed - Setup Needed!"
-msgstr ""
+msgstr "意外响应：即时请求失败 - 需要进行设置！"
 
 msgid ""
 "Unexpected response: The targeted OpenID server is not authorized to verify "
 "this request!"
-msgstr ""
+msgstr "意外响应：目标 OpenID 服务器无权验证此请求！"
 
 msgid "Unexpected response: OpenID Verification failed!"
-msgstr ""
+msgstr "意外响应：OpenID 验证失败！"
 
 #, php-format
 msgid "Please install and activate %1$s to use the %2$s"
-msgstr ""
+msgstr "请安装并激活 %1$s 以使用 %2$s"
 
 msgid "Network Activate"
-msgstr ""
+msgstr "在全网启用"
 
 msgid "Install now!"
-msgstr ""
+msgstr "立即安装！"
 
-#, fuzzy
-#| msgid "Providers"
 msgid "Social Providers"
-msgstr "提供商"
+msgstr "社交提供商"
 
 #, php-format
 msgid ""
 "The Facebook Sync data needs an approved %1$s and your App must use the "
 "latest %2$s version!"
 msgstr ""
+"Facebook 同步数据需要已通过的 %1$s，并且您的应用必须使用最新的 %2$s 版本！"
+
+#, php-format
+msgid ""
+"Yes. With Google One Tap enabled, %1$s loads Google's Identity Services "
+"library from %2$s on the pages where the One Tap prompt can appear. Google "
+"receives the visitor's IP address and reads its own cookies on that domain "
+"to decide whether the prompt can be shown."
+msgstr ""
+"是的。启用 Google One Tap 后，%1$s 会在可能显示 One Tap 提示的页面上从 %2$s "
+"加载 Google 的 Identity Services 库。Google 会接收访问者的 IP 地址，并读取它"
+"自己在该域名下的 Cookie，以决定是否可以显示提示。"
+
+#, php-format
+msgid ""
+"With Google One Tap enabled, Google's library also stores a %1$s cookie on "
+"this site, which holds the visitor's One Tap status, such as whether they "
+"closed the prompt."
+msgstr ""
+"启用 Google One Tap 后，Google 的库还会在本网站上存储一个 %1$s Cookie，用于保"
+"存访问者的 One Tap 状态，例如他们是否关闭了提示。"
 
 #, php-format
 msgid ""
 "Most of these information can only be retrieved, when the field is marked as "
 "Public on the user's %s page!"
-msgstr ""
+msgstr "大部分信息只有在用户的 %s 页面上将该字段设为公开时才能获取！"
 
 #, php-format
 msgid ""
 "Most of these information can only be retrieved, when the field is filled on "
 "the user's %s page!"
-msgstr ""
+msgstr "大部分信息只有在用户的 %s 页面上填写了该字段时才能获取！"
 
 #, php-format
 msgid ""
 "Most of these information can only be retrieved, when the field is filled on "
 "the user's %s page! For the campaigns, the user must have a public campaign!"
 msgstr ""
+"大部分信息只有在用户的 %s 页面上填写了该字段时才能获取！对于活动（campaign）"
+"数据，用户必须拥有公开的活动！"
 
 #, php-format
 msgid ""
 "The Spotify Sync data requires the %1$s with the necessary scopes enabled!"
-msgstr ""
+msgstr "Spotify 同步数据需要启用了必要权限范围的 %1$s！"
 
 #, php-format
 msgid ""
 "The TikTok Sync data requires the %1$s with the necessary scopes enabled!"
-msgstr ""
+msgstr "TikTok 同步数据需要启用了必要权限范围的 %1$s！"
 
 msgid "Continue with <b>Amazon</b>"
 msgstr "通过 <b>Amazon</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Amazon</b>"
 msgid "Sign up with <b>Amazon</b>"
-msgstr "通过 <b>Amazon</b>"
+msgstr "通过 <b>Amazon</b> 注册"
 
 msgid "Link account with <b>Amazon</b>"
 msgstr "关联 <b>Amazon</b> 账号"
@@ -1827,29 +1714,28 @@ msgid "Unlink account from <b>Amazon</b>"
 msgstr "解除关联 <b>Amazon</b> 账号"
 
 msgid "Delete credentials"
-msgstr ""
+msgstr "删除凭据"
 
 msgid "Private Key ID"
-msgstr ""
+msgstr "私钥 ID"
 
 msgid "Private Key"
-msgstr ""
+msgstr "私钥"
 
 msgid "Team Identifier"
-msgstr ""
+msgstr "团队标识符"
 
 msgid "Service Identifier"
-msgstr ""
+msgstr "服务标识符"
 
 msgid "Generate Token"
-msgstr ""
+msgstr "生成令牌"
 
 msgid "Continue with <b>Apple</b>"
 msgstr "通过 <b>Apple</b>"
 
-#, fuzzy
 msgid "Sign up with <b>Apple</b>"
-msgstr "通过 <b>Apple</b>"
+msgstr "通过 <b>Apple</b> 注册"
 
 msgid "Link account with <b>Apple</b>"
 msgstr "关联 <b>Apple</b>"
@@ -1859,73 +1745,61 @@ msgstr "取消关联 <b>Apple</b>"
 
 #, php-format
 msgid "An error occurred when storing of the expiration timestamp : %1$s"
-msgstr ""
+msgstr "存储过期时间戳时出错：%1$s"
 
 #, php-format
 msgid "Token generation failed: %1$s"
-msgstr ""
+msgstr "令牌生成失败：%1$s"
 
 msgid "Please check your credentials!"
-msgstr ""
+msgstr "请检查您的凭据！"
 
 msgid "Private key format is not valid!"
-msgstr ""
+msgstr "私钥格式无效！"
 
 #, php-format
 msgid ""
 "%s detected that your Apple credentials have expired. Please delete the "
 "current credentials and generate new one!"
-msgstr ""
+msgstr "%s 检测到您的 Apple 凭据已过期。请删除当前凭据并生成新的凭据！"
 
 msgid "Apple Credentials"
-msgstr ""
+msgstr "Apple 凭据"
 
 msgid "Force reauthorization on each login"
-msgstr ""
+msgstr "每次登录时强制重新授权"
 
 msgid "Enable, when you want to see the consent screen on each login."
-msgstr ""
+msgstr "如果希望每次登录时都显示同意屏幕，请启用此项。"
 
-#, fuzzy
-#| msgid "Continue with <b>Disqus</b>"
 msgid "Continue with <b>Discord</b>"
-msgstr "通过 <b>Disqus</b>"
+msgstr "通过 <b>Discord</b> 继续"
 
-#, fuzzy
-#| msgid "Continue with <b>Disqus</b>"
 msgid "Sign up with <b>Discord</b>"
-msgstr "通过 <b>Disqus</b>"
+msgstr "通过 <b>Discord</b> 注册"
 
-#, fuzzy
-#| msgid "Link account with <b>Disqus</b>"
 msgid "Link account with <b>Discord</b>"
-msgstr "关联 <b>Disqus</b>"
+msgstr "关联 <b>Discord</b> 账号"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Disqus</b>"
 msgid "Unlink account from <b>Discord</b>"
-msgstr "取消关联 <b>Disqus</b>"
+msgstr "取消关联 <b>Discord</b> 账号"
 
-#, fuzzy
-#| msgid "App Secret"
 msgid "API Secret"
-msgstr "App 密匙"
+msgstr "API 密钥"
 
 #, php-format
 msgid "We detected that your %1$s is probably overridden over the %2$s filter!"
-msgstr ""
+msgstr "我们检测到您的 %1$s 可能已被 %2$s 过滤器覆盖！"
 
 #, php-format
 msgid "We detected that your %1$s has been overridden over the %2$s filter!"
-msgstr ""
+msgstr "我们检测到您的 %1$s 已被 %2$s 过滤器覆盖！"
 
 msgid "Continue with <b>Disqus</b>"
 msgstr "通过 <b>Disqus</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Disqus</b>"
 msgid "Sign up with <b>Disqus</b>"
-msgstr "通过 <b>Disqus</b>"
+msgstr "通过 <b>Disqus</b> 注册"
 
 msgid "Link account with <b>Disqus</b>"
 msgstr "关联 <b>Disqus</b>"
@@ -1936,9 +1810,8 @@ msgstr "取消关联 <b>Disqus</b>"
 msgid "Continue with <b>GitHub</b>"
 msgstr "通过 <b>GitHub</b>"
 
-#, fuzzy
 msgid "Sign up with <b>GitHub</b>"
-msgstr "通过 <b>GitHub</b>"
+msgstr "通过 <b>GitHub</b> 注册"
 
 msgid "Link account with <b>GitHub</b>"
 msgstr "关联 <b>GitHub</b>"
@@ -1947,142 +1820,120 @@ msgid "Unlink account from <b>GitHub</b>"
 msgstr "取消关联 <b>GitHub</b>"
 
 msgid "REST API Key"
-msgstr ""
+msgstr "REST API Key"
 
-#, fuzzy
-#| msgid "Client Secret"
 msgid "Client Secret Code"
-msgstr "客户端密码"
+msgstr "客户端密钥代码"
 
-#, fuzzy
-#| msgid "Authentication error"
 msgid "Authorization Prompt"
-msgstr "授权认证出错"
+msgstr "授权提示"
 
 msgid "Display account select modal"
-msgstr ""
+msgstr "显示账号选择弹窗"
 
 msgid "Force user to enter login credentials on each login"
-msgstr ""
+msgstr "强制用户每次登录时输入登录凭据"
 
 msgid "Start the authentication with the Kakao Account sign-up page."
-msgstr ""
+msgstr "从 Kakao 账号注册页面开始身份验证。"
 
-#, fuzzy
-#| msgid "Email"
 msgid "Email scope"
-msgstr "Email"
+msgstr "电子邮件权限范围"
 
 msgid "Disable, when you have no rights for email address."
-msgstr ""
+msgstr "如果您没有获取电子邮箱地址的权限，请禁用此项。"
 
 msgid "Mini"
-msgstr ""
+msgstr "迷你"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Continue with <b>Kakao</b>"
-msgstr "通过 <b>VK</b>"
+msgstr "通过 <b>Kakao</b> 继续"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Sign up with <b>Kakao</b>"
-msgstr "通过 <b>VK</b>"
+msgstr "通过 <b>Kakao</b> 注册"
 
-#, fuzzy
-#| msgid "Link account with <b>VK</b>"
 msgid "Link account with <b>Kakao</b>"
-msgstr "关联 <b>VK</b>"
+msgstr "关联 <b>Kakao</b> 账号"
 
-#, fuzzy
-#| msgid "Unlink account from <b>VK</b>"
 msgid "Unlink account from <b>Kakao</b>"
-msgstr "取消关联 <b>VK</b>"
+msgstr "取消关联 <b>Kakao</b> 账号"
 
 msgid "Channel ID"
-msgstr ""
+msgstr "Channel ID"
 
-#, fuzzy
-#| msgid "Consumer Secret"
 msgid "Channel Secret"
-msgstr "用户密码"
+msgstr "Channel 密钥"
 
 msgid "Add LINE Official Account as a friend"
-msgstr ""
+msgstr "将 LINE 官方账号添加为好友"
 
 msgid "Don't display"
-msgstr ""
+msgstr "不显示"
 
 msgid "Display the add friend option in the consent screen"
-msgstr ""
+msgstr "在同意屏幕中显示添加好友选项"
 
 msgid "Opens a new screen with the add friend option after the consent screen"
-msgstr ""
+msgstr "在同意屏幕之后打开一个带有添加好友选项的新屏幕"
 
 #, php-format
 msgid ""
 "If you have a LINE Official Account, people can add it as a friend when they "
 "authorize your App. %1$sLearn more%2$s."
 msgstr ""
+"如果您拥有 LINE 官方账号，用户在授权您的应用时可以将其添加为好友。%1$s了解更"
+"多%2$s。"
 
 msgid "Initial Login method"
-msgstr ""
+msgstr "初始登录方式"
 
 msgid "Email and Password"
-msgstr ""
+msgstr "电子邮箱和密码"
 
 msgid "QR code"
-msgstr ""
+msgstr "二维码"
 
 msgid ""
 "The selected value defines whether the Email and Password or the QR code "
 "login option will be presented in the LINE authentication screen by default."
 msgstr ""
+"所选值决定 LINE 身份验证屏幕默认显示电子邮箱和密码登录选项，还是二维码登录选"
+"项。"
 
 msgid "Force initial login method"
-msgstr ""
+msgstr "强制使用初始登录方式"
 
 msgid ""
 "Enable, if you want to offer only the selected Initial Login method in the "
 "LINE authentication screen."
-msgstr ""
+msgstr "如果您希望在 LINE 身份验证屏幕中仅提供所选的初始登录方式，请启用此项。"
 
 msgid "Allow Auto login"
-msgstr ""
+msgstr "允许自动登录"
 
 #, php-format
 msgid ""
 "Having the Auto login enabled could make the login fail in certain cases. "
 "%1$sLearn more%2$s."
-msgstr ""
+msgstr "启用自动登录可能会导致某些情况下登录失败。%1$s了解更多%2$s。"
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Continue with <b>Line</b>"
-msgstr "通过 <b>LinkedIn</b>"
+msgstr "通过 <b>Line</b> 继续"
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Sign up with <b>Line</b>"
-msgstr "通过 <b>LinkedIn</b>"
+msgstr "通过 <b>Line</b> 注册"
 
-#, fuzzy
-#| msgid "Link account with <b>LinkedIn</b>"
 msgid "Link account with <b>Line</b>"
-msgstr "关联 <b>LinkedIn</b> 账号"
+msgstr "关联 <b>Line</b> 账号"
 
-#, fuzzy
-#| msgid "Unlink account from <b>LinkedIn</b>"
 msgid "Unlink account from <b>Line</b>"
-msgstr "从<b> LinkedIn </ b>取消关联帐户"
+msgstr "取消关联 <b>Line</b> 账号"
 
 msgid "Continue with <b>LinkedIn</b>"
 msgstr "通过 <b>LinkedIn</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Sign up with <b>LinkedIn</b>"
-msgstr "通过 <b>LinkedIn</b>"
+msgstr "通过 <b>LinkedIn</b> 注册"
 
 msgid "Link account with <b>LinkedIn</b>"
 msgstr "关联 <b>LinkedIn</b> 账号"
@@ -2091,90 +1942,67 @@ msgid "Unlink account from <b>LinkedIn</b>"
 msgstr "从<b> LinkedIn </ b>取消关联帐户"
 
 msgid "Application (client) ID"
-msgstr ""
+msgstr "应用程序（客户端）ID"
 
-#, fuzzy
-#| msgid "Client Secret"
 msgid "Client secret"
-msgstr "客户端密码"
+msgstr "客户端密钥"
 
 msgid "Audience"
-msgstr ""
+msgstr "受众"
 
 msgid "Multiple Entra ID tenants"
-msgstr ""
+msgstr "多个 Entra ID 租户"
 
 msgid "Any Entra ID Tenant + Personal Microsoft accounts"
-msgstr ""
+msgstr "任何 Entra ID 租户 + 个人 Microsoft 帐户"
 
-#, fuzzy
-#| msgid "Social accounts"
 msgid "Personal accounts only"
-msgstr "社交账号"
+msgstr "仅个人帐户"
 
 msgid "Single tenant only - Default Directory with Azure AD tenant:"
-msgstr ""
+msgstr "仅单一租户 - 使用 Azure AD 租户的 Default Directory："
 
 #, php-format
 msgid ""
 "The selected value will define the supported account types. %1$sLearn more."
 "%2$s"
-msgstr ""
+msgstr "所选值将决定支持的账号类型。%1$s了解更多。%2$s"
 
 msgid "Display authorization and authentication dialog only when necessary"
-msgstr ""
+msgstr "仅在必要时显示授权和身份验证对话框"
 
-#, fuzzy
-#| msgid "Continue with <b>Yahoo</b>"
 msgid "Continue with <b>Microsoft</b>"
-msgstr "通过 <b>Yahoo</b>"
+msgstr "通过 <b>Microsoft</b> 继续"
 
-#, fuzzy
 msgid "Sign up with <b>Microsoft</b>"
-msgstr "通过 <b>Yahoo</b>"
+msgstr "通过 <b>Microsoft</b> 注册"
 
-#, fuzzy
-#| msgid "Link account with <b>Yahoo</b>"
 msgid "Link account with <b>Microsoft</b>"
-msgstr "关联 <b>Yahoo</b> 账号"
+msgstr "关联 <b>Microsoft</b> 账号"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Yahoo</b>"
 msgid "Unlink account from <b>Microsoft</b>"
-msgstr "解除关联 <b>Yahoo</b> 账号"
+msgstr "取消关联 <b>Microsoft</b> 账号"
 
-#, fuzzy
-#| msgid "Continue with <b>Amazon</b>"
 msgid "Continue with <b>Patreon</b>"
-msgstr "通过 <b>Amazon</b>"
+msgstr "通过 <b>Patreon</b> 继续"
 
-#, fuzzy
-#| msgid "Continue with <b>Amazon</b>"
 msgid "Sign up with <b>Patreon</b>"
-msgstr "通过 <b>Amazon</b>"
+msgstr "通过 <b>Patreon</b> 注册"
 
-#, fuzzy
-#| msgid "Link account with <b>Amazon</b>"
 msgid "Link account with <b>Patreon</b>"
-msgstr "关联 <b>Amazon</b> 账号"
+msgstr "关联 <b>Patreon</b> 账号"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Amazon</b>"
 msgid "Unlink account from <b>Patreon</b>"
-msgstr "解除关联 <b>Amazon</b> 账号"
+msgstr "取消关联 <b>Patreon</b> 账号"
 
-#, fuzzy
-#| msgid "App Secret"
 msgid "Secret"
-msgstr "App 密匙"
+msgstr "密钥"
 
 msgid "Continue with <b>PayPal</b>"
 msgstr "通过 <b>PayPal</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>PayPal</b>"
 msgid "Sign up with <b>PayPal</b>"
-msgstr "通过 <b>PayPal</b>"
+msgstr "通过 <b>PayPal</b> 注册"
 
 msgid "Link account with <b>PayPal</b>"
 msgstr "关联 <b>PayPal</b>"
@@ -2182,173 +2010,121 @@ msgstr "关联 <b>PayPal</b>"
 msgid "Unlink account from <b>PayPal</b>"
 msgstr "取消关联 <b>PayPal</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Continue with <b>Reddit</b>"
-msgstr "通过 <b>VK</b>"
+msgstr "通过 <b>Reddit</b> 继续"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Sign up with <b>Reddit</b>"
-msgstr "通过 <b>VK</b>"
+msgstr "通过 <b>Reddit</b> 注册"
 
-#, fuzzy
-#| msgid "Link account with <b>VK</b>"
 msgid "Link account with <b>Reddit</b>"
-msgstr "关联 <b>VK</b>"
+msgstr "关联 <b>Reddit</b> 账号"
 
-#, fuzzy
-#| msgid "Unlink account from <b>VK</b>"
 msgid "Unlink account from <b>Reddit</b>"
-msgstr "取消关联 <b>VK</b>"
+msgstr "取消关联 <b>Reddit</b> 账号"
 
 msgid "Slack Team ID"
-msgstr ""
+msgstr "Slack Team ID"
 
 msgid "Optional"
-msgstr ""
+msgstr "可选"
 
 #, php-format
 msgid ""
 "The Team ID of a workspace to attempt to restrict to. %1$sLearn more.%2$s"
-msgstr ""
+msgstr "要限制登录的工作区的 Team ID。%1$s了解更多。%2$s"
 
 msgid "72x72"
-msgstr ""
+msgstr "72x72"
 
 msgid "192x192"
-msgstr ""
+msgstr "192x192"
 
 msgid "512x512"
-msgstr ""
+msgstr "512x512"
 
 msgid "1024x1024"
-msgstr ""
+msgstr "1024x1024"
 
-#, fuzzy
-#| msgid "Continue with <b>Facebook</b>"
 msgid "Sign in with <b>Slack</b>"
-msgstr "通过 <b>Facebook</b>"
+msgstr "通过 <b>Slack</b> 登录"
 
-#, fuzzy
-#| msgid "Continue with <b>Facebook</b>"
 msgid "Sign up with <b>Slack</b>"
-msgstr "通过 <b>Facebook</b>"
+msgstr "通过 <b>Slack</b> 注册"
 
-#, fuzzy
-#| msgid "Link account with <b>Facebook</b>"
 msgid "Link account with <b>Slack</b>"
-msgstr "关联 <b>Facebook</b> 账号"
+msgstr "关联 <b>Slack</b> 账号"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Facebook</b>"
 msgid "Unlink account from <b>Slack</b>"
-msgstr "解除关联 <b>Facebook</b> 账号"
+msgstr "取消关联 <b>Slack</b> 账号"
 
 msgid "Green"
-msgstr ""
+msgstr "绿色"
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Continue with <b>Spotify</b>"
-msgstr "通过 <b>LinkedIn</b>"
+msgstr "通过 <b>Spotify</b> 继续"
 
-#, fuzzy
-#| msgid "Continue with <b>Facebook</b>"
 msgid "Sign up with <b>Spotify</b>"
-msgstr "通过 <b>Facebook</b>"
+msgstr "通过 <b>Spotify</b> 注册"
 
-#, fuzzy
-#| msgid "Link account with <b>Facebook</b>"
 msgid "Link account with <b>Spotify</b>"
-msgstr "关联 <b>Facebook</b> 账号"
+msgstr "关联 <b>Spotify</b> 账号"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Facebook</b>"
 msgid "Unlink account from <b>Spotify</b>"
-msgstr "解除关联 <b>Facebook</b> 账号"
+msgstr "取消关联 <b>Spotify</b> 账号"
 
 msgid "Web API Key"
-msgstr ""
+msgstr "Web API Key"
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Continue with <b>Steam</b>"
-msgstr "通过 <b>LinkedIn</b>"
+msgstr "通过 <b>Steam</b> 继续"
 
-#, fuzzy
-#| msgid "Continue with <b>Facebook</b>"
 msgid "Sign up with <b>Steam</b>"
-msgstr "通过 <b>Facebook</b>"
+msgstr "通过 <b>Steam</b> 注册"
 
-#, fuzzy
-#| msgid "Link account with <b>Facebook</b>"
 msgid "Link account with <b>Steam</b>"
-msgstr "关联 <b>Facebook</b> 账号"
+msgstr "关联 <b>Steam</b> 账号"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Facebook</b>"
 msgid "Unlink account from <b>Steam</b>"
-msgstr "解除关联 <b>Facebook</b> 账号"
+msgstr "取消关联 <b>Steam</b> 账号"
 
 msgid "Error: The 64-bit SteamID can not be retrieved for this user!"
-msgstr ""
+msgstr "错误：无法获取此用户的 64 位 SteamID！"
 
-#, fuzzy
-#| msgid "Client ID"
 msgid "Client key"
-msgstr "客户端ID"
+msgstr "Client key"
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Continue with <b>TikTok</b>"
-msgstr "通过 <b>LinkedIn</b>"
+msgstr "通过 <b>TikTok</b> 继续"
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Sign up with <b>TikTok</b>"
-msgstr "通过 <b>LinkedIn</b>"
+msgstr "通过 <b>TikTok</b> 注册"
 
-#, fuzzy
-#| msgid "Link account with <b>LinkedIn</b>"
 msgid "Link account with <b>TikTok</b>"
-msgstr "关联 <b>LinkedIn</b> 账号"
+msgstr "关联 <b>TikTok</b> 账号"
 
-#, fuzzy
-#| msgid "Unlink account from <b>LinkedIn</b>"
 msgid "Unlink account from <b>TikTok</b>"
-msgstr "从<b> LinkedIn </ b>取消关联帐户"
+msgstr "取消关联 <b>TikTok</b> 账号"
 
-#, fuzzy
-#| msgid "Continue with <b>Twitter</b>"
 msgid "Continue with <b>Twitch</b>"
-msgstr "保持 <b>Twitter</b>"
+msgstr "通过 <b>Twitch</b> 继续"
 
-#, fuzzy
-#| msgid "Continue with <b>Twitter</b>"
 msgid "Sign up with <b>Twitch</b>"
-msgstr "保持 <b>Twitter</b>"
+msgstr "通过 <b>Twitch</b> 注册"
 
-#, fuzzy
-#| msgid "Link account with <b>Twitter</b>"
 msgid "Link account with <b>Twitch</b>"
-msgstr "关联 <b>Twitter</b> 账号"
+msgstr "关联 <b>Twitch</b> 账号"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Twitter</b>"
 msgid "Unlink account from <b>Twitch</b>"
-msgstr "从 <b>Twitter</b> 取消关联帐户"
+msgstr "取消关联 <b>Twitch</b> 账号"
 
 msgid "Secure key"
-msgstr ""
+msgstr "安全密钥"
 
 msgid "Continue with <b>VK</b>"
 msgstr "通过 <b>VK</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Sign up with <b>VK</b>"
-msgstr "通过 <b>VK</b>"
+msgstr "通过 <b>VK</b> 注册"
 
 msgid "Link account with <b>VK</b>"
 msgstr "关联 <b>VK</b>"
@@ -2364,22 +2140,23 @@ msgid ""
 "resolve the problem, please create a new App based on our %4$s guide, and "
 "replace the credentials on the %5$s tab with your new App credentials."
 msgstr ""
+"%1$s：%2$s 推出了新的应用类型并修改了其端点，这些端点与旧应用不兼容。%3$s我们"
+"检测到您当前正在使用旧的 %2$s 应用，因此不得不禁用您的 %2$s 配置。要解决此问"
+"题，请按照我们的 %4$s 指南创建一个新应用，并在 %5$s 选项卡中将凭据替换为新应"
+"用的凭据。"
 
 msgid "VKontakte"
-msgstr ""
+msgstr "VKontakte"
 
-#, fuzzy, php-format
-#| msgid "Click on the Create button"
+#, php-format
 msgid "Open %1$s - %2$s"
-msgstr "点击创建按钮"
+msgstr "打开 %1$s - %2$s"
 
 msgid "Continue with <b>WordPress.com</b>"
 msgstr "通过 <b>WordPress.com</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>WordPress.com</b>"
 msgid "Sign up with <b>WordPress.com</b>"
-msgstr "通过 <b>WordPress.com</b>"
+msgstr "通过 <b>WordPress.com</b> 注册"
 
 msgid "Link account with <b>WordPress.com</b>"
 msgstr "关联 <b>WordPress.com</b>"
@@ -2390,9 +2167,8 @@ msgstr "取消关联 <b>WordPress.com</b>"
 msgid "Continue with <b>Yahoo</b>"
 msgstr "通过 <b>Yahoo</b>"
 
-#, fuzzy
 msgid "Sign up with <b>Yahoo</b>"
-msgstr "通过 <b>Yahoo</b>"
+msgstr "通过 <b>Yahoo</b> 注册"
 
 msgid "Link account with <b>Yahoo</b>"
 msgstr "关联 <b>Yahoo</b> 账号"
@@ -2400,10 +2176,9 @@ msgstr "关联 <b>Yahoo</b> 账号"
 msgid "Unlink account from <b>Yahoo</b>"
 msgstr "解除关联 <b>Yahoo</b> 账号"
 
-#, fuzzy, php-format
-#| msgid "Required"
+#, php-format
 msgid "Required permission: %1$s"
-msgstr "请求"
+msgstr "所需权限：%1$s"
 
 msgid "OR"
 msgstr "或"
@@ -2415,22 +2190,32 @@ msgid "Registration confirmation will be emailed to you."
 msgstr "注册确认将通过电子邮件发送给您。"
 
 msgid "Password"
-msgstr ""
+msgstr "密码"
 
 msgid "Hide password"
-msgstr ""
+msgstr "隐藏密码"
 
 msgid "Strength indicator"
-msgstr ""
+msgstr "强度评估"
 
 msgid "Confirm use of weak password"
-msgstr ""
+msgstr "确认使用弱密码"
 
 msgid "Confirm password"
-msgstr ""
+msgstr "确认密码"
 
 msgid "Username"
 msgstr "用户名"
+
+#~ msgid ""
+#~ "Shows Google's One Tap prompt, so visitors can sign in with their Google "
+#~ "account without leaving the page. Depending on the browser, Google shows "
+#~ "it to every visitor, or only to those who are signed in to Google. One "
+#~ "Tap works alongside the Google button, it does not replace it."
+#~ msgstr ""
+#~ "显示 Google 的 One Tap 提示，访问者无需离开当前页面即可使用其 Google 账号"
+#~ "登录。根据浏览器的不同，Google 会向所有访问者显示该提示，或仅向已登录 "
+#~ "Google 的访问者显示。One Tap 与 Google 按钮配合使用，并不会取代它。"
 
 #, fuzzy, php-format
 #~| msgid "Navigate to %s"

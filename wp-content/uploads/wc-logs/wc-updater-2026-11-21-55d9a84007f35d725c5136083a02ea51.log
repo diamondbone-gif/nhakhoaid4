@@ -1,0 +1,5 @@
+2026-11-21T02:09:00+00:00 INFO Automatic database update triggered.
+2026-11-21T02:09:00+00:00 INFO Scheduling database updates (from 11.3.0-1)...
+2026-11-21T02:09:00+00:00 INFO   [11.3.1] Scheduled 'wc_update_1131_redact_deferred_customer_passwords'.
+2026-11-21T02:09:00+00:00 INFO   [11.3.1] Scheduled 'wc_update_1131_invalidate_postcode_match_caches'.
+2026-11-21T02:09:00+00:00 INFO Database updates scheduled.

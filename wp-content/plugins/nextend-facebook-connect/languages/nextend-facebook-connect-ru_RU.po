@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: nextend-facebook-connect\n"
-"POT-Creation-Date: 2026-07-28 09:20+0200\n"
-"PO-Revision-Date: 2026-07-28 09:20+0200\n"
+"POT-Creation-Date: 2026-11-12 15:21+0100\n"
+"PO-Revision-Date: 2026-11-12 15:21+0100\n"
 "Last-Translator: \n"
 "Language-Team: nextend-facebook-connect\n"
 "Language: ru\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: "
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-1: nextend-facebook-connect\n"
 
 msgid "What personal data we collect and why we collect it"
-msgstr ""
+msgstr "Какие персональные данные мы собираем и зачем"
 
 #, php-format
 msgid ""
@@ -30,9 +30,14 @@ msgid ""
 "can collect profile picture and more fields with the Pro Addon's sync data "
 "feature."
 msgstr ""
+"%1$s собирает данные, когда посетитель регистрируется, входит или "
+"привязывает свой аккаунт через любого из включенных социальных провайдеров. "
+"Собираются следующие данные: адрес email, имя, идентификатор у социального "
+"провайдера и токен доступа. Кроме того, с помощью функции синхронизации "
+"данных Pro Addon можно собирать фото профиля и другие поля."
 
 msgid "Who we share your data with"
-msgstr ""
+msgstr "С кем мы делимся вашими данными"
 
 #, php-format
 msgid ""
@@ -40,36 +45,47 @@ msgid ""
 "except the access token which used for the authenticated communication with "
 "the social providers."
 msgstr ""
+"%1$s хранит персональные данные на вашем сайте и ни с кем ими не делится, за "
+"исключением токена доступа, который используется для защищенного обмена "
+"данными с социальными провайдерами."
 
 msgid "Does the plugin share personal data with third parties"
-msgstr ""
+msgstr "Передает ли плагин персональные данные третьим лицам"
 
 #, php-format
 msgid ""
 "%1$s use the access token what the social provider gave to communicate with "
 "the providers to verify account and securely access personal data."
 msgstr ""
+"%1$s использует токен доступа, выданный социальным провайдером, для связи с "
+"провайдерами, чтобы проверить аккаунт и безопасно получить доступ к "
+"персональным данным."
 
 msgid "How long we retain your data"
-msgstr ""
+msgstr "Как долго мы храним ваши данные"
 
 #, php-format
 msgid ""
 "%1$s removes the collected personal data when the user deleted from "
 "WordPress."
 msgstr ""
+"%1$s удаляет собранные персональные данные при удалении пользователя из "
+"WordPress."
 
 msgid "Does the plugin use personal data collected by others?"
-msgstr ""
+msgstr "Использует ли плагин персональные данные, собранные другими?"
 
 #, php-format
 msgid ""
 "%1$s use the personal data collected by the social providers to create "
 "account on your site when the visitor authorize it."
 msgstr ""
+"%1$s использует персональные данные, собранные социальными провайдерами, "
+"чтобы создать аккаунт на вашем сайте, когда посетитель дает на это "
+"разрешение."
 
 msgid "Does the plugin store things in the browser?"
-msgstr ""
+msgstr "Сохраняет ли плагин что-либо в браузере?"
 
 #, php-format
 msgid ""
@@ -77,76 +93,85 @@ msgid ""
 "authorization flow. This cookie required for every provider to secure the "
 "communication and to redirect the user back to the last location."
 msgstr ""
+"Да, %1$s должен создать cookie для посетителей, которые проходят авторизацию "
+"через социальный вход. Этот cookie нужен для каждого провайдера, чтобы "
+"защитить обмен данными и вернуть пользователя на страницу, где он был."
 
 msgid "Does the plugin collect telemetry data, directly or indirectly?"
-msgstr ""
+msgstr "Собирает ли плагин телеметрию, прямо или косвенно?"
 
 msgid "No"
-msgstr ""
+msgstr "Нет"
 
 msgid ""
 "Does the plugin enqueue JavaScript, tracking pixels or embed iframes from a "
 "third party?"
 msgstr ""
+"Подключает ли плагин JavaScript, пиксели отслеживания или встраивает iframe "
+"сторонних сервисов?"
 
 msgid "User"
-msgstr ""
+msgstr "Пользователь"
 
 msgid "This provider doesn't support REST API calls!"
-msgstr ""
+msgstr "Этот провайдер не поддерживает вызовы REST API!"
 
 #, php-format
 msgid "%s needs json_decode function."
-msgstr ""
+msgstr "Для %s требуется функция json_decode."
 
 msgid "Please contact your server administrator and ask for solution!"
-msgstr ""
+msgstr "Обратитесь к администратору сервера и попросите решить проблему!"
 
 msgid "Settings saved."
-msgstr ""
+msgstr "Настройки сохранены."
 
 msgid "The activation was successful"
-msgstr ""
+msgstr "Активация прошла успешно"
 
 msgid "Deactivate completed."
-msgstr ""
+msgstr "Деактивация выполнена."
 
 msgid "(no title)"
-msgstr ""
+msgstr "(без названия)"
 
 msgid "Settings"
-msgstr ""
+msgstr "Настройки"
 
 msgid "Analyze & Repair"
-msgstr ""
+msgstr "Проверить и исправить"
 
 #, php-format
 msgid "Unexpected response: %s"
-msgstr ""
+msgstr "Неожиданный ответ: %s"
 
 #, php-format
 msgid ""
 "%s detected that your login url changed. You must update the Oauth redirect "
 "URIs in the related social applications."
 msgstr ""
+"%s обнаружил, что URL страницы входа изменился. Необходимо обновить OAuth "
+"redirect URI в соответствующих приложениях социальных сетей."
 
 msgid "Fix Error"
-msgstr ""
+msgstr "Исправить ошибку"
 
 msgid "Oauth Redirect URI"
-msgstr ""
+msgstr "OAuth redirect URI"
 
 #, php-format
 msgid ""
 "%1$s detected that %2$s installed on your site. You need the Pro Addon to "
 "display Social Login buttons in %2$s login form!"
 msgstr ""
+"%1$s обнаружил, что на вашем сайте установлен %2$s. Чтобы показывать кнопки "
+"Social Login в форме входа %2$s, нужен Pro Addon!"
 
 msgid "Dismiss and check Pro Addon"
-msgstr ""
+msgstr "Скрыть и посмотреть Pro Addon"
 
 msgid "Dismiss"
-msgstr ""
+msgstr "Скрыть"
 
 #, php-format
 msgid ""
@@ -154,79 +179,85 @@ msgid ""
 "register flow</b>\" and \"<b>OAuth redirect uri proxy page</b>\" in %1$s to "
 "work properly."
 msgstr ""
+"%1$s обнаружил, что на вашем сайте установлен %2$s. Для корректной работы "
+"необходимо указать «<b>Страница процесса регистрации</b>» и «<b>Прокси-"
+"страница OAuth redirect uri</b>» в %1$s."
 
 msgid "Fix now"
-msgstr ""
+msgstr "Исправить сейчас"
 
 msgid "Activate your Pro Addon"
-msgstr ""
+msgstr "Активируйте Pro Addon"
 
 msgid ""
 "To be able to use the Pro features, you need to activate Nextend Social "
 "Login Pro Addon. You can do this by clicking on the Activate button below "
 "then select the related purchase."
 msgstr ""
+"Чтобы пользоваться функциями Pro, необходимо активировать Nextend Social "
+"Login Pro Addon. Для этого нажмите кнопку «Активировать» ниже и выберите "
+"соответствующую покупку."
 
 msgid "Activate"
-msgstr ""
+msgstr "Активировать"
 
 msgid "License key"
-msgstr ""
+msgstr "Лицензионный ключ"
 
 msgid "OAuth proxy page"
-msgstr ""
+msgstr "Прокси-страница OAuth"
 
 msgid "Register flow page"
-msgstr ""
+msgstr "Страница процесса регистрации"
 
 msgid "You have logged in successfully."
-msgstr ""
+msgstr "Вы успешно вошли."
 
 msgid "Login label"
-msgstr ""
+msgstr "Надпись для входа"
 
 msgid "Reset to default"
-msgstr ""
+msgstr "Сбросить по умолчанию"
 
 msgid "Register label"
-msgstr ""
+msgstr "Надпись для регистрации"
 
 msgid "Link label"
-msgstr ""
+msgstr "Надпись для привязки"
 
 msgid "Unlink label"
-msgstr ""
+msgstr "Надпись для отвязки"
 
 msgid "Default button"
-msgstr ""
+msgstr "Кнопка по умолчанию"
 
 msgid "Use custom button"
-msgstr ""
+msgstr "Использовать свою кнопку"
 
 #, php-format
 msgid "Use the %s in your custom button's code to make the label show up."
-msgstr ""
+msgstr "Используйте %s в коде своей кнопки, чтобы отобразить надпись."
 
 msgid "Icon button"
-msgstr ""
+msgstr "Кнопка-иконка"
 
 msgid "Save Changes"
-msgstr ""
+msgstr "Сохранить изменения"
 
 #, php-format
 msgid "Follow the guide at: %s"
-msgstr ""
+msgstr "Следуйте инструкции: %s"
 
 #, php-format
 msgid "I am done setting up my %s"
-msgstr ""
+msgstr "Настройка %s завершена"
 
 msgctxt "Social Login App"
 msgid "App"
-msgstr ""
+msgstr "Приложение"
 
 msgid "Getting Started"
-msgstr ""
+msgstr "Начало работы"
 
 #, php-format
 msgid ""
@@ -236,276 +267,296 @@ msgid ""
 "\"Settings\" and configure the fields with the credentials of the App you "
 "created."
 msgstr ""
+"Чтобы посетители могли входить через свой аккаунт %1$s, сначала необходимо "
+"создать приложение (App) для %1$s. Следующая инструкция поможет вам пройти "
+"процесс создания приложения %1$s. После создания приложения %1$s перейдите "
+"на вкладку «Настройки» и заполните поля учетными данными созданного "
+"приложения."
 
 #, php-format
 msgid "How to create an App for %s: "
-msgstr ""
+msgstr "Как создать приложение для %s: "
 
 msgid "URLs for the App creation:"
-msgstr ""
+msgstr "URL-адреса для создания приложения:"
 
 msgid "Buttons"
-msgstr ""
+msgstr "Кнопки"
 
 msgid "Sync data"
-msgstr ""
+msgstr "Синхронизация данных"
 
 msgid "Usage"
-msgstr ""
+msgstr "Использование"
 
 msgid "Other settings"
-msgstr ""
+msgstr "Другие настройки"
 
 msgid "Username prefix on register"
-msgstr ""
+msgstr "Префикс имени пользователя при регистрации"
 
 msgid "Fallback username prefix on register"
-msgstr ""
+msgstr "Запасной префикс имени пользователя при регистрации"
 
 msgid "Used when username is invalid or not stored"
-msgstr ""
+msgstr "Используется, если имя пользователя недопустимо или не сохранено"
 
 msgid "Terms and conditions"
-msgstr ""
+msgstr "Условия использования"
 
 #, php-format
 msgid "Override global \"%1$s\""
-msgstr ""
+msgstr "Переопределить глобальную настройку «%1$s»"
 
 msgid "PRO settings"
-msgstr ""
+msgstr "Настройки PRO"
 
 msgid "Ask E-mail on registration"
-msgstr ""
+msgstr "Запрашивать email при регистрации"
 
 msgid "Never"
-msgstr ""
+msgstr "Никогда"
 
 msgid "When email is not provided or empty"
-msgstr ""
+msgstr "Если email не передан или пуст"
 
 msgid "Always"
-msgstr ""
+msgstr "Всегда"
 
 msgid "Ask Username on registration"
-msgstr ""
+msgstr "Запрашивать имя пользователя при регистрации"
 
 msgid "Never, generate automatically"
-msgstr ""
+msgstr "Никогда, создавать автоматически"
 
 msgid "When username is empty or invalid"
-msgstr ""
+msgstr "Если имя пользователя пустое или недопустимое"
 
 msgid "Ask Password on registration"
-msgstr ""
+msgstr "Запрашивать пароль при регистрации"
 
 msgid "Automatically connect the existing account upon registration"
-msgstr ""
+msgstr "Автоматически привязывать существующий аккаунт при регистрации"
 
 msgid "Disabled"
-msgstr ""
+msgstr "Отключено"
 
 msgid "Automatic, based on email address"
-msgstr ""
+msgstr "Автоматически, по адресу email"
 
 msgid "Disable login for the selected roles"
-msgstr ""
+msgstr "Отключить вход для выбранных ролей"
 
 msgid "Default roles for user who registered with this provider"
 msgstr ""
+"Роли по умолчанию для пользователей, зарегистрировавшихся через этого "
+"провайдера"
 
 #, php-format
 msgid "Default (The %1$s is: %2$s)"
-msgstr ""
+msgstr "По умолчанию (%1$s: %2$s)"
 
 msgid "default WordPress role"
-msgstr ""
+msgstr "роль WordPress по умолчанию"
 
 #, php-format
 msgid "Default (The %s.)"
-msgstr ""
+msgstr "По умолчанию (%s.)"
 
 msgid "Register"
-msgstr ""
+msgstr "Регистрация"
 
 msgid "Login"
-msgstr ""
+msgstr "Вход"
 
 msgid "Link"
-msgstr ""
+msgstr "Привязка"
 
 msgid "Store in meta key"
-msgstr ""
+msgstr "Сохранять в мета-ключ"
 
 msgid "Shortcode"
-msgstr ""
+msgstr "Шорткод"
 
 msgid "Important!"
-msgstr ""
+msgstr "Важно!"
 
 msgid "The shortcodes are only rendered for users who haven't logged in yet!"
-msgstr ""
+msgstr "Шорткоды отображаются только для пользователей, которые еще не вошли!"
 
 msgid "See the full list of shortcode parameters."
-msgstr ""
+msgstr "Посмотреть полный список параметров шорткода."
 
 msgid "Simple link"
-msgstr ""
+msgstr "Простая ссылка"
 
 msgid "Click here to login or register"
-msgstr ""
+msgstr "Нажмите здесь, чтобы войти или зарегистрироваться"
 
 msgid "Image button"
-msgstr ""
+msgstr "Кнопка-изображение"
 
 msgid "Image url"
-msgstr ""
+msgstr "URL изображения"
 
 msgid "Debug"
-msgstr ""
+msgstr "Отладка"
 
 msgid "Test network connection with providers"
-msgstr ""
+msgstr "Проверить сетевое соединение с провайдерами"
 
 msgid "You don't have cURL support, please enable it in php.ini!"
-msgstr ""
+msgstr "У вас нет поддержки cURL, включите ее в php.ini!"
 
 #, php-format
 msgid "Test %1$s connection"
-msgstr ""
+msgstr "Проверить соединение с %1$s"
 
 msgid "Fix Oauth Redirect URIs"
-msgstr ""
+msgstr "Исправить OAuth redirect URI"
 
 msgid "Every Oauth Redirect URI seems fine"
-msgstr ""
+msgstr "Все OAuth redirect URI в порядке"
 
 msgid "Got it"
-msgstr ""
+msgstr "Понятно"
 
 msgid "Global Settings"
-msgstr ""
+msgstr "Глобальные настройки"
 
 msgid "General"
-msgstr ""
+msgstr "Общие"
 
 msgid "Privacy"
-msgstr ""
+msgstr "Конфиденциальность"
 
 msgid "Login Form"
-msgstr ""
+msgstr "Форма входа"
 
 msgid "Comment"
-msgstr ""
+msgstr "Комментарии"
 
 msgid "Custom Actions"
-msgstr ""
+msgstr "Пользовательские действия"
 
 msgid "Docs"
-msgstr ""
+msgstr "Документация"
 
 msgid "Support"
-msgstr ""
+msgstr "Поддержка"
 
 msgid "Pro Addon"
-msgstr ""
+msgstr "Pro Addon"
 
 msgid "Providers"
-msgstr ""
+msgstr "Провайдеры"
 
 msgid "Error"
-msgstr ""
+msgstr "Ошибка"
 
 msgid ""
 "You don’t have sufficient permissions to install and activate plugins. "
 "Please contact your site’s administrator!"
 msgstr ""
+"У вас недостаточно прав для установки и активации плагинов. Обратитесь к "
+"администратору сайта!"
 
 msgid "Activate Pro Addon"
-msgstr ""
+msgstr "Активировать Pro Addon"
 
 msgid ""
 "Pro Addon is installed but not activated. To be able to use the Pro "
 "features, you need to activate it."
 msgstr ""
+"Pro Addon установлен, но не активирован. Чтобы пользоваться функциями Pro, "
+"его необходимо активировать."
 
 msgid "Deactivate Pro Addon"
-msgstr ""
+msgstr "Деактивировать Pro Addon"
 
 msgid "Pro Addon is not installed"
-msgstr ""
+msgstr "Pro Addon не установлен"
 
 msgid ""
 "To access the Pro features, you need to install and activate the Pro Addon."
 msgstr ""
+"Чтобы получить доступ к функциям Pro, установите и активируйте Pro Addon."
 
 #, php-format
 msgid "Install %s now"
-msgstr ""
+msgstr "Установить %s сейчас"
 
 msgid "Install Pro Addon"
-msgstr ""
+msgstr "Установить Pro Addon"
 
 msgid "Activating..."
-msgstr ""
+msgstr "Активация..."
 
 msgid "Not compatible!"
-msgstr ""
+msgstr "Несовместимо!"
 
 #, php-format
 msgid ""
 "%1$s and %2$s are not compatible. Please update %1$s to version %3$s or "
 "newer."
-msgstr ""
+msgstr "%1$s и %2$s несовместимы. Обновите %1$s до версии %3$s или новее."
 
 #, php-format
 msgid "Update %s"
-msgstr ""
+msgstr "Обновить %s"
 
 #, php-format
 msgid ""
 "%1$s and %2$s are not compatible. Please update %2$s to version %3$s or "
 "newer."
-msgstr ""
+msgstr "%1$s и %2$s несовместимы. Обновите %2$s до версии %3$s или новее."
 
 msgid "Update Pro Addon"
-msgstr ""
+msgstr "Обновить Pro Addon"
 
 msgid "Pro Addon is installed and activated"
-msgstr ""
+msgstr "Pro Addon установлен и активирован"
 
 msgid ""
 "You installed and activated the Pro Addon. If you don’t want to use it "
 "anymore, you can deactivate using the button below."
 msgstr ""
+"Вы установили и активировали Pro Addon. Если он вам больше не нужен, его "
+"можно деактивировать с помощью кнопки ниже."
 
 msgid "Get Pro Addon to unlock more features"
-msgstr ""
+msgstr "Получите Pro Addon, чтобы открыть больше возможностей"
 
 #, php-format
 msgid ""
 "The features below are available in %s Pro Addon. Get it today and tweak the "
 "awesome settings."
 msgstr ""
+"Функции ниже доступны в %s Pro Addon. Приобретите его сегодня и настройте "
+"все так, как вам нужно."
 
 msgid ""
 "If you already have a license, you can Authorize your Pro Addon. Otherwise "
 "you can purchase it using the button below."
 msgstr ""
+"Если у вас уже есть лицензия, вы можете авторизовать Pro Addon. В противном "
+"случае приобретите его с помощью кнопки ниже."
 
 msgid "Buy Pro Addon"
-msgstr ""
+msgstr "Купить Pro Addon"
 
 msgid "Authorize Pro Addon"
-msgstr ""
+msgstr "Авторизовать Pro Addon"
 
 msgid "Pro Addon is not activated"
-msgstr ""
+msgstr "Pro Addon не активирован"
 
 msgid ""
 "To be able to use the Pro features, you need to install and activate the "
 "Nextend Social Login Pro Addon."
 msgstr ""
+"Чтобы пользоваться функциями Pro, необходимо установить и активировать "
+"Nextend Social Login Pro Addon."
 
 #, php-format
 msgid ""
@@ -513,358 +564,378 @@ msgid ""
 "enabled. To display any social buttons, please make sure you have at least "
 "one provider enabled!"
 msgstr ""
+"%1$s обнаружил, что у вас есть настроенные провайдеры, но ни один из них не "
+"включен. Чтобы отображались кнопки социальных сетей, включите хотя бы одного "
+"провайдера!"
 
 msgid "Not Available"
-msgstr ""
+msgstr "Недоступно"
 
 msgid "Not Configured"
-msgstr ""
+msgstr "Не настроено"
 
 msgid "Not Verified"
-msgstr ""
+msgstr "Не проверено"
 
 msgid "Enabled"
-msgstr ""
+msgstr "Включено"
 
 msgid "Upgrade Now"
-msgstr ""
+msgstr "Обновить сейчас"
 
 msgid "Verify Settings"
-msgstr ""
+msgstr "Проверить настройки"
 
 msgid "Enable"
-msgstr ""
+msgstr "Включить"
 
 msgid "Disable"
-msgstr ""
+msgstr "Отключить"
 
 msgid "Stay Updated"
-msgstr ""
+msgstr "Будьте в курсе"
 
 msgid ""
 "Receive info on the latest plugin updates and social provider related "
 "changes."
 msgstr ""
+"Получайте информацию о последних обновлениях плагина и изменениях у "
+"социальных провайдеров."
 
 msgid "Enter your email address"
-msgstr ""
+msgstr "Введите ваш адрес email"
 
 msgid "Subscribe"
-msgstr ""
+msgstr "Подписаться"
 
 msgid "Saving..."
-msgstr ""
+msgstr "Сохранение..."
 
 msgid "Saving failed"
-msgstr ""
+msgstr "Не удалось сохранить"
 
 msgid "Order Saved"
-msgstr ""
+msgstr "Порядок сохранен"
 
 msgid "Successfully subscribed!"
-msgstr ""
+msgstr "Вы успешно подписались!"
 
 msgid ""
 "We'll be bringing you all the latest news and updates about Social Login - "
 "right to your inbox."
 msgstr ""
+"Мы будем присылать вам все последние новости и обновления о Social Login "
+"прямо на вашу почту."
 
 msgid "The entered email address is invalid!"
-msgstr ""
+msgstr "Введен недопустимый адрес email!"
 
 msgid "Rate your experience!"
-msgstr ""
+msgstr "Оцените свои впечатления!"
 
 msgid "Hated it"
-msgstr ""
+msgstr "Ужасно"
 
 msgid "Disliked it"
-msgstr ""
+msgstr "Не понравилось"
 
 msgid "It was ok"
-msgstr ""
+msgstr "Нормально"
 
 msgid "Liked it"
-msgstr ""
+msgstr "Понравилось"
 
 msgid "Loved it"
-msgstr ""
+msgstr "Очень понравилось"
 
 msgid "Rate 1 star"
-msgstr ""
+msgstr "Оценить на 1 звезду"
 
 msgid "Rate 2 stars"
-msgstr ""
+msgstr "Оценить на 2 звезды"
 
 msgid "Rate 3 stars"
-msgstr ""
+msgstr "Оценить на 3 звезды"
 
 msgid "Rate 4 stars"
-msgstr ""
+msgstr "Оценить на 4 звезды"
 
 msgid "Rate 5 stars"
-msgstr ""
+msgstr "Оценить на 5 звезд"
 
 msgid "Please Leave a Review"
-msgstr ""
+msgstr "Пожалуйста, оставьте отзыв"
 
 msgid ""
 "If you are happy with <b>Nextend Social Login</b> and can take a minute "
 "please leave us a review. It will be a tremendous help for us!"
 msgstr ""
+"Если вам нравится <b>Nextend Social Login</b> и у вас есть минутка, оставьте "
+"нам отзыв. Это очень нам поможет!"
 
 msgid "Ok, you deserve it"
-msgstr ""
+msgstr "Хорошо, вы это заслужили"
 
 msgid "Close review box"
-msgstr ""
+msgstr "Закрыть окно с просьбой об отзыве"
 
 msgid "Register form"
-msgstr ""
+msgstr "Форма регистрации"
 
 msgid "No Connect button"
-msgstr ""
+msgstr "Без кнопки подключения"
 
 msgid "Connect button before register"
-msgstr ""
+msgstr "Кнопка подключения перед регистрацией"
 
 msgid "Action:"
-msgstr ""
+msgstr "Действие:"
 
 msgid "Connect button before account details"
-msgstr ""
+msgstr "Кнопка подключения перед данными аккаунта"
 
 msgid "Connect button after register"
-msgstr ""
+msgstr "Кнопка подключения после регистрации"
 
 msgid "Register button style"
-msgstr ""
+msgstr "Стиль кнопок в форме регистрации"
 
 msgid "Default"
-msgstr ""
+msgstr "По умолчанию"
 
 msgid "Fullwidth"
-msgstr ""
+msgstr "На всю ширину"
 
 msgid "Icon"
-msgstr ""
+msgstr "Иконка"
 
 msgid "Register layout"
-msgstr ""
+msgstr "Расположение в форме регистрации"
 
 msgid "Below"
-msgstr ""
+msgstr "Ниже"
 
 msgid "Below with separator"
-msgstr ""
+msgstr "Ниже с разделителем"
 
 msgid "Above"
-msgstr ""
+msgstr "Выше"
 
 msgid "Above with separator"
-msgstr ""
+msgstr "Выше с разделителем"
 
 msgid "Sidebar Login form"
-msgstr ""
+msgstr "Форма входа в боковой панели"
 
 msgid "Hide login buttons"
-msgstr ""
+msgstr "Скрыть кнопки входа"
 
 msgid "Show login buttons"
-msgstr ""
+msgstr "Показать кнопки входа"
 
 msgid ""
 "Some themes that use BuddyPress, display the social buttons twice in the "
 "same login form. This option can disable the one for: "
 "<b>bp_sidebar_login_form action</b>.  "
 msgstr ""
+"Некоторые темы, использующие BuddyPress, отображают кнопки социальных сетей "
+"дважды в одной и той же форме входа. Эта опция позволяет отключить кнопки "
+"для: <b>bp_sidebar_login_form action</b>.  "
 
 msgid "Login form"
-msgstr ""
+msgstr "Форма входа"
 
 msgid "Login button style"
-msgstr ""
+msgstr "Стиль кнопок входа"
 
 msgid "Login layout"
-msgstr ""
+msgstr "Расположение в форме входа"
 
-#, fuzzy
-#| msgid "Social accounts"
 msgid "Social accounts tab"
-msgstr "Социальная сеть"
+msgstr "Вкладка социальных аккаунтов"
 
 msgid "Hide"
-msgstr ""
+msgstr "Скрыть"
 
 msgid "Show"
-msgstr ""
+msgstr "Показать"
 
 #, php-format
 msgid ""
 "Creates a new tab called %s, where the Link and Unlink buttons will be "
 "displayed."
 msgstr ""
+"Создает новую вкладку %s, в которой будут отображаться кнопки привязки и "
+"отвязки."
 
 msgid "Social Accounts"
-msgstr ""
+msgstr "Социальные аккаунты"
 
 msgid "Button alignment"
-msgstr ""
+msgstr "Выравнивание кнопок"
 
 msgid "Left"
-msgstr ""
+msgstr "Слева"
 
 msgid "Center"
-msgstr ""
+msgstr "По центру"
 
 msgid "Right"
-msgstr ""
+msgstr "Справа"
 
 msgid "Email template for registration"
-msgstr ""
+msgstr "Шаблон письма при регистрации"
 
 msgid "WordPress default notification"
-msgstr ""
+msgstr "Стандартное уведомление WordPress"
 
 msgid "BuddyPress welcome notification"
-msgstr ""
+msgstr "Приветственное уведомление BuddyPress"
 
 #, php-format
 msgid ""
 "Defines whether the registration with %1$s will send the same welcome "
 "notification that %2$s does, instead of the %3$s default one."
 msgstr ""
+"Определяет, будет ли при регистрации через %1$s отправляться то же "
+"приветственное уведомление, что и в %2$s, вместо стандартного уведомления "
+"%3$s."
 
 msgid "Login button"
-msgstr ""
+msgstr "Кнопка входа"
 
 #, php-format
 msgid "You need to turn on the ' %1$s > %2$s > %3$s ' for this feature to work"
-msgstr ""
+msgstr "Чтобы эта функция работала, необходимо включить ' %1$s > %2$s > %3$s '"
 
 msgid "Discussion"
-msgstr ""
+msgstr "Обсуждение"
 
 msgid "Users must be registered and logged in to comment"
 msgstr ""
+"Пользователи должны быть зарегистрированы и авторизованы для комментирования"
 
 msgid "Button style"
-msgstr ""
+msgstr "Стиль кнопок"
 
 #, php-format
 msgid "%1$s Add your custom actions here. One action per line."
 msgstr ""
+"%1$s Добавьте сюда свои пользовательские действия (actions). По одному "
+"действию на строку."
 
 msgid "Usage:"
-msgstr ""
+msgstr "Использование:"
 
 #, php-format
 msgid ""
 "%1$s The HTML of the social buttons will be added at the place where the "
 "action is fired."
 msgstr ""
+"%1$s HTML кнопок социальных сетей будет добавлен в том месте, где "
+"срабатывает действие."
 
 msgid "Important:"
-msgstr ""
+msgstr "Важно:"
 
 #, php-format
 msgid ""
 "If you %1$sexperience problems%2$s because of this feature, you can disable "
 "it by defining the %3$s constant."
 msgstr ""
+"Если из-за этой функции у вас %1$sвозникнут проблемы%2$s, ее можно "
+"отключить, определив константу %3$s."
 
 msgid "Button layout"
-msgstr ""
+msgstr "Расположение кнопок"
 
 msgid "Default with top separator"
-msgstr ""
+msgstr "По умолчанию с разделителем сверху"
 
 msgid "Default with bottom separator"
-msgstr ""
+msgstr "По умолчанию с разделителем снизу"
 
 msgid "Link/Unlink"
-msgstr ""
+msgstr "Привязка/отвязка"
 
 msgid "No Connect button in Login form"
-msgstr ""
+msgstr "Без кнопки подключения в форме входа"
 
 msgid "Connect button on"
-msgstr ""
+msgstr "Кнопка подключения в"
 
 msgid "Login form button style"
-msgstr ""
+msgstr "Стиль кнопок в форме входа"
 
 msgid "No Connect button in Register form"
-msgstr ""
+msgstr "Без кнопки подключения в форме регистрации"
 
 msgid "Register form button style"
-msgstr ""
+msgstr "Стиль кнопок в форме регистрации"
 
 msgid "Checkout form"
-msgstr ""
+msgstr "Форма оформления заказа"
 
 msgid "No Connect button in Checkout form"
-msgstr ""
+msgstr "Без кнопки подключения в форме оформления заказа"
 
 msgid "Checkout form button style"
-msgstr ""
+msgstr "Стиль кнопок в форме оформления заказа"
 
 msgid "Checkout layout"
-msgstr ""
+msgstr "Расположение в форме оформления заказа"
 
 msgid "Target window"
-msgstr ""
+msgstr "Целевое окно"
 
 msgid "Prefer popup"
-msgstr ""
+msgstr "Предпочтительно всплывающее окно"
 
 msgid "Prefer new tab"
-msgstr ""
+msgstr "Предпочтительно новая вкладка"
 
 msgid "Prefer same window"
-msgstr ""
+msgstr "Предпочтительно то же окно"
 
 msgid "Registration notification sent to"
-msgstr ""
+msgstr "Уведомление о регистрации отправляется"
 
 msgid "WordPress default"
-msgstr ""
+msgstr "По умолчанию WordPress"
 
 msgid "Nobody"
-msgstr ""
+msgstr "Никому"
 
 msgid "Admin"
-msgstr ""
+msgstr "Администратору"
 
 msgid "User and Admin"
-msgstr ""
+msgstr "Пользователю и администратору"
 
 msgid "Unlink"
-msgstr ""
+msgstr "Отвязать"
 
-#, fuzzy
-#| msgid "Social accounts"
 msgid "Allow Social account unlink"
-msgstr "Социальная сеть"
+msgstr "Разрешить отвязку социальных аккаунтов"
 
 msgid "Show linked providers"
-msgstr ""
+msgstr "Показывать привязанных провайдеров"
 
 #, php-format
 msgid "Providers linked to the account will appear in the %1$s."
-msgstr ""
+msgstr "Провайдеры, привязанные к аккаунту, будут отображаться в %1$s."
 
 msgid "Users table"
-msgstr ""
+msgstr "Таблица пользователей"
 
 msgid "Disable Admin bar for roles"
-msgstr ""
+msgstr "Отключить панель администратора для ролей"
 
 msgid "Debug mode"
-msgstr ""
+msgstr "Режим отладки"
 
 msgid "Bypass cache on redirect"
-msgstr ""
+msgstr "Обходить кеш при перенаправлении"
 
 #, php-format
 msgid ""
@@ -872,95 +943,111 @@ msgid ""
 "after a successful registration or login with social login. %1$sLearn "
 "more%2$s."
 msgstr ""
+"При включении этой опции к URL, на который выполняется перенаправление после "
+"успешной регистрации или входа через социальную сеть, будет добавлен GET-"
+"параметр. %1$sПодробнее%2$s."
 
 msgid "Page for register flow"
-msgstr ""
+msgstr "Страница процесса регистрации"
 
 msgid "None"
-msgstr ""
+msgstr "Нет"
 
 msgid "Clear - Page for register flow"
-msgstr ""
+msgstr "Очистить - Страница процесса регистрации"
 
 msgid ""
 "This setting is used when you request additional data from the users (such "
 "as email address) and to display the Terms and conditions."
 msgstr ""
+"Эта настройка используется, когда вы запрашиваете у пользователей "
+"дополнительные данные (например, адрес email), а также для отображения "
+"условий использования."
 
 #, php-format
 msgid ""
 "%2$s First create a new page and insert the following shortcode: %1$s then "
 "select this page above"
 msgstr ""
+"%2$s Сначала создайте новую страницу и вставьте в нее следующий шорткод: "
+"%1$s, затем выберите эту страницу выше"
 
 #, php-format
 msgid ""
 "%1$s You won't be able to reach the selected page unless a social login/"
 "registration happens."
 msgstr ""
+"%1$s Выбранная страница будет доступна только в процессе входа или "
+"регистрации через социальную сеть."
 
 msgid "OAuth redirect uri proxy page"
-msgstr ""
+msgstr "Прокси-страница OAuth redirect uri"
 
 msgid "Clear - OAuth redirect uri proxy page"
-msgstr ""
+msgstr "Очистить - Прокси-страница OAuth redirect uri"
 
 msgid ""
 "You can use this setting when wp-login.php page is not available to handle "
 "the OAuth flow."
 msgstr ""
+"Эту настройку можно использовать, если страница wp-login.php недоступна для "
+"обработки процесса OAuth."
 
 #, php-format
 msgid "%1$s First create a new page then select this page above."
-msgstr ""
+msgstr "%1$s Сначала создайте новую страницу, затем выберите ее выше."
 
 msgid "Prevent external redirect overrides"
-msgstr ""
+msgstr "Запретить переопределение перенаправления извне"
 
 msgid "Disable external redirects"
-msgstr ""
+msgstr "Отключить внешние перенаправления"
 
 msgid "Default redirect url"
-msgstr ""
+msgstr "URL перенаправления по умолчанию"
 
 msgid "for Login"
-msgstr ""
+msgstr "для входа"
 
 msgid "for Register"
-msgstr ""
+msgstr "для регистрации"
 
 msgid "Fixed redirect url"
-msgstr ""
+msgstr "Фиксированный URL перенаправления"
 
 msgid "Blacklisted redirects"
-msgstr ""
+msgstr "Запрещенные перенаправления"
 
 msgid "If you want to blacklist redirect url params. One pattern per line."
 msgstr ""
+"Если вы хотите запретить определенные параметры URL перенаправления. По "
+"одному шаблону на строку."
 
 msgid "Support login restrictions"
-msgstr ""
+msgstr "Поддержка ограничений входа"
 
 #, php-format
 msgid "Please visit to our %1$s to check what plugins are supported!"
-msgstr ""
+msgstr "Посетите нашу %1$s, чтобы узнать, какие плагины поддерживаются!"
 
 msgid "Display avatars in \"All media items\""
-msgstr ""
+msgstr "Отображать аватары в разделе «Все медиафайлы»"
 
 msgid ""
 "Enabling this option can speed up loading images in Media Library - Grid "
 "view!"
 msgstr ""
+"Включение этой опции может ускорить загрузку изображений в медиабиблиотеке в "
+"режиме сетки!"
 
 msgid "Membership"
-msgstr ""
+msgstr "Членство"
 
 msgid "Allow registration with Social login."
-msgstr ""
+msgstr "Разрешить регистрацию через Social Login."
 
 msgid "Custom label for register buttons"
-msgstr ""
+msgstr "Своя надпись для кнопок регистрации"
 
 #, php-format
 msgid ""
@@ -969,187 +1056,204 @@ msgid ""
 "can be modified at the Buttons tab of each provider.<br>This option also "
 "allows the use of register specific %3$s options."
 msgstr ""
+"Задайте свою надпись для кнопок социальных сетей в формах регистрации и для "
+"шорткодов, у которых параметр %1$s имеет значение %2$s.<br>Надписи для "
+"регистрации можно изменить на вкладке «Кнопки» каждого провайдера.<br>Эта "
+"опция также позволяет использовать специальные параметры %3$s для "
+"регистрации."
 
 msgid "Redirect overlay"
-msgstr ""
+msgstr "Оверлей при перенаправлении"
 
 msgid "No overlay"
-msgstr ""
+msgstr "Без оверлея"
 
 msgid "Display overlay"
-msgstr ""
+msgstr "Показывать оверлей"
 
 msgid "Display overlay with spinner"
-msgstr ""
+msgstr "Показывать оверлей с индикатором загрузки"
 
 msgid "Display overlay with spinner and message"
-msgstr ""
+msgstr "Показывать оверлей с индикатором загрузки и сообщением"
 
 msgid ""
 "You can display an overlay on your site when we start the redirect after the "
 "authentication."
 msgstr ""
+"Вы можете показывать оверлей на сайте, когда после аутентификации начинается "
+"перенаправление."
 
 #, php-format
 msgid "%1$s The overlay won't be displayed if the %2$s setting is set to %3$s!"
 msgstr ""
+"%1$s Оверлей не будет отображаться, если для настройки %2$s выбрано значение "
+"%3$s!"
 
 msgid "Note:"
-msgstr ""
+msgstr "Примечание:"
 
 msgid "Unsupported WebView behavior"
-msgstr ""
+msgstr "Поведение в неподдерживаемом WebView"
 
 msgid "Remove button"
-msgstr ""
+msgstr "Удалить кнопку"
 
 msgid "Disable button"
-msgstr ""
+msgstr "Отключить кнопку"
 
 #, php-format
 msgid "Some %1$sproviders%2$s don't support embedded browsers."
-msgstr ""
+msgstr "Некоторые %1$sпровайдеры%2$s не поддерживают встроенные браузеры."
 
 msgid ""
 "This setting defines if we should remove or disable the related buttons in "
 "WebView environments."
 msgstr ""
+"Эта настройка определяет, нужно ли удалять или отключать соответствующие "
+"кнопки в среде WebView."
 
 msgid "Below and floating"
-msgstr ""
+msgstr "Ниже и плавающие"
 
 msgid "Embedded Login form button style"
-msgstr ""
+msgstr "Стиль кнопок во встроенной форме входа"
 
 msgid "Embedded Login layout"
-msgstr ""
+msgstr "Расположение во встроенной форме входа"
 
 msgid "Embedded login form button alignment"
-msgstr ""
+msgstr "Выравнивание кнопок во встроенной форме входа"
 
 msgid "Registration Form"
-msgstr ""
+msgstr "Форма регистрации"
 
 msgid "Embedded login form"
-msgstr ""
+msgstr "Встроенная форма входа"
 
 msgid "Sign Up form"
-msgstr ""
+msgstr "Форма регистрации"
 
 msgid "No Connect button in Sign Up form"
-msgstr ""
+msgstr "Без кнопки подключения в форме регистрации"
 
 msgid "Sign Up form button style"
-msgstr ""
+msgstr "Стиль кнопок в форме регистрации"
 
 msgid "Sign Up layout"
-msgstr ""
+msgstr "Расположение в форме регистрации"
 
 msgid "Account details"
-msgstr ""
+msgstr "Данные аккаунта"
 
 msgid "No link buttons"
-msgstr ""
+msgstr "Без кнопок привязки"
 
 msgid "Link buttons after account details"
-msgstr ""
+msgstr "Кнопки привязки после данных аккаунта"
 
 msgid "Store"
-msgstr ""
+msgstr "Сохранять"
 
 msgid "First and last name"
-msgstr ""
+msgstr "Имя и фамилия"
 
 msgid "When not enabled, username will be randomly generated."
 msgstr ""
+"Если не включено, имя пользователя будет сгенерировано случайным образом."
 
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 msgid "When not enabled, email will be empty."
-msgstr ""
+msgstr "Если не включено, email останется пустым."
 
 msgid "Avatar"
-msgstr ""
+msgstr "Аватар"
 
 msgid "Access token"
-msgstr ""
+msgstr "Токен доступа"
 
 msgid "Register Form"
-msgstr ""
+msgstr "Форма регистрации"
 
 msgid "No Connect button in login form"
-msgstr ""
+msgstr "Без кнопки подключения в форме входа"
 
 msgid "No Connect button in register form"
-msgstr ""
+msgstr "Без кнопки подключения в форме регистрации"
 
 msgid "Billing form"
-msgstr ""
+msgstr "Форма платежных данных"
 
 msgid "No Connect button in billing form"
-msgstr ""
+msgstr "Без кнопки подключения в форме платежных данных"
 
 msgid "Billing layout"
-msgstr ""
+msgstr "Расположение в форме платежных данных"
 
 msgid "Default with separator"
-msgstr ""
+msgstr "По умолчанию с разделителем"
 
 msgid "No Connect buttons in account details form"
-msgstr ""
+msgstr "Без кнопок подключения в форме данных аккаунта"
 
 msgid "Link buttons on"
-msgstr ""
+msgstr "Кнопки привязки в"
 
 msgid "WooCommerce registration notification"
-msgstr ""
+msgstr "Уведомление WooCommerce о регистрации"
 
 #, php-format
 msgid ""
 "Defines whether the registration with %1$s will send the same registration "
 "notification that %2$s does, instead of the %3$s default one."
 msgstr ""
+"Определяет, будет ли при регистрации через %1$s отправляться то же "
+"уведомление о регистрации, что и в %2$s, вместо стандартного уведомления "
+"%3$s."
 
 #, php-format
 msgid "Network connection successful: %1$s"
-msgstr ""
+msgstr "Сетевое соединение установлено: %1$s"
 
 #, php-format
 msgid "Network connection failed: %1$s"
-msgstr ""
+msgstr "Не удалось установить сетевое соединение: %1$s"
 
 msgid ""
 "Please contact with your hosting provider to resolve the network issue "
 "between your server and the provider."
 msgstr ""
+"Обратитесь к своему хостинг-провайдеру, чтобы решить проблему с сетевым "
+"соединением между вашим сервером и провайдером."
 
 msgid "Manage Avatar"
-msgstr ""
+msgstr "Управление аватаром"
 
 #, php-format
 msgid "Avatar <span class=\"count\">(%s)</span>"
 msgid_plural "Avatar <span class=\"count\">(%s)</span>"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Аватар <span class=\"count\">(%s)</span>"
+msgstr[1] "Аватары <span class=\"count\">(%s)</span>"
 
 #, php-format
 msgid "%1$s &lsaquo; %2$s &#8212; WordPress"
-msgstr ""
+msgstr "%1$s &lsaquo; %2$s &#8212; WordPress"
 
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://wordpress.org/"
 
 msgid "Powered by WordPress"
-msgstr ""
+msgstr "Работает на WordPress"
 
 #, php-format
 msgctxt "site"
 msgid "&larr; Back to %s"
-msgstr ""
+msgstr "&larr; Вернуться на сайт %s"
 
 msgid "Your configuration needs to be verified"
-msgstr ""
+msgstr "Необходимо проверить вашу конфигурацию"
 
 msgid ""
 "Before you can start letting your users register with your app it needs to "
@@ -1158,93 +1262,109 @@ msgid ""
 "check the copied ID and secret or the app itself. Otherwise your settings "
 "are fine."
 msgstr ""
+"Прежде чем пользователи смогут регистрироваться через ваше приложение, его "
+"нужно протестировать. Эта проверка гарантирует, что у пользователей не "
+"возникнет проблем при входе и регистрации. <br> Если во всплывающем окне "
+"появится сообщение об ошибке, проверьте скопированные ID и secret или само "
+"приложение. В противном случае ваши настройки в порядке."
 
 msgid "Please save your changes to verify settings."
-msgstr ""
+msgstr "Сохраните изменения, чтобы проверить настройки."
 
 msgid "Works Fine"
-msgstr ""
+msgstr "Работает"
 
 #, php-format
 msgid ""
 "This provider is currently disabled, which means that users can’t register "
 "or login via their %s account."
 msgstr ""
+"Этот провайдер сейчас отключен, поэтому пользователи не могут "
+"регистрироваться или входить через свой аккаунт %s."
 
 #, php-format
 msgid ""
 "This provider works fine, but you can test it again. If you don’t want to "
 "let users register or login with %s anymore you can disable it."
 msgstr ""
+"Этот провайдер работает, но вы можете проверить его еще раз. Если вы больше "
+"не хотите, чтобы пользователи регистрировались или входили через %s, его "
+"можно отключить."
 
 #, php-format
 msgid ""
 "This provider is currently enabled, which means that users can register or "
 "login via their %s account."
 msgstr ""
+"Этот провайдер сейчас включен, поэтому пользователи могут регистрироваться "
+"или входить через свой аккаунт %s."
 
 msgid "Verify Settings Again"
-msgstr ""
+msgstr "Проверить настройки еще раз"
 
 msgid "Please save your changes before verifying settings."
-msgstr ""
+msgstr "Сохраните изменения перед проверкой настроек."
 
 msgid "Error: Email verification status is not checked in this provider!"
-msgstr ""
+msgstr "Ошибка: у этого провайдера не проверяется статус подтверждения email!"
 
 msgid "Authentication successful"
-msgstr ""
+msgstr "Аутентификация выполнена успешно"
 
 msgid "Authentication error"
-msgstr ""
+msgstr "Ошибка аутентификации"
 
 msgid "Unlink successful."
-msgstr ""
+msgstr "Аккаунт успешно отвязан."
 
 msgid "Unlink is not allowed!"
-msgstr ""
+msgstr "Отвязка запрещена!"
 
 msgid "Unlink failed: nonce is invalid"
-msgstr ""
+msgstr "Не удалось отвязать: недействительный nonce"
 
 #, php-format
 msgid "You are attempting to unlink your WordPress account from %s."
-msgstr ""
+msgstr "Вы собираетесь отвязать свой аккаунт WordPress от %s."
 
 #, php-format
 msgid "Do you really want to %1$s unlink %2$s it?"
-msgstr ""
+msgstr "Вы действительно хотите %1$s отвязать %2$s его?"
 
 msgid "The test was successful"
-msgstr ""
+msgstr "Проверка прошла успешно"
 
 msgid "Authentication failed"
-msgstr ""
+msgstr "Не удалось выполнить аутентификацию"
 
 msgid "Identifier"
-msgstr ""
+msgstr "Идентификатор"
 
 msgid "Profile Picture"
-msgstr ""
+msgstr "Фото профиля"
 
 #, php-format
 msgid ""
 "Your %1$s account is successfully linked with your account. Now you can sign "
 "in with %2$s easily."
 msgstr ""
+"Ваш аккаунт %1$s успешно привязан к вашей учетной записи. Теперь вы можете "
+"легко входить через %2$s."
 
 #, php-format
 msgid ""
 "You have already linked a(n) %s account. Please unlink the current and then "
 "you can link another %s account."
 msgstr ""
+"Вы уже привязали аккаунт %s. Отвяжите текущий, после чего сможете привязать "
+"другой аккаунт %s."
 
 #, php-format
 msgid "This %s account is already linked to another user."
-msgstr ""
+msgstr "Этот аккаунт %s уже привязан к другому пользователю."
 
 msgid "User registration is currently not allowed."
-msgstr ""
+msgstr "Регистрация пользователей сейчас запрещена."
 
 #, php-format
 msgid ""
@@ -1252,6 +1372,9 @@ msgid ""
 "address is not verified.%2$sPlease login to your existing account using your "
 "password and link your %1$s account to it manually!"
 msgstr ""
+"Мы нашли пользователя с вашим адресом email из %1$s, но, похоже, этот адрес "
+"не подтвержден.%2$sВойдите в существующий аккаунт с помощью пароля и вручную "
+"привяжите к нему свой аккаунт %1$s!"
 
 #, php-format
 msgid ""
@@ -1259,114 +1382,128 @@ msgid ""
 "different account, so we are unable to log you in. Please use the linked "
 "account or log in with your password!"
 msgstr ""
+"Мы нашли пользователя с вашим адресом email из %1$s. К сожалению, он "
+"принадлежит другому аккаунту, поэтому мы не можем выполнить вход. "
+"Используйте привязанный аккаунт или войдите с помощью пароля!"
 
 msgid "Register For This Site"
-msgstr ""
+msgstr "Регистрация на сайте"
 
 #, php-format
 msgid "%1$s requires PHP version %2$s+, plugin is currently NOT ACTIVE."
-msgstr ""
+msgstr "%1$s требует PHP версии %2$s+, сейчас плагин НЕ АКТИВЕН."
 
 #, php-format
 msgid ""
 "%1$s requires WordPress version %2$s+. Because you are using an earlier "
 "version, the plugin is currently NOT ACTIVE."
 msgstr ""
+"%1$s требует WordPress версии %2$s+. Так как вы используете более раннюю "
+"версию, сейчас плагин НЕ АКТИВЕН."
 
 #, php-format
 msgid "Please update %1$s to version %2$s or newer."
-msgstr ""
+msgstr "Обновите %1$s до версии %2$s или новее."
 
 msgid "Update now!"
-msgstr ""
+msgstr "Обновить сейчас!"
 
 msgid ""
 "By clicking Register, you accept our <a href=\"#privacy_policy_url\" "
 "target=\"_blank\">Privacy Policy</a>"
 msgstr ""
+"Нажимая «Зарегистрироваться», вы принимаете нашу <a "
+"href=\"#privacy_policy_url\" target=\"_blank\">Политику конфиденциальности</"
+"a>"
 
 msgid "Hold On"
-msgstr ""
+msgstr "Подождите"
 
 msgid "You are being redirected to another page,<br>it may take a few seconds."
 msgstr ""
+"Вы перенаправляетесь на другую страницу,<br>это может занять несколько "
+"секунд."
 
 msgid "The selected provider doesn't support embedded browsers!"
-msgstr ""
+msgstr "Выбранный провайдер не поддерживает встроенные браузеры!"
 
 msgid "Social Login"
-msgstr ""
+msgstr "Social Login"
 
 msgid "Button skin"
-msgstr ""
+msgstr "Оформление кнопки"
 
 msgid "Dark"
-msgstr ""
+msgstr "Темное"
 
 msgid "Light"
-msgstr ""
+msgstr "Светлое"
 
 msgid "Black"
-msgstr ""
+msgstr "Черное"
 
 msgid "White"
-msgstr ""
+msgstr "Белое"
 
 #, php-format
 msgid ""
 "%1$s allows HTTPS OAuth Redirects only. You must move your site to HTTPS in "
 "order to allow login with %1$s."
 msgstr ""
+"%1$s разрешает только OAuth-перенаправления по HTTPS. Чтобы разрешить вход "
+"через %1$s, необходимо перевести сайт на HTTPS."
 
 msgid "How to get SSL for my WordPress site?"
-msgstr ""
+msgstr "Как получить SSL для моего сайта WordPress?"
 
 msgid "App ID"
-msgstr ""
+msgstr "App ID"
 
 msgid "Required"
-msgstr ""
+msgstr "Обязательно"
 
 #, php-format
 msgid ""
 "If you are not sure what is your %1$s, please head over to <a "
 "href=\"%2$s\">Getting Started</a>"
 msgstr ""
+"Если вы не знаете, где найти %1$s, перейдите в раздел <a "
+"href=\"%2$s\">Начало работы</a>"
 
 msgid "App Secret"
-msgstr ""
+msgstr "App Secret"
 
 #, php-format
 msgid ""
 "By replacing your existing %1$s App, users with linked %1$s accounts will no "
 "longer be able to login with %1$s."
 msgstr ""
+"Если вы замените текущее приложение %1$s, пользователи с привязанными "
+"аккаунтами %1$s больше не смогут входить через %1$s."
 
 msgid "Find out why?"
-msgstr ""
+msgstr "Узнайте почему"
 
 msgid "Profile image size"
-msgstr ""
+msgstr "Размер изображения профиля"
 
 msgid "Small"
-msgstr ""
+msgstr "Маленький"
 
 msgid "Medium"
-msgstr ""
+msgstr "Средний"
 
 msgid "Large"
-msgstr ""
+msgstr "Большой"
 
 msgid "Extra Large"
-msgstr ""
+msgstr "Очень большой"
 
 msgid "Continue with <b>Facebook</b>"
 msgstr "Войти через <b>Facebook</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Facebook</b>"
 msgid "Sign up with <b>Facebook</b>"
-msgstr "Войти через <b>Facebook</b>"
+msgstr "Зарегистрироваться через <b>Facebook</b>"
 
 msgid "Link account with <b>Facebook</b>"
 msgstr "Связать аккаунты с <b>Facebook</b>"
@@ -1378,37 +1515,75 @@ msgstr "Отвязать аккаунты от <b>Facebook</b>"
 msgid ""
 "The %1$s entered did not appear to be a valid. Please enter a valid %2$s."
 msgstr ""
+"Введенное значение %1$s недействительно. Введите корректное значение %2$s."
 
 #, php-format
 msgid "Required scope: %1$s"
-msgstr ""
+msgstr "Необходимый scope: %1$s"
 
 msgid "Neutral"
+msgstr "Нейтральное"
+
+msgid ""
+"Required by Google One Tap. Without it the One Tap prompt never appears."
 msgstr ""
+"Требуется для Google One Tap. Без этого окно One Tap никогда не появится."
+
+msgid "Google One Tap"
+msgstr "Google One Tap"
+
+msgid "Show where the Google button appears"
+msgstr "Показывать там, где отображается кнопка Google"
+
+msgid "Show on all pages"
+msgstr "Показывать на всех страницах"
+
+#, php-format
+msgid ""
+"Shows Google's One Tap prompt, so visitors can sign in with their Google "
+"account without leaving the page. %1$sLearn more%2$s."
+msgstr ""
+"Показывает окно Google One Tap, чтобы посетители могли войти через свой "
+"аккаунт Google, не покидая страницу. %1$sПодробнее%2$s."
+
+#, php-format
+msgid ""
+"%1$s Requires HTTPS, and %2$s added to the %3$sAuthorized JavaScript "
+"origins%4$s of your Google app."
+msgstr ""
+"%1$s Требуется HTTPS, а %2$s должен быть добавлен в %3$sAuthorized "
+"JavaScript origins%4$s вашего приложения Google."
+
+#, php-format
+msgid ""
+"%1$s Unlike the Google button, One Tap loads Google's script as soon as the "
+"page opens. %2$sLearn more%3$s."
+msgstr ""
+"%1$s В отличие от кнопки Google, One Tap загружает скрипт Google сразу при "
+"открытии страницы. %2$sПодробнее%3$s."
 
 msgid "Client ID"
-msgstr ""
+msgstr "Client ID"
 
 msgid "Client Secret"
-msgstr ""
+msgstr "Client Secret"
 
 msgid "Select account on each login"
-msgstr ""
+msgstr "Выбирать аккаунт при каждом входе"
 
 msgid ""
 "Disable, when you don't want to see the account select prompt on each login."
 msgstr ""
+"Отключите, если не хотите видеть окно выбора аккаунта при каждом входе."
 
 msgid "Original"
-msgstr ""
+msgstr "Оригинал"
 
 msgid "Continue with <b>Google</b>"
 msgstr "Войти через  <b>Google</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Google</b>"
 msgid "Sign up with <b>Google</b>"
-msgstr "Войти через  <b>Google</b>"
+msgstr "Зарегистрироваться через <b>Google</b>"
 
 msgid "Link account with <b>Google</b>"
 msgstr "Связать аккаунты с <b>Google</b>"
@@ -1418,189 +1593,227 @@ msgstr "Отвязать аккаунты от <b>Google</b>"
 
 #, php-format
 msgid "Required API: %1$s"
-msgstr ""
+msgstr "Необходимый API: %1$s"
 
 msgid "X"
-msgstr ""
+msgstr "X"
 
 msgid "Legacy"
-msgstr ""
+msgstr "Устаревший"
 
 msgid "API version"
-msgstr ""
+msgstr "Версия API"
 
 msgid "v1.1"
-msgstr ""
+msgstr "v1.1"
 
 msgid "v2"
-msgstr ""
+msgstr "v2"
 
 msgid "API Key"
-msgstr ""
+msgstr "API Key"
 
 msgid "API Key Secret"
-msgstr ""
+msgstr "API Key Secret"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Continue with <b>X</b>"
-msgstr "Войти через <b>VK</b>"
+msgstr "Войти через <b>X</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Sign up with <b>X</b>"
-msgstr "Войти через <b>VK</b>"
+msgstr "Зарегистрироваться через <b>X</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>VK</b>"
 msgid "Link account with <b>X</b>"
-msgstr "Связать аккаунты с <b>VK</b>"
+msgstr "Связать аккаунты с <b>X</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>VK</b>"
 msgid "Unlink account from <b>X</b>"
-msgstr "Отвязать аккаунты от <b>VK</b>"
+msgstr "Отвязать аккаунты от <b>X</b>"
 
 msgctxt "Register form submit button label"
 msgid "Register"
-msgstr ""
+msgstr "Зарегистрироваться"
 
 #, php-format
 msgid "%s Buttons"
-msgstr ""
+msgstr "Кнопки %s"
 
 msgid "Title:"
-msgstr ""
+msgstr "Заголовок:"
 
 msgid "Button style:"
-msgstr ""
+msgstr "Стиль кнопок:"
 
 msgid "Button align:"
-msgstr ""
+msgstr "Выравнивание кнопок:"
 
 msgid "Show link buttons"
-msgstr ""
+msgstr "Показывать кнопки привязки"
 
 msgid "Show unlink buttons"
-msgstr ""
+msgstr "Показывать кнопки отвязки"
 
 msgid "Social login is not allowed with this role!"
-msgstr ""
+msgstr "Вход через социальные сети запрещен для этой роли!"
 
 msgid "Please enter a username."
-msgstr ""
+msgstr "Введите имя пользователя."
 
 msgid ""
 "This username is invalid because it uses illegal characters. Please enter a "
 "valid username."
 msgstr ""
+"Это имя пользователя недопустимо, так как содержит запрещенные символы. "
+"Введите корректное имя пользователя."
 
 msgid ""
 "<strong>Error</strong>: This username is already registered. Please choose "
 "another one."
 msgstr ""
+"<strong>Ошибка</strong>: это имя пользователя уже зарегистрировано. Выберите "
+"другое."
 
 msgid "<strong>Error</strong>: Sorry, that username is not allowed."
-msgstr ""
+msgstr "<strong>Ошибка</strong>: извините, это имя пользователя недопустимо."
 
 msgid "<strong>Error</strong>: Please enter an email address."
-msgstr ""
+msgstr "<strong>Ошибка</strong>: введите адрес email."
 
 msgid "<strong>Error</strong>: The email address isn&#8217;t correct."
-msgstr ""
+msgstr "<strong>Ошибка</strong>: неверный адрес email."
 
 msgid ""
 "<strong>Error</strong>: This email is already registered. Please choose "
 "another one."
 msgstr ""
+"<strong>Ошибка</strong>: этот email уже зарегистрирован. Выберите другой."
 
 msgid "<strong>Error</strong>: Please enter a password."
-msgstr ""
+msgstr "<strong>Ошибка</strong>: введите пароль."
 
 msgid "<strong>Error</strong>: Passwords may not contain the character \"\\\"."
-msgstr ""
+msgstr "<strong>Ошибка</strong>: пароль не может содержать символ «\\»."
 
 msgid ""
 "<strong>Error</strong>: Passwords don&#8217;t match. Please enter the same "
 "password in both password fields."
 msgstr ""
+"<strong>Ошибка</strong>: пароли не совпадают. Введите одинаковый пароль в "
+"оба поля."
 
 #, php-format
 msgid ""
 "This email is already registered, please login in to your account to link "
 "with %1$s."
 msgstr ""
+"Этот email уже зарегистрирован. Войдите в свой аккаунт, чтобы привязать его "
+"к %1$s."
 
 msgid "Unexpected response: The provider didn't return the Authorization URL!"
-msgstr ""
+msgstr "Неожиданный ответ: провайдер не вернул URL авторизации!"
 
 msgid "Unexpected response: Authentication has been cancelled!"
-msgstr ""
+msgstr "Неожиданный ответ: аутентификация была отменена!"
 
 msgid "Unexpected response: Immediate request failed - Setup Needed!"
 msgstr ""
+"Неожиданный ответ: немедленный запрос не выполнен — требуется настройка!"
 
 msgid ""
 "Unexpected response: The targeted OpenID server is not authorized to verify "
 "this request!"
 msgstr ""
+"Неожиданный ответ: целевой сервер OpenID не уполномочен проверять этот "
+"запрос!"
 
 msgid "Unexpected response: OpenID Verification failed!"
-msgstr ""
+msgstr "Неожиданный ответ: проверка OpenID не пройдена!"
 
 #, php-format
 msgid "Please install and activate %1$s to use the %2$s"
-msgstr ""
+msgstr "Установите и активируйте %1$s, чтобы использовать %2$s"
 
 msgid "Network Activate"
-msgstr ""
+msgstr "Активировать для сети"
 
 msgid "Install now!"
-msgstr ""
+msgstr "Установить сейчас!"
 
 msgid "Social Providers"
-msgstr ""
+msgstr "Социальные провайдеры"
 
 #, php-format
 msgid ""
 "The Facebook Sync data needs an approved %1$s and your App must use the "
 "latest %2$s version!"
 msgstr ""
+"Для синхронизации данных Facebook требуется одобрение через %1$s, а ваше "
+"приложение должно использовать последнюю версию %2$s!"
+
+#, php-format
+msgid ""
+"Yes. With Google One Tap enabled, %1$s loads Google's Identity Services "
+"library from %2$s on the pages where the One Tap prompt can appear. Google "
+"receives the visitor's IP address and reads its own cookies on that domain "
+"to decide whether the prompt can be shown."
+msgstr ""
+"Да. Если Google One Tap включен, %1$s загружает библиотеку Google Identity "
+"Services с %2$s на страницах, где может появиться окно One Tap. Google "
+"получает IP-адрес посетителя и читает свои cookie на этом домене, чтобы "
+"решить, можно ли показать окно."
+
+#, php-format
+msgid ""
+"With Google One Tap enabled, Google's library also stores a %1$s cookie on "
+"this site, which holds the visitor's One Tap status, such as whether they "
+"closed the prompt."
+msgstr ""
+"Если Google One Tap включен, библиотека Google также сохраняет на этом сайте "
+"cookie %1$s, в котором хранится статус One Tap посетителя, например, закрыл "
+"ли он окно."
 
 #, php-format
 msgid ""
 "Most of these information can only be retrieved, when the field is marked as "
 "Public on the user's %s page!"
 msgstr ""
+"Большую часть этой информации можно получить, только если поле отмечено как "
+"публичное на странице %s пользователя!"
 
 #, php-format
 msgid ""
 "Most of these information can only be retrieved, when the field is filled on "
 "the user's %s page!"
 msgstr ""
+"Большую часть этой информации можно получить, только если поле заполнено на "
+"странице %s пользователя!"
 
 #, php-format
 msgid ""
 "Most of these information can only be retrieved, when the field is filled on "
 "the user's %s page! For the campaigns, the user must have a public campaign!"
 msgstr ""
+"Большую часть этой информации можно получить, только если поле заполнено на "
+"странице %s пользователя! Для кампаний у пользователя должна быть публичная "
+"кампания!"
 
 #, php-format
 msgid ""
 "The Spotify Sync data requires the %1$s with the necessary scopes enabled!"
 msgstr ""
+"Для синхронизации данных Spotify требуется %1$s с включенными необходимыми "
+"scope!"
 
 #, php-format
 msgid ""
 "The TikTok Sync data requires the %1$s with the necessary scopes enabled!"
 msgstr ""
+"Для синхронизации данных TikTok требуется %1$s с включенными необходимыми "
+"scope!"
 
 msgid "Continue with <b>Amazon</b>"
 msgstr "Войти через <b>Amazon</b>"
 
-#, fuzzy
 msgid "Sign up with <b>Amazon</b>"
-msgstr "Войти через <b>Amazon</b>"
+msgstr "Зарегистрироваться через <b>Amazon</b>"
 
 msgid "Link account with <b>Amazon</b>"
 msgstr "Связать аккаунты с <b>Amazon</b>"
@@ -1609,28 +1822,28 @@ msgid "Unlink account from <b>Amazon</b>"
 msgstr "Отвязать аккаунты от <b>Amazon</b>"
 
 msgid "Delete credentials"
-msgstr ""
+msgstr "Удалить учетные данные"
 
 msgid "Private Key ID"
-msgstr ""
+msgstr "Private Key ID"
 
 msgid "Private Key"
-msgstr ""
+msgstr "Private Key"
 
 msgid "Team Identifier"
-msgstr ""
+msgstr "Team Identifier"
 
 msgid "Service Identifier"
-msgstr ""
+msgstr "Service Identifier"
 
 msgid "Generate Token"
-msgstr ""
+msgstr "Сгенерировать токен"
 
 msgid "Continue with <b>Apple</b>"
 msgstr "Войти через  <b>Apple</b>"
 
 msgid "Sign up with <b>Apple</b>"
-msgstr "Войти через  <b>Apple</b>"
+msgstr "Зарегистрироваться через <b>Apple</b>"
 
 msgid "Link account with <b>Apple</b>"
 msgstr "Связать аккаунты с <b>Apple</b>"
@@ -1640,69 +1853,63 @@ msgstr "Отвязать аккаунты от <b>Apple</b>"
 
 #, php-format
 msgid "An error occurred when storing of the expiration timestamp : %1$s"
-msgstr ""
+msgstr "При сохранении времени истечения срока действия произошла ошибка: %1$s"
 
 #, php-format
 msgid "Token generation failed: %1$s"
-msgstr ""
+msgstr "Не удалось сгенерировать токен: %1$s"
 
 msgid "Please check your credentials!"
-msgstr ""
+msgstr "Проверьте свои учетные данные!"
 
 msgid "Private key format is not valid!"
-msgstr ""
+msgstr "Недопустимый формат приватного ключа!"
 
 #, php-format
 msgid ""
 "%s detected that your Apple credentials have expired. Please delete the "
 "current credentials and generate new one!"
 msgstr ""
+"%s обнаружил, что срок действия ваших учетных данных Apple истек. Удалите "
+"текущие учетные данные и сгенерируйте новые!"
 
 msgid "Apple Credentials"
-msgstr ""
+msgstr "Учетные данные Apple"
 
 msgid "Force reauthorization on each login"
-msgstr ""
+msgstr "Запрашивать повторную авторизацию при каждом входе"
 
 msgid "Enable, when you want to see the consent screen on each login."
-msgstr ""
+msgstr "Включите, если хотите видеть экран согласия при каждом входе."
 
-#, fuzzy
-#| msgid "Continue with <b>Disqus</b>"
 msgid "Continue with <b>Discord</b>"
-msgstr "Войти через <b>Disqus</b>"
+msgstr "Войти через <b>Discord</b>"
 
-#, fuzzy
 msgid "Sign up with <b>Discord</b>"
-msgstr "Войти через <b>Disqus</b>"
+msgstr "Зарегистрироваться через <b>Discord</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>Disqus</b>"
 msgid "Link account with <b>Discord</b>"
-msgstr "Связать аккаунты с <b>Disqus</b>"
+msgstr "Связать аккаунты с <b>Discord</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Disqus</b>"
 msgid "Unlink account from <b>Discord</b>"
-msgstr "Отвязать аккаунты от <b>Disqus</b>"
+msgstr "Отвязать аккаунты от <b>Discord</b>"
 
 msgid "API Secret"
-msgstr ""
+msgstr "API Secret"
 
 #, php-format
 msgid "We detected that your %1$s is probably overridden over the %2$s filter!"
-msgstr ""
+msgstr "Похоже, что ваш %1$s переопределен через фильтр %2$s!"
 
 #, php-format
 msgid "We detected that your %1$s has been overridden over the %2$s filter!"
-msgstr ""
+msgstr "Мы обнаружили, что ваш %1$s был переопределен через фильтр %2$s!"
 
 msgid "Continue with <b>Disqus</b>"
 msgstr "Войти через <b>Disqus</b>"
 
-#, fuzzy
 msgid "Sign up with <b>Disqus</b>"
-msgstr "Войти через <b>Disqus</b>"
+msgstr "Зарегистрироваться через <b>Disqus</b>"
 
 msgid "Link account with <b>Disqus</b>"
 msgstr "Связать аккаунты с <b>Disqus</b>"
@@ -1713,9 +1920,8 @@ msgstr "Отвязать аккаунты от <b>Disqus</b>"
 msgid "Continue with <b>GitHub</b>"
 msgstr "Войти через <b>GitHub</b>"
 
-#, fuzzy
 msgid "Sign up with <b>GitHub</b>"
-msgstr "Войти через <b>GitHub</b>"
+msgstr "Зарегистрироваться через <b>GitHub</b>"
 
 msgid "Link account with <b>GitHub</b>"
 msgstr "Связать аккаунты с <b>GitHub</b>"
@@ -1724,132 +1930,125 @@ msgid "Unlink account from <b>GitHub</b>"
 msgstr "Отвязать аккаунты от <b>GitHub</b>"
 
 msgid "REST API Key"
-msgstr ""
+msgstr "REST API Key"
 
 msgid "Client Secret Code"
-msgstr ""
+msgstr "Client Secret Code"
 
 msgid "Authorization Prompt"
-msgstr ""
+msgstr "Запрос авторизации"
 
 msgid "Display account select modal"
-msgstr ""
+msgstr "Показывать окно выбора аккаунта"
 
 msgid "Force user to enter login credentials on each login"
-msgstr ""
+msgstr "Требовать от пользователя вводить учетные данные при каждом входе"
 
 msgid "Start the authentication with the Kakao Account sign-up page."
-msgstr ""
+msgstr "Начинать аутентификацию со страницы регистрации Kakao Account."
 
 msgid "Email scope"
-msgstr ""
+msgstr "Scope email"
 
 msgid "Disable, when you have no rights for email address."
-msgstr ""
+msgstr "Отключите, если у вас нет прав на получение адреса email."
 
 msgid "Mini"
-msgstr ""
+msgstr "Мини"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Continue with <b>Kakao</b>"
-msgstr "Войти через <b>VK</b>"
+msgstr "Войти через <b>Kakao</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Sign up with <b>Kakao</b>"
-msgstr "Войти через <b>VK</b>"
+msgstr "Зарегистрироваться через <b>Kakao</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>VK</b>"
 msgid "Link account with <b>Kakao</b>"
-msgstr "Связать аккаунты с <b>VK</b>"
+msgstr "Связать аккаунты с <b>Kakao</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>VK</b>"
 msgid "Unlink account from <b>Kakao</b>"
-msgstr "Отвязать аккаунты от <b>VK</b>"
+msgstr "Отвязать аккаунты от <b>Kakao</b>"
 
 msgid "Channel ID"
-msgstr ""
+msgstr "Channel ID"
 
 msgid "Channel Secret"
-msgstr ""
+msgstr "Channel Secret"
 
 msgid "Add LINE Official Account as a friend"
-msgstr ""
+msgstr "Добавить LINE Official Account в друзья"
 
 msgid "Don't display"
-msgstr ""
+msgstr "Не показывать"
 
 msgid "Display the add friend option in the consent screen"
-msgstr ""
+msgstr "Показывать опцию добавления в друзья на экране согласия"
 
 msgid "Opens a new screen with the add friend option after the consent screen"
 msgstr ""
+"Открывать новый экран с опцией добавления в друзья после экрана согласия"
 
 #, php-format
 msgid ""
 "If you have a LINE Official Account, people can add it as a friend when they "
 "authorize your App. %1$sLearn more%2$s."
 msgstr ""
+"Если у вас есть LINE Official Account, пользователи смогут добавить его в "
+"друзья при авторизации вашего приложения. %1$sПодробнее%2$s."
 
 msgid "Initial Login method"
-msgstr ""
+msgstr "Начальный способ входа"
 
 msgid "Email and Password"
-msgstr ""
+msgstr "Email и пароль"
 
 msgid "QR code"
-msgstr ""
+msgstr "QR-код"
 
 msgid ""
 "The selected value defines whether the Email and Password or the QR code "
 "login option will be presented in the LINE authentication screen by default."
 msgstr ""
+"Выбранное значение определяет, какой способ входа будет предложен по "
+"умолчанию на экране аутентификации LINE: по email и паролю или по QR-коду."
 
 msgid "Force initial login method"
-msgstr ""
+msgstr "Принудительный начальный способ входа"
 
 msgid ""
 "Enable, if you want to offer only the selected Initial Login method in the "
 "LINE authentication screen."
 msgstr ""
+"Включите, если хотите предлагать на экране аутентификации LINE только "
+"выбранный начальный способ входа."
 
 msgid "Allow Auto login"
-msgstr ""
+msgstr "Разрешить автоматический вход"
 
 #, php-format
 msgid ""
 "Having the Auto login enabled could make the login fail in certain cases. "
 "%1$sLearn more%2$s."
 msgstr ""
+"Если включен автоматический вход, в некоторых случаях вход может завершиться "
+"ошибкой. %1$sПодробнее%2$s."
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Continue with <b>Line</b>"
-msgstr "Войти через <b>LinkedIn</b>"
+msgstr "Войти через <b>Line</b>"
 
-#, fuzzy
 msgid "Sign up with <b>Line</b>"
-msgstr "Войти через <b>LinkedIn</b>"
+msgstr "Зарегистрироваться через <b>Line</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>LinkedIn</b>"
 msgid "Link account with <b>Line</b>"
-msgstr "Связать аккаунты с <b>LinkedIn</b>"
+msgstr "Связать аккаунты с <b>Line</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>LinkedIn</b>"
 msgid "Unlink account from <b>Line</b>"
-msgstr "Отвязать аккаунты от <b>LinkedIn</b>"
+msgstr "Отвязать аккаунты от <b>Line</b>"
 
 msgid "Continue with <b>LinkedIn</b>"
 msgstr "Войти через <b>LinkedIn</b>"
 
-#, fuzzy
 msgid "Sign up with <b>LinkedIn</b>"
-msgstr "Войти через <b>LinkedIn</b>"
+msgstr "Зарегистрироваться через <b>LinkedIn</b>"
 
 msgid "Link account with <b>LinkedIn</b>"
 msgstr "Связать аккаунты с <b>LinkedIn</b>"
@@ -1858,85 +2057,69 @@ msgid "Unlink account from <b>LinkedIn</b>"
 msgstr "Отвязать аккаунты от <b>LinkedIn</b>"
 
 msgid "Application (client) ID"
-msgstr ""
+msgstr "Application (client) ID"
 
 msgid "Client secret"
-msgstr ""
+msgstr "Client secret"
 
 msgid "Audience"
-msgstr ""
+msgstr "Аудитория"
 
 msgid "Multiple Entra ID tenants"
-msgstr ""
+msgstr "Несколько клиентов Entra ID"
 
 msgid "Any Entra ID Tenant + Personal Microsoft accounts"
-msgstr ""
+msgstr "Любой клиент Entra ID + личные учетные записи Microsoft"
 
-#, fuzzy
-#| msgid "Social accounts"
 msgid "Personal accounts only"
-msgstr "Социальная сеть"
+msgstr "Только личные учетные записи"
 
 msgid "Single tenant only - Default Directory with Azure AD tenant:"
-msgstr ""
+msgstr "Только один клиент - Default Directory с клиентом Azure AD:"
 
 #, php-format
 msgid ""
 "The selected value will define the supported account types. %1$sLearn more."
 "%2$s"
 msgstr ""
+"Выбранное значение определяет поддерживаемые типы аккаунтов. %1$sПодробнее."
+"%2$s"
 
 msgid "Display authorization and authentication dialog only when necessary"
-msgstr ""
+msgstr "Показывать окно авторизации и аутентификации только при необходимости"
 
-#, fuzzy
-#| msgid "Continue with <b>Yahoo</b>"
 msgid "Continue with <b>Microsoft</b>"
-msgstr "Войти через <b>Yahoo</b>"
+msgstr "Войти через <b>Microsoft</b>"
 
-#, fuzzy
-#| msgid "Sign up with <b>Yahoo</b>"
 msgid "Sign up with <b>Microsoft</b>"
-msgstr "Войти через <b>Yahoo</b>"
+msgstr "Зарегистрироваться через <b>Microsoft</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>Yahoo</b>"
 msgid "Link account with <b>Microsoft</b>"
-msgstr "Связать аккаунты с <b>Yahoo</b>"
+msgstr "Связать аккаунты с <b>Microsoft</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Yahoo</b>"
 msgid "Unlink account from <b>Microsoft</b>"
-msgstr "Отвязать аккаунты от <b>Yahoo</b>"
+msgstr "Отвязать аккаунты от <b>Microsoft</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Amazon</b>"
 msgid "Continue with <b>Patreon</b>"
-msgstr "Войти через <b>Amazon</b>"
+msgstr "Войти через <b>Patreon</b>"
 
-#, fuzzy
 msgid "Sign up with <b>Patreon</b>"
-msgstr "Войти через <b>Amazon</b>"
+msgstr "Зарегистрироваться через <b>Patreon</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>Amazon</b>"
 msgid "Link account with <b>Patreon</b>"
-msgstr "Связать аккаунты с <b>Amazon</b>"
+msgstr "Связать аккаунты с <b>Patreon</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Amazon</b>"
 msgid "Unlink account from <b>Patreon</b>"
-msgstr "Отвязать аккаунты от <b>Amazon</b>"
+msgstr "Отвязать аккаунты от <b>Patreon</b>"
 
 msgid "Secret"
-msgstr ""
+msgstr "Secret"
 
 msgid "Continue with <b>PayPal</b>"
 msgstr "Войти через <b>PayPal</b>"
 
-#, fuzzy
 msgid "Sign up with <b>PayPal</b>"
-msgstr "Войти через  <b>PayPal</b>"
+msgstr "Зарегистрироваться через <b>PayPal</b>"
 
 msgid "Link account with <b>PayPal</b>"
 msgstr "Связать аккаунты с <b>PayPal</b>"
@@ -1944,170 +2127,123 @@ msgstr "Связать аккаунты с <b>PayPal</b>"
 msgid "Unlink account from <b>PayPal</b>"
 msgstr "Отвязать аккаунты от <b>PayPal</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Continue with <b>Reddit</b>"
-msgstr "Войти через <b>VK</b>"
+msgstr "Войти через <b>Reddit</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Sign up with <b>Reddit</b>"
-msgstr "Войти через <b>VK</b>"
+msgstr "Зарегистрироваться через <b>Reddit</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>VK</b>"
 msgid "Link account with <b>Reddit</b>"
-msgstr "Связать аккаунты с <b>VK</b>"
+msgstr "Связать аккаунты с <b>Reddit</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>VK</b>"
 msgid "Unlink account from <b>Reddit</b>"
-msgstr "Отвязать аккаунты от <b>VK</b>"
+msgstr "Отвязать аккаунты от <b>Reddit</b>"
 
 msgid "Slack Team ID"
-msgstr ""
+msgstr "Slack Team ID"
 
 msgid "Optional"
-msgstr ""
+msgstr "Необязательно"
 
 #, php-format
 msgid ""
 "The Team ID of a workspace to attempt to restrict to. %1$sLearn more.%2$s"
 msgstr ""
+"Team ID рабочего пространства, которым нужно ограничить вход. %1$sПодробнее."
+"%2$s"
 
 msgid "72x72"
-msgstr ""
+msgstr "72x72"
 
 msgid "192x192"
-msgstr ""
+msgstr "192x192"
 
 msgid "512x512"
-msgstr ""
+msgstr "512x512"
 
 msgid "1024x1024"
-msgstr ""
+msgstr "1024x1024"
 
-#, fuzzy
-#| msgid "Continue with <b>Facebook</b>"
 msgid "Sign in with <b>Slack</b>"
-msgstr "Войти через <b>Facebook</b>"
+msgstr "Войти через <b>Slack</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Facebook</b>"
 msgid "Sign up with <b>Slack</b>"
-msgstr "Войти через <b>Facebook</b>"
+msgstr "Зарегистрироваться через <b>Slack</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>Facebook</b>"
 msgid "Link account with <b>Slack</b>"
-msgstr "Связать аккаунты с <b>Facebook</b>"
+msgstr "Связать аккаунты с <b>Slack</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Facebook</b>"
 msgid "Unlink account from <b>Slack</b>"
-msgstr "Отвязать аккаунты от <b>Facebook</b>"
+msgstr "Отвязать аккаунты от <b>Slack</b>"
 
 msgid "Green"
-msgstr ""
+msgstr "Зеленый"
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Continue with <b>Spotify</b>"
-msgstr "Войти через <b>LinkedIn</b>"
+msgstr "Войти через <b>Spotify</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Facebook</b>"
 msgid "Sign up with <b>Spotify</b>"
-msgstr "Войти через <b>Facebook</b>"
+msgstr "Зарегистрироваться через <b>Spotify</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>Facebook</b>"
 msgid "Link account with <b>Spotify</b>"
-msgstr "Связать аккаунты с <b>Facebook</b>"
+msgstr "Связать аккаунты с <b>Spotify</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Facebook</b>"
 msgid "Unlink account from <b>Spotify</b>"
-msgstr "Отвязать аккаунты от <b>Facebook</b>"
+msgstr "Отвязать аккаунты от <b>Spotify</b>"
 
 msgid "Web API Key"
-msgstr ""
+msgstr "Web API Key"
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Continue with <b>Steam</b>"
-msgstr "Войти через <b>LinkedIn</b>"
+msgstr "Войти через <b>Steam</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Facebook</b>"
 msgid "Sign up with <b>Steam</b>"
-msgstr "Войти через <b>Facebook</b>"
+msgstr "Зарегистрироваться через <b>Steam</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>Facebook</b>"
 msgid "Link account with <b>Steam</b>"
-msgstr "Связать аккаунты с <b>Facebook</b>"
+msgstr "Связать аккаунты с <b>Steam</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Facebook</b>"
 msgid "Unlink account from <b>Steam</b>"
-msgstr "Отвязать аккаунты от <b>Facebook</b>"
+msgstr "Отвязать аккаунты от <b>Steam</b>"
 
 msgid "Error: The 64-bit SteamID can not be retrieved for this user!"
-msgstr ""
+msgstr "Ошибка: не удалось получить 64-битный SteamID для этого пользователя!"
 
 msgid "Client key"
-msgstr ""
+msgstr "Client key"
 
-#, fuzzy
-#| msgid "Continue with <b>LinkedIn</b>"
 msgid "Continue with <b>TikTok</b>"
-msgstr "Войти через <b>LinkedIn</b>"
+msgstr "Войти через <b>TikTok</b>"
 
-#, fuzzy
 msgid "Sign up with <b>TikTok</b>"
-msgstr "Войти через <b>LinkedIn</b>"
+msgstr "Зарегистрироваться через <b>TikTok</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>LinkedIn</b>"
 msgid "Link account with <b>TikTok</b>"
-msgstr "Связать аккаунты с <b>LinkedIn</b>"
+msgstr "Связать аккаунты с <b>TikTok</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>LinkedIn</b>"
 msgid "Unlink account from <b>TikTok</b>"
-msgstr "Отвязать аккаунты от <b>LinkedIn</b>"
+msgstr "Отвязать аккаунты от <b>TikTok</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Twitter</b>"
 msgid "Continue with <b>Twitch</b>"
-msgstr "Войти через <b>Twitter</b>"
+msgstr "Войти через <b>Twitch</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>Twitter</b>"
 msgid "Sign up with <b>Twitch</b>"
-msgstr "Войти через <b>Twitter</b>"
+msgstr "Зарегистрироваться через <b>Twitch</b>"
 
-#, fuzzy
-#| msgid "Link account with <b>Twitter</b>"
 msgid "Link account with <b>Twitch</b>"
-msgstr "Связать аккаунты с <b>Twitter</b>"
+msgstr "Связать аккаунты с <b>Twitch</b>"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Twitter</b>"
 msgid "Unlink account from <b>Twitch</b>"
-msgstr "Отвязать аккаунты от <b>Twitter</b>"
+msgstr "Отвязать аккаунты от <b>Twitch</b>"
 
 msgid "Secure key"
-msgstr ""
+msgstr "Secure key"
 
 msgid "Continue with <b>VK</b>"
 msgstr "Войти через <b>VK</b>"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Sign up with <b>VK</b>"
-msgstr "Войти через <b>VK</b>"
+msgstr "Зарегистрироваться через <b>VK</b>"
 
 msgid "Link account with <b>VK</b>"
 msgstr "Связать аккаунты с <b>VK</b>"
@@ -2123,20 +2259,24 @@ msgid ""
 "resolve the problem, please create a new App based on our %4$s guide, and "
 "replace the credentials on the %5$s tab with your new App credentials."
 msgstr ""
+"%1$s: %2$s представил новые типы приложений и изменил их endpoints, которые "
+"несовместимы со старыми приложениями.%3$sМы обнаружили, что вы используете "
+"старое приложение %2$s, поэтому нам пришлось отключить вашу конфигурацию "
+"%2$s. Чтобы решить проблему, создайте новое приложение по нашей инструкции "
+"%4$s и замените учетные данные на вкладке %5$s данными нового приложения."
 
 msgid "VKontakte"
-msgstr ""
+msgstr "VKontakte"
 
 #, php-format
 msgid "Open %1$s - %2$s"
-msgstr ""
+msgstr "Открыть %1$s - %2$s"
 
 msgid "Continue with <b>WordPress.com</b>"
 msgstr "Войти через <b>WordPress.com</b>"
 
-#, fuzzy
 msgid "Sign up with <b>WordPress.com</b>"
-msgstr "Войти через <b>WordPress.com</b>"
+msgstr "Зарегистрироваться через <b>WordPress.com</b>"
 
 msgid "Link account with <b>WordPress.com</b>"
 msgstr "Связать аккаунты с <b>WordPress.com</b>"
@@ -2148,7 +2288,7 @@ msgid "Continue with <b>Yahoo</b>"
 msgstr "Войти через <b>Yahoo</b>"
 
 msgid "Sign up with <b>Yahoo</b>"
-msgstr "Войти через <b>Yahoo</b>"
+msgstr "Зарегистрироваться через <b>Yahoo</b>"
 
 msgid "Link account with <b>Yahoo</b>"
 msgstr "Связать аккаунты с <b>Yahoo</b>"
@@ -2158,7 +2298,7 @@ msgstr "Отвязать аккаунты от <b>Yahoo</b>"
 
 #, php-format
 msgid "Required permission: %1$s"
-msgstr ""
+msgstr "Необходимое разрешение: %1$s"
 
 msgid "OR"
 msgstr "ИЛИ"
@@ -2167,25 +2307,36 @@ msgid "Social accounts"
 msgstr "Социальная сеть"
 
 msgid "Registration confirmation will be emailed to you."
-msgstr ""
+msgstr "Подтверждение регистрации будет отправлено вам по email."
 
 msgid "Password"
-msgstr ""
+msgstr "Пароль"
 
 msgid "Hide password"
-msgstr ""
+msgstr "Скрыть пароль"
 
 msgid "Strength indicator"
-msgstr ""
+msgstr "Индикатор надежности"
 
 msgid "Confirm use of weak password"
-msgstr ""
+msgstr "Подтвердите использование слабого пароля"
 
 msgid "Confirm password"
-msgstr ""
+msgstr "Подтвердите пароль"
 
 msgid "Username"
-msgstr ""
+msgstr "Имя пользователя"
+
+#~ msgid ""
+#~ "Shows Google's One Tap prompt, so visitors can sign in with their Google "
+#~ "account without leaving the page. Depending on the browser, Google shows "
+#~ "it to every visitor, or only to those who are signed in to Google. One "
+#~ "Tap works alongside the Google button, it does not replace it."
+#~ msgstr ""
+#~ "Показывает окно Google One Tap, чтобы посетители могли войти через свой "
+#~ "аккаунт Google, не покидая страницу. В зависимости от браузера Google "
+#~ "показывает его всем посетителям или только тем, кто вошел в аккаунт "
+#~ "Google. One Tap работает вместе с кнопкой Google и не заменяет ее."
 
 #~ msgid "Continue with <b>Twitter</b>"
 #~ msgstr "Войти через <b>Twitter</b>"

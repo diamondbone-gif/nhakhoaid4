@@ -227,9 +227,17 @@
         display: none !important;
     }
 
-    #header .header-nav-main>li.current-menu-item>a,
-    #header .header-nav-main>li.current-menu-ancestor>a {
-        color: #fff !important;
+    #header .header-nav-main>li:not(.id4-language-switcher):not(.pll-parent-menu-item):not(.id4-booking-button):not(:last-child):is(.active,
+        .current-menu-item,
+        .current-menu-parent,
+        .current-menu-ancestor,
+        .current_page_item,
+        .current_page_parent,
+        .current_page_ancestor)>a,
+    #header .header-nav-main>li:not(.id4-language-switcher):not(.pll-parent-menu-item):not(.id4-booking-button):not(:last-child)>a:is(:active,
+        [aria-current=page],
+        [aria-current=location]) {
+        color: #d7aa3d !important;
     }
 
     #header .header-nav-main>li:not(.id4-language-switcher):not(.pll-parent-menu-item):not(.id4-booking-button):not(:last-child)>a::after {
@@ -251,8 +259,18 @@
         pointer-events: none !important;
     }
 
+    #header .header-nav-main>li:not(.id4-language-switcher):not(.pll-parent-menu-item):not(.id4-booking-button):not(:last-child):is(.active,
+        .current-menu-item,
+        .current-menu-parent,
+        .current-menu-ancestor,
+        .current_page_item,
+        .current_page_parent,
+        .current_page_ancestor)>a::after,
     #header .header-nav-main>li:not(.id4-language-switcher):not(.pll-parent-menu-item):not(.id4-booking-button):not(:last-child)>a:is(:hover,
-        :focus-visible)::after {
+        :focus-visible,
+        :active,
+        [aria-current=page],
+        [aria-current=location])::after {
         transform: scaleX(1) !important;
         opacity: 1 !important;
     }
@@ -270,6 +288,8 @@
         min-height: 24px !important;
         padding: 0 7px !important;
         display: inline-flex !important;
+        flex-flow: row nowrap !important;
+        align-items: center !important;
         gap: 4px !important;
         border: 1px solid #d7aa3d !important;
         border-radius: 5px !important;
@@ -295,7 +315,15 @@
     }
 
     #header .header-nav-main>li:is(.id4-language-switcher,
+        .pll-parent-menu-item)>a>.pll-switcher-flag {
+        display: inline-flex !important;
+        align-items: center !important;
+    }
+
+    #header .header-nav-main>li:is(.id4-language-switcher,
         .pll-parent-menu-item)>a img {
+        display: block !important;
+        align-self: center !important;
         width: 13px !important;
         height: auto !important;
         margin: 0 !important;

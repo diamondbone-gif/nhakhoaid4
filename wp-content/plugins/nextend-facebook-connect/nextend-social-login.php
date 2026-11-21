@@ -21,9 +21,9 @@ require_once(NSL_PATH . '/compat.php');
 
 class NextendSocialLogin {
 
-    public static $version = '3.1.26';
+    public static $version = '3.1.27';
 
-    public static $nslPROMinVersion = '3.1.26';
+    public static $nslPROMinVersion = '3.1.27';
 
     public static $proxyPage = false;
 
@@ -1503,6 +1503,27 @@ el.setAttribute("href",href+"redirect="+encodeURIComponent(window.location.href)
         }
 
         return $domain;
+    }
+
+    /**
+     * The origin of the site's front end, as scheme://host[:port] with no trailing path. This is
+     * the format providers expect when a JavaScript origin has to be registered in their app.
+     *
+     * @return string
+     */
+    public static function getOrigin() {
+        $parts = wp_parse_url(home_url());
+
+        if (empty($parts['scheme']) || empty($parts['host'])) {
+            return '';
+        }
+
+        $origin = $parts['scheme'] . '://' . $parts['host'];
+        if (!empty($parts['port'])) {
+            $origin .= ':' . $parts['port'];
+        }
+
+        return $origin;
     }
 
     public static function getRegisterFlowPage() {

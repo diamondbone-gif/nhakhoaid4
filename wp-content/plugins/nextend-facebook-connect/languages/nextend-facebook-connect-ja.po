@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nextend-facebook-connect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-28 09:19+0200\n"
-"PO-Revision-Date: 2026-07-28 09:19+0200\n"
+"POT-Creation-Date: 2026-11-12 15:21+0100\n"
+"PO-Revision-Date: 2026-11-12 15:21+0100\n"
 "Last-Translator: \n"
 "Language-Team: 日本語\n"
 "Language: ja\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: "
@@ -132,13 +132,13 @@ msgid "Deactivate completed."
 msgstr "無効化 が完了しました。"
 
 msgid "(no title)"
-msgstr ""
+msgstr "(タイトルなし)"
 
 msgid "Settings"
 msgstr "設定"
 
 msgid "Analyze & Repair"
-msgstr ""
+msgstr "分析と修復"
 
 #, php-format
 msgid "Unexpected response: %s"
@@ -163,9 +163,9 @@ msgid ""
 "%1$s detected that %2$s installed on your site. You need the Pro Addon to "
 "display Social Login buttons in %2$s login form!"
 msgstr ""
-"%1$s は、あなたのサイトに%2$sがインストールされていることを検出しました。2$の"
-"ログインフォームにソーシャルログインボタンを表示するには、Proアドオンが必要で"
-"す!"
+"%1$s は、あなたのサイトに%2$sがインストールされていることを検出しました。%2$s"
+"のログインフォームにソーシャルログインボタンを表示するには、Proアドオンが必要"
+"です!"
 
 msgid "Dismiss and check Pro Addon"
 msgstr "Pro Addon を解除して確認する"
@@ -246,28 +246,20 @@ msgstr "変更を保存する"
 
 #, php-format
 msgid "Follow the guide at: %s"
-msgstr ""
+msgstr "次のガイドに従ってください：%s"
 
 #, php-format
 msgid "I am done setting up my %s"
 msgstr "私の %s の設定は終了しました"
 
-#, fuzzy
-#| msgid "App ID"
 msgctxt "Social Login App"
 msgid "App"
-msgstr "アプリID"
+msgstr "アプリ"
 
 msgid "Getting Started"
 msgstr "始める(Getting Started)"
 
-#, fuzzy, php-format
-#| msgid ""
-#| "To allow your visitors to log in with their %1$s account, first you must "
-#| "create an %1$s App. The following guide will help you through the %1$s "
-#| "App creation process. After you have created your %1$s App, head over to "
-#| "\"Settings\" and configure the given \"%2$s\" and \"%3$s\" according to "
-#| "your %1$s App."
+#, php-format
 msgid ""
 "To allow your visitors to log in with their %1$s account, first you must "
 "create an App for %1$s. The following guide will help you through the %1$s "
@@ -275,17 +267,17 @@ msgid ""
 "\"Settings\" and configure the fields with the credentials of the App you "
 "created."
 msgstr ""
-"訪問者が %1$s アカウントでログインできるようにするには、まず、%1$s Appを作成"
-"する必要があります。以下のガイドは、%1$s アプリの作成プロセスを説明するもので"
-"す。%1$sアプリを作成したら、「設定」を開き、%1$sアプリに合わせて「%2$s」"
-"「%3$s」を設定します。"
+"訪問者が %1$s アカウントでログインできるようにするには、まず %1$s 用のアプリ"
+"を作成する必要があります。以下のガイドでは、%1$s アプリの作成手順を説明しま"
+"す。%1$s アプリを作成したら、「設定」を開き、作成したアプリの認証情報を各"
+"フィールドに入力してください。"
 
 #, php-format
 msgid "How to create an App for %s: "
-msgstr ""
+msgstr "%s のアプリを作成する方法： "
 
 msgid "URLs for the App creation:"
-msgstr ""
+msgstr "アプリ作成用のURL："
 
 msgid "Buttons"
 msgstr "ボタン"
@@ -357,19 +349,16 @@ msgstr "選択したロールのログインを無効化する"
 msgid "Default roles for user who registered with this provider"
 msgstr "このプロバイダに登録されたユーザーのデフォルトの役割"
 
-#, fuzzy, php-format
-#| msgid "Select the %1$s option for %2$s."
+#, php-format
 msgid "Default (The %1$s is: %2$s)"
-msgstr "%2$s の %1$s オプションを選択します。"
+msgstr "デフォルト（%1$sは%2$sです）"
 
-#, fuzzy
-#| msgid "Default redirect url"
 msgid "default WordPress role"
-msgstr "デフォルトのリダイレクトURL"
+msgstr "WordPressのデフォルトロール"
 
 #, php-format
 msgid "Default (The %s.)"
-msgstr ""
+msgstr "デフォルト（%s）"
 
 msgid "Register"
 msgstr "登録"
@@ -662,19 +651,19 @@ msgid "Loved it"
 msgstr "愛してやまない"
 
 msgid "Rate 1 star"
-msgstr ""
+msgstr "1つ星で評価"
 
 msgid "Rate 2 stars"
-msgstr ""
+msgstr "2つ星で評価"
 
 msgid "Rate 3 stars"
-msgstr ""
+msgstr "3つ星で評価"
 
 msgid "Rate 4 stars"
-msgstr ""
+msgstr "4つ星で評価"
 
 msgid "Rate 5 stars"
-msgstr ""
+msgstr "5つ星で評価"
 
 msgid "Please Leave a Review"
 msgstr "レビューを書いてください"
@@ -690,7 +679,7 @@ msgid "Ok, you deserve it"
 msgstr "OK、あなたはそれに値します。"
 
 msgid "Close review box"
-msgstr ""
+msgstr "レビューボックスを閉じる"
 
 msgid "Register form"
 msgstr "登録フォーム"
@@ -801,21 +790,16 @@ msgstr "登録用メールテンプレート"
 msgid "WordPress default notification"
 msgstr "WordPressのデフォルト通知"
 
-#, fuzzy
-#| msgid "WordPress default notification"
 msgid "BuddyPress welcome notification"
-msgstr "WordPressのデフォルト通知"
+msgstr "BuddyPressのウェルカム通知"
 
-#, fuzzy, php-format
-#| msgid ""
-#| "Defines whether the registration with %1$s will send the same "
-#| "registration notification that %2$s does, instead of the %3$s default one."
+#, php-format
 msgid ""
 "Defines whether the registration with %1$s will send the same welcome "
 "notification that %2$s does, instead of the %3$s default one."
 msgstr ""
-"%1$s の登録が、%3$s のデフォルトの登録通知ではなく、%2$sと同じ登録通知を送る"
-"かどうかを定義しています。"
+"%1$s での登録時に、%3$s のデフォルトの通知ではなく、%2$s と同じウェルカム通知"
+"を送信するかどうかを指定します。"
 
 msgid "Login button"
 msgstr "ログインボタン"
@@ -868,10 +852,8 @@ msgstr "トップセパレーターを使用した場合のデフォルト"
 msgid "Default with bottom separator"
 msgstr "ボトムセパレーター付きデフォルト"
 
-#, fuzzy
-#| msgid "Unlink"
 msgid "Link/Unlink"
-msgstr "アカウント連携を解除"
+msgstr "連携/連携解除"
 
 msgid "No Connect button in Login form"
 msgstr "ログインフォームにボタンを接続しない"
@@ -967,10 +949,8 @@ msgstr "レジスタフロー用ページ"
 msgid "None"
 msgstr "なし"
 
-#, fuzzy
-#| msgid "Page for register flow"
 msgid "Clear - Page for register flow"
-msgstr "レジスタフロー用ページ"
+msgstr "クリア - レジスタフロー用ページ"
 
 msgid ""
 "This setting is used when you request additional data from the users (such "
@@ -998,10 +978,8 @@ msgstr ""
 msgid "OAuth redirect uri proxy page"
 msgstr "OAuthリダイレクトURIプロキシページ"
 
-#, fuzzy
-#| msgid "OAuth redirect uri proxy page"
 msgid "Clear - OAuth redirect uri proxy page"
-msgstr "OAuthリダイレクトURIプロキシページ"
+msgstr "クリア - OAuthリダイレクトURIプロキシページ"
 
 msgid ""
 "You can use this setting when wp-login.php page is not available to handle "
@@ -1064,11 +1042,7 @@ msgstr "ソーシャルログインで登録できるようにする。"
 msgid "Custom label for register buttons"
 msgstr "レジスターボタン用カスタムラベル"
 
-#, fuzzy, php-format
-#| msgid ""
-#| "Set a custom label for the social buttons in registration forms and for "
-#| "shortcodes with %1$s parameter set to %2$s.<br>The register specific "
-#| "labels can be modified at the Buttons tab of each provider."
+#, php-format
 msgid ""
 "Set a custom label for the social buttons in registration forms and for "
 "shortcodes with %1$s parameter set to %2$s.<br>The register specific labels "
@@ -1076,8 +1050,9 @@ msgid ""
 "allows the use of register specific %3$s options."
 msgstr ""
 "登録フォームのソーシャルボタンや、%1$sパラメータを%2$sに設定したショートコー"
-"ドのカスタムラベルを設定します。<br>登録固有のラベルは、各プロバイダのButtons"
-"タブで変更可能です。"
+"ドのカスタムラベルを設定します。<br>登録固有のラベルは、各プロバイダの「ボタ"
+"ン」タブで変更できます。<br>このオプションでは、登録固有の%3$sオプションも使"
+"用できます。"
 
 msgid "Redirect overlay"
 msgstr "リダイレクトオーバーレイ"
@@ -1109,26 +1084,24 @@ msgid "Note:"
 msgstr "注意："
 
 msgid "Unsupported WebView behavior"
-msgstr ""
+msgstr "WebView非対応時の動作"
 
-#, fuzzy
-#| msgid "Image button"
 msgid "Remove button"
-msgstr "画像ボタン"
+msgstr "ボタンを削除"
 
-#, fuzzy
-#| msgid "Default button"
 msgid "Disable button"
-msgstr "デフォルトのボタン"
+msgstr "ボタンを無効化"
 
 #, php-format
 msgid "Some %1$sproviders%2$s don't support embedded browsers."
-msgstr ""
+msgstr "一部の%1$sプロバイダー%2$sは埋め込みブラウザーに対応していません。"
 
 msgid ""
 "This setting defines if we should remove or disable the related buttons in "
 "WebView environments."
 msgstr ""
+"この設定では、WebView環境で関連するボタンを削除するか無効にするかを指定しま"
+"す。"
 
 msgid "Below and floating"
 msgstr "下部でフローティング"
@@ -1321,6 +1294,7 @@ msgstr "設定を確認する前に、変更内容を保存してください。
 
 msgid "Error: Email verification status is not checked in this provider!"
 msgstr ""
+"エラー：このプロバイダーではメールアドレスの確認状況がチェックされません！"
 
 msgid "Authentication successful"
 msgstr "認証に成功"
@@ -1335,15 +1309,15 @@ msgid "Unlink is not allowed!"
 msgstr "アカウント連携解除は禁止されています"
 
 msgid "Unlink failed: nonce is invalid"
-msgstr ""
+msgstr "アカウント連携の解除に失敗しました：nonce が無効です"
 
 #, php-format
 msgid "You are attempting to unlink your WordPress account from %s."
-msgstr ""
+msgstr "WordPressアカウントと %s の連携を解除しようとしています。"
 
 #, php-format
 msgid "Do you really want to %1$s unlink %2$s it?"
-msgstr ""
+msgstr "本当に%1$s連携を解除%2$sしますか？"
 
 msgid "The test was successful"
 msgstr "テストは成功しました"
@@ -1386,20 +1360,19 @@ msgid ""
 "address is not verified.%2$sPlease login to your existing account using your "
 "password and link your %1$s account to it manually!"
 msgstr ""
+"お使いの %1$s のメールアドレスを持つユーザーが見つかりましたが、そのメールア"
+"ドレスは確認されていないようです。%2$sパスワードで既存のアカウントにログイン"
+"し、%1$s アカウントを手動で連携してください！"
 
-#, fuzzy, php-format
-#| msgid ""
-#| "We found a user with your %1$s email address. Unfortunately it belongs to "
-#| "a different %1$s account, so we are unable to log you in. Please use the "
-#| "linked %1$s account or log in with your password!"
+#, php-format
 msgid ""
 "We found a user with your %1$s email address. Unfortunately, it belongs to a "
 "different account, so we are unable to log you in. Please use the linked "
 "account or log in with your password!"
 msgstr ""
-"あなたの %1$s のメールアドレスを持つユーザーを発見しました。残念ながら、それ"
-"は別の %1$s アカウントに属しているため、ログインすることができません。リンク"
-"先の %1$s アカウントを使用するか、パスワードでログインしてください!"
+"お使いの %1$s のメールアドレスを持つユーザーが見つかりました。残念ながら、そ"
+"のユーザーは別のアカウントに属しているため、ログインできません。連携済みのア"
+"カウントを使用するか、パスワードでログインしてください!"
 
 msgid "Register For This Site"
 msgstr "このサイトに登録する"
@@ -1438,10 +1411,8 @@ msgstr "準備中..."
 msgid "You are being redirected to another page,<br>it may take a few seconds."
 msgstr "別のページに移動しています。<br>数秒かかる場合があります。"
 
-#, fuzzy
-#| msgid "This provider doesn't support REST API calls!"
 msgid "The selected provider doesn't support embedded browsers!"
-msgstr "このプロバイダーはREST APIコールをサポートしていません!"
+msgstr "選択したプロバイダーは埋め込みブラウザーに対応していません!"
 
 msgid "Social Login"
 msgstr "ソーシャルログイン"
@@ -1504,16 +1475,16 @@ msgid "Profile image size"
 msgstr "プロフィール画像サイズ"
 
 msgid "Small"
-msgstr ""
+msgstr "小"
 
 msgid "Medium"
-msgstr ""
+msgstr "中"
 
 msgid "Large"
-msgstr ""
+msgstr "大"
 
 msgid "Extra Large"
-msgstr ""
+msgstr "特大"
 
 msgid "Continue with <b>Facebook</b>"
 msgstr "<b>Facebook</b>で続行"
@@ -1537,7 +1508,46 @@ msgid "Required scope: %1$s"
 msgstr "必要なスコープ：%1$s"
 
 msgid "Neutral"
+msgstr "ニュートラル"
+
+msgid ""
+"Required by Google One Tap. Without it the One Tap prompt never appears."
 msgstr ""
+"Google One Tap に必要です。これがないと One Tap のプロンプトは表示されませ"
+"ん。"
+
+msgid "Google One Tap"
+msgstr "Google One Tap"
+
+msgid "Show where the Google button appears"
+msgstr "Google ボタンが表示される場所に表示"
+
+msgid "Show on all pages"
+msgstr "すべてのページに表示"
+
+#, php-format
+msgid ""
+"Shows Google's One Tap prompt, so visitors can sign in with their Google "
+"account without leaving the page. %1$sLearn more%2$s."
+msgstr ""
+"Google の One Tap プロンプトを表示し、訪問者がページを離れずに Google アカウ"
+"ントでログインできるようにします。%1$s詳しくはこちら%2$s。"
+
+#, php-format
+msgid ""
+"%1$s Requires HTTPS, and %2$s added to the %3$sAuthorized JavaScript "
+"origins%4$s of your Google app."
+msgstr ""
+"%1$s HTTPS が必要です。また、%2$s を Google アプリの %3$sAuthorized "
+"JavaScript origins%4$s に追加する必要があります。"
+
+#, php-format
+msgid ""
+"%1$s Unlike the Google button, One Tap loads Google's script as soon as the "
+"page opens. %2$sLearn more%3$s."
+msgstr ""
+"%1$s Google ボタンとは異なり、One Tap はページが開くとすぐに Google のスクリ"
+"プトを読み込みます。%2$s詳しくはこちら%3$s。"
 
 msgid "Client ID"
 msgstr "クライアントID"
@@ -1574,19 +1584,19 @@ msgid "Required API: %1$s"
 msgstr "必要なAPI：%1$s"
 
 msgid "X"
-msgstr ""
+msgstr "X"
 
 msgid "Legacy"
-msgstr ""
+msgstr "レガシー"
 
 msgid "API version"
-msgstr ""
+msgstr "APIバージョン"
 
 msgid "v1.1"
-msgstr ""
+msgstr "v1.1"
 
 msgid "v2"
-msgstr ""
+msgstr "v2"
 
 msgid "API Key"
 msgstr "APIキー"
@@ -1594,25 +1604,17 @@ msgstr "APIキー"
 msgid "API Key Secret"
 msgstr "APIキーシークレット"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Continue with <b>X</b>"
-msgstr "<b>VK</b>で続行"
+msgstr "<b>X</b>で続行"
 
-#, fuzzy
-#| msgid "Sign up with <b>VK</b>"
 msgid "Sign up with <b>X</b>"
-msgstr "<b>VK</b>で登録する"
+msgstr "<b>X</b>で登録する"
 
-#, fuzzy
-#| msgid "Link account with <b>VK</b>"
 msgid "Link account with <b>X</b>"
-msgstr "<b>VK</b>とアカウントを連携"
+msgstr "<b>X</b>とアカウントを連携"
 
-#, fuzzy
-#| msgid "Unlink account from <b>VK</b>"
 msgid "Unlink account from <b>X</b>"
-msgstr "<b>VK</b>からアカウント連携を解除する"
+msgstr "<b>X</b>からアカウント連携を解除する"
 
 msgctxt "Register form submit button label"
 msgid "Register"
@@ -1738,43 +1740,60 @@ msgstr ""
 
 #, php-format
 msgid ""
+"Yes. With Google One Tap enabled, %1$s loads Google's Identity Services "
+"library from %2$s on the pages where the One Tap prompt can appear. Google "
+"receives the visitor's IP address and reads its own cookies on that domain "
+"to decide whether the prompt can be shown."
+msgstr ""
+"はい。Google One Tap を有効にすると、%1$s は One Tap プロンプトが表示される可"
+"能性のあるページで、%2$s から Google の Identity Services ライブラリを読み込"
+"みます。Google は訪問者の IP アドレスを受け取り、プロンプトを表示できるかどう"
+"かを判断するために、そのドメイン上の Google 自身の Cookie を読み取ります。"
+
+#, php-format
+msgid ""
+"With Google One Tap enabled, Google's library also stores a %1$s cookie on "
+"this site, which holds the visitor's One Tap status, such as whether they "
+"closed the prompt."
+msgstr ""
+"Google One Tap を有効にすると、Google のライブラリはこのサイトに %1$s Cookie "
+"も保存します。この Cookie には、訪問者がプロンプトを閉じたかどうかなど、訪問"
+"者の One Tap の状態が保存されます。"
+
+#, php-format
+msgid ""
 "Most of these information can only be retrieved, when the field is marked as "
 "Public on the user's %s page!"
 msgstr ""
 "これらの情報のほとんどは、そのフィールドがユーザーの%sページで「公開」とマー"
 "クされている場合にのみ取得できます。"
 
-#, fuzzy, php-format
-#| msgid ""
-#| "Most of these information can only be retrieved, when the field is marked "
-#| "as Public on the user's %s page!"
+#, php-format
 msgid ""
 "Most of these information can only be retrieved, when the field is filled on "
 "the user's %s page!"
 msgstr ""
-"これらの情報のほとんどは、そのフィールドがユーザーの%sページで「公開」とマー"
-"クされている場合にのみ取得できます。"
+"これらの情報のほとんどは、そのフィールドがユーザーの%sページで入力されている"
+"場合にのみ取得できます。"
 
-#, fuzzy, php-format
-#| msgid ""
-#| "Most of these information can only be retrieved, when the field is marked "
-#| "as Public on the user's %s page!"
+#, php-format
 msgid ""
 "Most of these information can only be retrieved, when the field is filled on "
 "the user's %s page! For the campaigns, the user must have a public campaign!"
 msgstr ""
-"これらの情報のほとんどは、そのフィールドがユーザーの%sページで「公開」とマー"
-"クされている場合にのみ取得できます。"
+"これらの情報のほとんどは、そのフィールドがユーザーの%sページで入力されている"
+"場合にのみ取得できます。キャンペーンについては、ユーザーが公開キャンペーンを"
+"持っている必要があります。"
 
 #, php-format
 msgid ""
 "The Spotify Sync data requires the %1$s with the necessary scopes enabled!"
-msgstr ""
+msgstr "Spotifyの同期データには、必要なスコープが有効になった%1$sが必要です！"
 
 #, php-format
 msgid ""
 "The TikTok Sync data requires the %1$s with the necessary scopes enabled!"
-msgstr ""
+msgstr "TikTokの同期データには、必要なスコープが有効になった%1$sが必要です！"
 
 msgid "Continue with <b>Amazon</b>"
 msgstr "<b>Amazon</b>で続行"
@@ -1897,15 +1916,11 @@ msgstr "<b>GitHub</b>とアカウントを連携"
 msgid "Unlink account from <b>GitHub</b>"
 msgstr "<b>GitHub</b>からアカウント連携を解除する"
 
-#, fuzzy
-#| msgid "API Key"
 msgid "REST API Key"
-msgstr "APIキー"
+msgstr "REST APIキー"
 
-#, fuzzy
-#| msgid "Client Secret"
 msgid "Client Secret Code"
-msgstr "クライアントシークレット"
+msgstr "クライアントシークレットコード"
 
 msgid "Authorization Prompt"
 msgstr "認証プロンプト"
@@ -1917,7 +1932,7 @@ msgid "Force user to enter login credentials on each login"
 msgstr "ログインのたびにログイン情報を入力するよう強制する。"
 
 msgid "Start the authentication with the Kakao Account sign-up page."
-msgstr ""
+msgstr "Kakaoアカウントの登録ページから認証を開始します。"
 
 msgid "Email scope"
 msgstr "電子メールの範囲"
@@ -1926,27 +1941,19 @@ msgid "Disable, when you have no rights for email address."
 msgstr "メールアドレスに権限がない場合は無効となります。"
 
 msgid "Mini"
-msgstr ""
+msgstr "ミニ"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Continue with <b>Kakao</b>"
-msgstr "<b>VK</b>で続行"
+msgstr "<b>Kakao</b>で続行"
 
-#, fuzzy
-#| msgid "Sign up with <b>VK</b>"
 msgid "Sign up with <b>Kakao</b>"
-msgstr "<b>VK</b>で登録する"
+msgstr "<b>Kakao</b>で登録する"
 
-#, fuzzy
-#| msgid "Link account with <b>VK</b>"
 msgid "Link account with <b>Kakao</b>"
-msgstr "<b>VK</b>とアカウントを連携"
+msgstr "<b>Kakao</b>とアカウントを連携"
 
-#, fuzzy
-#| msgid "Unlink account from <b>VK</b>"
 msgid "Unlink account from <b>Kakao</b>"
-msgstr "<b>VK</b>からアカウント連携を解除する"
+msgstr "<b>Kakao</b>からアカウント連携を解除する"
 
 msgid "Channel ID"
 msgstr "チャンネルID"
@@ -2045,20 +2052,16 @@ msgid "Audience"
 msgstr "オーディエンス"
 
 msgid "Multiple Entra ID tenants"
-msgstr ""
+msgstr "複数の Entra ID テナント"
 
-#, fuzzy
-#| msgid "Personal Microsoft accounts only"
 msgid "Any Entra ID Tenant + Personal Microsoft accounts"
-msgstr "個人のマイクロソフトアカウントのみ"
+msgstr "任意の Entra ID テナント + 個人用 Microsoft アカウント"
 
-#, fuzzy
-#| msgid "Personal Microsoft accounts only"
 msgid "Personal accounts only"
-msgstr "個人のマイクロソフトアカウントのみ"
+msgstr "個人用アカウントのみ"
 
 msgid "Single tenant only - Default Directory with Azure AD tenant:"
-msgstr ""
+msgstr "シングルテナントのみ - Azure AD テナントの Default Directory:"
 
 #, php-format
 msgid ""
@@ -2083,25 +2086,17 @@ msgstr "<b>マイクロソフト</b>とのアカウント連携"
 msgid "Unlink account from <b>Microsoft</b>"
 msgstr "<b>Microsoft</b>からアカウント連携を解除する"
 
-#, fuzzy
-#| msgid "Continue with <b>Amazon</b>"
 msgid "Continue with <b>Patreon</b>"
-msgstr "<b>Amazon</b>で続行"
+msgstr "<b>Patreon</b>で続行"
 
-#, fuzzy
-#| msgid "Sign up with <b>Amazon</b>"
 msgid "Sign up with <b>Patreon</b>"
-msgstr "<b>Amazon</b>で登録する"
+msgstr "<b>Patreon</b>で登録する"
 
-#, fuzzy
-#| msgid "Link account with <b>Amazon</b>"
 msgid "Link account with <b>Patreon</b>"
-msgstr "<b>Amazon</b>とアカウントを連携"
+msgstr "<b>Patreon</b>とアカウントを連携"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Amazon</b>"
 msgid "Unlink account from <b>Patreon</b>"
-msgstr "<b>Amazon</b>からアカウント連携を解除する"
+msgstr "<b>Patreon</b>からアカウント連携を解除する"
 
 msgid "Secret"
 msgstr "シークレット"
@@ -2118,25 +2113,17 @@ msgstr "<b>PayPal</b>とアカウントを連携"
 msgid "Unlink account from <b>PayPal</b>"
 msgstr "<b>PayPal（ペイパル）</b>からアカウント連携を解除する"
 
-#, fuzzy
-#| msgid "Continue with <b>VK</b>"
 msgid "Continue with <b>Reddit</b>"
-msgstr "<b>VK</b>で続行"
+msgstr "<b>Reddit</b>で続行"
 
-#, fuzzy
-#| msgid "Sign up with <b>VK</b>"
 msgid "Sign up with <b>Reddit</b>"
-msgstr "<b>VK</b>で登録する"
+msgstr "<b>Reddit</b>で登録する"
 
-#, fuzzy
-#| msgid "Link account with <b>VK</b>"
 msgid "Link account with <b>Reddit</b>"
-msgstr "<b>VK</b>とアカウントを連携"
+msgstr "<b>Reddit</b>とアカウントを連携"
 
-#, fuzzy
-#| msgid "Unlink account from <b>VK</b>"
 msgid "Unlink account from <b>Reddit</b>"
-msgstr "<b>VK</b>からアカウント連携を解除する"
+msgstr "<b>Reddit</b>からアカウント連携を解除する"
 
 msgid "Slack Team ID"
 msgstr "SlackのチームID"
@@ -2174,27 +2161,19 @@ msgid "Unlink account from <b>Slack</b>"
 msgstr "<b>Slack</b>からアカウント連携を解除する"
 
 msgid "Green"
-msgstr ""
+msgstr "グリーン"
 
-#, fuzzy
-#| msgid "Continue with <b>Steam</b>"
 msgid "Continue with <b>Spotify</b>"
-msgstr "<b>Steam</b>で続行"
+msgstr "<b>Spotify</b>で続行"
 
-#, fuzzy
-#| msgid "Sign up with <b>Steam</b>"
 msgid "Sign up with <b>Spotify</b>"
-msgstr "<b>Steam</b>で登録する"
+msgstr "<b>Spotify</b>で登録する"
 
-#, fuzzy
-#| msgid "Link account with <b>Steam</b>"
 msgid "Link account with <b>Spotify</b>"
-msgstr "<b>Steam</b>とアカウントを連携"
+msgstr "<b>Spotify</b>とアカウントを連携"
 
-#, fuzzy
-#| msgid "Unlink account from <b>Steam</b>"
 msgid "Unlink account from <b>Spotify</b>"
-msgstr "<b>Steam</b>からアカウント連携を解除する"
+msgstr "<b>Spotify</b>からアカウント連携を解除する"
 
 msgid "Web API Key"
 msgstr "Web APIキー"
@@ -2215,8 +2194,6 @@ msgid "Error: The 64-bit SteamID can not be retrieved for this user!"
 msgstr ""
 "エラーになりました。このユーザーの64ビットSteamIDを取得することはできません!"
 
-#, fuzzy
-#| msgid "Client Key"
 msgid "Client key"
 msgstr "クライアントキー"
 
@@ -2267,14 +2244,18 @@ msgid ""
 "resolve the problem, please create a new App based on our %4$s guide, and "
 "replace the credentials on the %5$s tab with your new App credentials."
 msgstr ""
+"%1$s：%2$s は新しいアプリタイプを導入し、エンドポイントを変更したため、古いア"
+"プリとは互換性がありません。%3$s現在古い %2$s アプリを使用していることが検出"
+"されたため、%2$s の設定を無効にしました。問題を解決するには、%4$s ガイドに"
+"従って新しいアプリを作成し、%5$s タブの認証情報を新しいアプリの認証情報に置き"
+"換えてください。"
 
 msgid "VKontakte"
-msgstr ""
+msgstr "VKontakte"
 
-#, fuzzy, php-format
-#| msgid "Select the %1$s option for %2$s."
+#, php-format
 msgid "Open %1$s - %2$s"
-msgstr "%2$s の %1$s オプションを選択します。"
+msgstr "%1$s - %2$s を開く"
 
 msgid "Continue with <b>WordPress.com</b>"
 msgstr "<b>WordPress.com</b>で続行"
@@ -2316,10 +2297,8 @@ msgstr "登録確認はメールで行われます。"
 msgid "Password"
 msgstr "パスワード"
 
-#, fuzzy
-#| msgid "Confirm password"
 msgid "Hide password"
-msgstr "パスワードの確認"
+msgstr "パスワードを隠す"
 
 msgid "Strength indicator"
 msgstr "ストレングスインジケーター"
@@ -2332,6 +2311,18 @@ msgstr "パスワードの確認"
 
 msgid "Username"
 msgstr "ユーザー名（ユーザーID）"
+
+#~ msgid ""
+#~ "Shows Google's One Tap prompt, so visitors can sign in with their Google "
+#~ "account without leaving the page. Depending on the browser, Google shows "
+#~ "it to every visitor, or only to those who are signed in to Google. One "
+#~ "Tap works alongside the Google button, it does not replace it."
+#~ msgstr ""
+#~ "Google の One Tap プロンプトを表示し、訪問者がページを離れずに Google アカ"
+#~ "ウントでログインできるようにします。ブラウザーによって、Google はすべての"
+#~ "訪問者に表示するか、Google にログインしている訪問者にのみ表示します。One "
+#~ "Tap は Google ボタンと併用するもので、ボタンの代わりになるものではありませ"
+#~ "ん。"
 
 #~ msgid ""
 #~ "Accounts in any organizational directory (Any Azure AD directory - "
